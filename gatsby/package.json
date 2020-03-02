@@ -1,0 +1,40 @@
+{
+  "name": "@nice-digital/cks-gatsby",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Website for NICE Clinical Knowledge Summaries (CKS) built with Gatsby and using the NICE Design System",
+  "scripts": {
+    "start": "npm run develop",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "wait": "wait-on tcp:localhost:8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nice-digital/cks-gatsby.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsbyjs"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "author": "NICE Digital (https://www.nice.org.uk/digital)",
+  "contributors": [
+    "NICE Digital Services (https://www.nice.org.uk/digital)",
+    "Ian Routledge (http://ediblecode.com)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
+  "dependencies": {
+    "gatsby": "^2.19.23",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "wait-on": "^4.0.1"
+  }
+}
