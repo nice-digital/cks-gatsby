@@ -7,11 +7,18 @@
 	"endOfLine": "lf",
 	"overrides": [
 		{
-			"files": ["**/*.{scss,md,yml,sh,json}"],
+			"files": ["**/*.{scss,md,yml,sh}"],
 			"options": {
 				"useTabs": false,
 				"tabWidth": 2,
 				"singleQuote": true
+			}
+		},
+		{
+			"files": ["../**/*.json"],
+			"options": {
+				"useTabs": false,
+				"tabWidth": 2
 			}
 		}
 	]
