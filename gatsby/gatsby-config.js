@@ -1,6 +1,14 @@
 module.exports = {
 	siteMetadata: {
-		title: "CKS"
+		title: "CKS",
 	},
-	plugins: ["gatsby-plugin-typescript"]
+	plugins: [
+		"gatsby-plugin-typescript",
+		{
+			resolve: "gatsby-plugin-eslint",
+			options: {
+				test: /\.js$|\.jsx$|\.ts$|\.tsx$/,
+			},
+		},
+	],
 };

@@ -4,7 +4,7 @@ type IndexProps = {
 	test?: string;
 };
 
-const IndexPage = (props: IndexProps) => {
+const IndexPage: React.FC<IndexProps> = (props: IndexProps) => {
 	return <div>Index page</div>;
 };
 

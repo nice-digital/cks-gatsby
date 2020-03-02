@@ -11,5 +11,10 @@
     "**/.DS_Store": true,
     "gatsby/.cache": true,
     "gatsby/public": true
+  },
+  "prettier.configPath": "./gatsby/.prettierrc",
+  "eslint.workingDirectories": ["./gatsby"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
   }
 }
