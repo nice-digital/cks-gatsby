@@ -19,7 +19,7 @@
       "outputCapture": "std",
       "sourceMaps": false,
       "presentation": {
-        "hidden": false,
+        "hidden": true,
         "group": "Static site",
         "order": 1
       }
@@ -33,7 +33,7 @@
       "webRoot": "${workspaceFolder}/gatsby",
       "preLaunchTask": "Wait for Gatsby local",
       "presentation": {
-        "hidden": false,
+        "hidden": true,
         "group": "Static site",
         "order": 2
       }
