@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Gatsby develop",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "program": "${workspaceRoot}/gatsby/node_modules/gatsby/dist/bin/gatsby",
+      "args": ["develop"],
+      "cwd": "${workspaceFolder}/gatsby",
+      "localRoot": "${workspaceFolder}/gatsby",
+      "remoteRoot": "${workspaceFolder}/gatsby",
+      "stopOnEntry": false,
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "sourceMaps": false,
+      "presentation": {
+        "hidden": false,
+        "group": "Static site",
+        "order": 1
+      }
+    },
+    {
+      "name": "Chrome",
+      "type": "chrome",
+      "userDataDir": true,
+      "request": "launch",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}/gatsby",
+      "preLaunchTask": "Wait for Gatsby local",
+      "presentation": {
+        "hidden": false,
+        "group": "Static site",
+        "order": 2
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Gatsby develop and launch Chrome",
+      "configurations": ["Gatsby develop", "Chrome"],
+      "presentation": {
+        "hidden": false,
+        "group": "_",
+        "order": 0
+      }
+    }
+  ]
+}

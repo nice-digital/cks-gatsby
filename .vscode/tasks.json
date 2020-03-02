@@ -1,0 +1,23 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Wait for Gatsby local",
+      "type": "shell",
+      "command": "npm run wait",
+      "options": {
+        "cwd": "${workspaceFolder}/gatsby"
+      },
+      "presentation": {
+        "reveal": "never",
+        "revealProblems": "onProblem",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    }
+  ]
+}
