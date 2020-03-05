@@ -4,7 +4,7 @@
     "msjsdiag.debugger-for-chrome",
     "christian-kohler.npm-intellisense",
     "eg2.vscode-npm-script",
-    "ms-vscode.csharp",
+    "ms-dotnettools.csharp",
     "alexkrechik.cucumberautocomplete",
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint"
