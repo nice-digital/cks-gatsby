@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.rulers": [80],
+  "editor.rulers": [80, 120],
   "files.eol": "\n",
   "files.exclude": {
     "**/.git": true,
@@ -9,8 +9,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "gatsby/.cache": true,
-    "gatsby/public": true
+    "gatsby/{.cache,public,coverage}": true
   },
   "prettier.configPath": "./gatsby/.prettierrc",
   "eslint.workingDirectories": ["./gatsby"],

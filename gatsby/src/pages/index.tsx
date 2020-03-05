@@ -5,7 +5,12 @@ type IndexProps = {
 };
 
 const IndexPage: React.FC<IndexProps> = (props: IndexProps) => {
-	return <div>Index page</div>;
+	return (
+		<div>
+			<h1>Index page</h1>
+			{props.test}
+		</div>
+	);
 };
 
 export default IndexPage;

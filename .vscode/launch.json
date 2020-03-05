@@ -37,6 +37,38 @@
         "group": "Static site",
         "order": 2
       }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest tests (all)",
+      "program": "${workspaceFolder}/gatsby/node_modules/.bin/jest",
+      "args": ["--runInBand"],
+      "cwd": "${workspaceFolder}/gatsby",
+      "localRoot": "${workspaceFolder}/gatsby",
+      "remoteRoot": "${workspaceFolder}/gatsby",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/gatsby/node_modules/jest/bin/jest"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest tests (current file)",
+      "program": "${workspaceFolder}/gatsby/node_modules/.bin/jest",
+      "cwd": "${workspaceFolder}/gatsby",
+      "localRoot": "${workspaceFolder}/gatsby",
+      "remoteRoot": "${workspaceFolder}/gatsby",
+      "args": ["${fileBasenameNoExtension}", "--config", "jest.config.js"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/gatsby/node_modules/jest/bin/jest"
+      }
     }
   ],
   "compounds": [

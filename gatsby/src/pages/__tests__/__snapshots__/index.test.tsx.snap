@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should match snapshot 1`] = `
+<div>
+  <h1>
+    Index page
+  </h1>
+</div>
+`;
