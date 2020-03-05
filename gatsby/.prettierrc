@@ -15,7 +15,7 @@
 			}
 		},
 		{
-			"files": ["../**/*.json"],
+			"files": ["../**/*.json", "*.json"],
 			"options": {
 				"useTabs": false,
 				"tabWidth": 2
