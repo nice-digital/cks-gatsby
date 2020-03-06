@@ -9,7 +9,8 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "gatsby/{.cache,public,coverage}": true
+    "gatsby/{.cache,public,coverage}": true,
+    "gatsby/reduxcache*": true
   },
   "prettier.configPath": "./gatsby/.prettierrc",
   "eslint.workingDirectories": ["./gatsby"],

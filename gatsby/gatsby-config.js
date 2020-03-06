@@ -4,10 +4,11 @@ module.exports = {
 	},
 	plugins: [
 		"gatsby-plugin-typescript",
+		"gatsby-source-cks",
 		{
 			resolve: "gatsby-plugin-eslint",
 			options: {
-				test: /\.js$|\.jsx$|\.ts$|\.tsx$/,
+				test: /\.(?:j|t)sx?$/,
 			},
 		},
 	],
