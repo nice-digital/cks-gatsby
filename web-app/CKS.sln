@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Web", "CKS.Web\CKS.Web.csproj", "{CBE77E0F-2D01-416B-A788-CBEE06123312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBE77E0F-2D01-416B-A788-CBEE06123312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE77E0F-2D01-416B-A788-CBEE06123312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE77E0F-2D01-416B-A788-CBEE06123312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE77E0F-2D01-416B-A788-CBEE06123312}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94B9B6C0-DA17-48B4-B7EF-9436521D0C9D}
+	EndGlobalSection
+EndGlobal
