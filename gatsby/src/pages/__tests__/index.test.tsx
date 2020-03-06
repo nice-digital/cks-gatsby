@@ -13,10 +13,10 @@ describe("index", () => {
 	});
 
 	it("should render h1 with correct text", () => {
-		const { getByRole } = render(
+		const { queryByText } = render(
 			<IndexPage data={{ allTopics: { nodes: [] } }} />
 		);
 
-		expect(getByRole("heading")).toHaveTextContent("Index page");
+		expect(queryByText("CKS")?.tagName).toBe("H1");
 	});
 });

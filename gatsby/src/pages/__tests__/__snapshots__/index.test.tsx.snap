@@ -3,7 +3,11 @@
 exports[`index should match snapshot 1`] = `
 <div>
   <h1>
-    Index page
+    CKS
   </h1>
+  <h2>
+    Topics
+  </h2>
+  <ul />
 </div>
 `;
