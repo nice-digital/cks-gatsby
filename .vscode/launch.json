@@ -2,11 +2,27 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Gatsby develop",
+      "name": "Web app - launch",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Web app - build",
+      "program": "${workspaceFolder}/web-app/CKS.Web/bin/Debug/netcoreapp3.1/CKS.Web.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/web-app/CKS.Web",
+      "stopAtEntry": false,
+      "logging": {
+        "moduleLoad": false
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "Gatsby - develop",
       "type": "node",
       "request": "launch",
       "protocol": "inspector",
-      "program": "${workspaceRoot}/gatsby/node_modules/gatsby/dist/bin/gatsby",
+      "program": "${workspaceFolder}/gatsby/node_modules/gatsby/dist/bin/gatsby",
       "args": ["develop"],
       "cwd": "${workspaceFolder}/gatsby",
       "localRoot": "${workspaceFolder}/gatsby",
@@ -19,21 +35,21 @@
       "outputCapture": "std",
       "sourceMaps": false,
       "presentation": {
-        "hidden": true,
+        "hidden": false,
         "group": "Static site",
         "order": 1
       }
     },
     {
-      "name": "Chrome",
+      "name": "Gatsby - Chrome",
       "type": "chrome",
       "userDataDir": true,
       "request": "launch",
       "url": "http://localhost:8000",
       "webRoot": "${workspaceFolder}/gatsby",
-      "preLaunchTask": "Wait for Gatsby local",
+      "preLaunchTask": "Gatsby - wait",
       "presentation": {
-        "hidden": true,
+        "hidden": false,
         "group": "Static site",
         "order": 2
       }
@@ -41,7 +57,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest tests (all)",
+      "name": "Jest tests - all",
       "program": "${workspaceFolder}/gatsby/node_modules/.bin/jest",
       "args": ["--runInBand"],
       "cwd": "${workspaceFolder}/gatsby",
@@ -52,12 +68,17 @@
       "disableOptimisticBPs": true,
       "windows": {
         "program": "${workspaceFolder}/gatsby/node_modules/jest/bin/jest"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "Tests",
+        "order": 1
       }
     },
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest tests (current file)",
+      "name": "Jest tests - current file",
       "program": "${workspaceFolder}/gatsby/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/gatsby",
       "localRoot": "${workspaceFolder}/gatsby",
@@ -68,13 +89,22 @@
       "disableOptimisticBPs": true,
       "windows": {
         "program": "${workspaceFolder}/gatsby/node_modules/jest/bin/jest"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "Tests",
+        "order": 2
       }
     }
   ],
   "compounds": [
     {
-      "name": "Gatsby develop and launch Chrome",
-      "configurations": ["Gatsby develop", "Chrome"],
+      "name": "Launch CKS",
+      "configurations": [
+        "Web app - launch",
+        "Gatsby - develop",
+        "Gatsby - Chrome"
+      ],
       "presentation": {
         "hidden": false,
         "group": "_",

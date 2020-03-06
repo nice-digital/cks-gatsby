@@ -1,3 +1,5 @@
+const { createProxyMiddleware } = require("http-proxy-middleware");
+
 module.exports = {
 	siteMetadata: {
 		title: "CKS",
@@ -12,4 +14,14 @@ module.exports = {
 			},
 		},
 	],
+	// Proxy the relative search endpoint to the .NET app for local dev
+	developMiddleware: app => {
+		app.use(
+			"/api/search",
+			createProxyMiddleware({
+				target: "http://localhost:5000/",
+				changeOrigin: true,
+			})
+		);
+	},
 };

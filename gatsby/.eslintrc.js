@@ -28,4 +28,13 @@ module.exports = {
 		// e.g. "@typescript-eslint/explicit-function-return-type": "off",
 		"@typescript-eslint/no-explicit-any": 2,
 	},
+	overrides: [
+		{
+			files: ["*.js"],
+			rules: {
+				"@typescript-eslint/explicit-function-return-type": "off",
+				"@typescript-eslint/no-var-requires": "off",
+			},
+		},
+	],
 };

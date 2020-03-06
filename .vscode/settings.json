@@ -16,5 +16,17 @@
   "eslint.workingDirectories": ["./gatsby"],
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.foreground": "#fff",
+    "activityBar.background": "#3d4e57",
+    "titleBar.activeBackground": "#3d4e57",
+    "titleBar.activeForeground": "#fff"
+  },
+  "npm.enableScriptExplorer": true,
+  "npm.useRootDirectory": false,
+  "npm.enableRunFromFolder": true,
+  "npm.includeDirectories": ["gatsby"],
+  "debug.showInStatusBar": "always",
+  "window.title": "${dirty}${activeEditorShort}${separator}CKS${separator}NICE"
 }
