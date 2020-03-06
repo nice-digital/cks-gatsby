@@ -9,7 +9,8 @@
     "moduleResolution": "node",
     "noEmit": true,
     "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true
   },
   "exclude": ["node_modules"]
 }

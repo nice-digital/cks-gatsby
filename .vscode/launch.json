@@ -14,8 +14,8 @@
       "stopOnEntry": false,
       "runtimeExecutable": "node",
       "runtimeArgs": ["--nolazy"],
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "openOnFirstSessionStart",
       "outputCapture": "std",
       "sourceMaps": false,
       "presentation": {
