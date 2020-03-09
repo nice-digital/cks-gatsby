@@ -6,6 +6,18 @@ module.exports = {
 	},
 	plugins: [
 		"gatsby-plugin-typescript",
+		"gatsby-plugin-sass",
+		{
+			resolve: "gatsby-plugin-prefetch-google-fonts",
+			options: {
+				fonts: [
+					{
+						family: "Lato",
+						variants: ["400", "700", "900"],
+					},
+				],
+			},
+		},
 		"gatsby-source-cks",
 		{
 			resolve: "gatsby-plugin-eslint",
@@ -16,12 +28,6 @@ module.exports = {
 	],
 	// Proxy the relative search endpoint to the .NET app for local dev
 	developMiddleware: app => {
-		app.use(
-			"/api/search",
-			createProxyMiddleware({
-				target: "http://localhost:5000/",
-				changeOrigin: true,
-			})
-		);
+		app.use(createProxyMiddleware("http://localhost:5000/api/search"));
 	},
 };

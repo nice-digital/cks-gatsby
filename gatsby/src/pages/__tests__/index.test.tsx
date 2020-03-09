@@ -17,6 +17,6 @@ describe("index", () => {
 			<IndexPage data={{ allTopics: { nodes: [] } }} />
 		);
 
-		expect(queryByText("CKS")?.tagName).toBe("H1");
+		expect(queryByText("Clinical Knowledge Summaries")?.tagName).toBe("H1");
 	});
 });
