@@ -28,5 +28,10 @@
   "npm.enableRunFromFolder": true,
   "npm.includeDirectories": ["gatsby"],
   "debug.showInStatusBar": "always",
-  "window.title": "${dirty}${activeEditorShort}${separator}CKS${separator}NICE"
+  "window.title": "${dirty}${activeEditorShort}${separator}CKS${separator}NICE",
+  "cucumberautocomplete.steps": [
+    "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/given/definitions.js",
+    "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/when/definitions.js",
+    "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/then/definitions.js"
+  ]
 }

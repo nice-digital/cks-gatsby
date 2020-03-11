@@ -1,0 +1,46 @@
+{
+  "name": "@nice-digital/cks-functional-tests",
+  "version": "1.0.0",
+  "description": "Functional, browser-based tests for CKS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --no-deprecation --no-warnings node_modules/webdriverio/bin/wdio",
+    "wait": "wait-on http://cks-web-app:8080",
+    "wait-then-test": "npm run wait && npm test -- --host selenium-hub -b http://cks-web-app:8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nice-digital/cks-gatsby.git"
+  },
+  "keywords": [
+    "wdio",
+    "webdriverio"
+  ],
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "author": "NICE Digital (https://www.nice.org.uk/digital)",
+  "contributors": [
+    "NICE Digital Services (https://www.nice.org.uk/digital)",
+    "Ian Routledge (http://ediblecode.com)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nice-digital/cks-gatsby/functional-tests#readme",
+  "devDependencies": {
+    "@nice-digital/wdio-cucumber-steps": "^0.11.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.0.2",
+    "cross-env": "^7.0.2",
+    "wait-on": "^4.0.1",
+    "wdio-allure-reporter": "^0.8.3",
+    "wdio-cucumber-framework": "^2.2.8",
+    "wdio-selenium-standalone-service": "0.0.12",
+    "wdio-spec-reporter": "^0.1.4",
+    "wdio-teamcity-reporter": "^1.1.1",
+    "webdriverio": "^4.14.4"
+  }
+}
