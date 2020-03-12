@@ -1,0 +1,52 @@
+version: "3.7"
+services:
+  selenium-hub:
+    image: selenium/hub:3.141.59-zirconium
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+
+  selenium-chrome:
+    image: selenium/node-chrome:3.141.59-zirconium
+    container_name: selenium-chrome
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
+  selenium-firefox:
+    image: selenium/node-firefox:3.141.59-zirconium
+    container_name: selenium-firefox
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
+  test-runner:
+    build: .
+    container_name: test-runner
+    depends_on:
+      - selenium-hub
+      - cks-web-app
+    environment:
+      - TEAMCITY_VERSION
+    volumes:
+      - ./:/tests
+      - /tests/node_modules/
+
+  # CKS dotnet core web app
+  cks-web-app:
+    build: ../web-app
+    container_name: cks-web-app
+    ports:
+      - "8080:8080"
+
+networks:
+  default:
+    name: cks-functional-tests

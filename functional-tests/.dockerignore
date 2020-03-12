@@ -1,0 +1,7 @@
+node_modules
+screenshots
+docker-output
+.gitignore
+logs
+allure-results
+allure-report
