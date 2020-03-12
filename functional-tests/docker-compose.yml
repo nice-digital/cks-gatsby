@@ -38,7 +38,7 @@ services:
       - TEAMCITY_VERSION
     volumes:
       - ./:/tests
-      - /tests/node_modules
+      - /tests/node_modules/
 
   # CKS dotnet core web app
   cks-web-app:

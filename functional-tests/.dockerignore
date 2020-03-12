@@ -3,3 +3,5 @@ screenshots
 docker-output
 .gitignore
 logs
+allure-results
+allure-report

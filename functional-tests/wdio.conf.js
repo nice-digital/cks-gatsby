@@ -10,7 +10,6 @@ exports.config = {
 	seleniumLogs: "./logs",
 
 	specs: ["./features/**/*.feature"],
-	exclude: [],
 
 	capabilities: [
 		{
@@ -28,7 +27,7 @@ exports.config = {
 	coloredLogs: true,
 	screenshotPath: "./screenshots/",
 	baseUrl: "http://localhost:5000/",
-	reporters: isTeamCity ? ["spec", "teamcity"] : ["spec"],
+	reporters: isTeamCity ? ["spec", "teamcity", "allure"] : ["spec"],
 
 	// Use BDD with Cucumber
 	framework: "cucumber",
