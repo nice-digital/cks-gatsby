@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "node --no-deprecation --no-warnings node_modules/webdriverio/bin/wdio",
-    "wait": "wait-on http://cks-web-app:8080",
-    "wait-then-test": "npm run wait && npm test -- --host selenium-hub -b http://cks-web-app:8080"
+    "test:docker": "npm test -- --host selenium-hub --baseUrl http://cks-web-app:8080",
+    "wait:docker": "wait-on http://cks-web-app:8080",
+    "wait-then-test": "npm run wait:docker && npm run test:docker"
   },
   "repository": {
     "type": "git",
