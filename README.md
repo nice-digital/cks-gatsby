@@ -45,8 +45,8 @@ This is the high level stack. Each of the sub-projects (gatsby, web-app and func
   - With recommended extensions (VS Code will prompt you to install these automatically)
 - [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) for the search endpoint web app
 - [.NET Core 3](https://dotnet.microsoft.com/) for the search endpoint web app
-- [Gatsby](https://www.gatsbyjs.org/) and [React](https://reactjs.org/) for static site generation
-- [WebdriverIO](http://v4.webdriver.io/) for browser-based functional tests
+- [Gatsby v2](https://www.gatsbyjs.org/) and [React](https://reactjs.org/) for static site generation
+- [WebdriverIO v4](http://v4.webdriver.io/) for browser-based functional tests
 
 ## Architecture
 
@@ -76,8 +76,9 @@ The easiest way to get the project running is:
 Launching the app via `Launch CKS` does the following:
 
 1. Builds and runs the .NET core web app in the background on http://localhost:5000/
-2. Builds and runs the Gatsby static site http://localhost:8000/ in Chrome
-3. Proxies http://localhost:8000/api/search to http://localhost:5000/api/search
+2. Creates a local, fake CKS api at http://localhost:7000/
+3. Builds the Gatsby static site then launches it in Chrome http://localhost:8000/ once it's built
+4. Proxies http://localhost:8000/api/search (in the Gatsby site) to http://localhost:5000/api/search (in the .NET core app)
 
 It also attached debuggers so you can add break points in VS Code for the Gatsby Node processes, the Gatsby React components and the .NET web app classes.
 

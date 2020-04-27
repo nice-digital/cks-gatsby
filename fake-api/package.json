@@ -1,0 +1,16 @@
+{
+  "name": "@nice-digital/cks-fake-api",
+  "version": "1.0.0",
+  "description": "Fake API for CKS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no tests, this is just a fake API\" && exit 1",
+    "start": "node index.js",
+    "debug": "node --nolazy --inspect-brk=9230 index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

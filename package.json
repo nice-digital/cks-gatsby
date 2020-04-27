@@ -1,0 +1,26 @@
+{
+  "name": "@nice-digital/cks",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Website for CKS",
+  "scripts": {
+    "test": "echo \"Error: runs tests for each sub folder independently\" && exit 1",
+    "//": "Convenient way to install dependencies for all 3 node sub folders",
+    "postinstall": "(cd functional-tests && npm ci); (cd gatsby && npm ci); (cd fake-api && npm ci)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nice-digital/cks-gatsby.git"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "author": "NICE Digital (https://www.nice.org.uk/digital)",
+  "contributors": [
+    "NICE Digital Services (https://www.nice.org.uk/digital)",
+    "Ian Routledge (http://ediblecode.com)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nice-digital/cks-gatsby#readme"
+}
