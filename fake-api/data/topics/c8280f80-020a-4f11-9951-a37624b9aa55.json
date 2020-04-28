@@ -1,0 +1,51 @@
+{
+  "topicName": "Eating disorders",
+  "topicId": "c8280f80-020a-4f11-9951-a37624b9aa55",
+  "exportId": "f6a2b82c-1c89-4942-aae9-aa16000365dd",
+  "dataId": "21ac997f-b9c5-438f-b41d-aa17007d6544",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:36:31.4267607+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "The main types of eating disorders are:Anorexia nervosa — the person maintains a low body weight as a result of a preoccupation with weight",
+  "lastRevised": "Last revised in September 2014",
+  "terms": [
+    {
+      "code": "D052018",
+      "term": "Bulimia Nervosa"
+    },
+    {
+      "code": "D000856",
+      "term": "Anorexia Nervosa"
+    },
+    {
+      "code": "D001068",
+      "term": "Eating Disorders"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "822f1851-f50b-43fa-827a-9dce92d47cd7",
+      "parentId": null,
+      "rootId": "822f1851-f50b-43fa-827a-9dce92d47cd7",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 14909543-dd29-43a4-8535-e996d2ccc35a --><h1>Eating disorders: Summary</h1><!-- end field 14909543-dd29-43a4-8535-e996d2ccc35a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-09-01T00:00:00+01:00",
+      "dateTo": "2014-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No significant changes have been made to the recommendations in this topic."
+    }
+  ]
+}

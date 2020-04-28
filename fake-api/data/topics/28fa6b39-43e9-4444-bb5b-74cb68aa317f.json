@@ -1,0 +1,48 @@
+{
+  "topicName": "Anal fissure",
+  "topicId": "28fa6b39-43e9-4444-bb5b-74cb68aa317f",
+  "exportId": "5b07fd4d-e67a-47a8-8300-aa16000365dd",
+  "dataId": "d6ac3d1c-1b48-47f9-9222-aa17007ffc22",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:45:57.7169969+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "An anal fissure is a tear or ulcer in the lining of the anal canal, immediately within the anal margin.",
+  "lastRevised": "Last revised in January 2017",
+  "terms": [
+    {
+      "code": "D005401",
+      "term": "Fissure in Ano"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3d31ace6-2dd6-4dff-b8eb-ad5e3e822a69",
+      "parentId": null,
+      "rootId": "3d31ace6-2dd6-4dff-b8eb-ad5e3e822a69",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b025cb19-0527-4b08-8511-580f0d86d57a --><h1>Anal fissure:&nbsp;Summary</h1><!-- end field b025cb19-0527-4b08-8511-580f0d86d57a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Update to reflect name change of ERIC, The Children&#39;s Bowel &amp; Bladder Charity."
+    },
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

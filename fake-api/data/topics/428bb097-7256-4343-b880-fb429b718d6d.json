@@ -1,0 +1,43 @@
+{
+  "topicName": "Warts and verrucae",
+  "topicId": "428bb097-7256-4343-b880-fb429b718d6d",
+  "exportId": "add330c9-ff11-4dfd-a3a4-aa8600be191d",
+  "dataId": "4106fee1-4733-48a8-bfe3-aa8600c3ec7b",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:53:19.3679881+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Warts are small, rough growths which are caused by certain strains of the human papilloma virus (HPV).",
+  "lastRevised": "Last revised in December 2014",
+  "terms": [
+    {
+      "code": "D014860",
+      "term": "Warts"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "27014995-a6d7-4c4e-9176-5cfd938a1e59",
+      "parentId": null,
+      "rootId": "27014995-a6d7-4c4e-9176-5cfd938a1e59",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 184db406-5963-458e-b6f8-01294415e46e --><h1>Warts and verrucae:&nbsp;Summary</h1><!-- end field 184db406-5963-458e-b6f8-01294415e46e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-09-01T00:00:00+01:00",
+      "dateTo": "2014-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. Changes have been made in this topic in line with the British Association of Dermatologists guidance, British Association of Dermatologists&#39; guidelines for the management of cutaneous warts Sterling et al, 2014."
+    }
+  ]
+}

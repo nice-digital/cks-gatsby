@@ -1,0 +1,43 @@
+{
+  "topicName": "Ovarian cancer",
+  "topicId": "2b5f9995-52a6-4997-b11b-4dd86f5b4cac",
+  "exportId": "8868e15b-e561-4da7-b5a2-aa16000365dd",
+  "dataId": "f26d3bab-40f1-4a36-940e-aa17007e67a4",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:40:13.143262+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "The lifetime risk of a woman being diagnosed with ovarian cancer is 1 in 48.The risk of ovarian cancer is increased by:Increasing age.",
+  "lastRevised": "Last revised in July 2018",
+  "terms": [
+    {
+      "code": "D010051",
+      "term": "Ovarian Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d86e7430-aa83-4054-9055-18d503164437",
+      "parentId": null,
+      "rootId": "d86e7430-aa83-4054-9055-18d503164437",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field bfc87a10-6b22-4f91-854f-a046054b4354 --><h1>Ovarian cancer:&nbsp;Summary</h1><!-- end field bfc87a10-6b22-4f91-854f-a046054b4354 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-07-01T00:00:00+01:00",
+      "dateTo": "2018-07-31T23:59:59+01:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in July 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No changes to clinical recommendations have been made."
+    }
+  ]
+}

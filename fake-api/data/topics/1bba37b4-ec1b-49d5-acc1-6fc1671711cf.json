@@ -1,0 +1,42 @@
+{
+  "topicName": "Blepharitis",
+  "topicId": "1bba37b4-ec1b-49d5-acc1-6fc1671711cf",
+  "exportId": "82b5f4ee-01bf-45cb-98ea-aa5700e2147d",
+  "dataId": "1e0245ea-fadd-4e9c-bbfd-aa5b00cd1410",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:26:39.0167369+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Blepharitis describes inflammation of the margin of the eyelids.",
+  "lastRevised": "Last revised in April&nbsp;2019",
+  "terms": [
+    {
+      "code": "D001762",
+      "term": "Blepharitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Eyes"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6397a591-acc3-41de-9dda-c5f53213cdeb",
+      "parentId": null,
+      "rootId": "6397a591-acc3-41de-9dda-c5f53213cdeb",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field f172a51c-a75b-4a05-b5d9-1b4e268da1eb --><h1>Blepharitis:&nbsp;Summary</h1><!-- end field f172a51c-a75b-4a05-b5d9-1b4e268da1eb -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-04-01T00:00:00+01:00",
+      "dateTo": "2019-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

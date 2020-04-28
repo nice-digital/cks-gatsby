@@ -1,0 +1,40 @@
+{
+  "topicName": "Cerebral palsy",
+  "topicId": "0f1011cb-425e-4af4-96bc-aa0600b1059f",
+  "exportId": "bfc4e1ef-9800-4935-9d6e-aa9500afd841",
+  "dataId": "d985eee8-e323-42b6-860e-aa9500ebc7f7",
+  "number": 0,
+  "dateOfExport": "2019-07-25T14:18:27.1666116+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Cerebral palsy is a neurological condition which affects movement and co-ordination, caused by a problem with the brain that occurs before, during or soon after birth.",
+  "lastRevised": "June 2019",
+  "terms": [
+    {
+      "code": "D002547",
+      "term": "Cerebral Palsy"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "b3b0078c-7eac-44d4-a88f-aa0600b1089e",
+      "parentId": null,
+      "rootId": "b3b0078c-7eac-44d4-a88f-aa0600b1089e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b1bdf15a-71b9-48d5-87bd-aa0600b1089e --><h1>Cerebral palsy: Summary</h1><!-- end field b1bdf15a-71b9-48d5-87bd-aa0600b1089e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-06-30T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

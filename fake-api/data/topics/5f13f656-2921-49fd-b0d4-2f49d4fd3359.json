@@ -1,0 +1,42 @@
+{
+  "topicName": "Neck pain - non-specific",
+  "topicId": "5f13f656-2921-49fd-b0d4-2f49d4fd3359",
+  "exportId": "436411cd-8043-4357-b2ec-aa3900ee2979",
+  "dataId": "b4299146-068e-48c5-adff-aa3900f49b71",
+  "number": 5,
+  "dateOfExport": "2019-04-24T14:50:34.4648933+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Simple (or non-specific) neck pain is neck pain for which no specific cause can be found.",
+  "lastRevised": "Last revised in October&nbsp;2018",
+  "terms": [
+    {
+      "code": "D019547",
+      "term": "Neck Pain"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "64985305-f9dd-4142-8586-9aa77e44f163",
+      "parentId": null,
+      "rootId": "64985305-f9dd-4142-8586-9aa77e44f163",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field f775c7a5-de1d-4285-b365-83acf74ab8ed --><h1>Neck pain - non-specific: Summary</h1><!-- end field f775c7a5-de1d-4285-b365-83acf74ab8ed -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Some minor changes have been made to the recommendations in line with national clinical guidelines."
+    }
+  ]
+}

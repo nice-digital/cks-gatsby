@@ -1,0 +1,73 @@
+{
+  "topicName": "Anticoagulation - oral ",
+  "topicId": "d64523b7-19f2-41a0-afd4-d1c0790cce30",
+  "exportId": "d10d00d2-1114-4a01-a96a-aa8e00b792d1",
+  "dataId": "6a6650a1-866d-406b-bc5b-aa9500ebe4de",
+  "number": 5,
+  "dateOfExport": "2019-07-25T14:18:50.7704996+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "There are five oral anticoagulants licensed for use in the UK: warfarin, apixaban, dabigatran, edoxaban and rivaroxaban.",
+  "lastRevised": "Last revised in June 2019",
+  "terms": [
+    {
+      "code": "D020246",
+      "term": "Venous Thrombosis"
+    },
+    {
+      "code": "D054556",
+      "term": "Venous Thromboembolism"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Drugs and devices",
+    "Haematology",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "ef246386-4fd2-4c4c-9048-29d4b4d2ec63",
+      "parentId": null,
+      "rootId": "ef246386-4fd2-4c4c-9048-29d4b4d2ec63",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 97c8ac52-9f6d-4b7c-a5c9-95cdae93cd9e --><h1>Anticoagulation - oral: Summary</h1><!-- end field 97c8ac52-9f6d-4b7c-a5c9-95cdae93cd9e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-06-01T00:00:00+01:00",
+      "dateTo": "2019-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Apixaban is now known to be contraindicated in people with history of thrombosis diagnosed with antiphospholipid syndrome, in particular, triple positive patients, where use of DOACs could be associated with increased rates of recurrent thrombotic events."
+    },
+    {
+      "dateFrom": "2017-11-01T00:00:00+00:00",
+      "dateTo": "2017-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information added on concomitant use of apixaban with clarithromycin as per the updated manufacturer&#39;s summary of product characteristics."
+    },
+    {
+      "dateFrom": "2017-07-01T00:00:00+01:00",
+      "dateTo": "2017-07-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Added additional adverse effects for rivaroxaban as per the updated manufacturer&#39;s summary of product characteristics."
+    },
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Added MHRA information on Direct-acting antivirals to treat chronic hepatitis C: risk of interaction with vitamin K antagonists and changes in INR."
+    },
+    {
+      "dateFrom": "2016-10-01T00:00:00+01:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Information about edoxaban, a new anticoagulant has been added to this topic."
+    }
+  ]
+}

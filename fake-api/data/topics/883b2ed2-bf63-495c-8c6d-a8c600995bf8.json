@@ -1,0 +1,42 @@
+{
+  "topicName": "Cirrhosis",
+  "topicId": "883b2ed2-bf63-495c-8c6d-a8c600995bf8",
+  "exportId": "ba928bf4-6068-4112-88a0-aa8600be191d",
+  "dataId": "7752a531-52ad-4be8-8e9d-aa8600c3270c",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:50:30.9277734+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Cirrhosis is a progressive fibrotic nodular liver disease",
+  "lastRevised": "Last revised in June 2018",
+  "terms": [
+    {
+      "code": "D008103",
+      "term": "Liver Cirrhosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "49f88c73-14e7-408d-89f6-a8c600996383",
+      "parentId": null,
+      "rootId": "49f88c73-14e7-408d-89f6-a8c600996383",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 392ac531-cebd-4027-bb98-a8c600996383 --><h1>Cirrhosis: Summary</h1><!-- end field 392ac531-cebd-4027-bb98-a8c600996383 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "A literature search was conducted in April 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials. The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

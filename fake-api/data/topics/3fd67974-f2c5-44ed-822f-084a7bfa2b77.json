@@ -1,0 +1,54 @@
+{
+  "topicName": "Fibroids",
+  "topicId": "3fd67974-f2c5-44ed-822f-084a7bfa2b77",
+  "exportId": "95cf91a7-935a-4cae-aa2b-aa16000365dd",
+  "dataId": "85c8a025-1cd6-4a7a-b60f-aa17007d8375",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:36:57.8399733+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Uterine fibroids are the most common benign tumour in women — they are a mixture of smooth muscle cells and fibroblasts,",
+  "lastRevised": "Last revised in December 2018",
+  "terms": [
+    {
+      "code": "D007889",
+      "term": "Leiomyoma"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f723d230-30ce-4fc2-92b1-53a92b719154",
+      "parentId": null,
+      "rootId": "f723d230-30ce-4fc2-92b1-53a92b719154",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field bf2717fb-e761-4c8d-82e0-99f57771a22c --><h1>Fibroids: Summary</h1><!-- end field bf2717fb-e761-4c8d-82e0-99f57771a22c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-12-01T00:00:00+00:00",
+      "dateTo": "2018-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The recommendations on managing women with menorrhagia associated with fibroids have been removed and replaced with a link to the CKS topic on Menorrhagia. The information on the secondary care management of fibroids has also been removed as it is outside the scope of this CKS topic."
+    },
+    {
+      "dateFrom": "2018-03-01T00:00:00+00:00",
+      "dateTo": "2018-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The advice from the European Medicines Agency relating to ulipristal (Esmya) has been added."
+    },
+    {
+      "dateFrom": "2017-06-01T00:00:00+01:00",
+      "dateTo": "2017-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

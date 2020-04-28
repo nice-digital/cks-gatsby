@@ -1,0 +1,43 @@
+{
+  "topicName": "Breathlessness",
+  "topicId": "3816dff2-9844-4422-bc4f-062669a6f4d9",
+  "exportId": "ec3bc5aa-fe8d-4788-ab93-aa16000365dd",
+  "dataId": "2963e51a-d94f-4196-ba01-aa17007d76cc",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:36:45.7168018+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Breathlessness is a subjective, distressing sensation of awareness of difficulty with breathing.",
+  "lastRevised": "Last revised in January 2017",
+  "terms": [
+    {
+      "code": "D004417",
+      "term": "Dyspnea"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1c292407-5093-4e79-8190-6bde41f78a49",
+      "parentId": null,
+      "rootId": "1c292407-5093-4e79-8190-6bde41f78a49",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field be9a796d-975f-47df-98cd-bfda7215d4c4 --><h1>Breathlessness: Summary</h1><!-- end field be9a796d-975f-47df-98cd-bfda7215d4c4 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-10-01T00:00:00+01:00",
+      "dateTo": "2017-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in October 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic."
+    }
+  ]
+}

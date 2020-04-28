@@ -1,0 +1,50 @@
+{
+  "topicName": "MRSA in primary care",
+  "topicId": "c9e197be-4f79-4d67-bf67-2b2a8a137e03",
+  "exportId": "e3abd79b-ace2-429f-b6e5-aa16000365dd",
+  "dataId": "b5d0bc15-b9a7-4b13-9ec5-aa17007e6f3d",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:40:19.0384017+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Staphylococcus aureus is a bacterium that is usually commensal, neither harming nor benefiting the host.",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D013203",
+      "term": "Staphylococcal Infections"
+    },
+    {
+      "code": "D013211",
+      "term": "Staphylococcus aureus"
+    },
+    {
+      "code": "D016106",
+      "term": "Methicillin Resistance"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "81cc2a26-a971-4038-a933-4595a848bbd1",
+      "parentId": null,
+      "rootId": "81cc2a26-a971-4038-a933-4595a848bbd1",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e70f0c5e-c71e-4d1f-b64b-8155b49ba7d2 --><h1>MRSA in primary care:&nbsp;Summary</h1><!-- end field e70f0c5e-c71e-4d1f-b64b-8155b49ba7d2 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

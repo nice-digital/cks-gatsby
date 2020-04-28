@@ -1,0 +1,42 @@
+{
+  "topicName": "Adverse drug reactions",
+  "topicId": "fb7af4be-ae9d-4213-b2ca-ca17ddb868c1",
+  "exportId": "9f3e3f9e-cc67-4ae6-ba4c-aa9b0095334a",
+  "dataId": "f59ffd3c-ba01-4c40-9c52-aa9b00969fa0",
+  "number": 5,
+  "dateOfExport": "2019-07-31T09:08:22.9439431+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "An adverse drug reaction (ADR) is an unwanted or harmful reaction which occurs after administration of a drug or drugs.",
+  "lastRevised": "Last revised in March 2017",
+  "terms": [
+    {
+      "code": "D004362",
+      "term": "Drug Toxicity"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "5764ad76-7fd3-4176-9db7-50c04ddc37ba",
+      "parentId": null,
+      "rootId": "5764ad76-7fd3-4176-9db7-50c04ddc37ba",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d34ee842-ddbe-4380-9c6c-af5998b19916 --><h1>Adverse drug reactions:&nbsp;Summary</h1><!-- end field d34ee842-ddbe-4380-9c6c-af5998b19916 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-03-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. The Medicines and Healthcare Products Regulatory Agency (MHRA) no longer request that all suspected adverse drug reactions (ADRs) in children are reported; the advice on which suspected ADRs to report in children is now the same as for adults. This new guidance is as a result of feedback that the previous guidelines (asking all suspected ADRs in children to be reported) were impractical and deterred reporting (MHRA, 2015)."
+    }
+  ]
+}

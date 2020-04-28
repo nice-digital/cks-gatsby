@@ -1,0 +1,54 @@
+{
+  "topicName": "Pre-patellar bursitis",
+  "topicId": "54c9032c-42d1-4a7e-aa9b-60cc7c1f66b7",
+  "exportId": "59934f3e-577b-47ef-97c5-aa16000365dd",
+  "dataId": "2df4b866-a088-4492-945a-aa1700819057",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:51:42.7234145+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "The pre-patellar bursa lies between the anterior surface of the patella and the skin. It facilitates free movement of the skin over the patella",
+  "lastRevised": "December 2016",
+  "terms": [
+    {
+      "code": "D010146",
+      "term": "Pain"
+    },
+    {
+      "code": "D002062",
+      "term": "Bursitis"
+    },
+    {
+      "code": "D007719",
+      "term": "Knee Joint"
+    },
+    {
+      "code": "D010329",
+      "term": "Patella"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "ecee2df2-10b4-4920-8233-5198d6788ae7",
+      "parentId": null,
+      "rootId": "ecee2df2-10b4-4920-8233-5198d6788ae7",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a3005e8b-1ab9-426a-a1fe-f102db1aab75 --><h1>Pre-patellar bursitis: Summary</h1><!-- end field a3005e8b-1ab9-426a-a1fe-f102db1aab75 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Aspiration and corticosteroid injection are no longer recommended as treatments for bursitis in primary care. Minor restructuring of the topic has been undertaken."
+    }
+  ]
+}

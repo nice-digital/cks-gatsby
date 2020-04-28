@@ -1,0 +1,54 @@
+{
+  "topicName": "Post-herpetic neuralgia",
+  "topicId": "42508b4e-7987-4ff7-9cd1-647315a678b7",
+  "exportId": "44728759-22a4-4089-8fe8-aa16000365dd",
+  "dataId": "1eb85b06-dd57-4fe5-9612-aa170080f927",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:49:34.121033+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Post-herpetic neuralgia occurs when the pain associated with shingles becomes chronic.Symptoms include constant or intermittent stabbing or burning",
+  "lastRevised": "Last revised in July 2017",
+  "terms": [
+    {
+      "code": "D006562",
+      "term": "Herpes Zoster"
+    },
+    {
+      "code": "D051474",
+      "term": "Neuralgia, Postherpetic"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Neurological",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "9d36aefa-2e8c-4ee7-9501-d46e32578dad",
+      "parentId": null,
+      "rootId": "9d36aefa-2e8c-4ee7-9501-d46e32578dad",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field de9f7fcf-5457-4c3b-9691-d8222485f833 --><h1>Post-herpetic neuralgia: Summary</h1><!-- end field de9f7fcf-5457-4c3b-9691-d8222485f833 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-07-01T00:00:00+01:00",
+      "dateTo": "2017-07-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Minor typographical corrections."
+    },
+    {
+      "dateFrom": "2017-02-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in February 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

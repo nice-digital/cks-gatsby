@@ -14,7 +14,11 @@
       "term": "Asthma"
     }
   ],
-  "clinicalSpecialties": ["Allergies", "Child health", "Respiratory"],
+  "clinicalSpecialties": [
+    "Allergies",
+    "Child health",
+    "Respiratory"
+  ],
   "topicHtmlObjects": [
     {
       "itemId": "f161063e-ec35-49f0-9a35-397396abb944",

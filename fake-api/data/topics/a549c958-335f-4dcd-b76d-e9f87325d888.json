@@ -1,0 +1,51 @@
+{
+  "topicName": "Chest pain",
+  "topicId": "a549c958-335f-4dcd-b76d-e9f87325d888",
+  "exportId": "f48aa6eb-5379-4f75-8669-aa16000365dd",
+  "dataId": "9c7d17a5-693b-4245-a130-aa170080558e",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:47:13.6223623+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Chest pain refers to pain in the thorax. It can be classified by:Cause (such as cardiac or non-cardiac).",
+  "lastRevised": "Last revised in January 2017",
+  "terms": [
+    {
+      "code": "D010146",
+      "term": "Pain"
+    },
+    {
+      "code": "D013909",
+      "term": "Thorax"
+    },
+    {
+      "code": "D002637",
+      "term": "Chest Pain"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "daf79740-9cd0-4a6a-8f75-3019546c7c23",
+      "parentId": null,
+      "rootId": "daf79740-9cd0-4a6a-8f75-3019546c7c23",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e8ee28f9-9479-4cdc-8967-4208d79cec3e --><h1>Chest pain: Summary</h1><!-- end field e8ee28f9-9479-4cdc-8967-4208d79cec3e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

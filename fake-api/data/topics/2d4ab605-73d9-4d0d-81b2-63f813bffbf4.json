@@ -1,0 +1,43 @@
+{
+  "topicName": "Benign paroxysmal positional vertigo",
+  "topicId": "2d4ab605-73d9-4d0d-81b2-63f813bffbf4",
+  "exportId": "c7ec2c66-4432-448b-8cb0-aa8600be191d",
+  "dataId": "3a0a511a-57f5-41f0-9e29-aa8600c3b692",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:52:32.9130694+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Benign paroxysmal positional vertigo (BPPV) is a disorder of the inner ear characterized by repeated episodes of positional vertigo",
+  "lastRevised": "Last revised in October 2017",
+  "terms": [
+    {
+      "code": "C535431",
+      "term": "Benign paroxysmal positional vertigo"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Ear, nose and throat",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "2d2edb91-483f-4d80-b1ad-598ab93e8f3a",
+      "parentId": null,
+      "rootId": "2d2edb91-483f-4d80-b1ad-598ab93e8f3a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 84f5e7e6-6fbe-4914-9424-65aa38371aca --><h1>Benign paroxysmal positional vertigo:&nbsp;Summary</h1><!-- end field 84f5e7e6-6fbe-4914-9424-65aa38371aca -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to the recommendations have been made."
+    }
+  ]
+}

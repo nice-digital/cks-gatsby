@@ -1,0 +1,42 @@
+{
+  "topicName": "Trigeminal neuralgia",
+  "topicId": "dd0f36c2-b31b-42ca-bc80-17ddb7e243ec",
+  "exportId": "dc5a966e-9e09-4648-8fe9-aa16000365dd",
+  "dataId": "8a8c7bd3-9479-40cd-8edd-aa170080f774",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:49:32.5646226+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Trigeminal neuralgia occurs in the distribution of one or more branches of the fifth (trigeminal) cranial nerve.",
+  "lastRevised": "Last revised in January 2018",
+  "terms": [
+    {
+      "code": "D014277",
+      "term": "Trigeminal Neuralgia"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "db520430-a268-48bc-8ce5-931c0c91a7ee",
+      "parentId": null,
+      "rootId": "db520430-a268-48bc-8ce5-931c0c91a7ee",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 695afd51-9aea-4904-8ef8-f5c7c07013ae --><h1>Trigeminal neuralgia:&nbsp;Summary</h1><!-- end field 695afd51-9aea-4904-8ef8-f5c7c07013ae -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-02-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in February 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

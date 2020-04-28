@@ -1,0 +1,50 @@
+{
+  "topicName": "Pruritus ani",
+  "topicId": "86164793-614e-4454-88db-d9e55aaa253a",
+  "exportId": "b8bd13c6-f8b3-456a-89c4-aa16011b9d11",
+  "dataId": "7b6a2478-0b4c-4fd4-b252-aa17007f4153",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:43:18.3121555+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Pruritus ani is a skin condition characterized by the sensation of perianal itching or burning.",
+  "lastRevised": "Last revised in July 2016",
+  "terms": [
+    {
+      "code": "D006854",
+      "term": "Hydrocortisone"
+    },
+    {
+      "code": "D006634",
+      "term": "Histamine H1 Antagonists"
+    },
+    {
+      "code": "D006920",
+      "term": "Hygiene"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "be5adfe1-238a-46bd-a9e4-4d3db3dc909c",
+      "parentId": null,
+      "rootId": "be5adfe1-238a-46bd-a9e4-4d3db3dc909c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e2d1c2a2-66ea-4a09-a411-6fb21d838661 --><h1>Pruritus ani:&nbsp;Summary</h1><!-- end field e2d1c2a2-66ea-4a09-a411-6fb21d838661 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No changes to clinical recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

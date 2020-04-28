@@ -1,0 +1,46 @@
+{
+  "topicName": "Ulcerative colitis",
+  "topicId": "6a63bd87-53c1-487d-8426-773cffdb4c43",
+  "exportId": "818cdc39-d3a2-4894-85d3-aa8e00b792d1",
+  "dataId": "93280ffc-42f7-48e4-a577-aa9500ec82ea",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:21:05.6837851+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Ulcerative colitis is a chronic, unpredictable, relapsing–remitting, non-infectious inflammatory disease of the gastrointestinal tract.",
+  "lastRevised": "Last revised in April&nbsp;2019",
+  "terms": [
+    {
+      "code": "D003093",
+      "term": "Colitis, Ulcerative"
+    },
+    {
+      "code": "D015212",
+      "term": "Inflammatory Bowel Diseases"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7f73b937-3e2c-4e01-95ab-e503355f43d1",
+      "parentId": null,
+      "rootId": "7f73b937-3e2c-4e01-95ab-e503355f43d1",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 3040ead5-da88-40c7-be6c-023c8ebaaba6 --><h1>Ulcerative colitis:&nbsp;Summary</h1><!-- end field 3040ead5-da88-40c7-be6c-023c8ebaaba6 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-03-01T00:00:00+00:00",
+      "dateTo": "2019-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone significant restructuring. The recommendations on the diagnosis and management of confirmed ulcerative colitis have been amended in line with current evidence. The sections on specialist investigations and management have been updated and expanded. The Prescribing information section has been deleted and links made to other relevant CKS topics."
+    }
+  ]
+}

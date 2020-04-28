@@ -1,0 +1,48 @@
+{
+  "topicName": "Parkinson's disease",
+  "topicId": "ac61656d-8e8b-48b8-bf1d-49f506afadb6",
+  "exportId": "13ebda94-38c3-41d7-afe1-aa5400d56bbe",
+  "dataId": "760d0dc0-f686-43e7-93da-aa5b00cdf98b",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:29:53.1474658+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Parkinson's disease is a chronic, progressive neurodegenerative condition resulting from loss of the dopamine-containing cells of the substantia nigra",
+  "lastRevised": "Last revised in February 2018",
+  "terms": [
+    {
+      "code": "D010300",
+      "term": "Parkinson Disease"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "5c3c4745-bbce-4bc9-9cef-a98f8612491b",
+      "parentId": null,
+      "rootId": "5c3c4745-bbce-4bc9-9cef-a98f8612491b",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 58edb5ec-6e7b-4ec8-8398-e08c8f61761e --><h1>Parkinson&#39;s disease: Summary</h1><!-- end field 58edb5ec-6e7b-4ec8-8398-e08c8f61761e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-02-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Updated QS164 Parkinsons Disease added to new evidence section."
+    },
+    {
+      "dateFrom": "2018-01-01T00:00:00+00:00",
+      "dateTo": "2018-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has been updated in line with the National Institute for Health and Care Excellence (NICE) clinical guideline Parkinson&#39;s disease in adults: diagnosis and management (2017). The sections on prevalence and impulse control disorders have been expanded, and the sections on the management of motor and non-motor complications and specialist treatments of Parkinson&#39;s disease have been updated."
+    }
+  ]
+}

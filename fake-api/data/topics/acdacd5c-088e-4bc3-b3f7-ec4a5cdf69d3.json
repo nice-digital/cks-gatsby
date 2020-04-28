@@ -1,0 +1,48 @@
+{
+  "topicName": "Syphilis",
+  "topicId": "acdacd5c-088e-4bc3-b3f7-ec4a5cdf69d3",
+  "exportId": "06864c79-80ce-435b-9b10-aa8e00b792d1",
+  "dataId": "6be2b25c-95cb-4b04-9487-aa9500ebf090",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:19:00.6100145+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Syphilis is a sexually transmitted infection (STI) caused by the spirochete bacterium, Treponema pallidum.",
+  "lastRevised": "Last revised in November 2016",
+  "terms": [
+    {
+      "code": "D013587",
+      "term": "Syphilis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "e9b58e60-8bd0-4954-9742-b3b9d5047fda",
+      "parentId": null,
+      "rootId": "e9b58e60-8bd0-4954-9742-b3b9d5047fda",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field fd4d2c26-78d2-4685-ab1b-6474827e64cc --><h1>Syphilis:&nbsp;Summary</h1><!-- end field fd4d2c26-78d2-4685-ab1b-6474827e64cc -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Prevalence information has been udpated with statistics from the Public Health England (PHE) report Syphilis epidemiology in London."
+    },
+    {
+      "dateFrom": "2014-09-01T00:00:00+01:00",
+      "dateTo": "2014-09-30T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

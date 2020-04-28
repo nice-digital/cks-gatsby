@@ -1,0 +1,54 @@
+{
+  "topicName": "Headache - cluster",
+  "topicId": "1780a283-d8d8-4a78-9869-4aa0bcb926e5",
+  "exportId": "7a05022a-06f4-49f6-aa77-aa8600be191d",
+  "dataId": "70052544-84d6-4c29-8b19-aa8600c3ef22",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:53:21.4530646+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Cluster headache is a rare but severe primary headache disorder — it is the most common trigeminal autonomic cephalalgia.",
+  "lastRevised": "Last revised in November&nbsp;2017",
+  "terms": [
+    {
+      "code": "D020773",
+      "term": "Headache Disorders"
+    },
+    {
+      "code": "D051270",
+      "term": "Headache Disorders, Primary"
+    },
+    {
+      "code": "D003027",
+      "term": "Cluster Headache"
+    },
+    {
+      "code": "D006261",
+      "term": "Headache"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "117ed6fd-7888-4a5e-9eb1-83960087c96c",
+      "parentId": null,
+      "rootId": "117ed6fd-7888-4a5e-9eb1-83960087c96c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field dafcdb8d-c380-4639-a9ea-53c08bc23062 --><h1>Headache - cluster:&nbsp;Summary</h1><!-- end field dafcdb8d-c380-4639-a9ea-53c08bc23062 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-11-01T00:00:00+00:00",
+      "dateTo": "2017-11-30T23:59:59+00:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in August 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

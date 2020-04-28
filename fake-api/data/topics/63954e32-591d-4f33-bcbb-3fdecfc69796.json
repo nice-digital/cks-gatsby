@@ -1,0 +1,47 @@
+{
+  "topicName": "Stroke and TIA",
+  "topicId": "63954e32-591d-4f33-bcbb-3fdecfc69796",
+  "exportId": "a90f81f9-7e0b-4b78-8088-aa8e00b792d1",
+  "dataId": "653508f4-4895-47a0-bece-aa9500ec63f3",
+  "number": 5,
+  "dateOfExport": "2019-07-25T14:20:37.9505108+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Stroke is a clinical syndrome characterised by sudden onset of rapidly developing focal or global neurological disturbance",
+  "lastRevised": "Last revised in March 2017",
+  "terms": [
+    {
+      "code": "D002546",
+      "term": "Ischemic Attack, Transient"
+    },
+    {
+      "code": "D020521",
+      "term": "Stroke"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "4a4d928f-b730-4ea9-bf09-0512e62c5453",
+      "parentId": null,
+      "rootId": "4a4d928f-b730-4ea9-bf09-0512e62c5453",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 5a6cffa0-f8ea-4b5e-becf-97d5d9e5b2cf --><h1>Stroke and TIA:&nbsp;Summary</h1><!-- end field 5a6cffa0-f8ea-4b5e-becf-97d5d9e5b2cf -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone some restructuring. The recommendation on risk stratification of people with suspected TIA has changed - all people presenting with suspected TIA within the last week should be referred urgently (to be seen within 24 hours) to a stroke physician without risk stratification."
+    }
+  ]
+}

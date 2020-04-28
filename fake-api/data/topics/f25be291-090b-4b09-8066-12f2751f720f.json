@@ -1,0 +1,48 @@
+{
+  "topicName": "Breast cancer - recognition and referral",
+  "topicId": "f25be291-090b-4b09-8066-12f2751f720f",
+  "exportId": "fb317d69-f885-45fa-bf7a-aa16000365dd",
+  "dataId": "3630eb40-7aaa-4fd1-af68-aa17007ef3d6",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:42:12.7201143+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Approximately 50,000 new cases of breast cancer are diagnosed each year in the UK, around a quarter of which through screening mammography.",
+  "lastRevised": "Last revised in November 2015",
+  "terms": [
+    {
+      "code": "D001943",
+      "term": "Breast Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "b3d82e0a-c96b-4fb9-814c-504492c6e188",
+      "parentId": null,
+      "rootId": "b3d82e0a-c96b-4fb9-814c-504492c6e188",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d565a823-e23b-487a-b747-950efeb97d4d --><h1>Breast cancer - recognition and referral:&nbsp;Summary</h1><!-- end field d565a823-e23b-487a-b747-950efeb97d4d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-11-01T00:00:00+00:00",
+      "dateTo": "2015-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The National Institute for Health and Care Excellence (NICE) quality standards for suspected cancer have been added to this topic."
+    },
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "This topic is a direct implementation of the National Institute for Health and Care Excellence guideline Suspected cancer: recognition and referral NICE, 2015. This CKS topic replaces the former topic on Breast cancer - suspected."
+    }
+  ]
+}

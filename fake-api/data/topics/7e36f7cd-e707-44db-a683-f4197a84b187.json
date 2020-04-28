@@ -1,0 +1,48 @@
+{
+  "topicName": "Urinary tract infection (lower) - women",
+  "topicId": "7e36f7cd-e707-44db-a683-f4197a84b187",
+  "exportId": "5a5c2e3e-b448-443b-835b-aa16011b9d11",
+  "dataId": "c4daf980-a79c-4283-904d-aa17007fafcc",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:44:52.5758831+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "A urinary tract infection (UTI) is usually caused by bacteria from the gastrointestinal tract, most commonlyEscherichia coli.",
+  "lastRevised": "Last revised in January 2019",
+  "terms": [
+    {
+      "code": "D003556",
+      "term": "Cystitis"
+    },
+    {
+      "code": "D014552",
+      "term": "Urinary Tract Infection"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Kidney disease and urology",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a8efc965-d3d0-4482-97e5-71c45ae1b669",
+      "parentId": null,
+      "rootId": "a8efc965-d3d0-4482-97e5-71c45ae1b669",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 515dfeca-7ada-4e5a-ae30-f6492e8edef1 --><h1>Urinary tract infection (lower) - women:&nbsp;Summary</h1><!-- end field 515dfeca-7ada-4e5a-ae30-f6492e8edef1 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. Changes to the recommendations have been made in line with updated guidance from the National Institute for Health and Care Excellence on Catheter associated urinary tract infections: antimicrobial prescribing, Recurrent urinary tract infections: antimicrobial prescribing and Urinary tract infections (lower): antimicrobial prescribing."
+    }
+  ]
+}

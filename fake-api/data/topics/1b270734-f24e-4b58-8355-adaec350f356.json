@@ -1,0 +1,90 @@
+{
+  "topicName": "Depression",
+  "topicId": "1b270734-f24e-4b58-8355-adaec350f356",
+  "exportId": "36e5f43c-826d-4f84-b92e-aa9900c452a3",
+  "dataId": "1b4bc830-5d19-445e-8676-aa9900c4e72b",
+  "number": 5,
+  "dateOfExport": "2019-07-29T11:56:53.1002451+00:00",
+  "nextPlannedReviewBy": "2018-12-31T23:59:59+00:00",
+  "topicSummary": "Depression is characterised by persistent low mood and/or loss of pleasure in most activities and a range of associated emotional, cognitive, physical",
+  "lastRevised": "Last revised in October 2015",
+  "terms": [
+    {
+      "code": "D016574",
+      "term": "Seasonal Affective Disorder"
+    },
+    {
+      "code": "D019263",
+      "term": "Dysthymic Disorder"
+    },
+    {
+      "code": "D003866",
+      "term": "Depressive Disorder"
+    },
+    {
+      "code": "D003863",
+      "term": "Depression"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "979e8975-2f40-4697-8edd-3033e1daba90",
+      "parentId": null,
+      "rootId": "979e8975-2f40-4697-8edd-3033e1daba90",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b6af319e-38aa-434b-bfc2-ec4c714b2b13 --><h1>Depression: Summary</h1><!-- end field b6af319e-38aa-434b-bfc2-ec4c714b2b13 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-10-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Based on an update to the manufacturer&#39;s Summary of Product Characteristics (SPC). Gynaecological haemorrhage and severe and potentially fatal allergic reactions (very rare) have been included as possible adverse effects of paroxetine.The Drug interaction section has been updated to include the possible interaction between selective serotonin reuptake inhibitors (SSRIs) and pravastatin."
+    },
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2015-07-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Based on an update to the manufacturer&#39;s SPC, severe hepatic disorders (with potential fatal outcome) have been included as possible adverse effects of trazodone."
+    },
+    {
+      "dateFrom": "2015-03-01T00:00:00+00:00",
+      "dateTo": "2015-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Addition of rhabdomyolysis and urinary retention as adverse effects of mirtazapine."
+    },
+    {
+      "dateFrom": "2014-10-01T00:00:00+01:00",
+      "dateTo": "2014-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Addition of constipation as a common adverse effect of mirtazapine."
+    },
+    {
+      "dateFrom": "2014-04-01T00:00:00+01:00",
+      "dateTo": "2014-04-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Update to the link for the BDI depression questionnaire."
+    },
+    {
+      "dateFrom": "2013-12-01T00:00:00+00:00",
+      "dateTo": "2013-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Text in management rewritten to clarify that antidepressants should be continued for at least 6 months following remission of symptoms. Typographical errors also corrected."
+    },
+    {
+      "dateFrom": "2013-07-01T00:00:00+01:00",
+      "dateTo": "2013-08-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in July 2013 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The structure of this topic has been changed to improve clarity; however, there are no changes to the recommendations."
+    }
+  ]
+}

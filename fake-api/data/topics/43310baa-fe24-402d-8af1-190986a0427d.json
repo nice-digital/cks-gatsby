@@ -1,0 +1,46 @@
+{
+  "topicName": "Palpitations",
+  "topicId": "43310baa-fe24-402d-8af1-190986a0427d",
+  "exportId": "64f9ea38-ed42-4e0b-baf0-aa16000365dd",
+  "dataId": "34a3b814-c24e-4a51-bad6-aa17007edb1f",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:41:51.0017027+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Palpitations are an abnormally perceived heartbeat including a feeling of the heart racing, an irregularity, or pounding sensation",
+  "lastRevised": "Last revised in May 2015",
+  "terms": [
+    {
+      "code": "D001282",
+      "term": "Atrial Flutter"
+    },
+    {
+      "code": "D001145",
+      "term": "Arrhythmias, Cardiac"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "4c83f0e3-0a4b-42aa-96f9-f7df58065a80",
+      "parentId": null,
+      "rootId": "4c83f0e3-0a4b-42aa-96f9-f7df58065a80",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ce38becb-fab0-4a58-a59c-9dff7b34260f --><h1>Palpitations: Summary</h1><!-- end field ce38becb-fab0-4a58-a59c-9dff7b34260f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-03-01T00:00:00+00:00",
+      "dateTo": "2015-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last version of this topic. Initiation of empirical beta-blockers in primary care is no longer recommended."
+    }
+  ]
+}

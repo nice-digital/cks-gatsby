@@ -1,0 +1,43 @@
+{
+  "topicName": "Alopecia, androgenetic - female",
+  "topicId": "ee168cae-489c-42c8-b09e-953c3911c90a",
+  "exportId": "b1c4dd54-cb22-4c5e-9bf0-aa16000365dd",
+  "dataId": "3cd89dbc-21cb-479c-b77e-aa170081c724",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:52:29.5540235+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Androgenetic alopecia (or female pattern hair loss) describes a distinctive pattern of hair loss, which may occur in genetically predisposed women",
+  "lastRevised": "Last revised in May 2016",
+  "terms": [
+    {
+      "code": "D000505",
+      "term": "Alopecia"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Skin and nail",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "04b6f872-bf81-4cf5-a5c3-8d96806dfdec",
+      "parentId": null,
+      "rootId": "04b6f872-bf81-4cf5-a5c3-8d96806dfdec",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field cb4daf10-2357-4599-bbdf-7065da3a2316 --><h1>Alopecia, androgenetic - female:&nbsp;Summary</h1><!-- end field cb4daf10-2357-4599-bbdf-7065da3a2316 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-03-01T00:00:00+00:00",
+      "dateTo": "2016-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made, although minor restructuring of the topic has been undertaken."
+    }
+  ]
+}

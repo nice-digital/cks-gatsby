@@ -1,0 +1,46 @@
+{
+  "topicName": "Delirium",
+  "topicId": "64430de8-33e7-409d-b433-725a712a6f41",
+  "exportId": "239b52ce-1c85-4c73-bb67-aa5700e2147d",
+  "dataId": "513aa9dc-445c-4ff0-94eb-aa5b00ce3cf8",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:30:51.026851+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Delirium (sometimes called 'acute confusional state') is an acute, fluctuating syndrome of inattention, impaired level of consciousness",
+  "lastRevised": "Last revised in November&nbsp;2016",
+  "terms": [
+    {
+      "code": "D003693",
+      "term": "Delirium"
+    },
+    {
+      "code": "D003221",
+      "term": "Confusion"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "392513b6-d283-40bc-9c81-6c8f7295f326",
+      "parentId": null,
+      "rootId": "392513b6-d283-40bc-9c81-6c8f7295f326",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 2a0cf10e-2a73-446b-a560-26daa2204523 --><h1>Delirium:&nbsp;Summary</h1><!-- end field 2a0cf10e-2a73-446b-a560-26daa2204523 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. An additional scenario has been added to provide information on the management of delirium in the last days of life."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "topicName": "Shingles",
+  "topicId": "2969a8ac-cb7f-4569-be79-822e6009081a",
+  "exportId": "f54a2fa2-4cbd-4ac5-af44-aa16000365dd",
+  "dataId": "43f49ca3-82eb-4c31-920b-aa17007e298f",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:39:19.6826709+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Shingles (herpes zoster) is a viral infection of nerve cells that occurs when a latent infection with varicella-zoster virus reactivates.",
+  "lastRevised": "Last revised in May 2018",
+  "terms": [
+    {
+      "code": "D006562",
+      "term": "Herpes Zoster"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Neurological",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c1756e6a-e16f-4d7b-9d20-c990a2e17da4",
+      "parentId": null,
+      "rootId": "c1756e6a-e16f-4d7b-9d20-c990a2e17da4",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e0934a37-17d2-4dd5-b7b1-5856faf951ac --><h1>Shingles:&nbsp;Summary</h1><!-- end field e0934a37-17d2-4dd5-b7b1-5856faf951ac -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Eligible ages for shingles vaccination updated in line with PHE guidance. See prevention."
+    },
+    {
+      "dateFrom": "2017-10-01T00:00:00+01:00",
+      "dateTo": "2017-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Addition to adverse effects of seizure for famciclovir."
+    },
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Correction made to advice on NSAIDs for children with shingles."
+    },
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. Changes to recommendations have been made with respect to the choice of drugs for neuropathic pain in line with the 2013 National Institute for Health and Care Excellence guideline Neuropathic pain in adults: pharmacological management in non-specialist settings. New sections have been added on prevalence, risk factors, and differential diagnosis. Minor amendments have been made to the prescribing information section on antiviral drugs."
+    }
+  ]
+}

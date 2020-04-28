@@ -1,0 +1,43 @@
+{
+  "topicName": "Carpal tunnel syndrome",
+  "topicId": "5c49f319-6d62-40b6-a65b-cc5be1421d2b",
+  "exportId": "3d398398-5336-4939-af2d-aa16000365dd",
+  "dataId": "77c9583b-be5f-404f-9df4-aa17007de8bd",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:38:24.5758754+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Carpal tunnel syndrome (CTS) is a collection of symptoms and signs caused by compression of the median nerve in the carpal tunnel at the wrist.",
+  "lastRevised": "Last revised in September 2016",
+  "terms": [
+    {
+      "code": "D002349",
+      "term": "Carpal Tunnel Syndrome"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0155cbc6-b575-43f5-acbb-5c07ee535690",
+      "parentId": null,
+      "rootId": "0155cbc6-b575-43f5-acbb-5c07ee535690",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e4b026f8-c1a4-41d1-9cea-38f6298ac8fc --><h1>Carpal tunnel syndrome:&nbsp;Summary</h1><!-- end field e4b026f8-c1a4-41d1-9cea-38f6298ac8fc -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "topicName": "Depression in children",
+  "topicId": "088b8823-67f3-4e08-81f1-8778bd49b12e",
+  "exportId": "4e68751b-2e9b-404f-9e5e-aa16000365dd",
+  "dataId": "cccb0cbc-1fcf-4066-b006-aa1700823c2d",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:09.3947455+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "The prevalence of childhood depression has been estimated to be 1% in pre-pubertal children and around 3% in post-pubertal young people.",
+  "lastRevised": "Last revised in February 2016",
+  "terms": [
+    {
+      "code": "D016574",
+      "term": "Seasonal Affective Disorder"
+    },
+    {
+      "code": "D019263",
+      "term": "Dysthymic Disorder"
+    },
+    {
+      "code": "D003866",
+      "term": "Depressive Disorder"
+    },
+    {
+      "code": "D003863",
+      "term": "Depression"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "617496eb-0d37-4598-a220-b544f6be1683",
+      "parentId": null,
+      "rootId": "617496eb-0d37-4598-a220-b544f6be1683",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 1ff3362a-f7cf-4b46-a26d-21afc564d4d0 --><h1>Depression in children: Summary</h1><!-- end field 1ff3362a-f7cf-4b46-a26d-21afc564d4d0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-02-01T00:00:00+00:00",
+      "dateTo": "2016-02-29T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Interim updated, the topic has been updated to align with the recommendations on psychological therapies and antidepressants included in the March 2015 update of the NICE Clinical Guideline (CG28) on Depression in children and young people NICE, 2005."
+    }
+  ]
+}

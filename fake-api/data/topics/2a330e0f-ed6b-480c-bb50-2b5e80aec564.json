@@ -1,0 +1,48 @@
+{
+  "topicName": "Lung and pleural cancers - recognition and referral",
+  "topicId": "2a330e0f-ed6b-480c-bb50-2b5e80aec564",
+  "exportId": "30d5ec20-74db-470f-b2c4-aa16000365dd",
+  "dataId": "92fd3965-e979-446d-9c9a-aa17007e2b66",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:39:21.5672685+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Over 43,000 new lung cancers are diagnosed each year in the UK. A full time GP is likely to diagnose approximately 1 person with lung cancer each year",
+  "lastRevised": "Last revised in November 2016",
+  "terms": [
+    {
+      "code": "D008175",
+      "term": "Lung Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "b12afd3f-d80f-40e8-aac7-f85bcfd840d2",
+      "parentId": null,
+      "rootId": "b12afd3f-d80f-40e8-aac7-f85bcfd840d2",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 85fd0854-dc39-4287-b327-90812dbdf662 --><h1>Lung and pleural cancers - recognition and referral:&nbsp;Summary</h1><!-- end field 85fd0854-dc39-4287-b327-90812dbdf662 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The National Institute for Health and Care Excellence (NICE) quality standards for suspected cancer have been added to this topic."
+    },
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "This topic is a direct implementation of the National Institute for Health and Care Excellence guideline Suspected cancer: recognition and referral NICE, 2015. This CKS topic replaces the former topic on Lung cancer - suspected."
+    }
+  ]
+}

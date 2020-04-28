@@ -1,0 +1,43 @@
+{
+  "topicName": "Vertigo",
+  "topicId": "d75cb8e1-a405-4add-9416-f4ddd4be71a4",
+  "exportId": "e6fc76d2-b66b-4b58-8a72-aa16000365dd",
+  "dataId": "e71af6cc-08eb-4d99-a7dc-aa1700808d11",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:48:01.3965087+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Vertigo is a symptom, not a diagnosis. It refers to a false sensation of movement (spinning or rotation) of the person or their surroundings",
+  "lastRevised": "Last revised in December 2017",
+  "terms": [
+    {
+      "code": "D014717",
+      "term": "Vertigo"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Ear, nose and throat",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d2b4b845-7b1b-4c85-8eea-371c4db2c054",
+      "parentId": null,
+      "rootId": "d2b4b845-7b1b-4c85-8eea-371c4db2c054",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d90f3d1c-a28d-4598-8048-07a6944cb5cb --><h1>Vertigo:&nbsp;Summary</h1><!-- end field d90f3d1c-a28d-4598-8048-07a6944cb5cb -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-12-01T00:00:00+00:00",
+      "dateTo": "2017-12-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in August 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. There have been structural changes to the topic and a new section has been created on prognosis. Detail has been added on differentiating features of central and peripheral causes of vertigo and the alternate cover test is now included as a specific test to consider when examining a person with vertigo."
+    }
+  ]
+}

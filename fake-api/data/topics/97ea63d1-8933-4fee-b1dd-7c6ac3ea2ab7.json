@@ -1,0 +1,55 @@
+{
+  "topicName": "Trichomoniasis",
+  "topicId": "97ea63d1-8933-4fee-b1dd-7c6ac3ea2ab7",
+  "exportId": "ad22e114-9690-4aab-a37d-aa16000365dd",
+  "dataId": "179f70f9-a479-47a6-a0a1-aa1700826d37",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:51.4033471+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Trichomoniasis is a sexually transmitted infection (STI) caused by the flagellated protozoan Trichomonas vaginalis.",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D014246",
+      "term": "Trichomonas vaginalis"
+    },
+    {
+      "code": "D014247",
+      "term": "Trichomonas Vaginitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Men's health",
+    "Sexual health",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "849d698f-e8bc-45af-b0e1-87589b9711f8",
+      "parentId": null,
+      "rootId": "849d698f-e8bc-45af-b0e1-87589b9711f8",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 610491f5-8e40-42b8-84b7-cd4e85a0f5bb --><h1>Trichomoniasis:&nbsp;Summary</h1><!-- end field 610491f5-8e40-42b8-84b7-cd4e85a0f5bb -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2015-01-01T00:00:00+00:00",
+      "dateTo": "2015-03-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in December 2014 to identify evidence-based guidelines, UK policy systematic reviews and key RCTs published since the last review of this topic. Advice from the Clinical Effectiveness Group, British Association for Sexual Health and HIV (BASHH), United Kingdom National Guideline on the Management of Trichomoniasis vaginalis has been added to this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

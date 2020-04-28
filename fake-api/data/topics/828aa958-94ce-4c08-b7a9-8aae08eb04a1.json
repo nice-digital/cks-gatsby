@@ -1,0 +1,51 @@
+{
+  "topicName": "Diarrhoea - adult's assessment",
+  "topicId": "828aa958-94ce-4c08-b7a9-8aae08eb04a1",
+  "exportId": "60dabf94-d3cd-4cc5-8ed6-aa16000365dd",
+  "dataId": "b0b553a0-8042-458b-9ec8-aa1700813a2f",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:50:29.1255176+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Diarrhoea is the abnormal passing of loose or liquid stools, with increased frequency and/or increased volume.",
+  "lastRevised": "Last revised in December 2018",
+  "terms": [
+    {
+      "code": "D014839",
+      "term": "Vomiting"
+    },
+    {
+      "code": "D003967",
+      "term": "Diarrhea"
+    },
+    {
+      "code": "D005759",
+      "term": "Gastroenteritis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal",
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "01583145-95d3-4f3e-b780-679d935e9224",
+      "parentId": null,
+      "rootId": "01583145-95d3-4f3e-b780-679d935e9224",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 90b537d3-0842-4676-8d2c-1e927ca0e8e3 --><h1>Diarrhoea - adult&#39;s assessment: Summary</h1><!-- end field 90b537d3-0842-4676-8d2c-1e927ca0e8e3 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-12-01T00:00:00+00:00",
+      "dateTo": "2018-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. New recommendations have been added to the referral section, reflecting the National Institute for Health and Care Excellence guideline on Suspected cancer: recognition and referral NICE, 2015. In the scenario on chronic diarrhoea, there have been changes to the assessment section and new tests to consider have been added to the recommendations on investigations."
+    }
+  ]
+}

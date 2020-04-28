@@ -1,0 +1,53 @@
+{
+  "topicName": "Benzodiazepine and z-drug withdrawal",
+  "topicId": "35151ccb-5966-4e29-97a4-191f3f2aef6a",
+  "exportId": "3af8ff0b-eedd-42c7-b8ac-aa16000365dd",
+  "dataId": "1b9effb7-fdbb-40a2-8c8f-aa17007eeadc",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:42:04.527135+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Benzodiazepines are gamma-aminobutyric acid (GABA) receptor agonists which have hypnotic, anxiolytic, anticonvulsant, and muscle relaxant properties.",
+  "lastRevised": "Last revised in January 2019",
+  "terms": [
+    {
+      "code": "D006993",
+      "term": "Hypnotics and Sedatives"
+    },
+    {
+      "code": "D001569",
+      "term": "Benzodiazepines"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "e9513a3b-fb6b-4289-a1b2-837dae786119",
+      "parentId": null,
+      "rootId": "e9513a3b-fb6b-4289-a1b2-837dae786119",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e6e60fa4-f442-44bb-b2b0-22f5730b8e15 --><h1>Benzodiazepine and z-drug withdrawal:&nbsp;Summary</h1><!-- end field e6e60fa4-f442-44bb-b2b0-22f5730b8e15 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The drug manufacturer advises that treatment should not exceed 4 weeks including the period of tapering off ABPI, 2019."
+    },
+    {
+      "dateFrom": "2018-09-01T00:00:00+01:00",
+      "dateTo": "2018-09-30T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in September 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "topicName": "Antenatal care - uncomplicated pregnancy",
+  "topicId": "e161b8c1-ff96-4809-8ab7-bb558b51aeb6",
+  "exportId": "96bc3782-43e3-432b-bc74-aa8600be191d",
+  "dataId": "ceb3e029-8f2a-4cab-9064-aa8600c30cad",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:50:08.2073243+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "A woman with an uncomplicated pregnancy is usually managed in the community by a midwife.",
+  "lastRevised": "Last revised in February 2019",
+  "terms": [
+    {
+      "code": "D011296",
+      "term": "Prenatal Diagnosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Pregnancy",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7b57bf95-dd9d-4ae1-a790-deef91b03f5a",
+      "parentId": null,
+      "rootId": "7b57bf95-dd9d-4ae1-a790-deef91b03f5a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field cc195212-9f74-48c3-a12a-9e74480e665e --><h1>Antenatal care - uncomplicated pregnancy:&nbsp;Summary</h1><!-- end field cc195212-9f74-48c3-a12a-9e74480e665e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "References to offering maternal screening to rubella have been removed as this is no longer offered by the NHS."
+    },
+    {
+      "dateFrom": "2016-09-01T00:00:00+01:00",
+      "dateTo": "2016-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The recommendation on when to offer vaccination against pertussis (whooping cough) in the section on Antenatal appointments has been amended in line with recent guidance from Public Health England (PHE, 2016)."
+    },
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The recommendations on alcohol consumption in pregnancy have been updated in line with the Department of Health publication Alcohol Guidelines Review - report from the Guidelines development group to the UK Chief Medical Officers (2016)."
+    },
+    {
+      "dateFrom": "2016-04-01T00:00:00+01:00",
+      "dateTo": "2016-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

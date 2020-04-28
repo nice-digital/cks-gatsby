@@ -1,0 +1,49 @@
+{
+  "topicName": "Urticaria",
+  "topicId": "73ccd3ba-b5a5-4a3c-98b2-d838dd8a3c58",
+  "exportId": "4af8c1b2-963e-4d35-9344-aa8600be191d",
+  "dataId": "c2963618-3301-4547-821e-aa8600c2fc65",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:49:53.1228842+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Urticaria is a superficial swelling of the skin (epidermis and mucous membranes) that results in a red, raised, itchy rash.",
+  "lastRevised": "Last revised in January 2018",
+  "terms": [
+    {
+      "code": "D014581",
+      "term": "Urticaria"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Allergies",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "256d8551-003e-4cc9-83f8-9b3b76782e28",
+      "parentId": null,
+      "rootId": "256d8551-003e-4cc9-83f8-9b3b76782e28",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 2391b588-e1e0-43e7-9e0d-1bb429d57571 --><h1>Urticaria:&nbsp;Summary</h1><!-- end field 2391b588-e1e0-43e7-9e0d-1bb429d57571 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-01-01T00:00:00+00:00",
+      "dateTo": "2018-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effect section of non-sedating antihistamines updated to reflect changes to SPC."
+    },
+    {
+      "dateFrom": "2017-03-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key controlled trials (RCTs) published since the last revision of the topic. Changes to the topic include:"
+    }
+  ]
+}

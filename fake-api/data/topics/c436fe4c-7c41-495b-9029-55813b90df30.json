@@ -1,0 +1,43 @@
+{
+  "topicName": "Osgood-Schlatter disease",
+  "topicId": "c436fe4c-7c41-495b-9029-55813b90df30",
+  "exportId": "21b71fb2-76c6-45ef-84ad-aa16000365dd",
+  "dataId": "4873eb6e-5c89-4436-a66e-aa170080298c",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:46:36.8606488+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Osgood–Schlatter disease is a disorder of the tibial tuberosity caused by multiple small avulsion fractures within the ossification centre",
+  "lastRevised": "Last revised in February 2015",
+  "terms": [
+    {
+      "code": "D055034",
+      "term": "Osteochondrosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0005ac27-95f9-4810-afaf-b89abd7f4baf",
+      "parentId": null,
+      "rootId": "0005ac27-95f9-4810-afaf-b89abd7f4baf",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d050ee33-0de1-4b95-9cfe-e78fd53c0c82 --><h1>Osgood-Schlatter disease:&nbsp;Summary</h1><!-- end field d050ee33-0de1-4b95-9cfe-e78fd53c0c82 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-02-01T00:00:00+00:00",
+      "dateTo": "2015-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to the recommendations have been made."
+    }
+  ]
+}

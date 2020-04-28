@@ -1,0 +1,46 @@
+{
+  "topicName": "Molluscum contagiosum",
+  "topicId": "0b781cca-ea92-4b7b-8198-202123cf1f41",
+  "exportId": "03ef9d0a-7af9-4fdf-9139-aa16000365dd",
+  "dataId": "17aff4d0-ee17-4a8e-8d13-aa17008100be",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:49:40.5402736+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Molluscum contagiosum is a viral skin infection caused by molluscum contagiosum virus (MCV), a type of Poxvirus.",
+  "lastRevised": "Last revised in March 2017",
+  "terms": [
+    {
+      "code": "D008976",
+      "term": "Molluscum Contagiosum"
+    },
+    {
+      "code": "D008977",
+      "term": "Molluscum contagiosum virus"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d899ac7c-baba-4971-85d6-9d5f6436af0e",
+      "parentId": null,
+      "rootId": "d899ac7c-baba-4971-85d6-9d5f6436af0e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field f3644187-2eea-4727-b9d1-bf21c5f9fcd0 --><h1>Molluscum contagiosum: Summary</h1><!-- end field f3644187-2eea-4727-b9d1-bf21c5f9fcd0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-03-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic."
+    }
+  ]
+}

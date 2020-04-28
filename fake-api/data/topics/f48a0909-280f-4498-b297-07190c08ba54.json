@@ -1,0 +1,48 @@
+{
+  "topicName": "Constipation",
+  "topicId": "f48a0909-280f-4498-b297-07190c08ba54",
+  "exportId": "6f756e61-ea46-4232-bf3c-aa8e00b792d1",
+  "dataId": "eaa99cdf-a44c-4f61-bbdd-aa9500ebd849",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:18:39.5052103+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Constipation is a symptom-based disorder which describes defecation that is unsatisfactory because of infrequent stools, difficulty passing stools",
+  "lastRevised": "Last revised in June 2019",
+  "terms": [
+    {
+      "code": "D003248",
+      "term": "Constipation"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "b1cc3612-1375-46e4-81f3-efd49fbd8f3a",
+      "parentId": null,
+      "rootId": "b1cc3612-1375-46e4-81f3-efd49fbd8f3a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field bbc7a763-4923-4de5-84d7-dc13445b40dc --><h1>Constipation:&nbsp;Summary</h1><!-- end field bbc7a763-4923-4de5-84d7-dc13445b40dc -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-06-01T00:00:00+01:00",
+      "dateTo": "2019-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Advice that Movicol is considered high in sodium has been added to the prescribing information ABPI, 2019."
+    },
+    {
+      "dateFrom": "2017-06-01T00:00:00+01:00",
+      "dateTo": "2017-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The lower age limit of the topic has been changed to 18 years. The recommendations on assessment have been expanded, and the management options in primary care have been amended in line with current evidence. The scenario on pregnancy and breastfeeding has been incorporated into the scenario on the management of adults with constipation. The Prescribing information section has been updated."
+    }
+  ]
+}

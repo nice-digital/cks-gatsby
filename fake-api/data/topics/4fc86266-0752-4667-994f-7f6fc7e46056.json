@@ -1,0 +1,56 @@
+{
+  "topicName": "Hepatitis B",
+  "topicId": "4fc86266-0752-4667-994f-7f6fc7e46056",
+  "exportId": "519d5459-5fa3-4037-a6ec-aa16000365dd",
+  "dataId": "cb11588f-53c0-4828-a0ae-aa1700829761",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:55:26.8288866+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Hepatitis B is an infectious disease of the liver caused by the hepatitis B virus.",
+  "lastRevised": "Last revised in March 2014",
+  "terms": [
+    {
+      "code": "D006509",
+      "term": "Hepatitis, Viral, Human"
+    },
+    {
+      "code": "D006515",
+      "term": "Hepatitis B virus"
+    },
+    {
+      "code": "D019694",
+      "term": "Hepatitis B, Chronic"
+    },
+    {
+      "code": "D006526",
+      "term": "Hepatitis B"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Gastrointestinal",
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "8c2a0fe2-bca7-427c-aaec-fece94080f5a",
+      "parentId": null,
+      "rootId": "8c2a0fe2-bca7-427c-aaec-fece94080f5a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 8c5d6bfd-9d0f-40e1-9ec3-7f5c7b63ab07 --><h1>Hepatitis B:&nbsp;Summary</h1><!-- end field 8c5d6bfd-9d0f-40e1-9ec3-7f5c7b63ab07 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2013-12-01T00:00:00+00:00",
+      "dateTo": "2014-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2013 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

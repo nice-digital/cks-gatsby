@@ -1,0 +1,42 @@
+{
+  "topicName": "Urological cancers - recognition and referral",
+  "topicId": "4ccc54cd-a2c6-4fd3-9483-7b55de4e06fa",
+  "exportId": "0b0dd8fc-24a2-4538-a356-aa16000365dd",
+  "dataId": "cdcd1d82-e64e-4e04-a8c4-aa1700826f08",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:52.9684369+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Prostate cancer - over 41,000 new prostate cancers are diagnosed each year in the UK.",
+  "lastRevised": "Last revised in September 2015",
+  "terms": [
+    {
+      "code": "D014571",
+      "term": "Urologic Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "dbf9837b-f416-430d-a78d-02e74f86824c",
+      "parentId": null,
+      "rootId": "dbf9837b-f416-430d-a78d-02e74f86824c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 9842a2aa-eeaa-4c09-9ca6-341a6ee1bca0 --><h1>Urological cancers - recognition and referral:&nbsp;Summary</h1><!-- end field 9842a2aa-eeaa-4c09-9ca6-341a6ee1bca0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "This topic is a direct implementation of the National Institute for Health and Care Excellence guideline Suspected cancer: recognition and referral NICE, 2015. This CKS topic replaces the former topic on Urological cancer - suspected."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "topicName": "Osteoarthritis",
+  "topicId": "c9866707-687c-4314-bff3-ae71e0d7e669",
+  "exportId": "776ecf0f-7a8d-486a-baf4-aa5700e2147d",
+  "dataId": "469a9b2a-bf19-4d1b-89b7-aa5b00cd25e0",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:26:54.244019+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Osteoarthritis is defined as a disorder of synovial joints, that is characterized by focal areas of damage to the articular cartilage",
+  "lastRevised": "Last revised in June 2018",
+  "terms": [
+    {
+      "code": "D020370",
+      "term": "Osteoarthritis, Knee"
+    },
+    {
+      "code": "D006615",
+      "term": "Hip"
+    },
+    {
+      "code": "D010003",
+      "term": "Osteoarthritis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "325ed438-8192-488e-99c2-177f12b262c5",
+      "parentId": null,
+      "rootId": "325ed438-8192-488e-99c2-177f12b262c5",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 0102c7fc-720b-4158-9db0-80b1dd54b808 --><h1>Osteoarthritis: Summary</h1><!-- end field 0102c7fc-720b-4158-9db0-80b1dd54b808 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The lower age limit for the topic has been changed to 45 years. The topic has undergone major restructuring to improve navigation, clarity, and transparency. The management recommendations have been updated in line with the current literature including the updated National Institute for Health and Care Excellence (NICE) clinical guideline Osteoarthritis: care and management (2014). The Prescribing information section has been shortened and updated in line with current CKS style, and links to other relevant CKS topics have been added."
+    }
+  ]
+}

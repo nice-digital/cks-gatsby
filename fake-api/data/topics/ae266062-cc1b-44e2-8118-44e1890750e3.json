@@ -1,0 +1,48 @@
+{
+  "topicName": "Chronic kidney disease",
+  "topicId": "ae266062-cc1b-44e2-8118-44e1890750e3",
+  "exportId": "66d9b0aa-91c1-4ac8-8951-aa4000d93087",
+  "dataId": "747f1ff8-285b-437e-8066-aa4000dd9a4e",
+  "number": 5,
+  "dateOfExport": "2019-05-01T13:26:48.8495925+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Chronic kidney disease (CKD) is an abnormality of kidney function or structure that is present for more than 3 months, with implications for health",
+  "lastRevised": "Last revised in March 2019",
+  "terms": [
+    {
+      "code": "D007674",
+      "term": "Kidney Diseases"
+    },
+    {
+      "code": "D051436",
+      "term": "Renal Insufficiency, Chronic"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Endocrine and metabolic",
+    "Kidney disease and urology"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f4d1b344-1309-4c13-9af6-1b26cdb1e728",
+      "parentId": null,
+      "rootId": "f4d1b344-1309-4c13-9af6-1b26cdb1e728",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e4cf91a9-38f7-4ec3-b7fe-4a9da3d2e89f --><h1>Chronic kidney disease:&nbsp;Summary</h1><!-- end field e4cf91a9-38f7-4ec3-b7fe-4a9da3d2e89f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has been updated in line with the National Institute for Health and Care Excellence (NICE) guideline Chronic kidney disease. Early identification and management of chronic kidney disease in adults in primary and secondary care (2015). The topic has undergone minor restructuring to improve navigation and clarity. The topic has been renamed &#39;Chronic kidney disease&#39; and information on the management of people with diabetes mellitus and chronic kidney disease has been added to the section on Management in primary care. An Assessment node has been added to the section on Diagnosis. The prescribing information section has been updated."
+    }
+  ]
+}

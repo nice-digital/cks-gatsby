@@ -1,0 +1,79 @@
+{
+  "topicName": "Gonorrhoea",
+  "topicId": "4b4cdbb6-97a0-4b13-a04c-d857b72bcddf",
+  "exportId": "4cdb5480-769c-4617-bc71-aa6500eabe23",
+  "dataId": "d32f3152-a51e-4839-a342-aa6800d13ff2",
+  "number": 6,
+  "dateOfExport": "2019-06-10T12:41:50.3005664+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Gonorrhoea is a sexually transmitted infection (STI) caused by Neisseria gonorrhoeae.",
+  "lastRevised": "Last revised in March 2019",
+  "terms": [
+    {
+      "code": "D009344",
+      "term": "Neisseria gonorrhoeae"
+    },
+    {
+      "code": "D006069",
+      "term": "Gonorrhea"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Women's health",
+    "Sexual health",
+    "Men's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "bc4f9c23-ce66-470a-8883-bd4d2bb634a2",
+      "parentId": null,
+      "rootId": "bc4f9c23-ce66-470a-8883-bd4d2bb634a2",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 67c1309c-673b-4795-8093-427cd2787c87 --><h1>Gonorrhoea:&nbsp;Summary</h1><!-- end field 67c1309c-673b-4795-8093-427cd2787c87 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-03-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Prescribing information for quinolones updated in line with MHRA, 2019, Fluoroquinolone antibiotics: new restrictions and precautions for use due to very rare reports of disabling and potentially long-lasting or irreversible side effects MHRA, 2019."
+    },
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Prescribing information updated to be brought in line with updated BASHH guideline UK national guideline for the management of gonorrhoea in adults BASHH, 2019."
+    },
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Aortic aneurysm and dissection is now listed as an adverse effect of ciprofloxacin."
+    },
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Prescribing information updated with information regarding azithromycin interacting with colchicine."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "SPC update on quinolones to align all CKS topics prescribing advice. Prostatitis &ndash; chronic, Gonorrhoea, Pyelonephritis, Diarrhoea &ndash; prevention and advice for travellers, Dyspepsia &ndash; unidentified cause, Dyspepsia &ndash; proven functional, Dyspepsia &ndash; proven peptic ulcer, Diverticular disease, Gastroenteritis and Scrotal swellings."
+    },
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

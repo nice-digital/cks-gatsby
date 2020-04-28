@@ -1,0 +1,42 @@
+{
+  "topicName": "Macular degeneration - age-related",
+  "topicId": "819a45d3-fd1c-42c7-8420-27d4daf53cc2",
+  "exportId": "7c68babd-698f-4ca5-a081-aa16000365dd",
+  "dataId": "d48f0a54-7d08-43ec-9fd5-aa1700825a68",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:54:35.1932708+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Age-related macular degeneration (AMD) is the term applied to changes, which occur in the central area of the retina.",
+  "lastRevised": "Last revised in March 2016",
+  "terms": [
+    {
+      "code": "D008268",
+      "term": "Macular Degeneration"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Eyes"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "09a54df8-1f12-4d38-b90c-a1c4c35d9c61",
+      "parentId": null,
+      "rootId": "09a54df8-1f12-4d38-b90c-a1c4c35d9c61",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e2cffa47-7dfb-4837-8c4d-70bace4e5ce5 --><h1>Macular degeneration: Summary</h1><!-- end field e2cffa47-7dfb-4837-8c4d-70bace4e5ce5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-02-01T00:00:00+00:00",
+      "dateTo": "2016-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials  published since the last revision of this topic. The topic has undergone restructuring, but no major changes to the recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "topicName": "Palliative care - malignant skin ulcer",
+  "topicId": "594ae15d-e8a6-49e1-9bc4-b8235684b211",
+  "exportId": "34ecea6c-2537-4430-aa27-aa16000365dd",
+  "dataId": "b68bc573-41dd-4d5f-9c56-aa17007d5330",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:36:16.2605407+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "A malignant ulcer is a proliferative or cavitating primary or secondary cancer in the skin.It may appear as a crater-like wound, a nodular 'fungus'",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D014456",
+      "term": "Ulcer"
+    },
+    {
+      "code": "D010166",
+      "term": "Palliative Care"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Palliative care",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "622bc110-ebcb-43c8-a5aa-1cd3eb8b2d43",
+      "parentId": null,
+      "rootId": "622bc110-ebcb-43c8-a5aa-1cd3eb8b2d43",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c3a553b2-3597-40f4-9189-c6e6b867975c --><h1>Palliative care - malignant skin ulcer: Summary</h1><!-- end field c3a553b2-3597-40f4-9189-c6e6b867975c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There have been structural changes to the topic and changes to the recommendations have been updated in line with NICE guidance Care of dying adults in the last days of life NICE, 2015."
+    }
+  ]
+}

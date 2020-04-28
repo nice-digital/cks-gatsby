@@ -1,0 +1,47 @@
+{
+  "topicName": "Palliative care - cough",
+  "topicId": "561865b5-2a09-480f-ae63-783b229b69bf",
+  "exportId": "7440dfa7-1aed-40e2-95bb-aa16000365dd",
+  "dataId": "0baae3b8-5ece-45b2-bf07-aa1700814d94",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:50:45.305198+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Cough is a defensive reflex that occurs in response to stimulation of irritant receptors which are found in the airways.",
+  "lastRevised": "Last revised in October 2016",
+  "terms": [
+    {
+      "code": "D003371",
+      "term": "Cough"
+    },
+    {
+      "code": "D010166",
+      "term": "Palliative Care"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Palliative care",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1805345a-634a-4862-bc33-27b8690727fc",
+      "parentId": null,
+      "rootId": "1805345a-634a-4862-bc33-27b8690727fc",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 6e9c1a07-e579-4d11-84d4-84f915633871 --><h1>Palliative care - cough: Summary</h1><!-- end field 6e9c1a07-e579-4d11-84d4-84f915633871 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There have been structural changes to the topic and changes to the recommendations have been updated in line with NICE guidance Care of dying adults in the last days of life NICE, 2015."
+    }
+  ]
+}

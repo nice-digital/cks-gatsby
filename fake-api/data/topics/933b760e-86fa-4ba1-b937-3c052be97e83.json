@@ -1,0 +1,56 @@
+{
+  "topicName": "Urinary tract infection (lower) - men",
+  "topicId": "933b760e-86fa-4ba1-b937-3c052be97e83",
+  "exportId": "0599d335-e4fc-4c5e-b53d-aa5400d56bbe",
+  "dataId": "a85d27b0-ea81-43fe-8055-aa5b00cdffc2",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:30:00.172238+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Urinary tract infection (UTI) is infection of any part of the urinary tract, usually by bacteria.",
+  "lastRevised": "Last revised in November&nbsp;2018",
+  "terms": [
+    {
+      "code": "D006417",
+      "term": "Hematuria"
+    },
+    {
+      "code": "D001437",
+      "term": "Bacteriuria"
+    },
+    {
+      "code": "D003556",
+      "term": "Cystitis"
+    },
+    {
+      "code": "D014552",
+      "term": "Urinary Tract Infections"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Kidney disease and urology",
+    "Men's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f6851ba1-b7bf-42cd-8313-96546baeca9f",
+      "parentId": null,
+      "rootId": "f6851ba1-b7bf-42cd-8313-96546baeca9f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b4eb0a1f-14fb-4ea0-bc1c-553e310fb06c --><h1>Urinary tract infection (lower) - men:&nbsp;Summary</h1><!-- end field b4eb0a1f-14fb-4ea0-bc1c-553e310fb06c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-11-01T00:00:00+00:00",
+      "dateTo": "2018-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic."
+    }
+  ]
+}

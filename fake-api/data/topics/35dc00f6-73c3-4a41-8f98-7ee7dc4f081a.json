@@ -1,0 +1,41 @@
+{
+  "topicName": "Contraception - natural family planning",
+  "topicId": "35dc00f6-73c3-4a41-8f98-7ee7dc4f081a",
+  "exportId": "f6eed286-ec42-4937-b093-aa16000365dd",
+  "dataId": "65b89041-3049-4bad-b984-aa17007e0e36",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:38:56.7607554+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Natural family planning is a method of birth control where a woman monitors and records different fertility indicators during her menstrual cycle",
+  "lastRevised": "Last revised in April 2016",
+  "terms": [
+    {
+      "code": "D012252",
+      "term": "Natural Family Planning Methods"
+    },
+    {
+      "code": "D005193",
+      "term": "Family Planning Services"
+    },
+    {
+      "code": "D003267",
+      "term": "Contraception"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "203f408b-9562-43cc-aa7f-530c6bc1b949",
+      "parentId": null,
+      "rootId": "203f408b-9562-43cc-aa7f-530c6bc1b949",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a364f4e8-efad-45e9-b03e-40619a6d0b1a --><h1>Contraception - natural family planning: Summary</h1><!-- end field a364f4e8-efad-45e9-b03e-40619a6d0b1a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": []
+}

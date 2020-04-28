@@ -1,0 +1,56 @@
+{
+  "topicName": "Anaemia - B12 and folate deficiency",
+  "topicId": "cbd29368-ea95-42b6-9182-2ca865ba6f9b",
+  "exportId": "f6ef83dd-e7f0-4555-8061-aa8600be191d",
+  "dataId": "f6da34a0-a62c-4aa3-ae83-aa8600c4025c",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:53:37.8592751+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Deficiency of vitamin B12 or folate is the most common cause of megaloblastic anaemia.",
+  "lastRevised": "Last revised in February 2019",
+  "terms": [
+    {
+      "code": "D000752",
+      "term": "Anemia, Pernicious"
+    },
+    {
+      "code": "D005494",
+      "term": "Folic Acid Deficiency"
+    },
+    {
+      "code": "D014806",
+      "term": "Vitamin B 12 Deficiency"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Haematology"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "65a50766-2ba2-4404-b743-d664e28146d7",
+      "parentId": null,
+      "rootId": "65a50766-2ba2-4404-b743-d664e28146d7",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b05efb2c-e430-4d3b-aec7-d3c09f23c392 --><h1>Anaemia - B12 and folate deficiency:&nbsp;Summary</h1><!-- end field b05efb2c-e430-4d3b-aec7-d3c09f23c392 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Maintenance dose schedule for hydroxocobalamin changed to every 2-3 months in line with the British National Formulary (BNF) BNF 76, 2018."
+    },
+    {
+      "dateFrom": "2018-04-01T00:00:00+01:00",
+      "dateTo": "2018-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

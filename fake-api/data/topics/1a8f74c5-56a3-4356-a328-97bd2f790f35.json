@@ -1,0 +1,56 @@
+{
+  "topicName": "Candida - female genital",
+  "topicId": "1a8f74c5-56a3-4356-a328-97bd2f790f35",
+  "exportId": "830b8e2a-f744-4e4a-adfb-aa16011b9d11",
+  "dataId": "2e65cc21-fcdf-41d4-8b13-aa17007fc4a2",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:45:10.3399195+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Vulvovaginal candidiasis (genital thrush) is a symptomatic inflammation of the vagina and/or vulva caused by a superficial fungal infection.",
+  "lastRevised": "Last revised in May&nbsp;2017",
+  "terms": [
+    {
+      "code": "D002181",
+      "term": "Candidiasis, Vulvovaginal"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Sexual health",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "2194c567-ef5a-4961-ac94-e670a5b20230",
+      "parentId": null,
+      "rootId": "2194c567-ef5a-4961-ac94-e670a5b20230",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b6cff121-7943-4817-a921-a947bd9b07ea --><h1>Candida - female genital: Summary</h1><!-- end field b6cff121-7943-4817-a921-a947bd9b07ea -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The prescribing information section has been simplified. Minor typographical errors have been corrected."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The adverse effects and interactions for fluconazole have been updated in line with the manufacturer&#39;s Summary of Product Characteristics ABPI, 2015."
+    },
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No major changes to recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

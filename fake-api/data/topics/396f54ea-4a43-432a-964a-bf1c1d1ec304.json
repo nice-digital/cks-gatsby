@@ -1,0 +1,42 @@
+{
+  "topicName": "Malaria",
+  "topicId": "396f54ea-4a43-432a-964a-bf1c1d1ec304",
+  "exportId": "873f859f-9b7e-4f2f-8986-aa16000365dd",
+  "dataId": "79f10434-8b94-4baf-a2ea-aa1700808966",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:47:58.4668507+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Malaria is a life-threatening illness caused by infection of red blood cells by Plasmodium parasites.",
+  "lastRevised": "Last revised in November 2017",
+  "terms": [
+    {
+      "code": "D008288",
+      "term": "Malaria"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "e54c9706-6a9d-438e-981e-2447325fdd43",
+      "parentId": null,
+      "rootId": "e54c9706-6a9d-438e-981e-2447325fdd43",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 76d16969-b6f9-4118-a934-0c5c0f8c3b22 --><h1>Malaria:&nbsp;Summary</h1><!-- end field 76d16969-b6f9-4118-a934-0c5c0f8c3b22 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-10-01T00:00:00+01:00",
+      "dateTo": "2017-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

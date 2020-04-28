@@ -1,0 +1,47 @@
+{
+  "topicName": "Palliative care - nausea and vomiting",
+  "topicId": "329a162f-132a-4d7e-afd5-7ff2f86369d2",
+  "exportId": "af320ab6-38cd-495f-a0fb-aa16000365dd",
+  "dataId": "a6f3b58f-dc18-4d47-94bb-aa1700823762",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:04.0978256+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Nausea is an unpleasant sensation of the need to vomit, which is often accompanied by autonomic symptoms, for example pallor, cold sweat, salivation",
+  "lastRevised": "Last revised in October 2016",
+  "terms": [
+    {
+      "code": "D009325",
+      "term": "Nausea"
+    },
+    {
+      "code": "D010166",
+      "term": "Palliative Care"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal",
+    "Palliative care"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "2335cfbc-f754-4370-8d89-8d66cd01570d",
+      "parentId": null,
+      "rootId": "2335cfbc-f754-4370-8d89-8d66cd01570d",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field bde77f9f-de64-4aa5-8f97-6dcda6bb3114 --><h1>Palliative care - nausea and vomiting: Summary</h1><!-- end field bde77f9f-de64-4aa5-8f97-6dcda6bb3114 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There have been structural changes to the topic and changes to the recommendations have been updated in line with NICE guidance Care of dying adults in the last days of life NICE, 2015."
+    }
+  ]
+}

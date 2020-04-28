@@ -1,0 +1,61 @@
+{
+  "topicName": "DMARDs",
+  "topicId": "caed8aa7-f8ba-4a46-9441-92701c2ad78a",
+  "exportId": "07d34d4e-92d2-4820-84a8-aa8e00b792d1",
+  "dataId": "5b597f52-3636-42d4-9e0d-aa9500ec7a21",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:20:58.1938622+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Disease-modifying anti-rheumatic drugs (DMARDs) are a class of drugs, which are designed to influence the course of a disease",
+  "lastRevised": "Last revised in July 2018",
+  "terms": [
+    {
+      "code": "D016903",
+      "term": "Drug Monitoring"
+    },
+    {
+      "code": "D008991",
+      "term": "Monitoring, Physiologic"
+    },
+    {
+      "code": "D018501",
+      "term": "Antirheumatic Agents"
+    },
+    {
+      "code": "D001688",
+      "term": "Biological Agents"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3c1e8e99-1f58-4f1b-a06f-2b76e5996382",
+      "parentId": null,
+      "rootId": "3c1e8e99-1f58-4f1b-a06f-2b76e5996382",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ad095075-a82b-4c7b-8e1f-0fbd50945a0a --><h1>DMARDs:&nbsp;Summary</h1><!-- end field ad095075-a82b-4c7b-8e1f-0fbd50945a0a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-07-01T00:00:00+01:00",
+      "dateTo": "2018-07-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Recommendation to carry out baseline formal ophthalmic examination within 1 year of commencing an antimalarial drug added to hydroxychloroquine monitoring."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

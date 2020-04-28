@@ -1,0 +1,47 @@
+{
+  "topicName": "Corneal superficial injury",
+  "topicId": "2d59b81e-832a-46e3-9d29-6d51c4a5141f",
+  "exportId": "ebdab70d-4b28-4944-b35a-aa8600be191d",
+  "dataId": "44e695d7-dec0-48fc-a812-aa8600c37030",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:51:32.4709065+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Superficial corneal injuries are non-penetrating injuries affecting the outermost layer of the cornea.",
+  "lastRevised": "Last revised in June 2017",
+  "terms": [
+    {
+      "code": "D003315",
+      "term": "Cornea"
+    },
+    {
+      "code": "D057112",
+      "term": "Corneal Perforation"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Eyes",
+    "Injuries"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0faa7186-9479-40f0-847e-a4afbad7826c",
+      "parentId": null,
+      "rootId": "0faa7186-9479-40f0-847e-a4afbad7826c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ec330263-7299-4a45-bdf0-39401fc35b07 --><h1>Corneal superficial injury: Summary</h1><!-- end field ec330263-7299-4a45-bdf0-39401fc35b07 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-06-01T00:00:00+01:00",
+      "dateTo": "2017-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

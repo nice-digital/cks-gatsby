@@ -1,0 +1,60 @@
+{
+  "topicName": "Rosacea - acne",
+  "topicId": "d6855039-5025-454d-b195-d4b0a3763978",
+  "exportId": "f937afbd-acc0-4f63-8b73-aa16000365dd",
+  "dataId": "11b954da-8688-4487-899a-aa170080c1ab",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:48:45.90322+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Acne rosacea is a chronic relapsing skin condition affecting the face, characterized by episodes of facial flushing, erythema, telangiectasia.",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D012393",
+      "term": "Rosacea"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3a76a468-cc1e-4481-b5fe-50208363e8a6",
+      "parentId": null,
+      "rootId": "3a76a468-cc1e-4481-b5fe-50208363e8a6",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d9c5b4a2-091d-425e-b911-727b4c46faf0 --><h1>Rosacea - acne: Summary</h1><!-- end field d9c5b4a2-091d-425e-b911-727b4c46faf0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2017-06-01T00:00:00+01:00",
+      "dateTo": "2017-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added on contraindication and adverse effects of brimonidine gel following advice from the MHRA: https://www.gov.uk/drug-safety-update/brimonidine-gel-mirvaso-risk-of-systemic-cardiovascular-effects-not-to-be-applied-to-damaged-skin."
+    },
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information added on the risk of exacerbation of rosacea with brimonidine gel."
+    },
+    {
+      "dateFrom": "2015-12-01T00:00:00+00:00",
+      "dateTo": "2016-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has been updated in line with a Cochrane systematic review Interventions for rosacea Van Zuuren et al, 2015, and topical brimonidine 0.5% gel has been added as a treatment option. Minor restructuring of the topic has also been undertaken."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "topicName": "Autism in children",
+  "topicId": "dded286c-cea8-4cea-b71b-0d2fb3901796",
+  "exportId": "aa47f357-c427-40e9-a4cd-aa8600be191d",
+  "dataId": "0e431c38-fbf7-4f25-9ec9-aa8600c42891",
+  "number": 6,
+  "dateOfExport": "2019-07-10T11:54:10.4632474+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Autism spectrum disorder (ASD) is a lifelong condition,which significantly limits or impairs the activities of daily life",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D001321",
+      "term": "Autistic Disorder"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f4f7905a-674c-4f50-9a13-2679fa00b62b",
+      "parentId": null,
+      "rootId": "f4f7905a-674c-4f50-9a13-2679fa00b62b",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 68ea46d1-dd97-4c44-be13-ff95204452e6 --><h1>Autism in children:&nbsp;Summary</h1><!-- end field 68ea46d1-dd97-4c44-be13-ff95204452e6 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

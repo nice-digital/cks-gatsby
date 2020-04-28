@@ -1,0 +1,91 @@
+{
+  "topicName": "Epilepsy",
+  "topicId": "b393b08f-0928-43ec-abde-ec6b4844fdee",
+  "exportId": "f43d8c81-b729-4508-b565-aa1f00c4a13f",
+  "dataId": "b8f3ef37-3b9c-4528-968f-aa1f00e22816",
+  "number": 4,
+  "dateOfExport": "2019-03-29T13:43:22.9561228+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Epileptic seizure is a transient disturbance of consciousness, behaviour, emotion, motor function, or sensation, due to abnormal electrical activity",
+  "lastRevised": "Last revised in May 2018",
+  "terms": [
+    {
+      "code": "D004827",
+      "term": "Epilepsy"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "8e59d2d0-7e90-43d0-a441-8eb01ab7fddc",
+      "parentId": null,
+      "rootId": "8e59d2d0-7e90-43d0-a441-8eb01ab7fddc",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d51f734b-a96a-49c0-947d-2f72a77e4c48 --><h1>Epilepsy - Summary</h1><!-- end field d51f734b-a96a-49c0-947d-2f72a77e4c48 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "New product availability - Brivaracetam oral solution and tablets have been approved as monotherapy or adjunctive therapy for partial-onset (focal) seizures in patients four years of age and older."
+    },
+    {
+      "dateFrom": "2018-04-01T00:00:00+01:00",
+      "dateTo": "2018-04-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added to adverse effects regarding Lamotrigine causing hemophagocytic lymphohistiocytosis."
+    },
+    {
+      "dateFrom": "2018-03-01T00:00:00+00:00",
+      "dateTo": "2018-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added to adverse effects relating to prescribing semisodium valproate to patients with an underlying carnitine palmitoyltransferase type II deficiency."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added on laboratory tests in the adverse effects prescribing information section."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added to adverse effects for cardiovascular effects as per updates to the manufacturers&#39; summary of product characteristics for phenytoin."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": ""
+    },
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "A Medicines and Healthcare products Regulatory Agency (MHRA) Drug safety update Valproate and risk of abnormal pregnancy outcomes: new communication materials recommendation to use new support tools to support discussion about the risks of valporate in pregnancy has been added to this topic MHRA, 2016."
+    },
+    {
+      "dateFrom": "2015-06-01T00:00:00+01:00",
+      "dateTo": "2015-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Nightmares added as an adverse effect of lamotrigine based on an update to the manufacturer&#39;s Summary of Product Characteristics (SPC) ABPI Medicines Compendium, 2015."
+    },
+    {
+      "dateFrom": "2014-10-01T00:00:00+01:00",
+      "dateTo": "2014-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. The management sections have been restructured. No major changes to the recommendations have been made, which are in line with the National Institute for Health and Clinical Excellence (NICE) guideline The epilepsies. The diagnosis and management of the epilepsies in adults and children in primary and secondary care National Clinical Guideline Centre, 2012, and a subsequent Evidence Update of the NICE guideline The epilepsies NICE, 2014."
+    }
+  ]
+}

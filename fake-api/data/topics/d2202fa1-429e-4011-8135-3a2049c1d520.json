@@ -1,0 +1,42 @@
+{
+  "topicName": "Dysmenorrhoea",
+  "topicId": "d2202fa1-429e-4011-8135-3a2049c1d520",
+  "exportId": "60764d02-0876-4d70-8447-aa8600be191d",
+  "dataId": "9d4142f3-1382-4326-97b7-aa8600c40c0c",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:53:46.1249259+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Dysmenorrhoea is painful cramping, usually in the lower abdomen, occurring shortly before or during menstruation, or both.",
+  "lastRevised": "Last revised in November 2018",
+  "terms": [
+    {
+      "code": "D004412",
+      "term": "Dysmenorrhea"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a7a7af91-791a-4db2-98f3-d8b206a9ca9a",
+      "parentId": null,
+      "rootId": "a7a7af91-791a-4db2-98f3-d8b206a9ca9a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field dc4b7202-2d36-4eba-b30b-3ceb821a4b72 --><h1>Dysmenorrhoea:&nbsp;Summary</h1><!-- end field dc4b7202-2d36-4eba-b30b-3ceb821a4b72 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-11-01T00:00:00+00:00",
+      "dateTo": "2018-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No major changes to clinical recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

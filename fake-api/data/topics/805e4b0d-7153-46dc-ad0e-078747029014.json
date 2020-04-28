@@ -1,0 +1,49 @@
+{
+  "topicName": "Carbon monoxide poisoning",
+  "topicId": "805e4b0d-7153-46dc-ad0e-078747029014",
+  "exportId": "00a02959-5967-4d78-998a-aa8600be191d",
+  "dataId": "7bb6ce36-68bf-4e7f-87ac-aa8600c3a46d",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:52:17.7054506+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Carbon monoxide is a colourless, odourless, tasteless gas produced by incomplete combustion of organic material.",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D002249",
+      "term": "Carbon Monoxide Poisoning"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Haematology"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "9fb9b77b-e513-4026-adb0-598550bffd3d",
+      "parentId": null,
+      "rootId": "9fb9b77b-e513-4026-adb0-598550bffd3d",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field eea362dc-37d3-4f7a-a5c9-1e39be22bdd5 --><h1>Carbon monoxide poisoning:&nbsp;Summary</h1><!-- end field eea362dc-37d3-4f7a-a5c9-1e39be22bdd5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "A minor typographical error was corrected."
+    },
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. Some minor structural changes have been made to this topic, and the clinical recommendations have been updated to reflect the latest guidelines."
+    }
+  ]
+}

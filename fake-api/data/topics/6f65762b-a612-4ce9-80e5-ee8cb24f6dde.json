@@ -1,0 +1,43 @@
+{
+  "topicName": "Bone and soft tissue sarcoma - recognition and referral",
+  "topicId": "6f65762b-a612-4ce9-80e5-ee8cb24f6dde",
+  "exportId": "943b88f5-9813-4433-9902-aa16000365dd",
+  "dataId": "60881f4a-b48b-413b-878c-aa170081b592",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:52:14.811685+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Bone sarcoma is seen in both sexes, and is one of the most common cancers in children, teenagers and young people.",
+  "lastRevised": "Last revised in September 2015",
+  "terms": [
+    {
+      "code": "D001859",
+      "term": "Bone Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer",
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7463ff6b-b39c-486c-814f-057efef875fb",
+      "parentId": null,
+      "rootId": "7463ff6b-b39c-486c-814f-057efef875fb",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b0342423-d1d1-469b-9b9a-e300f72daf39 --><h1>Bone and soft tissue sarcoma - recognition and referral:&nbsp;Summary</h1><!-- end field b0342423-d1d1-469b-9b9a-e300f72daf39 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-11-30T23:59:59+00:00",
+      "title": "Revised",
+      "body": "This topic is a direct implementation of the National Institute for Health and Care Excellence guideline Suspected cancer: recognition and referral NICE, 2015. This CKS topic replaces the former topic on Bone cancer and sarcoma - suspected."
+    }
+  ]
+}

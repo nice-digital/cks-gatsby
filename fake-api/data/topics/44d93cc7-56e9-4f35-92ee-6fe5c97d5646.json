@@ -1,0 +1,59 @@
+{
+  "topicName": "Candida - skin",
+  "topicId": "44d93cc7-56e9-4f35-92ee-6fe5c97d5646",
+  "exportId": "b139a732-176d-482d-931d-aa16000365dd",
+  "dataId": "c7a4a6c9-0316-4235-b570-aa1700811903",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:50:00.9489814+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Candida is a yeast-like fungus which is part of the normal commensal flora of the human gastrointestinal tract and the vagina.",
+  "lastRevised": "Last revised in May&nbsp;2017",
+  "terms": [
+    {
+      "code": "D003881",
+      "term": "Dermatomycoses"
+    },
+    {
+      "code": "D002175",
+      "term": "Candida"
+    },
+    {
+      "code": "D007402",
+      "term": "Intertrigo"
+    },
+    {
+      "code": "D012874",
+      "term": "Skin Diseases, Infectious"
+    },
+    {
+      "code": "D002179",
+      "term": "Candidiasis, Cutaneous"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "692c4c73-aaf1-472c-be22-313de7bd344c",
+      "parentId": null,
+      "rootId": "692c4c73-aaf1-472c-be22-313de7bd344c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 28871c45-97ba-4945-b07e-d2c8368370f2 --><h1>Candida - skin:&nbsp;Summary</h1><!-- end field 28871c45-97ba-4945-b07e-d2c8368370f2 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No major changes to recommendations have been made."
+    }
+  ]
+}

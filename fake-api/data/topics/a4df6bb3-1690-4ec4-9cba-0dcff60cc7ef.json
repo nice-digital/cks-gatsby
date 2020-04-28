@@ -1,0 +1,65 @@
+{
+  "topicName": "Deep vein thrombosis",
+  "topicId": "a4df6bb3-1690-4ec4-9cba-0dcff60cc7ef",
+  "exportId": "8758f23f-e03f-46cc-8d5e-aa16000365dd",
+  "dataId": "1fa8bb3f-65e5-450a-80be-aa170080efcd",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:49:25.0106588+00:00",
+  "nextPlannedReviewBy": "2018-12-31T23:59:59+00:00",
+  "topicSummary": "Deep vein thrombosis (DVT) is the formation of a thrombus in a deep vein, usually in the legs, which partially or completely obstructs blood flow",
+  "lastRevised": "Last revised in September 2018",
+  "terms": [
+    {
+      "code": "D020246",
+      "term": "Venous Thrombosis"
+    },
+    {
+      "code": "D054556",
+      "term": "Venous Thromboembolism"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Haematology"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "43b8d97f-728b-4244-a1a1-95e4133af93b",
+      "parentId": null,
+      "rootId": "43b8d97f-728b-4244-a1a1-95e4133af93b",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c6ceb01a-ae19-4f13-b65c-fddf5f9e03c7 --><h1>Deep vein thrombosis:&nbsp;Summary</h1><!-- end field c6ceb01a-ae19-4f13-b65c-fddf5f9e03c7 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-09-01T00:00:00+01:00",
+      "dateTo": "2018-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Details of a randomised placebo-controlled trial which informed the update to the NICE guideline CG144, have been added to the basis for recommendation in the section Follow up for DVT."
+    },
+    {
+      "dateFrom": "2018-01-01T00:00:00+00:00",
+      "dateTo": "2018-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Changes made to recommendations on the use of elastic graduated compression stockings to prevent post-thrombotic syndrome or VTE recurrence after a proximal DVT as per updates to NICE guideline CG144."
+    },
+    {
+      "dateFrom": "2013-12-01T00:00:00+00:00",
+      "dateTo": "2013-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Deleted duplicated text and removed reference to prescriptions in the CKS topic on Compression stockings."
+    },
+    {
+      "dateFrom": "2013-04-01T00:00:00+01:00",
+      "dateTo": "2013-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2013 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. Based on the new NICE guideline: Venous thromboembolic diseases: the management of venous thromboembolic diseases and the role of thrombophilia testing, the recommendations for the management of suspected deep vein thrombosis has been revised to include the option of giving an interim 24-hour dose of parenteral anticoagulant if a proximal leg vein ultrasound scan cannot be carried out within 4 hours of being requested. See Management of suspected DVT for more information."
+    }
+  ]
+}

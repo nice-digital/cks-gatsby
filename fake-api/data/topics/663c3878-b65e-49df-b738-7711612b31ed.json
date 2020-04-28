@@ -1,0 +1,50 @@
+{
+  "topicName": "Croup",
+  "topicId": "663c3878-b65e-49df-b738-7711612b31ed",
+  "exportId": "46471009-5930-4aee-808f-aa8600be191d",
+  "dataId": "60074e6d-29cc-439a-b41c-aa8600c463a3",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:55:01.25166+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Croup (laryngotracheobronchitis) is a common childhood disease that is usually caused by a virus.",
+  "lastRevised": "Last revised in February 2019",
+  "terms": [
+    {
+      "code": "D003440",
+      "term": "Croup"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Ear, nose and throat",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "8e1ca933-a980-4a0c-a655-8b6c8de28fae",
+      "parentId": null,
+      "rootId": "8e1ca933-a980-4a0c-a655-8b6c8de28fae",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field af6b4d92-1609-478f-83a0-7f319a3a0c20 --><h1>Croup: Summary</h1><!-- end field af6b4d92-1609-478f-83a0-7f319a3a0c20 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Tachycardia has been added as a sign of impending respiratory failure. High fever and &#39;toxic&#39; appearance have been added as considerations for hospital admission."
+    },
+    {
+      "dateFrom": "2017-04-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

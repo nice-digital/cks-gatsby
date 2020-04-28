@@ -1,0 +1,43 @@
+{
+  "topicName": "Head injury",
+  "topicId": "22e7906b-f704-4d08-a97c-ab54e669323e",
+  "exportId": "9d645e0a-bd10-4e40-8704-aa16000365dd",
+  "dataId": "c744ae5d-1ba5-4b5b-aedc-aa17008068e9",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:47:30.4578176+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Each year, 1.4 million people attend emergency departments in England and Wales with a recent head injury",
+  "lastRevised": "Last revised in July 2016",
+  "terms": [
+    {
+      "code": "D016489",
+      "term": "Head Injuries, Closed"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Injuries",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "b2f7a081-4d19-45b1-b3b2-4d947c19edf1",
+      "parentId": null,
+      "rootId": "b2f7a081-4d19-45b1-b3b2-4d947c19edf1",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field abbf83af-3c1b-4cea-af52-e9f01b5e1e2f --><h1>Head injury: Summary</h1><!-- end field abbf83af-3c1b-4cea-af52-e9f01b5e1e2f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone minor restructuring. The recommendations on risk factors to consider when assessing a person with a head injury, and the recommendations on full cervical spine immobilization have been amended in line with the National Institute for Health and Care Excellence (NICE) guideline Head injury: assessment and early management (2014). In addition, the Complications section has been expanded and the Prognosis section has been added."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "topicName": "Miscarriage",
+  "topicId": "0f210528-5aac-4e71-8b67-2d39a6a84113",
+  "exportId": "493763b5-db26-4597-b9d3-aa16000365dd",
+  "dataId": "5efcaf15-f4fe-416a-b8fb-aa17007eb805",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:41:21.258928+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Miscarriage is the spontaneous loss of a pregnancy before 24 weeks' gestation. Recurrent miscarriage is the consecutive loss of three pregnancies",
+  "lastRevised": "Last revised in May 2018",
+  "terms": [
+    {
+      "code": "D000022",
+      "term": "Abortion, Spontaneous"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Pregnancy",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "5481cc73-44b9-4ac9-b101-ae34a935bef2",
+      "parentId": null,
+      "rootId": "5481cc73-44b9-4ac9-b101-ae34a935bef2",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ddeeade6-7c72-4d54-a465-a7ee15e82c87 --><h1>Miscarriage:&nbsp;Summary</h1><!-- end field ddeeade6-7c72-4d54-a465-a7ee15e82c87 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in March 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No changes to clinical recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

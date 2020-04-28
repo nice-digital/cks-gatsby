@@ -1,0 +1,61 @@
+{
+  "topicName": "Nausea/vomiting in pregnancy",
+  "topicId": "866e168a-d1cc-4f14-ae38-2264dad4909d",
+  "exportId": "69439514-c0ab-43cc-9125-aa8600be191d",
+  "dataId": "c493f7d9-5fd2-480b-a2fd-aa8600c33273",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:50:39.4987103+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "The majority of women vomit or feel nauseated in early pregnancy. Symptoms usually begin between the fourth and seventh weeks of gestation",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D006939",
+      "term": "Hyperemesis Gravidarum"
+    },
+    {
+      "code": "D011247",
+      "term": "Pregnancy"
+    },
+    {
+      "code": "D014839",
+      "term": "Vomiting"
+    },
+    {
+      "code": "D009325",
+      "term": "Nausea"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Pregnancy",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6664f2f2-5750-4e2d-9ff3-2e7bbcbfc733",
+      "parentId": null,
+      "rootId": "6664f2f2-5750-4e2d-9ff3-2e7bbcbfc733",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b7b691ac-1873-4585-8c65-38e1a7060385 --><h1>Nausea/vomiting in pregnancy:&nbsp;Summary</h1><!-- end field b7b691ac-1873-4585-8c65-38e1a7060385 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "New product: Xonvea 10 mg/10 mg (doxylamine succinate/pyridoxine hydrochloride) gastro-resistant tablets added to new product availability - now licenced for the treatment of nausea and vomiting in pregnancy."
+    },
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs and observational studies published since the last revision of the topic. New recommendations include considering use of a validated questionnaire to assess the severity of nausea and vomiting of pregnancy; considering avoiding iron-containing preparations if they are exacerbating symptoms; and offering support in the form of self-help and support groups. There have been minor changes to the sections on when to admit or seek specialist advice; offering advice; and choice of antiemetic (the order of preference of antiemetic use). More detailed prescribing information has also been included."
+    }
+  ]
+}

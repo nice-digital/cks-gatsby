@@ -1,0 +1,42 @@
+{
+  "topicName": "Earwax",
+  "topicId": "04629b60-9cc0-4c9a-bf12-ad79b02112d0",
+  "exportId": "e72fe8e2-23ac-4b09-991b-aa16000365dd",
+  "dataId": "6dd35003-edfe-4722-b6c8-aa170081e1e5",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:52:52.6035212+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Earwax is a normal physiological substance which is a combination of dead flattened cells, cerumen (a wax-like substance), sebum",
+  "lastRevised": "Last revised in July 2016",
+  "terms": [
+    {
+      "code": "D002571",
+      "term": "Cerumen"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Ear, nose and throat"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "ea43cbf9-ec90-425d-a56e-da773fa432e8",
+      "parentId": null,
+      "rootId": "ea43cbf9-ec90-425d-a56e-da773fa432e8",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field fa5da18b-065b-4b55-a2af-2f36cdb8fae9 --><h1>Earwax: Summary</h1><!-- end field fa5da18b-065b-4b55-a2af-2f36cdb8fae9 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. No changes to clinical recommendations have been made."
+    }
+  ]
+}

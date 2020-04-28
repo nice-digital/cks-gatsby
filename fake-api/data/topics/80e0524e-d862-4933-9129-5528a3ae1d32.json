@@ -1,0 +1,56 @@
+{
+  "topicName": "Vaginal discharge",
+  "topicId": "80e0524e-d862-4933-9129-5528a3ae1d32",
+  "exportId": "9df55fe7-de07-4272-a36c-aa8600be191d",
+  "dataId": "16c6be12-c534-4570-8c71-aa8600c3605c",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:51:19.2427433+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Normal physiological vaginal discharge changes with the menstrual cycle.",
+  "lastRevised": "Last revised in January 2019",
+  "terms": [
+    {
+      "code": "D019522",
+      "term": "Vaginal Discharge"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Sexual health",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "5c18b64e-1656-4e7a-a61c-4bd5dde59835",
+      "parentId": null,
+      "rootId": "5c18b64e-1656-4e7a-a61c-4bd5dde59835",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a12567c7-5f20-4a97-909a-2e9b975c3563 --><h1>Vaginal discharge:&nbsp;Summary</h1><!-- end field a12567c7-5f20-4a97-909a-2e9b975c3563 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Bullets amended."
+    },
+    {
+      "dateFrom": "2018-08-01T00:00:00+01:00",
+      "dateTo": "2018-08-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Citation amended."
+    },
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No major changes to clinical recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

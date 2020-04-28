@@ -1,0 +1,43 @@
+{
+  "topicName": "Pancreatitis - chronic",
+  "topicId": "d9dbbfb6-e615-4d8a-8af3-3c73ae8f1e4e",
+  "exportId": "9876b245-dfcf-476c-9f24-aa16000365dd",
+  "dataId": "12bb89b8-cb0d-4ed6-b5be-aa170081f3f1",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:53:08.244439+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Chronic pancreatitis is a chronic, irreversible, inflammation and/or fibrosis of the pancreas",
+  "lastRevised": "Last revised in June 2016",
+  "terms": [
+    {
+      "code": "D010195",
+      "term": "Pancreatitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "5ca6473a-d5ef-48f6-a368-3d7c520d558d",
+      "parentId": null,
+      "rootId": "5ca6473a-d5ef-48f6-a368-3d7c520d558d",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 210d89bf-7012-484c-97a4-d00f799bb673 --><h1>Pancreatitis - chronic:&nbsp;Summary</h1><!-- end field 210d89bf-7012-484c-97a4-d00f799bb673 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-05-01T00:00:00+01:00",
+      "dateTo": "2016-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2016 to identify evidence based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

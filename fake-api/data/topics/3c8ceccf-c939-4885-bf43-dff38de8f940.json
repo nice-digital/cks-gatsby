@@ -1,0 +1,43 @@
+{
+  "topicName": "Tamoxifen - managing adverse effects",
+  "topicId": "3c8ceccf-c939-4885-bf43-dff38de8f940",
+  "exportId": "747927ec-602e-4491-a401-aa16000365dd",
+  "dataId": "c4b4f287-63fc-4c46-8562-aa17008270fe",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:54.8302017+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Tamoxifen is an anti-oestrogen drug licensed for the treatment of breast cancer and anovulatory infertility.",
+  "lastRevised": "Last revised in December 2014",
+  "terms": [
+    {
+      "code": "D013629",
+      "term": "Tamoxifen"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0845f642-9890-4944-91cd-c221e12362a5",
+      "parentId": null,
+      "rootId": "0845f642-9890-4944-91cd-c221e12362a5",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a8b67e55-9f08-48b4-959d-19bebc53d33e --><h1>Tamoxifen - managing adverse effects:&nbsp;Summary</h1><!-- end field a8b67e55-9f08-48b4-959d-19bebc53d33e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-12-01T00:00:00+00:00",
+      "dateTo": "2014-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. The scope of the topic has been changed to cover the general prescribing information on tamoxifen, and the topic structure has been changed to reflect this."
+    }
+  ]
+}
