@@ -1,5 +1,6 @@
 {
   "name": "@nice-digital/cks-fake-api",
+  "private": true,
   "version": "1.0.0",
   "description": "Fake API for CKS",
   "main": "index.js",
@@ -8,7 +9,15 @@
     "start": "node index.js",
     "debug": "node --nolazy --inspect-brk=9230 index.js"
   },
-  "author": "",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "author": "NICE Digital (https://www.nice.org.uk/digital)",
+  "contributors": [
+    "NICE Digital Services (https://www.nice.org.uk/digital)",
+    "Ian Routledge (http://ediblecode.com)"
+  ],
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
