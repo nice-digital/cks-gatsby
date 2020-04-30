@@ -1,9 +1,13 @@
-/* eslint-disable @typescript-eslint/camelcase */
 import { SourceNodesArgs } from "gatsby";
 import slugify from "slugify";
 
-import { TopicNode, SpecialityNode, ChangeNode } from "./types";
-import { NodeTypes } from "./constants";
+import { TopicNode, SpecialityNode, ChangeNode, ChapterNode } from "./types";
+import {
+	topicNodeType,
+	specialityNodeType,
+	changeNodeType,
+	chapterNodeType,
+} from "./node-types";
 
 const createFakeTopicNode = (
 	topicId: string,
@@ -36,7 +40,7 @@ const createFakeTopicNode = (
 			// Generate a new guid for the actual node id, so people don't use it for querying
 			id: createNodeId(topicId),
 			internal: {
-				type: NodeTypes.Topic,
+				type: topicNodeType,
 				content: JSON.stringify(fullTopic),
 				contentDigest: createContentDigest(fullTopic),
 			},
@@ -67,7 +71,7 @@ const createFakeSpecialityNode = (
 		...{
 			id: createNodeId(name),
 			internal: {
-				type: NodeTypes.Speciality,
+				type: specialityNodeType,
 				content: JSON.stringify(fullSpeciality),
 				contentDigest: createContentDigest(fullSpeciality),
 			},
@@ -97,7 +101,7 @@ const createFakeChangeNode = (
 		...{
 			id: createNodeId(text),
 			internal: {
-				type: NodeTypes.Change,
+				type: changeNodeType,
 				content: JSON.stringify(fullChange),
 				contentDigest: createContentDigest(fullChange),
 			},
@@ -107,46 +111,122 @@ const createFakeChangeNode = (
 	createNode(changeNode);
 };
 
+const createFakeChapter = (
+	itemId: string,
+	parentId: string | null,
+	rootId: string,
+	fullItemName: string,
+	htmlHeader: string,
+	htmlStringContent: string,
+	containerElement: string,
+	depth: number,
+	pos: number,
+	topicId: string,
+	sourceNodesArgs: SourceNodesArgs
+): void => {
+	const { actions, createNodeId, createContentDigest } = sourceNodesArgs;
+	const { createNode } = actions;
+
+	const slug = slugify(fullItemName, { lower: true });
+
+	const fullChapter = {
+		itemId,
+		slug,
+		parentChapter: parentId,
+		rootChapter: rootId,
+		fullItemName,
+		htmlHeader,
+		htmlStringContent,
+		containerElement,
+		depth,
+		pos,
+		subChapters: [],
+		topic: topicId,
+	};
+
+	const chapterNode: ChapterNode = {
+		...fullChapter,
+		...{
+			id: createNodeId(itemId),
+			internal: {
+				type: chapterNodeType,
+				content: JSON.stringify(fullChapter),
+				contentDigest: createContentDigest(fullChapter),
+			},
+		},
+	};
+
+	createNode(chapterNode);
+};
+
 export const createFakeNodes = (sourceNodesArgs: SourceNodesArgs): void => {
 	// Fake specialities
-	createFakeSpecialityNode("Infections", ["abc123"], sourceNodesArgs);
-	createFakeSpecialityNode("Cancer", ["abc123", "xyz789"], sourceNodesArgs);
-	createFakeSpecialityNode("Skin and nail", ["xyz789"], sourceNodesArgs);
+	createFakeSpecialityNode("Infections", ["topic1"], sourceNodesArgs);
+	createFakeSpecialityNode("Cancer", ["topic1", "topic2"], sourceNodesArgs);
+	createFakeSpecialityNode("Skin and nail", ["topic2"], sourceNodesArgs);
 
 	// Fake "what's new" changes
 	createFakeChangeNode(
 		"New topic",
 		"CKS topic written based on a literature search and on NICE rapid guidelines.",
-		"abc123",
+		"topic1",
 		sourceNodesArgs
 	);
 	createFakeChangeNode(
 		"Reviewed",
 		"A literature search was conducted in October 2019 ...",
-		"xyz789",
+		"topic2",
 		sourceNodesArgs
 	);
 
 	// Fake topics
 	createFakeTopicNode(
-		"abc123",
+		"topic1",
 		"3rd Degree Sideburns",
 		"Wistful longing for the 1970's",
 		["Infections", "Cancer"],
 		sourceNodesArgs
 	);
 	createFakeTopicNode(
-		"xyz789",
+		"topic2",
 		"Infectious Laughter",
 		"Helpless chortling and repetition of unfunny catchphrases",
 		["Cancer", "Skin and nail"],
 		sourceNodesArgs
 	);
 	createFakeTopicNode(
-		"def456",
+		"topic3",
 		"Topic without specialiies",
 		"Lorem ipsum dolor sit amet",
 		[],
+		sourceNodesArgs
+	);
+
+	// Fake chapters
+	createFakeChapter(
+		"chapter1",
+		null,
+		"chapter1",
+		"Summary",
+		"<h1>Topic 1: summary</h1>",
+		"<p>test topic.</p>",
+		"topicSummary",
+		1,
+		0,
+		"topic1",
+		sourceNodesArgs
+	);
+	createFakeChapter(
+		"chapter2",
+		null,
+		"chapter2",
+		"Have I got the right topic?",
+		"<h1>Have I got the right topic?</h1>",
+		"<p>From birth onwards.</p>",
+		"rightTopic",
+		1,
+		1,
+		"topic1",
 		sourceNodesArgs
 	);
 };

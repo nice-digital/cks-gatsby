@@ -1,4 +1,10 @@
 import { NodeInput } from "gatsby";
+import {
+	topicNodeType,
+	specialityNodeType,
+	changeNodeType,
+	chapterNodeType,
+} from "./node-types";
 
 // Gatsby nodes
 
@@ -6,7 +12,7 @@ export type TopicNode = {
 	topicName: string;
 	slug: string;
 	topicId: string;
-	nextPlannedReviewBy?: string; // Must be an ISO date format
+	nextPlannedReviewBy: string | null; // Must be an ISO date format
 	topicSummary: string;
 	lastRevised: string;
 	terms: {
@@ -17,14 +23,22 @@ export type TopicNode = {
 	specialities: string[];
 	chapters: string[];
 	latestChanges: string[];
-} & NodeInput;
+} & NodeInput & {
+		internal: {
+			type: typeof topicNodeType;
+		};
+	};
 
 export type SpecialityNode = {
 	name: string;
 	slug: string;
 	// Foreign keys
 	topics: string[];
-} & NodeInput;
+} & NodeInput & {
+		internal: {
+			type: typeof specialityNodeType;
+		};
+	};
 
 export type ChapterNode = {
 	slug: string;
@@ -37,14 +51,22 @@ export type ChapterNode = {
 	pos: number;
 	// Foreign keys
 	topic: string;
-	parentChapter?: string;
+	parentChapter: string | null;
 	rootChapter: string;
 	subChapters: string[];
-} & NodeInput;
+} & NodeInput & {
+		internal: {
+			type: typeof chapterNodeType;
+		};
+	};
 
 export type ChangeNode = {
 	title: string;
 	text: string;
 	// Foreign keys
 	topic: string;
-} & NodeInput;
+} & NodeInput & {
+		internal: {
+			type: typeof changeNodeType;
+		};
+	};
