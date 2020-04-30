@@ -1,0 +1,55 @@
+{
+  "topicName": "Herpes simplex - oral",
+  "topicId": "5f875f0c-db78-44fb-b672-bd54c9216205",
+  "exportId": "50820c69-a539-4810-97a8-aa16000365dd",
+  "dataId": "9f9e8f3f-66d4-4bde-8575-aa1700818b43",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:51:38.3105245+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Oral herpes simplex virus (HSV) usually causes a mild, self-limiting infection of the lips, cheeks, nose or oropharynx",
+  "lastRevised": "Last revised in October 2016",
+  "terms": [
+    {
+      "code": "D006560",
+      "term": "Herpes Labialis"
+    },
+    {
+      "code": "D013283",
+      "term": "Stomatitis, Herpetic"
+    },
+    {
+      "code": "D003945",
+      "term": "Diagnosis, Oral"
+    },
+    {
+      "code": "D006561",
+      "term": "Herpes Simplex"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Oral health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "697c2f1f-583d-49b6-a9c3-a7290a67282f",
+      "parentId": null,
+      "rootId": "697c2f1f-583d-49b6-a9c3-a7290a67282f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c28e53c9-19a8-4752-8f9e-a3420646bbcd --><h1>Herpes simplex - oral: Summary</h1><!-- end field c28e53c9-19a8-4752-8f9e-a3420646bbcd -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-09-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials since the last revision of this topic. The recommendations on primary care management and referral have been updated in line with current evidence. The topic has also undergone minor restructuring."
+    }
+  ]
+}

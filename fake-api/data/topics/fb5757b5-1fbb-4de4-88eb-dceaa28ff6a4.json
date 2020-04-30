@@ -1,0 +1,42 @@
+{
+  "topicName": "Cough",
+  "topicId": "fb5757b5-1fbb-4de4-88eb-dceaa28ff6a4",
+  "exportId": "af0c0f1e-19b1-42b2-a5b7-aa16000365dd",
+  "dataId": "8c1f511f-6f4d-47f9-94e8-aa17008287f9",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:55:14.0305473+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Cough is a reflex response to airway irritation. It is triggered by stimulation of airway cough receptors",
+  "lastRevised": "Last revised in June 2015",
+  "terms": [
+    {
+      "code": "D003371",
+      "term": "Cough"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "da9f5e64-7d97-4e54-a5df-a3d835f98d4f",
+      "parentId": null,
+      "rootId": "da9f5e64-7d97-4e54-a5df-a3d835f98d4f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 56541851-8802-41f4-be08-ae5ef03af661 --><h1>Cough:&nbsp;Summary</h1><!-- end field 56541851-8802-41f4-be08-ae5ef03af661 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-04-01T00:00:00+01:00",
+      "dateTo": "2015-06-30T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in April 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "topicName": "Insomnia",
+  "topicId": "c95c9c90-991c-42bf-9bb6-260f08eb9d32",
+  "exportId": "f22c401c-a7fa-4f8e-ad8f-aa16000365dd",
+  "dataId": "cd9eb329-3968-4500-bbe1-aa17007ddaf2",
+  "number": 5,
+  "dateOfExport": "2019-03-21T07:38:11.7078313+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Insomnia is difficulty in getting to sleep, difficulty staying asleep, early wakening, or non-restorative sleep",
+  "lastRevised": "Last revised in April 2015",
+  "terms": [
+    {
+      "code": "D007319",
+      "term": "Sleep Initiation and Maintenance Disorders"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "e679279e-77ee-4898-8874-aff80d1bd02b",
+      "parentId": null,
+      "rootId": "e679279e-77ee-4898-8874-aff80d1bd02b",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field f1485673-4a84-4edc-8fe4-5a4aa9815e83 --><h1>Insomnia:&nbsp;Summary</h1><!-- end field f1485673-4a84-4edc-8fe4-5a4aa9815e83 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-04-01T00:00:00+01:00",
+      "dateTo": "2015-04-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Update to the text to reflect a new law on drugs and impaired driving Department for Transport, 2014."
+    },
+    {
+      "dateFrom": "2014-11-01T00:00:00+00:00",
+      "dateTo": "2014-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Update to the text to reflect recent MHRA advice regarding zolpidem and next day drowsiness, which may affect driving ability MHRA, 2014."
+    },
+    {
+      "dateFrom": "2014-03-01T00:00:00+00:00",
+      "dateTo": "2014-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in January 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No significant changes have been made to the recommendations in this topic. A prescribing information section has been added."
+    }
+  ]
+}

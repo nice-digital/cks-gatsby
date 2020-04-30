@@ -1,0 +1,54 @@
+{
+  "topicName": "Bites - human and animal",
+  "topicId": "1f9ba5f4-d4ca-402b-857f-1ef0227e6eaa",
+  "exportId": "f3ecaeb7-c3ad-4473-a71b-aa16000365dd",
+  "dataId": "eec76bbf-12dd-4d8d-9e95-aa170082a29e",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:55:36.6778254+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Human bites are either:Occlusal injuries (inflicted by actual biting), or clenched-fist injuries - sustained when a clenched fist hits a person's teeth",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D001733",
+      "term": "Bites and Stings"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Injuries"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "bd5feb77-f54d-431c-8948-0d4b3d313fb6",
+      "parentId": null,
+      "rootId": "bd5feb77-f54d-431c-8948-0d4b3d313fb6",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e70ed097-cf39-4375-a8a1-52425b49dac8 --><h1>Bites - human and animal: Summary</h1><!-- end field e70ed097-cf39-4375-a8a1-52425b49dac8 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2018-02-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "New guidance from Public Health England regarding Rabies: administration of vaccine and immunoglobulin added to new evidence section."
+    },
+    {
+      "dateFrom": "2018-02-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in December 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. The topic now covers dog and cat bites and the scenario on pre-exposure rabies risk has been removed. There have been structural changes to streamline the scenarios. Antibiotic choices for prophylaxis and treatment of infected bite wounds have been simplified and antibiotic doses added to prescribing information. There have been changes to the recommendations on closing bite wounds in primary care."
+    }
+  ]
+}

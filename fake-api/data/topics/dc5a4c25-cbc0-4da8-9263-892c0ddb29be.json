@@ -1,0 +1,53 @@
+{
+  "topicName": "Palliative care - oral",
+  "topicId": "dc5a4c25-cbc0-4da8-9263-892c0ddb29be",
+  "exportId": "5c4820fd-70ce-44df-bc9c-aa16000365dd",
+  "dataId": "42e57e2e-db3d-423b-9460-aa17007effa1",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:42:20.3308385+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Common oral problems in palliative care include dry mouth, painful mouth, halitosis, alteration of taste, and excessive salivation.",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D000284",
+      "term": "Administration, Oral"
+    },
+    {
+      "code": "D010166",
+      "term": "Palliative Care"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Oral health",
+    "Palliative care"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3bd3311f-f15b-4c67-bd3a-41617390e3e4",
+      "parentId": null,
+      "rootId": "3bd3311f-f15b-4c67-bd3a-41617390e3e4",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 1115fcb7-6e6c-4436-b2fa-8d57b00ad8f0 --><h1>Palliative care - oral: Summary</h1><!-- end field 1115fcb7-6e6c-4436-b2fa-8d57b00ad8f0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There have been structural changes to the topic and changes to the recommendations have been updated in line with NICE guidance Care of dying adults in the last days of life NICE, 2015."
+    }
+  ]
+}

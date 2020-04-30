@@ -1,0 +1,43 @@
+{
+  "topicName": "Squint in children",
+  "topicId": "3e67bea0-6e2a-4f62-86eb-6e4c56360437",
+  "exportId": "763f0e7b-5519-4bdd-a0b4-aa16000365dd",
+  "dataId": "3fda9115-8773-4833-ab59-aa17008213c0",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:53:35.2785371+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "A squint (strabismus) is present when one eye is misaligned in relation to the other.",
+  "lastRevised": "Last revised in March 2016",
+  "terms": [
+    {
+      "code": "D013285",
+      "term": "Strabismus"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Eyes",
+    "Child health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "585e39f3-27f7-4148-8aa5-6b38986a3b00",
+      "parentId": null,
+      "rootId": "585e39f3-27f7-4148-8aa5-6b38986a3b00",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 76ab1871-6843-4568-8d2c-cebf322553bd --><h1>Squint in children: Summary</h1><!-- end field 76ab1871-6843-4568-8d2c-cebf322553bd -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-01-01T00:00:00+00:00",
+      "dateTo": "2016-03-31T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

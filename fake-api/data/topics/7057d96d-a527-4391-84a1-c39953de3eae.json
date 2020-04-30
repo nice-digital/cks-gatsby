@@ -1,0 +1,52 @@
+{
+  "topicName": "Crohn's disease",
+  "topicId": "7057d96d-a527-4391-84a1-c39953de3eae",
+  "exportId": "b7dfc01c-57c5-4fcb-b746-aa8e00b792d1",
+  "dataId": "a0f3af98-afc0-4752-a2f1-aa9500ec3214",
+  "number": 7,
+  "dateOfExport": "2019-07-25T14:19:56.7062638+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Crohn's disease is a chronic, relapsing-remitting, non-infectious inflammatory disease of the gastrointestinal tract",
+  "lastRevised": "Last revised in May 2019",
+  "terms": [
+    {
+      "code": "D003424",
+      "term": "Crohn Disease"
+    },
+    {
+      "code": "D015212",
+      "term": "Inflammatory Bowel Diseases"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "2b489191-25f5-4b21-a106-b1656825ced3",
+      "parentId": null,
+      "rootId": "2b489191-25f5-4b21-a106-b1656825ced3",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b67e11be-e7ed-4c22-94c3-dde2c4d9a0d0 --><h1>Crohn&#39;s disease: Summary</h1><!-- end field b67e11be-e7ed-4c22-94c3-dde2c4d9a0d0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information from the updated National Institute for Health and Care Excellence (NICE) clinical guidelines Crohn&#39;s disease. Management in adults, children and young people (full NICE guideline) National Clinical Guideline Centre, 2019 and Crohn&#39;s disease: management NICE, 2019 have been added to the topic. No major changes to recommendations have been made."
+    },
+    {
+      "dateFrom": "2017-08-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone significant restructuring. The recommendations on the diagnosis and management of confirmed Crohn&#39;s disease have been amended in line with current evidence. The sections on specialist investigations and management have been updated and expanded. The Prescribing information section has been deleted and links made to other relevant CKS topics."
+    }
+  ]
+}

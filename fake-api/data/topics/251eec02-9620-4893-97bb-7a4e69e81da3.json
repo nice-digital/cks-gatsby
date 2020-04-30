@@ -1,0 +1,42 @@
+{
+  "topicName": "Sinusitis",
+  "topicId": "251eec02-9620-4893-97bb-7a4e69e81da3",
+  "exportId": "a1d47e66-03b2-4ef7-a60d-aa8600be191d",
+  "dataId": "0f1c1c4a-102d-4737-abbe-aa8600c381d7",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:51:48.1708116+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Sinusitis is defined as inflammation of the mucosal lining of the paranasal sinuses.",
+  "lastRevised": "Last revised in June 2018",
+  "terms": [
+    {
+      "code": "D012852",
+      "term": "Sinusitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Ear, nose and throat"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "359b344f-9ad5-4c91-bbbe-97083e97f819",
+      "parentId": null,
+      "rootId": "359b344f-9ad5-4c91-bbbe-97083e97f819",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 94ec2dbc-ab83-4812-89af-9c135500f469 --><h1>Sinusitis:&nbsp;Summary</h1><!-- end field 94ec2dbc-ab83-4812-89af-9c135500f469 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. Sections have been added on prevalence, complications, and antibiotic choice for acute sinusitis, and a prescribing information section is now available. There have been minor changes to the sections on diagnosis of acute and chronic sinusitis. The scenarios on acute and chronic sinusitis have undergone minor restructuring and have been updated with more detailed information on referral, and links to sources of patient information."
+    }
+  ]
+}

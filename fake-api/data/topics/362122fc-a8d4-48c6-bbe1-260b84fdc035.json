@@ -1,0 +1,44 @@
+{
+  "topicName": "Pre-conception - advice and management",
+  "topicId": "362122fc-a8d4-48c6-bbe1-260b84fdc035",
+  "exportId": "64cc070c-7808-41ed-a92e-aa16000365dd",
+  "dataId": "8c685482-9580-48ea-ad2c-aa17007d478a",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:36:06.7023625+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "The goal of pre-conception care is to improve the long and short-term health outcomes of women and their children.",
+  "lastRevised": "Last revised in August 2017",
+  "terms": [
+    {
+      "code": "D016742",
+      "term": "Preconception Care"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Pregnancy",
+    "Preventative medicine",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "61d2191c-e2a3-4e4b-999a-aa1693a16bdf",
+      "parentId": null,
+      "rootId": "61d2191c-e2a3-4e4b-999a-aa1693a16bdf",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 74faba4b-2ed9-4e92-b107-0543d10f62e4 --><h1>Pre-conception - advice and management:&nbsp;Summary</h1><!-- end field 74faba4b-2ed9-4e92-b107-0543d10f62e4 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-08-01T00:00:00+01:00",
+      "dateTo": "2017-08-31T23:59:59+01:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in June 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. Changes to this topic include:"
+    }
+  ]
+}

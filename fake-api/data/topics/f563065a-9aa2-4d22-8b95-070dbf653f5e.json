@@ -1,0 +1,45 @@
+{
+  "topicName": "Contraception - barrier methods and spermicides",
+  "topicId": "f563065a-9aa2-4d22-8b95-070dbf653f5e",
+  "exportId": "7f2096b1-cc3a-43e9-8c51-aa16000365dd",
+  "dataId": "0424da67-fa33-456a-bffe-aa170080c694",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:48:50.7046091+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Barrier methods of contraception include:Male and female condoms.Diaphragms and caps.Spermicides.",
+  "lastRevised": "Last revised in April 2016",
+  "terms": [
+    {
+      "code": "D042121",
+      "term": "Contraception, barrier"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Men's health",
+    "Pregnancy",
+    "Sexual health",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "67a3e5b0-52ed-4696-9c91-990ba7afa21f",
+      "parentId": null,
+      "rootId": "67a3e5b0-52ed-4696-9c91-990ba7afa21f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c7da5479-538a-48e1-9d53-3ba62e79ebe5 --><h1>Contraception - barrier methods and spermicides: Summary</h1><!-- end field c7da5479-538a-48e1-9d53-3ba62e79ebe5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-03-01T00:00:00+00:00",
+      "dateTo": "2016-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Minor structural changes have been made."
+    }
+  ]
+}

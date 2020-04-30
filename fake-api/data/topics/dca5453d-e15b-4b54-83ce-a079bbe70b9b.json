@@ -1,0 +1,67 @@
+{
+  "topicName": "Neck lump",
+  "topicId": "dca5453d-e15b-4b54-83ce-a079bbe70b9b",
+  "exportId": "20d5124f-2929-4aa9-8b14-aa16000365dd",
+  "dataId": "9fcda350-9eea-4c01-8a56-aa170080e32e",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:49:14.9081454+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "There are multiple possible causes of neck lumps, including: skin infections, lymphadenopathy, tumours, salivary glands, congenital lumps",
+  "lastRevised": "Last revised in January 2016",
+  "terms": [
+    {
+      "code": "D016606",
+      "term": "Thyroid Nodule"
+    },
+    {
+      "code": "D012469",
+      "term": "Salivary Glands"
+    },
+    {
+      "code": "D020212",
+      "term": "Carotid Artery Injuries"
+    },
+    {
+      "code": "D008198",
+      "term": "Lymph Nodes"
+    },
+    {
+      "code": "D004814",
+      "term": "Epidermal Cyst"
+    },
+    {
+      "code": "D009333",
+      "term": "Neck"
+    },
+    {
+      "code": "D006258",
+      "term": "Head and Neck Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d1e22634-21bc-4da5-817b-3e9e1d68257c",
+      "parentId": null,
+      "rootId": "d1e22634-21bc-4da5-817b-3e9e1d68257c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 718ea1f0-7efc-4bc5-b3ee-5bdcf78c2a0a --><h1>Neck lump: Summary</h1><!-- end field 718ea1f0-7efc-4bc5-b3ee-5bdcf78c2a0a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-12-01T00:00:00+00:00",
+      "dateTo": "2016-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The age range has been altered to include children from 1 month of age. Recommendations have been updated in line with the National Institute for Health and Care Excellence guidance: Suspected cancer: recognition and referral NICE, 2015."
+    }
+  ]
+}

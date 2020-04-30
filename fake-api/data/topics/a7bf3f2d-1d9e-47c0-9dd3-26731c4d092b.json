@@ -1,0 +1,48 @@
+{
+  "topicName": "LUTS in men",
+  "topicId": "a7bf3f2d-1d9e-47c0-9dd3-26731c4d092b",
+  "exportId": "6eb4ea1d-3611-4819-84b8-aa5400d56bbe",
+  "dataId": "0768e820-87b5-4360-80f9-aa5b00cd4d6f",
+  "number": 3,
+  "dateOfExport": "2019-05-28T12:27:27.9609905+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Lower urinary tract symptoms (LUTS) in men can be caused by:Structural or functional abnormalities in one or more parts of the lower urinary tract",
+  "lastRevised": "Last revised in March 2019",
+  "terms": [
+    {
+      "code": "D053448",
+      "term": "Prostatism"
+    },
+    {
+      "code": "D011470",
+      "term": "Prostatic Hyperplasia"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Kidney disease and urology",
+    "Men's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "780979ec-00b6-4c08-b76e-5ff6e50dfd00",
+      "parentId": null,
+      "rootId": "780979ec-00b6-4c08-b76e-5ff6e50dfd00",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 274ad591-c0f3-4db3-89ca-f962c05543c9 --><h1>LUTS in men:&nbsp;Summary</h1><!-- end field 274ad591-c0f3-4db3-89ca-f962c05543c9 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-03-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of this topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

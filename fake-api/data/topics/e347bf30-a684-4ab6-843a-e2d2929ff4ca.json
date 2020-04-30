@@ -1,0 +1,48 @@
+{
+  "topicName": "Head lice",
+  "topicId": "e347bf30-a684-4ab6-843a-e2d2929ff4ca",
+  "exportId": "7cd74c62-dd18-4739-87dd-aa8600be191d",
+  "dataId": "b6fc0053-edb7-46be-be84-aa8600c2f4ea",
+  "number": 3,
+  "dateOfExport": "2019-07-10T11:49:47.5324483+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Head lice (Pediculus humanus capitis) are parasitic insects that infest the hairs of the human head and feed on blood from the scalp.",
+  "lastRevised": "Last revised in December 2016",
+  "terms": [
+    {
+      "code": "D010373",
+      "term": "Lice Infestations"
+    },
+    {
+      "code": "D010374",
+      "term": "Pediculus"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f33c04bf-2403-4cf7-925a-c0c521143158",
+      "parentId": null,
+      "rootId": "f33c04bf-2403-4cf7-925a-c0c521143158",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c4e37dcb-0b77-4797-ad78-5e66858189de --><h1>Head lice: Summary</h1><!-- end field c4e37dcb-0b77-4797-ad78-5e66858189de -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to the recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "topicName": "Mastitis and breast abscess",
+  "topicId": "8dd98aac-dd7a-4981-bb01-5e666b4686b6",
+  "exportId": "d5d1d220-d603-4b24-b042-aa16000365dd",
+  "dataId": "e1071675-7d98-4437-b7e5-aa17007df4bf",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:38:32.5274551+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Mastitis is a painful inflammatory condition of the breast which may or may not be accompanied by infection. It is usually associated with lactation",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D007774",
+      "term": "Lactation"
+    },
+    {
+      "code": "D001942",
+      "term": "Breast Feeding"
+    },
+    {
+      "code": "D008413",
+      "term": "Mastitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "e610bcd0-be95-432b-851f-3a44c726cbf4",
+      "parentId": null,
+      "rootId": "e610bcd0-be95-432b-851f-3a44c726cbf4",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 67a49a65-37e0-439d-a7e7-35f414058a29 --><h1>Mastitis and breast abscess:&nbsp;Summary</h1><!-- end field 67a49a65-37e0-439d-a7e7-35f414058a29 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The Prescribing information section has been updated to reflect manufacturer&#39;s Summary of Product Characteristics in relation to a drug interaction between macrolides and calcium channel blockers."
+    },
+    {
+      "dateFrom": "2015-08-01T00:00:00+01:00",
+      "dateTo": "2015-08-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made; however, the scope of the topic has been changed as follows:"
+    }
+  ]
+}

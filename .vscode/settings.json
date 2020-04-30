@@ -26,7 +26,7 @@
   "npm.enableScriptExplorer": true,
   "npm.useRootDirectory": false,
   "npm.enableRunFromFolder": true,
-  "npm.includeDirectories": ["gatsby"],
+  "npm.includeDirectories": ["gatsby", "functional-tests", "fake-api"],
   "debug.showInStatusBar": "always",
   "window.title": "${dirty}${activeEditorShort}${separator}CKS${separator}NICE",
   "cucumberautocomplete.steps": [

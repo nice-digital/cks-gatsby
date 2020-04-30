@@ -1,0 +1,42 @@
+{
+  "topicName": "Aphthous ulcer",
+  "topicId": "a8bbf75a-0ba0-4cf4-aa6d-c04c197470ee",
+  "exportId": "86020de5-aba2-48c1-8d23-aa16000365dd",
+  "dataId": "859f2c62-0375-4668-840e-aa170080c40f",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:48:48.6190817+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Aphthous ulcers are painful, clearly defined, round or ovoid, shallow ulcers that are confined to the mouth and not associated with systemic disease",
+  "lastRevised": "Last revised in April 2017",
+  "terms": [
+    {
+      "code": "D013281",
+      "term": "Stomatitis, Aphthous"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Oral health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "8f489c7d-2b2c-4161-a87f-714859400b30",
+      "parentId": null,
+      "rootId": "8f489c7d-2b2c-4161-a87f-714859400b30",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ed713b27-a762-434a-b8c2-23fa33ffb5a8 --><h1>Aphthous ulcer: Summary&nbsp;</h1><!-- end field ed713b27-a762-434a-b8c2-23fa33ffb5a8 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-03-01T00:00:00+00:00",
+      "dateTo": "2017-04-30T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in March 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

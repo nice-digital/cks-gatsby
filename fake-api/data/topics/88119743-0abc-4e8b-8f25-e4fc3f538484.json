@@ -1,0 +1,47 @@
+{
+  "topicName": "Insulin therapy in type 2 diabetes",
+  "topicId": "88119743-0abc-4e8b-8f25-e4fc3f538484",
+  "exportId": "e1e9949a-07f1-49f5-b6d2-aa8e00b792d1",
+  "dataId": "4d4e1615-ab52-4127-95fd-aa9500ec6aa3",
+  "number": 5,
+  "dateOfExport": "2019-07-25T14:20:44.9684361+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Insulin is a polypeptide hormone secreted by pancreatic beta-cells.The role of insulin is to lower blood glucose to prevent hyperglycaemia",
+  "lastRevised": "Last revised in July 2016",
+  "terms": [
+    {
+      "code": "D003924",
+      "term": "Diabetes Mellitus, Type 2"
+    },
+    {
+      "code": "D007328",
+      "term": "Insulin"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Endocrine and metabolic"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0937a6ee-7462-4324-aefa-3bd81dae818b",
+      "parentId": null,
+      "rootId": "0937a6ee-7462-4324-aefa-3bd81dae818b",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 401dd260-4899-4f1a-bd6c-bf2043e01e4b --><h1>Insulin therapy in type 2 diabetes: Summary</h1><!-- end field 401dd260-4899-4f1a-bd6c-bf2043e01e4b -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The recommendations have been updated in line with recommendations in the National Institute for Health and Care Excellence (NICE) guidelines Type 2 diabetes in adults: management (2015) NICE, 2015 and Diabetes (type 1 and type 2) in children and young people: diagnosis and management (2015) NICE, 2015."
+    }
+  ]
+}

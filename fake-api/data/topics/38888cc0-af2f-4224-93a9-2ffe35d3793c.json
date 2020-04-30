@@ -1,0 +1,40 @@
+{
+  "topicName": "Appendicitis",
+  "topicId": "38888cc0-af2f-4224-93a9-2ffe35d3793c",
+  "exportId": "4a35421a-1a28-4609-9f59-aa16000365dd",
+  "dataId": "29a48f49-604e-4455-b080-aa170081f605",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:53:09.7135307+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Appendicitis is an acute inflammation of the appendix, which is a small, narrow tube (about 5–10 cm) that is connected to the caecum",
+  "lastRevised": "Last revised in November 2015",
+  "terms": [
+    {
+      "code": "D001064",
+      "term": "Appendicitis"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "cb6c1a4e-80dc-45c9-80e5-a19add29452f",
+      "parentId": null,
+      "rootId": "cb6c1a4e-80dc-45c9-80e5-a19add29452f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 77521296-adc7-4878-9610-4b2675dfde97 --><h1>Appendicitis:&nbsp;summary</h1><!-- end field 77521296-adc7-4878-9610-4b2675dfde97 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-11-30T23:59:59+00:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "topicName": "Dyspepsia - pregnancy-associated",
+  "topicId": "dc0be124-58d0-4024-933f-b2fbd474ded2",
+  "exportId": "839245fc-c215-4072-9341-aa8600be191d",
+  "dataId": "76245f27-e506-4d97-9fb4-aa8600c434d5",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:54:20.8658172+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Dyspepsia in pregnancy is commonly due to gastro-oesophageal reflux, thought to involve a combination of mechanical and hormonal factors.",
+  "lastRevised": "Last revised in April 2017",
+  "terms": [
+    {
+      "code": "D018589",
+      "term": "Gastroparesis"
+    },
+    {
+      "code": "D016481",
+      "term": "Helicobacter Infections"
+    },
+    {
+      "code": "D016480",
+      "term": "Helicobacter pylori"
+    },
+    {
+      "code": "D004383",
+      "term": "Duodenogastric Reflux"
+    },
+    {
+      "code": "D001471",
+      "term": "Barrett Esophagus"
+    },
+    {
+      "code": "D005764",
+      "term": "Gastroesophageal Reflux"
+    },
+    {
+      "code": "D010437",
+      "term": "Peptic Ulcer"
+    },
+    {
+      "code": "D004884",
+      "term": "Eructation"
+    },
+    {
+      "code": "D006356",
+      "term": "Heartburn"
+    },
+    {
+      "code": "D004415",
+      "term": "Dyspepsia"
+    },
+    {
+      "code": "D011247",
+      "term": "Pregnancy"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal",
+    "Pregnancy",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "28a44c3b-dafe-4e39-a78e-ed99c6535c22",
+      "parentId": null,
+      "rootId": "28a44c3b-dafe-4e39-a78e-ed99c6535c22",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 5e473cbc-b59e-4703-8f70-1361c2349f31 --><h1>Dyspepsia - pregnancy-associated: Summary</h1><!-- end field 5e473cbc-b59e-4703-8f70-1361c2349f31 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-03-01T00:00:00+00:00",
+      "dateTo": "2017-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to clinical recommendations have been made. There have been minor changes to the recommendations on referral in line with updated guidelines from the National Institute for Health and Care Excellence on Gastro-oesophageal reflux disease and dyspepsia in adults: investigation and management (2014) and Suspected cancer: recognition and referral (2015). The age range covered by this topic has been changed to 13&ndash;60 years. Prescribing information has been restructured."
+    }
+  ]
+}

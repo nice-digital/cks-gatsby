@@ -1,0 +1,46 @@
+{
+  "topicName": "Leg cramps",
+  "topicId": "6f757429-c10d-418e-a5e9-0b258476ea47",
+  "exportId": "82fd5124-eb8b-433d-a9ef-aa8600be191d",
+  "dataId": "0b3f94af-4b71-4856-a34b-aa8600c3b94b",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:52:35.1337151+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "A cramp is a transient, involuntary episode of pain, usually sustained for several minutes (up to 10 minutes), in which muscle(s) go into spasm.",
+  "lastRevised": "Last revised in February 2018",
+  "terms": [
+    {
+      "code": "D007866",
+      "term": "Leg"
+    },
+    {
+      "code": "D009120",
+      "term": "Muscle Cramp"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "31855f7b-b088-41b4-af22-58fd655379f9",
+      "parentId": null,
+      "rootId": "31855f7b-b088-41b4-af22-58fd655379f9",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 9838873f-84a1-4b46-80d4-c030c7e7100b --><h1>Leg cramps:&nbsp;Summary</h1><!-- end field 9838873f-84a1-4b46-80d4-c030c7e7100b -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-02-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. The age range of this topic has been updated to 18 years onwards. There have been minor structural changes and sections have been added on causes, complications, differential diagnosis, and prescribing information for quinine. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "topicName": "Alcohol - problem drinking",
+  "topicId": "a79c6a40-2a77-4966-b622-3f9098a20bcc",
+  "exportId": "3c653292-564c-4b6f-8ce0-aa16000365dd",
+  "dataId": "50e107ee-a08a-4a32-8a9f-aa170080af26",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:48:30.4803251+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "An alcohol problem is categorized depending on the level and pattern of alcohol consumption.",
+  "lastRevised": "Last revised in February 2018",
+  "terms": [
+    {
+      "code": "D019973",
+      "term": "Alcohol-Related Disorders"
+    },
+    {
+      "code": "D020751",
+      "term": "Alcohol-Induced Disorders"
+    },
+    {
+      "code": "D000437",
+      "term": "Alcoholism"
+    },
+    {
+      "code": "D063425",
+      "term": "Binge Drinking"
+    },
+    {
+      "code": "D000428",
+      "term": "Alcohol Drinking"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "21952425-9d10-4b15-8e4e-6a253dd63375",
+      "parentId": null,
+      "rootId": "21952425-9d10-4b15-8e4e-6a253dd63375",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 1d3f94a8-2c92-4da2-92da-15a18d0066ad --><h1>Alcohol - problem drinking:&nbsp;Summary</h1><!-- end field 1d3f94a8-2c92-4da2-92da-15a18d0066ad -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-12-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in December 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made"
+    }
+  ]
+}

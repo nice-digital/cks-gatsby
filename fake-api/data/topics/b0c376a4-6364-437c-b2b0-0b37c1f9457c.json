@@ -1,0 +1,49 @@
+{
+  "topicName": "Candida - oral",
+  "topicId": "b0c376a4-6364-437c-b2b0-0b37c1f9457c",
+  "exportId": "35571942-de2d-4420-89ac-aa16000365dd",
+  "dataId": "3164f971-ba08-41ed-9e1a-aa170080743e",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:47:38.9341414+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Candida is a yeast-like fungus which is part of the normal commensal flora of the human gastrointestinal tract.",
+  "lastRevised": "Last revised in August 2017&nbsp;",
+  "terms": [
+    {
+      "code": "D002180",
+      "term": "Candidiasis, Oral"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Oral health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3a6814df-0e3d-47ff-aca7-9a67370d194f",
+      "parentId": null,
+      "rootId": "3a6814df-0e3d-47ff-aca7-9a67370d194f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field f3cf1e36-9c1d-47b2-bd82-7d464311fdbe --><h1>Candida - oral:&nbsp;Summary</h1><!-- end field f3cf1e36-9c1d-47b2-bd82-7d464311fdbe -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-08-01T00:00:00+01:00",
+      "dateTo": "2017-08-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Changes to the drug interactions section for miconazole gel in accordance with changes to the manufacturer&#39;s summary of product characteristics."
+    },
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No major changes to recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

@@ -95,6 +95,24 @@
         "group": "Tests",
         "order": 2
       }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Fake API",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "debug"],
+      "port": 9230,
+      "cwd": "${workspaceFolder}/fake-api",
+      "localRoot": "${workspaceFolder}/fake-api",
+      "remoteRoot": "${workspaceFolder}/fake-api",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "hidden": false,
+        "group": "Fake API",
+        "order": 1
+      }
     }
   ],
   "compounds": [
@@ -102,6 +120,7 @@
       "name": "Launch CKS",
       "configurations": [
         "Web app - launch",
+        "Fake API",
         "Gatsby - develop",
         "Gatsby - Chrome"
       ],

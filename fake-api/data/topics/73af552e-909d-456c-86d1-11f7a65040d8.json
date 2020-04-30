@@ -1,0 +1,47 @@
+{
+  "topicName": "Palliative care - dyspnoea",
+  "topicId": "73af552e-909d-456c-86d1-11f7a65040d8",
+  "exportId": "e1419619-2390-40eb-9af5-aa16000365dd",
+  "dataId": "e6b99e99-9c0e-4bb4-a307-aa170081c13c",
+  "number": 2,
+  "dateOfExport": "2019-03-21T07:52:24.36392+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Breathlessness is an objective observable sign, whereas dyspnoea is a subjective described symptoms of difficulty in breathing.",
+  "lastRevised": "Last revised in October 2016",
+  "terms": [
+    {
+      "code": "D004417",
+      "term": "Dyspnea"
+    },
+    {
+      "code": "D010166",
+      "term": "Palliative Care"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Palliative care",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "78ce1128-6a37-43dd-986c-10842df9b739",
+      "parentId": null,
+      "rootId": "78ce1128-6a37-43dd-986c-10842df9b739",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c2c8538f-9372-43bf-83a7-8d8b3b302239 --><h1>Palliative care - dyspnoea: Summary</h1><!-- end field c2c8538f-9372-43bf-83a7-8d8b3b302239 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There have been structural changes to the topic and changes to the recommendations have been updated in line with NICE guidance Care of dying adults in the last days of life NICE, 2015."
+    }
+  ]
+}

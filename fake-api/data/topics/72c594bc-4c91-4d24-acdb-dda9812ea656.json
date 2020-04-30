@@ -1,0 +1,70 @@
+{
+  "topicName": "Corticosteroids - oral",
+  "topicId": "72c594bc-4c91-4d24-acdb-dda9812ea656",
+  "exportId": "b40ab509-01cc-4702-a4c1-aa16000365dd",
+  "dataId": "a72b7285-e11b-48f7-86dc-aa1700827e5f",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:55:05.700213+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Corticosteroids are synthetic analogues of hormones produced by the adrenal cortex.",
+  "lastRevised": "Last revised in November 2017",
+  "terms": [
+    {
+      "code": "D000305",
+      "term": "Adrenal Cortex Hormones"
+    },
+    {
+      "code": "D000284",
+      "term": "Administration, Oral"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "4b8cc538-0851-4774-a24f-72bcd0826803",
+      "parentId": null,
+      "rootId": "4b8cc538-0851-4774-a24f-72bcd0826803",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d72b9ffd-f9f1-4f94-973e-5dc5d78110a5 --><h1>Corticosteroids - oral:&nbsp;Summary</h1><!-- end field d72b9ffd-f9f1-4f94-973e-5dc5d78110a5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-11-01T00:00:00+00:00",
+      "dateTo": "2017-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information added on contraindications and cautions for use in people with systemic sclerosis as per updates to the manufacturers&#39; summary of product characteristics."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added on ophthalmic adverse effects as per updates to the manufacturers&#39; summary of product characteristics."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "A recommendation to seek immediate medical attention if symptoms of adrenal insufficiency are experienced has been added to this topic ABPI, 2016."
+    },
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The contraindications section has been updated with the information that the administration of live or live, attenuated vaccines is contraindicated in patients receiving immunosuppressive doses of corticosteroids ABPI, 2016."
+    },
+    {
+      "dateFrom": "2015-06-01T00:00:00+01:00",
+      "dateTo": "2015-08-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last version of this topic. There have been no major changes to the recommendations."
+    }
+  ]
+}

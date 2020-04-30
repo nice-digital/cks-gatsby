@@ -1,0 +1,52 @@
+{
+  "topicName": "Diarrhoea - antibiotic associated",
+  "topicId": "60505e59-3d44-4100-ba77-670b2dda81a3",
+  "exportId": "ade6c974-b740-42d9-89eb-aa8e00b792d1",
+  "dataId": "3d84a170-3695-439c-a732-aa9500ec1fbd",
+  "number": 3,
+  "dateOfExport": "2019-07-25T14:19:41.0589826+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Diarrhoea is a common consequence of treatment with antibiotics, occurring in 2–25% of people taking antibiotics",
+  "lastRevised": "Last revised in March 2019",
+  "terms": [
+    {
+      "code": "D014839",
+      "term": "Vomiting"
+    },
+    {
+      "code": "D003967",
+      "term": "Diarrhea"
+    },
+    {
+      "code": "D005759",
+      "term": "Gastroenteritis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Gastrointestinal",
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7021a253-163c-44f6-9113-021daffc4dca",
+      "parentId": null,
+      "rootId": "7021a253-163c-44f6-9113-021daffc4dca",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b50f5465-31b0-4238-b1fb-e60cf45e73ee --><h1>Diarrhoea - antibiotic associated: Summary</h1><!-- end field b50f5465-31b0-4238-b1fb-e60cf45e73ee -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. There are no major changes to the recommendations in this topic."
+    }
+  ]
+}

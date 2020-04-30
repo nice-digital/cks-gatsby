@@ -1,0 +1,46 @@
+{
+  "topicName": "Multiple myeloma",
+  "topicId": "d449062b-fe98-40a2-bc4d-741f0b91c31d",
+  "exportId": "58c13d31-5a03-4f77-984d-aa16000365dd",
+  "dataId": "373fd280-6f97-42e9-8017-aa1700819808",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:51:49.4566458+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Multiple myeloma is a progressive malignant disease of abnormal plasma cells in the bone marrow and abnormal monoclonal immunoglobulins",
+  "lastRevised": "Last revised in May 2016",
+  "terms": [
+    {
+      "code": "D009101",
+      "term": "Multiple Myeloma"
+    },
+    {
+      "code": "D009194",
+      "term": "Myeloma Proteins"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "255109be-f4b3-4859-835f-8c9a9b209c07",
+      "parentId": null,
+      "rootId": "255109be-f4b3-4859-835f-8c9a9b209c07",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 1cbd6b01-5c74-463c-ab08-7a2fa5a29b63 --><h1>Multiple myeloma:&nbsp;Summary</h1><!-- end field 1cbd6b01-5c74-463c-ab08-7a2fa5a29b63 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-02-01T00:00:00+00:00",
+      "dateTo": "2016-05-31T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

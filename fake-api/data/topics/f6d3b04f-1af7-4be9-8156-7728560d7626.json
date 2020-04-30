@@ -1,0 +1,42 @@
+{
+  "topicName": "CVD risk assessment and management",
+  "topicId": "f6d3b04f-1af7-4be9-8156-7728560d7626",
+  "exportId": "5000955a-6580-4096-8810-aa8600be191d",
+  "dataId": "cbe2ed08-5238-4226-a65a-aa8600c40947",
+  "number": 3,
+  "dateOfExport": "2019-07-10T11:53:43.761564+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Cardiovascular disease (CVD) is a significant cause of mortality and morbidity, accounting for almost a third of all deaths in the UK.",
+  "lastRevised": "Last revised in March 2019",
+  "terms": [
+    {
+      "code": "D002318",
+      "term": "Cardiovascular Diseases"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "5037fdb2-9f26-41aa-b9ed-f344709f4427",
+      "parentId": null,
+      "rootId": "5037fdb2-9f26-41aa-b9ed-f344709f4427",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field dfbb7c39-4515-40d9-9ddb-2b4ca1683b82 --><h1>CVD risk assessment and management:&nbsp;Summary</h1><!-- end field dfbb7c39-4515-40d9-9ddb-2b4ca1683b82 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The recommendations have been updated to take into account the National Institute for Health and Care Excellence (NICE) Surveillance report 2018 &ndash; Cardiovascular disease: risk assessment and reduction, including lipid modification (2014) NICE guideline CG181, and a prospective cohort study which updated and validated a new version of the QRISK tool: QRISK3."
+    }
+  ]
+}

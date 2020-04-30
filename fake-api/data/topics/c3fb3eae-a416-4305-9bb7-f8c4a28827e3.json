@@ -1,0 +1,68 @@
+{
+  "topicName": "Pelvic inflammatory disease",
+  "topicId": "c3fb3eae-a416-4305-9bb7-f8c4a28827e3",
+  "exportId": "31fa0cd6-aeb0-429e-90cb-aa6500eabe23",
+  "dataId": "83c7593f-e574-47dc-999d-aa6800d1379e",
+  "number": 7,
+  "dateOfExport": "2019-06-10T12:41:43.1983702+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Pelvic inflammatory disease (PID) is a general term for infection of the upper genital tract.PID is usually due to a sexually transmitted disease",
+  "lastRevised": "Last revised in June 2019",
+  "terms": [
+    {
+      "code": "D000292",
+      "term": "Pelvic Inflammatory Disease"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Sexual health",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f602ecd1-3aca-4a80-90cc-fc3fc8d50a0c",
+      "parentId": null,
+      "rootId": "f602ecd1-3aca-4a80-90cc-fc3fc8d50a0c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 9a808fa7-6b71-4bfb-9108-7c4f512a429b --><h1>Pelvic inflammatory disease:&nbsp;Summary</h1><!-- end field 9a808fa7-6b71-4bfb-9108-7c4f512a429b -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-06-01T00:00:00+01:00",
+      "dateTo": "2019-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The recommended dose of ceftriaxone has been increased to 1 g BASHH, 2019."
+    },
+    {
+      "dateFrom": "2019-03-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Prescribing information for quinolones updated in line with MHRA, 2019, Fluoroquinolone antibiotics: new restrictions and precautions for use due to very rare reports of disabling and potentially long-lasting or irreversible side effects MHRA, 2019."
+    },
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Bullets amended."
+    },
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2018-08-01T00:00:00+01:00",
+      "dateTo": "2018-08-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The following changes have been made:"
+    }
+  ]
+}

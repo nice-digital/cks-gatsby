@@ -1,0 +1,43 @@
+{
+  "topicName": "Hypercalcaemia",
+  "topicId": "897bf773-43ef-4092-a798-d9eb4cbcb9cc",
+  "exportId": "d7a5ed96-a258-4cdb-a210-aa16000365dd",
+  "dataId": "8f3cdeb8-b825-4235-a29d-aa17008242d8",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:14.6101837+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Hypercalcaemia can be defined as a serum calcium concentration of 2.65 mmol/L (or higher) on two occasions",
+  "lastRevised": "Last revised in December 2014",
+  "terms": [
+    {
+      "code": "D006934",
+      "term": "Hypercalcemia"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Palliative care"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "726e9a91-c41f-42f1-bd7d-d9ee7a40c92c",
+      "parentId": null,
+      "rootId": "726e9a91-c41f-42f1-bd7d-d9ee7a40c92c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field af27b454-2945-421a-99b8-ffd2e9122d6d --><h1>Hypercalcaemia:&nbsp;Summary</h1><!-- end field af27b454-2945-421a-99b8-ffd2e9122d6d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-09-01T00:00:00+01:00",
+      "dateTo": "2014-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

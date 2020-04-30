@@ -1,0 +1,60 @@
+{
+  "topicName": "Thrombophlebitis - superficial",
+  "topicId": "3c0e3637-8623-4aa4-9bdf-83c4ead61135",
+  "exportId": "d83076bf-e3d0-4c5b-ab32-aa16000365dd",
+  "dataId": "d4fdef72-6087-4d6b-8dc3-aa17007d6941",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:36:35.1517089+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Superficial thrombophlebitis is a common disorder that occurs when a superficial vein becomes inflamed (phlebitis) and the blood within it clots.",
+  "lastRevised": "Last revised in May 2017",
+  "terms": [
+    {
+      "code": "D013924",
+      "term": "Thrombophlebitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7acf5239-3a9e-4762-a14b-adc0564ce462",
+      "parentId": null,
+      "rootId": "7acf5239-3a9e-4762-a14b-adc0564ce462",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e0e60d43-8475-490d-8e3b-4967d5aa08e7 --><h1>Thrombophlebitis - superficial:&nbsp;Summary</h1><!-- end field e0e60d43-8475-490d-8e3b-4967d5aa08e7 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Correction made to supporting information on fondaparinux."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The dose of clarithromycin for people with severe renal impairment has been clarified, in line with the manufacturer&#39;s Summary of Product Characteristics."
+    },
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2015-07-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The information on the concurrent use of clarithromycin or erythromycin with statins has been clarified."
+    },
+    {
+      "dateFrom": "2014-05-01T00:00:00+01:00",
+      "dateTo": "2014-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes have been made to the recommendations; however, fondaparinux has now been included as a drug option for deep vein thrombosis (DVT) prophylaxis in people with superficial thrombophlebitis who are judged to be at increased risk of a DVT. Additional sections on the prognosis and complications of superficial thrombophlebitis as well as antibiotics prescribing information have also been added."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "topicName": "Obstructive sleep apnoea syndrome",
+  "topicId": "f39c3a30-1d8b-4e7f-b393-c9630f5cc63e",
+  "exportId": "09bb95d2-9e03-41e3-bada-aa16000365dd",
+  "dataId": "768cc1ca-4d8d-49c1-9049-aa17007ef639",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:42:14.4461556+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Obstructive sleep apnoea/hypopnoea syndrome (OSAHS) is the coexistence of excessive daytime sleepiness with irregular breathing at night.",
+  "lastRevised": "Last revised in April 2015",
+  "terms": [
+    {
+      "code": "D020181",
+      "term": "Sleep Apnea, Obstructive"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f82fd04e-32e2-460e-a74a-d6ede3c0c01f",
+      "parentId": null,
+      "rootId": "f82fd04e-32e2-460e-a74a-d6ede3c0c01f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d3b618bf-fee2-481c-890d-6e7db3a8b49d --><h1>Obstructive sleep apnoea syndrome:&nbsp;Summary</h1><!-- end field d3b618bf-fee2-481c-890d-6e7db3a8b49d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-04-01T00:00:00+01:00",
+      "dateTo": "2015-04-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added to reflect the advice published in the Four-Week Wait Campaign: For the treatment of obstructive sleep apnoea syndrome (OSAS) OSA Partnership Group, 2015."
+    },
+    {
+      "dateFrom": "2014-10-01T00:00:00+01:00",
+      "dateTo": "2015-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. The topic has undergone minor restructuring, and background information regarding sleep apnoea in children has been added. No major changes to the recommendations have been made."
+    }
+  ]
+}

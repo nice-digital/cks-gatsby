@@ -1,0 +1,43 @@
+{
+  "topicName": "Scabies",
+  "topicId": "da2824e2-e1de-4303-9c52-8224034ff953",
+  "exportId": "39fd4ceb-f07a-430f-ac44-aa16000365dd",
+  "dataId": "cc7e9cdc-8aa7-4b65-a8c5-aa17007d986a",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:37:15.7174262+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Scabies is an intensely itchy skin infestation caused by the human parasite Sarcoptes scabiei. A person with scabies has an average of 10–15 mites.",
+  "lastRevised": "Last revised in November&nbsp;2017",
+  "terms": [
+    {
+      "code": "D012532",
+      "term": "Scabies"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1973c972-038b-46f2-b0f6-b35ff7417b4e",
+      "parentId": null,
+      "rootId": "1973c972-038b-46f2-b0f6-b35ff7417b4e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 3ce636e8-3197-4ad0-8768-a20b0f710697 --><h1>Scabies:&nbsp;Summary</h1><!-- end field 3ce636e8-3197-4ad0-8768-a20b0f710697 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-11-01T00:00:00+00:00",
+      "dateTo": "2017-11-30T23:59:59+00:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in November 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

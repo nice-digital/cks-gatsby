@@ -1,0 +1,42 @@
+{
+  "topicName": "Breast pain - cyclical",
+  "topicId": "2ed01d3a-80f6-4c76-892f-168982a1c83d",
+  "exportId": "1a86f411-2c57-4d89-a874-aa8600be191d",
+  "dataId": "f08e7365-7f3a-4801-baec-aa8600c328ef",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:50:32.4479862+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Cyclical breast pain is related to the menstrual cycle and is not associated with specific underlying breast disease.",
+  "lastRevised": "Last revised in August 2016",
+  "terms": [
+    {
+      "code": "D001940",
+      "term": "Breast"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "631c69ec-0c6b-4694-8017-f8096e85b0e9",
+      "parentId": null,
+      "rootId": "631c69ec-0c6b-4694-8017-f8096e85b0e9",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field f8c81ab8-fec5-4f79-959c-c900bdf0ec54 --><h1>Breast pain - cyclical:&nbsp;Summary</h1><!-- end field f8c81ab8-fec5-4f79-959c-c900bdf0ec54 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-08-01T00:00:00+01:00",
+      "dateTo": "2016-08-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. There has been a change to the recommendation on timing of referral to a breast specialist to after 3 months (rather than 6 months) if pain is unresponsive to first-line treatment. There have also been minor structural changes."
+    }
+  ]
+}

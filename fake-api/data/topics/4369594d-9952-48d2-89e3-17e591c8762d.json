@@ -1,0 +1,48 @@
+{
+  "topicName": "Hyperthyroidism",
+  "topicId": "4369594d-9952-48d2-89e3-17e591c8762d",
+  "exportId": "3e917bce-76c7-4897-96b7-aa16000365dd",
+  "dataId": "9551cc89-2a1a-4347-87ea-aa17008154bd",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:50:50.8775953+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Hyperthyroidism occurs when an excess of circulating thyroid hormones (thyrotoxicosis) is produced by an overactive thyroid gland.",
+  "lastRevised": "Last revised in February 2019",
+  "terms": [
+    {
+      "code": "D006980",
+      "term": "Hyperthyroidism"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "cd2365d3-dcb8-492b-a199-823df39fabad",
+      "parentId": null,
+      "rootId": "cd2365d3-dcb8-492b-a199-823df39fabad",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field bc011fac-01eb-4ff5-af52-dfeba1dade5a --><h1>Hyperthyroidism:&nbsp;Summary</h1><!-- end field bc011fac-01eb-4ff5-af52-dfeba1dade5a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Update to prescribing information - carbimazole should not be prescribed to women of childbearing age due to increased risk of congenital malformations. Acute pancreatitis has also been added as an infrequent adverse effect."
+    },
+    {
+      "dateFrom": "2016-04-01T00:00:00+01:00",
+      "dateTo": "2016-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone minor restructuring. No major changes to the recommendations have been made, but the Prescribing Information section has been expanded."
+    }
+  ]
+}

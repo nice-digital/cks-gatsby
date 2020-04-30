@@ -1,0 +1,55 @@
+{
+  "topicName": "Venous eczema and lipodermatosclerosis",
+  "topicId": "ea8f06ec-40eb-41f8-9dfd-55c794f27eef",
+  "exportId": "6d5f796c-0a8f-4335-845d-aa8600be191d",
+  "dataId": "c919082e-0d5c-42d3-9d18-aa8600c3729b",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:51:35.5965097+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Venous skin changes usually occur on the lower legs and are often bilateral,They vary, depending on the severity.",
+  "lastRevised": "Last revised in May 2017",
+  "terms": [
+    {
+      "code": "D014647",
+      "term": "Varicose Ulcer"
+    },
+    {
+      "code": "D012594",
+      "term": "Scleroderma, Localized"
+    },
+    {
+      "code": "D014689",
+      "term": "Venous Insufficiency"
+    },
+    {
+      "code": "D014648",
+      "term": "Varicose Veins"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a27c465c-e137-4c31-a394-de883d06b045",
+      "parentId": null,
+      "rootId": "a27c465c-e137-4c31-a394-de883d06b045",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 0341220f-9cb8-4e91-9a1a-75bd463d5b7a --><h1>Venous eczema and lipodermatosclerosis:&nbsp;Summary</h1><!-- end field 0341220f-9cb8-4e91-9a1a-75bd463d5b7a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No changes to clinical recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "topicName": "Angina",
+  "topicId": "b8a92113-15ce-47f8-b5f2-29135fbaeb9a",
+  "exportId": "3912ad69-fadd-4815-8736-aa16000365dd",
+  "dataId": "1e12b15c-61c3-43f7-84dd-aa1700806426",
+  "number": 2,
+  "dateOfExport": "2019-03-21T07:47:24.9043739+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Angina is chest pain (or constricting discomfort) caused by an insufficient blood supply to the heart muscle.",
+  "lastRevised": "Last revised in January&nbsp;2018",
+  "terms": [
+    {
+      "code": "D000788",
+      "term": "Angina Pectoris, Variant"
+    },
+    {
+      "code": "D060050",
+      "term": "Angina, Stable"
+    },
+    {
+      "code": "D000787",
+      "term": "Angina Pectoris"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "13885a4f-8963-4e2e-bc92-9cf0b6556dec",
+      "parentId": null,
+      "rootId": "13885a4f-8963-4e2e-bc92-9cf0b6556dec",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 651a98de-18c8-486c-a8ac-35e30ebe2d6c --><h1>Angina: Summary</h1><!-- end field 651a98de-18c8-486c-a8ac-35e30ebe2d6c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-01-01T00:00:00+00:00",
+      "dateTo": "2018-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Revised SPC for Istin (amlodipine) 5 and 10mg tablets. Drug interactions updated as per the revised SPC."
+    },
+    {
+      "dateFrom": "2017-10-01T00:00:00+01:00",
+      "dateTo": "2017-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "NSAIDs added as a potential drug interaction with nicorandil."
+    },
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "topicName": "Brain and central nervous system cancers - recognition and referral",
+  "topicId": "6fc8f65b-ae32-4117-b08f-c714436d9403",
+  "exportId": "c058dee5-3cd6-4b1f-8e26-aa16000365dd",
+  "dataId": "2fefee67-f711-4644-b87b-aa170080d502",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:49:03.3409752+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Around 9000 new primary brain and central nervous system cancers are diagnosed each year in the UK.",
+  "lastRevised": "Last revised in November 2016",
+  "terms": [
+    {
+      "code": "D001932",
+      "term": "Brain Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f72f2c27-5c42-430e-bb43-03d9d767192e",
+      "parentId": null,
+      "rootId": "f72f2c27-5c42-430e-bb43-03d9d767192e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 5a4ecd0c-6f85-4b6e-ab22-4deac5dd8dc9 --><h1>Brain and central nervous system cancers - recognition and referral:&nbsp;Summary</h1><!-- end field 5a4ecd0c-6f85-4b6e-ab22-4deac5dd8dc9 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The National Institute for Health and Care Excellence (NICE) quality standards for suspected cancer have been added to this topic."
+    },
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "This topic is a direct implementation of the National Institute for Health and Care Excellence guideline Suspected cancer: recognition and referral NICE, 2015. This CKS topic replaces the former topic on Brain tumour - suspected."
+    }
+  ]
+}

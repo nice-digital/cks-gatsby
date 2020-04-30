@@ -1,0 +1,58 @@
+{
+  "topicName": "Antiplatelet treatment",
+  "topicId": "a68e1521-d84e-4abb-bb17-6186ba7a891a",
+  "exportId": "65159ad8-c3af-443e-b6e9-aa8e00b792d1",
+  "dataId": "2840edb6-5242-4d96-9afa-aa9500ebbe49",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:18:17.8973664+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Antiplatelet treatment prevents the formation of blood clots by preventing platelet aggregation.",
+  "lastRevised": "Last revised in September 2018",
+  "terms": [
+    {
+      "code": "D004176",
+      "term": "Dipyridamole"
+    },
+    {
+      "code": "D001241",
+      "term": "Aspirin"
+    },
+    {
+      "code": "D010975",
+      "term": "Platelet Aggregation Inhibitors"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Drugs and devices",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "76086756-eabc-4356-a62c-54ece86f17a0",
+      "parentId": null,
+      "rootId": "76086756-eabc-4356-a62c-54ece86f17a0",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a94d4549-6863-480a-b5c8-3f92929f2c1d --><h1>Antiplatelet treatment: Summary</h1><!-- end field a94d4549-6863-480a-b5c8-3f92929f2c1d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-09-01T00:00:00+01:00",
+      "dateTo": "2018-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Timing of discontinuation of ticagrelor prior to elective surgery has been changed from 7 to 5 days."
+    },
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

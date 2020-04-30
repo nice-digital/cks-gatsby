@@ -1,0 +1,51 @@
+{
+  "topicName": "Malaria prophylaxis",
+  "topicId": "fcbcecf9-c37c-4236-a0f0-e6ea3ff72076",
+  "exportId": "d80b9c86-324a-493b-94a6-aa16000365dd",
+  "dataId": "94b1aedc-355e-44c2-be78-aa17008128b7",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:50:14.2178399+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Prophylaxis used depends on the area to be visited, the age of the person, contraindications to specific drugs in people with co-morbidities, and patient preference.",
+  "lastRevised": "Last revised in January 2018",
+  "terms": [
+    {
+      "code": "Q000517",
+      "term": "prevention & control"
+    },
+    {
+      "code": "D014195",
+      "term": "Travel"
+    },
+    {
+      "code": "D008288",
+      "term": "Malaria"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3372060f-1dc7-4448-a747-16851b3c7cba",
+      "parentId": null,
+      "rootId": "3372060f-1dc7-4448-a747-16851b3c7cba",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 7c5fa8e3-89da-4fb3-9595-8914e0a6acde --><h1>Malaria prophylaxis:&nbsp;Summary</h1><!-- end field 7c5fa8e3-89da-4fb3-9595-8914e0a6acde -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-01-01T00:00:00+00:00",
+      "dateTo": "2018-01-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in November 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

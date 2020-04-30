@@ -1,0 +1,46 @@
+{
+  "topicName": "Corticosteroids - inhaled",
+  "topicId": "702fbe32-706c-43c3-bc60-c5cc8f25f0a7",
+  "exportId": "ab6a4a62-3e44-40b7-ac12-aa16000365dd",
+  "dataId": "fcc2f2b7-0816-471f-bedd-aa17007d9a73",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:37:17.8380839+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Corticosteroids are synthetic analogues of hormones produced by the adrenal cortex.Inhaled corticosteroids are glucocorticoids",
+  "lastRevised": "Last revised in September 2015",
+  "terms": [
+    {
+      "code": "D000305",
+      "term": "Adrenal Cortex Hormones"
+    },
+    {
+      "code": "D009330",
+      "term": "Nebulizers and Vaporizers"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "44f61cd7-169d-46fe-b86b-5e01282a0366",
+      "parentId": null,
+      "rootId": "44f61cd7-169d-46fe-b86b-5e01282a0366",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a9c4a75d-6477-4744-ba91-af051d66a79c --><h1>Corticosteroids - inhaled :&nbsp;Summary</h1><!-- end field a9c4a75d-6477-4744-ba91-af051d66a79c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2015-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last version of this topic. There have been no major changes to the recommendations."
+    }
+  ]
+}

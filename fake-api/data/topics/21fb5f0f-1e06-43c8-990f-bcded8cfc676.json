@@ -1,0 +1,52 @@
+{
+  "topicName": "Tiredness/fatigue in adults",
+  "topicId": "21fb5f0f-1e06-43c8-990f-bcded8cfc676",
+  "exportId": "7134a6ea-5ed9-439f-93c0-aa16000365dd",
+  "dataId": "f103bd42-ebda-4938-856a-aa1700811ec7",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:50:05.973833+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Tiredness (or fatigue) is often described as a lack of, or decreased, energy, and physical or mental exhaustion.",
+  "lastRevised": "Last revised in February 2015",
+  "terms": [
+    {
+      "code": "D005221",
+      "term": "Fatigue"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health",
+    "Allergies",
+    "Cardiovascular",
+    "Endocrine and metabolic",
+    "Gastrointestinal",
+    "Haematology",
+    "Infections and infestations",
+    "Kidney disease and urology",
+    "Preventative medicine",
+    "Musculoskeletal",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a93eed5a-7bcd-44e0-b2c2-3683b9da1509",
+      "parentId": null,
+      "rootId": "a93eed5a-7bcd-44e0-b2c2-3683b9da1509",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 912ee4bf-31cc-4d52-9946-252db07e1ce9 --><h1>Tiredness/fatigue in adults:&nbsp;Summary</h1><!-- end field 912ee4bf-31cc-4d52-9946-252db07e1ce9 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-01-01T00:00:00+00:00",
+      "dateTo": "2015-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to the recommendations have been made."
+    }
+  ]
+}

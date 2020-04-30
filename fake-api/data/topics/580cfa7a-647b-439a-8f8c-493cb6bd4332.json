@@ -1,0 +1,54 @@
+{
+  "topicName": "Hepatitis A",
+  "topicId": "580cfa7a-647b-439a-8f8c-493cb6bd4332",
+  "exportId": "9e2b9073-b781-46c3-9835-aa16000365dd",
+  "dataId": "245f0a8e-9add-49cb-b5b5-aa1700819df6",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:51:53.9488853+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Hepatitis A is inflammation of the liver caused by infection with the hepatitis A virus, and transmission is by the faecal-oral route.",
+  "lastRevised": "Last revised in December 2016",
+  "terms": [
+    {
+      "code": "D006509",
+      "term": "Hepatitis, Viral, Human"
+    },
+    {
+      "code": "D006506",
+      "term": "Hepatitis A"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Gastrointestinal",
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "ca74661a-fbaa-46c7-ae4e-3740dfb6a257",
+      "parentId": null,
+      "rootId": "ca74661a-fbaa-46c7-ae4e-3740dfb6a257",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 37f6ca80-ad03-4051-a733-87ac0c8812c3 --><h1>Hepatitis A:&nbsp;Summary</h1><!-- end field 37f6ca80-ad03-4051-a733-87ac0c8812c3 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information added on concomitant administration of Havrix&reg;."
+    },
+    {
+      "dateFrom": "2014-01-01T00:00:00+00:00",
+      "dateTo": "2014-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

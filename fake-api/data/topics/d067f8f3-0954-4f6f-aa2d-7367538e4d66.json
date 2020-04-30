@@ -1,0 +1,44 @@
+{
+  "topicName": "Smoking cessation",
+  "topicId": "d067f8f3-0954-4f6f-aa2d-7367538e4d66",
+  "exportId": "28feed31-9936-488a-b16c-aa8600be191d",
+  "dataId": "66077b7b-d2d7-4371-a575-aa8600c47b51",
+  "number": 3,
+  "dateOfExport": "2019-07-10T11:55:21.0329452+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Tobacco is smoked to obtain nicotine, principally to relieve symptoms of nicotine withdrawal.",
+  "lastRevised": "Last revised in March 2018",
+  "terms": [
+    {
+      "code": "D016540",
+      "term": "Smoking Cessation"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Preventative medicine",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "48b226f8-4b83-4a00-953b-10ac0fb544c3",
+      "parentId": null,
+      "rootId": "48b226f8-4b83-4a00-953b-10ac0fb544c3",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e469dde0-953e-458a-bd19-f6a56f2b90f0 --><h1>Smoking cessation:&nbsp;Summary</h1><!-- end field e469dde0-953e-458a-bd19-f6a56f2b90f0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-03-01T00:00:00+00:00",
+      "dateTo": "2018-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. There have been minor structural changes to the topic and information on Very Brief Advice on smoking cessation for adults and pregnant women, and recommendations regarding e-cigarettes have been added."
+    }
+  ]
+}

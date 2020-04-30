@@ -1,0 +1,62 @@
+{
+  "topicName": "Headache - assessment",
+  "topicId": "3ee24f7d-ca6c-42b5-b70a-2d5b21fa9da1",
+  "exportId": "f25c9f49-a7c8-4914-b060-aa16000365dd",
+  "dataId": "7d872cd9-9f37-4c30-8ccd-aa17007e36fe",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:39:30.9934666+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Headache is a common symptom associated with many conditions.",
+  "lastRevised": "Last revised in October 2017",
+  "terms": [
+    {
+      "code": "D018781",
+      "term": "Tension-Type Headache"
+    },
+    {
+      "code": "D051271",
+      "term": "Headache Disorders, Secondary"
+    },
+    {
+      "code": "D020773",
+      "term": "Headache Disorders"
+    },
+    {
+      "code": "D051270",
+      "term": "Headache Disorders, Primary"
+    },
+    {
+      "code": "D003027",
+      "term": "Cluster Headache"
+    },
+    {
+      "code": "D006261",
+      "term": "Headache"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "258513a4-edb6-49bf-932e-4e4e00784e84",
+      "parentId": null,
+      "rootId": "258513a4-edb6-49bf-932e-4e4e00784e84",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a68ab06a-614f-4c5e-9245-432f2fbcb70b --><h1>Headache - assessment:&nbsp;Summary</h1><!-- end field a68ab06a-614f-4c5e-9245-432f2fbcb70b -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-10-01T00:00:00+01:00",
+      "dateTo": "2017-10-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in August 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

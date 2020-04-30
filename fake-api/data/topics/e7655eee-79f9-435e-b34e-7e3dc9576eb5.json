@@ -1,0 +1,48 @@
+{
+  "topicName": "Prostatitis - acute",
+  "topicId": "e7655eee-79f9-435e-b34e-7e3dc9576eb5",
+  "exportId": "2dc9fd75-a26b-4c90-9074-aa5700e2147d",
+  "dataId": "a9ba4a25-2a01-4a93-8843-aa5b00ce24df",
+  "number": 2,
+  "dateOfExport": "2019-05-28T12:30:31.840601+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Acute bacterial prostatitis is a potentially serious non-sexually transmitted bacterial infection of the prostate",
+  "lastRevised": "Last revised in April&nbsp;2019",
+  "terms": [
+    {
+      "code": "D017699",
+      "term": "Pelvic Pain"
+    },
+    {
+      "code": "D011472",
+      "term": "Prostatitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Kidney disease and urology",
+    "Men's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "db6529be-a744-42d2-9681-d9ca16d7fc36",
+      "parentId": null,
+      "rootId": "db6529be-a744-42d2-9681-d9ca16d7fc36",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b03e4b36-be96-4ff6-b271-4d15cdd464b7 --><h1>Prostatitis - acute:&nbsp;Summary</h1><!-- end field b03e4b36-be96-4ff6-b271-4d15cdd464b7 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-03-01T00:00:00+00:00",
+      "dateTo": "2019-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "topicName": "Self-harm",
+  "topicId": "c8b07521-9e5a-41f5-b627-242dc033b0e7",
+  "exportId": "74789211-2c29-4429-a644-aa16000365dd",
+  "dataId": "7e100bbe-8ee6-4617-b7b2-aa1700828dd0",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:55:18.5579467+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Self-harm refers to an intentional act of self-poisoning or self-injury, irrespective of the motivation or apparent purpose of the act",
+  "lastRevised": "Last revised in August 2014",
+  "terms": [
+    {
+      "code": "D016728",
+      "term": "Self-Injurious Behavior"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "94122786-7f2c-4bb4-bcc6-f7168cb4e722",
+      "parentId": null,
+      "rootId": "94122786-7f2c-4bb4-bcc6-f7168cb4e722",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 4ee62b6c-8e25-4dd9-83a4-6cd2e5e650f3 --><h1>Self-harm:&nbsp;Summary</h1><!-- end field 4ee62b6c-8e25-4dd9-83a4-6cd2e5e650f3 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-04-01T00:00:00+01:00",
+      "dateTo": "2014-08-31T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

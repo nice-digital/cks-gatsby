@@ -1,0 +1,46 @@
+{
+  "topicName": "Faltering growth",
+  "topicId": "dee5fb99-d783-4c53-bf18-a8e200b7b9e9",
+  "exportId": "ba9ef3f7-8bad-422b-92c5-aa8600be191d",
+  "dataId": "56549aac-41e1-46dc-a9a4-aa8600c4561f",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:54:49.3362507+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Low weight or low weight gain in children",
+  "lastRevised": "Last revised in June 2018",
+  "terms": [
+    {
+      "code": "D005183",
+      "term": "failure to thrive"
+    },
+    {
+      "code": "D006130",
+      "term": "growth disorders"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a93d4efd-1696-4258-8402-a8e200b7dc24",
+      "parentId": null,
+      "rootId": "a93d4efd-1696-4258-8402-a8e200b7dc24",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field dd741696-df3c-4854-b4e1-a8e200b7dc24 --><h1>Faltering growth: Summary</h1><!-- end field dd741696-df3c-4854-b4e1-a8e200b7dc24 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-04-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "topicName": "Urinary tract infection - children",
+  "topicId": "510a3aa0-27ac-462a-a52b-fe6491d08ab0",
+  "exportId": "85bd25ef-237d-48f0-bcad-aa3900ee2979",
+  "dataId": "244e0bed-7483-46d1-8e25-aa3900f47ff6",
+  "number": 2,
+  "dateOfExport": "2019-04-24T14:50:10.781399+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Urinary tract infection (UTI) is illness caused by micro-organisms in the urinary tract.",
+  "lastRevised": "Last revised in February&nbsp;2019",
+  "terms": [
+    {
+      "code": "D006417",
+      "term": "Hematuria"
+    },
+    {
+      "code": "D001437",
+      "term": "Bacteriuria"
+    },
+    {
+      "code": "D003556",
+      "term": "Cystitis"
+    },
+    {
+      "code": "D014552",
+      "term": "Urinary Tract Infections"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations",
+    "Kidney disease and urology"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "eeb8196c-3acf-4ded-af88-f37087abebd1",
+      "parentId": null,
+      "rootId": "eeb8196c-3acf-4ded-af88-f37087abebd1",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e34975f3-8fad-4c1c-9bad-4bac28018659 --><h1>Urinary tract infection - children:&nbsp;Summary</h1><!-- end field e34975f3-8fad-4c1c-9bad-4bac28018659 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in February 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. Some minor structural changes have been made, and management recommendations have been updated in line with the latest NICE guidelines."
+    }
+  ]
+}

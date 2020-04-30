@@ -1,0 +1,55 @@
+{
+  "topicName": "Chickenpox",
+  "topicId": "4960f8a4-0140-4c3b-9bd0-b1ac6fccd648",
+  "exportId": "507d254e-16d5-43bf-a77e-aa8600be191d",
+  "dataId": "d469f44b-cf82-4677-82d7-aa8600c33c52",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:50:47.3342315+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Chickenpox is an acute disease, predominantly occurring in childhood. It is caused by varicella-zoster virus and is characterized by a vesicular rash",
+  "lastRevised": "Last revised in August 2018",
+  "terms": [
+    {
+      "code": "D002644",
+      "term": "Chickenpox"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c2b7ac1f-4807-4b7f-95fd-f3f77cabace8",
+      "parentId": null,
+      "rootId": "c2b7ac1f-4807-4b7f-95fd-f3f77cabace8",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field cf45f083-1d14-49b0-97c0-411b690d1748 --><h1>Chickenpox:&nbsp;Summary</h1><!-- end field cf45f083-1d14-49b0-97c0-411b690d1748 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-08-01T00:00:00+01:00",
+      "dateTo": "2018-08-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The recommendation to notify relevant authorities in Scotland and Northern Ireland has been removed as chickenpox is no longer a notifiable disease."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Typographical error corrected."
+    },
+    {
+      "dateFrom": "2016-09-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. Changes include:"
+    }
+  ]
+}

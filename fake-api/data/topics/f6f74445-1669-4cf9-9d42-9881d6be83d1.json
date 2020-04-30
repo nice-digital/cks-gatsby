@@ -1,0 +1,42 @@
+{
+  "topicName": "Pilonidal sinus disease",
+  "topicId": "f6f74445-1669-4cf9-9d42-9881d6be83d1",
+  "exportId": "747e3b76-8d33-4394-8d2b-aa5400d56bbe",
+  "dataId": "ada876b8-347e-4584-b6b8-aa5b00ce469d",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:31:00.6357697+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Pilonidal sinus disease is a skin disorder usually found in the midline of the natal cleft.",
+  "lastRevised": "Last revised in March 2019",
+  "terms": [
+    {
+      "code": "D010864",
+      "term": "Pilonidal sinus"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0a1b72d4-06ac-4009-8e5c-30689100b0b7",
+      "parentId": null,
+      "rootId": "0a1b72d4-06ac-4009-8e5c-30689100b0b7",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 69295e54-ad2e-4a22-905f-40f70492ea41 --><h1>Pilonidal sinus disease:&nbsp;Summary</h1><!-- end field 69295e54-ad2e-4a22-905f-40f70492ea41 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-03-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

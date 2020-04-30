@@ -1,0 +1,40 @@
+{
+  "topicName": "Neutropenic sepsis",
+  "topicId": "08d261eb-f269-42a7-801b-2cfddf69a31c",
+  "exportId": "bd24e5b5-a209-4df2-a1af-aa16000365dd",
+  "dataId": "6f7e6c52-870b-49a6-bddf-aa17008239a0",
+  "number": 2,
+  "dateOfExport": "2019-03-21T07:54:07.4834115+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Neutropenic sepsis is a major cause of death in people with neutropenia. It is a time-critical medical emergency",
+  "lastRevised": "Last revised in November 2015",
+  "terms": [
+    {
+      "code": "D018805",
+      "term": "Sepsis"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "fcfff318-215b-470a-93bb-e2c8f1061c4f",
+      "parentId": null,
+      "rootId": "fcfff318-215b-470a-93bb-e2c8f1061c4f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field bfa08f9f-fdde-41c2-bfa1-a7568ad0605f --><h1>Neutropenic sepsis: Summary</h1><!-- end field bfa08f9f-fdde-41c2-bfa1-a7568ad0605f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-11-30T23:59:59+00:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

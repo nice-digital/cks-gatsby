@@ -1,0 +1,43 @@
+{
+  "topicName": "Jaundice in adults",
+  "topicId": "2f2490fa-8fe7-4e82-937d-16d0c246af28",
+  "exportId": "06b6a16c-fc11-4bf0-8360-aa16011b9d11",
+  "dataId": "2c8181f4-dfeb-4e63-b8e4-aa17007f44e2",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:43:21.0850992+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Jaundice is a clinical sign describing yellow pigmentation of the skin, sclera, and mucous membranes due to raised plasma bilirubin.",
+  "lastRevised": "Last revised in February 2016",
+  "terms": [
+    {
+      "code": "D007565",
+      "term": "Jaundice"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3cc25d8c-f959-4b5a-a775-ee92f82e9b4a",
+      "parentId": null,
+      "rootId": "3cc25d8c-f959-4b5a-a775-ee92f82e9b4a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a1206c09-c9cd-4560-95e6-d553a08447ee --><h1>Jaundice in adults: Summary</h1><!-- end field a1206c09-c9cd-4560-95e6-d553a08447ee -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-08-01T00:00:00+01:00",
+      "dateTo": "2016-02-29T23:59:59+00:00",
+      "title": "This is a new CKS topic",
+      "body": "A literature search was conducted in August 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key Randomized Controlled Trials. The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "topicName": "Hypercholesterolaemia - familial",
+  "topicId": "030641a4-5f0a-4edf-a3ac-c21903c0095e",
+  "exportId": "8680e039-4620-42ae-878e-aa5700e2147d",
+  "dataId": "4defde3e-b641-4a3a-9202-aa5b00ce21df",
+  "number": 2,
+  "dateOfExport": "2019-05-28T12:30:29.2806408+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Familial hypercholesterolaemia (FH) is characterized by a high cholesterol concentration in the blood.",
+  "lastRevised": "Last revised in February 2019",
+  "terms": [
+    {
+      "code": "D006938",
+      "term": "Hyperlipoproteinemia Type II"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Endocrine and metabolic"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "59e721ed-4e99-4b3e-8451-a8da54e58c2d",
+      "parentId": null,
+      "rootId": "59e721ed-4e99-4b3e-8451-a8da54e58c2d",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c9f9897a-fa24-4644-8ebd-532ac64370a0 --><h1>Hypercholesterolaemia - familial:&nbsp;Summary</h1><!-- end field c9f9897a-fa24-4644-8ebd-532ac64370a0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of this topic. Based on an update of the National Institute for Health and Care (NICE) guideline Familial hypercholesterolaemia: identification and management NICE, 2017, the following key changes have been made to this CKS topic:"
+    }
+  ]
+}

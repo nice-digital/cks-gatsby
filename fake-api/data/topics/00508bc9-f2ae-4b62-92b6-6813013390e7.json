@@ -1,0 +1,47 @@
+{
+  "topicName": "Sleep disorders - shift work and jet lag",
+  "topicId": "00508bc9-f2ae-4b62-92b6-6813013390e7",
+  "exportId": "d9cfc0ef-b604-4f27-9f4c-aa8e00b792d1",
+  "dataId": "bc28069e-d9b1-4ea4-a32d-aa9500ebd1cf",
+  "number": 2,
+  "dateOfExport": "2019-07-25T14:18:34.5630994+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Shift work disorder and jet lag are both circadian rhythm sleep disorders (CRSDs).",
+  "lastRevised": "Last revised in February&nbsp;2019",
+  "terms": [
+    {
+      "code": "D020178",
+      "term": "Sleep Disorders, Circadian Rhythm"
+    },
+    {
+      "code": "D020179",
+      "term": "Jet Lag Syndrome"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "73220e4d-b489-41cc-869e-9efa5ce9718a",
+      "parentId": null,
+      "rootId": "73220e4d-b489-41cc-869e-9efa5ce9718a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field fbddde63-902e-486e-97f8-1893de838b25 --><h1>Sleep disorders - shift work and jet lag:&nbsp;Summary</h1><!-- end field fbddde63-902e-486e-97f8-1893de838b25 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has been updated in line with recent evidence in the literature. A new Complications node has been created in the Background information section."
+    }
+  ]
+}

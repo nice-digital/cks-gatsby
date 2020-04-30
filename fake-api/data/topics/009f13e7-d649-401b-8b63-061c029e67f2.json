@@ -1,0 +1,43 @@
+{
+  "topicName": "Otitis media - acute",
+  "topicId": "009f13e7-d649-401b-8b63-061c029e67f2",
+  "exportId": "f690d806-ec7e-4e10-8d8a-aa8e00b792d1",
+  "dataId": "91d1a88d-3ea1-4d9b-9960-aa9500ec4885",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:20:15.8577167+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Acute otitis media (AOM) is inflammation in the middle ear associated with an effusion, and accompanied by the rapid onset of ear infection",
+  "lastRevised": "Last revised in July 2018",
+  "terms": [
+    {
+      "code": "D010033",
+      "term": "Otitis Media"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Ear, nose and throat"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c0fde562-cd6b-4779-8cd1-f988b737303c",
+      "parentId": null,
+      "rootId": "c0fde562-cd6b-4779-8cd1-f988b737303c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 703e1ab8-40d7-46c0-a16f-19305c74e2ba --><h1>Otitis media - acute:&nbsp;Summary</h1><!-- end field 703e1ab8-40d7-46c0-a16f-19305c74e2ba -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-07-01T00:00:00+01:00",
+      "dateTo": "2018-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to the recommendations have been made. However, recommendations in the Acute otitis media - initial presentation and Persistent acute otitis media - treatment failure scenarios have been updated in line with the 2018 NICE guideline Otitis media (acute): antimicrobial prescribing, and individual prescribing information sections for the recommended antibiotics have been added."
+    }
+  ]
+}

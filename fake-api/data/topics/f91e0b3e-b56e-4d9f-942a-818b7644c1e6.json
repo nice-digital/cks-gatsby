@@ -1,0 +1,45 @@
+{
+  "topicName": "Hand foot and mouth disease",
+  "topicId": "f91e0b3e-b56e-4d9f-942a-818b7644c1e6",
+  "exportId": "513c100a-bd78-4f75-8a96-aa16000365dd",
+  "dataId": "6d7fe48e-3855-448a-b72b-aa170080c974",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:48:53.4530839+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Hand, foot, and mouth disease (HFMD) is an acute viral illness characterized by vesicular eruptions in the mouth and papulovesicular skin lesions",
+  "lastRevised": "Last revised in November 2015",
+  "terms": [
+    {
+      "code": "D019226",
+      "term": "Oral Ulcer"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations",
+    "Oral health",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "63191fc4-ec10-4c0c-8a1c-1e6dd33d863e",
+      "parentId": null,
+      "rootId": "63191fc4-ec10-4c0c-8a1c-1e6dd33d863e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 0509c7af-8ad0-40d4-88ed-2759f6c61e6e --><h1>Hand foot and mouth disease: Summary</h1><!-- end field 0509c7af-8ad0-40d4-88ed-2759f6c61e6e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-10-01T00:00:00+01:00",
+      "dateTo": "2015-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

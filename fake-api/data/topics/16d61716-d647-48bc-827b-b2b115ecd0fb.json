@@ -1,0 +1,75 @@
+{
+  "topicName": "Immunizations - travel",
+  "topicId": "16d61716-d647-48bc-827b-b2b115ecd0fb",
+  "exportId": "ddd4e250-a051-40aa-8f46-aa8e00b792d1",
+  "dataId": "759d26cb-b8c7-45f1-9459-aa9500ec54fe",
+  "number": 5,
+  "dateOfExport": "2019-07-25T14:20:26.5006154+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Many diseases are endemic in many regions of the world. All travellers should be up to date with routinely recommended vaccinations",
+  "lastRevised": "Last revised in May 2019",
+  "terms": [
+    {
+      "code": "D014195",
+      "term": "Travel"
+    },
+    {
+      "code": "D014611",
+      "term": "Vaccination"
+    },
+    {
+      "code": "D007114",
+      "term": "Immunization"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Immunizations",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6a2b03bd-35e8-45ca-8098-b0883b31d49d",
+      "parentId": null,
+      "rootId": "6a2b03bd-35e8-45ca-8098-b0883b31d49d",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a19d0af1-af68-405c-8d5e-a8850fa1798b --><h1>Immunizations - travel:&nbsp;Summary</h1><!-- end field a19d0af1-af68-405c-8d5e-a8850fa1798b -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The MHRA have received 2 reports of fatal adverse reactions to the yellow fever vaccine (Stamaril). Due to an increased risk of life-threatening reactions, they advise that the vaccine must not be given to anyone with a medical history of thymus dysfunction or who is immunosuppressed."
+    },
+    {
+      "dateFrom": "2018-02-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Product removed from topic as no longer available."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information that the validity of the yellow fever vaccination certificate is now lifelong has been added to this topic WHO, 2016."
+    },
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "A typographical error has been corrected in Table 1, in the background information section of this topic."
+    },
+    {
+      "dateFrom": "2016-08-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "topicName": "Hyponatraemia",
+  "topicId": "560440de-b2ae-4ea7-9fb2-a701015e193f",
+  "exportId": "5b682ad5-015b-45c6-b8dc-aa5700e2147d",
+  "dataId": "a65d45c7-b626-415e-917e-aa5b00cd99c2",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:28:32.705904+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Hyponatraemia is defined as a serum sodium concentration of less than 135 mmol/L. It is the most commonly encountered electrolyte disorder",
+  "lastRevised": "Last revised in March 2015",
+  "terms": [
+    {
+      "code": "D007010",
+      "term": "Hyponatremia"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d939f520-bf63-4d26-84c6-a701015e2820",
+      "parentId": null,
+      "rootId": "d939f520-bf63-4d26-84c6-a701015e2820",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d96cd269-4a50-4c12-9a82-a701015e2820 --><h1>Hyponatraemia: Summary</h1><!-- end field d96cd269-4a50-4c12-9a82-a701015e2820 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-01-01T00:00:00+00:00",
+      "dateTo": "2015-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2015 to identify evidence-based guidelines, UK policy, systematic reviews and key randomized controlled trials published since the last version of this topic. Recommendations have been updated to include a change in the reference values for the classification of biochemical severity of hyponatraemia."
+    }
+  ]
+}

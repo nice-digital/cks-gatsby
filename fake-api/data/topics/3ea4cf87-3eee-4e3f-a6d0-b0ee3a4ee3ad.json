@@ -1,0 +1,49 @@
+{
+  "topicName": "Parvovirus B19 infection",
+  "topicId": "3ea4cf87-3eee-4e3f-a6d0-b0ee3a4ee3ad",
+  "exportId": "94b95fb3-c5f1-4a65-8ee2-aa8600be191d",
+  "dataId": "a690062e-3a1f-4b7c-bea8-aa8600c300be",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:49:57.5864551+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Parvovirus B19 infection may cause slapped cheek syndrome (erythema infectiosum or fifth disease), commonly in school-age children.",
+  "lastRevised": "Last revised in February 2017",
+  "terms": [
+    {
+      "code": "D016731",
+      "term": "Erythema Infectiosum"
+    },
+    {
+      "code": "D016732",
+      "term": "Parvovirus B19, Human"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations",
+    "Pregnancy",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "8cced4c1-a8cc-4574-9c48-7579f391e8a5",
+      "parentId": null,
+      "rootId": "8cced4c1-a8cc-4574-9c48-7579f391e8a5",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 7d3ab669-d1a3-483a-a718-14b39cd70af5 --><h1>Parvovirus B19 infection:&nbsp;Summary</h1><!-- end field 7d3ab669-d1a3-483a-a718-14b39cd70af5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-02-28T23:59:59+00:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in January 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The name of the topic has been changed to Parvovirus B19 infection (slapped cheek syndrome). The topic has undergone significant restructuring of the Scenarios. No major changes to recommendations have been made."
+    }
+  ]
+}

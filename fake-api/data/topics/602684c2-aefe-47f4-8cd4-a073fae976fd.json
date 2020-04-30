@@ -1,0 +1,48 @@
+{
+  "topicName": "Haemorrhoids",
+  "topicId": "602684c2-aefe-47f4-8cd4-a073fae976fd",
+  "exportId": "b0ce453b-31a8-4b2c-8456-aa16011b9d11",
+  "dataId": "832274cb-6341-4f09-a1ca-aa17007f2507",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:42:53.8998294+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Haemorrhoids (also known as piles) are abnormally swollen vascular mucosal cushions that are present in the anal canal.",
+  "lastRevised": "Last revised in December 2016",
+  "terms": [
+    {
+      "code": "D006484",
+      "term": "Hemorrhoids"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "84ba0c29-f18b-4375-9501-82bf7221585b",
+      "parentId": null,
+      "rootId": "84ba0c29-f18b-4375-9501-82bf7221585b",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 1b4460a3-6f0b-4903-9f4e-ed234d746dea --><h1>Haemorrhoids: Summary</h1><!-- end field 1b4460a3-6f0b-4903-9f4e-ed234d746dea -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The advice to give people about adverse effects of topical preparations has been updated in line with the manufacturer&#39;s Summary of Product Characteristics."
+    },
+    {
+      "dateFrom": "2016-06-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No changes to clinical recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

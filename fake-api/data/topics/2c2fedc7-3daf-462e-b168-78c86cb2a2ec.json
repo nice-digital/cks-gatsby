@@ -1,0 +1,42 @@
+{
+  "topicName": "Irritable bowel syndrome",
+  "topicId": "2c2fedc7-3daf-462e-b168-78c86cb2a2ec",
+  "exportId": "c1539814-152a-46ab-b75f-aa8600be191d",
+  "dataId": "49badd36-388d-4193-933c-aa8600c398df",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:52:07.8394421+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Irritable bowel syndrome (IBS) is a chronic, relapsing, and often lifelong disorder of the lower gastrointestinal tract, with no structural cause",
+  "lastRevised": "Last revised in October 2017",
+  "terms": [
+    {
+      "code": "D043183",
+      "term": "Irritable Bowel Syndrome"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1baa5dae-c1d9-42ce-ac59-27de61b0909c",
+      "parentId": null,
+      "rootId": "1baa5dae-c1d9-42ce-ac59-27de61b0909c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 18b90d26-8b01-4974-a2d3-7cc779fefbd0 --><h1>Irritable bowel syndrome:&nbsp;Summary</h1><!-- end field 18b90d26-8b01-4974-a2d3-7cc779fefbd0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone minor restructuring. The recommendations on the diagnosis and management of irritable bowel syndrome have been amended in line with current evidence, including the addition of linaclotide as a drug treatment option. Prescribing information has been expanded and updated."
+    }
+  ]
+}

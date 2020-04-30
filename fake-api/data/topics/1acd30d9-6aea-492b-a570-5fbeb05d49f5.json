@@ -1,0 +1,63 @@
+{
+  "topicName": "Opioid dependence",
+  "topicId": "1acd30d9-6aea-492b-a570-5fbeb05d49f5",
+  "exportId": "f0fbc755-4934-4d59-a61b-aa5700e2147d",
+  "dataId": "53572a9b-57db-4803-8628-aa5b00cda46c",
+  "number": 6,
+  "dateOfExport": "2019-05-28T12:28:42.2224286+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "All opioids have dependence potential to varying degrees. Heroin  has the greatest potential for dependency. It can develop within 2–10 days of use.",
+  "lastRevised": "Last revised in April 2017",
+  "terms": [
+    {
+      "code": "D006556",
+      "term": "Heroin Dependence"
+    },
+    {
+      "code": "D009021",
+      "term": "Morphine Dependence"
+    },
+    {
+      "code": "D009293",
+      "term": "Opioid-Related Disorders"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "2d4a34e3-2cd5-4f3b-a10c-2ffa34612816",
+      "parentId": null,
+      "rootId": "2d4a34e3-2cd5-4f3b-a10c-2ffa34612816",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 112a7db8-368d-4981-8a3a-2708e31cf3b6 --><h1>Opioid dependence:&nbsp;Summary</h1><!-- end field 112a7db8-368d-4981-8a3a-2708e31cf3b6 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-04-01T00:00:00+01:00",
+      "dateTo": "2017-04-30T23:59:59+01:00",
+      "title": "Revised",
+      "body": "Updated structure, no changes have been made to the recommendations."
+    },
+    {
+      "dateFrom": "2015-04-01T00:00:00+01:00",
+      "dateTo": "2015-04-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Update to the text to reflect a new law on drugs and impaired driving DVLA, 2015."
+    },
+    {
+      "dateFrom": "2013-10-01T00:00:00+01:00",
+      "dateTo": "2014-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2013 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. New sections have been written on recovery-orientated drug treatment, the QTc interval, detection of drugs in the urine, and the management of acute and chronic pain. Minor changes have been made to the recommendations. Methadone is now recommended for detoxification from street heroin."
+    }
+  ]
+}

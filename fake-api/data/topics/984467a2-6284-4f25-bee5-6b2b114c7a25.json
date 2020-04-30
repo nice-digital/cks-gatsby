@@ -1,0 +1,44 @@
+{
+  "topicName": "Falls - risk assessment",
+  "topicId": "984467a2-6284-4f25-bee5-6b2b114c7a25",
+  "exportId": "b411eb15-f991-4ef4-806d-aa16000365dd",
+  "dataId": "543371a0-2b00-4d36-bc34-aa17007fe01e",
+  "number": 1,
+  "dateOfExport": "2019-03-21T07:45:33.8150669+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "A fall is defined as an unintentional/unexpected loss of balance resulting in coming to rest on the floor, the ground, or an object below knee level.",
+  "lastRevised": "Last revised in January 2019",
+  "terms": [
+    {
+      "code": "D000058",
+      "term": "Accidental Falls"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Injuries",
+    "Musculoskeletal",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "547b5ab4-0e8b-48e2-90c1-b925bc3db239",
+      "parentId": null,
+      "rootId": "547b5ab4-0e8b-48e2-90c1-b925bc3db239",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 4b7ede68-2ff3-40ae-b3e8-d5a415a3ccf1 --><h1>Falls - risk assessment: Summary</h1><!-- end field 4b7ede68-2ff3-40ae-b3e8-d5a415a3ccf1 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

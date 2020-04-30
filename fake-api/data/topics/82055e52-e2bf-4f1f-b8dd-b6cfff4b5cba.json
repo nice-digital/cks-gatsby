@@ -1,0 +1,47 @@
+{
+  "topicName": "GORD in children",
+  "topicId": "82055e52-e2bf-4f1f-b8dd-b6cfff4b5cba",
+  "exportId": "57db2511-65d1-4c41-82bc-aa4000d93087",
+  "dataId": "a75c7b3a-60e3-4216-b08c-aa4000dda567",
+  "number": 3,
+  "dateOfExport": "2019-05-01T13:26:58.3208712+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Gastro-oesophageal reflux disease (GORD) in children is the presence of troublesome symptoms (for example, discomfort or pain)",
+  "lastRevised": "Last revised in February 2019",
+  "terms": [
+    {
+      "code": "D007223",
+      "term": "Infant"
+    },
+    {
+      "code": "D005764",
+      "term": "Gastroesophageal Reflux"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1803d75a-f61a-40a2-aa2d-54cf75582f2c",
+      "parentId": null,
+      "rootId": "1803d75a-f61a-40a2-aa2d-54cf75582f2c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a897b611-a204-40da-b4d1-fec2d4971d34 --><h1>GORD in children:&nbsp;Summary</h1><!-- end field a897b611-a204-40da-b4d1-fec2d4971d34 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

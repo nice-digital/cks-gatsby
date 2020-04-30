@@ -1,0 +1,43 @@
+{
+  "topicName": "Obesity",
+  "topicId": "ce3a3429-b3d0-4c54-8025-abb6e33dff88",
+  "exportId": "753ea3cf-3395-4cf0-8bc3-aa8600be191d",
+  "dataId": "367c8acb-6f23-4a09-8b82-aa8600c3ae62",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:52:26.1956549+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "The terms 'overweight' and 'obesity' are used to describe excess body fat.",
+  "lastRevised": "Last revised in December 2017",
+  "terms": [
+    {
+      "code": "D009765",
+      "term": "Obesity"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3db47cd7-f53b-48f0-aa34-f401594f230e",
+      "parentId": null,
+      "rootId": "3db47cd7-f53b-48f0-aa34-f401594f230e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 3e3a27bf-d6f0-4db1-8e42-35af6d72d226 --><h1>Obesity:&nbsp;Summary</h1><!-- end field 3e3a27bf-d6f0-4db1-8e42-35af6d72d226 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-12-01T00:00:00+00:00",
+      "dateTo": "2017-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. The recommendations in this CKS topic have been updated in line with the National Institute for Health and Care Excellence (NICE) guideline Obesity: identification, assessment and management NICE, 2014, which replaces section 1.2 in the NICE guideline on Obesity Prevention NICE, 2006. The topic has also been restructured."
+    }
+  ]
+}

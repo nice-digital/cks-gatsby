@@ -1,0 +1,49 @@
+{
+  "topicName": "Prostate cancer",
+  "topicId": "1506c25e-8998-42e4-82c0-6b38dc3a1e9f",
+  "exportId": "b291b035-fd42-442e-b709-aa5700e2147d",
+  "dataId": "868a36bb-cc92-41b3-8b68-aa5b00cd7d7f",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:28:09.011777+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Prostate cancer is a malignant tumour of the prostate. Almost all cancers of the prostate (95%) are adenocarcinomas.",
+  "lastRevised": "Last revised in October 2017",
+  "terms": [
+    {
+      "code": "D011471",
+      "term": "Prostatic Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Kidney disease and urology",
+    "Men's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a1bb49fe-b261-4b26-a2ca-bd60e667c21b",
+      "parentId": null,
+      "rootId": "a1bb49fe-b261-4b26-a2ca-bd60e667c21b",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field dfc71ad8-97f6-44cb-83fe-9fcaa6f6ca4f --><h1>Prostate cancer:&nbsp;Summary</h1><!-- end field dfc71ad8-97f6-44cb-83fe-9fcaa6f6ca4f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-10-01T00:00:00+01:00",
+      "dateTo": "2017-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Changes made to age ranges in interpreting PSA results section to reflect PHE and UK National Screening Committee guidance."
+    },
+    {
+      "dateFrom": "2017-07-01T00:00:00+01:00",
+      "dateTo": "2017-08-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Structural changes have been made to this topic, and recommendations on prostate-specific antigen (PSA) testing and treatments for prostate cancer have been updated in line with the latest National Institute for Health and Care Excellence (NICE) guidance."
+    }
+  ]
+}

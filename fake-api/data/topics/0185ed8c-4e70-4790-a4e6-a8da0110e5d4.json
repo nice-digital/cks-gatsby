@@ -1,0 +1,40 @@
+{
+  "topicName": "Multimorbidity",
+  "topicId": "0185ed8c-4e70-4790-a4e6-a8da0110e5d4",
+  "exportId": "51358673-e247-4509-b885-aa16011b9d11",
+  "dataId": "78646cbb-d2dc-4937-bdd4-aa17007fb1d5",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:44:54.5296961+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Multimorbidity is two or more long-term health conditions",
+  "lastRevised": "Last revised in May 2018",
+  "terms": [
+    {
+      "code": "D000076322",
+      "term": "Multimorbidity"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "08a93539-9e74-49e6-989d-a8da0111079a",
+      "parentId": null,
+      "rootId": "08a93539-9e74-49e6-989d-a8da0111079a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 364b35c9-82e5-4693-bae1-a8da0111079a --><h1>Multimorbidity: Summary</h1><!-- end field 364b35c9-82e5-4693-bae1-a8da0111079a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "A literature search was conducted in April 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials. The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

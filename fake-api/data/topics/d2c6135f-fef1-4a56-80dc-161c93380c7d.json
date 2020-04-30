@@ -1,0 +1,47 @@
+{
+  "topicName": "Fungal nail infection",
+  "topicId": "d2c6135f-fef1-4a56-80dc-161c93380c7d",
+  "exportId": "6d51ff9f-0575-4265-b6b0-aa8600be191d",
+  "dataId": "df45f5f1-74b3-4d5b-b904-aa8600c38a21",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:51:55.257789+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Fungal nail infection (onychomycosis) can involve the nail plate, nail bed, and/or the root of the nail. It affects toenails more frequently than the",
+  "lastRevised": "Last revised in March 2018",
+  "terms": [
+    {
+      "code": "D009260",
+      "term": "Nail Diseases"
+    },
+    {
+      "code": "D014009",
+      "term": "Onychomycosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f4660b91-5760-4ccc-9024-a76eed10b9b9",
+      "parentId": null,
+      "rootId": "f4660b91-5760-4ccc-9024-a76eed10b9b9",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e1fc2bfb-40c3-4b36-b77b-51c398690513 --><h1>Fungal nail infection: Summary</h1><!-- end field e1fc2bfb-40c3-4b36-b77b-51c398690513 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-03-01T00:00:00+00:00",
+      "dateTo": "2018-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. Complications and Prognosis nodes have been added to the Background information section. The management recommendations have been updated in line with the current literature. The Prescribing Information section has been updated and expanded in line with current CKS style."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "topicName": "Bronchiectasis",
+  "topicId": "26fab339-e333-44ec-a481-de87a29052f3",
+  "exportId": "145965f4-b898-48fb-a5ab-aa16000365dd",
+  "dataId": "43da77e4-dfce-4119-9dd3-aa170082b219",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:55:49.9041348+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Bronchiectasis is a permanent dilatation and thickening of the airways associated with chronic cough, sputum production, bacterial colonization",
+  "lastRevised": "Last revised in&nbsp;December 2018",
+  "terms": [
+    {
+      "code": "D001987",
+      "term": "Bronchiectasis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a60c32be-3309-4d4c-94a5-31c63c9037fd",
+      "parentId": null,
+      "rootId": "a60c32be-3309-4d4c-94a5-31c63c9037fd",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 78e30314-ec4e-4a92-b455-4ea244046154 --><h1>Bronchiectasis: Summary</h1><!-- end field 78e30314-ec4e-4a92-b455-4ea244046154 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-12-01T00:00:00+00:00",
+      "dateTo": "2018-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Topic has been updated in line with newly published guidelines; NICE guideline Bronchiectasis (non-cystic fibrosis), acute exacerbation: antimicrobial prescribing December 2018 and Updated BTS Adult Bronchiectasis Guideline 2018: a multidisciplinary approach to comprehensive care December 2018. Changes have been made to diagnosis, management and antibiotic choice sections."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The dose of clarithromycin for people with severe renal impairment has been clarified, in line with the manufacturer&#39;s Summary of Product Characteristics ABPI, 2016."
+    },
+    {
+      "dateFrom": "2016-01-01T00:00:00+00:00",
+      "dateTo": "2016-02-29T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomised controlled trials (RCTs) published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

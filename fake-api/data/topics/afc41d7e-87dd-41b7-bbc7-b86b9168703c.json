@@ -1,0 +1,50 @@
+{
+  "topicName": "Bacterial vaginosis",
+  "topicId": "afc41d7e-87dd-41b7-bbc7-b86b9168703c",
+  "exportId": "d31723db-3526-4bec-b4e3-aa16000365dd",
+  "dataId": "547ccaaf-1292-499f-96ff-aa17007e44e8",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:39:42.9133047+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Bacterial vaginosis (BV) is characterized by an overgrowth of predominantly anaerobic organisms and a loss of lactobacilli.",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D016585",
+      "term": "Vaginosis, Bacterial"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Sexual health",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "261c78b3-a663-43e3-afe6-525bf7e7566e",
+      "parentId": null,
+      "rootId": "261c78b3-a663-43e3-afe6-525bf7e7566e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b5ac8efe-8224-4f59-91e5-f005f7d85ec8 --><h1>Bacterial vaginosis:&nbsp;Summary</h1><!-- end field b5ac8efe-8224-4f59-91e5-f005f7d85ec8 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2018-07-01T00:00:00+01:00",
+      "dateTo": "2018-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of this topic. No major changes to recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

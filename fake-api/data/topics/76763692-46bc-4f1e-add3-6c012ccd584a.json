@@ -1,0 +1,43 @@
+{
+  "topicName": "Pityriasis rosea",
+  "topicId": "76763692-46bc-4f1e-add3-6c012ccd584a",
+  "exportId": "afc0e4da-c19d-4689-a2a9-aa16000365dd",
+  "dataId": "eb264846-a180-464c-bae9-aa1700824bd5",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:22.8639398+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Pityriasis rosea is a skin rash that is characterized by distinctive scaly, erythematous lesions.",
+  "lastRevised": "Last revised in March 2016",
+  "terms": [
+    {
+      "code": "D017515",
+      "term": "Pityriasis Rosea"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "63e08b77-43da-4a24-b50b-8d267c026301",
+      "parentId": null,
+      "rootId": "63e08b77-43da-4a24-b50b-8d267c026301",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 6497af8a-783b-4fb9-85d1-4eb0db2ca83f --><h1>Pityriasis rosea: Summary</h1><!-- end field 6497af8a-783b-4fb9-85d1-4eb0db2ca83f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-02-01T00:00:00+00:00",
+      "dateTo": "2016-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No changes to clinical recommendations have been made."
+    }
+  ]
+}

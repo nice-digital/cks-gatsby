@@ -1,0 +1,56 @@
+{
+  "topicName": "Gingivitis and periodontitis",
+  "topicId": "b5c1d99b-f98a-4932-aced-7f81b69fb4ca",
+  "exportId": "217bdcb4-dec6-4b6b-a557-aa16000365dd",
+  "dataId": "e20343ec-365f-45f9-87f5-aa170082b8a7",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:55:55.3233104+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Gingivitis is inflammation of the gums.Acute necrotizing ulcerative gingivitis (ANUG) is an acute, atypical, progressive, painful bacterial infection",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D003773",
+      "term": "Dental Plaque"
+    },
+    {
+      "code": "D010518",
+      "term": "Periodontitis"
+    },
+    {
+      "code": "D005891",
+      "term": "Gingivitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Oral health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3c15f704-bf5a-48d5-b43b-547d84064b65",
+      "parentId": null,
+      "rootId": "3c15f704-bf5a-48d5-b43b-547d84064b65",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 3dd28614-ad07-4b7c-adeb-e565dfab962b --><h1>Gingivitis and periodontitis:&nbsp;Summary</h1><!-- end field 3dd28614-ad07-4b7c-adeb-e565dfab962b -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. There have been changes to clinical recommendations on referral for suspected cancer based on the 2015 National Institute for Health and Care Excellence guideline Suspected cancer: recognition and referral. There have also been minor changes and expansion to the section on oral hygiene measures and the use of systemic antibiotics and mouthwashes for people with plaque-related gingivitis and periodontitis. Structural changes have been made to the topic."
+    }
+  ]
+}

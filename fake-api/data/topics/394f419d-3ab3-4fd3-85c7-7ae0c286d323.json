@@ -1,0 +1,50 @@
+{
+  "topicName": "Obsessive-compulsive disorder",
+  "topicId": "394f419d-3ab3-4fd3-85c7-7ae0c286d323",
+  "exportId": "bea89e34-5f67-493f-bfd0-aa16000365dd",
+  "dataId": "8b50a28f-e519-4697-87d4-aa17007f8511",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:44:16.1177304+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Obsessive-compulsive disorder (OCD) is characterized by recurrent obsessional thoughts or compulsive acts or, commonly, both.",
+  "lastRevised": "Last revised in June&nbsp;2018",
+  "terms": [
+    {
+      "code": "D009770",
+      "term": "Obsessive Behavior"
+    },
+    {
+      "code": "D003192",
+      "term": "Compulsive Behavior"
+    },
+    {
+      "code": "D009771",
+      "term": "Obsessive-Compulsive Disorder"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "b717bce3-6c5e-43ec-b652-68e6e4b86a5f",
+      "parentId": null,
+      "rootId": "b717bce3-6c5e-43ec-b652-68e6e4b86a5f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 8eef789c-ce0a-4401-9bd1-2da48dac98ef --><h1>Obsessive-compulsive disorder: Summary</h1><!-- end field 8eef789c-ce0a-4401-9bd1-2da48dac98ef -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in June 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

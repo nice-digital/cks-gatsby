@@ -1,0 +1,40 @@
+{
+  "topicName": "Learning disabilities",
+  "topicId": "9cc09e0b-a51c-445a-a0f0-a8e200bd3e76",
+  "exportId": "b4fe9917-3b6c-4ed2-ad3d-aa5700e2147d",
+  "dataId": "7aa3a843-82cb-4882-a7dd-aa5b00ce484e",
+  "number": 5,
+  "dateOfExport": "2019-05-28T12:31:03.011111+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Lower intellectual ability and social functioning  < age 18",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D007859",
+      "term": "Learning disorders"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c7336ac7-ff33-4117-ad07-a8e200bd4669",
+      "parentId": null,
+      "rootId": "c7336ac7-ff33-4117-ad07-a8e200bd4669",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a89cca08-24c5-4b6d-b83c-a8e200bd4669 --><h1>Learning disabilities: Summary</h1><!-- end field a89cca08-24c5-4b6d-b83c-a8e200bd4669 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

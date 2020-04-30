@@ -1,0 +1,48 @@
+{
+  "topicName": "Allergic rhinitis",
+  "topicId": "0473d89c-2999-40d1-911f-d265b4bd3942",
+  "exportId": "1bb5c183-6cf1-497e-afba-aa8600be191d",
+  "dataId": "1980c1b5-2f8c-44e2-9af1-aa8600c44fb4",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:54:43.8538964+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Allergic rhinitis is an inflammatory disorder of the nose which occurs when the membranes lining the nose become sensitized to allergens.",
+  "lastRevised": "Last revised in September&nbsp;2018",
+  "terms": [
+    {
+      "code": "D012220",
+      "term": "Rhinitis"
+    },
+    {
+      "code": "D012221",
+      "term": "Rhinitis, Allergic, Perennial"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Allergies",
+    "Ear, nose and throat",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "891fafb1-8f5b-46a3-bf40-7f0ac298a0aa",
+      "parentId": null,
+      "rootId": "891fafb1-8f5b-46a3-bf40-7f0ac298a0aa",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 05c91551-7a71-46b8-9b2c-bb2415d35311 --><h1>Allergic rhinitis:&nbsp;Summary</h1><!-- end field 05c91551-7a71-46b8-9b2c-bb2415d35311 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-07-01T00:00:00+01:00",
+      "dateTo": "2018-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. The Scenarios have been merged into one Scenario, and recommendations in the Management section have been updated in line with current literature. The section on Prescribing information has been updated and expanded."
+    }
+  ]
+}

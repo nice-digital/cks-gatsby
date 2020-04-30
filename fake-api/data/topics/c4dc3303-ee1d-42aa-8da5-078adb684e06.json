@@ -1,0 +1,61 @@
+{
+  "topicName": "Alopecia, androgenetic - male",
+  "topicId": "c4dc3303-ee1d-42aa-8da5-078adb684e06",
+  "exportId": "e840288f-88eb-408a-a9c4-aa8600be191d",
+  "dataId": "766b1f95-a863-487c-b5a6-aa8600c417fc",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:53:56.349725+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Androgenetic alopeciadescribes a distinctive pattern of hair loss, which may occur in genetically predisposed men",
+  "lastRevised": "Last revised in July 2018",
+  "terms": [
+    {
+      "code": "D000505",
+      "term": "Alopecia"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Men's health",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "86d5c694-f449-4c6d-9b6c-6136b91b1b16",
+      "parentId": null,
+      "rootId": "86d5c694-f449-4c6d-9b6c-6136b91b1b16",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 44ec5568-8f9b-4b4a-b6d9-039398d0c83c --><h1>Alopecia, androgenetic - male: Summary</h1><!-- end field 44ec5568-8f9b-4b4a-b6d9-039398d0c83c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-07-01T00:00:00+01:00",
+      "dateTo": "2018-07-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Anxiety has been added as an adverse effect for men taking finasteride."
+    },
+    {
+      "dateFrom": "2017-06-01T00:00:00+01:00",
+      "dateTo": "2017-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Addition to adverse effects section for depression and suicidal thoughts in men taking finasteride."
+    },
+    {
+      "dateFrom": "2017-04-01T00:00:00+01:00",
+      "dateTo": "2017-04-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information on availability of minoxidil foam on FP10 prescription corrected"
+    },
+    {
+      "dateFrom": "2016-05-01T00:00:00+01:00",
+      "dateTo": "2016-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made, although minor restructuring of the topic has been undertaken."
+    }
+  ]
+}

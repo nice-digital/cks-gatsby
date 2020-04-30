@@ -1,0 +1,46 @@
+{
+  "topicName": "Contraception - combined hormonal methods",
+  "topicId": "aac9c264-cad6-4bdb-be6d-48707289f4de",
+  "exportId": "5e598777-8171-43ab-8dd0-aa5400d56bbe",
+  "dataId": "5aaa88b3-43fe-4bfd-a838-aa5b00cdc9c5",
+  "number": 5,
+  "dateOfExport": "2019-05-28T12:29:14.0959677+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "There are three types of combined hormonal contraceptives (CHCs): oral contraceptives, transdermal patch, and vaginal ring.",
+  "lastRevised": "Last revised in January&nbsp;2019",
+  "terms": [
+    {
+      "code": "D003267",
+      "term": "Contraception"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6a99a018-b982-4dec-93cd-17d92701606d",
+      "parentId": null,
+      "rootId": "6a99a018-b982-4dec-93cd-17d92701606d",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 86dff814-e73b-47f8-8a3a-4701656c8d7f --><h1>Contraception - combined hormonal methods: Summary</h1><!-- end field 86dff814-e73b-47f8-8a3a-4701656c8d7f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added to the disadvantages of vaginal rings in line with SPC update - Ring breakage is more common if a woman concomitantly uses intravaginal preparations, including antimycotic, antibiotic and lubricant products. Depressed mood/depression have been added as adverse effects of the combined hormonal contraceptive pill."
+    },
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "The topic has been updated to reflect the latest Faculty of Sexual and Reproductive Healthcare (FSRH) guideline Combined hormonal contraception, including information that there is no health benefit from the seven-day hormone-free interval, women can safely take fewer (or no) hormone-free intervals to avoid monthly bleeds, cramps and other symptoms, if a hormone-free interval is taken, shortening it to four days could potentially reduce the risk of pregnancy if pills, patches or rings are missed, consultations about CHC do not necessarily have to be face-to-face; online CHC provision is possible, at the first consultation, many women can safely be prescribed a one year supply of CHC instead of the current three month supply. The topic has also been updated to include the recommendations in the FSRH guideline Interim FSRH guidance on incorrect use of combined hormonal contraception (December 2018)."
+    }
+  ]
+}

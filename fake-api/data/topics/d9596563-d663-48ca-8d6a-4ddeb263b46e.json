@@ -1,0 +1,50 @@
+{
+  "topicName": "Rheumatoid arthritis",
+  "topicId": "d9596563-d663-48ca-8d6a-4ddeb263b46e",
+  "exportId": "9e273435-28a7-434b-a411-aa16000365dd",
+  "dataId": "8487d442-974a-4622-9049-aa17008264eb",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:44.044439+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Rheumatoid arthritis (RA) is a chronic inflammatory disease.RA typically presents as inflammatory arthritis affecting the small joints of the hands",
+  "lastRevised": "Last revised in January 2019",
+  "terms": [
+    {
+      "code": "D003937",
+      "term": "Diagnosis, Differential"
+    },
+    {
+      "code": "D042241",
+      "term": "Early Diagnosis"
+    },
+    {
+      "code": "D001172",
+      "term": "Arthritis, Rheumatoid"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1adab124-da57-4fc6-acbc-076e8f478cee",
+      "parentId": null,
+      "rootId": "1adab124-da57-4fc6-acbc-076e8f478cee",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 5d086357-acf8-4c97-9672-0664f2660bc9 --><h1>Rheumatoid arthritis:&nbsp;Summary</h1><!-- end field 5d086357-acf8-4c97-9672-0664f2660bc9 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-12-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

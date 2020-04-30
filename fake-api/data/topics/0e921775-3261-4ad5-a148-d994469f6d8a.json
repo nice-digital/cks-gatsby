@@ -1,0 +1,48 @@
+{
+  "topicName": "Haematospermia",
+  "topicId": "0e921775-3261-4ad5-a148-d994469f6d8a",
+  "exportId": "1a9fca17-2791-45e1-a691-aa16000365dd",
+  "dataId": "6eab8b48-d4be-486c-b9f1-aa170082af01",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:55:47.683255+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Haematospermia is the visible presence of blood in the semen.",
+  "lastRevised": "Last revised in December 2016",
+  "terms": [
+    {
+      "code": "D005832",
+      "term": "Genital Diseases, Male"
+    },
+    {
+      "code": "D051516",
+      "term": "Hemospermia"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Kidney disease and urology",
+    "Men's health",
+    "Sexual health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "65cc6911-fd3d-4403-83b3-4b71400b284f",
+      "parentId": null,
+      "rootId": "65cc6911-fd3d-4403-83b3-4b71400b284f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ce2c5aa3-03e8-45c6-8a02-932b5b182ab2 --><h1>Haematospermia: Summary</h1><!-- end field ce2c5aa3-03e8-45c6-8a02-932b5b182ab2 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in November 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There are no major changes to the recommendations."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "topicName": "Heart failure - chronic",
+  "topicId": "fdc42e20-2c4b-45ed-9093-6c2d4bde6e4d",
+  "exportId": "6e146398-ee3f-419f-abe2-aa8600be191d",
+  "dataId": "97f92989-4088-444e-9fbd-aa8600c3ea27",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:53:17.1827588+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Heart failure is a complex syndrome in which the ability of the heart to maintain the circulation of blood",
+  "lastRevised": "Last revised in January 2017",
+  "terms": [
+    {
+      "code": "D018754",
+      "term": "Ventricular Dysfunction"
+    },
+    {
+      "code": "D054143",
+      "term": "Heart Failure, Systolic"
+    },
+    {
+      "code": "D054144",
+      "term": "Heart Failure, Diastolic"
+    },
+    {
+      "code": "D006333",
+      "term": "Heart Failure"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "5eb05804-6345-4912-bd81-17050a7e562a",
+      "parentId": null,
+      "rootId": "5eb05804-6345-4912-bd81-17050a7e562a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 7e3b0da4-3ca1-4d1d-a725-03852fb2a829 --><h1>Heart failure - chronic: Summary</h1><!-- end field 7e3b0da4-3ca1-4d1d-a725-03852fb2a829 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "The topic has been updated to include recommendations from the Scottish Intercollegiate Guidelines Network (SIGN) guideline Management of chronic heart failure SIGN, 2016."
+    }
+  ]
+}

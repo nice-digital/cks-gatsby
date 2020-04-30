@@ -1,0 +1,43 @@
+{
+  "topicName": "Dupuytren's disease",
+  "topicId": "d935a118-deeb-4e21-aaf8-586388507f5b",
+  "exportId": "0822dfb3-e8b3-4fcd-a95f-aa16000365dd",
+  "dataId": "7baa8a8a-3fa6-4afc-aed8-aa17007d49ba",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:36:08.8360427+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Dupuytren's disease is a benign, progressive fibroproliferative condition of the hand. It causes the bands of connective tissue in the palm to thicken",
+  "lastRevised": "Last revised in November 2015",
+  "terms": [
+    {
+      "code": "D004387",
+      "term": "Dupuytren Contracture"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "fc6262cf-0036-4efe-a145-3c664bc0e396",
+      "parentId": null,
+      "rootId": "fc6262cf-0036-4efe-a145-3c664bc0e396",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e154d46d-abb5-44e2-bde3-e0924f60e89d --><h1>Dupuytren&#39;s disease: Summary</h1><!-- end field e154d46d-abb5-44e2-bde3-e0924f60e89d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-11-01T00:00:00+00:00",
+      "dateTo": "2015-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There are no major changes to the recommendations."
+    }
+  ]
+}

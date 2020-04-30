@@ -1,0 +1,56 @@
+{
+  "topicName": "Contraception - emergency",
+  "topicId": "9cd56dfa-04c2-427b-b19d-f31d21101fcf",
+  "exportId": "547da4c7-ea9e-468e-8e4a-aa16000365dd",
+  "dataId": "b0bfca8e-8ed0-4708-8b0a-aa170080d36c",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:49:00.707849+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Emergency contraception (EC) is an intervention aimed at preventing unintended pregnancy after unprotected sexual intercourse (UPSI) or contraceptive",
+  "lastRevised": "Last revised in February&nbsp;2017",
+  "terms": [
+    {
+      "code": "D044363",
+      "term": "Contraception, Postcoital"
+    },
+    {
+      "code": "D003267",
+      "term": "Contraception"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7e40eb95-329e-46ac-ba3a-d2134c3f5963",
+      "parentId": null,
+      "rootId": "7e40eb95-329e-46ac-ba3a-d2134c3f5963",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 6f5d1eaf-c224-4807-8348-d5c819e233db --><h1>Contraception - emergency: Summary</h1><!-- end field 6f5d1eaf-c224-4807-8348-d5c819e233db -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-02-01T00:00:00+00:00",
+      "dateTo": "2017-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information on drug interactions has been updated in line with the Faculty of Sexual and Reproductive Healthcare (FSRH) guideline Drug interactions with hormonal contraception FSRH, 2017."
+    },
+    {
+      "dateFrom": "2016-10-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Update to SPC for Levonelle1500 microgram tablet to add avoidance of breastfeeding for a minimum of 8 hours following administration."
+    },
+    {
+      "dateFrom": "2016-04-01T00:00:00+01:00",
+      "dateTo": "2016-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Minor structural changes have been made."
+    }
+  ]
+}

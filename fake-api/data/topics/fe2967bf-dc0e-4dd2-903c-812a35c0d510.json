@@ -1,0 +1,64 @@
+{
+  "topicName": "Corticosteroids - topical (skin), nose, and eyes",
+  "topicId": "fe2967bf-dc0e-4dd2-903c-812a35c0d510",
+  "exportId": "e10fdf73-6239-4ff9-97ef-aa16000365dd",
+  "dataId": "09d2a30e-f0fc-41fc-be9f-aa170081724e",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:51:16.639829+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Corticosteroids are synthetic analogues of the natural hormones that are produced by the adrenal cortex.",
+  "lastRevised": "Last revised in November 2018",
+  "terms": [
+    {
+      "code": "D000305",
+      "term": "Adrenal Cortex Hormones"
+    },
+    {
+      "code": "D000287",
+      "term": "Administration, Topical"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "36b3035d-87cd-450b-8733-54f230e70eb0",
+      "parentId": null,
+      "rootId": "36b3035d-87cd-450b-8733-54f230e70eb0",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ae28b1e3-5331-4ab0-8977-0cafee4c05b2 --><h1>Corticosteroids - topical (skin), nose, and eyes:&nbsp;Summary</h1><!-- end field ae28b1e3-5331-4ab0-8977-0cafee4c05b2 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-11-01T00:00:00+00:00",
+      "dateTo": "2018-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Strengths and formulations updated in Table 2. Topical corticosteroids listed by potency class."
+    },
+    {
+      "dateFrom": "2017-08-01T00:00:00+01:00",
+      "dateTo": "2017-08-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added regarding adverse effects associated with oral corticosteroids according to updates to the manufacturer&#39;s summary of product characteristics."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information that any of the systemic adverse effects associated with oral corticosteroids could also occur with topical corticosteroids, has been added to this topic."
+    },
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2015-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last version of this topic. There have been no major changes to the recommendations."
+    }
+  ]
+}

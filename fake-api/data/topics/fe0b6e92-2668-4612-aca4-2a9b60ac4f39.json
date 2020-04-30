@@ -1,0 +1,43 @@
+{
+  "topicName": "Halitosis",
+  "topicId": "fe0b6e92-2668-4612-aca4-2a9b60ac4f39",
+  "exportId": "29c4dea7-32bd-4bbc-9a17-aa16000365dd",
+  "dataId": "bc0bc606-f051-4c9c-b6e6-aa170081a609",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:52:01.2609516+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Halitosis (bad breath) is a general term that describes an unpleasant odour in the breath, regardless of the cause of the odour.",
+  "lastRevised": "Last revised in November 2014",
+  "terms": [
+    {
+      "code": "D006209",
+      "term": "Halitosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal",
+    "Oral health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "2797ce29-94e4-4879-8722-0b2357456073",
+      "parentId": null,
+      "rootId": "2797ce29-94e4-4879-8722-0b2357456073",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 50bbb6b4-0935-48aa-baa1-2c3dc21dedf6 --><h1>Halitosis: Summary</h1><!-- end field 50bbb6b4-0935-48aa-baa1-2c3dc21dedf6 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-08-01T00:00:00+01:00",
+      "dateTo": "2014-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence. No significant changes have been made to the recommendations."
+    }
+  ]
+}

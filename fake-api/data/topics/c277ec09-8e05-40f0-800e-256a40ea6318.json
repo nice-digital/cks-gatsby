@@ -1,0 +1,40 @@
+{
+  "topicName": "Analgesia - mild-to-moderate pain",
+  "topicId": "c277ec09-8e05-40f0-800e-256a40ea6318",
+  "exportId": "5a0fab6f-c87e-4417-8d91-aa16000365dd",
+  "dataId": "edb131d8-cacf-4665-aa24-aa170080d917",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:49:06.0371855+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "For adults, a stepwise strategy for managing mild-to-moderate pain is recommended",
+  "lastRevised": "Last revised in September 2015",
+  "terms": [
+    {
+      "code": "D000698",
+      "term": "Analgesia"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "301d5456-06df-4ae2-ae5e-87f8280ff075",
+      "parentId": null,
+      "rootId": "301d5456-06df-4ae2-ae5e-87f8280ff075",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 1439681c-9fa6-49b5-98b8-d5b082d1af2d --><h1>Analgesia - mild-to-moderate pain:&nbsp;Summary</h1><!-- end field 1439681c-9fa6-49b5-98b8-d5b082d1af2d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2015-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last version of this topic. There have been no major changes to the recommendations. Prescribing information on nonsteroidal anti-inflammatory drugs (NSAIDs) has been removed as there is a separate CKS topic on NSAIDs - prescribing issues."
+    }
+  ]
+}

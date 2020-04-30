@@ -1,0 +1,48 @@
+{
+  "topicName": "Haematological cancers - recognition and referral",
+  "topicId": "efd78d5c-f39b-47aa-a99a-712fcd440511",
+  "exportId": "2e2b7a97-b928-4cd4-b884-aa16000365dd",
+  "dataId": "de192a83-7384-4d11-9d7d-aa17007e9b1c",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:40:56.4582216+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Leukaemia Symptoms include pallor, bruising and infection.",
+  "lastRevised": "Last revised in November 2016",
+  "terms": [
+    {
+      "code": "D019337",
+      "term": "Hematologic Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "82e5293f-fe92-4437-a1f4-f88c18faee54",
+      "parentId": null,
+      "rootId": "82e5293f-fe92-4437-a1f4-f88c18faee54",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e674baf8-31fb-43bb-bf7e-a08aa6334159 --><h1>Haematological cancers - recognition and referral:&nbsp;Summary</h1><!-- end field e674baf8-31fb-43bb-bf7e-a08aa6334159 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The National Institute for Health and Care Excellence (NICE) quality standards for suspected cancer have been added to this topic."
+    },
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "This topic is a direct implementation of the National Institute for Health and Care Excellence guideline Suspected cancer: recognition and referral NICE, 2015. This CKS topic replaces the former topic on Haematological malignancy - suspected."
+    }
+  ]
+}

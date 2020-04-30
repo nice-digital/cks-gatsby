@@ -1,0 +1,44 @@
+{
+  "topicName": "Blackouts",
+  "topicId": "dfaf6dc0-3eb9-4cb8-8e39-a8e200a549d5",
+  "exportId": "63afe13b-a95b-4620-83a8-aa8600be191d",
+  "dataId": "661782bf-b945-436c-9f2d-aa8600c30184",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:49:59.6845722+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "A blackout is a transient loss of consciousness.",
+  "lastRevised": "Last revised in November 2018",
+  "terms": [
+    {
+      "code": "D014474",
+      "term": "Unconsciousness"
+    },
+    {
+      "code": "D013575",
+      "term": "Syncope"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d7014ff8-a35c-4577-949a-a8e200a56d6f",
+      "parentId": null,
+      "rootId": "d7014ff8-a35c-4577-949a-a8e200a56d6f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a298b429-ca15-449b-b3c9-a8e200a56d6f --><h1>Blackouts: Summary</h1><!-- end field a298b429-ca15-449b-b3c9-a8e200a56d6f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-11-01T00:00:00+00:00",
+      "dateTo": "2018-11-30T23:59:59+00:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

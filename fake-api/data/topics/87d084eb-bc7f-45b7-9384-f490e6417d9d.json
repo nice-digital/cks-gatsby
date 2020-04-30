@@ -1,0 +1,84 @@
+{
+  "topicName": "Bipolar disorder",
+  "topicId": "87d084eb-bc7f-45b7-9384-f490e6417d9d",
+  "exportId": "ed298737-114a-43fc-b2bf-aa5700e2147d",
+  "dataId": "ac46d4f4-5c87-45ea-8ca6-aa5b00cded53",
+  "number": 5,
+  "dateOfExport": "2019-05-28T12:29:44.4385975+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Bipolar disorder is a serious mental illness, that usually characterized by both episodes of depressed mood and episodes of elation",
+  "lastRevised": "Last revised in September 2017",
+  "terms": [
+    {
+      "code": "D001714",
+      "term": "Bipolar Disorder"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Mental health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0b9418cf-a927-4834-9a0c-4ec712ac5521",
+      "parentId": null,
+      "rootId": "0b9418cf-a927-4834-9a0c-4ec712ac5521",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 1903421b-f4db-4083-9512-c9c26dfbf938 --><h1>Bipolar disorder:&nbsp;Summary</h1><!-- end field 1903421b-f4db-4083-9512-c9c26dfbf938 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Nimodipine added to the interactions section for valproate."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": ""
+    },
+    {
+      "dateFrom": "2016-10-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information added on reported cases of misuse and abuse with quetiapine ABPI 2016, SPC for Ebesque."
+    },
+    {
+      "dateFrom": "2015-10-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Muscle weakness and rhabdomyolysis have been included as possible adverse effects of lithium ABPI Medicines Compendium, 2015b."
+    },
+    {
+      "dateFrom": "2015-05-01T00:00:00+01:00",
+      "dateTo": "2015-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Three updates based on updates to manufacturers&#39; Summaries of Product Characteristics (SPCs):"
+    },
+    {
+      "dateFrom": "2015-03-01T00:00:00+00:00",
+      "dateTo": "2015-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Update to the text to incorporate the recommendation from the MHRA that valproate should not be prescribed to female children, female adolescents, women of childbearing potential or pregnant women unless other treatments are ineffective or not tolerated."
+    },
+    {
+      "dateFrom": "2015-02-01T00:00:00+00:00",
+      "dateTo": "2015-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Diplopia added as an uncommon side effect with aripiprazole based on an update to the SPC ABPI Medicines Compendium, 2014b."
+    },
+    {
+      "dateFrom": "2014-07-01T00:00:00+01:00",
+      "dateTo": "2014-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. Changes have been made in line with the NICE guideline Bipolar disorder: the assessment and management of bipolar disorder in adults, children and young people in primary and secondary care NICE, 2014b."
+    }
+  ]
+}

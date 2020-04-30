@@ -1,0 +1,26 @@
+[
+  {
+    "topicId": "7875afe5-1be7-4d7d-aaee-aa0600c8a8b5",
+    "topicName": "Autism in adults",
+    "title": "New topic",
+    "text": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+  },
+  {
+    "topicId": "0f1011cb-425e-4af4-96bc-aa0600b1059f",
+    "topicName": "Cerebral palsy",
+    "title": "This is a new CKS topic",
+    "text": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+  },
+  {
+    "topicId": "ca3de7f0-81b2-498d-bfdf-5d2f1cb03753",
+    "topicName": "Cholesteatoma",
+    "title": "Reviewed and updated",
+    "text": "A literature search was conducted in May 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+  },
+  {
+    "topicId": "b66a5697-882a-4143-a0c6-32b03657c794",
+    "topicName": "Gallstones",
+    "title": "Reviewed",
+    "text": "A literature search was conducted in May 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+  }
+]

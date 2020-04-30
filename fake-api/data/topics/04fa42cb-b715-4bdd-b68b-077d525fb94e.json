@@ -1,0 +1,54 @@
+{
+  "topicName": "Plantar fasciitis",
+  "topicId": "04fa42cb-b715-4bdd-b68b-077d525fb94e",
+  "exportId": "9bd58f81-9907-4588-965e-aa16000365dd",
+  "dataId": "d5edb322-96d3-417f-af14-aa1700819a47",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:51:51.3959044+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Plantar fasciitis is a condition in which there is persistent foot pain associated with chronic degenerative and reparative processes",
+  "lastRevised": "Last revised in June 2015",
+  "terms": [
+    {
+      "code": "D036981",
+      "term": "Fasciitis, Plantar"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "4c5fb986-4414-44dd-a4f8-fde89dffad7f",
+      "parentId": null,
+      "rootId": "4c5fb986-4414-44dd-a4f8-fde89dffad7f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 355de10e-a8be-44ec-90a0-af36380fc7ea --><h1>Plantar fasciitis:&nbsp;Summary</h1><!-- end field 355de10e-a8be-44ec-90a0-af36380fc7ea -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-06-01T00:00:00+01:00",
+      "dateTo": "2015-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Following an enquiry, the basis for recommending referral for consideration of extracorporeal shockwave therapy has been clarified."
+    },
+    {
+      "dateFrom": "2015-04-01T00:00:00+01:00",
+      "dateTo": "2015-04-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Link inserted to the CKS topic on Analgesia - mild-to-moderate pain."
+    },
+    {
+      "dateFrom": "2014-02-01T00:00:00+00:00",
+      "dateTo": "2014-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2013 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. Minor changes to clinical recommendations have been made."
+    }
+  ]
+}
