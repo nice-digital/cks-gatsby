@@ -43,4 +43,4 @@ export type ChangeNode = {
 	text: string;
 	// Foreign keys
 	topic: string;
-};
+} & NodeInput;
