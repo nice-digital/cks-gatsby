@@ -1,6 +1,9 @@
 import React from "react";
 import { graphql, PageRendererProps } from "gatsby";
+
+import { Layout } from "../../components/Layout/Layout";
 import { Topic } from "../../types";
+import { SEO } from "../../components/SEO/SEO";
 
 type TopicPageProps = {
 	data: {
@@ -14,16 +17,17 @@ const TopicPage: React.FC<TopicPageProps> = ({
 	},
 }: TopicPageProps) => {
 	return (
-		<div>
+		<Layout>
+			<SEO title={topicName + " | Topics A-Z"} description={topicSummary} />
 			<h1>Topic: {topicName}</h1>
 			<p>{topicSummary}</p>
-		</div>
+		</Layout>
 	);
 };
 
 export default TopicPage;
 
-export const TopicxPageQuery = graphql`
+export const TopicPageQuery = graphql`
 	query TopicById($id: String!) {
 		topic: cksTopic(id: { eq: $id }) {
 			...FullTopic
