@@ -24,11 +24,10 @@ const createTopicNode = (
 		slug,
 		lastRevised: "A date",
 		nextPlannedReviewBy: "2020-10-18",
-		specialities: specialityNames.map(specialityName =>
-			createNodeId(NodeIdPrefixes.Speciality + specialityName)
-		),
+		specialities: specialityNames,
 		chapters: [],
 		latestChanges: [],
+		terms: [],
 	};
 
 	const topicNode: TopicNode = {
@@ -95,6 +94,13 @@ export const createFakeNodes = (sourceNodesArgs: SourceNodesArgs): void => {
 		"Infectious Laughter",
 		"Helpless chortling and repetition of unfunny catchphrases",
 		["Cancer", "Skin and nail"],
+		sourceNodesArgs
+	);
+	createTopicNode(
+		"def456",
+		"Topic without specialiies",
+		"Lorem ipsum dolor sit amet",
+		[],
 		sourceNodesArgs
 	);
 };

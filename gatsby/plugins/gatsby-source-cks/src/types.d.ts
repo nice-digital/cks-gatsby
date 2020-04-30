@@ -9,6 +9,10 @@ export type TopicNode = {
 	nextPlannedReviewBy?: string; // Must be an ISO date format
 	topicSummary: string;
 	lastRevised: string;
+	terms: {
+		code: string;
+		term: string;
+	}[];
 	// Foreign keys
 	specialities: string[];
 	chapters: string[];

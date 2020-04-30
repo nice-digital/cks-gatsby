@@ -62,8 +62,8 @@ export const topicSchema = `
 		"The date by which this topic will be reviewed. Optional as this is null for some topics."
 		nextPlannedReviewBy: Date @dateformat
 
-		"A list of terms related to this topic"
-		terms: [CksTopicTerm!]
+		"A list of terms related to this topic. Not every topic has other terms."
+		terms: [CksTopicTerm!]!
 
 		"""
 		A list of specialities to which this topic belongs.
@@ -72,12 +72,12 @@ export const topicSchema = `
 
 		Note: not all topics have specialities defined.
 		"""
-		specialities: [CksSpeciality!] @link
+		specialities: [CksSpeciality!]! @link(by: "name")
 
 		"The content chapters within the topic, taken from the \`topicHtmlObjects\` field in the API."
 		chapters: [CksChapter!]! @link
 
 		"The last changes or reviews that the topic has had. Not to be confused with the other node type of \`CksChange\`."
-		latestChanges: [CksTopicLatestChange!] @link
+		latestChanges: [CksTopicLatestChange!]! @link
 	}
 `;
