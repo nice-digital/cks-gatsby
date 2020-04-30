@@ -2,10 +2,10 @@
 import { SourceNodesArgs } from "gatsby";
 import slugify from "slugify";
 
-import { TopicNode, SpecialityNode } from "./types";
+import { TopicNode, SpecialityNode, ChangeNode } from "./types";
 import { NodeTypes, NodeIdPrefixes } from "./constants";
 
-const createTopicNode = (
+const createFakeTopicNode = (
 	topicId: string,
 	topicName: string,
 	topicSummary: string,
@@ -33,7 +33,8 @@ const createTopicNode = (
 	const topicNode: TopicNode = {
 		...fullTopic,
 		...{
-			id: createNodeId(NodeIdPrefixes.Topic + topicId),
+			// Generate a new guid for the actual node id, so people don't use it for querying
+			id: createNodeId(topicId),
 			internal: {
 				type: NodeTypes.Topic,
 				content: JSON.stringify(fullTopic),
@@ -45,7 +46,7 @@ const createTopicNode = (
 	createNode(topicNode);
 };
 
-const createSpecialityNode = (
+const createFakeSpecialityNode = (
 	name: string,
 	topicIds: string[],
 	sourceNodesArgs: SourceNodesArgs
@@ -76,27 +77,72 @@ const createSpecialityNode = (
 	createNode(specialityNode);
 };
 
-export const createFakeNodes = (sourceNodesArgs: SourceNodesArgs): void => {
-	createSpecialityNode("Infections", ["abc123"], sourceNodesArgs);
-	createSpecialityNode("Cancer", ["abc123", "xyz789"], sourceNodesArgs);
-	createSpecialityNode("Skin and nail", ["xyz789"], sourceNodesArgs);
+const createFakeChangeNode = (
+	title: string,
+	text: string,
+	topicId: string,
+	sourceNodesArgs: SourceNodesArgs
+): void => {
+	const { actions, createNodeId, createContentDigest } = sourceNodesArgs;
+	const { createNode } = actions;
 
-	createTopicNode(
+	const fullChange = {
+		title,
+		text,
+		topic: topicId,
+	};
+
+	const changeNode: ChangeNode = {
+		...fullChange,
+		...{
+			id: createNodeId(NodeIdPrefixes.Change + text),
+			internal: {
+				type: NodeTypes.Change,
+				content: JSON.stringify(fullChange),
+				contentDigest: createContentDigest(fullChange),
+			},
+		},
+	};
+
+	createNode(changeNode);
+};
+
+export const createFakeNodes = (sourceNodesArgs: SourceNodesArgs): void => {
+	// Fake specialities
+	createFakeSpecialityNode("Infections", ["abc123"], sourceNodesArgs);
+	createFakeSpecialityNode("Cancer", ["abc123", "xyz789"], sourceNodesArgs);
+	createFakeSpecialityNode("Skin and nail", ["xyz789"], sourceNodesArgs);
+
+	// Fake "what's new" changes
+	createFakeChangeNode(
+		"New topic",
+		"CKS topic written based on a literature search and on NICE rapid guidelines.",
+		"abc123",
+		sourceNodesArgs
+	);
+	createFakeChangeNode(
+		"Reviewed",
+		"A literature search was conducted in October 2019 ...",
+		"xyz789",
+		sourceNodesArgs
+	);
+
+	// Fake topics
+	createFakeTopicNode(
 		"abc123",
 		"3rd Degree Sideburns",
 		"Wistful longing for the 1970's",
 		["Infections", "Cancer"],
 		sourceNodesArgs
 	);
-
-	createTopicNode(
+	createFakeTopicNode(
 		"xyz789",
 		"Infectious Laughter",
 		"Helpless chortling and repetition of unfunny catchphrases",
 		["Cancer", "Skin and nail"],
 		sourceNodesArgs
 	);
-	createTopicNode(
+	createFakeTopicNode(
 		"def456",
 		"Topic without specialiies",
 		"Lorem ipsum dolor sit amet",
