@@ -4,7 +4,7 @@ export const specialitySchema = `
 
 	For example *Injuries* or *Musculoskeletal*.
 	"""
-  type CksSpeciality implements Node @dontInfer {
+	type CksSpeciality implements Node @dontInfer {
 		"The name of the speciality e.g. *Injuries*"
 		name: String!
 
@@ -12,6 +12,6 @@ export const specialitySchema = `
 		slug: String!
 
 		"The list of topics that belong to this clinical speciality"
-    topics: [CksTopic!]! @link(by: "topicId")
+		topics: [CksTopic!]! @link(by: "topicId")
 	}
 `;

@@ -6,7 +6,7 @@ export const topicSchema = `
 
 	Don't confuse this with the \`CksChange\` node type.
 	"""
-  type CksTopicLatestChange @dontInfer {
+	type CksTopicLatestChange @dontInfer {
 		"The first day of the month in which this change occurred e.g. \`2016-01-01T00:00:00+00:00\`"
 		dateFrom: Date! @dateformat
 
@@ -17,7 +17,7 @@ export const topicSchema = `
 		title: String!
 
 		"A description of the change"
-    body: String!
+		body: String!
 	}
 
 	"""
@@ -29,7 +29,7 @@ export const topicSchema = `
 	- Achilles Tendon
 	- Tendinopathy
 	"""
-  type CksTopicTerm @dontInfer {
+	type CksTopicTerm @dontInfer {
 		"The id of the term e.g. *D001249*"
 		code: String!
 
@@ -40,7 +40,7 @@ export const topicSchema = `
 	"""
 	A full topic object, taken from the */topic/guid* endpoint in the API.
 	"""
-  type CksTopic implements Node @dontInfer {
+	type CksTopic implements Node @dontInfer {
 		"The lowercase slugified title, used as the path within a URL e.g. *achilles-tendinopathy*"
 		slug: String!
 
@@ -59,7 +59,7 @@ export const topicSchema = `
 		"The date of the last revision as text e.g. *Last revised in January 2016*"
 		lastRevised: String!
 
-    "The date by which this topic will be reviewed. Optional as this is null for some topics."
+		"The date by which this topic will be reviewed. Optional as this is null for some topics."
 		nextPlannedReviewBy: Date @dateformat
 
 		"A list of terms related to this topic"
@@ -78,6 +78,6 @@ export const topicSchema = `
 		chapters: [CksChapter!]! @link
 
 		"The last changes or reviews that the topic has had. Not to be confused with the other node type of \`CksChange\`."
-    latestChanges: [CksTopicLatestChange!] @link
+		latestChanges: [CksTopicLatestChange!] @link
 	}
 `;

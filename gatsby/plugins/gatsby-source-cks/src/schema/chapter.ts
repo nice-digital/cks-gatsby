@@ -4,7 +4,7 @@ export const chapterSchema = `
 
 	Chapters can nest recursively.
 	"""
-  type CksChapter implements Node @dontInfer {
+	type CksChapter implements Node @dontInfer {
 		"A lowercased slugified chapter title for use in URL paths e.g. *have-i-got-the-right-topic*"
 		slug: String!
 
@@ -55,6 +55,6 @@ export const chapterSchema = `
 		we rename them because children is a 'reserved' field in Gatsby
 		and is mainly used for transformation relations between nodes
 		"""
-    subChapters: [CksChapter!] @link(by: "itemId")
+		subChapters: [CksChapter!] @link(by: "itemId")
 	}
 `;
