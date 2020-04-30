@@ -3,7 +3,7 @@ import { SourceNodesArgs } from "gatsby";
 import slugify from "slugify";
 
 import { TopicNode, SpecialityNode, ChangeNode } from "./types";
-import { NodeTypes, NodeIdPrefixes } from "./constants";
+import { NodeTypes } from "./constants";
 
 const createFakeTopicNode = (
 	topicId: string,
@@ -65,7 +65,7 @@ const createFakeSpecialityNode = (
 	const specialityNode: SpecialityNode = {
 		...fullSpeciality,
 		...{
-			id: createNodeId(NodeIdPrefixes.Speciality + name),
+			id: createNodeId(name),
 			internal: {
 				type: NodeTypes.Speciality,
 				content: JSON.stringify(fullSpeciality),
@@ -95,7 +95,7 @@ const createFakeChangeNode = (
 	const changeNode: ChangeNode = {
 		...fullChange,
 		...{
-			id: createNodeId(NodeIdPrefixes.Change + text),
+			id: createNodeId(text),
 			internal: {
 				type: NodeTypes.Change,
 				content: JSON.stringify(fullChange),
