@@ -11,4 +11,4 @@ export const schema = [
 	specialitySchema,
 	chapterSchema,
 	changeSchema,
-].join("\n\n");
+].join("\n");
