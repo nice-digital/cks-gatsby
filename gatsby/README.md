@@ -15,6 +15,7 @@
 			- [Why not Enzyme?](#why-not-enzyme)
 	- [:rocket: Set up](#rocket-set-up)
 		- [Other commands](#other-commands)
+	- [Source plugin](#source-plugin)
 <!-- END doctoc -->
 </details>
 
@@ -79,7 +80,7 @@ However, Enzyme is set up in a way to focus on internals of React components (pr
 3. Open the root of the repository in VS Code
 4. Install dependencies from npm:
    1. Run 'npm: Install Dependencies' from the VS Code command palette (_Ctrl+Shift+P_)
-   2. Or run `cd gatsby && npm i` on the command line
+   2. Or run `cd gatsby && npm ci` on the command line
 5. Press _F5_ to build the gatsby site and debug in Chrome
    1. This uses the debugging built into VS Code
    2. Alternatively:
@@ -105,3 +106,11 @@ There are various other commands you can run in a terminal from the _gatsby_ fol
 | `npm run lint:ts`       | Lints TypeScript and Javacript files using ESLint                                  |
 | `npm run lint:ts:fix`   | Fixes any linting errors using ESLint                                              |
 | `npm run typecheck`     | Typechecks the TypeScript files                                                    |
+
+## Source plugin
+
+Gatsby sites get their data via source plugins. Source plugins fetch data from somewhere (e.g. an API, database, filesystem etc) and turn them into Gatsby nodes. These nodes can then be queried via GraphQL inside Gatsby React components. Follow [part 5 of the Gatsby tutorial ('Source Plugins')](https://www.gatsbyjs.org/tutorial/part-five/) if you're new to sourcing data in Gatsby.
+
+In the case of CKS, the source data comes from the API provided by Clarity. The data fetching and mapping to Gatsby nodes is handled via a custom source plugin. This gives a nice separation of the data loading logic from the page generation logic. The Gatsby docs has a useful section on ['Sourcing from Private APIs'](https://www.gatsbyjs.org/docs/sourcing-from-private-apis/).
+
+**View the [custom source plugin (_gatsby-source-cks_)](plugins/gatsby-source-cks) folder for more information.**

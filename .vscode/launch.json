@@ -33,7 +33,7 @@
       "console": "integratedTerminal",
       "internalConsoleOptions": "openOnFirstSessionStart",
       "outputCapture": "std",
-      "sourceMaps": false,
+      "sourceMaps": true,
       "presentation": {
         "hidden": false,
         "group": "Static site",
