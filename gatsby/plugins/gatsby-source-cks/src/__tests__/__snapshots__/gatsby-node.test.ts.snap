@@ -85,7 +85,6 @@ exports[`gatsby-node createSchemaCustomization should call createTypes with cust
 	}
 
 
-
 	\\"\\"\\"
 	A clinical speciality that groups topics together
 
@@ -101,7 +100,6 @@ exports[`gatsby-node createSchemaCustomization should call createTypes with cust
 		\\"The list of topics that belong to this clinical speciality\\"
 		topics: [CksTopic!]! @link(by: \\"topicId\\")
 	}
-
 
 
 	\\"\\"\\"
@@ -162,7 +160,6 @@ exports[`gatsby-node createSchemaCustomization should call createTypes with cust
 		\\"\\"\\"
 		subChapters: [CksChapter!] @link(by: \\"itemId\\")
 	}
-
 
 
 	\\"\\"\\"
