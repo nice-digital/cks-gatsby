@@ -22,5 +22,13 @@
     "Ian Routledge (http://ediblecode.com)"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/nice-digital/cks-gatsby#readme"
+  "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
+  "devDependencies": {
+    "@types/async": "^3.2.1",
+    "@types/moment": "^2.13.0",
+    "@types/node-fetch": "^2.5.7",
+    "async": "^3.2.0",
+    "moment": "^2.25.3",
+    "node-fetch": "^2.6.0"
+  }
 }
