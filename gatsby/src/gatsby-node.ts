@@ -1,6 +1,6 @@
 import { resolve } from "path";
 import { CreatePagesArgs } from "gatsby";
-import { PartialTopic } from "./types";
+import { PartialTopic, PartialSpeciality } from "./types";
 
 interface AllTopicsQueryData {
 	allTopics: {
@@ -8,7 +8,45 @@ interface AllTopicsQueryData {
 	};
 }
 
-export const createPages = async ({
+interface AllSpecialitiesQueryData {
+	allSpecialities: {
+		nodes: PartialSpeciality[];
+	};
+}
+
+const createSpecialityPage = async ({
+	graphql,
+	actions,
+}: CreatePagesArgs): Promise<undefined> => {
+	const { createPage } = actions;
+
+	const allSpecialityQuery = await graphql<AllSpecialitiesQueryData>(`
+	{
+			allSpecialities: allCksSpeciality {
+				edges {
+					node {
+						id
+						slug
+					}
+				}
+			}
+
+	`);
+	if (allSpecialityQuery.data !== undefined)
+		allSpecialityQuery.data.allSpecialities.nodes.forEach(({ id, slug }) => {
+			createPage({
+				path: `/${slug}/`,
+				component: resolve("src/templates/Speciality.tsx"),
+				context: {
+					id,
+				},
+			});
+		});
+
+	return;
+};
+
+const createTopicPage = async ({
 	graphql,
 	actions,
 }: CreatePagesArgs): Promise<undefined> => {
@@ -36,4 +74,15 @@ export const createPages = async ({
 		});
 
 	return;
+};
+
+export const createPages = async (
+	reatePagesArgs: CreatePagesArgs
+): Promise<undefined[]> => {
+	const createPageTaks: Array<Promise<undefined>> = [
+		//createSpecialityPage(reatePagesArgs),
+		createTopicPage(reatePagesArgs),
+	];
+
+	return Promise.all(createPageTaks);
 };
