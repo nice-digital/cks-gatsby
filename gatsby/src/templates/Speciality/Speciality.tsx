@@ -37,10 +37,7 @@ export default SpecialityPage;
 export const SpecialityPageQuery = graphql`
 	query SpecialityById($id: String!) {
 		speciality: cksSpeciality(id: { eq: $id }) {
-			topics {
-				...PartialTopic
-			}
-			name
+			...FullSpeciality
 		}
 	}
 `;
