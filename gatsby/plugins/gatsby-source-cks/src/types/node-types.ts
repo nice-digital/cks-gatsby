@@ -4,11 +4,11 @@ import {
 	specialityNodeType,
 	changeNodeType,
 	chapterNodeType,
-} from "./node-types";
+} from "../node-types";
 
 // Gatsby nodes
 
-export type TopicNode = {
+export interface TopicNode extends NodeInput {
 	topicName: string;
 	slug: string;
 	topicId: string;
@@ -23,24 +23,22 @@ export type TopicNode = {
 	specialities: string[];
 	chapters: string[];
 	latestChanges: string[];
-} & NodeInput & {
-		internal: {
-			type: typeof topicNodeType;
-		};
-	};
+	internal: {
+		type: typeof topicNodeType;
+	} & NodeInput["internal"];
+}
 
-export type SpecialityNode = {
+export interface SpecialityNode extends NodeInput {
 	name: string;
 	slug: string;
 	// Foreign keys
 	topics: string[];
-} & NodeInput & {
-		internal: {
-			type: typeof specialityNodeType;
-		};
-	};
+	internal: {
+		type: typeof specialityNodeType;
+	} & NodeInput["internal"];
+}
 
-export type ChapterNode = {
+export interface ChapterNode extends NodeInput {
 	slug: string;
 	itemId: string;
 	fullItemName: string;
@@ -54,19 +52,17 @@ export type ChapterNode = {
 	parentChapter: string | null;
 	rootChapter: string;
 	subChapters: string[];
-} & NodeInput & {
-		internal: {
-			type: typeof chapterNodeType;
-		};
-	};
+	internal: {
+		type: typeof chapterNodeType;
+	} & NodeInput["internal"];
+}
 
-export type ChangeNode = {
+export interface ChangeNode extends NodeInput {
 	title: string;
 	text: string;
 	// Foreign keys
 	topic: string;
-} & NodeInput & {
-		internal: {
-			type: typeof changeNodeType;
-		};
-	};
+	internal: {
+		type: typeof changeNodeType;
+	} & NodeInput["internal"];
+}

@@ -1,7 +1,13 @@
 import { SourceNodesArgs } from "gatsby";
 import slugify from "slugify";
 
-import { TopicNode, SpecialityNode, ChangeNode, ChapterNode } from "./types";
+import {
+	TopicNode,
+	SpecialityNode,
+	ChangeNode,
+	ChapterNode,
+} from "./types/node-types";
+
 import {
 	topicNodeType,
 	specialityNodeType,
