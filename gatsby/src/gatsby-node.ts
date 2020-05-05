@@ -1,6 +1,6 @@
 import { resolve } from "path";
 import { CreatePagesArgs } from "gatsby";
-import { PartialTopic, PartialSpeciality } from "./types";
+import { PartialTopic, Speciality } from "./types";
 
 interface AllTopicsQueryData {
 	allTopics: {
@@ -10,7 +10,7 @@ interface AllTopicsQueryData {
 
 interface AllSpecialitiesQueryData {
 	allSpecialities: {
-		nodes: PartialSpeciality[];
+		nodes: Speciality[];
 	};
 }
 
@@ -21,7 +21,7 @@ const createSpecialityPage = async ({
 	const { createPage } = actions;
 
 	const allSpecialityQuery = await graphql<AllSpecialitiesQueryData>(`
-	{
+		{
 			allSpecialities: allCksSpeciality {
 				edges {
 					node {
@@ -30,7 +30,7 @@ const createSpecialityPage = async ({
 					}
 				}
 			}
-
+		}
 	`);
 	if (allSpecialityQuery.data !== undefined)
 		allSpecialityQuery.data.allSpecialities.nodes.forEach(({ id, slug }) => {
@@ -80,7 +80,7 @@ export const createPages = async (
 	reatePagesArgs: CreatePagesArgs
 ): Promise<undefined[]> => {
 	const createPageTaks: Array<Promise<undefined>> = [
-		//createSpecialityPage(reatePagesArgs),
+		createSpecialityPage(reatePagesArgs),
 		createTopicPage(reatePagesArgs),
 	];
 
