@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, PageRendererProps } from "gatsby";
+import { graphql, PageRendererProps, Link } from "gatsby";
 
 import { Layout } from "../../components/Layout/Layout";
 import { Speciality } from "../../types";
@@ -22,8 +22,10 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 			<h1>Speciality: {name}</h1>
 			Topics:
 			<ul>
-				{topics.map((topic, index) => (
-					<li key={index}>{topic}</li>
+				{topics.map(({ id, topicName, slug }) => (
+					<li key={id}>
+						<Link to={slug}>{topicName}</Link>
+					</li>
 				))}
 			</ul>
 		</Layout>
@@ -36,7 +38,7 @@ export const SpecialityPageQuery = graphql`
 	query SpecialityById($id: String!) {
 		speciality: cksSpeciality(id: { eq: $id }) {
 			topics {
-				topicName
+				...PartialTopic
 			}
 			name
 		}

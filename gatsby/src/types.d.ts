@@ -19,5 +19,5 @@ export interface Speciality {
 	name: string;
 	slug: string;
 	// Foreign keys
-	topics: string[];
+	topics: PartialTopic[];
 }
