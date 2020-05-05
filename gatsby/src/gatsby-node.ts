@@ -2,58 +2,30 @@ import { resolve } from "path";
 import { CreatePagesArgs } from "gatsby";
 import { PartialTopic, Speciality } from "./types";
 
-interface AllTopicsQueryData {
+interface PageCreationQuery {
 	allTopics: {
 		nodes: PartialTopic[];
 	};
-}
-
-interface AllSpecialitiesQueryData {
 	allSpecialities: {
 		nodes: Speciality[];
 	};
 }
 
-const createSpecialityPage = async ({
+const createCksPages = async ({
 	graphql,
 	actions,
 }: CreatePagesArgs): Promise<undefined> => {
 	const { createPage } = actions;
 
-	const allSpecialityQuery = await graphql<AllSpecialitiesQueryData>(`
+	const pageCreationQuery = await graphql<PageCreationQuery>(`
 		{
 			allSpecialities: allCksSpeciality {
-				edges {
-					node {
-						id
-						slug
-					}
+				nodes {
+					id
+					name
+					slug
 				}
 			}
-		}
-	`);
-	if (allSpecialityQuery.data !== undefined)
-		allSpecialityQuery.data.allSpecialities.nodes.forEach(({ id, slug }) => {
-			createPage({
-				path: `/${slug}/`,
-				component: resolve("src/templates/Speciality.tsx"),
-				context: {
-					id,
-				},
-			});
-		});
-
-	return;
-};
-
-const createTopicPage = async ({
-	graphql,
-	actions,
-}: CreatePagesArgs): Promise<undefined> => {
-	const { createPage } = actions;
-
-	const allTopicsQuery = await graphql<AllTopicsQueryData>(`
-		{
 			allTopics: allCksTopic {
 				nodes {
 					id
@@ -62,27 +34,30 @@ const createTopicPage = async ({
 			}
 		}
 	`);
-	if (allTopicsQuery.data !== undefined)
-		allTopicsQuery.data.allTopics.nodes.forEach(({ id, slug }) => {
-			createPage({
-				path: `/${slug}/`,
-				component: resolve("src/templates/Topic/Topic.tsx"),
-				context: {
-					id,
-				},
-			});
+
+	function createCksPage(id: string, slug: string, templatePath: string): void {
+		createPage({
+			path: `/${slug}/`,
+			component: resolve(templatePath),
+			context: {
+				id,
+			},
 		});
+	}
+
+	pageCreationQuery.data?.allTopics.nodes.forEach(({ id, slug }) => {
+		createCksPage(id, slug, "src/templates/Topic/Topic.tsx");
+	});
+
+	pageCreationQuery.data?.allSpecialities.nodes.forEach(({ id, slug }) => {
+		createCksPage(id, slug, "src/templates/Speciality/Speciality.tsx");
+	});
 
 	return;
 };
 
 export const createPages = async (
-	reatePagesArgs: CreatePagesArgs
-): Promise<undefined[]> => {
-	const createPageTaks: Array<Promise<undefined>> = [
-		createSpecialityPage(reatePagesArgs),
-		createTopicPage(reatePagesArgs),
-	];
-
-	return Promise.all(createPageTaks);
+	createPagesArgs: CreatePagesArgs
+): Promise<undefined> => {
+	return createCksPages(createPagesArgs);
 };
