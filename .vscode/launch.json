@@ -83,7 +83,7 @@
       "cwd": "${workspaceFolder}/gatsby",
       "localRoot": "${workspaceFolder}/gatsby",
       "remoteRoot": "${workspaceFolder}/gatsby",
-      "args": ["${fileBasenameNoExtension}", "--config", "jest.config.js"],
+      "args": ["--runInBand", "--colors", "${fileBasenameNoExtension}"],
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
       "disableOptimisticBPs": true,
