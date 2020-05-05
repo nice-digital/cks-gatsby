@@ -84,8 +84,8 @@
       "localRoot": "${workspaceFolder}/gatsby",
       "remoteRoot": "${workspaceFolder}/gatsby",
       "args": ["${fileBasenameNoExtension}", "--config", "jest.config.js"],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
       "disableOptimisticBPs": true,
       "windows": {
         "program": "${workspaceFolder}/gatsby/node_modules/jest/bin/jest"
