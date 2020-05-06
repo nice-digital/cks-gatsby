@@ -84,7 +84,12 @@
       "cwd": "${workspaceFolder}/gatsby",
       "localRoot": "${workspaceFolder}/gatsby",
       "remoteRoot": "${workspaceFolder}/gatsby",
-      "args": ["--runInBand", "--colors", "${fileBasenameNoExtension}"],
+      "args": [
+        "--runInBand",
+        "--colors",
+        "--runTestsByPath",
+        "..\\${relativeFile}"
+      ],
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
       "disableOptimisticBPs": true,
