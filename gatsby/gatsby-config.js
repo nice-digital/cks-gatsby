@@ -1,4 +1,5 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
+const moment = require("moment");
 
 module.exports = {
 	siteMetadata: {
@@ -18,7 +19,16 @@ module.exports = {
 				],
 			},
 		},
-		"gatsby-source-cks",
+		{
+			resolve: `gatsby-source-cks`,
+			options: {
+				apiKey: process.env.API_KEY || "abc123",
+				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000/api",
+				changesSinceDate: process.env.CHANGES_SINCE
+					? moment(process.env.CHANGES_SINCE).toDate()
+					: null,
+			},
+		},
 		{
 			resolve: "gatsby-plugin-eslint",
 			options: {
