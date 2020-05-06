@@ -9,7 +9,7 @@ import {
 	getFullTopicCached,
 	getTopicCacheKey,
 	getChangesSince,
-} from "./index";
+} from "./api";
 
 import { ApiPartialTopic } from "./types";
 

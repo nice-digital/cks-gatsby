@@ -1,24 +1,50 @@
 import { SourceNodesArgs, CreateSchemaCustomizationArgs } from "gatsby";
 
 import { schema } from "./schema";
-import { createFakeNodes } from "./create-fake-nodes";
+import { configure } from "./api/api";
+import { downloadAllData } from "./downloader/downloader";
+import { createTopicNodes } from "./node-creation/topics";
+import { createSpecialityNodes } from "./node-creation/specialities";
+
+interface ConfigOptions {
+	/** The API base URL */
+	apiBaseUrl: string;
+	/** The api key for authentication via a request header */
+	apiKey: string;
+	/**
+	 *
+	 *
+	 * @type {Date}
+	 * @memberof ConfigOptions
+	 */
+	changesSinceDate?: Date;
+}
 
 export const createSchemaCustomization = ({
 	actions: { createTypes },
 }: CreateSchemaCustomizationArgs): void => createTypes(schema);
 
 export const sourceNodes = async (
-	sourceNodesArgs: SourceNodesArgs
+	sourceNodesArgs: SourceNodesArgs,
+	configOptions: ConfigOptions
 ): Promise<undefined> => {
-	const { reporter } = sourceNodesArgs;
+	const {
+		reporter: { activityTimer },
+	} = sourceNodesArgs;
 
-	const activity = reporter.activityTimer(`Creating nodes`);
-	activity.start();
+	const { start, setStatus, end } = activityTimer(`Creating nodes`);
+	start();
 
-	createFakeNodes(sourceNodesArgs);
+	// Configure the API authentication and base URL before downloading data
+	configure(configOptions);
+	const { fullTopics, changes } = await downloadAllData(sourceNodesArgs);
 
-	activity.setStatus(`Created nodes`);
-	activity.end();
+	// Create all of our different nodes
+	createTopicNodes(fullTopics, sourceNodesArgs);
+	createSpecialityNodes(fullTopics, sourceNodesArgs);
+
+	setStatus(`Created nodes`);
+	end();
 
 	return;
 };

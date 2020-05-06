@@ -1,10 +1,8 @@
-// API requests
-
-import { ConfigOptions } from "../types";
-
-export type ApiConfig = Pick<ConfigOptions, "apiBaseUrl" | "apiKey">;
-
-// API responses
+export type ApiConfig = {
+	apiBaseUrl: string;
+	/** The api key for authentication via a request header */
+	apiKey: string;
+};
 
 export interface ApiPartialTopic {
 	id: string;
@@ -37,7 +35,7 @@ interface ApiTopicHtmlObject {
 /**
  * A full topic object returned from the API
  */
-export interface ApiFullTopicResponse extends ApiPartialTopic {
+export interface ApiTopicResponse {
 	/** Name of the topic e.g. "Acne Vulgaris" */
 	topicName: string;
 	/** Guid */
@@ -70,11 +68,11 @@ export interface ApiFullTopicResponse extends ApiPartialTopic {
 	}[];
 }
 
-export interface TopicChange {
+export type ApiFullTopic = ApiTopicResponse & ApiPartialTopic;
+
+export type ApiTopicChangeResponse = {
 	topicId: string;
 	topicName: string;
 	title: string;
 	text: string;
-}
-
-export type ApiTopicChangeResponse = TopicChange[];
+}[];

@@ -1,3 +1,9 @@
+/**
+ * Low-level methods to access each of the CKS API endpoints
+ *
+ * @module
+ */
+
 import fetch from "node-fetch";
 import moment from "moment";
 import { Cache } from "gatsby";
@@ -5,9 +11,10 @@ import { Cache } from "gatsby";
 import {
 	ApiConfig,
 	ApiTopicsResponse,
-	ApiFullTopicResponse,
+	ApiTopicResponse,
 	ApiTopicChangeResponse,
 	ApiPartialTopic,
+	ApiFullTopic,
 } from "./types";
 
 export const apiConfig: ApiConfig = {
@@ -40,12 +47,14 @@ const verifyConfig = (): true => {
  */
 const fetchJson = async <TResponse>(path: string): Promise<TResponse> =>
 	verifyConfig() &&
-	(await fetch(apiConfig.apiBaseUrl + path, {
-		headers: {
-			"ocp-apim-subscription-key": apiConfig.apiKey,
-			Accept: "application/json",
-		},
-	}).then<TResponse>(r => r.json()));
+	(
+		await fetch(apiConfig.apiBaseUrl + path, {
+			headers: {
+				"ocp-apim-subscription-key": apiConfig.apiKey,
+				Accept: "application/json",
+			},
+		})
+	).json();
 
 /**
  * Retrieves a list of all of the partial topics from the /topics API endpoint.
@@ -69,11 +78,8 @@ export const getTopicCacheKey = (partialTopic: ApiPartialTopic): string =>
  */
 const getFullTopic = async (
 	partialTopic: ApiPartialTopic
-): Promise<ApiFullTopicResponse> => ({
-	// Merge the partial topic properties in with the full one
-	...(await fetchJson<ApiFullTopicResponse>(partialTopic.currentVersionLink)),
-	...partialTopic,
-});
+): Promise<ApiTopicResponse> =>
+	fetchJson<ApiTopicResponse>(partialTopic.currentVersionLink);
 
 /**
  * Wrapper around the API method for retrieving a full topic.
@@ -87,16 +93,21 @@ const getFullTopic = async (
 export const getFullTopicCached = async (
 	partialTopic: ApiPartialTopic,
 	cache: Cache["cache"]
-): Promise<ApiFullTopicResponse> => {
+): Promise<ApiFullTopic> => {
 	const topicCacheKey = getTopicCacheKey(partialTopic);
 
 	const cachedFullTopic = await (cache.get(
 		topicCacheKey
-	) as ApiFullTopicResponse | null);
+	) as ApiFullTopic | null);
 
 	if (cachedFullTopic) return cachedFullTopic;
 
-	const apiFullTopic = await getFullTopic(partialTopic);
+	const apiFullTopic: ApiFullTopic = {
+		// Merge the partial topic properties in with the full one:
+		// there are a few properties on a partial topic the full one doesn't have
+		...(await getFullTopic(partialTopic)),
+		...partialTopic,
+	};
 
 	await cache.set(topicCacheKey, apiFullTopic);
 
