@@ -105,6 +105,33 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Jest tests - watch current file",
+      "program": "${workspaceFolder}/gatsby/node_modules/.bin/jest",
+      "cwd": "${workspaceFolder}/gatsby",
+      "localRoot": "${workspaceFolder}/gatsby",
+      "remoteRoot": "${workspaceFolder}/gatsby",
+      "args": [
+        "--runInBand",
+        "--colors",
+        "--watch",
+        "--runTestsByPath",
+        "..\\${relativeFile}"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/gatsby/node_modules/jest/bin/jest"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "Tests",
+        "order": 2
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Fake API",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run-script", "debug"],
