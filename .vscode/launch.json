@@ -30,8 +30,9 @@
       "stopOnEntry": false,
       "runtimeExecutable": "node",
       "runtimeArgs": ["--nolazy"],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "openOnFirstSessionStart",
+      // Use internalConsole as this is a lot faster than integrated terminal
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
       "outputCapture": "std",
       "sourceMaps": true,
       "presentation": {

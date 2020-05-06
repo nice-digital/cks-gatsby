@@ -12,7 +12,10 @@
       "problemMatcher": "$msCompile",
       "group": "build",
       "presentation": {
+        "clear": true,
         "reveal": "silent",
+        "revealProblems": "onProblem",
+        "echo": false,
         "panel": "shared"
       }
     },
@@ -25,6 +28,8 @@
         "cwd": "${workspaceFolder}/gatsby"
       },
       "presentation": {
+        "clear": true,
+        "echo": false,
         "reveal": "silent",
         "panel": "shared"
       }
@@ -40,6 +45,7 @@
       },
       "group": "build",
       "presentation": {
+        "clear": true,
         "reveal": "always",
         "panel": "dedicated"
       }
