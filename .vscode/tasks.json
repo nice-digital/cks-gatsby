@@ -49,6 +49,21 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "Gatsby - clean",
+      "detail": "wipe out the cache (.cache folder) and public directories",
+      "type": "shell",
+      "command": "npm run clean",
+      "problemMatcher": "$tsc",
+      "options": {
+        "cwd": "${workspaceFolder}/gatsby"
+      },
+      "presentation": {
+        "clear": true,
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }
