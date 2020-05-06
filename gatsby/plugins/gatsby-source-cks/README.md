@@ -63,7 +63,7 @@ module.exports = {
 The plugin has the following configuration options
 
 - `apiKey` {String} e.g. "abc123"
-- `apiBaseUrl` {String} e.g. "http://localhost:7000"
+- `apiBaseUrl` {String} e.g. "http://localhost:7000/api"
 - `changesSinceDate` {Date} e.g. "2020-04-30"
 
 An example configuration might look like this:
@@ -75,7 +75,7 @@ module.exports = {
 +			resolve: `gatsby-source-cks`,
 +			options: {
 +				apiKey: process.env.API_KEY || "abc123",
-+				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000",
++				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000/api",
 +				changesSinceDate: new Date(),
 +			},
 +		},
