@@ -66,31 +66,38 @@ describe("createChangeNodes", () => {
 
 	it("should store slugified lowercased name in slug field", () => {
 		createChapterNotes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].slug).toBe("topic-summary");
-		expect(createNode.mock.calls[1][0].slug).toBe("right-topic");
+		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "topic-summary");
+		expect(createNode.mock.calls[1][0]).toHaveProperty("slug", "right-topic");
 	});
 
 	it("should create a unique node id from the itemId property", () => {
 		createNodeId.mockImplementation(s => `node id: ` + s);
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(3);
-		expect(createNodeId.mock.calls[0][0]).toBe("chapter1");
-		expect(createNodeId.mock.calls[1][0]).toBe("chapter1.1");
-		expect(createNode.mock.calls[0][0].id).toBe("node id: chapter1");
-		expect(createNode.mock.calls[1][0].id).toBe("node id: chapter1.1");
+		expect(createNodeId).toHaveBeenNthCalledWith(1, "chapter1");
+		expect(createNodeId).toHaveBeenNthCalledWith(2, "chapter1.1");
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"id",
+			"node id: chapter1"
+		);
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"id",
+			"node id: chapter1.1"
+		);
 	});
 
 	it("should use parent topic id in topic field", () => {
 		createChapterNotes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].topicId).toBeUndefined();
-		expect(createNode.mock.calls[0][0].topic).toBe("topic1");
-		expect(createNode.mock.calls[1][0].topicId).toBeUndefined();
-		expect(createNode.mock.calls[1][0].topic).toBe("topic1");
+		const calls = createNode.mock.calls;
+		expect(calls[0][0]).not.toHaveProperty("topicId");
+		expect(calls[0][0]).toHaveProperty("topic", "topic1");
+		expect(calls[1][0]).not.toHaveProperty("topicId");
+		expect(calls[1][0]).toHaveProperty("topic", "topic1");
 	});
 
 	it("should set child topics in subChapters field", () => {
 		createChapterNotes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].subChapters).toStrictEqual([
+		expect(createNode.mock.calls[0][0]).toHaveProperty("subChapters", [
 			"chapter1.1",
 		]);
 	});
@@ -102,13 +109,22 @@ describe("createChangeNodes", () => {
 
 	it("should reference itself for root chapter's root", () => {
 		createChapterNotes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].rootChapter).toBe("chapter1");
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"rootChapter",
+			"chapter1"
+		);
 	});
 
 	it("should set parent and root chapter fields for sub chapters", () => {
 		createChapterNotes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[1][0].rootChapter).toBe("chapter1");
-		expect(createNode.mock.calls[1][0].parentChapter).toBe("chapter1");
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"rootChapter",
+			"chapter1"
+		);
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"parentChapter",
+			"chapter1"
+		);
 	});
 
 	it("should set contentDigest internal field using createContentDigest utility", () => {
@@ -116,7 +132,8 @@ describe("createChangeNodes", () => {
 			t => `contentDigest: ${t.fullItemName}`
 		);
 		createChapterNotes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].internal.contentDigest).toBe(
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"internal.contentDigest",
 			"contentDigest: Chapter 1"
 		);
 	});

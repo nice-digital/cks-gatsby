@@ -22,10 +22,18 @@ interface ConfigOptions {
 	changesSinceDate?: Date;
 }
 
+/**
+ * Gatsby hook for customizing the schema.
+ * See https://www.gatsbyjs.org/docs/schema-customization/
+ */
 export const createSchemaCustomization = ({
 	actions: { createTypes },
 }: CreateSchemaCustomizationArgs): void => createTypes(schema);
 
+/**
+ * Gatsby hook for creating nodes from a plugin.
+ * See https://www.gatsbyjs.org/docs/creating-a-source-plugin/#sourcing-data-and-creating-nodes
+ */
 export const sourceNodes = async (
 	sourceNodesArgs: SourceNodesArgs,
 	configOptions: ConfigOptions

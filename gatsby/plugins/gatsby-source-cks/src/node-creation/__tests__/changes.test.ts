@@ -44,16 +44,22 @@ describe("createChangeNodes", () => {
 		createNodeId.mockImplementation(s => `node id: ` + s);
 		createChangeNodes(changes, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(changes.length);
-		expect(createNodeId.mock.calls[0][0]).toBe("Changetopic1");
-		expect(createNodeId.mock.calls[1][0]).toBe("Changetopic2");
-		expect(createNode.mock.calls[0][0].id).toBe("node id: Changetopic1");
-		expect(createNode.mock.calls[1][0].id).toBe("node id: Changetopic2");
+		expect(createNodeId).toHaveBeenNthCalledWith(1, "Changetopic1");
+		expect(createNodeId).toHaveBeenNthCalledWith(2, "Changetopic2");
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"id",
+			"node id: Changetopic1"
+		);
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"id",
+			"node id: Changetopic2"
+		);
 	});
 
 	it("should store topicId property on topic field", () => {
 		createChangeNodes(changes, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].topic).toEqual("topic1");
-		expect(createNode.mock.calls[1][0].topic).toEqual("topic2");
+		expect(createNode.mock.calls[0][0]).toHaveProperty("topic", "topic1");
+		expect(createNode.mock.calls[1][0]).toHaveProperty("topic", "topic2");
 	});
 
 	it("should only store title and text fields", () => {
@@ -70,7 +76,8 @@ describe("createChangeNodes", () => {
 			t => `contentDigest: ${t.title}`
 		);
 		createChangeNodes(changes, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].internal.contentDigest).toBe(
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"internal.contentDigest",
 			"contentDigest: New topic"
 		);
 	});
