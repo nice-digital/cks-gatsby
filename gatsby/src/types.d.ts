@@ -14,10 +14,12 @@ export interface Topic extends PartialTopic {
 	topicSummary: string;
 }
 
-export interface Speciality {
+export interface PartialSpeciality {
 	id: string;
 	name: string;
 	slug: string;
-	// Foreign keys
+}
+
+export interface Speciality extends PartialSpeciality {
 	topics: PartialTopic[];
 }

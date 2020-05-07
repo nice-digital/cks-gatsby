@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql, PageRendererProps, Link } from "gatsby";
-import { Speciality } from "../types";
+import { PartialSpeciality } from "../types";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 
 type SpecialitiesPageProps = {
 	data: {
 		allSpecialities: {
-			nodes: Speciality[];
+			nodes: PartialSpeciality[];
 		};
 	};
 } & PageRendererProps;

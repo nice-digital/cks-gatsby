@@ -1,13 +1,13 @@
 import { resolve } from "path";
 import { CreatePagesArgs } from "gatsby";
-import { PartialTopic, Speciality } from "./types";
+import { PartialTopic, PartialSpeciality } from "./types";
 
 interface PageCreationQuery {
 	allTopics: {
 		nodes: PartialTopic[];
 	};
 	allSpecialities: {
-		nodes: Speciality[];
+		nodes: PartialSpeciality[];
 	};
 }
 
