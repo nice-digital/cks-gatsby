@@ -53,6 +53,8 @@ describe("createTopicNodes", () => {
 		createNodeId.mockImplementation(s => `node id: ` + s);
 		createTopicNodes(topics, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(topics.length);
+		expect(createNodeId.mock.calls[0][0]).toBe("topic1");
+		expect(createNodeId.mock.calls[1][0]).toBe("topic2");
 		expect(createNode.mock.calls[0][0].id).toBe("node id: topic1");
 		expect(createNode.mock.calls[1][0].id).toBe("node id: topic2");
 	});
