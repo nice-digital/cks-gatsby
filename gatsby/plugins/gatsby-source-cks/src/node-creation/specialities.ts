@@ -52,13 +52,11 @@ export const createSpecialityNodes = (
 
 		const specialityNode: SpecialityNode = {
 			...nodeContent,
-			...{
-				id: createNodeId(name),
-				internal: {
-					type: specialityNodeType,
-					content: JSON.stringify(nodeContent),
-					contentDigest: createContentDigest(nodeContent),
-				},
+			id: createNodeId(name),
+			internal: {
+				type: specialityNodeType,
+				content: JSON.stringify(nodeContent),
+				contentDigest: createContentDigest(nodeContent),
 			},
 		};
 

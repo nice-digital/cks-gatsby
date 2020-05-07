@@ -29,14 +29,12 @@ export const createChangeNodes = (
 
 		const changeNode: ChangeNode = {
 			...nodeContent,
-			...{
-				id: createNodeId(`Change${topicId}`),
-				children: [],
-				internal: {
-					type: changeNodeType,
-					content: JSON.stringify(nodeContent),
-					contentDigest: createContentDigest(nodeContent),
-				},
+			id: createNodeId(`Change${topicId}`),
+			children: [],
+			internal: {
+				type: changeNodeType,
+				content: JSON.stringify(nodeContent),
+				contentDigest: createContentDigest(nodeContent),
 			},
 		};
 

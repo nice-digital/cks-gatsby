@@ -44,14 +44,12 @@ export const createTopicNodes = (
 
 			const topicNode: TopicNode = {
 				...nodeContent,
-				...{
-					id: createNodeId(topicId),
-					children: [],
-					internal: {
-						type: topicNodeType,
-						content: JSON.stringify(nodeContent),
-						contentDigest: createContentDigest(nodeContent),
-					},
+				id: createNodeId(topicId),
+				children: [],
+				internal: {
+					type: topicNodeType,
+					content: JSON.stringify(nodeContent),
+					contentDigest: createContentDigest(nodeContent),
 				},
 			};
 
