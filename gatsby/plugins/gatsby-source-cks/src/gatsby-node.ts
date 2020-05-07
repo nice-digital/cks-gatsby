@@ -5,6 +5,7 @@ import { configure } from "./api/api";
 import { downloadAllData } from "./downloader/downloader";
 import { createTopicNodes } from "./node-creation/topics";
 import { createSpecialityNodes } from "./node-creation/specialities";
+import { createChangeNodes } from "./node-creation/changes";
 
 interface ConfigOptions {
 	/** The API base URL */
@@ -42,6 +43,7 @@ export const sourceNodes = async (
 	// Create all of our different nodes
 	createTopicNodes(fullTopics, sourceNodesArgs);
 	createSpecialityNodes(fullTopics, sourceNodesArgs);
+	createChangeNodes(changes, sourceNodesArgs);
 
 	setStatus(`Created nodes`);
 	end();
