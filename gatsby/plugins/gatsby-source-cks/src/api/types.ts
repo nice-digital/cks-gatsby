@@ -19,7 +19,7 @@ export interface ApiTopicsResponse {
 	topics: ApiPartialTopic[];
 }
 
-interface ApiTopicHtmlObject {
+export interface ApiTopicHtmlObject {
 	itemId: string;
 	parentId: string | null;
 	rootId: string;
