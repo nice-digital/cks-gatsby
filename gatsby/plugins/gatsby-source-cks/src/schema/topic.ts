@@ -72,7 +72,7 @@ export const topicSchema = `
 
 		Note: not all topics have specialities defined.
 		"""
-		specialities: [CksSpeciality!] @link(by: "name")
+		specialities: [CksSpeciality!]! @link(by: "name")
 
 		"The content chapters within the topic, taken from the \`topicHtmlObjects\` field in the API."
 		chapters: [CksChapter!]! @link
