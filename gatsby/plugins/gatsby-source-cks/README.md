@@ -87,7 +87,7 @@ module.exports = {
 
 In the case of CKS, the source data comes from the API provided by Clarity. This is fetched from the API using [`node-fetch`](https://github.com/node-fetch/node-fetch), a 'light-weight module that brings `window.fetch` to Node.js'.
 
-The live API has all 380+ topics, with all their HTML content. Loading all this data, and transforming it into nodes can take a while which makes local development cycles slower. For faster local development, use the fake CKS API on http://localhost:7000, see the _fake-api_ folder in the root of this repository. This serves loads a subset of content locally so is a lot quicker to both load content and to generate pages.
+The live API has all 380+ topics, with all their HTML content. Loading all this data, and transforming it into nodes can take a while which makes local development cycles slower. Use the fake CKS API on http://localhost:7000 instead for faster local development: see the _fake-api_ folder in the root of this repository. This serves a subset of content from local files so is a _lot_ quicker to both load content and to generate pages.
 
 > Note: this is a public repository so be careful not to commit or expose the API key for the live CKS API.
 
@@ -106,13 +106,32 @@ The plugin downloads all the data from the CKS API and creates the following 4 n
 
 ### GraphQL queries
 
-These nodes can then be queried in GraphQL. For example run the following query to select all topics with their name:
+These nodes can then be queried in GraphQL. For example run the following query to select:
+
+- all topics with a few key fields
+- all specialities, with their topics:
 
 ```graphql
 {
   allCksTopic {
     nodes {
+      id
+      topicId
       topicName
+      slug
+    }
+  }
+  allCksSpeciality {
+    nodes {
+      id
+      name
+      slug
+      topics {
+        id
+        topicId
+        topicName
+        slug
+      }
     }
   }
 }

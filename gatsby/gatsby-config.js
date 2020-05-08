@@ -1,6 +1,10 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 const moment = require("moment");
 
+require("dotenv").config({
+	path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
 	siteMetadata: {
 		title: "CKS",
