@@ -46,18 +46,26 @@ describe("createSpecialityNodes", () => {
 
 	it("should store speciality name", () => {
 		createSpecialityNodes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].name).toBe("Injuries");
-		expect(createNode.mock.calls[1][0].name).toBe("Musculoskeletal");
-		expect(createNode.mock.calls[2][0].name).toBe(
+		expect(createNode.mock.calls[0][0]).toHaveProperty("name", "Injuries");
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"name",
+			"Musculoskeletal"
+		);
+		expect(createNode.mock.calls[2][0]).toHaveProperty(
+			"name",
 			"Infections and infestations"
 		);
 	});
 
 	it("should store slugified lowercased name in slug field", () => {
 		createSpecialityNodes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].slug).toBe("injuries");
-		expect(createNode.mock.calls[1][0].slug).toBe("musculoskeletal");
-		expect(createNode.mock.calls[2][0].slug).toBe(
+		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "injuries");
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"slug",
+			"musculoskeletal"
+		);
+		expect(createNode.mock.calls[2][0]).toHaveProperty(
+			"slug",
 			"infections-and-infestations"
 		);
 	});
@@ -66,24 +74,34 @@ describe("createSpecialityNodes", () => {
 		createNodeId.mockImplementation(s => `node id: ` + s);
 		createSpecialityNodes(topics, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(3);
-		expect(createNodeId.mock.calls[0][0]).toBe("Injuries");
-		expect(createNodeId.mock.calls[1][0]).toBe("Musculoskeletal");
-		expect(createNodeId.mock.calls[2][0]).toBe("Infections and infestations");
-		expect(createNode.mock.calls[0][0].id).toBe("node id: Injuries");
-		expect(createNode.mock.calls[1][0].id).toBe("node id: Musculoskeletal");
-		expect(createNode.mock.calls[2][0].id).toBe(
+		expect(createNodeId).toHaveBeenNthCalledWith(1, "Injuries");
+		expect(createNodeId).toHaveBeenNthCalledWith(2, "Musculoskeletal");
+		expect(createNodeId).toHaveBeenNthCalledWith(
+			3,
+			"Infections and infestations"
+		);
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"id",
+			"node id: Injuries"
+		);
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"id",
+			"node id: Musculoskeletal"
+		);
+		expect(createNode.mock.calls[2][0]).toHaveProperty(
+			"id",
 			"node id: Infections and infestations"
 		);
 	});
 
 	it("should store topicIds in topics field", () => {
 		createSpecialityNodes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].topics).toStrictEqual([
+		expect(createNode.mock.calls[0][0]).toHaveProperty("topics", [
 			"topic1",
 			"topic2",
 		]);
-		expect(createNode.mock.calls[1][0].topics).toStrictEqual(["topic1"]);
-		expect(createNode.mock.calls[2][0].topics).toStrictEqual([
+		expect(createNode.mock.calls[1][0]).toHaveProperty("topics", ["topic1"]);
+		expect(createNode.mock.calls[2][0]).toHaveProperty("topics", [
 			"topic2",
 			"topic3",
 		]);
@@ -92,7 +110,8 @@ describe("createSpecialityNodes", () => {
 	it("should set contentDigest internal field using createContentDigest utility", () => {
 		createContentDigest.mockImplementationOnce(t => `contentDigest: ${t.name}`);
 		createSpecialityNodes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].internal.contentDigest).toBe(
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"internal.contentDigest",
 			"contentDigest: Injuries"
 		);
 	});

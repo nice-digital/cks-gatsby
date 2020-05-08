@@ -45,18 +45,21 @@ describe("createTopicNodes", () => {
 
 	it("should slugify the lowercased topic title", () => {
 		createTopicNodes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].slug).toBe("a-topic-name");
-		expect(createNode.mock.calls[1][0].slug).toBe("a-second-topic");
+		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "a-topic-name");
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"slug",
+			"a-second-topic"
+		);
 	});
 
 	it("should create a node id from the topic id", () => {
 		createNodeId.mockImplementation(s => `node id: ` + s);
 		createTopicNodes(topics, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(topics.length);
-		expect(createNodeId.mock.calls[0][0]).toBe("topic1");
-		expect(createNodeId.mock.calls[1][0]).toBe("topic2");
-		expect(createNode.mock.calls[0][0].id).toBe("node id: topic1");
-		expect(createNode.mock.calls[1][0].id).toBe("node id: topic2");
+		expect(createNodeId).toHaveBeenNthCalledWith(1, "topic1");
+		expect(createNodeId).toHaveBeenNthCalledWith(2, "topic2");
+		expect(createNode.mock.calls[0][0]).toHaveProperty("id", "node id: topic1");
+		expect(createNode.mock.calls[1][0]).toHaveProperty("id", "node id: topic2");
 	});
 
 	it("should store all fields on node except clinicalSpecialties and topicHtmlObjects", () => {
@@ -73,12 +76,14 @@ describe("createTopicNodes", () => {
 
 	it("should store topicHtmlObjects item ids in the chapters field", () => {
 		createTopicNodes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].chapters).toStrictEqual(["chapter1"]);
+		expect(createNode.mock.calls[0][0]).toHaveProperty("chapters", [
+			"chapter1",
+		]);
 	});
 
 	it("should store clinicalSpecialties in the specialities field", () => {
 		createTopicNodes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].specialities).toStrictEqual([
+		expect(createNode.mock.calls[0][0]).toHaveProperty("specialities", [
 			"Injuries",
 			"Musculoskeletal",
 		]);
@@ -87,7 +92,8 @@ describe("createTopicNodes", () => {
 	it("should set contentDigest internal field using createContentDigest utility", () => {
 		createContentDigest.mockImplementation(t => `contentDigest: ${t.topicId}`);
 		createTopicNodes(topics, sourceNodesArgs);
-		expect(createNode.mock.calls[0][0].internal.contentDigest).toBe(
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"internal.contentDigest",
 			"contentDigest: topic1"
 		);
 	});
