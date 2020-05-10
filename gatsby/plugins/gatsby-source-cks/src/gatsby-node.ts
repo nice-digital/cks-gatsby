@@ -14,10 +14,9 @@ interface ConfigOptions {
 	/** The api key for authentication via a request header */
 	apiKey: string;
 	/**
+	 * The date from which to load changes.
 	 *
-	 *
-	 * @type {Date}
-	 * @memberof ConfigOptions
+	 * Leave blank to default to the start of the previous month.
 	 */
 	changesSinceDate?: Date;
 }

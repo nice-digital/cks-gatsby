@@ -8,15 +8,15 @@
 <summary><strong>Table of contents</strong></summary>
 <!-- START doctoc -->
 - [Gatsby site for CKS](#gatsby-site-for-cks)
-	- [Stack](#stack)
-		- [Software](#software)
-		- [Tests](#tests)
-			- [Debugging tests](#debugging-tests)
-			- [Why not Enzyme?](#why-not-enzyme)
-	- [:rocket: Set up](#rocket-set-up)
-		- [Other commands](#other-commands)
-	- [Source plugin](#source-plugin)
-		- [Production API](#production-api)
+  - [Stack](#stack)
+    - [Software](#software)
+    - [Tests](#tests)
+      - [Debugging tests](#debugging-tests)
+      - [Why not Enzyme?](#why-not-enzyme)
+  - [:rocket: Set up](#rocket-set-up)
+    - [Other commands](#other-commands)
+  - [Source plugin](#source-plugin)
+    - [Production API](#production-api)
 <!-- END doctoc -->
 </details>
 
@@ -124,20 +124,20 @@ In the case of CKS, the source data comes from the API provided by Clarity. The 
 
 ### Production API
 
-The source plugin (see above) points to the local, fake API (no http://lcaolhost:7000) by default. Set the following environment variables to point to a different URL:
+The [source plugin](#source-plugin) (see above) points to the local, fake API (on http://lcaolhost:7000) by default. Set the following environment variables to point to a different URL:
 
 - `API_BASE_URL`
 - `API_KEY`
 
 Create a _.env.development_ file (for local development) or _.env.production_ file (for the production build) in this _gatsby_ folder to set these environment variables.
 
-> Note: these files are deliberately ignore from git
+> Note: these .env files are deliberately ignore from git
 
-For example, create a _.env.production_ file pointing to the live API to create a live-like production buil via `npm run build`:
+For example, create a _.env.production_ file pointing to the live API to create a live-like production build via `npm run build`:
 
 ```
 API_KEY=xyzetc
 API_BASE_URL=https://whatever
 ```
 
-> Note: you can get the live API values from the TeamCity build parameters.
+> Note: you can get the live API key and URL from the TeamCity build parameters.

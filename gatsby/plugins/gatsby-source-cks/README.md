@@ -10,7 +10,7 @@
 		- [Configuration](#configuration)
 		- [Data fetching](#data-fetching)
 			- [Authentication](#authentication)
-		- [Node types](#node-types)
+		- [GraphQL node types](#graphql-node-types)
 		- [GraphQL queries](#graphql-queries)
 
 ## :rocket: Quick setup
@@ -26,23 +26,16 @@ GraphiQL is an browser-based IDE for GraphQL queries that's built in to Gatsby. 
 
 ## What is a source plugin?
 
-Gatsby sites get their data via source plugins. Source plugins fetch data from somewhere (e.g. an API, database, filesystem etc) and turn them into Gatsby nodes. These nodes can then be queried via GraphQL inside Gatsby React components. Follow [part 5 of the Gatsby tutorial ('Source Plugins')](https://www.gatsbyjs.org/tutorial/part-five/) if you're new to sourcing data in Gatsby.
+Gatsby sites get their data via source plugins. Source plugins fetch data from somewhere (e.g. an API, database, filesystem etc) and turn them into Gatsby nodes. These nodes can then be queried via GraphQL inside Gatsby React components. Follow [part 5 of the Gatsby tutorial ('Source Plugins')](https://www.gatsbyjs.org/tutorial/part-five/) if you're new to sourcing data in Gatsby and see [GraphQL & Gatsby](https://www.gatsbyjs.org/docs/graphql/) if you're new to GraphQL.
 
 ## CKS source plugin
 
 The source plugin for CKS is a custom one (_gatsby-source-cks_). The Gatsby docs has a useful section on ['Sourcing from Private APIs'](https://www.gatsbyjs.org/docs/sourcing-from-private-apis/) which describes how to write a custom plugin to source data from an API.
 
-Our custom source plugin handles data fetching and mapping to Gatsby nodes, but doesn't create pages. This gives a very clear separation of the two main components of the Gatsby build:
+Our custom source plugin handles data fetching (from the CKS JSON API) and mapping this data to Gatsby nodes (for querying via GraphQL). It _doesn't_ create pages: this gives a very clear separation of the two main components of the Gatsby build:
 
-- data loading logic
-- website page generation logic.
-
-You can think of the Gatsby build process in the following steps:
-
-1. _gatsby-source-cks_ sources nodes:
-   1. Fetches data from the CKS API
-   2. Creates nodes
-2. Gatsby site builds and creates pages
+- data loading logic (via this plugin: gatsby-source-cks)
+- website page generation logic (via the Gatsby site - see the _gatsby_ folder in the repo root).
 
 ### Plugin usage
 
@@ -57,6 +50,10 @@ module.exports = {
 ```
 
 > Note: this is already configured, this is just showing you how it gets referenced, for info!
+
+There's no need to install anything else. Gatsby loads local plugins automatically, see [Loading Plugins from Your Local Plugins Folder](https://www.gatsbyjs.org/docs/loading-plugins-from-your-local-plugins-folder/) in the Gatsby docs.
+
+The plugin gets its dependencies from the parent gatsby folder. This because it makes installing dependencies easier - you don't have to run `npm i` in both folders, just the parent folder. This works because of the way that Node resolves modules (see [Loading from node_modules Folders](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders) in the Node docs).
 
 ### Configuration
 
@@ -89,15 +86,15 @@ In the case of CKS, the source data comes from the API provided by Clarity. This
 
 The live API has all 380+ topics, with all their HTML content. Loading all this data, and transforming it into nodes can take a while which makes local development cycles slower. Use the fake CKS API on http://localhost:7000 instead for faster local development: see the _fake-api_ folder in the root of this repository. This serves a subset of content from local files so is a _lot_ quicker to both load content and to generate pages.
 
-> Note: this is a public repository so be careful not to commit or expose the API key for the live CKS API.
+> Note: this is a public repository so **be careful** not to commit or expose the API key for the live CKS API.
 
 #### Authentication
 
-Authentication for the API (both live and fake) requires an authentication header. This is automatically sent with the requests to the API, as long as the `apiKey` config option is set.
+Authentication for the API (both live and fake) requires an authentication header. This is automatically sent with the requests to the API, as long as the `apiKey` config option is set (see [configuration](#configuration) above).
 
-### Node types
+### GraphQL node types
 
-The plugin downloads all the data from the CKS API and creates the following 4 node types:
+The plugin downloads all the data from the CKS API and creates the following 4 node types for querying in GraphQL:
 
 - `CksTopic` - A full topic object, taken from the _/topic/guid_ endpoint in the API
 - `CksChapter` - the nested chapters within a topic, taken from the `topicHtmlObjects` API field
@@ -106,7 +103,7 @@ The plugin downloads all the data from the CKS API and creates the following 4 n
 
 ### GraphQL queries
 
-These nodes can then be queried in GraphQL. For example run the following query to select:
+These nodes can then be [queried in GraphQL in Gatsby](https://www.gatsbyjs.org/docs/running-queries-with-graphiql/). For example run the following query to select:
 
 - all topics with a few key fields
 - all specialities, with their topics:
