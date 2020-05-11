@@ -1,0 +1,54 @@
+{
+  "topicName": "Olecranon bursitis",
+  "topicId": "2b5681b1-a6ac-486f-9c29-562f1d00c942",
+  "exportId": "73ca9d3b-e438-4ba8-9d22-aa16011b9d11",
+  "dataId": "1d96f713-b76b-47de-872b-aa17007fa4e2",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:44:42.826268+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "The olecranon bursa is a sac overlying the olecranon process of the elbow beneath the skin.",
+  "lastRevised": "Last revised in September 2016",
+  "terms": [
+    {
+      "code": "D004550",
+      "term": "Elbow"
+    },
+    {
+      "code": "D004551",
+      "term": "Elbow Joint"
+    },
+    {
+      "code": "D002062",
+      "term": "Bursitis"
+    },
+    {
+      "code": "D056740",
+      "term": "Olecranon Process"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c202d4fc-7433-4926-811a-ae4a21e49104",
+      "parentId": null,
+      "rootId": "c202d4fc-7433-4926-811a-ae4a21e49104",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e4d9ed8d-2520-4d17-93d0-bdb9bd7193df --><h1>Olecranon bursitis: Summary</h1><!-- end field e4d9ed8d-2520-4d17-93d0-bdb9bd7193df -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-08-01T00:00:00+01:00",
+      "dateTo": "2016-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made, although minor restructuring of the topic has been undertaken."
+    }
+  ]
+}

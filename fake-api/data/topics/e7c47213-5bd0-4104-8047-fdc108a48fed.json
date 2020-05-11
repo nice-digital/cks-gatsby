@@ -1,0 +1,71 @@
+{
+  "topicName": "Prostatitis - chronic",
+  "topicId": "e7c47213-5bd0-4104-8047-fdc108a48fed",
+  "exportId": "518e57e6-e116-46ad-9dbd-aa8600be191d",
+  "dataId": "27b3fd3d-ad9b-4405-9560-aa8600c43974",
+  "number": 6,
+  "dateOfExport": "2019-07-10T11:54:24.8695429+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Chronic prostatitis is characterized by at least 3 months of pain in the perineum or pelvic floor, often associated with lower urinary tract symptoms",
+  "lastRevised": "Last revised in February 2019",
+  "terms": [
+    {
+      "code": "D017699",
+      "term": "Pelvic Pain"
+    },
+    {
+      "code": "D011472",
+      "term": "Prostatitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Kidney disease and urology",
+    "Men's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6ddf2816-262a-432f-a8b1-f24c41e8c03b",
+      "parentId": null,
+      "rootId": "6ddf2816-262a-432f-a8b1-f24c41e8c03b",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field fc175275-9440-487a-87ab-c9f191b59308 --><h1>Prostatitis - chronic:&nbsp;Summary</h1><!-- end field fc175275-9440-487a-87ab-c9f191b59308 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The recommendation to prescribe a course of fluoroquinolones has been removed. This was on the advice of the MHRA and European Medicines Agency. EMA reviewed serious, disabling and potentially permanent side effects with quinolone and fluoroquinolone antibiotics given by mouth, injection or inhalation."
+    },
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Aortic aneurysm and dissection is now listed as an adverse effect of ciprofloxacin."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "SPC update on quinolones to align all CKS topics prescribing advice. Prostatitis &ndash; chronic, Gonorrhoea, Pyelonephritis, Diarrhoea &ndash; prevention and advice for travellers, Dyspepsia &ndash; unidentified cause, Dyspepsia &ndash; proven functional, Dyspepsia &ndash; proven peptic ulcer, Diverticular disease, Gastroenteritis and Scrotal swellings."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": ""
+    },
+    {
+      "dateFrom": "2014-12-01T00:00:00+00:00",
+      "dateTo": "2015-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. The main changes are to the management section. For men with chronic prostatitis/chronic pelvic pain syndrome initial management in primary care now includes a 4&ndash;6 week trial of an alpha-blocker or an antibiotic (ciprofloxacin, ofloxacin or trimethoprim if a quinolone is contraindicated or not tolerated)."
+    }
+  ]
+}

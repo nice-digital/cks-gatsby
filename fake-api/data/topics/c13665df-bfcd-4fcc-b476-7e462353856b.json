@@ -1,0 +1,47 @@
+{
+  "topicName": "Pityriasis versicolor",
+  "topicId": "c13665df-bfcd-4fcc-b476-7e462353856b",
+  "exportId": "9fe34779-5465-4d9e-bb05-aa16000365dd",
+  "dataId": "7d0046c8-deb3-4f1a-90d1-aa17007ec5cc",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:41:32.819105+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Pityriasis versicolor (also known as tinea versicolor) is a common fungal infection of the skin that is localized to the stratum corneum.",
+  "lastRevised": "Last revised in December 2015",
+  "terms": [
+    {
+      "code": "D008290",
+      "term": "Malassezia"
+    },
+    {
+      "code": "D014010",
+      "term": "Tinea Versicolor"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0f3e812b-e6c8-4e77-9248-a073dacda9ea",
+      "parentId": null,
+      "rootId": "0f3e812b-e6c8-4e77-9248-a073dacda9ea",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b0ca9bb8-a45d-4799-b413-efe637eb73f3 --><h1>Pityriasis versicolor: Summary</h1><!-- end field b0ca9bb8-a45d-4799-b413-efe637eb73f3 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-11-01T00:00:00+00:00",
+      "dateTo": "2015-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No changes to clinical recommendations have been made."
+    }
+  ]
+}

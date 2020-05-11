@@ -1,0 +1,49 @@
+{
+  "topicName": "Ectopic pregnancy",
+  "topicId": "cadebc41-d428-49d3-90a9-9227e17d5add",
+  "exportId": "036e80f2-5c31-45ab-aea6-aa8600be191d",
+  "dataId": "b0c8933b-1ffd-45fe-b3f1-aa8600c44265",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:54:32.0166081+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "An ectopic pregnancy develops outside the uterine cavity with most occurring in the fallopian tubes.",
+  "lastRevised": "Last revised in May 2018",
+  "terms": [
+    {
+      "code": "D011271",
+      "term": "Pregnancy, Ectopic"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Pregnancy",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d3bdfb71-402d-49b1-a9e4-997054e0ccea",
+      "parentId": null,
+      "rootId": "d3bdfb71-402d-49b1-a9e4-997054e0ccea",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d80169dc-953d-4c64-8d1b-d039df9285fc --><h1>Ectopic pregnancy: Summary</h1><!-- end field d80169dc-953d-4c64-8d1b-d039df9285fc -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The section on Managing suspected ectopic pregnancy has been clarified, and information on anti-D immunoglobulin for rhesus-negative women who have had surgical removal of an ectopic pregnancy has been included in the section on Follow up after an ectopic pregnancy."
+    },
+    {
+      "dateFrom": "2018-04-01T00:00:00+01:00",
+      "dateTo": "2018-04-30T23:59:59+01:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in February 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of the topic. No changes to clinical recommendations have been made."
+    }
+  ]
+}

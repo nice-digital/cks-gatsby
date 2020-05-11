@@ -1,0 +1,43 @@
+{
+  "topicName": "Febrile seizure",
+  "topicId": "943c6b53-5fc0-4f14-bd2b-373f5b53aa25",
+  "exportId": "433e8d37-7282-4a3a-a0a4-aa8600be191d",
+  "dataId": "4e91708d-9c8a-4163-904a-aa8600c31f39",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:50:24.0356498+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "A febrile seizure is a seizure associated with fever caused by infection or inflammation outside the central nervous system",
+  "lastRevised": "Last revised in November 2018",
+  "terms": [
+    {
+      "code": "D003294",
+      "term": "Seizures, Febrile"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "ce9560cb-01ee-42d8-baf5-1650305b6c0f",
+      "parentId": null,
+      "rootId": "ce9560cb-01ee-42d8-baf5-1650305b6c0f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c7bb5c6f-be6a-4f30-ae4a-a261172a60ad --><h1>Febrile seizure: Summary</h1><!-- end field c7bb5c6f-be6a-4f30-ae4a-a261172a60ad -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring, and new nodes on Assessment and Differential diagnosis have been added. Recommendations in the Management section have been updated in line with current literature."
+    }
+  ]
+}

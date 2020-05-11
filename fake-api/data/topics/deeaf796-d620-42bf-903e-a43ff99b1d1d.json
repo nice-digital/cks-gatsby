@@ -1,0 +1,48 @@
+{
+  "topicName": "Peripheral arterial disease",
+  "topicId": "deeaf796-d620-42bf-903e-a43ff99b1d1d",
+  "exportId": "540c5cc9-7ec8-45cf-823c-aa16000365dd",
+  "dataId": "69868f0b-b0b8-4ecd-80e6-aa17007feb73",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:45:42.4981722+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "The term peripheral arterial disease is a narrowing or occlusion of the peripheral arteries affecting the blood supply to the lower limbs.",
+  "lastRevised": "Last revised in September 2015",
+  "terms": [
+    {
+      "code": "D058729",
+      "term": "Peripheral Arterial Disease"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c3a12d82-32b0-48db-aac1-bf6de4b2d884",
+      "parentId": null,
+      "rootId": "c3a12d82-32b0-48db-aac1-bf6de4b2d884",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ab28c6c1-6129-4d50-9839-2a8e5f0fca25 --><h1>Peripheral arterial disease: Summary</h1><!-- end field ab28c6c1-6129-4d50-9839-2a8e5f0fca25 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "To reflect the manufacturer&#39;s Summary of Product Characteristics, the section on Prescribing information has been updated with the addition of liver damage as an adverse effect of naftidrofuryl oxalate."
+    },
+    {
+      "dateFrom": "2013-11-01T00:00:00+00:00",
+      "dateTo": "2014-04-30T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

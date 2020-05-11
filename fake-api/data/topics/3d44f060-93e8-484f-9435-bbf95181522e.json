@@ -1,0 +1,47 @@
+{
+  "topicName": "Herpes simplex - ocular",
+  "topicId": "3d44f060-93e8-484f-9435-bbf95181522e",
+  "exportId": "cb48c626-0a8f-4d84-b406-aa8600be191d",
+  "dataId": "2eeb6001-bd74-46dd-a3d6-aa8600c45f34",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:54:56.8349965+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Herpes simplex virus (HSV) ocular infections can cause inflammation of the retina (retinitis), iris and associated uveal tract (iritis or uveitis)",
+  "lastRevised": "Last revised in November 2016",
+  "terms": [
+    {
+      "code": "D016849",
+      "term": "Keratitis, Herpetic"
+    },
+    {
+      "code": "D006561",
+      "term": "Herpes Simplex"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Eyes",
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "144e9bad-763d-42b3-bf6f-258a8dcdee77",
+      "parentId": null,
+      "rootId": "144e9bad-763d-42b3-bf6f-258a8dcdee77",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b9750748-6bbd-4a98-afbf-0af050a12d75 --><h1>Herpes simplex - ocular:&nbsp;Summary</h1><!-- end field b9750748-6bbd-4a98-afbf-0af050a12d75 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-10-01T00:00:00+01:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone minor restructuring. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

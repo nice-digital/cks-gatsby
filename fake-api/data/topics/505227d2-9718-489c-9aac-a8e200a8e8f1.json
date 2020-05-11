@@ -1,0 +1,44 @@
+{
+  "topicName": "Domestic violence and abuse",
+  "topicId": "505227d2-9718-489c-9aac-a8e200a8e8f1",
+  "exportId": "77d3a4d5-b4c7-4d65-ab38-aa3900ee2979",
+  "dataId": "cab59e1b-6191-454c-bed5-aa3900f496c1",
+  "number": 4,
+  "dateOfExport": "2019-04-24T14:50:29.5301888+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Domestic violence and abuse is a serious and common problem",
+  "lastRevised": "Last revised in July 2018",
+  "terms": [
+    {
+      "code": "D017579",
+      "term": "Domestic violence"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Women's health",
+    "Men's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "28c062c1-bdfe-4623-ad73-a8e200a8f27f",
+      "parentId": null,
+      "rootId": "28c062c1-bdfe-4623-ad73-a8e200a8f27f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 9aaff8dd-3396-4582-80ce-a8e200a8f27f --><h1>Domestic violence and abuse: Summary</h1><!-- end field 9aaff8dd-3396-4582-80ce-a8e200a8f27f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-07-01T00:00:00+01:00",
+      "dateTo": "2018-07-31T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "topicName": "Red eye",
+  "topicId": "4bf93da0-c44a-46ac-a037-45acff9fe791",
+  "exportId": "0521024f-20e0-4e03-bbfc-aa16000365dd",
+  "dataId": "4f950ad6-1e55-409f-b06c-aa17007ecd52",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:41:39.8023421+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Serious and potentially sight-threatening causes of red eye include: Acute glaucoma, Corneal ulcer, corneal foreign body, Anterior uveitis, Scleritis.",
+  "lastRevised": "Last revised in October 2016",
+  "terms": [
+    {
+      "code": "D001762",
+      "term": "Blepharitis"
+    },
+    {
+      "code": "D007634",
+      "term": "Keratitis"
+    },
+    {
+      "code": "D003231",
+      "term": "Conjunctivitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Eyes"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "80994f4c-606c-4b3d-bf4a-9a833e4a1e3a",
+      "parentId": null,
+      "rootId": "80994f4c-606c-4b3d-bf4a-9a833e4a1e3a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a6668209-48c0-4008-bfbb-89b0237ca442 --><h1>Red eye: Summary</h1><!-- end field a6668209-48c0-4008-bfbb-89b0237ca442 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-09-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. Changes include:"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "topicName": "Herpes simplex - genital",
+  "topicId": "501ea0cd-acdf-4cd7-bab7-e2043816027a",
+  "exportId": "a8556920-2752-4e45-a0d7-aa16000365dd",
+  "dataId": "a709ce1d-ee6f-42a0-ac9a-aa170082613d",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:40.6178012+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Genital herpes simplex is a sexually transmitted infection (STI), caused by infection with herpes simplex virus (HSV) 1 or HSV-2",
+  "lastRevised": "Last revised in May 2017",
+  "terms": [
+    {
+      "code": "D006558",
+      "term": "Herpes Genitalis"
+    },
+    {
+      "code": "D006561",
+      "term": "Herpes Simplex"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Men's health",
+    "Sexual health",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3acb72de-c84e-4ab9-a312-c462ed1448d9",
+      "parentId": null,
+      "rootId": "3acb72de-c84e-4ab9-a312-c462ed1448d9",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field ec2f67d3-801e-4a1c-ab17-1c9b399931f0 --><h1>Herpes simplex - genital:&nbsp;Summary</h1><!-- end field ec2f67d3-801e-4a1c-ab17-1c9b399931f0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-04-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

@@ -13,3 +13,13 @@ export interface Topic extends PartialTopic {
 	/** Intro sentence (or two) describing the topic */
 	topicSummary: string;
 }
+
+export interface PartialSpeciality {
+	id: string;
+	name: string;
+	slug: string;
+}
+
+export interface Speciality extends PartialSpeciality {
+	topics: PartialTopic[];
+}

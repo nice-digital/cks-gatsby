@@ -1,0 +1,71 @@
+{
+  "topicName": "Incontinence - urinary, in women",
+  "topicId": "9e411d60-4060-4d95-8511-0998688cea47",
+  "exportId": "bee7c340-acff-485e-a5c7-aa8600be191d",
+  "dataId": "09ef2344-55cf-4144-a330-aa8600c3c9ef",
+  "number": 5,
+  "dateOfExport": "2019-07-10T11:52:49.6501272+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Urinary incontinence is defined as any involuntary leakage of urine. The main types are:Stress urinary incontinence.Urgency urinary incontinence.",
+  "lastRevised": "Last revised in January 2017",
+  "terms": [
+    {
+      "code": "D053201",
+      "term": "Urinary Bladder, Overactive"
+    },
+    {
+      "code": "D014549",
+      "term": "Urinary Incontinence"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Kidney disease and urology",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7f1822dc-707c-4ab8-9169-90eadae9a8af",
+      "parentId": null,
+      "rootId": "7f1822dc-707c-4ab8-9169-90eadae9a8af",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 7c7459b2-c921-411b-8a46-31ded52f0e0c --><h1>Incontinence - urinary, in women:&nbsp;Summary</h1><!-- end field 7c7459b2-c921-411b-8a46-31ded52f0e0c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Update to drug interactions section for intravaginal oestrogen as per the manufacturer&#39;s Summary of Product Characteristics (SPC)."
+    },
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Following post-market surveillance, severe hypertension, dizziness, constipation, diarrhoea, headache and dizziness have been added as adverse effects ABPI, 2016.Following a Medicines and Healthcare products Regulatory Agency (MHRA) Drug safety update severe uncontrolled hypertension has been added as a contraindication MHRA, 2015."
+    },
+    {
+      "dateFrom": "2015-06-01T00:00:00+01:00",
+      "dateTo": "2015-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Nausea has been added as a common adverse effect of mirabegron following an update to the manufacturer&#39;s Summary of Product Characteristics (SPC) ABPI Medicines Compendium, 2015."
+    },
+    {
+      "dateFrom": "2015-02-01T00:00:00+00:00",
+      "dateTo": "2015-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Angioedema has been added as a rare adverse effect of mirabegron following an update to the manufacturer&#39;s SPC ABPI Medicines Compendium, 2014d."
+    },
+    {
+      "dateFrom": "2014-10-01T00:00:00+01:00",
+      "dateTo": "2014-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. The following changes have been made to this topic:"
+    }
+  ]
+}

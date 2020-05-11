@@ -1,0 +1,48 @@
+{
+  "topicName": "Coeliac disease",
+  "topicId": "b0551c5c-9ab6-4db2-b8e5-27b98c6108ac",
+  "exportId": "594ea41b-e3c7-4c9e-9752-aa8600be191d",
+  "dataId": "477ba500-be31-4a58-8ada-aa8600c3fe82",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:53:34.3998754+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Coeliac disease is an autoimmune disorder in which a heightened immunological response to peptides derived from gluten proteins",
+  "lastRevised": "Last revised in October 2016",
+  "terms": [
+    {
+      "code": "D002446",
+      "term": "Celiac Disease"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "30247e4b-a455-4ec5-91d5-93ff523b2c25",
+      "parentId": null,
+      "rootId": "30247e4b-a455-4ec5-91d5-93ff523b2c25",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 221834f8-249d-4bee-ac6d-e6184935a1d5 --><h1>Coeliac disease: Summary</h1><!-- end field 221834f8-249d-4bee-ac6d-e6184935a1d5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-10-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "New NICE quality standard for coeliac disease added NICE, 2016."
+    },
+    {
+      "dateFrom": "2015-12-01T00:00:00+00:00",
+      "dateTo": "2016-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "topicName": "Bruising",
+  "topicId": "a2ffbaff-593f-430e-ba07-22a88a81554f",
+  "exportId": "c0858cfd-6ef3-4e99-a1d8-aa16000365dd",
+  "dataId": "5ead5d12-db0e-4c5c-9d3f-aa1700823eac",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:11.498723+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "A bruise is a haematoma which forms due to bleeding under intact skin into subcutaneous tissue, due to vascular damage or injury",
+  "lastRevised": "Last revised in March 2016",
+  "terms": [
+    {
+      "code": "D011693",
+      "term": "Purpura"
+    },
+    {
+      "code": "D004438",
+      "term": "Ecchymosis"
+    },
+    {
+      "code": "D003288",
+      "term": "Contusions"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Haematology",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7649d7e1-bcf9-469f-a086-53dec7f66c8f",
+      "parentId": null,
+      "rootId": "7649d7e1-bcf9-469f-a086-53dec7f66c8f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 804c027e-184c-4cc4-853e-cce6f6765aba --><h1>Bruising: Summary</h1><!-- end field 804c027e-184c-4cc4-853e-cce6f6765aba -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-03-01T00:00:00+00:00",
+      "dateTo": "2016-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2016 to identify evidence-based guidelines, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made, but additional emphasis has been put on adults with possible safeguarding issues, such as the elderly."
+    }
+  ]
+}

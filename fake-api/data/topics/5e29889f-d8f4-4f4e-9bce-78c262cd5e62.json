@@ -1,0 +1,52 @@
+{
+  "topicName": "NSAIDs - prescribing issues",
+  "topicId": "5e29889f-d8f4-4f4e-9bce-78c262cd5e62",
+  "exportId": "ff78191d-711f-4ac4-b112-aa3900ee2979",
+  "dataId": "a5bfde6f-7e75-45e3-b163-aa3900f473c8",
+  "number": 3,
+  "dateOfExport": "2019-04-24T14:50:00.0121807+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Nonsteroidal anti-inflammatory drugs (NSAIDs) inhibit cyclo-oxygenase (COX) enzymes",
+  "lastRevised": "Last revised in August&nbsp;2018",
+  "terms": [
+    {
+      "code": "D052246",
+      "term": "Cyclooxygenase 2 Inhibitors"
+    },
+    {
+      "code": "D016861",
+      "term": "Cyclooxygenase Inhibitors"
+    },
+    {
+      "code": "D000894",
+      "term": "Anti-Inflammatory Agents, Non-Steroidal"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Gastrointestinal",
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7a7a0351-b34b-4113-a327-079cc22e1ba9",
+      "parentId": null,
+      "rootId": "7a7a0351-b34b-4113-a327-079cc22e1ba9",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 1d2ace4e-b745-4cd2-941c-74e86b406619 --><h1>NSAIDs - prescribing issues:&nbsp;Summary</h1><!-- end field 1d2ace4e-b745-4cd2-941c-74e86b406619 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-08-01T00:00:00+01:00",
+      "dateTo": "2018-08-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

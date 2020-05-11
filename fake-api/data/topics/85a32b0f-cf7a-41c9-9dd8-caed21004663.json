@@ -1,0 +1,42 @@
+{
+  "topicName": "Vitiligo",
+  "topicId": "85a32b0f-cf7a-41c9-9dd8-caed21004663",
+  "exportId": "9bc2cd59-4714-4feb-a1e2-aa16000365dd",
+  "dataId": "6ecc8e95-8fff-412c-a9a3-aa1700825de4",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:38.0972221+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Vitiligo is an acquired, chronic depigmentation disorder characterized by white patches on the skin.",
+  "lastRevised": "Last revised in February 2016",
+  "terms": [
+    {
+      "code": "D014820",
+      "term": "Vitiligo"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "e43925e6-ed19-473d-8117-e1fa9d037d9e",
+      "parentId": null,
+      "rootId": "e43925e6-ed19-473d-8117-e1fa9d037d9e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 372a1b40-a878-49ac-b52f-5e41f473de5a --><h1>Vitiligo: Summary</h1><!-- end field 372a1b40-a878-49ac-b52f-5e41f473de5a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-01-01T00:00:00+00:00",
+      "dateTo": "2016-02-29T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

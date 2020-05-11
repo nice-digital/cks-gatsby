@@ -1,0 +1,63 @@
+{
+  "topicName": "Morton's neuroma",
+  "topicId": "9c31e668-1581-468d-96ce-d99c2ab7aafd",
+  "exportId": "a324c1cd-d396-4a7a-a117-aa8600be191d",
+  "dataId": "82222a49-2715-43e9-9be4-aa8600c45310",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:54:46.8609682+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Morton's neuroma is a benign fibrotic thickening of a plantar interdigital nerve that is a response to irritation.",
+  "lastRevised": "Last revised in September 2016",
+  "terms": [
+    {
+      "code": "D037061",
+      "term": "Metatarsalgia"
+    },
+    {
+      "code": "D014034",
+      "term": "Toes"
+    },
+    {
+      "code": "D005545",
+      "term": "Forefoot, Human"
+    },
+    {
+      "code": "D005528",
+      "term": "Foot"
+    },
+    {
+      "code": "D005534",
+      "term": "Foot Diseases"
+    },
+    {
+      "code": "D009463",
+      "term": "Neuroma"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3f8b4fcf-701f-4018-9d52-1f25e04613ed",
+      "parentId": null,
+      "rootId": "3f8b4fcf-701f-4018-9d52-1f25e04613ed",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 6fd1ee43-172a-4c64-868d-f1d23eea8af4 --><h1>Morton&#39;s neuroma:&nbsp;Summary</h1><!-- end field 6fd1ee43-172a-4c64-868d-f1d23eea8af4 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-09-01T00:00:00+01:00",
+      "dateTo": "2016-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. Nonsteroidal anti-inflammatory drugs are now included as a management option and there have been minor changes to the recommendations on referral. There have also been minor structural changes to the topic."
+    }
+  ]
+}

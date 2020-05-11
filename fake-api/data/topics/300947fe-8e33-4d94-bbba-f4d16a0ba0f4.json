@@ -1,0 +1,52 @@
+{
+  "topicName": "Rubella",
+  "topicId": "300947fe-8e33-4d94-bbba-f4d16a0ba0f4",
+  "exportId": "9eff671a-3835-4048-9c8f-aa16000365dd",
+  "dataId": "941db08b-68fd-4367-824d-aa170081ca84",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:52:32.2872365+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Rubella (also known as German measles) is an infection caused by viruses of the genus Rubivirus of the family Togaviradae.",
+  "lastRevised": "Last revised in November 2018",
+  "terms": [
+    {
+      "code": "D012410",
+      "term": "Rubella Syndrome, Congenital"
+    },
+    {
+      "code": "D012412",
+      "term": "Rubella virus"
+    },
+    {
+      "code": "D012409",
+      "term": "Rubella"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations",
+    "Pregnancy"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "de85d505-f058-4336-800e-12c4d66fa380",
+      "parentId": null,
+      "rootId": "de85d505-f058-4336-800e-12c4d66fa380",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field bacf262c-0a9d-400d-88b4-0fbf48dc617c --><h1>Rubella:&nbsp;Summary</h1><!-- end field bacf262c-0a9d-400d-88b4-0fbf48dc617c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-11-01T00:00:00+00:00",
+      "dateTo": "2018-11-30T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

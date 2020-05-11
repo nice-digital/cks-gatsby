@@ -1,0 +1,42 @@
+{
+  "topicName": "Cholesteatoma",
+  "topicId": "ca3de7f0-81b2-498d-bfdf-5d2f1cb03753",
+  "exportId": "be0bf793-9187-4a45-8d28-aa9500afd841",
+  "dataId": "f1d55de8-6d64-47c5-975e-aa9500ebc0f2",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:18:20.1232867+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "A cholesteatoma is an abnormal sac of keratinizing squamous epithelium and accumulation of keratin within the middle ear or mastoid air cell spaces",
+  "lastRevised": "Last revised in June 2019",
+  "terms": [
+    {
+      "code": "D002781",
+      "term": "Cholesteatoma"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Ear, nose and throat"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "4a065a4c-708b-4ef1-9737-beefc482998f",
+      "parentId": null,
+      "rootId": "4a065a4c-708b-4ef1-9737-beefc482998f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 4b3a4ac2-c963-4949-972b-765955ecdfb1 --><h1>Cholesteatoma:&nbsp;Summary</h1><!-- end field 4b3a4ac2-c963-4949-972b-765955ecdfb1 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-06-30T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in May 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

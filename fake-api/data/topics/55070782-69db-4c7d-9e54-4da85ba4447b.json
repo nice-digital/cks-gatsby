@@ -1,0 +1,55 @@
+{
+  "topicName": "Hepatitis C",
+  "topicId": "55070782-69db-4c7d-9e54-4da85ba4447b",
+  "exportId": "3b78d731-269c-45ad-98dc-aa8600be191d",
+  "dataId": "1c0e55c6-6984-41d0-986d-aa8600c3d576",
+  "number": 6,
+  "dateOfExport": "2019-07-10T11:52:59.5447816+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Hepatitis C is a slow, progressive disease of the liver caused by infection with the blood-borne hepatitis C virus (HCV).",
+  "lastRevised": "Last revised in November 2016",
+  "terms": [
+    {
+      "code": "D006525",
+      "term": "Hepatitis, Viral, Human"
+    },
+    {
+      "code": "D006526",
+      "term": "Hepatitis C"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Gastrointestinal",
+    "Infections and infestations",
+    "Kidney disease and urology"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "fa83fa21-3712-4f7d-9f57-52a34984ed60",
+      "parentId": null,
+      "rootId": "fa83fa21-3712-4f7d-9f57-52a34984ed60",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 20327475-cea9-401a-a4de-c7834cdec576 --><h1>Hepatitis C: Summary</h1><!-- end field 20327475-cea9-401a-a4de-c7834cdec576 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information that transient elastography should be offered to diagnose cirrhosis in people with Hepatitis C has been added to the Specialist investigations and management section of this topic, in line with the National Institute for Health and Care Excellence (NICE) guideline Cirrhosis in over 16s: assessment and management NICE, 2016."
+    },
+    {
+      "dateFrom": "2015-12-01T00:00:00+00:00",
+      "dateTo": "2016-02-29T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to the recommendations have been made."
+    }
+  ]
+}

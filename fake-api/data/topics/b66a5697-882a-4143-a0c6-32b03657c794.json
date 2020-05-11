@@ -1,0 +1,42 @@
+{
+  "topicName": "Gallstones",
+  "topicId": "b66a5697-882a-4143-a0c6-32b03657c794",
+  "exportId": "dc87910c-f5f1-4dab-ad73-aa8e00b792d1",
+  "dataId": "ead06c20-51e1-4f62-a29b-aa9500ec966b",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:21:22.3354238+00:00",
+  "nextPlannedReviewBy": "2025-12-31T23:59:59+00:00",
+  "topicSummary": "A gallstone (cholelithiasis) is a solid deposit that forms within the gallbladder. One or more gallstones may form.",
+  "lastRevised": "Last revised in June&nbsp;2019",
+  "terms": [
+    {
+      "code": "D042882",
+      "term": "Gallstones"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c95ac327-eca1-45cb-a25e-d1b1d1fb3cc5",
+      "parentId": null,
+      "rootId": "c95ac327-eca1-45cb-a25e-d1b1d1fb3cc5",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 628c2135-1d60-4971-be83-74ed709c7bc8 --><h1>Gallstones:&nbsp;Summary</h1><!-- end field 628c2135-1d60-4971-be83-74ed709c7bc8 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

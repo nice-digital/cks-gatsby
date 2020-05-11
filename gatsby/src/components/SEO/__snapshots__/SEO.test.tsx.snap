@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SEO should set default title and description when none provided 1`] = `
+<head>
+  <title>
+    CKS | NICE
+  </title>
+  <meta
+    content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice"
+    data-react-helmet="true"
+    name="description"
+  />
+  <meta
+    content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice"
+    data-react-helmet="true"
+    property="og:description"
+  />
+  <meta
+    content="en_GB"
+    data-react-helmet="true"
+    property="og:locale"
+  />
+  <meta
+    content="website"
+    data-react-helmet="true"
+    property="og:type"
+  />
+  <meta
+    content="CKS | NICE"
+    data-react-helmet="true"
+    property="og:title"
+  />
+  <meta
+    content="https://cks.nice.org.uk/open-graph-image.png"
+    data-react-helmet="true"
+    property="og:image"
+  />
+  <meta
+    content="1200"
+    data-react-helmet="true"
+    property="og:image:width"
+  />
+  <meta
+    content="630"
+    data-react-helmet="true"
+    property="og:image:height"
+  />
+  <meta
+    content="summary"
+    data-react-helmet="true"
+    name="twitter:card"
+  />
+  <meta
+    content="@NICEcomms"
+    data-react-helmet="true"
+    name="twitter:site"
+  />
+  <meta
+    content="@NICEcomms"
+    data-react-helmet="true"
+    name="twitter:creator"
+  />
+  <meta
+    content="#004650"
+    data-react-helmet="true"
+    name="theme-color"
+  />
+</head>
+`;

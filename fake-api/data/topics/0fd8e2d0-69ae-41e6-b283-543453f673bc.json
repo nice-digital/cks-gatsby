@@ -1,0 +1,48 @@
+{
+  "topicName": "Fungal skin infection - scalp",
+  "topicId": "0fd8e2d0-69ae-41e6-b283-543453f673bc",
+  "exportId": "e6791b89-cdf7-4fab-8606-aa8600be191d",
+  "dataId": "ab1b1340-04f4-4e25-a2bb-aa8600c36b3e",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:51:28.9022527+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Fungal infection of the scalp (scalp ringworm or tinea capitis) is caused by dermatophytes and is most common among prepubescent children.",
+  "lastRevised": "Last revised in April 2018",
+  "terms": [
+    {
+      "code": "D003881",
+      "term": "Dermatomycoses"
+    },
+    {
+      "code": "D014006",
+      "term": "Tinea Capitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f071ee9f-496a-4ad3-b627-d12da80348ed",
+      "parentId": null,
+      "rootId": "f071ee9f-496a-4ad3-b627-d12da80348ed",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 66f835e5-5d75-4e34-8618-1dfaddcf72ac --><h1>Fungal skin infection - scalp:&nbsp;Summary</h1><!-- end field 66f835e5-5d75-4e34-8618-1dfaddcf72ac -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-03-01T00:00:00+00:00",
+      "dateTo": "2018-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. Complications and Prognosis nodes have been added to the Background information section. A Differential diagnosis node has been added to the Diagnosis section. The management recommendations have been updated in line with the current literature. The Prescribing Information section has been updated and expanded in line with current CKS style."
+    }
+  ]
+}

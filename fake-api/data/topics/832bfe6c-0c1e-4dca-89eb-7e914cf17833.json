@@ -1,0 +1,68 @@
+{
+  "topicName": "Contraception - progestogen-only methods",
+  "topicId": "832bfe6c-0c1e-4dca-89eb-7e914cf17833",
+  "exportId": "73484d25-ff3a-41c1-81ea-aa5400d56bbe",
+  "dataId": "9f50d847-3362-412e-a115-aa5b00cd5f40",
+  "number": 5,
+  "dateOfExport": "2019-05-28T12:27:41.4135814+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "The progestogen-only method of contraception includes the progestogen-only pill (POP), the progestogen-only implant, and the progestogen-only injectable.",
+  "lastRevised": "Last revised in March 2019",
+  "terms": [
+    {
+      "code": "D011374",
+      "term": "Progesterone"
+    },
+    {
+      "code": "D003267",
+      "term": "Contraception"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "58f7f6f0-f108-4000-9064-ea4a70cf2790",
+      "parentId": null,
+      "rootId": "58f7f6f0-f108-4000-9064-ea4a70cf2790",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 9f72536a-17a9-4970-ac3f-7d2b01fcb5f2 --><h1>Contraception - progestogen-only methods: Summary</h1><!-- end field 9f72536a-17a9-4970-ac3f-7d2b01fcb5f2 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-03-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "A pill should now be considered missed if there is more than a 2 hour delay in it being taken (26 hours since taking the last pilll) or if vomiting occurs within 2 hours of taking the pill."
+    },
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Panic attacks have been added to adverse effects for people taking desogestrel."
+    },
+    {
+      "dateFrom": "2017-12-01T00:00:00+00:00",
+      "dateTo": "2017-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Update to add information about fetal malformations and effectiveness of hormonal contraceptives as an effect of topiramate."
+    },
+    {
+      "dateFrom": "2017-02-01T00:00:00+00:00",
+      "dateTo": "2017-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": ""
+    },
+    {
+      "dateFrom": "2016-06-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Minor structural changes have been made."
+    }
+  ]
+}

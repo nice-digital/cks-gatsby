@@ -1,0 +1,78 @@
+{
+  "topicName": "Chronic obstructive pulmonary disease",
+  "topicId": "e48489e8-63d1-4a04-bc5b-07e36a76af58",
+  "exportId": "1ed5e9c6-4dac-4bf7-82b5-aa16000365dd",
+  "dataId": "0239acaa-5210-4815-b734-aa170080417e",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:46:56.9020414+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Chronic obstructive pulmonary disease (COPD) is a treatable (but not curable) and largely preventable lung disease.",
+  "lastRevised": "Last revised in March 2019",
+  "terms": [
+    {
+      "code": "D008173",
+      "term": "Lung Diseases, Obstructive"
+    },
+    {
+      "code": "D011656",
+      "term": "Pulmonary Emphysema"
+    },
+    {
+      "code": "D029481",
+      "term": "Bronchitis, Chronic"
+    },
+    {
+      "code": "D029424",
+      "term": "Pulmonary Disease, Chronic Obstructive"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "22e502e8-364f-4fca-ae93-27ac9d6f82b9",
+      "parentId": null,
+      "rootId": "22e502e8-364f-4fca-ae93-27ac9d6f82b9",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field a435d0e0-285e-4dea-9fc7-abf6326388d6 --><h1>Chronic obstructive pulmonary disease - Summary</h1><!-- end field a435d0e0-285e-4dea-9fc7-abf6326388d6 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-03-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Acetylcysteine is now a licenced mucolytic for COPD, prescribing information has been updated accordingly."
+    },
+    {
+      "dateFrom": "2018-12-01T00:00:00+00:00",
+      "dateTo": "2018-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information added to acute exacerbation scenario to bring topic in line with NICE guideline Chronic obstructive pulmonary disorder (acute exacerbation): antimicrobial prescribing."
+    },
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "New product availability. Daxas (roflumilast) 250 micrograms tablets, new strength of tablet (previously only 500mg available). Roflumilast is licensed for maintenance treatment of severe COPD linked to chronic bronchitis in adults with a history of frequent exacerbations as add-on to bronchodilator treatment."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": ""
+    },
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2015-09-30T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in July 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

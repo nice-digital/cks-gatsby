@@ -1,0 +1,47 @@
+{
+  "topicName": "Measles",
+  "topicId": "8b32d801-8035-4957-b21d-fdc0316b697d",
+  "exportId": "f081e5f9-4c72-4a86-b172-aa8e00b792d1",
+  "dataId": "98d25e07-2f6f-4210-a8c2-aa9500ec7399",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:20:52.20292+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Measles is a highly contagious airborne infection caused by a morbillivirus of the paramyxovirus family.",
+  "lastRevised": "Last revised in March 2018",
+  "terms": [
+    {
+      "code": "D008459",
+      "term": "Measles virus"
+    },
+    {
+      "code": "D008457",
+      "term": "Measles"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c3db1250-7cfb-4a5d-8f25-05ab230eff37",
+      "parentId": null,
+      "rootId": "c3db1250-7cfb-4a5d-8f25-05ab230eff37",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 4a2badba-3da1-4699-bb68-343b158c45a6 --><h1>Measles:&nbsp;Summary</h1><!-- end field 4a2badba-3da1-4699-bb68-343b158c45a6 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-03-01T00:00:00+00:00",
+      "dateTo": "2018-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to recommendations have been made, but there have been structural changes and a brief section on prevention (linking out to the CKS topic on Immunizations - childhood) has been added. Information on treatments not recommended has been removed."
+    }
+  ]
+}

@@ -23,10 +23,15 @@
     "titleBar.activeBackground": "#3d4e57",
     "titleBar.activeForeground": "#fff"
   },
+  "[feature]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "alexkrechik.cucumberautocomplete"
+  },
   "npm.enableScriptExplorer": true,
   "npm.useRootDirectory": false,
   "npm.enableRunFromFolder": true,
-  "npm.includeDirectories": ["gatsby"],
+  "npm.includeDirectories": ["gatsby", "functional-tests", "fake-api"],
   "debug.showInStatusBar": "always",
   "window.title": "${dirty}${activeEditorShort}${separator}CKS${separator}NICE",
   "cucumberautocomplete.steps": [

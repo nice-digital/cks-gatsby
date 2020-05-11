@@ -1,0 +1,51 @@
+{
+  "topicName": "Breast screening",
+  "topicId": "e5d4d316-9b4d-47e1-9172-8a0c31456fa0",
+  "exportId": "46391a4b-0ffc-42e7-9401-aa8600be191d",
+  "dataId": "0df1802d-d56d-4939-9a9f-aa8600c317e0",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:50:17.7674489+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "One in nine women will develop breast cancer, and it is more common in women over the age of 50 years.",
+  "lastRevised": "Last revised in December 2017",
+  "terms": [
+    {
+      "code": "D001940",
+      "term": "Breast"
+    },
+    {
+      "code": "D008403",
+      "term": "Mass Screening"
+    },
+    {
+      "code": "D008327",
+      "term": "Mammography"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Preventative medicine",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1bc173d4-3fcd-4206-8797-4e1c9f8c30cb",
+      "parentId": null,
+      "rootId": "1bc173d4-3fcd-4206-8797-4e1c9f8c30cb",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e98df83e-a457-4ac1-a862-ded98a1b7fb0 --><h1>Breast screening:&nbsp;Summary</h1><!-- end field e98df83e-a457-4ac1-a862-ded98a1b7fb0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-12-01T00:00:00+00:00",
+      "dateTo": "2017-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone minor restructuring. The Background information and Management sections have been amended in line with the current literature."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "topicName": "Polymyalgia rheumatica",
+  "topicId": "ad21d80a-1ea5-4ead-b50d-c84a90f81dfd",
+  "exportId": "daf76df7-6421-4480-a893-aa16011b9d11",
+  "dataId": "de7c8d22-cb6a-4468-8c7c-aa17007f7e2a",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:44:10.2261239+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Polymyalgia rheumatica (PMR) is an inflammatory condition, characterized by aching and morning stiffness in the neck, shoulder, and pelvic girdle.",
+  "lastRevised": "Last revised in January 2019",
+  "terms": [
+    {
+      "code": "D011111",
+      "term": "Polymyalgia Rheumatica"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Eyes",
+    "Musculoskeletal",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "038a01d8-4c63-4c93-94fa-dc3ae47751d6",
+      "parentId": null,
+      "rootId": "038a01d8-4c63-4c93-94fa-dc3ae47751d6",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 03c51c05-df83-475b-9429-7e6123a410ae --><h1>Polymyalgia rheumatica:&nbsp;Summary</h1><!-- end field 03c51c05-df83-475b-9429-7e6123a410ae -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-01-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to clinical recommendations have been made."
+    }
+  ]
+}

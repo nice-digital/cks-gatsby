@@ -1,0 +1,57 @@
+{
+  "topicName": "Bell's palsy",
+  "topicId": "9c711b5e-c5b5-4f3c-b945-03cdc7807c10",
+  "exportId": "17a9a289-4a30-4c5b-a0d5-aa5700e2147d",
+  "dataId": "cb77092a-e152-4713-9fde-aa5b00cd416c",
+  "number": 5,
+  "dateOfExport": "2019-05-28T12:27:17.2976461+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Bell's palsy is an acute, unilateral, idiopathic, facial nerve paralysis. The paralysis also affects the eyelids, causing an impairment of blinking.",
+  "lastRevised": "Last revised in May 2019",
+  "terms": [
+    {
+      "code": "D005155",
+      "term": "Facial Nerve Diseases"
+    },
+    {
+      "code": "D020330",
+      "term": "Bell Palsy"
+    },
+    {
+      "code": "D005158",
+      "term": "Facial Paralysis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Ear, nose and throat",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d648d628-7991-4845-a643-56ca467091a0",
+      "parentId": null,
+      "rootId": "d648d628-7991-4845-a643-56ca467091a0",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 3a7724fa-77d4-46ef-82f2-8862069e22b2 --><h1>Bell&#39;s palsy:&nbsp;Summary</h1><!-- end field 3a7724fa-77d4-46ef-82f2-8862069e22b2 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Recommendation on when to refer to a facial nerve specialist changed from incomplete recovery after 3 months to after 5 months. In line with NICE guideline Suspected neurological conditions: recognition and referral."
+    },
+    {
+      "dateFrom": "2018-08-01T00:00:00+01:00",
+      "dateTo": "2018-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. New sections on complications and differential diagnosis have been added. There have been changes to the recommendations on use of antiviral treatment in combination with corticosteroids and referral. Links to patient information are now included."
+    }
+  ]
+}

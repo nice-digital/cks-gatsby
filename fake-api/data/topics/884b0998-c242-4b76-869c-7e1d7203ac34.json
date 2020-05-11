@@ -1,0 +1,60 @@
+{
+  "topicName": "Immunizations - childhood",
+  "topicId": "884b0998-c242-4b76-869c-7e1d7203ac34",
+  "exportId": "1a61384b-1195-4284-9fd9-aa5700e2147d",
+  "dataId": "cf06783a-0c56-4425-bdc8-aa5b00cd6ac9",
+  "number": 5,
+  "dateOfExport": "2019-05-28T12:27:50.7964501+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Healthy children should receive vaccines to prevent disease according to the ages stated by the Childhood Immunization Programme.",
+  "lastRevised": "Last revised in February 2018",
+  "terms": [
+    {
+      "code": "D014611",
+      "term": "Vaccination"
+    },
+    {
+      "code": "D007114",
+      "term": "Immunization"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Immunizations",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "c945800e-4cc3-4664-935c-64f611c57a34",
+      "parentId": null,
+      "rootId": "c945800e-4cc3-4664-935c-64f611c57a34",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 26cfaeea-2c91-469e-905d-e9bd95a34609 --><h1>Immunizations - childhood: Summary</h1><!-- end field 26cfaeea-2c91-469e-905d-e9bd95a34609 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-02-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "SPC added for Infarnix vaccine."
+    },
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": ""
+    },
+    {
+      "dateFrom": "2016-05-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "topicName": "Infertility",
+  "topicId": "ab48b4fc-b555-4e54-b988-210147856316",
+  "exportId": "aa3cb5cd-aa55-4bf0-a4fd-aa8600be191d",
+  "dataId": "72de8c51-d0af-4841-bf46-aa8600c44894",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:54:37.7752598+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Infertility is the inability to conceive. A couple is regarded as infertile if, after regular sexual intercourse, they have not conceived in 1 year.",
+  "lastRevised": "Last revised in August 2018",
+  "terms": [
+    {
+      "code": "D007246",
+      "term": "Infertility"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Sexual health",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "833c5435-0f4a-4ce3-a2fe-f37f5a5b5264",
+      "parentId": null,
+      "rootId": "833c5435-0f4a-4ce3-a2fe-f37f5a5b5264",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 4f4ac72e-1bcc-44e9-afa9-85f5f48a0c5f --><h1>Infertility:&nbsp;Summary</h1><!-- end field 4f4ac72e-1bcc-44e9-afa9-85f5f48a0c5f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-08-01T00:00:00+01:00",
+      "dateTo": "2018-08-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Citation amended."
+    },
+    {
+      "dateFrom": "2018-04-01T00:00:00+01:00",
+      "dateTo": "2018-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials (RCTs) published since the last revision of this topic. No changes to clinical recommendations have been made, but the topic has been restructured."
+    }
+  ]
+}

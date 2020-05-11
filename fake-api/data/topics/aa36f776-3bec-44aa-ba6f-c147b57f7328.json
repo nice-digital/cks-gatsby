@@ -1,0 +1,54 @@
+{
+  "topicName": "Whooping cough",
+  "topicId": "aa36f776-3bec-44aa-ba6f-c147b57f7328",
+  "exportId": "7c7297c3-7d43-4c51-b41b-aa16000365dd",
+  "dataId": "ae09b51f-14eb-4572-88d5-aa17007e313d",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:39:26.2734348+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Whooping cough, also known as pertussis, is a highly infectious disease caused by the bacterium Bordetella pertussis.",
+  "lastRevised": "Last revised in June 2018",
+  "terms": [
+    {
+      "code": "D010567",
+      "term": "Pertussis Vaccine"
+    },
+    {
+      "code": "D014917",
+      "term": "Whooping cough"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "75892151-809b-43d5-be36-9ab3076ffde1",
+      "parentId": null,
+      "rootId": "75892151-809b-43d5-be36-9ab3076ffde1",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 847f5f45-db52-4167-942a-0463b9ee8706 --><h1>Whooping cough: Summary</h1><!-- end field 847f5f45-db52-4167-942a-0463b9ee8706 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Prescribing information updated with information regarding azithromycin interacting with colchicine."
+    },
+    {
+      "dateFrom": "2017-03-01T00:00:00+00:00",
+      "dateTo": "2017-04-30T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in March 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

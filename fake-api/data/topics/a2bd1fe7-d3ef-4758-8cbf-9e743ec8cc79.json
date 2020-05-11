@@ -1,0 +1,42 @@
+{
+  "topicName": "Undescended testes",
+  "topicId": "a2bd1fe7-d3ef-4758-8cbf-9e743ec8cc79",
+  "exportId": "58a00b97-df16-42f2-9992-aa16000365dd",
+  "dataId": "ab810b32-e98e-441c-86b6-aa170081a36b",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:51:59.2773742+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Undescended testes or cryptorchidism is defined as the incomplete descent of one or both testes and absence from the scrotum.",
+  "lastRevised": "Last revised in August 2014",
+  "terms": [
+    {
+      "code": "D003456",
+      "term": "Cryptorchidism"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Kidney disease and urology"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "067cef93-8fcd-4ee2-9ec2-36c1829b0b66",
+      "parentId": null,
+      "rootId": "067cef93-8fcd-4ee2-9ec2-36c1829b0b66",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 6e78234b-7a7e-41cf-98e6-08c6c025eefd --><h1>Undescended testes:&nbsp;Summary</h1><!-- end field 6e78234b-7a7e-41cf-98e6-08c6c025eefd -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-06-01T00:00:00+01:00",
+      "dateTo": "2014-08-31T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

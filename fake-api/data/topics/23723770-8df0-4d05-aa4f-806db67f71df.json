@@ -1,0 +1,61 @@
+{
+  "topicName": "HIV infection and AIDS",
+  "topicId": "23723770-8df0-4d05-aa4f-806db67f71df",
+  "exportId": "360a5e9d-e545-4079-8b43-aa16000365dd",
+  "dataId": "ee1aeeb5-9741-47f0-af09-aa170080bdc3",
+  "number": 5,
+  "dateOfExport": "2019-03-21T07:48:42.2642733+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "The Human Immunodeficiency Virus (HIV) is a retrovirus that infects and destroys cells of the immune system, in particular CD4 cells",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D000163",
+      "term": "Acquired Immunodeficiency Syndrome"
+    },
+    {
+      "code": "D006678",
+      "term": "HIV"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Haematology",
+    "Infections and infestations",
+    "Preventative medicine",
+    "Sexual health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a7ef5d12-e810-4392-9447-42b131a60430",
+      "parentId": null,
+      "rootId": "a7ef5d12-e810-4392-9447-42b131a60430",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field db9d73c1-eaac-4655-a092-47edb7c65f49 --><h1>HIV infection and AIDS:&nbsp;Summary</h1><!-- end field db9d73c1-eaac-4655-a092-47edb7c65f49 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Symtuza will be funded by NHS England. Symtuza (darunavir/cobicistat/emtricitabine/tenofovir alafenamide) is a once-daily single tablet regimen for treatment of HIV, with the potential to support better adherence to treatment. More information within New Product Availability."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "A typographical error was corrected."
+    },
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2015-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last version of this topic. No major changes to the recommendations have been made, but there has been minor restructuring of the topic."
+    }
+  ]
+}

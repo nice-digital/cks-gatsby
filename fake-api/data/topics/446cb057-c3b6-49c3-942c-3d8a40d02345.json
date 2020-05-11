@@ -1,0 +1,47 @@
+{
+  "topicName": "Palliative care - secretions",
+  "topicId": "446cb057-c3b6-49c3-942c-3d8a40d02345",
+  "exportId": "bcb6c9d8-157a-477b-aec0-aa16000365dd",
+  "dataId": "97392d62-8407-439a-9e37-aa17007de6a5",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:38:22.60167+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "During the terminal phase of a person's illness, airway secretions may accumulate and result in gurgling and rattling noises during breathing",
+  "lastRevised": "Last revised October 2016",
+  "terms": [
+    {
+      "code": "D012634",
+      "term": "Bodily Secretions"
+    },
+    {
+      "code": "D010166",
+      "term": "Palliative Care"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Palliative care",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a5b0faa4-5aa4-4c3a-a0c0-95b248bed40c",
+      "parentId": null,
+      "rootId": "a5b0faa4-5aa4-4c3a-a0c0-95b248bed40c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 8d53d972-5861-44be-87e6-3e8ebd18ae29 --><h1>Palliative care - secretions: Summary</h1><!-- end field 8d53d972-5861-44be-87e6-3e8ebd18ae29 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There have been structural changes to the topic and changes to the recommendations have been updated in line with NICE guidance Care of dying adults in the last days of life NICE, 2015."
+    }
+  ]
+}

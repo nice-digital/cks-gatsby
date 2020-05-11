@@ -1,0 +1,45 @@
+{
+  "topicName": "Giant cell arteritis",
+  "topicId": "922f2e2a-90b2-4d8e-8df9-97f686e2dd9c",
+  "exportId": "e3c88d06-dfe9-47dc-b4ff-aa16000365dd",
+  "dataId": "a9ef27ec-bf0d-40a0-aca4-aa17007e3480",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:39:28.932244+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Giant cell arteritis is a type of chronic vasculitis characterized by granulomatous inflammation in the walls of medium and large arteries.",
+  "lastRevised": "Last revised in July 2014",
+  "terms": [
+    {
+      "code": "D013700",
+      "term": "Giant Cell Arteritis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Eyes",
+    "Musculoskeletal",
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "273f2221-a142-42d7-b012-0cf58e97e5ae",
+      "parentId": null,
+      "rootId": "273f2221-a142-42d7-b012-0cf58e97e5ae",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 49d726fd-1045-41c4-a40f-9d25746fd6c0 --><h1>Giant cell arteritis:&nbsp;Summary</h1><!-- end field 49d726fd-1045-41c4-a40f-9d25746fd6c0 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-07-01T00:00:00+01:00",
+      "dateTo": "2014-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. The diagnosis and management sections have been restructured, and minor changes have been made to the recommendations in the section on monitoring to reflect that a more flexible approach may be an option in primary care compared with secondary care."
+    }
+  ]
+}

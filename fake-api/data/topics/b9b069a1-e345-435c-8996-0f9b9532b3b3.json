@@ -1,0 +1,46 @@
+{
+  "topicName": "Addison's disease",
+  "topicId": "b9b069a1-e345-435c-8996-0f9b9532b3b3",
+  "exportId": "ed898c04-c82d-483d-889c-aa16000365dd",
+  "dataId": "1625fca2-3d72-4f3f-91c1-aa1700807baf",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:47:46.4879808+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Addison's disease (primary adrenal insufficiency) is caused by destruction of the adrenal cortex.",
+  "lastRevised": "Last revised in March 2016",
+  "terms": [
+    {
+      "code": "D000309",
+      "term": "Adrenal Insufficiency"
+    },
+    {
+      "code": "D000224",
+      "term": "Addison Disease"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "9e9ec46f-c6c0-4b90-bd7c-ee947cfb16b2",
+      "parentId": null,
+      "rootId": "9e9ec46f-c6c0-4b90-bd7c-ee947cfb16b2",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 7d65eebd-6afe-4433-8fd9-d534b473beb7 --><h1>Addison's disease: Summary</h1><!-- end field 7d65eebd-6afe-4433-8fd9-d534b473beb7 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-02-01T00:00:00+00:00",
+      "dateTo": "2016-03-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. There have been minor changes to the recommendations on corticosteroid dosing during intercurrent illness, and it is now recommended that an adrenocorticotrophic hormone stimulation (Synacthen&reg;) test should be carried out in secondary care."
+    }
+  ]
+}

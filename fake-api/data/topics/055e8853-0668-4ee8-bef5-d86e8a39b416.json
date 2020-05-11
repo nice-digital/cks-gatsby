@@ -1,0 +1,43 @@
+{
+  "topicName": "Cows' milk protein allergy in children",
+  "topicId": "055e8853-0668-4ee8-bef5-d86e8a39b416",
+  "exportId": "97bc392e-0706-4717-a75a-aa16000365dd",
+  "dataId": "d42da68a-da81-468d-ad4e-aa170082a74f",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:55:40.0511999+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Cows' milk protein allergy is an immune-mediated allergic response to proteins in milk.It is one of the most common childhood food allergies",
+  "lastRevised": "Last revised in June 2015",
+  "terms": [
+    {
+      "code": "D016269",
+      "term": "Milk hypersensitivity"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Allergies",
+    "Child health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "450e4c84-db11-4f4e-a22d-02d9a9ea619d",
+      "parentId": null,
+      "rootId": "450e4c84-db11-4f4e-a22d-02d9a9ea619d",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b42de8a5-30a5-4a07-b8e4-37259b5ef5b7 --><h1>Cows&#39; milk protein allergy in children:&nbsp;Summary</h1><!-- end field b42de8a5-30a5-4a07-b8e4-37259b5ef5b7 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-09-01T00:00:00+01:00",
+      "dateTo": "2014-12-31T23:59:59+00:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

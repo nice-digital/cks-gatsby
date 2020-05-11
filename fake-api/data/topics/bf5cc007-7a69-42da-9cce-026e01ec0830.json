@@ -1,0 +1,43 @@
+{
+  "topicName": "Nappy rash",
+  "topicId": "bf5cc007-7a69-42da-9cce-026e01ec0830",
+  "exportId": "3e61187a-4aae-4192-a169-aa8600be191d",
+  "dataId": "3223808a-1e47-41fb-a998-aa8600c41090",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:53:49.2895574+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Nappy rash is an irritant contact dermatitis confined to the nappy area. Colonization with Candida albicans is usual.",
+  "lastRevised": "Last revised in July 2018",
+  "terms": [
+    {
+      "code": "D003963",
+      "term": "Diaper Rash"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3bce4d77-99cd-48a6-ae4c-345eb5d575cf",
+      "parentId": null,
+      "rootId": "3bce4d77-99cd-48a6-ae4c-345eb5d575cf",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 64e7e825-62da-44c6-81a6-3f067090f021 --><h1>Nappy rash:&nbsp;Summary</h1><!-- end field 64e7e825-62da-44c6-81a6-3f067090f021 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. Sections on Complications and Prognosis have been added to Background information, and the section on Differential diagnosis has been expanded. The recommendations in the Management section have been updated in line with current literature. A section on Prescribing information has been added."
+    }
+  ]
+}

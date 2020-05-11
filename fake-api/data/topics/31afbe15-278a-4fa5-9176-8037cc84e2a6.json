@@ -1,0 +1,48 @@
+{
+  "topicName": "Head and neck cancers - recognition and referral",
+  "topicId": "31afbe15-278a-4fa5-9176-8037cc84e2a6",
+  "exportId": "fd08e96c-576d-4fa1-a068-aa16000365dd",
+  "dataId": "a243b77c-12a3-42e9-979e-aa17008215b5",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:53:36.9418302+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Laryngeal cancerOver 2,000 new laryngeal cancers are diagnosed each year in the UK.Five year survival is 70%.",
+  "lastRevised": "Last revised in November 2016",
+  "terms": [
+    {
+      "code": "D006258",
+      "term": "Head and Neck Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cancer"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "35f5c36d-823e-45fb-a6e9-8faa517317ae",
+      "parentId": null,
+      "rootId": "35f5c36d-823e-45fb-a6e9-8faa517317ae",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e753a362-ec83-4bcb-99b4-61bd6648730f --><h1>Head and neck cancers - recognition and referral:&nbsp;Summary</h1><!-- end field e753a362-ec83-4bcb-99b4-61bd6648730f -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "The National Institute for Health and Care Excellence (NICE) quality standards for suspected cancer have been added to this topic."
+    },
+    {
+      "dateFrom": "2015-09-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "This topic is a direct implementation of the National Institute for Health and Care Excellence guideline Suspected cancer: recognition and referral NICE, 2015. This CKS topic replaces the former topic on Head/neck cancer - suspected."
+    }
+  ]
+}

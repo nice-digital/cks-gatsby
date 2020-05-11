@@ -1,0 +1,47 @@
+{
+  "topicName": "Achilles tendinopathy",
+  "topicId": "544c0dd8-12b4-472f-8325-25f15b3092e3",
+  "exportId": "287b5d96-05c9-4c00-83d0-aa16011b9d11",
+  "dataId": "385c6c5c-af3a-4ccc-8d66-aa17007f2f2f",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:43:02.9863458+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Achilles tendinopathy is a soft tissue disorder which causes pain, stiffness, and swelling of the Achilles tendon.",
+  "lastRevised": "Last revised in January 2016",
+  "terms": [
+    {
+      "code": "D000125",
+      "term": "Achilles Tendon"
+    },
+    {
+      "code": "D052256",
+      "term": "Tendinopathy"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Injuries",
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "bf5b0d63-5d3d-4535-8bf0-7deabd06911f",
+      "parentId": null,
+      "rootId": "bf5b0d63-5d3d-4535-8bf0-7deabd06911f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 690777a4-1610-4f29-8567-f0bb01ee7edd --><h1>Achilles tendinopathy: Summary</h1><!-- end field 690777a4-1610-4f29-8567-f0bb01ee7edd -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-01-01T00:00:00+00:00",
+      "dateTo": "2016-01-31T23:59:59+00:00",
+      "title": "Revised",
+      "body": "A literature search was conducted in December 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No changes to clinical recommendations have been made."
+    }
+  ]
+}

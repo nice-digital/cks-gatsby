@@ -1,0 +1,52 @@
+{
+  "topicName": "Contraception - assessment",
+  "topicId": "32f1df2c-afc0-4f35-be88-49caf8770b41",
+  "exportId": "3db28953-08a1-424f-8050-aa5700e2147d",
+  "dataId": "409d07a7-8e74-4a93-b953-aa5b00cdd2d5",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:29:21.807644+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "An assessment should be carried out on all women requesting contraception to identify any relevant medical conditions or medication",
+  "lastRevised": "Last revised in May 2019",
+  "terms": [
+    {
+      "code": "D003267",
+      "term": "Contraception"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1c61fd36-ff66-4f8c-a7db-7f8b57504d39",
+      "parentId": null,
+      "rootId": "1c61fd36-ff66-4f8c-a7db-7f8b57504d39",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 07e6a8d2-fae4-496f-bc1a-06207dffe836 --><h1>Contraception - assessment: Summary</h1><!-- end field 07e6a8d2-fae4-496f-bc1a-06207dffe836 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-05-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Topic updated in line with the Faculty of Sexual and Reproductive Healthcare (FSRH) guidelines Overweight, Obesity and Contraception FSRH, 2019."
+    },
+    {
+      "dateFrom": "2017-12-01T00:00:00+00:00",
+      "dateTo": "2017-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Added information about fetal malformations and effectiveness of hormonal contraceptives as an effect of topiramate."
+    },
+    {
+      "dateFrom": "2016-08-01T00:00:00+01:00",
+      "dateTo": "2016-09-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in August 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Minor structural changes have been made."
+    }
+  ]
+}

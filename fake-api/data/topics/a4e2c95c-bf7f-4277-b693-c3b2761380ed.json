@@ -1,0 +1,67 @@
+{
+  "topicName": "Osteoporosis - prevention of fragility fractures",
+  "topicId": "a4e2c95c-bf7f-4277-b693-c3b2761380ed",
+  "exportId": "3c108bcf-9d79-4044-82e7-aa8600be191d",
+  "dataId": "1ade6364-35fc-40a9-a306-aa8600c3f381",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:53:25.1799411+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Osteoporosis is a disease characterized by low bone mass and structural deterioration of bone tissue, with a consequent increase in bone fragility",
+  "lastRevised": "Last revised in December 2016",
+  "terms": [
+    {
+      "code": null,
+      "term": "Osteoporosis, Postmenopausal"
+    },
+    {
+      "code": null,
+      "term": "D050723"
+    },
+    {
+      "code": "D015663",
+      "term": "Fractures, Bone"
+    },
+    {
+      "code": "D010024",
+      "term": "Osteoporosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "8bf1b2ab-f239-44f4-acbb-7cf49f6cfe63",
+      "parentId": null,
+      "rootId": "8bf1b2ab-f239-44f4-acbb-7cf49f6cfe63",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 2645f209-6b92-463d-8c7e-8adb7cf4ac90 --><h1>Osteoporosis - prevention of fragility fractures: Summary</h1><!-- end field 2645f209-6b92-463d-8c7e-8adb7cf4ac90 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information that dosage adjustments of calcium may be required in people with severe kidney disease has been added to the contraindications and cautions section for calcium and colecalciferol preparations ABPI, 2016."
+    },
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-07-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "The recommendation on alcohol intake in the section on Lifestyle information and advice has been linked to information in the CKS topic on Alcohol - problem drinking, which has been updated in line with the Alcohol Guidelines Review published by the Department of Health (2016)."
+    },
+    {
+      "dateFrom": "2015-12-01T00:00:00+00:00",
+      "dateTo": "2016-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone minor restructuring and recommendations have been clarified in line with National Institute for Health and Care Excellence (NICE) guidance NICE, 2012. Recommendations from the Scottish Intercollegiate Guidelines Network (SIGN) guideline Management of osteoporosis and the prevention of fragility fractures SIGN, 2015 have been incorporated into this topic."
+    }
+  ]
+}

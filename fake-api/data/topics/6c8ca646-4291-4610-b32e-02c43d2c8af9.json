@@ -1,0 +1,43 @@
+{
+  "topicName": "Paronychia - acute",
+  "topicId": "6c8ca646-4291-4610-b32e-02c43d2c8af9",
+  "exportId": "fa6437c9-188c-4ebb-8269-aa16000365dd",
+  "dataId": "6e2a9767-a8f5-4758-91b7-aa1700802caf",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:46:38.7932427+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "An acute paronychia is a localized, superficial infection or abscess of the lateral and proximal skin fold around a nail (perionychium)",
+  "lastRevised": "Last revised in May 2017",
+  "terms": [
+    {
+      "code": "D010304",
+      "term": "Paronychia"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "54f9bdf2-9451-4dcd-8533-2cb1b6db0287",
+      "parentId": null,
+      "rootId": "54f9bdf2-9451-4dcd-8533-2cb1b6db0287",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 54b6200e-3f86-4524-b2da-4abfc0ee7630 --><h1>Paronychia - acute: Summary</h1><!-- end field 54b6200e-3f86-4524-b2da-4abfc0ee7630 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in January 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. There have been minor structural changes to the topic. Minor changes have been made including consideration of topical antibiotics and the removal of procedural directions for incision and drainage."
+    }
+  ]
+}

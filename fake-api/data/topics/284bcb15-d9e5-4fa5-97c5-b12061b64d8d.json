@@ -1,0 +1,42 @@
+{
+  "topicName": "Non-alcoholic fatty liver disease (NAFLD)",
+  "topicId": "284bcb15-d9e5-4fa5-97c5-b12061b64d8d",
+  "exportId": "47b05cf2-5c3b-4750-8634-aa16011b9d11",
+  "dataId": "477b0cf9-030b-44f5-ae42-aa17007f6e86",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:43:56.5685455+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Non-alcoholic fatty liver disease (NAFLD) refers to excess triglyceride accumulation in the liver (steatosis), in the absence of excessive alcohol",
+  "lastRevised": "Last revised in October 2016",
+  "terms": [
+    {
+      "code": "D065626",
+      "term": "Non alcoholic Fatty Liver Disease"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d227fa5e-a40b-411c-b6a3-7ca3a4eebb6e",
+      "parentId": null,
+      "rootId": "d227fa5e-a40b-411c-b6a3-7ca3a4eebb6e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 6e1c10e6-b237-4242-a331-d048319e22ff --><h1>Non-alcoholic fatty liver disease (NAFLD):&nbsp;Summary</h1><!-- end field 6e1c10e6-b237-4242-a331-d048319e22ff -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-07-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

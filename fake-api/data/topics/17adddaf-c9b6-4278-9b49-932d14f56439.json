@@ -1,0 +1,42 @@
+{
+  "topicName": "Chilblains",
+  "topicId": "17adddaf-c9b6-4278-9b49-932d14f56439",
+  "exportId": "0dfda6ee-b5fe-40eb-8951-aa8600be191d",
+  "dataId": "758e15dc-b61f-4146-aa81-aa8600c413fa",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:53:52.5012421+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Chilblains (also known as perniosis or pernio) are localized inflammatory skin lesions on exposed extremities of the body, precipitated by cold.",
+  "lastRevised": "Last revised in June 2018",
+  "terms": [
+    {
+      "code": "D002647",
+      "term": "Chilblains"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f018c7cf-9e03-4038-8cfe-a3e6c2c28537",
+      "parentId": null,
+      "rootId": "f018c7cf-9e03-4038-8cfe-a3e6c2c28537",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 8529776f-79cf-4efe-b2fa-af8811a0a250 --><h1>Chilblains:&nbsp;Summary</h1><!-- end field 8529776f-79cf-4efe-b2fa-af8811a0a250 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

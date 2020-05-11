@@ -1,0 +1,37 @@
+{
+  "topicName": "Common cold",
+  "topicId": "5aee85d5-d8d1-479b-bfa3-a30835b97d6e",
+  "exportId": "44a076cc-77ff-448e-bc11-aa16000365dd",
+  "dataId": "ac9980c4-4a7d-4279-bb52-aa17007f5aa8",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:43:39.6747768+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "The common cold is the conventional term used to describe a mild, self-limiting, viral, upper respiratory tract infection",
+  "lastRevised": "Last revised in August 2016",
+  "terms": [
+    {
+      "code": "D003139",
+      "term": "Common Cold"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Ear, nose and throat",
+    "Infections and infestations",
+    "Respiratory"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "ff763c99-30cf-4944-a3d7-bec1512c3334",
+      "parentId": null,
+      "rootId": "ff763c99-30cf-4944-a3d7-bec1512c3334",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 648de202-733b-4809-b901-3defb6e74293 --><h1>Common cold:&nbsp;Summary</h1><!-- end field 648de202-733b-4809-b901-3defb6e74293 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": []
+}

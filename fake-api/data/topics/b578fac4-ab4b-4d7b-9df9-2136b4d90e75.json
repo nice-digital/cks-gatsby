@@ -1,0 +1,43 @@
+{
+  "topicName": "Gout",
+  "topicId": "b578fac4-ab4b-4d7b-9df9-2136b4d90e75",
+  "exportId": "e81f6c7a-5cfe-4c08-a7c8-aa16000365dd",
+  "dataId": "ebba7e9d-2755-4a39-b0fd-aa17007db5de",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:37:40.8468038+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Gout is a disorder of purine metabolism characterized by a raised uric acid level in the blood (hyperuricaemia) and the deposition of urate crystals",
+  "lastRevised": "Last revised in February 2018",
+  "terms": [
+    {
+      "code": "D006073",
+      "term": "Gout"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d1373c46-dc69-411a-8774-ab0208ff028a",
+      "parentId": null,
+      "rootId": "d1373c46-dc69-411a-8774-ab0208ff028a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field cceff8ce-2593-425c-8f3b-4a58df2d4dad --><h1>Gout:&nbsp;Summary</h1><!-- end field cceff8ce-2593-425c-8f3b-4a58df2d4dad -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-11-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The recommendations on medical management of acute gout and prevention of gout have been amended and are in line with national guidance. Minor structural changes have been made to the topic."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "topicName": "Bunions",
+  "topicId": "d5d4a5aa-b173-494b-a00c-c612bd839f16",
+  "exportId": "c09bda32-4d90-4dbf-95cb-aa8600be191d",
+  "dataId": "d88b6a9f-5d1e-41e6-a2fe-aa8600c42a8b",
+  "number": 3,
+  "dateOfExport": "2019-07-10T11:54:12.3856781+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "A bunion is a deformity which occurs when the great toe moves towards the second toe (and may sometimes overlie it).",
+  "lastRevised": "Last revised in August 2016",
+  "terms": [
+    {
+      "code": "D006215",
+      "term": "Hallux Valgus"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "9acfc99c-c241-4ca4-8a14-9c6105e14db2",
+      "parentId": null,
+      "rootId": "9acfc99c-c241-4ca4-8a14-9c6105e14db2",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 38eb9bc3-e138-4d8e-97e0-b3be8e572752 --><h1>Bunions: Summary</h1><!-- end field 38eb9bc3-e138-4d8e-97e0-b3be8e572752 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": []
+}

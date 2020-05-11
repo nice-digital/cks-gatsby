@@ -1,0 +1,42 @@
+{
+  "topicName": "Acne vulgaris",
+  "topicId": "7737f6eb-1907-461e-a10b-166056e652b7",
+  "exportId": "0b3a8faf-6778-4c9b-b252-aa8600be191d",
+  "dataId": "62b68e04-1391-465d-8860-aa8600c355b1",
+  "number": 3,
+  "dateOfExport": "2019-07-10T11:51:10.5139841+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Acne vulgaris is a chronic skin condition in which blockage or inflammation of the hair follicles and accompanying sebaceous glands",
+  "lastRevised": "Last revised in April 2018",
+  "terms": [
+    {
+      "code": "D000152",
+      "term": "Acne vulgaris"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "a96c0360-a4af-43f4-be49-c17fca0dd796",
+      "parentId": null,
+      "rootId": "a96c0360-a4af-43f4-be49-c17fca0dd796",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d5979f56-29cd-42b5-bd90-42b1827ba53d --><h1>Acne vulgaris:&nbsp;Summary</h1><!-- end field d5979f56-29cd-42b5-bd90-42b1827ba53d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-04-01T00:00:00+01:00",
+      "dateTo": "2018-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. No major changes to recommendations have been made."
+    }
+  ]
+}

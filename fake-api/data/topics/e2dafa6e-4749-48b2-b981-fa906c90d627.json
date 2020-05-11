@@ -1,0 +1,44 @@
+{
+  "topicName": "Cervical cancer and HPV",
+  "topicId": "e2dafa6e-4749-48b2-b981-fa906c90d627",
+  "exportId": "2d911c6e-bf85-471e-942b-aa16000365dd",
+  "dataId": "5b8ffe76-fea6-40cd-b91a-aa1700815fb5",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:51:01.0099468+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Types of cervical cancer include:Squamous cell carcinoma and Cervical adenocarcinoma",
+  "lastRevised": "Last revised in April 2017",
+  "terms": [
+    {
+      "code": "D002583",
+      "term": "Uterine Cervical Neoplasms"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Immunizations",
+    "Preventative medicine",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "0f98be75-b5d0-4b1c-b116-bbe1fc3ae51c",
+      "parentId": null,
+      "rootId": "0f98be75-b5d0-4b1c-b116-bbe1fc3ae51c",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 812e8313-d876-4d93-a88f-eb1f818cdaa6 --><h1>Cervical cancer and HPV: Summary</h1><!-- end field 812e8313-d876-4d93-a88f-eb1f818cdaa6 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-03-01T00:00:00+00:00",
+      "dateTo": "2017-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

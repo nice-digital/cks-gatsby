@@ -1,0 +1,48 @@
+{
+  "topicName": "Dental abscess",
+  "topicId": "7e8f6d78-0b6f-4813-baa8-3184010dd768",
+  "exportId": "3d402bc0-a727-4f55-9ddc-aa16000365dd",
+  "dataId": "b1479970-5693-471e-a71d-aa170081df59",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:52:49.8153419+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "A dental abscess is a localized collection of pus in the teeth, supporting structures of the teeth, or gums.",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D000038",
+      "term": "Abscess"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Oral health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "270d35a5-85ea-423e-ba67-4014c129b36a",
+      "parentId": null,
+      "rootId": "270d35a5-85ea-423e-ba67-4014c129b36a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 71ce18af-a2e4-4ad2-a157-4599537b8d8c --><h1>Dental abscess:&nbsp;Summary</h1><!-- end field 71ce18af-a2e4-4ad2-a157-4599537b8d8c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2017-02-01T00:00:00+00:00",
+      "dateTo": "2017-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of the topic. The management section has been restructured. Other changes include removal of:"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "topicName": "Healthcare-associated infections",
+  "topicId": "97f6f71a-7aa5-40ec-8a1b-aa0600b96730",
+  "exportId": "c1f4d1e1-a4cc-429e-9d65-aa6500eabe23",
+  "dataId": "0dc37bbc-1e95-4e6d-9b3e-aa6800d1385e",
+  "number": 0,
+  "dateOfExport": "2019-06-10T12:41:44.8429201+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "A healthcare-associated infection develops as a direct result of healthcare interventions, e.g. medical, surgical treatment, or direct contact with a healthcare setting.",
+  "lastRevised": "2019",
+  "terms": [
+    {
+      "code": "D007239",
+      "term": "Infection"
+    },
+    {
+      "code": "D003428",
+      "term": "Cross Infection"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "9931d52e-f9c7-4a91-bd81-aa0600b96a92",
+      "parentId": null,
+      "rootId": "9931d52e-f9c7-4a91-bd81-aa0600b96a92",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e92f25f0-96fa-44c8-acf4-aa0600b96a92 --><h1>Healthcare-associated infections: Summary</h1><!-- end field e92f25f0-96fa-44c8-acf4-aa0600b96a92 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-05-31T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "A literature search was conducted in April 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials. The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

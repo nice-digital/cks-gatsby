@@ -1,0 +1,47 @@
+{
+  "topicName": "Conjunctivitis - allergic",
+  "topicId": "27f540e5-bb8e-4cee-a0aa-be515efa4fc2",
+  "exportId": "fd3d53e9-a117-4306-879c-aa8600be191d",
+  "dataId": "e59bdc52-4d88-473d-baba-aa8600c3a1ed",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:52:14.8155178+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Allergic conjunctivitis is a term used to describe a group of ocular conditions associated with an immunoglobulin E (IgE) hypersensitivity reaction",
+  "lastRevised": "Last revised in May 2017",
+  "terms": [
+    {
+      "code": "D003231",
+      "term": "Conjunctivitis"
+    },
+    {
+      "code": "D003233",
+      "term": "Conjunctivitis, Allergic"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Allergies",
+    "Eyes"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1a5998f6-8304-483c-9af0-54f5c6bef7e1",
+      "parentId": null,
+      "rootId": "1a5998f6-8304-483c-9af0-54f5c6bef7e1",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 832b0917-05fc-4f37-a0f5-c1a59debd872 --><h1>Conjunctivitis - allergic:&nbsp;Summary</h1><!-- end field 832b0917-05fc-4f37-a0f5-c1a59debd872 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to the recommendations have been made."
+    }
+  ]
+}

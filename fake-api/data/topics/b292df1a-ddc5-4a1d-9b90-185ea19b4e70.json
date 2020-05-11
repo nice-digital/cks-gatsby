@@ -1,0 +1,42 @@
+{
+  "topicName": "Endometriosis",
+  "topicId": "b292df1a-ddc5-4a1d-9b90-185ea19b4e70",
+  "exportId": "8719a1d7-7502-464e-a7f9-aa16000365dd",
+  "dataId": "bf2da354-1d12-4265-b779-aa17007d6094",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:36:27.9906062+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Endometriosis is the presence of tissue resembling endometrial glands and stroma outside the uterine cavity",
+  "lastRevised": "Last revised in May 2014",
+  "terms": [
+    {
+      "code": "D004715",
+      "term": "Endometriosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d2ce4763-9c7c-428c-b1c7-12b2c3266be0",
+      "parentId": null,
+      "rootId": "d2ce4763-9c7c-428c-b1c7-12b2c3266be0",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 9fd5b508-96cc-44d8-9751-fc9e32e84b9a --><h1>Endometriosis: Summary</h1><!-- end field 9fd5b508-96cc-44d8-9751-fc9e32e84b9a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-03-01T00:00:00+00:00",
+      "dateTo": "2014-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. Only one significant change has been made to this topic."
+    }
+  ]
+}

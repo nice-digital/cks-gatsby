@@ -1,0 +1,42 @@
+{
+  "topicName": "Hyperhidrosis",
+  "topicId": "9dacba69-b1b5-408f-a26d-a8e884033a25",
+  "exportId": "c228a3a8-1633-4c00-b7a2-aa8600be191d",
+  "dataId": "424915b6-b654-4178-a4c9-aa8600c35d25",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:51:16.8743909+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Hyperhidrosis, or excessive sweating, can be classified by location (focal or generalized) and by the presence of an underlying cause",
+  "lastRevised": "Last revised in May 2018",
+  "terms": [
+    {
+      "code": "D006945",
+      "term": "Hyperhidrosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7ad6c165-4334-497a-8767-eea348011d53",
+      "parentId": null,
+      "rootId": "7ad6c165-4334-497a-8767-eea348011d53",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 49935e25-ae8c-4225-94e0-9d5163ab6c7d --><h1>Hyperhidrosis:&nbsp;Summary</h1><!-- end field 49935e25-ae8c-4225-94e0-9d5163ab6c7d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in May 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. The Background information section has been expanded in line with current CKS style. The management recommendations have been updated in line with the current literature."
+    }
+  ]
+}

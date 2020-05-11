@@ -1,0 +1,90 @@
+{
+  "topicName": "Dyspepsia - proven peptic ulcer",
+  "topicId": "3ad099a3-2ca3-4327-9bda-99105ccbd251",
+  "exportId": "9b09510d-cb49-4f42-bcb1-aa8600be191d",
+  "dataId": "3e7741d1-7e8f-49fd-a283-aa8600c46cc0",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:55:07.4838595+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "The term 'dyspepsia' is used to describe a complex of upper gastrointestinal tract symptoms",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D018589",
+      "term": "Gastroparesis"
+    },
+    {
+      "code": "D016481",
+      "term": "Helicobacter Infections"
+    },
+    {
+      "code": "D016480",
+      "term": "Helicobacter pylori"
+    },
+    {
+      "code": "D004383",
+      "term": "Duodenogastric Reflux"
+    },
+    {
+      "code": "D001471",
+      "term": "Barrett Esophagus"
+    },
+    {
+      "code": "D005764",
+      "term": "Gastroesophageal Reflux"
+    },
+    {
+      "code": "D010437",
+      "term": "Peptic Ulcer"
+    },
+    {
+      "code": "D004884",
+      "term": "Eructation"
+    },
+    {
+      "code": "D006356",
+      "term": "Heartburn"
+    },
+    {
+      "code": "D004415",
+      "term": "Dyspepsia"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "15e492e7-2e02-48f0-8bc0-1d1d464ad944",
+      "parentId": null,
+      "rootId": "15e492e7-2e02-48f0-8bc0-1d1d464ad944",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d478c3e4-3066-4b15-9503-26075790387c --><h1>Dyspepsia - proven peptic ulcer:&nbsp;Summary</h1><!-- end field d478c3e4-3066-4b15-9503-26075790387c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Adverse effects updated within prescribing information - metronidazole."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "SPC update on quinolones to align all CKS topics prescribing advice. Prostatitis - chronic, Gonorrhoea, Pyelonephritis, Diarrhoea - prevention and advice for travellers, Dyspepsia - unidentified cause, Dyspepsia - proven functional, Dyspepsia - proven peptic ulcer, Diverticular disease, Gastroenteritis and Scrotal swellings."
+    },
+    {
+      "dateFrom": "2017-04-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials since the last revision of this topic. The recommendations on primary care management and referral have been updated in line with the National Institute for Health and Care Excellence (NICE) clinical guideline Gastro-oesophageal reflux disease and dyspepsia in adults: investigation and management (2014). The lower age limit has been changed from 16 to 18 years. The content has been amended to include second-line drug regimens for Helicobacter pylori eradication, in line with the updated NICE guidance. The prescribing information section has been expanded to include antibiotics recommended for H. pylori eradication. The topic has also undergone significant restructuring."
+    }
+  ]
+}

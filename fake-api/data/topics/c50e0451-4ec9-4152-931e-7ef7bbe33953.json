@@ -1,0 +1,46 @@
+{
+  "topicName": "Varicose veins",
+  "topicId": "c50e0451-4ec9-4152-931e-7ef7bbe33953",
+  "exportId": "4ec2228b-4ae3-494f-9fbf-aa16000365dd",
+  "dataId": "9c769ca4-7fc5-44d6-be90-aa170082479e",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:19.4245676+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Varicose veins are tortuous, dilated, superficial leg veins.",
+  "lastRevised": "Last revised in May 2014",
+  "terms": [
+    {
+      "code": "D014689",
+      "term": "Venous Insufficiency"
+    },
+    {
+      "code": "D014648",
+      "term": "Varicose Veins"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "fb088d23-ab21-4e34-a9f9-aa4390fbbf7a",
+      "parentId": null,
+      "rootId": "fb088d23-ab21-4e34-a9f9-aa4390fbbf7a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field fa6cf830-a5bc-481e-bccd-c4eedbf451c5 --><h1>Varicose veins:&nbsp;Summary</h1><!-- end field fa6cf830-a5bc-481e-bccd-c4eedbf451c5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2014-05-01T00:00:00+01:00",
+      "dateTo": "2014-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. Structural changes have been made to the topic, and management and referral recommendations now reflect the guideline Varicose veins in the legs: the diagnosis and management of varicose veins from the National Institute for Health and Care Excellence NICE, 2013."
+    }
+  ]
+}

@@ -29,6 +29,7 @@ The content is provided by a third party, [Clarity](https://clarity.co.uk/clinic
 
 | Folder                                      | Purpose                                                                             |
 | ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [fake-api](fake-api#readme)                 | A local, fake API with limited content for faster local development                 |
 | [gatsby](gatsby#readme)                     | Static site built with React and Gatsby                                             |
 | [web-app](web-app#readme)                   | Web application that wraps the static site and provides the search results endpoint |
 | [functional-tests](functional-tests#readme) | Browser-based functional tests in WebdriverIO                                       |
@@ -45,8 +46,8 @@ This is the high level stack. Each of the sub-projects (gatsby, web-app and func
   - With recommended extensions (VS Code will prompt you to install these automatically)
 - [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) for the search endpoint web app
 - [.NET Core 3](https://dotnet.microsoft.com/) for the search endpoint web app
-- [Gatsby](https://www.gatsbyjs.org/) and [React](https://reactjs.org/) for static site generation
-- [WebdriverIO](http://v4.webdriver.io/) for browser-based functional tests
+- [Gatsby v2](https://www.gatsbyjs.org/) and [React](https://reactjs.org/) for static site generation
+- [WebdriverIO v4](http://v4.webdriver.io/) for browser-based functional tests
 
 ## Architecture
 
@@ -68,17 +69,18 @@ The easiest way to get the project running is:
    1. Install recommended extensions when prompted
 4. Install dependencies:
    1. Open the command palette (_Ctrl+Shift+P_) in VS Code, then:
-   2. Run 'npm: Install Dependencies'
+   2. Run 'npm: Install Dependencies' (and choose 'Run all commands listed below')
    3. Run '.NET: Restore Project' for CKS.Web
 5. Go to the 'Run and Debug' panel (_Ctrl+Shift+D_) in VS Code
 6. Run `Launch CKS`
 
 Launching the app via `Launch CKS` does the following:
 
-1. Builds and runs the .NET core web app in the background on http://localhost:5000/
-2. Builds and runs the Gatsby static site http://localhost:8000/ in Chrome
-3. Proxies http://localhost:8000/api/search to http://localhost:5000/api/search
+1. http://localhost:5000/ - Builds and runs the .NET core web app in the background
+2. http://localhost:7000/ - Creates a local, fake CKS api
+3. http://localhost:8000/ - Builds the Gatsby static site then launches it in Chrome once it's built
+4. Proxies http://localhost:8000/api/search (in the Gatsby site) to http://localhost:5000/api/search (in the .NET core app)
 
-It also attached debuggers so you can add break points in VS Code for the Gatsby Node processes, the Gatsby React components and the .NET web app classes.
+It also attached debuggers so you can add break points in VS Code for the Gatsby Node processes, the Gatsby React components, the fake API and the .NET web app classes.
 
 > Note: there are more granular ways to run each part of the project, either via an IDE or via the command line. See each sub-folders's readme for more details.

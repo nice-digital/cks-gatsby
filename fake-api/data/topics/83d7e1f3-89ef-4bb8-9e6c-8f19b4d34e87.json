@@ -1,0 +1,52 @@
+{
+  "topicName": "Diabetes - type 1",
+  "topicId": "83d7e1f3-89ef-4bb8-9e6c-8f19b4d34e87",
+  "exportId": "4b24ee0b-5ed2-418f-bf1c-aa8e00b792d1",
+  "dataId": "bde2ca38-4aa0-44f7-a76f-aa9500ec4194",
+  "number": 7,
+  "dateOfExport": "2019-07-25T14:20:09.9287759+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Diabetes mellitus is a group of metabolic disorders characterized by persistent hyperglycaemia (random plasma glucose more than 11 mmol/L).",
+  "lastRevised": "Last revised in November 2016",
+  "terms": [
+    {
+      "code": "D003922",
+      "term": "Diabetes Mellitus, Type 1"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic",
+    "Cardiovascular",
+    "Eyes",
+    "Kidney disease and urology",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3dc75f76-e486-4013-82aa-b32a30240b62",
+      "parentId": null,
+      "rootId": "3dc75f76-e486-4013-82aa-b32a30240b62",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 95859b44-fe02-4d35-8f5d-76c91ac5df84 --><h1>Diabetes - type 1: Summary</h1><!-- end field 95859b44-fe02-4d35-8f5d-76c91ac5df84 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": ""
+    },
+    {
+      "dateFrom": "2015-11-01T00:00:00+00:00",
+      "dateTo": "2016-02-29T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The recommendations have been updated in line with recommendations in the National Institute for Health and Care Excellence (NICE) guidelines Type 1 diabetes in adults: diagnosis and management NICE, 2015 and Diabetes (type 1 and type 2) in children and young people: diagnosis and management NICE, 2015."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "topicName": "Compression stockings",
+  "topicId": "eb2600a9-8943-4252-938e-032dfe5933f8",
+  "exportId": "2c2606a9-42ec-408f-aca6-aa16000365dd",
+  "dataId": "985502e7-867b-400f-9b60-aa17007dae3c",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:37:35.0506245+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Compression stockings are useful for treating conditions associated with chronic venous insufficiency, including venous ulcers, varicose veins",
+  "lastRevised": "Last revised in September&nbsp;2017",
+  "terms": [
+    {
+      "code": "D053828",
+      "term": "Stockings, Compression"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Drugs and devices",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "96d7cf15-2f30-463c-9362-8e32ea255bad",
+      "parentId": null,
+      "rootId": "96d7cf15-2f30-463c-9362-8e32ea255bad",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e24c1344-7159-4136-bea0-5554b1862cbf --><h1>Compression stockings:&nbsp;Summary</h1><!-- end field e24c1344-7159-4136-bea0-5554b1862cbf -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-09-01T00:00:00+01:00",
+      "dateTo": "2018-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Changes made to recommendations on the use of elastic graduated compression stockings to prevent post-thrombotic syndrome or VTE recurrence after a proximal DVT as per updates to NICE guideline CG144."
+    },
+    {
+      "dateFrom": "2017-09-01T00:00:00+01:00",
+      "dateTo": "2017-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "topicName": "Conjunctivitis - infective",
+  "topicId": "ed2c519f-023f-46a3-983a-117707073336",
+  "exportId": "8329cf8b-9724-4fd0-b752-aa8600be191d",
+  "dataId": "7e250acd-8ad9-4c25-aa0f-aa8600c3b2c6",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:52:29.9634055+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Infective conjunctivitis is inflammation of the conjunctiva due to viral, bacterial or parasitic infection.",
+  "lastRevised": "Last revised in April 2018",
+  "terms": [
+    {
+      "code": "D003236",
+      "term": "Conjunctivitis, Viral"
+    },
+    {
+      "code": "D003234",
+      "term": "Conjunctivitis, Bacterial"
+    },
+    {
+      "code": "D003229",
+      "term": "Conjunctival Diseases"
+    },
+    {
+      "code": "D003231",
+      "term": "Conjunctivitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Eyes",
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "52c2691e-d718-4de4-8e20-874210222d0e",
+      "parentId": null,
+      "rootId": "52c2691e-d718-4de4-8e20-874210222d0e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 0ffbc241-7313-4a30-84b8-9d2aa7b339fa --><h1>Conjunctivitis - infective: Summary</h1><!-- end field 0ffbc241-7313-4a30-84b8-9d2aa7b339fa -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-04-01T00:00:00+01:00",
+      "dateTo": "2018-04-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Advice to keep contact lenses out until all symptoms of infection have gone added to management in primary care scenario ABPI, 2018."
+    },
+    {
+      "dateFrom": "2017-05-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in March 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

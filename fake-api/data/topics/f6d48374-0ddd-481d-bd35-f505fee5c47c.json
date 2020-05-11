@@ -1,0 +1,42 @@
+{
+  "topicName": "Premenstrual syndrome",
+  "topicId": "f6d48374-0ddd-481d-bd35-f505fee5c47c",
+  "exportId": "01feb431-8b94-445b-abb2-aa6800a048b5",
+  "dataId": "6db1ad7e-754b-46c7-8303-aa6800d14dfe",
+  "number": 4,
+  "dateOfExport": "2019-06-10T12:42:02.2875041+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Premenstrual syndrome is a condition in which distressing physical, behavioural, and psychological symptoms, occur in the 2nd half of the menstrual cycle.",
+  "lastRevised": "Last revised in May 2019",
+  "terms": [
+    {
+      "code": "D011293",
+      "term": "Premenstrual Syndrome"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "aa582206-a32c-445f-a4f3-204b46b27ebc",
+      "parentId": null,
+      "rootId": "aa582206-a32c-445f-a4f3-204b46b27ebc",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 172cbefe-80a4-48d7-b877-7eaa1661713b --><h1>Premenstrual syndrome:&nbsp;Summary</h1><!-- end field 172cbefe-80a4-48d7-b877-7eaa1661713b -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-05-01T00:00:00+01:00",
+      "dateTo": "2019-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The definition of premenstrual syndrome (PMS) and information on the severity of PMS symptoms have been clarified, and the topic has undergone minor structural changes."
+    }
+  ]
+}

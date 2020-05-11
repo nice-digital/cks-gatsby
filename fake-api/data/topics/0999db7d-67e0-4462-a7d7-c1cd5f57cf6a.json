@@ -1,0 +1,49 @@
+{
+  "topicName": "Otitis externa",
+  "topicId": "0999db7d-67e0-4462-a7d7-c1cd5f57cf6a",
+  "exportId": "5a0aedd0-2b87-4aa2-8cd0-aa16000365dd",
+  "dataId": "d1174dbf-38b5-47de-b4a6-aa170080ce9d",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:48:57.3272405+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Otitis externa is inflammation of the external ear canal and is classified as acute - lasting 3 weeks or less or chronic - lasting longer than 3 months",
+  "lastRevised": "Last revised in February&nbsp;2018",
+  "terms": [
+    {
+      "code": "D010032",
+      "term": "Otitis Externa"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Ear, nose and throat",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "d043a3aa-9404-45d8-938f-cb4116b7d69f",
+      "parentId": null,
+      "rootId": "d043a3aa-9404-45d8-938f-cb4116b7d69f",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d51baf15-78b4-4985-bbd6-e1411cf03e34 --><h1>Otitis externa: Summary</h1><!-- end field d51baf15-78b4-4985-bbd6-e1411cf03e34 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-02-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "New product availability - Cetraxal&reg; (ciprofloxacin 2mg/ml ear drops solution in a single-dose container)."
+    },
+    {
+      "dateFrom": "2016-09-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Minor structural changes have been made."
+    }
+  ]
+}

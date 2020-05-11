@@ -1,0 +1,61 @@
+{
+  "topicName": "Immunizations - seasonal influenza",
+  "topicId": "92586dea-3104-4e8a-bc44-03b987a2edbd",
+  "exportId": "be6dd71c-5aea-4f2c-8300-aa5700e2147d",
+  "dataId": "f6dc40c6-4759-4d3b-bb04-aa5b00cdd784",
+  "number": 5,
+  "dateOfExport": "2019-05-28T12:29:25.1587186+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Influenza is an acute viral infection of the respiratory tract. Influenza types A and B are responsible for most clinical illness in the UK.",
+  "lastRevised": "Last revised in September 2018",
+  "terms": [
+    {
+      "code": "D053243",
+      "term": "Zanamivir"
+    },
+    {
+      "code": "D007251",
+      "term": "Influenza, Human"
+    },
+    {
+      "code": "D007114",
+      "term": "Immunization"
+    },
+    {
+      "code": "D007252",
+      "term": "Influenza Vaccines"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Immunizations",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6330de38-83e2-491e-a689-9577138a5412",
+      "parentId": null,
+      "rootId": "6330de38-83e2-491e-a689-9577138a5412",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field fe6c6daa-1ea5-4ada-887e-7f039cbd3f7e --><h1>Immunizations - seasonal influenza:&nbsp;Summary</h1><!-- end field fe6c6daa-1ea5-4ada-887e-7f039cbd3f7e -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-09-01T00:00:00+01:00",
+      "dateTo": "2018-09-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Information added to reflect the 2018/2019 immunization programme regarding eligibility."
+    },
+    {
+      "dateFrom": "2018-05-01T00:00:00+01:00",
+      "dateTo": "2018-05-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in May 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

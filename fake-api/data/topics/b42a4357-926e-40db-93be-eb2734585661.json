@@ -1,0 +1,54 @@
+{
+  "topicName": "Hypertension in pregnancy",
+  "topicId": "b42a4357-926e-40db-93be-eb2734585661",
+  "exportId": "fd2cbe0e-3f0e-4b17-82b7-aa16000365dd",
+  "dataId": "c57c6d8d-273a-48b5-b17f-aa1700800e1e",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:46:12.5263044+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Several different hypertensive disorders can complicate pregnancy.",
+  "lastRevised": "Last revised in October 2016",
+  "terms": [
+    {
+      "code": "D011247",
+      "term": "Pregnancy"
+    },
+    {
+      "code": "D006973",
+      "term": "Hypertension"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular",
+    "Pregnancy",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7b332f47-bd89-4570-bcc6-1fec0e2e9772",
+      "parentId": null,
+      "rootId": "7b332f47-bd89-4570-bcc6-1fec0e2e9772",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 66ac1d9a-bd0d-4205-83dd-4c9631be1550 --><h1>Hypertension in pregnancy:&nbsp;Summary</h1><!-- end field 66ac1d9a-bd0d-4205-83dd-4c9631be1550 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-10-01T00:00:00+01:00",
+      "dateTo": "2016-10-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Angioedema and urticaria added as adverse effects of methyldopa ABPI, 2016."
+    },
+    {
+      "dateFrom": "2015-02-01T00:00:00+00:00",
+      "dateTo": "2015-03-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in February 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

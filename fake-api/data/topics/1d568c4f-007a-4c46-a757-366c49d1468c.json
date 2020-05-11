@@ -1,0 +1,60 @@
+{
+  "topicName": "Sciatica (lumbar radiculopathy)",
+  "topicId": "1d568c4f-007a-4c46-a757-366c49d1468c",
+  "exportId": "79990c9c-f5bd-46ff-9413-aa16000365dd",
+  "dataId": "bab2c046-33ee-40c9-bfa9-aa170081335e",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:50:23.2325945+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Sciatica is the term for symptoms of pain, tingling, and numbness which arise from nerve root compression or irritation in the lumbosacral spine.",
+  "lastRevised": "Last revised in March 2018",
+  "terms": [
+    {
+      "code": "D007405",
+      "term": "Intervertebral Disc Displacement"
+    },
+    {
+      "code": "D013126",
+      "term": "Spinal Nerve Roots"
+    },
+    {
+      "code": "D011843",
+      "term": "Radiculopathy"
+    },
+    {
+      "code": "D012585",
+      "term": "Sciatica"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6e6c0d5e-2ca6-41e0-ba96-8b2f8baed0cf",
+      "parentId": null,
+      "rootId": "6e6c0d5e-2ca6-41e0-ba96-8b2f8baed0cf",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 8e3438b9-e4f2-4955-bf8d-2e8d2ffa6cf5 --><h1>Sciatica (lumbar radiculopathy):&nbsp;Summary</h1><!-- end field 8e3438b9-e4f2-4955-bf8d-2e8d2ffa6cf5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-03-01T00:00:00+00:00",
+      "dateTo": "2018-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "New symptoms added to Red flag symptoms and signs  to bring topic in line with current evidence."
+    },
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in January 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

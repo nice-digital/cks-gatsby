@@ -1,0 +1,64 @@
+{
+  "topicName": "Itch in pregnancy",
+  "topicId": "0ea3d4a3-2427-4849-bc55-80054c49c404",
+  "exportId": "e05917e0-2c1e-4c20-9ce3-aa16000365dd",
+  "dataId": "12d009a2-4a91-474b-bab1-aa1700821fa1",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:53:44.8911918+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Itch in pregnancy may be caused by a pre-existing condition, or a condition specific to pregnancy.",
+  "lastRevised": "Last revised in July 2015",
+  "terms": [
+    {
+      "code": "D011248",
+      "term": "Pregnancy Complications"
+    },
+    {
+      "code": "D014581",
+      "term": "Urticaria"
+    },
+    {
+      "code": "D002779",
+      "term": "Cholestasis"
+    },
+    {
+      "code": "D011247",
+      "term": "Pregnancy"
+    },
+    {
+      "code": "D012871",
+      "term": "Skin Diseases"
+    },
+    {
+      "code": "D011537",
+      "term": "Pruritus"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Pregnancy",
+    "Skin and nail",
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "66cd6785-9547-4549-9ac2-f29c354d1788",
+      "parentId": null,
+      "rootId": "66cd6785-9547-4549-9ac2-f29c354d1788",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 46df64d0-7a3f-461f-bbd9-16f5b91d6016 --><h1>Itch in pregnancy:&nbsp;Summary</h1><!-- end field 46df64d0-7a3f-461f-bbd9-16f5b91d6016 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-06-01T00:00:00+01:00",
+      "dateTo": "2015-07-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in June 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone minor restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

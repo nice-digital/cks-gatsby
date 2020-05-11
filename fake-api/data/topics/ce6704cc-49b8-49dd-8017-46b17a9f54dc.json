@@ -1,0 +1,53 @@
+{
+  "topicName": "Bedwetting (enuresis)",
+  "topicId": "ce6704cc-49b8-49dd-8017-46b17a9f54dc",
+  "exportId": "9efdae9a-ae75-4916-9de0-aa16000365dd",
+  "dataId": "927dff40-ae6a-43b7-b7be-aa1700820c58",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:53:27.4375811+00:00",
+  "nextPlannedReviewBy": "2019-12-31T23:59:59+00:00",
+  "topicSummary": "Bedwetting is involuntary wetting during sleep, without any inherent suggestion of frequency or pathophysiology.",
+  "lastRevised": "Last revised in January 2017",
+  "terms": [
+    {
+      "code": "D053206",
+      "term": "Nocturnal Enuresis"
+    },
+    {
+      "code": "D004775",
+      "term": "Enuresis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Kidney disease and urology"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6fcfeced-f6c8-4a74-a1aa-69413fef4868",
+      "parentId": null,
+      "rootId": "6fcfeced-f6c8-4a74-a1aa-69413fef4868",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 5caa8fa8-c064-49f0-af0a-f1d0cc538b3d --><h1>Bedwetting (enuresis):&nbsp;Summary</h1><!-- end field 5caa8fa8-c064-49f0-af0a-f1d0cc538b3d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-01-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "To reflect name change of ERIC, The Children&#39;s Bowel &amp; Bladder Charity."
+    },
+    {
+      "dateFrom": "2014-09-01T00:00:00+01:00",
+      "dateTo": "2014-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in September 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to the recommendations have been made. A prescribing information section on desmopressin has been added to this topic."
+    }
+  ]
+}

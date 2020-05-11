@@ -1,0 +1,50 @@
+{
+  "topicName": "Back pain - low (without radiculopathy)",
+  "topicId": "9b18de7f-5dbf-47fa-b614-8130c5721d6c",
+  "exportId": "75b75118-db7c-451a-9e11-aa16000365dd",
+  "dataId": "0ecdd8b2-598f-48aa-a89e-aa1700820009",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:53:18.2599135+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Low back pain affects the lumbosacral area of the back, between the bottom of the ribs and the top of the legs.",
+  "lastRevised": "Last revised in November 2018",
+  "terms": [
+    {
+      "code": "D001416",
+      "term": "Back Pain"
+    },
+    {
+      "code": "D017116",
+      "term": "Low Back Pain"
+    }
+  ],
+  "clinicalSpecialties": [],
+  "topicHtmlObjects": [
+    {
+      "itemId": "ac35a8c8-1fa3-49cc-84fa-098fc5df42bc",
+      "parentId": null,
+      "rootId": "ac35a8c8-1fa3-49cc-84fa-098fc5df42bc",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b19faa39-bbda-4428-8120-d65930f5880d --><h1>Back pain - low (without radiculopathy): Summary</h1><!-- end field b19faa39-bbda-4428-8120-d65930f5880d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-11-01T00:00:00+00:00",
+      "dateTo": "2018-11-30T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "Information added regarding making an assessment of back pain without red flag symptoms."
+    },
+    {
+      "dateFrom": "2017-01-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in January 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

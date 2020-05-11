@@ -1,0 +1,52 @@
+{
+  "topicName": "Multiple sclerosis",
+  "topicId": "5d674db8-174e-4008-be2b-97980377bc61",
+  "exportId": "704591e3-c24d-4b2f-97e1-aa5700e2147d",
+  "dataId": "c6f0bf3f-f054-4a20-b5f4-aa5b00cd55b8",
+  "number": 5,
+  "dateOfExport": "2019-05-28T12:27:33.8531806+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Multiple sclerosis (MS) is a presumed autoimmune inflammatory condition of the central nervous system (CNS) resulting in areas of demyelination",
+  "lastRevised": "Last revised in February 2018",
+  "terms": [
+    {
+      "code": "D009188",
+      "term": "Myelitis, transverse"
+    },
+    {
+      "code": "D009103",
+      "term": "Multiple Sclerosis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Neurological"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "3486e2db-8f7d-4ffb-90ff-d74ffc6b8477",
+      "parentId": null,
+      "rootId": "3486e2db-8f7d-4ffb-90ff-d74ffc6b8477",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c19a8cdc-4995-4646-ad01-ce0a463fb429 --><h1>Multiple sclerosis:&nbsp;Summary</h1><!-- end field c19a8cdc-4995-4646-ad01-ce0a463fb429 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-02-01T00:00:00+00:00",
+      "dateTo": "2018-02-28T23:59:59+00:00",
+      "title": "Minor update",
+      "body": "New product availability added."
+    },
+    {
+      "dateFrom": "2015-03-01T00:00:00+00:00",
+      "dateTo": "2015-09-30T23:59:59+01:00",
+      "title": "This is a new CKS topic",
+      "body": "The evidence base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

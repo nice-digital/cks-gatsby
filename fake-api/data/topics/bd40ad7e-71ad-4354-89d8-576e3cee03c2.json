@@ -1,0 +1,43 @@
+{
+  "topicName": "Burns and scalds",
+  "topicId": "bd40ad7e-71ad-4354-89d8-576e3cee03c2",
+  "exportId": "bcd0fb44-ccb2-4382-88c1-aa8e00b792d1",
+  "dataId": "be5d844c-404c-452f-8824-aa9500ec5a40",
+  "number": 4,
+  "dateOfExport": "2019-07-25T14:20:30.9891082+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "A burn is an injury caused by exposure to thermal (heat), chemical, electrical, or radiation energy.",
+  "lastRevised": "Last revised in December 2017",
+  "terms": [
+    {
+      "code": "D002056",
+      "term": "Burns"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Injuries",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "66646945-5ec0-4065-b615-3a7ed88741f9",
+      "parentId": null,
+      "rootId": "66646945-5ec0-4065-b615-3a7ed88741f9",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 8c7001ea-d799-42b1-b8d1-da47f1133ecf --><h1>Burns and scalds:&nbsp;Summary</h1><!-- end field 8c7001ea-d799-42b1-b8d1-da47f1133ecf -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-11-01T00:00:00+00:00",
+      "dateTo": "2017-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic has undergone significant restructuring. A node on Assessment has been created in the Diagnosis section. The Scenarios on Referral and infected minor burns and scalds have been removed and incorporated into other Scenarios. An additional node on Wound management has been created in the section on Superficial dermal burns. The Prescribing information section has been removed, and a link created to the CKS topic on Cellulitis - acute. The recommendations on the assessment, management, and referral criteria for burns and scalds have been amended in line with current evidence."
+    }
+  ]
+}

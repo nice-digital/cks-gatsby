@@ -1,0 +1,42 @@
+{
+  "topicName": "MI - secondary prevention",
+  "topicId": "0b3a22ee-885a-43aa-8d4b-a290dc2afbcc",
+  "exportId": "0eb4b89f-3b7c-4aa3-b4f9-aa5700e2147d",
+  "dataId": "fd34d97b-1724-46c2-954e-aa5b00cd8bff",
+  "number": 3,
+  "dateOfExport": "2019-05-28T12:28:21.387931+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Myocardial infarction (MI), colloquially known as a heart attack, is necrosis of myocardial tissue due to ischaemia.",
+  "lastRevised": "Last revised in March&nbsp;2019",
+  "terms": [
+    {
+      "code": "D009203",
+      "term": "Myocardial Infarction"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Cardiovascular"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7a9e7571-dc63-4576-9591-2c8277f138f4",
+      "parentId": null,
+      "rootId": "7a9e7571-dc63-4576-9591-2c8277f138f4",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 2977ccaf-c346-4df5-9554-fac32bebc271 --><h1>MI - secondary prevention:&nbsp;Summary</h1><!-- end field 2977ccaf-c346-4df5-9554-fac32bebc271 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-03-31T23:59:59+01:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in February 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

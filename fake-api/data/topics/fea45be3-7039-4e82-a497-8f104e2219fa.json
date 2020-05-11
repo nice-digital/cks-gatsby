@@ -1,0 +1,47 @@
+{
+  "topicName": "Insulin therapy in type 1 diabetes",
+  "topicId": "fea45be3-7039-4e82-a497-8f104e2219fa",
+  "exportId": "7a556356-ca49-4483-8c9e-aa8e00b792d1",
+  "dataId": "59bcecab-b01e-409d-b5e0-aa9500ebb140",
+  "number": 5,
+  "dateOfExport": "2019-07-25T14:18:06.7449054+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Insulin is a polypeptide hormone secreted by pancreatic beta-cells.The role of insulin is to lower blood glucose to prevent hyperglycaemia",
+  "lastRevised": "Last revised in February 2016",
+  "terms": [
+    {
+      "code": "D003922",
+      "term": "Diabetes Mellitus, Type 1"
+    },
+    {
+      "code": "D007328",
+      "term": "Insulin"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Endocrine and metabolic"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "1dbf6f70-2ca8-48a9-868e-d9fa12cc567e",
+      "parentId": null,
+      "rootId": "1dbf6f70-2ca8-48a9-868e-d9fa12cc567e",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 7dd5a146-9cf6-4d37-9578-10f3892eeb57 --><h1>Insulin therapy in type 1 diabetes: Summary</h1><!-- end field 7dd5a146-9cf6-4d37-9578-10f3892eeb57 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-02-01T00:00:00+00:00",
+      "dateTo": "2016-02-29T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The recommendations have been updated in line with recommendations in the National Institute for Health and Care Excellence (NICE) guidelines Type 1 diabetes in adults: diagnosis and management NICE, 2015, Type 1 diabetes in adults (NICE guideline) and Diabetes (type 1 and type 2) in children and young people: diagnosis and management NICE, 2015, Diabetes (type 1 and type 2) in children and young people."
+    }
+  ]
+}

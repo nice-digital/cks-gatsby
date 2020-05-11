@@ -1,0 +1,50 @@
+{
+  "topicName": "Greater trochanteric pain syndrome (trochanteric bursitis)",
+  "topicId": "312878ed-d57e-45ae-9e8d-d81933eef21e",
+  "exportId": "48a13a13-3cb2-499f-86c0-aa16000365dd",
+  "dataId": "af098f87-229a-4951-af92-aa170080432e",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:46:58.7139195+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Greater trochanteric pain syndrome is a regional pain syndrome in which chronic intermittent pain is felt around the greater trochanter",
+  "lastRevised": "Last revised in August 2016",
+  "terms": [
+    {
+      "code": "D006615",
+      "term": "Hip"
+    },
+    {
+      "code": "D006621",
+      "term": "Hip Joint"
+    },
+    {
+      "code": "D002062",
+      "term": "Bursitis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "956ad9e2-ab21-4291-a021-aa85b5eec47a",
+      "parentId": null,
+      "rootId": "956ad9e2-ab21-4291-a021-aa85b5eec47a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e0992fb7-0fd1-45a4-bc01-017d24af91a2 --><h1>Greater trochanteric pain syndrome (trochanteric bursitis): Summary</h1><!-- end field e0992fb7-0fd1-45a4-bc01-017d24af91a2 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-07-01T00:00:00+01:00",
+      "dateTo": "2016-08-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in July 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. Minor changes to the recommendations on management of greater trochanteric pain syndrome have been made."
+    }
+  ]
+}

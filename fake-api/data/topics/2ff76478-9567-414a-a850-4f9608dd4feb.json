@@ -1,0 +1,44 @@
+{
+  "topicName": "Warts - anogenital",
+  "topicId": "2ff76478-9567-414a-a850-4f9608dd4feb",
+  "exportId": "ea38a75a-4117-4bb4-9b66-aa16000365dd",
+  "dataId": "972d8c62-aad8-4389-be95-aa170081bdc5",
+  "number": 2,
+  "dateOfExport": "2019-03-21T07:52:21.5944753+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Anogenital warts (condylomata acuminata) are benign, proliferative growths occurring in the genital, perineal, anal, and perianal areas.",
+  "lastRevised": "Last revised in April 2017",
+  "terms": [
+    {
+      "code": "D003218",
+      "term": "Condylomata Acuminata"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Infections and infestations",
+    "Sexual health",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "76e05b34-c291-4ea0-9bde-a3535f888a63",
+      "parentId": null,
+      "rootId": "76e05b34-c291-4ea0-9bde-a3535f888a63",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 2cfd9df6-894b-4655-a9ef-2bf7eacf179b --><h1>Warts - anogenital:&nbsp;Summary</h1><!-- end field 2cfd9df6-894b-4655-a9ef-2bf7eacf179b -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-04-01T00:00:00+01:00",
+      "dateTo": "2017-05-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Some minor structural changes have been made to this topic, and information that sinecatechins ointment 10% is now a treatment option has been added."
+    }
+  ]
+}

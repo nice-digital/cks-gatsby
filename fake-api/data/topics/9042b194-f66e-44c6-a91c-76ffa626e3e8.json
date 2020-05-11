@@ -1,0 +1,56 @@
+{
+  "topicName": "Diarrhoea - prevention and advice for travellers",
+  "topicId": "9042b194-f66e-44c6-a91c-76ffa626e3e8",
+  "exportId": "1d808de4-15e2-46d8-8257-aa16011b9d11",
+  "dataId": "1c11dc3d-639e-433e-b2e7-aa17007f3a92",
+  "number": 1,
+  "dateOfExport": "2019-03-21T07:43:12.5440888+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Travellers' diarrhoea is a clinical syndrome associated with contaminated food or water, that occurs during or shortly after travel",
+  "lastRevised": "Last revised in February 2019",
+  "terms": [
+    {
+      "code": "D014195",
+      "term": "Travel"
+    },
+    {
+      "code": "D014839",
+      "term": "Vomiting"
+    },
+    {
+      "code": "D003967",
+      "term": "Diarrhea"
+    },
+    {
+      "code": "D005759",
+      "term": "Gastroenteritis"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Gastrointestinal",
+    "Infections and infestations",
+    "Preventative medicine"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6c72ca57-b64c-42e0-b750-8396f9da2e45",
+      "parentId": null,
+      "rootId": "6c72ca57-b64c-42e0-b750-8396f9da2e45",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 5bc889a3-2ce3-4e27-bbf3-04cba6fcb0e5 --><h1>Diarrhoea - prevention and advice for travellers: Summary</h1><!-- end field 5bc889a3-2ce3-4e27-bbf3-04cba6fcb0e5 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2019-02-01T00:00:00+00:00",
+      "dateTo": "2019-02-28T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in January 2019 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. There have been minor changes to the definition and new sections added on risk factors and complications. The recommendations on prophylactic and &#39;stand-by&#39; antibiotics have been changed."
+    }
+  ]
+}

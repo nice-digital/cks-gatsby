@@ -1,0 +1,54 @@
+{
+  "topicName": "Menopause",
+  "topicId": "f75fa6a7-10c6-4887-9cf1-3ea14d7f353c",
+  "exportId": "d17fcb09-7322-4c39-a989-aa8e00b792d1",
+  "dataId": "1aed6b2e-fe46-4d03-a8e6-aa9500ec09a9",
+  "number": 6,
+  "dateOfExport": "2019-07-25T14:19:20.7183889+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Menopause is a biological stage in a woman's life when menstruation ceases permanently due to the loss of ovarian follicular activity.",
+  "lastRevised": "Last revised in March 2017",
+  "terms": [
+    {
+      "code": "D008593",
+      "term": "Menopause"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Women's health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "06e39ad8-84aa-41aa-b2e1-a09786e49739",
+      "parentId": null,
+      "rootId": "06e39ad8-84aa-41aa-b2e1-a09786e49739",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field e11811df-2c27-42d3-bdce-1d21cb03c01c --><h1>Menopause: Summary</h1><!-- end field e11811df-2c27-42d3-bdce-1d21cb03c01c -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-03-01T00:00:00+00:00",
+      "dateTo": "2017-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "More information on results of the Collaborative Group on Epidemiological Studies of Ovarian Cancer has been included in the topic. A link to the meta-analysis has also been included Collaborative group on epidemiological studies of ovarian cancer, 2015."
+    },
+    {
+      "dateFrom": "2016-12-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Minor update",
+      "body": ""
+    },
+    {
+      "dateFrom": "2015-10-01T00:00:00+01:00",
+      "dateTo": "2015-10-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in October 2015 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The recommendations have been updated in line with recommendations in the National Institute for Health and Care Excellence (NICE) draft guideline Menopause National Collaborating Centre for Women, 2015. The topic has also been restructured."
+    }
+  ]
+}

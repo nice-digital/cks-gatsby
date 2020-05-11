@@ -1,0 +1,48 @@
+{
+  "topicName": "Hypothyroidism",
+  "topicId": "ebfc5032-6653-4b11-895c-5080f933e861",
+  "exportId": "d357c058-867f-4a6e-a347-aa5700e2147d",
+  "dataId": "f71bd283-1f3b-448b-8589-aa5b00ce2d79",
+  "number": 4,
+  "dateOfExport": "2019-05-28T12:30:38.0100088+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Hypothyroidism is the clinical result of impaired production of thyroid hormones (thyroxine [T4] and tri-iodothyronine [T3]).",
+  "lastRevised": "Last revised in June 2018",
+  "terms": [
+    {
+      "code": "D007037",
+      "term": "Hypothyroidism"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Endocrine and metabolic"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7d66bcf2-dd81-489b-8409-f6e7c5c9b898",
+      "parentId": null,
+      "rootId": "7d66bcf2-dd81-489b-8409-f6e7c5c9b898",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field bad8c210-0333-4df5-a82e-3568df0b86a7 --><h1>Hypothyroidism:&nbsp;Summary</h1><!-- end field bad8c210-0333-4df5-a82e-3568df0b86a7 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-06-01T00:00:00+01:00",
+      "dateTo": "2018-06-30T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Prescribing information updated in line with revised SPC relating to drug interaction between Ritonavir and Eltroxin."
+    },
+    {
+      "dateFrom": "2016-02-01T00:00:00+00:00",
+      "dateTo": "2016-04-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in February 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

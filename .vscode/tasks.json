@@ -5,23 +5,43 @@
   "tasks": [
     {
       "label": "Web app - build",
+      "detail": "Builds the .NET Core web application",
       "command": "dotnet",
       "type": "process",
       "args": ["build", "${workspaceFolder}/web-app/CKS.Web/CKS.Web.csproj"],
       "problemMatcher": "$msCompile",
+      "group": "build",
       "presentation": {
-        "reveal": "silent"
+        "reveal": "silent",
+        "panel": "shared"
       }
     },
     {
       "label": "Gatsby - wait",
+      "detail": "Waits for Gatsby to be available on tcp:localhost:8000 before completing",
       "type": "shell",
       "command": "npm run wait",
       "options": {
         "cwd": "${workspaceFolder}/gatsby"
       },
       "presentation": {
-        "reveal": "silent"
+        "reveal": "silent",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Gatsby - build",
+      "detail": "Builds a production build of the Gatsby static site",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": "$tsc",
+      "options": {
+        "cwd": "${workspaceFolder}/gatsby"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
       }
     }
   ]

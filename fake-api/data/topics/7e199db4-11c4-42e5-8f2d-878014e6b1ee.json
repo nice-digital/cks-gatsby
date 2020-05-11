@@ -1,0 +1,42 @@
+{
+  "topicName": "Child maltreatment - recognition and management",
+  "topicId": "7e199db4-11c4-42e5-8f2d-878014e6b1ee",
+  "exportId": "0509116f-8794-4452-9630-aa16000365dd",
+  "dataId": "f9e5a84c-5b83-4bac-a26c-aa1700814738",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:50:40.2478189+00:00",
+  "nextPlannedReviewBy": "2024-12-31T23:59:59+00:00",
+  "topicSummary": "Child maltreatment includes any type of abuse or neglect of a child/young person caused by inflicting harm or by failing to act to prevent harm.",
+  "lastRevised": "Last revised in January&nbsp;2019",
+  "terms": [
+    {
+      "code": "D002649",
+      "term": "Child Abuse"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "74fdab4a-e119-4c1d-a227-bd89aae917dc",
+      "parentId": null,
+      "rootId": "74fdab4a-e119-4c1d-a227-bd89aae917dc",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 8096b788-1f97-4a35-9210-3bc537b33d72 --><h1>Child maltreatment - recognition and management:&nbsp;Summary</h1><!-- end field 8096b788-1f97-4a35-9210-3bc537b33d72 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-11-01T00:00:00+00:00",
+      "dateTo": "2019-01-31T23:59:59+00:00",
+      "title": "Reviewed and updated",
+      "body": "A literature search was conducted in November 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. The topic has undergone restructuring. No major changes to the recommendations have been made."
+    }
+  ]
+}

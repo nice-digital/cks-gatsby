@@ -1,0 +1,41 @@
+{
+  "topicName": "Jaundice in the newborn",
+  "topicId": "3e95a5e1-fd00-41d7-aede-2e1615f0e4f5",
+  "exportId": "ce5eb8aa-3fee-4efc-a29e-aa16000365dd",
+  "dataId": "fde2191f-c387-466e-8be0-aa1700824973",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:54:21.0690547+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Jaundice is a yellow colouration of the skin and sclerae (whites of the eyes) caused by the accumulation of bilirubin, a bile pigment",
+  "lastRevised": "Last revised in November 2015",
+  "terms": [
+    {
+      "code": "D007565",
+      "term": "Jaundice, Neonatal"
+    },
+    {
+      "code": "D007565",
+      "term": "Jaundice"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Endocrine and metabolic",
+    "Skin and nail"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "b5dc6b2a-5b54-4deb-8ee4-861bd3d0c7f3",
+      "parentId": null,
+      "rootId": "b5dc6b2a-5b54-4deb-8ee4-861bd3d0c7f3",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 7778a74c-7921-4b70-a79c-45d622f35265 --><h1>Jaundice in the newborn: Summary</h1><!-- end field 7778a74c-7921-4b70-a79c-45d622f35265 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": []
+}

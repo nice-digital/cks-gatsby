@@ -1,0 +1,48 @@
+{
+  "topicName": "Poisoning or overdose",
+  "topicId": "94eca2fa-634d-4fe4-97af-372492295e17",
+  "exportId": "10945338-5995-46ce-bb5c-aa16000365dd",
+  "dataId": "ee63eed9-7da6-40f4-a21d-aa17007f3336",
+  "number": 4,
+  "dateOfExport": "2019-03-21T07:43:05.6018059+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Poisoning denotes exposure to a substance that is dangerous to health or life. This may be a drug, household product, industrial chemical, plant or animal product",
+  "lastRevised": "Last revised in June 2017",
+  "terms": [
+    {
+      "code": "D062787",
+      "term": "Drug Overdose"
+    },
+    {
+      "code": "D011041",
+      "term": "Poisoning"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Drugs and devices",
+    "Mental health",
+    "Poisoning"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "234268f1-c9c3-44c0-8737-5ea0bbe09aaf",
+      "parentId": null,
+      "rootId": "234268f1-c9c3-44c0-8737-5ea0bbe09aaf",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 4dcd2d86-7151-48ed-b4d5-2ce4576bef9a --><h1>Poisoning or overdose:&nbsp;Summary</h1><!-- end field 4dcd2d86-7151-48ed-b4d5-2ce4576bef9a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-04-01T00:00:00+01:00",
+      "dateTo": "2017-06-30T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "Literature searches were conducted in April 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of this topic. Changes include:"
+    }
+  ]
+}

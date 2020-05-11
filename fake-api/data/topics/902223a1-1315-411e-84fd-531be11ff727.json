@@ -1,0 +1,43 @@
+{
+  "topicName": "Mumps",
+  "topicId": "902223a1-1315-411e-84fd-531be11ff727",
+  "exportId": "603def6d-8ada-4649-934f-aa16011f74f9",
+  "dataId": "a0b3b8c4-6f38-4155-848d-aa17007fb4dd",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:44:56.9046368+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Mumps is a moderate-to-highly contagious acute viral infection caused by a paramyxovirus, and spread by direct contact with saliva.",
+  "lastRevised": "Last revised in December 2018",
+  "terms": [
+    {
+      "code": "D009107",
+      "term": "Mumps"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Child health",
+    "Infections and infestations"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "bd2ff188-928d-4179-b286-81ba24a85410",
+      "parentId": null,
+      "rootId": "bd2ff188-928d-4179-b286-81ba24a85410",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field f79259cd-a39f-4dd4-b409-e4ff80c89ab1 --><h1>Mumps:&nbsp;Summary</h1><!-- end field f79259cd-a39f-4dd4-b409-e4ff80c89ab1 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-12-01T00:00:00+00:00",
+      "dateTo": "2018-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in December 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. No major changes to recommendations have been made."
+    }
+  ]
+}

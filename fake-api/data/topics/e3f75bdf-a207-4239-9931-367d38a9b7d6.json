@@ -1,0 +1,49 @@
+{
+  "topicName": "Retinal detachment",
+  "topicId": "e3f75bdf-a207-4239-9931-367d38a9b7d6",
+  "exportId": "0e95c4a2-a463-4c39-a6d0-aa16000365dd",
+  "dataId": "c115f07e-bf9c-48f5-96ea-aa170082915d",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:55:22.528415+00:00",
+  "nextPlannedReviewBy": "2020-12-31T23:59:59+00:00",
+  "topicSummary": "Retinal detachment refers to the separation of the inner neurosensory retina from the underlying retinal pigment epithelium.",
+  "lastRevised": "Last revised in March 2015",
+  "terms": [
+    {
+      "code": "D012163",
+      "term": "Retinal Detachment"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Eyes",
+    "Injuries"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "6faba25d-4faa-4dc9-ab11-202d1fd5b045",
+      "parentId": null,
+      "rootId": "6faba25d-4faa-4dc9-ab11-202d1fd5b045",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field b2ef5578-64ec-45e3-b0ce-cb460b08cadb --><h1>Retinal detachment:&nbsp;Summary</h1><!-- end field b2ef5578-64ec-45e3-b0ce-cb460b08cadb -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2015-03-01T00:00:00+00:00",
+      "dateTo": "2015-03-31T23:59:59+01:00",
+      "title": "Minor update",
+      "body": "Text in the section on specialist surgical techniques used to treat retinal detachment in secondary care have been amended in line with expert opinion of an external reviewer of this CKS topic."
+    },
+    {
+      "dateFrom": "2015-01-01T00:00:00+00:00",
+      "dateTo": "2015-01-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2014 to identify evidence-based guidelines, UK policy, systematic reviews, and key RCTs published since the last revision of this topic. The recommendations about who to refer to if a person has suspected retinal detachment have been amended, in line with expert opinion from the Royal College of Ophthalmologists and The College of Optometrists."
+    }
+  ]
+}

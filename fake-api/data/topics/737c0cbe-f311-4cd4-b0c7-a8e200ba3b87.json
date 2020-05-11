@@ -1,0 +1,42 @@
+{
+  "topicName": "Food allergy",
+  "topicId": "737c0cbe-f311-4cd4-b0c7-a8e200ba3b87",
+  "exportId": "a3572012-e72d-483d-87f6-aa16000365dd",
+  "dataId": "4d9eca0b-be5f-4e4d-aa8c-aa1700806642",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:47:29.2762304+00:00",
+  "nextPlannedReviewBy": "2023-12-31T23:59:59+00:00",
+  "topicSummary": "Food allergy is an adverse immune response to a food.",
+  "lastRevised": "Last revised in October 2018",
+  "terms": [
+    {
+      "code": "D005512",
+      "term": "Food Hypersensitivity"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Allergies"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "f4108f30-1d91-4189-bb71-a8e200ba443a",
+      "parentId": null,
+      "rootId": "f4108f30-1d91-4189-bb71-a8e200ba443a",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field d8bacef5-c62f-4914-8552-a8e200ba443a --><h1>Food allergy: Summary</h1><!-- end field d8bacef5-c62f-4914-8552-a8e200ba443a -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2018-10-01T00:00:00+01:00",
+      "dateTo": "2018-10-31T23:59:59+00:00",
+      "title": "This is a new CKS topic which is largely based on the National Institute for Health and Care Excellence (NICE) clinical guideline Food allergy in under 19s: assessment and diagnosis (NICE 2018)",
+      "body": "A literature search was conducted in August 2018 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials. The evidence-base has been reviewed in detail, and recommendations are clearly justified and transparently linked to the supporting evidence."
+    }
+  ]
+}

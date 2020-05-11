@@ -1,0 +1,47 @@
+{
+  "topicName": "Temporomandibular disorders (TMDs)",
+  "topicId": "2c31b829-99a4-46d4-b910-619f38d2a709",
+  "exportId": "77506b9b-9b10-40eb-a4ed-aa8600be191d",
+  "dataId": "4e0cf8bb-3dca-4811-b73c-aa8600c31c07",
+  "number": 4,
+  "dateOfExport": "2019-07-10T11:50:20.9935622+00:00",
+  "nextPlannedReviewBy": "2021-12-31T23:59:59+00:00",
+  "topicSummary": "Temporomandibular disorders are a group of conditions affecting the masticatory muscles, the temporomandibular joint and associated structures.",
+  "lastRevised": "Last revised in December 2016",
+  "terms": [
+    {
+      "code": "D013706",
+      "term": "Temporomandibular Joint Dysfunction Syndrome"
+    },
+    {
+      "code": "D013705",
+      "term": "Temporomandibular Joint Disorders"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Musculoskeletal",
+    "Oral health"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "2c720686-7642-45f7-a0ea-51c9bec460a8",
+      "parentId": null,
+      "rootId": "2c720686-7642-45f7-a0ea-51c9bec460a8",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field 3f5198f6-b99c-448b-a64a-0a0325c9eda9 --><h1>Temporomandibular disorders: Summary</h1><!-- end field 3f5198f6-b99c-448b-a64a-0a0325c9eda9 -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2016-11-01T00:00:00+00:00",
+      "dateTo": "2016-12-31T23:59:59+00:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in November 2016 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. The topic title has been changed from TMJ disorders to Temporomandibular disorders, in line with current nomenclature in the literature. The topic has undergone minor restructuring, and the recommendations on management have been updated in line with the Royal College of Surgeons Faculty of Dental Surgery publication Temporomandibular disorders (TMDs): an update and management guidance for primary care from the UK Specialist Interest Group in Orofacial Pain and TMDs (USOT) (2013)."
+    }
+  ]
+}

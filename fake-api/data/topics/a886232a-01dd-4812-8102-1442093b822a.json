@@ -1,0 +1,83 @@
+{
+  "topicName": "Knee pain - assessment",
+  "topicId": "a886232a-01dd-4812-8102-1442093b822a",
+  "exportId": "5e957227-842c-4247-94b4-aa16000365dd",
+  "dataId": "827b0078-1488-4b85-b766-aa170081371c",
+  "number": 3,
+  "dateOfExport": "2019-03-21T07:50:26.4990452+00:00",
+  "nextPlannedReviewBy": "2022-12-31T23:59:59+00:00",
+  "topicSummary": "Knee pain is a common condition, particularly in older people.Possible causes include osteoarthritis of the knee, injuries",
+  "lastRevised": "Last revised in July&nbsp;2017",
+  "terms": [
+    {
+      "code": "D020370",
+      "term": "Osteoarthritis, Knee"
+    },
+    {
+      "code": "D017888",
+      "term": "Medial Collateral Ligament, Knee"
+    },
+    {
+      "code": "D016119",
+      "term": "Posterior Cruciate Ligament"
+    },
+    {
+      "code": "D016118",
+      "term": "Anterior Cruciate Ligament"
+    },
+    {
+      "code": "D046789",
+      "term": "Chondromalacia Patellae"
+    },
+    {
+      "code": "D046788",
+      "term": "Patellofemoral Pain Syndrome"
+    },
+    {
+      "code": "D057071",
+      "term": "Patellofemoral Joint"
+    },
+    {
+      "code": "D010329",
+      "term": "Patella"
+    },
+    {
+      "code": "D007719",
+      "term": "Knee Joint"
+    },
+    {
+      "code": "D007718",
+      "term": "Knee Injuries"
+    },
+    {
+      "code": "D010008",
+      "term": "Osteochondritis Dissecans"
+    }
+  ],
+  "clinicalSpecialties": [
+    "Injuries",
+    "Musculoskeletal"
+  ],
+  "topicHtmlObjects": [
+    {
+      "itemId": "7ab6d9fa-b818-42c3-8574-09ae5b78def6",
+      "parentId": null,
+      "rootId": "7ab6d9fa-b818-42c3-8574-09ae5b78def6",
+      "fullItemName": "Summary",
+      "htmlHeader": "<!-- begin field c4357167-77f5-47bd-a84f-54e61050049d --><h1>Knee pain - assessment:&nbsp;Summary</h1><!-- end field c4357167-77f5-47bd-a84f-54e61050049d -->",
+      "htmlStringContent": "REPLACE_ON_SERVE",
+      "containerElement": "topicSummary",
+      "children": [],
+      "depth": 1,
+      "pos": 0
+    }
+  ],
+  "latestChanges": [
+    {
+      "dateFrom": "2017-07-01T00:00:00+01:00",
+      "dateTo": "2017-07-31T23:59:59+01:00",
+      "title": "Reviewed",
+      "body": "A literature search was conducted in June 2017 to identify evidence-based guidelines, UK policy, systematic reviews, and key randomized controlled trials published since the last revision of the topic. Sections on risk factors and prognosis have been added to Background information. The recommendations on assessment and management of knee pain have been amended in line with current evidence."
+    }
+  ]
+}

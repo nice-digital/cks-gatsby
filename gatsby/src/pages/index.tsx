@@ -6,6 +6,7 @@ import { Button } from "@nice-digital/nds-button";
 
 import { Layout } from "../components/Layout/Layout";
 import { PartialTopic } from "../types";
+import { SEO } from "../components/SEO/SEO";
 
 type IndexProps = {
 	data: {
@@ -20,6 +21,7 @@ const IndexPage: React.FC<IndexProps> = ({
 }: IndexProps) => {
 	return (
 		<Layout>
+			<SEO />
 			<Hero
 				title="Clinical Knowledge Summaries"
 				intro="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best&nbsp;practice"
