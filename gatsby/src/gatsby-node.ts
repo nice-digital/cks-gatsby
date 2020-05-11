@@ -1,21 +1,31 @@
 import { resolve } from "path";
 import { CreatePagesArgs } from "gatsby";
-import { PartialTopic } from "./types";
+import { PartialTopic, PartialSpeciality } from "./types";
 
-interface AllTopicsQueryData {
+interface PageCreationQuery {
 	allTopics: {
 		nodes: PartialTopic[];
 	};
+	allSpecialities: {
+		nodes: PartialSpeciality[];
+	};
 }
 
-export const createPages = async ({
+const createCksPages = async ({
 	graphql,
 	actions,
 }: CreatePagesArgs): Promise<undefined> => {
 	const { createPage } = actions;
 
-	const allTopicsQuery = await graphql<AllTopicsQueryData>(`
+	const pageCreationQuery = await graphql<PageCreationQuery>(`
 		{
+			allSpecialities: allCksSpeciality {
+				nodes {
+					id
+					name
+					slug
+				}
+			}
 			allTopics: allCksTopic {
 				nodes {
 					id
@@ -24,16 +34,30 @@ export const createPages = async ({
 			}
 		}
 	`);
-	if (allTopicsQuery.data !== undefined)
-		allTopicsQuery.data.allTopics.nodes.forEach(({ id, slug }) => {
-			createPage({
-				path: `/${slug}/`,
-				component: resolve("src/templates/Topic/Topic.tsx"),
-				context: {
-					id,
-				},
-			});
+
+	function createCksPage(id: string, slug: string, templatePath: string): void {
+		createPage({
+			path: `/${slug}/`,
+			component: resolve(templatePath),
+			context: {
+				id,
+			},
 		});
+	}
+
+	pageCreationQuery.data?.allTopics.nodes.forEach(({ id, slug }) => {
+		createCksPage(id, slug, "src/templates/Topic/Topic.tsx");
+	});
+
+	pageCreationQuery.data?.allSpecialities.nodes.forEach(({ id, slug }) => {
+		createCksPage(id, slug, "src/templates/Speciality/Speciality.tsx");
+	});
 
 	return;
+};
+
+export const createPages = async (
+	createPagesArgs: CreatePagesArgs
+): Promise<undefined> => {
+	return createCksPages(createPagesArgs);
 };
