@@ -11,4 +11,5 @@
 require("source-map-support").install();
 require("ts-node/register/transpile-only");
 
-exports.createPages = require("./src/gatsby-node.ts").createPages;
+// Re-export all the typescript exports - these are what Gatsby is looking for
+module.exports = { ...require("./src/gatsby-node.ts") };

@@ -47,6 +47,7 @@
   "dependencies": {},
   "devDependencies": {
     "@nice-digital/design-system": "^1.0.24-alpha.0",
+    "@nice-digital/global-nav": "github:nice-digital/global-nav",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^9.4.1",
     "@types/jest": "^25.1.3",
