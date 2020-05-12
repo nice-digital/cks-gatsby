@@ -7,6 +7,7 @@ using NICE.Search.Common.Models;
 using Shouldly;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -18,15 +19,26 @@ namespace CKS.Web.Test.IntegrationTests
 		{ }
 
 
+		private HttpClient SetupClientWithFakeSearchProvider(string fakeSearchResultsFilePath = null)
+		{
+			var searchResults = new SearchResults();
+			if(fakeSearchResultsFilePath != null)
+				searchResults = JsonConvert.DeserializeObject<SearchResults>(File.ReadAllText(fakeSearchResultsFilePath));
+
+			var mockSearchProvider = new Mock<ISearchProvider>();
+			mockSearchProvider.Setup(x => x.Search(It.IsAny<ISearchUrl>())).Returns(searchResults);
+			var client = _factory
+				.WithImplementation<ISearchProvider>(mockSearchProvider.Object)
+				.CreateClient();
+
+			return client;
+		}
+
 		[Fact]
 		public async void ReturnsJson()
 		{
 			// Arrange
-			var mockSearchProvider = new Mock<ISearchProvider>();
-			mockSearchProvider.Setup(x => x.Search(It.IsAny<ISearchUrl>())).Returns(new SearchResults { });
-			var client = _factory
-				.WithImplementation<ISearchProvider>(mockSearchProvider.Object)
-			    .CreateClient();
+			var client = SetupClientWithFakeSearchProvider();
 
 			// Act
 			var response = await client.GetAsync("/api/search");
@@ -41,13 +53,7 @@ namespace CKS.Web.Test.IntegrationTests
 		public async void SearchForCancerReturnsCorrectJson()
 		{
 			// Arrange
-			var realSearchResults =  JsonConvert.DeserializeObject<SearchResults>(File.ReadAllText(@"./IntegrationTests/Fakes/FakeSearchResult-Cancer.json"));
-			var mockSearchProvider = new Mock<ISearchProvider>();
-			mockSearchProvider.Setup(x => x.Search(It.IsAny<ISearchUrl>())).Returns(realSearchResults);
-
-			var client = _factory
-				.WithImplementation<ISearchProvider>(mockSearchProvider.Object)
-				.CreateClient();
+			var client = SetupClientWithFakeSearchProvider(@"./IntegrationTests/Fakes/FakeSearchResult-Cancer.json");
 
 			//Act
 			var response = await client.GetAsync("/api/search?q=cancer");
@@ -63,14 +69,8 @@ namespace CKS.Web.Test.IntegrationTests
 		public async void FailSearchRespondsCorrectly()
 		{
 			// Arrange
-			var realSearchResults = JsonConvert.DeserializeObject<SearchResults>(File.ReadAllText(@"./IntegrationTests/Fakes/FakeFailedSearch.json"));
-			var mockSearchProvider = new Mock<ISearchProvider>();
-			mockSearchProvider.Setup(x => x.Search(It.IsAny<ISearchUrl>())).Returns(realSearchResults);
-
-			var client = _factory
-				.WithImplementation<ISearchProvider>(mockSearchProvider.Object)
-				.CreateClient();
-
+			var client = SetupClientWithFakeSearchProvider(@"./IntegrationTests/Fakes/FakeFailedSearch.json");
+			
 			//Act
 			var response = await client.GetAsync("/api/search");
 			var responseBody = await response.Content.ReadAsStringAsync();
