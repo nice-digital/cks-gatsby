@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="IntegrationTests\Infrastructure\Extensions\2uhkyn5b.02o~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="0.14.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="Moq" Version="4.13.1" />
@@ -18,6 +23,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CKS.Web\CKS.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="IntegrationTests\Fakes\FakeFailedSearch.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\Fakes\FakeSearchResult-Cancer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

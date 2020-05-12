@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Shouldly;
 using Xunit;
 using CKS.Web.Controllers;
 using Moq;
 using Microsoft.Extensions.Logging;
 using NICE.Search.Common.Urls;
-using NICE.Search.Providers;
-using NICE.Search.Common.Enums;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Common.Models;
-using System.Text.Json;
 
 namespace CKS.Web.Test.UnitTests.Controllers
 {
