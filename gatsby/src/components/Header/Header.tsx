@@ -16,21 +16,22 @@ const getQuery = (locationSerch: string): string => {
 };
 
 export const Header: React.FC = () => {
-	const location = useLocation();
+	const { search } = useLocation();
 
-	const [query, setQuery] = useState(getQuery(location.search));
+	const [query, setQuery] = useState(getQuery(search));
 
 	// Update the search term in the global nav search box
 	// when the querystring changes (after browser navigation)
 	useEffect(() => {
-		setQuery(getQuery(location.search));
+		const q = getQuery(search);
+		setQuery(q);
 
 		const searchInput = document.querySelector(
 			"header form[role='search'] [name='q']"
 		);
 
-		if (searchInput) (searchInput as HTMLInputElement).value = query;
-	}, [location]);
+		if (searchInput) (searchInput as HTMLInputElement).value = q;
+	}, [search]);
 
 	return (
 		<>
