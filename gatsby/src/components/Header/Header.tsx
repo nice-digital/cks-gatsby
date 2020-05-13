@@ -36,14 +36,13 @@ export const Header: React.FC = () => {
 		<>
 			{typeof window !== "undefined" && (
 				<Suspense fallback={<></>}>
-					{/* TODO Fix horrible casting once global nav allows false for the auth prop */}
 					<GlobalNavHeader
 						service="cks"
 						onNavigating={(e): void => {
 							if (e.href[0] === "/") navigate(e.href);
 							else window.location.href = e.href;
 						}}
-						auth={(false as unknown) as undefined}
+						auth={false}
 						search={{
 							placeholder: "Search CKS…",
 							onSearching: (e): void => {
