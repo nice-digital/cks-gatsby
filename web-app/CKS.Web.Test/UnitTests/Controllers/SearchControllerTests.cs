@@ -18,7 +18,7 @@ namespace CKS.Web.Test.UnitTests.Controllers
 			searchProvider.Setup(sp => sp.Search(It.IsAny<ISearchUrl>())).Returns(new SearchResults());
 			var searchController = new SearchController(Mock.Of<ILogger<SearchController>>(), searchProvider.Object);
 
-			var result = searchController.Get(new SearchUrl() { q = "Cancer" });
+			var result = searchController.Get(new SearchUrl());
 
 			result.Value.ShouldNotBeNull();
 			result.StatusCode.ShouldBe(200);
