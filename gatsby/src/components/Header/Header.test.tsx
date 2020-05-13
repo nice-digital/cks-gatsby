@@ -39,7 +39,7 @@ describe("Header", () => {
 
 		fireEvent.click(await findByText("About CKS"), { button: 0 });
 
-		expect(navigate).toHaveBeenCalledWith("/about");
+		wait(() => expect(navigate).toHaveBeenCalledWith("/about"));
 	});
 
 	it("should set search box default value from q querystring value", async () => {

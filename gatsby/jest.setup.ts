@@ -1,29 +1,20 @@
 import "@testing-library/jest-dom/extend-expect";
+import { DataLayerEntry } from "types";
 
-// Mock window.dataLayer, part of GTM. Global nav header relies on this
-type DataLayerEntry = {
-	event: string;
-	eventCallback?: () => void;
-	eventTimeout?: number;
-} & { [key: string]: string };
+window.dataLayer = [];
 
-declare global {
-	interface Window {
-		dataLayer: Array<DataLayerEntry>;
+const originalPush = window.dataLayer.push;
+
+window.dataLayer.push = jest.fn<number, DataLayerEntry[]>(
+	(dataLayerEntry: DataLayerEntry): number => {
+		// Mimick the eventCallback function being called as it would do in a browser
+		// with GTM loaded.
+		if (dataLayerEntry.eventCallback)
+			setTimeout(dataLayerEntry.eventCallback, 100);
+		return originalPush.call(window.dataLayer, dataLayerEntry);
 	}
-}
-
-const dataLayerPush = jest
-	.fn<number, DataLayerEntry[]>()
-	.mockImplementation(({ eventCallback }: DataLayerEntry): number => {
-		if (eventCallback) eventCallback();
-		return 0;
-	});
-
-const dataLayer: DataLayerEntry[] = [];
-dataLayer.push = dataLayerPush;
-window.dataLayer = dataLayer;
+);
 
 afterEach(() => {
-	dataLayerPush.mockClear();
+	(window.dataLayer.push as jest.Mock).mockClear();
 });
