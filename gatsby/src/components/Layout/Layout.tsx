@@ -11,7 +11,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 	return (
 		<>
 			<Header />
-			<main className="container">{children}</main>
+			<main className="container" id="content-start">
+				{children}
+			</main>
 			<Footer />
 		</>
 	);

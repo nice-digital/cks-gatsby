@@ -38,6 +38,7 @@ export const Header: React.FC = () => {
 				<Suspense fallback={<></>}>
 					<GlobalNavHeader
 						service="cks"
+						skipLinkId="content-start"
 						onNavigating={(e): void => {
 							if (e.href[0] === "/") navigate(e.href);
 							else window.location.href = e.href;
