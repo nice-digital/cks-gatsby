@@ -38,5 +38,6 @@
     "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/given/definitions.js",
     "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/when/definitions.js",
     "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/then/definitions.js"
-  ]
+  ],
+  "omnisharp.loggingLevel": "warning"
 }

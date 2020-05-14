@@ -20,7 +20,9 @@ namespace CKS.Web
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+						.ConfigureKestrel(o => o.AddServerHeader = false)
+						.UseStartup<Startup>();
                 });
     }
 }
