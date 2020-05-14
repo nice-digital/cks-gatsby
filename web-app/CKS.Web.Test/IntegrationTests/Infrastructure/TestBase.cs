@@ -21,23 +21,11 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 			ShouldlyConfiguration.ShouldMatchApprovedDefaults
 				.WithScrubber(s =>
 				{
-					#region Format Json
-					bool isJson = false;
 					try
 					{
-						var token = JObject.Parse(s);
-						isJson = true;
+						return JObject.Parse(s).ToString(Formatting.Indented);
 					}
-					catch (Exception e) { }
-					
-
-					if (isJson)
-					{
-						dynamic parsedJson = JsonConvert.DeserializeObject(s);
-						s = JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
-					}
-					#endregion
-
+					catch { }
 					return s;
 				});
 		}

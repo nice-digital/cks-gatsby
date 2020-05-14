@@ -1,6 +1,7 @@
 using CKS.Web.Test.IntegrationTests.Infrastructure;
 using Moq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Common.Models;
 using Shouldly;
@@ -23,7 +24,7 @@ namespace CKS.Web.Test.IntegrationTests
 		{
 			// Arrange
 			var client = _factory
-				.WithFakeSearchProvider("FakeSearchResult-Cancer.json")
+				.WithFakeSearchProvider("FakeSearchResultsModel.json")
 				.CreateClient();
 
 			// Act
@@ -33,7 +34,13 @@ namespace CKS.Web.Test.IntegrationTests
 			// Assert
 			response.StatusCode.ShouldBe(System.Net.HttpStatusCode.OK);
 			response.Content.Headers.ContentType.MediaType.ShouldBe("application/json");
-			responseBody.ShouldMatchApproved();
+
+			var expected = JObject.Parse(File.ReadAllText(@"./IntegrationTests/Fakes/FakeSearchResultsModel.json"))
+							.ToString(Formatting.Indented);
+			responseBody = JObject.Parse(responseBody)
+							.ToString(Formatting.Indented);
+
+			responseBody.ShouldBe(expected);
 		}
 	}
 }

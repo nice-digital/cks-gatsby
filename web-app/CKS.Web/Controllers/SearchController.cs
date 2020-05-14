@@ -29,12 +29,10 @@ namespace CKS.Web.Controllers
 
 			if (search.Failed)
 			{
-				var logId = Guid.NewGuid().ToString("N").Substring(24);
-				_logger.Log(LogLevel.Error,
-					(String.Format("Search exception - {0}. Search url - {1}. Error code {2}.",
+				_logger.LogError("Search exception - {errorMessage}. Search url - {searchUrl}.",
 					search.ErrorMessage,
-					searchUrl.ToString(),
-					logId)));
+					searchUrl
+					);
 
 				statusCode = 500;
 			}

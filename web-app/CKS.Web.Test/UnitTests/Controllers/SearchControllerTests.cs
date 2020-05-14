@@ -6,6 +6,8 @@ using Microsoft.Extensions.Logging;
 using NICE.Search.Common.Urls;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Common.Models;
+using System;
+using CKS.Web.Test.IntegrationTests.Infrastructure.Extensions;
 
 namespace CKS.Web.Test.UnitTests.Controllers
 {
@@ -37,6 +39,26 @@ namespace CKS.Web.Test.UnitTests.Controllers
 
 			response.StatusCode.ShouldBe(500);
 			responseData.Failed.ShouldBeTrue();
+
+		}
+
+		[Fact]
+		public void AFailedSearchWillLogError()
+		{
+			var searchProvider = new Mock<ISearchProvider>();
+			searchProvider.Setup(sp => sp.Search(It.IsAny<ISearchUrl>())).Returns(
+				new SearchResults()
+				{
+					Failed = true,
+					ErrorMessage = "Some error message"
+				});
+
+			var mockLogger = new Mock<ILogger<SearchController>>();
+			var searchController = new SearchController(mockLogger.Object, searchProvider.Object);
+
+			var response = searchController.Get(new SearchUrl());
+
+			mockLogger.VerifyLog(Times.Once);
 
 		}
 	}

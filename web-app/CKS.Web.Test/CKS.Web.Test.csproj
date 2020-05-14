@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="IntegrationTests\Infrastructure\Extensions\2uhkyn5b.02o~" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.14.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
@@ -26,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="IntegrationTests\Fakes\FakeSearchResult-Cancer.json">
+    <None Update="IntegrationTests\Fakes\FakeSearchResultsModel.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
