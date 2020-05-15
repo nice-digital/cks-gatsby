@@ -43,6 +43,34 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "Functional tests - all",
+      "detail": "Runs the functional tests against the web app on port 5000",
+      "type": "shell",
+      "command": "npm test",
+      "options": {
+        "cwd": "${workspaceFolder}/functional-tests"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Functional tests - current feature",
+      "detail": "Runs the functional tests for the currently open feature file",
+      "type": "shell",
+      "command": "npm test -- --spec ${fileBasenameNoExtension}",
+      "options": {
+        "cwd": "${workspaceFolder}/functional-tests"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }

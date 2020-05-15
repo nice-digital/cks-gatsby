@@ -5,7 +5,7 @@ const isInDocker = !!process.env.IN_DOCKER,
 
 exports.config = {
 	sync: true,
-	maxInstances: 1,
+	maxInstances: isInDocker ? 5 : 2,
 	services: isInDocker ? [] : ["selenium-standalone"],
 	seleniumLogs: "./logs",
 

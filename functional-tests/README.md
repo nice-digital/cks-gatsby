@@ -11,6 +11,7 @@
 	- [Stack](#stack)
 		- [Software](#software)
 	- [:rocket: Set up](#rocket-set-up)
+		- [Using VSCode](#using-vscode)
 		- [Using npm](#using-npm)
 			- [Different URLs](#different-urls)
 		- [Docker](#docker)
@@ -36,33 +37,45 @@
 
 ## :rocket: Set up
 
-Run the tests directly on your machine [using npm](#using-npm), or via Docker.
+Run the tests directly on your machine [using VSCode](#using-vscode), [using npm](#using-npm), or via Docker.
 
-### Using npm
+The easiest way is via VSCode:
 
-Using npm will launch browsers on your local machine to run the tests. This is useful for watching the test runs to diagnose any failing tests.
+### Using VSCode
 
-1. Install Node 10+
-2. Install Chrome and Firefox
-3. Build the [Gatsby site](../gatsby/):
-   1. `cd gatsby && npm run build`
-4. Run the [web-app](../web-app/) on http://localhost:5000
-   1. `cd web-app && dotnet run --project CKS.Web/CKS.Web.csproj`
-5. `cd` into the _functional-tests_ folder and:
-   1. Run `npm i` to install dependencies
-   2. Run `npm test`
+Using VSCode to run the tests will launch browsers on your local machine to run the tests. This is useful for watching and debugging the test runs to diagnose any failing tests.
 
-This runs the tests against the [web-app](../web-app/) running on http://localhost:5000. This is for 2 reasons:
+This runs the tests against the [web-app](../web-app/) running on http://localhost:5000.
 
-- You get static HTML served for the HTML pages (rather than client side rendering)
-- You can test the search integration
+1. Install Node 10
+2. Install Chrome
+3. Clone this repository
+4. Open the root of the repository in VS Code
+5. Install dependencies from npm:
+   1. Run 'npm: Install Dependencies' from the VS Code command palette (_Ctrl+Shift+P_) and choose the functional-tests folder from the next dropdown (or just install all)
+   2. Or run `cd functional-tests && npm ci` on the command line
+6. Build the [gatsby site](../gatsby/) site:
+   1. Either run `npm run build` from the _gatsby_ folder, or
+   2. Use _Ctrl+Shift+B_ to run 'Gatsby - build'
+7. Go to the 'Run and Debug' panel (_Ctrl+Shift+D_) in VS Code
+8. Run 'Webapp - launch' to run the webapp on port 5000
+9. Run 'Run Test Task' from the command palette (_Ctrl+Shift+P_) and choose 'Functional tests - all'
+   1. Or run 'Functional tests - current feature' to run just the currently opened feature file.
+
+> Note: the tests seem to run with Node 12 OK on Linux, but not on Windows. They fail with errors installing fibers. So stick with Node 10 for the time being.
+
+We run the tests against the web application (and _not_ the Gatsby development site) for 2 reasons:
+
+- You get static HTML served for the HTML pages (rather than pure client side rendering)
+- You can test the search integration.
 
 However, depending on your use case, you can run the tests against [different URLs](#different-urls).
 
-> Note: we don't recommend running the functional tests against:
->
-> - the Gatsby development site (on http://localhost:8000) because this uses pure client side rendering so the tests would need to wait for elements to exist before asserting.
-> - the Gatsby build site (on http://localhost:9000) as you can't test the search integration.
+### Using npm
+
+The VSCode instructions above use npm under the hood to run the tests. Run the npm commands via the command line if you prefer.
+
+Follow the instructions from the [VSCode](#using-vscode) section above, but instead of running the test from the VSCode debug window, run `npm test` from the _functional-tests_ folder.
 
 #### Different URLs
 
@@ -80,7 +93,7 @@ We run the tests in Docker on TeamCity because it allows us to spin up a self-co
 
 It can be harder to debug tests running inside Docker as you can't watch the tests run in the browser, but we do save error screenshots and logs into the docker-output folder for debugging.
 
-1. Install Node 10+
+1. Install Node 10
 2. Build the [Gatsby site](../gatsby/):
    1. `cd gatsby && npm run build`
 3. Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
