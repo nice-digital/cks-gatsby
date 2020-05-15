@@ -5,13 +5,13 @@
 import { SourceNodesArgs, NodeInput } from "gatsby";
 import slugify from "slugify";
 
-import { ApiTopicResponse, ApiFullTopic } from "../api/types";
+import { ApiSingleTopicResponse, ApiFullTopic } from "../api/types";
 
 export const topicNodeType = "CksTopic";
 
 export interface TopicNode
 	extends NodeInput,
-		Omit<ApiTopicResponse, "clinicalSpecialties" | "topicHtmlObjects"> {
+		Omit<ApiSingleTopicResponse, "clinicalSpecialties" | "topicHtmlObjects"> {
 	slug: string;
 	// Foreign keys
 	specialities: string[];

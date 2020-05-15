@@ -11,7 +11,7 @@ import { Cache } from "gatsby";
 import {
 	ApiConfig,
 	ApiTopicsResponse,
-	ApiTopicResponse,
+	ApiSingleTopicResponse,
 	ApiTopicChangeResponse,
 	ApiPartialTopic,
 	ApiFullTopic,
@@ -71,22 +71,21 @@ export const getTopicCacheKey = (partialTopic: ApiPartialTopic): string =>
 	`${partialTopic.id}_${partialTopic.currentVersion}`;
 
 /**
- * Gets a full topic object from the /topic/id API endpoint.
- * Uncached version of `getFullTopicCached`
+ * Gets a single topic object from the /topic/id API endpoint.
  *
  * @see getFullTopicCached
  */
-const getFullTopic = async (
+const getSingleTopic = async (
 	partialTopic: ApiPartialTopic
-): Promise<ApiTopicResponse> =>
-	fetchJson<ApiTopicResponse>(partialTopic.currentVersionLink);
+): Promise<ApiSingleTopicResponse> =>
+	fetchJson(partialTopic.currentVersionLink);
 
 /**
  * Wrapper around the API method for retrieving a full topic.
  * Looks in the Gatsby cache for that version of the topic
  * before retrieving from the API.
  *
- * @see getFullTopic
+ * @see getSingleTopic
  *
  * @returns A promise that resolves to a full topic
  */
@@ -105,7 +104,7 @@ export const getFullTopicCached = async (
 	const apiFullTopic: ApiFullTopic = {
 		// Merge the partial topic properties in with the full one:
 		// there are a few properties on a partial topic the full one doesn't have
-		...(await getFullTopic(partialTopic)),
+		...(await getSingleTopic(partialTopic)),
 		...partialTopic,
 	};
 
@@ -127,4 +126,4 @@ export const getChangesSince = (
 		.startOf("month")
 		.toDate()
 ): Promise<ApiTopicChangeResponse> =>
-	fetchJson<ApiTopicChangeResponse>("/changes-since/" + date.toISOString());
+	fetchJson("/changes-since/" + date.toISOString());

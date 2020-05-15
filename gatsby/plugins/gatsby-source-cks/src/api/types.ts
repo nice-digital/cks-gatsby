@@ -33,9 +33,9 @@ export interface ApiTopicHtmlObject {
 }
 
 /**
- * A full topic object returned from the API
+ * A single topic object returned from the API
  */
-export interface ApiTopicResponse {
+export interface ApiSingleTopicResponse {
 	/** Name of the topic e.g. "Acne Vulgaris" */
 	topicName: string;
 	/** Guid */
@@ -68,7 +68,7 @@ export interface ApiTopicResponse {
 	}[];
 }
 
-export type ApiFullTopic = ApiTopicResponse & ApiPartialTopic;
+export type ApiFullTopic = ApiSingleTopicResponse & ApiPartialTopic;
 
 export type ApiTopicChangeResponse = {
 	topicId: string;
