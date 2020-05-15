@@ -52,6 +52,8 @@ namespace CKS.Web
             {
                 endpoints.MapControllers();
             });
+
+            app.UseStatusCodePagesWithRedirects("/{0}");
         }
 
 		public void ConfigureDevelopment(IApplicationBuilder app, IWebHostEnvironment env)
