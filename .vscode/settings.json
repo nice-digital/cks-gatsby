@@ -37,6 +37,9 @@
   "cucumberautocomplete.steps": [
     "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/given/definitions.js",
     "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/when/definitions.js",
-    "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/then/definitions.js"
+    "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/then/definitions.js",
+    "functional-tests/steps/given.js",
+    "functional-tests/steps/when.js",
+    "functional-tests/steps/then.js"
   ]
 }
