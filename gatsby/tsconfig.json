@@ -10,7 +10,11 @@
     "noEmit": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "test-utils": ["./utils/test-utils"]
+    }
   },
   "exclude": ["node_modules"]
 }
