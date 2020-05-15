@@ -1,3 +1,7 @@
+/**
+ * Creates Gatsby GraphQL nodes for monthly changes (for the what's new page) from downloaded data
+ */
+
 import { NodeInput, SourceNodesArgs } from "gatsby";
 import { ApiTopicChangeResponse } from "../api/types";
 

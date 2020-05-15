@@ -1,4 +1,6 @@
-// TODO
+/**
+ * Creates Gatsby GraphQL nodes for chapters (HTML objects within topics) from downloaded data
+ */
 
 import { NodeInput, SourceNodesArgs } from "gatsby";
 import slugify from "slugify";

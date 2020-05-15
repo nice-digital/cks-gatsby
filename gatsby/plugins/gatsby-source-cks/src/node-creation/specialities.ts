@@ -1,5 +1,5 @@
 /**
- * Creates Gatsby GraphQL nodes from downloaded data
+ * Creates Gatsby GraphQL nodes for specialities (that group topics together) from downloaded data
  */
 
 import { SourceNodesArgs, NodeInput } from "gatsby";
