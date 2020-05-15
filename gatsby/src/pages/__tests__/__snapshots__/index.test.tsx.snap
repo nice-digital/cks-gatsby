@@ -3,6 +3,7 @@
 exports[`index should match snapshot 1`] = `
 <main
   class="container"
+  id="content-start"
 >
   <div
     class="hero"
