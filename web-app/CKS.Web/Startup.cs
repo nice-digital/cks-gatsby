@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -51,5 +53,20 @@ namespace CKS.Web
                 endpoints.MapControllers();
             });
         }
+
+		public void ConfigureDevelopment(IApplicationBuilder app, IWebHostEnvironment env)
+		{
+			Configure(app, env);
+
+			// Serve static files straight for Gatsby's public folder when running locally.
+			// This means you don't have to copy the Gatsby output into the wwwroot folder like we do on TeamCity.
+			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public"));
+			app.UseDefaultFiles(new DefaultFilesOptions {
+					FileProvider = localGatsbyFileProvider
+				});
+			app.UseStaticFiles(new StaticFileOptions() {
+					FileProvider = localGatsbyFileProvider
+				});
+		}
     }
 }
