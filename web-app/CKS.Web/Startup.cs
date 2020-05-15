@@ -50,6 +50,8 @@ namespace CKS.Web
             {
                 endpoints.MapControllers();
             });
+
+            app.UseStatusCodePagesWithRedirects("/{0}");
         }
     }
 }
