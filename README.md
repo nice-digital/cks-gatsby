@@ -72,8 +72,8 @@ Search results come from ElasticSearch (ES), provided by the [SearchClient NuGet
 
 There are two ES instances available, one on the NHSEVIRT domain and one in AWS.
 
-- You will only be able to verify search functionality if you are connected to either the pink cable or the IM&T wi-fi.
-- Add 192.168.142.173 dev.es.nice.org.uk to your hosts file if you are unable to resolve the ES server using DNS
+- You will only be able to verify search functionality if you are connected to either the pink cable, the IM&T wi-fi or have a local elastic search instance set up.
+- You may need to add dev.es.nice.org.uk to your hosts file if you are unable to resolve the ES server using DNS
 - Make the following changes in *\cks-gatsby\web-app\CKS.Web\appsettings.json* **(don't check in!)**:
   - set `CKSTest` for `ElasticsearchEnvironment` whilst developing
   - set `CKSLive` for `ElasticsearchEnvironment` for deploying to live servers at AWS.
