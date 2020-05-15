@@ -7,6 +7,7 @@ module.exports = {
 	collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!**/node_modules/**"],
 	testResultsProcessor: "jest-teamcity-reporter",
 	moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
+	moduleDirectories: ["node_modules", "utils", __dirname],
 	testPathIgnorePatterns: ["/node_modules/", ".cache"],
 	setupFilesAfterEnv: ["./jest.setup.ts"],
 	testURL: "https://cks-gatsby-tests.nice.org.uk/",

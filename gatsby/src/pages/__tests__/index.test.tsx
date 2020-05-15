@@ -1,11 +1,11 @@
 import React from "react";
-import { render } from "@testing-library/react";
 
+import { renderWithRouter } from "test-utils";
 import IndexPage from "../index";
 
 describe("index", () => {
 	it("should match snapshot", () => {
-		const { container } = render(
+		const { container } = renderWithRouter(
 			<IndexPage data={{ allTopics: { nodes: [] } }} />
 		);
 
@@ -13,7 +13,7 @@ describe("index", () => {
 	});
 
 	it("should render h1 with correct text", () => {
-		const { queryByText } = render(
+		const { queryByText } = renderWithRouter(
 			<IndexPage data={{ allTopics: { nodes: [] } }} />
 		);
 

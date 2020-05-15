@@ -18,9 +18,10 @@ exports.config = {
 				args: ["--window-size=1366,768"],
 			},
 		},
-		{
-			browserName: "firefox",
-		},
+		//Disabled firefox tests as there is a card open to fix them: CKS-301
+		// {
+		// 	browserName: "firefox",
+		// },
 	],
 
 	logLevel: "error",

@@ -1,5 +1,8 @@
 import React, { ReactNode } from "react";
 
+import { Header } from "../Header/Header";
+import { Footer } from "../Footer/Footer";
+
 type LayoutProps = {
 	children: ReactNode;
 };
@@ -7,7 +10,11 @@ type LayoutProps = {
 export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 	return (
 		<>
-			<main className="container">{children}</main>
+			<Header />
+			<main className="container" id="content-start">
+				{children}
+			</main>
+			<Footer />
 		</>
 	);
 };
