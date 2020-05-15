@@ -25,6 +25,13 @@ module.exports = {
 				test: /\.(?:j|t)sx?$/,
 			},
 		},
+		{
+			resolve: "gatsby-plugin-google-tagmanager",
+			options: {
+				id: "GTM-54QC4NL",
+				includeInDevelopment: true,
+			},
+		},
 	],
 	// Proxy the relative search endpoint to the .NET app for local dev
 	developMiddleware: app => {
