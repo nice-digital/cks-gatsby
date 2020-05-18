@@ -17,6 +17,8 @@
 			- [Development mode](#development-mode)
 	- [Excluding tests](#excluding-tests)
 	- [Running single features](#running-single-features)
+	- [Troubleshooting](#troubleshooting)
+		- [Issue wih node-fibers](#issue-wih-node-fibers)
 
 ## Stack
 
@@ -145,3 +147,13 @@ npm test -- --suite homepage
 ```
 
 See [organizing test suites](http://v4.webdriver.io/guide/testrunner/organizesuite.html) in the WebdriverIO docs for more info.
+
+## Troubleshooting
+
+### Issue wih node-fibers
+
+If you run `npm test` and get an issue like:
+
+> There is an issue with `node-fibers`... Couldn't initialise framework "wdio-cucumber-framework" Missing binary. See message above.
+
+Then, check you're running Node 10. If you're using NVM and switch to Node 12+ you'll get this issue, so switch back to 10.
