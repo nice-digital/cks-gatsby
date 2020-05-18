@@ -5,10 +5,10 @@ Feature: Header
   Background:
     Given I open the url "/"
 
-  Scenario: Use autocomplete to get a suggested topic
-    When I type the first 3 characters of a topic name in the header search box
-    Then I see topic suggestions matching my typed text
+  Scenario: Use autocomplete to get a search suggestion for a topic name
+    When I type "Ast" in the header search box
+    Then I see "Asthma" in the autocomplete suggestions
 
-# Scenario: Click autocomplete suggestion straight to a topic (not search results)
-#   When I click a topic autocomplete suggestion
-#   Then I go straight to a topic page
+  Scenario: Navigate straight to a topic from an autocomplete suggestion
+    When I click "Asthma" in the autocomplete options
+    And I expect the url to contain "asthma"
