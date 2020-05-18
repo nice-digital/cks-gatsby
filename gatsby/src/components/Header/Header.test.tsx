@@ -1,11 +1,20 @@
 import React from "react";
 import { fireEvent, wait } from "@testing-library/react";
-import { navigate } from "gatsby";
+import userEvent from "@testing-library/user-event";
+import { navigate, useStaticQuery } from "gatsby";
 import { renderWithRouter } from "test-utils";
 
 import { Header } from "./Header";
 
 describe("Header", () => {
+	beforeEach(() => {
+		((useStaticQuery as unknown) as jest.Mock).mockReturnValue({
+			allCksTopic: {
+				nodes: [],
+			},
+		});
+	});
+
 	it("should render global nav with CKS highlighted in the nav", async () => {
 		const { findByText } = renderWithRouter(<Header />);
 
@@ -28,7 +37,7 @@ describe("Header", () => {
 	it("should set placeholder attribute on search input", async () => {
 		const { findByRole } = renderWithRouter(<Header />);
 
-		expect(await findByRole("searchbox")).toHaveAttribute(
+		expect(await findByRole("combobox")).toHaveAttribute(
 			"placeholder",
 			"Search CKS…"
 		);
@@ -47,7 +56,7 @@ describe("Header", () => {
 			route: "/search?q=diabetes",
 		});
 
-		expect(await findByRole("searchbox")).toHaveAttribute("value", "diabetes");
+		expect(await findByRole("combobox")).toHaveAttribute("value", "diabetes");
 	});
 
 	it("should update search box value from q querystring value when URL changes", async () => {
@@ -55,7 +64,7 @@ describe("Header", () => {
 			route: "/search?q=diabetes",
 		});
 
-		const searchBox = await findByRole("searchbox");
+		const searchBox = await findByRole("combobox");
 		await history.navigate("/search?q=cancer");
 
 		await wait(() => expect(searchBox).toHaveAttribute("value", "cancer"));
@@ -64,11 +73,37 @@ describe("Header", () => {
 	it("should use gatsby navigate when submitting search form", async () => {
 		const { findByRole } = renderWithRouter(<Header />);
 
-		const searchBox = (await findByRole("searchbox")) as HTMLInputElement;
+		const searchBox = (await findByRole("combobox")) as HTMLInputElement;
 		searchBox.value = "diabetes";
 
 		fireEvent.submit(await findByRole("search"));
 
 		expect(navigate).toHaveBeenCalledWith("/search?q=diabetes");
+	});
+
+	it("should use topic names for autocomplete suggestions", async () => {
+		((useStaticQuery as unknown) as jest.Mock).mockReturnValueOnce({
+			allCksTopic: {
+				nodes: [
+					{
+						topicName: "First topic",
+						slug: "first-topic",
+					},
+				],
+			},
+		});
+
+		const { findByRole, findByText } = renderWithRouter(<Header />);
+
+		const searchBox = (await findByRole("combobox")) as HTMLInputElement;
+
+		await userEvent.type(searchBox, "Fir");
+
+		const suggestion = await findByText(
+			(_, element) => element.textContent == "First topic",
+			{ selector: "a" }
+		);
+
+		expect(suggestion).toHaveAttribute("href", "/first-topic/");
 	});
 });
