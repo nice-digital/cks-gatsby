@@ -4,7 +4,8 @@ import userEvent from "@testing-library/user-event";
 import { navigate, useStaticQuery } from "gatsby";
 import { renderWithRouter } from "test-utils";
 
-import { Header } from "./Header";
+// Header is mocked globally in setup
+const { Header } = jest.requireActual("./Header");
 
 describe("Header", () => {
 	beforeEach(() => {
