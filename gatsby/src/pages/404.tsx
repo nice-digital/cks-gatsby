@@ -5,8 +5,7 @@ import { SEO } from "../components/SEO/SEO";
 const NotFoundPage: React.FC = () => {
 	return (
 		<Layout>
-			<meta name="robots" content="noindex" />
-			<SEO title="Page not found" />
+			<SEO title="Page not found" noindex={true} />
 			<h1>Page not found</h1>
 		</Layout>
 	);

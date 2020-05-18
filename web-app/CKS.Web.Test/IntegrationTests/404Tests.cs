@@ -1,6 +1,6 @@
 using CKS.Web.Test.IntegrationTests.Infrastructure;
 using Shouldly;
-using System;
+using System.Net;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -22,7 +22,7 @@ namespace CKS.Web.Test.IntegrationTests
 			// Act
 			var response = await client.GetAsync("/404");
 
-			response.StatusCode.ShouldBe(System.Net.HttpStatusCode.OK);
+			response.StatusCode.ShouldBe(HttpStatusCode.OK);
 		}
 	}
 }
