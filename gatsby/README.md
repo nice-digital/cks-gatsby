@@ -8,14 +8,15 @@
 <summary><strong>Table of contents</strong></summary>
 <!-- START doctoc -->
 - [Gatsby site for CKS](#gatsby-site-for-cks)
-	- [Stack](#stack)
-		- [Software](#software)
-		- [Tests](#tests)
-			- [Debugging tests](#debugging-tests)
-			- [Why not Enzyme?](#why-not-enzyme)
-	- [:rocket: Set up](#rocket-set-up)
-		- [Other commands](#other-commands)
-	- [Source plugin](#source-plugin)
+  - [Stack](#stack)
+    - [Software](#software)
+    - [Tests](#tests)
+      - [Debugging tests](#debugging-tests)
+      - [Why not Enzyme?](#why-not-enzyme)
+  - [:rocket: Set up](#rocket-set-up)
+    - [Other commands](#other-commands)
+  - [Source plugin](#source-plugin)
+    - [Production API](#production-api)
 <!-- END doctoc -->
 </details>
 
@@ -31,8 +32,9 @@
 - [ESLint](https://eslint.org/) for JavaScript/TypeScripting linting
 - [Jest](https://jestjs.io/) for JS unit testing
   - With [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- [node-fetch](https://www.npmjs.com/package/node-fetch) for loading data
 
-> If you're new to Gatsby, don't worry it's a well used static site generator build with React and its [documentation](https://www.gatsbyjs.org/docs/) is superb.
+> If you're new to Gatsby, don't worry: it's a well used static site generator build with React and its [documentation](https://www.gatsbyjs.org/docs/) and community is superb.
 
 ### Tests
 
@@ -51,10 +53,11 @@ If you prefer to run (and debug) the tests via an IDE (VS Code), then read on:
 
 #### Debugging tests
 
-We've configured 2 launch configurations (see [.vscode/launch.json](.vscode/launch.json)) for running and debugging Jest test:
+We've configured 3 launch configurations (see [.vscode/launch.json](.vscode/launch.json)) for running and debugging Jest test:
 
 1. **Jest tests (all)** - runs all test, with a debugger attached
 2. **Jest tests (current file)** - runs the Jest against the file currently opened file.
+3. **Jest tests (watch current file)** - runs the Jest against the file currently opened file and watches for changes.
 
 Run these from the 'Run and Debug' panel (_Ctrl+Shift+D_) in VS Code:
 
@@ -74,6 +77,10 @@ However, Enzyme is set up in a way to focus on internals of React components (pr
 > The more your tests resemble the way your software is used, the more confidence they can give you.
 
 ## :rocket: Set up
+
+The easiest way to run the Gatsby site is via the _Launch CKS_ debug command in VS Code. This is because it runs the other parts of the project too, not just the Gatsby site. See the readme in the repository root for more info.
+
+However, to run the the Gatsby site on its own from the command line:
 
 1. Install [Node 10+](https://nodejs.org/en/download/) (latest LTS version)
 2. Clone this repository
@@ -114,3 +121,23 @@ Gatsby sites get their data via source plugins. Source plugins fetch data from s
 In the case of CKS, the source data comes from the API provided by Clarity. The data fetching and mapping to Gatsby nodes is handled via a custom source plugin. This gives a nice separation of the data loading logic from the page generation logic. The Gatsby docs has a useful section on ['Sourcing from Private APIs'](https://www.gatsbyjs.org/docs/sourcing-from-private-apis/).
 
 **View the [custom source plugin (_gatsby-source-cks_)](plugins/gatsby-source-cks) folder for more information.**
+
+### Production API
+
+The [source plugin](#source-plugin) (see above) points to the local, fake API (on http://lcaolhost:7000) by default. Set the following environment variables to point to a different URL:
+
+- `API_BASE_URL`
+- `API_KEY`
+
+Create a _.env.development_ file (for local development) or _.env.production_ file (for the production build) in this _gatsby_ folder to set these environment variables.
+
+> Note: these .env files are deliberately ignore from git
+
+For example, create a _.env.production_ file pointing to the live API to create a live-like production build via `npm run build`:
+
+```
+API_KEY=xyzetc
+API_BASE_URL=https://whatever
+```
+
+> Note: you can get the live API key and URL from the TeamCity build parameters.

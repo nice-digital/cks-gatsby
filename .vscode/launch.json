@@ -30,8 +30,9 @@
       "stopOnEntry": false,
       "runtimeExecutable": "node",
       "runtimeArgs": ["--nolazy"],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "openOnFirstSessionStart",
+      // Use internalConsole as this is a lot faster than integrated terminal
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
       "outputCapture": "std",
       "sourceMaps": true,
       "presentation": {
@@ -83,9 +84,41 @@
       "cwd": "${workspaceFolder}/gatsby",
       "localRoot": "${workspaceFolder}/gatsby",
       "remoteRoot": "${workspaceFolder}/gatsby",
-      "args": ["${fileBasenameNoExtension}", "--config", "jest.config.js"],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
+      "args": [
+        "--runInBand",
+        "--colors",
+        "--runTestsByPath",
+        "..\\${relativeFile}"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/gatsby/node_modules/jest/bin/jest"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "Tests",
+        "order": 2
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest tests - watch current file",
+      "program": "${workspaceFolder}/gatsby/node_modules/.bin/jest",
+      "cwd": "${workspaceFolder}/gatsby",
+      "localRoot": "${workspaceFolder}/gatsby",
+      "remoteRoot": "${workspaceFolder}/gatsby",
+      "args": [
+        "--runInBand",
+        "--colors",
+        "--watch",
+        "--runTestsByPath",
+        "..\\${relativeFile}"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
       "disableOptimisticBPs": true,
       "windows": {
         "program": "${workspaceFolder}/gatsby/node_modules/jest/bin/jest"

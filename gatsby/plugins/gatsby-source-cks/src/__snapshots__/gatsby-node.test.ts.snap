@@ -78,10 +78,10 @@ exports[`gatsby-node createSchemaCustomization should call createTypes with cust
 		specialities: [CksSpeciality!]! @link(by: \\"name\\")
 
 		\\"The content chapters within the topic, taken from the \`topicHtmlObjects\` field in the API.\\"
-		chapters: [CksChapter!]! @link
+		chapters: [CksChapter!]! @link(by: \\"itemId\\")
 
 		\\"The last changes or reviews that the topic has had. Not to be confused with the other node type of \`CksChange\`.\\"
-		latestChanges: [CksTopicLatestChange!]! @link
+		latestChanges: [CksTopicLatestChange!]!
 	}
 
 
