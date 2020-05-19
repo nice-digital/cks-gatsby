@@ -4,5 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NICE.Logging" Version="6.0.24" />
+  </ItemGroup>
+
 
 </Project>
