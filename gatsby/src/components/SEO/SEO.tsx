@@ -70,7 +70,7 @@ export const SEO: React.FC<SEOProps> = ({
 			},
 		]}
 	>
-		{noIndex && <meta name="robots" content="nofollow" />}
+		{noIndex && <meta name="robots" content="noindex" />}
 		<html lang="en-GB" />
 	</Helmet>
 );
