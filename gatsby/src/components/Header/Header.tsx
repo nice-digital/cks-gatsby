@@ -1,4 +1,11 @@
-import React, { useEffect, Suspense, lazy, useState, useMemo } from "react";
+import React, {
+	useEffect,
+	Suspense,
+	lazy,
+	useState,
+	useMemo,
+	useCallback,
+} from "react";
 import { navigate, useStaticQuery, graphql } from "gatsby";
 import { useLocation } from "@reach/router";
 import { PartialTopic } from "src/types";
@@ -72,27 +79,47 @@ export const Header: React.FC = () => {
 		[allTopicsQueryData]
 	);
 
+	// TODO: Remove this hack to fix https://github.com/alphagov/accessible-autocomplete/issues/434
+	// We do this to make our axe tests pass
+	// Wait for the search box to appear before removing the aria-activedescendant attribute
+	const globalNavWrapperRef = useCallback((node: HTMLDivElement) => {
+		const removeActiveDescendantAttr = (): boolean => {
+			const searchInput = document.querySelector(searchInputSelector);
+			searchInput && searchInput.setAttribute("aria-activedescendant", "");
+			return !!searchInput;
+		};
+
+		if (!removeActiveDescendantAttr() && "MutationObserver" in window) {
+			new MutationObserver((_mutationsList, observer) => {
+				removeActiveDescendantAttr();
+				observer.disconnect();
+			}).observe(node, { childList: true });
+		}
+	}, []);
+
 	return (
 		<>
 			{typeof window !== "undefined" && (
 				<Suspense fallback={<></>}>
-					<GlobalNavHeader
-						service="cks"
-						skipLinkId="content-start"
-						onNavigating={(e): void => {
-							if (e.href[0] === "/") navigate(e.href);
-							else window.location.href = e.href;
-						}}
-						auth={false}
-						search={{
-							placeholder: "Search CKS…",
-							autocomplete: autocompleteTerms,
-							onSearching: (e): void => {
-								navigate("/search?q=" + e.query);
-							},
-							query: queryTerm,
-						}}
-					/>
+					<div ref={globalNavWrapperRef}>
+						<GlobalNavHeader
+							service="cks"
+							skipLinkId="content-start"
+							onNavigating={(e): void => {
+								if (e.href[0] === "/") navigate(e.href);
+								else window.location.href = e.href;
+							}}
+							auth={false}
+							search={{
+								placeholder: "Search CKS…",
+								autocomplete: autocompleteTerms,
+								onSearching: (e): void => {
+									navigate("/search?q=" + e.query);
+								},
+								query: queryTerm,
+							}}
+						/>
+					</div>
 				</Suspense>
 			)}
 		</>
