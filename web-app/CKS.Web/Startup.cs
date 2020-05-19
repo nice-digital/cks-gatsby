@@ -39,6 +39,8 @@ namespace CKS.Web
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStatusCodePagesWithReExecute("/{0}.html");
+
 			app.UseDefaultFiles();
 			app.UseStaticFiles();
 
@@ -50,8 +52,6 @@ namespace CKS.Web
             {
                 endpoints.MapControllers();
             });
-
-            app.UseStatusCodePagesWithReExecute("/{0}.html");
 		}
     }
 }

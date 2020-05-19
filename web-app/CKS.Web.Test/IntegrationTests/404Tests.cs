@@ -20,6 +20,8 @@ namespace CKS.Web.Test.IntegrationTests
 			var response = await client.GetAsync("/random-route");
 
 			response.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+			var body = await response.Content.ReadAsStringAsync();
+			body.ShouldContain("<h1>Page not found</h1>");
 		}
 	}
 }
