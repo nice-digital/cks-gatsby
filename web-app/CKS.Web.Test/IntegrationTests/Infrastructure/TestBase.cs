@@ -1,3 +1,6 @@
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Shouldly;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +17,17 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 		{
 			_factory = new CKSWebApplicationFactory(output);
 			_output = output;
+
+			ShouldlyConfiguration.ShouldMatchApprovedDefaults
+				.WithScrubber(s =>
+				{
+					try
+					{
+						return JObject.Parse(s).ToString(Formatting.Indented);
+					}
+					catch { }
+					return s;
+				});
 		}
 
 		public virtual void Dispose()

@@ -59,6 +59,30 @@ The resulting HTML built by the static site generator is packaged and deployed w
 
 There are tests for the static site, the search .NET project, and browser-based, [functional tests](functional-tests#readme) that run via WebDriverIO.
 
+## Search
+The cks-gatsby webapp uses the NICE.Search Nuget package to query the CKS ElasticSearch index.
+
+The NICE.Search Nuget packages uses .Net Standard and is configured in the appsettings.json.
+
+Search results come from ElasticSearch (ES), provided by the [SearchClient NuGet package](https://github.com/nice-digital/search/tree/master/Client). They are served to the front-end as a JSON response at the *api/search* endpoint via an MVC controller in the web-app project. SearchController references and calls the SearchClient NuGet package internally. The search results page is then rendered client-side, hence the results being at */search?q=...*.
+
+> You can see the JSON response that's used for client-side rendering by visiting https://localhost:5000/api/search?q=test in your browser.
+
+### ElasticSearch
+
+There are two ES instances available, one on the NHSEVIRT domain and one in AWS.
+
+- You will only be able to verify search functionality if you are connected to either the pink cable, the IM&T wi-fi or have a local elastic search instance set up.
+- You may need to add dev.es.nice.org.uk to your hosts file if you are unable to resolve the ES server using DNS
+- Make the following changes in *\cks-gatsby\web-app\CKS.Web\appsettings.json* **(don't check in!)**:
+  - set `CKSTest` for `ElasticsearchEnvironment` whilst developing
+  - set `CKSLive` for `ElasticsearchEnvironment` for deploying to live servers at AWS.
+  
+  If you are not on the pink cable or NICE network see [this](https://nicedigital.atlassian.net/wiki/spaces/SRCH/pages/1268875288/Set+up+local+search+index+for+searchclient+nuget) document for setting up local elasticsearch indexes for the searchclient nuget to use.
+  
+  
+
+
 ## :rocket: Set up
 
 The easiest way to get the project running is:

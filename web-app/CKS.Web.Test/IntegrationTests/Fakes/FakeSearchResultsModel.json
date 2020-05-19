@@ -1,0 +1,19 @@
+{
+  "debug": null,
+  "failed": false,
+  "errorMessage": null,
+  "parentResultUrl": null,
+  "resultCount": 1,
+  "rolledUpCount": 1,
+  "unrolledCount": 1,
+  "documents": [],
+  "pagerLinks": null,
+  "pageSize": 1,
+  "firstResult": 1,
+  "lastResult": 1,
+  "finalSearchText": "some text",
+  "finalSearchTextNoStopWords": null,
+  "originalSearch": null,
+  "navigators": [],
+  "unfilteredResultsUrl": null
+}
