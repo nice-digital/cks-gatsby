@@ -51,7 +51,7 @@ namespace CKS.Web
                 endpoints.MapControllers();
             });
 
-            app.UseStatusCodePagesWithRedirects("/{0}");
-        }
+            app.UseStatusCodePagesWithReExecute("/{0}.html");
+		}
     }
 }

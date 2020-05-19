@@ -14,15 +14,12 @@ namespace CKS.Web.Test.IntegrationTests
 		}
 
 		[Fact]
-		public async void Returns404Page()
+		public async void ReturnsCustom404PageForUnmatchedRoute()
 		{
-			// Arrange
-			var client = _factory.CreateClient();
+			using var client = _factory.CreateClient();
+			var response = await client.GetAsync("/random-route");
 
-			// Act
-			var response = await client.GetAsync("/404");
-
-			response.StatusCode.ShouldBe(HttpStatusCode.OK);
+			response.StatusCode.ShouldBe(HttpStatusCode.NotFound);
 		}
 	}
 }

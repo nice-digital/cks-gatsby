@@ -7,13 +7,13 @@ const defaultDescription =
 type SEOProps = {
 	title?: string;
 	description?: string;
-	noindex?: boolean;
+	noIndex?: boolean;
 };
 
 export const SEO: React.FC<SEOProps> = ({
 	title,
 	description,
-	noindex,
+	noIndex,
 }: SEOProps) => (
 	<Helmet
 		title={title}
@@ -68,12 +68,9 @@ export const SEO: React.FC<SEOProps> = ({
 				name: `theme-color`,
 				content: "#004650",
 			},
-			{
-				name: `robots`,
-				content: noindex == true ? "noindex" : "index",
-			},
 		]}
 	>
+		{noIndex && <meta name="robots" content="nofollow" />}
 		<html lang="en-GB" />
 	</Helmet>
 );
