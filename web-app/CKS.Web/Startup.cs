@@ -11,6 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using NICE.Search.Common.Interfaces;
+using NICE.Search.Providers;
+using NICE.Search.Common.Enums;
 
 namespace CKS.Web
 {
@@ -27,6 +30,14 @@ namespace CKS.Web
         public void ConfigureServices(IServiceCollection services)
         {
 			services.AddRouting(options => options.LowercaseUrls = true);
+
+			var environmentString = Configuration.GetValue<string>("ElasticSearchEnvironment");
+			ApplicationEnvironment environmentAsEnum;
+			Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum);
+			if(environmentAsEnum != null)
+			{
+				services.AddSingleton<ISearchProvider, SearchProvider>(ISearchProvider => new SearchProvider(environmentAsEnum));
+			}
 
 			services.AddControllers();
         }

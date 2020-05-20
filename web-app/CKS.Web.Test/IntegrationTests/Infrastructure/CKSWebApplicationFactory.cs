@@ -1,6 +1,15 @@
+using CKS.Web.Test.IntegrationTests.Infrastructure.Extensions;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Newtonsoft.Json;
+using NICE.Search.Common.Interfaces;
+using NICE.Search.Common.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using Xunit.Abstractions;
 
@@ -8,9 +17,8 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 {
 	public class CKSWebApplicationFactory : WebApplicationFactory<Startup>
 	{
-		#region Constructor
-
 		private readonly ITestOutputHelper _output;
+		private readonly IList<Action<IServiceCollection>> serviceCollectionsActions = new List<Action<IServiceCollection>>();
 
 		public CKSWebApplicationFactory(ITestOutputHelper output)
 		{
@@ -18,6 +26,42 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 			_output.WriteLine("CKSWebApplicationFactory.constructor");
 		}
 
-		#endregion
+		protected override void ConfigureWebHost(IWebHostBuilder builder)
+		{
+			_output.WriteLine("CKSWebApplicationFactory.ConfigureWebHost");
+
+			builder.ConfigureTestServices(services =>
+			{
+				foreach (Action<IServiceCollection> action in serviceCollectionsActions)
+				{
+					action.Invoke(services);
+				}
+
+				var serviceProvider = services.BuildServiceProvider();
+			});
+
+			base.ConfigureWebHost(builder);
+		}
+
+		public CKSWebApplicationFactory WithImplementation<TService>(TService implementation)
+		{
+			serviceCollectionsActions.Add(services => services.ReplaceService(implementation));
+			return this;
+		}
+
+		public CKSWebApplicationFactory WithFakeSearchProvider(string fakeSearchResultsFileName = null)
+		{
+			var searchResults = new SearchResults();
+			if(fakeSearchResultsFileName != null)
+				searchResults = JsonConvert.DeserializeObject<SearchResults>(File.ReadAllText(@"./IntegrationTests/Fakes/" + fakeSearchResultsFileName));
+
+			var mockSearchProvider = new Mock<ISearchProvider>();
+			mockSearchProvider.Setup(x => x.Search(It.IsAny<ISearchUrl>())).Returns(searchResults);
+			var client = this
+				.WithImplementation<ISearchProvider>(mockSearchProvider.Object)
+				.CreateClient();
+
+			return this;
+		}
 	}
 }

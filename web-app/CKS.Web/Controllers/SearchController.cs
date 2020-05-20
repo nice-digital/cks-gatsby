@@ -1,5 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NICE.Search.Common.Interfaces;
+using NICE.Search.Common.Models;
+using NICE.Search.Common.Urls;
+using System;
+using System.ComponentModel;
 
 namespace CKS.Web.Controllers
 {
@@ -8,60 +13,32 @@ namespace CKS.Web.Controllers
 	public class SearchController : ControllerBase
 	{
 		private readonly ILogger<SearchController> _logger;
+		private readonly ISearchProvider _provider;
 
-		public SearchController(ILogger<SearchController> logger)
+		public SearchController(ILogger<SearchController> logger, ISearchProvider provider)
 		{
 			_logger = logger;
+			_provider = provider;
 		}
 
 		[HttpGet]
-		public object Get()
+		public JsonResult Get([FromQuery]SearchUrl searchUrl)
 		{
-			return new
+			var search = _provider.Search(searchUrl);
+			int statusCode = 200;
+
+			if (search.Failed)
 			{
-				Failed = false,
-				ResultCount = 26,
-				RolledUpCount = 26,
-				UnrolledCount = 26,
-				PageSize = 10,
-				FirstResult = 1,
-				LastResult = 10,
-				FinalSearchText = "acne",
-				FinalSearchTextNoStopWords = "acne",
-				PagerLinks = new
-				{
-					Pages = new[] {
-						new {
-							Title = "1",
-							url = new {
-								fullUrl = "search?pa=1&q=acne"
-							},
-							IsCurrent = true
-						},
-						new {
-							Title = "2",
-							url = new {
-								fullUrl = "search?pa=2&q=acne"
-							},
-							IsCurrent = false
-						}
-					}
-				},
-				Documents = new[] {
-					new {
-						Id = "651475",
-						PathAndQuery = "/acne-vulgaris",
-						Teaser = "Acne vulgaris is a chronic skin condition in which blockage or inflammation of the hair follicles and accompanying sebaceous glands",
-						Title = "<b>Acne</b> vulgaris",
-					},
-					new {
-						Id = "651781",
-						PathAndQuery = "/rosacea-acne",
-						Teaser = "Acne rosacea is a chronic relapsing skin condition affecting the face, characterized by episodes of facial flushing, erythema, telangiectasia.",
-						Title = "Rosacea - <b>acne</b>",
-					}
-				}
-			};
+				_logger.LogError("Search exception - {errorMessage}. Search url - {searchUrl}.",
+					search.ErrorMessage,
+					searchUrl
+					);
+
+				statusCode = 500;
+			}
+
+			return new JsonResult(search) { StatusCode = statusCode };
 		}
+
 	}
 }

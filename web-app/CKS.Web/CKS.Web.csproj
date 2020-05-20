@@ -4,5 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NICE.Search" Version="2.1.705-net-standard-convers" />
+  </ItemGroup>
+
 
 </Project>
