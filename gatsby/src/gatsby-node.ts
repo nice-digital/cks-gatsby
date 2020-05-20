@@ -35,10 +35,10 @@ const createCksPages = async ({
 		}
 	`);
 
-	function createCksPage(id: string, slug: string, templatePath: string): void {
+	function createCksPage(id: string, path: string, templateName: string): void {
 		createPage({
-			path: `/${slug}/`,
-			component: resolve(templatePath),
+			path,
+			component: resolve(`src/templates/${templateName}/${templateName}.tsx`),
 			context: {
 				id,
 			},
@@ -46,11 +46,11 @@ const createCksPages = async ({
 	}
 
 	pageCreationQuery.data?.allTopics.nodes.forEach(({ id, slug }) => {
-		createCksPage(id, slug, "src/templates/Topic/Topic.tsx");
+		createCksPage(id, `/topics/${slug}/`, "Topic");
 	});
 
 	pageCreationQuery.data?.allSpecialities.nodes.forEach(({ id, slug }) => {
-		createCksPage(id, slug, "src/templates/Speciality/Speciality.tsx");
+		createCksPage(id, `/specialities/${slug}/`, "Speciality");
 	});
 
 	return;

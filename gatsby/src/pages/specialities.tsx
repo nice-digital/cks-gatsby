@@ -21,7 +21,7 @@ const SpecialitiesPage: React.FC<SpecialitiesPageProps> = ({
 		<ul>
 			{data.allSpecialities.nodes.map(({ id, slug, name }) => (
 				<li key={id}>
-					<Link to={slug}>{name}</Link>
+					<Link to={`/specialities/${slug}/`}>{name}</Link>
 				</li>
 			))}
 		</ul>

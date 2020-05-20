@@ -19,7 +19,7 @@ const TopicsPage: React.FC<TopicPageProps> = ({ data }: TopicPageProps) => (
 		<ul>
 			{data.allTopics.nodes.map(({ id, slug, topicName }) => (
 				<li key={id}>
-					<Link to={slug}>{topicName}</Link>
+					<Link to={`/topics/${slug}/`}>{topicName}</Link>
 				</li>
 			))}
 		</ul>

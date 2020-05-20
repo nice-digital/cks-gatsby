@@ -3,7 +3,7 @@ Feature: Speciality Page
   I want to be able to use the CKS Speciality Page
 
   Background:
-    Given I open the url "/allergies/"
+    Given I open the url "/specialities/allergies/"
 
   Scenario: Detect Speciality page accessibility issues
     Then the page should have no accessibility issues
