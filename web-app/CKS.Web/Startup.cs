@@ -53,9 +53,15 @@ namespace CKS.Web
             app.UseStatusCodePagesWithReExecute("/{0}.html");
 
 			app.UseDefaultFiles();
-			app.UseStaticFiles();
+			app.UseStaticFiles(new StaticFileOptions
+            {
+	            OnPrepareResponse = context => {
+		            if (context.Context.Request.Path == "/404.html")
+			            context.Context.Response.StatusCode = 404;
+	            }
+            });
 
-            app.UseRouting();
+			app.UseRouting();
 
             app.UseAuthorization();
 
