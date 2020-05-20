@@ -48,7 +48,11 @@ export const createSpecialityNodes = (
 	const specialityTopicsMapping = extractSpecialities(fullTopics);
 
 	Array.from(specialityTopicsMapping.entries()).forEach(([name, topics]) => {
-		const nodeContent = { name, slug: slugify(name, { lower: true }), topics };
+		const nodeContent = {
+			name,
+			slug: slugify(name, { lower: true, remove: /[()']/g }),
+			topics,
+		};
 
 		const specialityNode: SpecialityNode = {
 			...nodeContent,
