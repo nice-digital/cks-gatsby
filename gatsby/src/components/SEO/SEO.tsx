@@ -19,58 +19,30 @@ export const SEO: React.FC<SEOProps> = ({
 		title={title}
 		titleTemplate={`%s | CKS | NICE`}
 		defaultTitle="CKS | NICE"
-		meta={[
-			{
-				name: `description`,
-				content: description || defaultDescription,
-			},
-			{
-				property: `og:description`,
-				content: description || defaultDescription,
-			},
-			{
-				property: `og:locale`,
-				content: "en_GB",
-			},
-			{
-				property: `og:type`,
-				content: `website`,
-			},
-			{
-				property: `og:title`,
-				content: (title ? `${title} | ` : "") + "CKS | NICE",
-			},
-			{
-				property: `og:image`,
-				content: "https://cks.nice.org.uk/open-graph-image.png",
-			},
-			{
-				property: `og:image:width`,
-				content: "1200",
-			},
-			{
-				property: `og:image:height`,
-				content: "630",
-			},
-			{
-				name: `twitter:card`,
-				content: `summary`,
-			},
-			{
-				name: `twitter:site`,
-				content: "@NICEcomms",
-			},
-			{
-				name: `twitter:creator`,
-				content: "@NICEcomms",
-			},
-			{
-				name: `theme-color`,
-				content: "#004650",
-			},
-		]}
 	>
+		<meta name="description" content={description || defaultDescription} />
+		<meta
+			property="og:description"
+			content={description || defaultDescription}
+		/>
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:title"
+			content={(title ? "${title} | " : "") + "CKS | NICE"}
+		/>
+		<meta
+			property="og:image"
+			content="https://cks.nice.org.uk/open-graph-image.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@NICEcomms" />
+		<meta name="twitter:creator" content="@NICEcomms" />
+		<meta name="theme-color" content="#004650" />
 		{noIndex && <meta name="robots" content="noindex" />}
+
 		<html lang="en-GB" />
 	</Helmet>
 );
