@@ -5,7 +5,7 @@ Feature: 404 Page
   Background:
     Given I open the url "/random-route"
 
-  Scenario: User can see the 404 page title
+  Scenario: User sees custom content for 404 response
     When I wait on element "h1" to exist
     Then I expect that element "h1" contains the text "Page not found"
 
