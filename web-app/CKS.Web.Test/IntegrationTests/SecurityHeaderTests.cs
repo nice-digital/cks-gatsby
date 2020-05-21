@@ -37,7 +37,7 @@ namespace CKS.Web.Test.IntegrationTests
 					.Headers
 					.ShouldContain(header =>
 						header.Key == headerName &&
-						header.Value.Single() == headerValue); ;
+						header.Value.Single() == headerValue);
 			}
 		}
 	}
