@@ -22,7 +22,7 @@ namespace CKS.Web.Test.IntegrationTests
 				data.Add("X-Xss-Protection", "1; mode=block");
 				data.Add("X-Content-Type-Options", "nosniff");
 				data.Add("Referrer-Policy", "strict-origin-when-cross-origin");
-				data.Add("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; object-src 'none'; media-src 'none'; frame-src 'none'");
+				data.Add("Content-Security-Policy", "default-src 'self' 'unsafe-inline' 'unsafe-eval' nice.org.uk hotjar.com hotjar.io visualwebsiteoptimizer.com vwo.com; object-src 'none'; media-src 'none'; worker-src 'self' blob:");
 				return data;
 			}
 		}
