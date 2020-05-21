@@ -42,6 +42,14 @@ namespace CKS.Web
 			}
 
 			services.AddControllers();
+
+			services.AddHsts(options =>
+				{
+					// See https://hstspreload.org/
+					options.Preload = true;
+					options.IncludeSubDomains = true;
+					options.MaxAge = TimeSpan.FromDays(365 * 2);
+				});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
