@@ -53,7 +53,7 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 			return this;
 		}
 
-		public CKSWebApplicationFactory SetStaticContentPath(string path)
+		public CKSWebApplicationFactory UseWebRoot(string path)
 		{
 			webRootPath = Directory.GetCurrentDirectory() + path;
 			return this;

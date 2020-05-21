@@ -13,70 +13,73 @@ namespace CKS.Web.Test.IntegrationTests
 	{
 		public ResponseHeaderTests(ITestOutputHelper output) : base(output) {}
 
-		[Fact]
-		public async void ByDefaultCorrectCacheControlHeadersAreReturned()
+		[Theory]
+		[InlineData("test.json")]
+		[InlineData("test.html")]
+		[InlineData("test.xml")]
+		public async void ReturnsMustRevalidateNoCacheHeader(string filename)
 		{
 			// Arrange
-			var client = _factory
-				.SetStaticContentPath("\\IntegrationTests\\Fakes\\")
-				.CreateClient();
+			using(var client = _factory
+				.UseWebRoot("\\IntegrationTests\\Fakes\\")
+				.CreateClient())
+			{
+				//Act
+				var respone = await client.GetAsync(filename);
 
-			//Act
-			var responseForJson = await client.GetAsync("test.json");
-			var responseForHtml = await client.GetAsync("test.html");
-			var defaultRespone = await client.GetAsync("test.xml");
-
-			// Assert
-			responseForJson.Headers.CacheControl.ToString().ShouldBe("public, must-revalidate, max-age=0");
-			responseForHtml.Headers.CacheControl.ToString().ShouldBe("public, must-revalidate, max-age=0");
-			defaultRespone.Headers.CacheControl.ToString().ShouldBe("public, must-revalidate, max-age=0");
+				// Assert
+				respone.Headers.CacheControl.ToString().ShouldBe("public, must-revalidate, max-age=0");
+			}			
 		}
 
 		[Fact]
-		public async void ItemsInTheStaticDirReturnCorrectCacheControlHeaders()
+		public async void StaticDirectoryReturnsForeverCacheHeader()
 		{
 			// Arrange
-			var client = _factory
-				.SetStaticContentPath("\\IntegrationTests\\Fakes\\")
-				.CreateClient();
+			using (var client = _factory
+				.UseWebRoot("\\IntegrationTests\\Fakes\\")
+				.CreateClient())
+			{
+				//Act
+				var response = await client.GetAsync("static/test.png");
 
-			//Act
-			var response = await client.GetAsync("static/test.png");
-
-			// Assert
-			response.Headers.CacheControl.ToString().ShouldBe("public, max-age=86400, immutable");
+				// Assert
+				response.Headers.CacheControl.ToString().ShouldBe("public, max-age=31536000, immutable");
+			}
 		}
 
 		[Fact]
-		public async void JsAndCssReturnCorrectCacheControlHeaders()
+		public async void JsAndCssReturnForeverCacheControlHeaders()
 		{
 			// Arrange
-			var client = _factory
-				.SetStaticContentPath("\\IntegrationTests\\Fakes\\")
-				.CreateClient();
+			using (var client = _factory
+				.UseWebRoot("\\IntegrationTests\\Fakes\\")
+				.CreateClient())
+			{
+				//Act
+				var responseForJs = await client.GetAsync("test.js");
+				var responseForCss = await client.GetAsync("test.css");
 
-			//Act
-			var responseForJs = await client.GetAsync("test.js");
-			var responseForCss = await client.GetAsync("test.css");
-
-			// Assert
-			responseForJs.Headers.CacheControl.ToString().ShouldBe("public, max-age=86400, immutable");
-			responseForCss.Headers.CacheControl.ToString().ShouldBe("public, max-age=86400, immutable");
+				// Assert
+				responseForJs.Headers.CacheControl.ToString().ShouldBe("public, max-age=31536000, immutable");
+				responseForCss.Headers.CacheControl.ToString().ShouldBe("public, max-age=31536000, immutable");
+			}
 		}
 
 		[Fact]
-		public async void SpecialFilesReturnCorrectCacheControlHeaders()
+		public async void ServiceWorkerReturnsRevalidateCacheHeader()
 		{
 			// Arrange
-			var client = _factory
-				.SetStaticContentPath("\\IntegrationTests\\Fakes\\")
-				.CreateClient();
+			using (var client = _factory
+				.UseWebRoot("\\IntegrationTests\\Fakes\\")
+				.CreateClient())
+			{
+				//Act
+				var response = await client.GetAsync("sw.js");
 
-			//Act
-			var response = await client.GetAsync("sw.js");
-
-			// Assert
-			response.Headers.CacheControl.ToString().ShouldBe("public, must-revalidate, max-age=0");
+				// Assert
+				response.Headers.CacheControl.ToString().ShouldBe("public, must-revalidate, max-age=0");
+			}
 		}
 	}
 }
