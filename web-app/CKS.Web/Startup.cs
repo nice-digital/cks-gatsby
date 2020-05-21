@@ -35,7 +35,7 @@ namespace CKS.Web
 			var environmentString = Configuration.GetValue<string>("ElasticSearchEnvironment");
 			ApplicationEnvironment environmentAsEnum;
 			Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum);
-			if(environmentAsEnum != null)
+			if (environmentAsEnum != null)
 			{
 				services.AddSingleton<ISearchProvider, SearchProvider>(ISearchProvider => new SearchProvider(environmentAsEnum));
 			}
@@ -52,6 +52,8 @@ namespace CKS.Web
 			}
 			else
 			{
+				// CKS sits behind reverse proxy in production
+				app.UseForwardedHeaders();
 				app.UseHsts();
 			}
 
