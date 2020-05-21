@@ -98,7 +98,7 @@ export const onPostBuild = async ({
 			// Topics used to be in the root so redirect them down a level
 			`RewriteRule ^/(${slug}) /topics/$1/ [L,R=301]`,
 			// We used to (way back) use underscores for topics
-			`RewriteRule ^/(${slug.replace(/-/g, "_")})$ /topics/$1/ [L,R=301]`,
+			`RewriteRule ^/(${slug.replace(/-/g, "_")})$ /topics/${slug}/ [L,R=301]`,
 		].join("\n")
 	);
 
