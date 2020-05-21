@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace CKS.Web
 {
@@ -53,7 +54,10 @@ namespace CKS.Web
 			else
 			{
 				// CKS sits behind reverse proxy in production
-				app.UseForwardedHeaders();
+				app.UseForwardedHeaders(new ForwardedHeadersOptions
+				{
+					ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+				});
 				app.UseHsts();
 			}
 
