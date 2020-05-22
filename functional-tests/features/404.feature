@@ -9,6 +9,10 @@ Feature: 404 Page
     When I wait on element "h1" to exist
     Then I expect that element "h1" contains the text "Page not found"
 
+  Scenario: The meta robots tag exists and is set to 'noindex'
+    When I wait on element "div#header-menu" to exist
+    Then I should see a meta tag named "robots" with the content "noindex"
+
   Scenario: Detect 404 page accessibility issues
     Then the page should have no accessibility issues
 
