@@ -1,6 +1,13 @@
 import "@testing-library/jest-dom/extend-expect";
 import { DataLayerEntry } from "types";
 
+// Header uses useStaticQuery in it, so easier to mock it globally as a no-op
+jest.mock("./src/components/Header/Header", () => {
+	return {
+		Header: (): null => null,
+	};
+});
+
 window.dataLayer = [];
 
 const originalPush = window.dataLayer.push;
