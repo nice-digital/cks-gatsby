@@ -64,12 +64,12 @@ namespace CKS.Web
 
 			app.UseDefaultFiles();
 			app.UseStaticFiles(new StaticFileOptions
-            {
-	            OnPrepareResponse = context => {
-		            if (context.Context.Request.Path == "/404.html")
-			            context.Context.Response.StatusCode = 404;
-	            }
-            });
+			{
+				OnPrepareResponse = context => {
+					if (context.Context.Request.Path == "/404.html")
+						context.Context.Response.StatusCode = 404;
+				}
+			});
 
 			app.UseRouting();
 
