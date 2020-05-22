@@ -1,0 +1,12 @@
+# See https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-3.1#url-redirect
+
+RewriteEngine On
+
+# Remove index.html from paths
+RewriteRule ^(.*)index\.html$ $1 [L,R=301]
+
+# Old style pages to new nested, kebab-case pages
+RewriteRule ^/whatsnew /whats-new/ [L,R=301]
+RewriteRule ^/development /about/development/ [L,R=301]
+RewriteRule ^/clinicalspeciality /specialities/ [L,R=301]
+RewriteRule ^/clinical_topics /topics/ [L,R=301]
