@@ -49,27 +49,22 @@ namespace CKS.Web
 			app.UseDefaultFiles();
 			app.UseStaticFiles(new StaticFileOptions
 			{
+				//Files in /static and files with gatsby generated file names should be
+				//cached forever as documented in https://www.gatsbyjs.org/docs/caching/
+				//Files with persistant names across builds shouldnt be cached forever eg.json, html, xml
 				OnPrepareResponse = ctx =>
 				{					
 					var fileName = ctx.File.Name;
-					var fileExtension = Path.GetExtension(fileName).ToLower();
-					var durationInSeconds = 0;
-					var cacheHeaderValues = new List<string> { "public" };
+					var headers = ctx.Context.Response.Headers;
 
-					if (fileExtension == ".css"
-					|| ctx.Context.Request.Path.Value.Contains("/static/")
-					|| (fileExtension == ".js" && fileName != "sw.js"))
+					if (fileName.EndsWith(".css") ||
+						ctx.Context.Request.Path.Value.Contains("/static/") ||
+						(fileName.EndsWith(".js") && fileName != "sw.js"))
 					{
-						cacheHeaderValues.Add("immutable");
-						durationInSeconds = 60 * 60 * 24 * 365;
+						headers[HeaderNames.CacheControl] = "public,immutable,max-age=31536000";
 					}
-					else 
-						cacheHeaderValues.Add("must-revalidate");
-
-					cacheHeaderValues.Add("max-age=" + durationInSeconds);
-
-					ctx.Context.Response.Headers[HeaderNames.CacheControl] =
-						String.Join(',', cacheHeaderValues);
+					else
+						headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=0";
 				}
 			});
 
