@@ -7,9 +7,20 @@ require("dotenv").config({
 
 module.exports = {
 	siteMetadata: {
+		siteUrl: "https://cks.nice.org.uk",
 		title: "CKS",
 	},
 	plugins: [
+		{
+			resolve: `gatsby-plugin-sitemap`,
+			options: {
+				exclude: [`/search/`],
+				serialize: ({ site, allSitePage }) =>
+					allSitePage.edges.map(({ node }) => ({
+						url: `${site.siteMetadata.siteUrl}${node.path}`,
+					})),
+			},
+		},
 		"gatsby-plugin-typescript",
 		"gatsby-plugin-sass",
 		{

@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
 		() =>
 			allTopicsQueryData.allCksTopic.nodes.map(({ topicName, slug }) => ({
 				Title: topicName,
-				Link: `/${slug}/`,
+				Link: `/topics/${slug}/`,
 			})),
 		[allTopicsQueryData]
 	);

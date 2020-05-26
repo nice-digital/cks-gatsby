@@ -14,10 +14,10 @@ docker-compose down --remove-orphans --volumes && docker-compose rm -vf
 docker-compose up -d
 
 # Wait for the web app to be up before running the tests
-docker-compose run test-runner npm run wait-then-test
+docker-compose run -T test-runner npm run wait-then-test
 
 # Generate an Allure test report
-docker-compose run test-runner allure generate --clean
+docker-compose run -T test-runner allure generate --clean
 
 # Copy error shots and logs to use as a TeamCity artifact for debugging purposes
 mkdir -p docker-output

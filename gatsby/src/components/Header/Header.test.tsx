@@ -82,7 +82,7 @@ describe("Header", () => {
 		expect(navigate).toHaveBeenCalledWith("/search?q=diabetes");
 	});
 
-	it("should use topic names for autocomplete suggestions", async () => {
+	it("should use topic names with topic URL for autocomplete suggestions", async () => {
 		((useStaticQuery as unknown) as jest.Mock).mockReturnValueOnce({
 			allCksTopic: {
 				nodes: [
@@ -105,6 +105,6 @@ describe("Header", () => {
 			{ selector: "a" }
 		);
 
-		expect(suggestion).toHaveAttribute("href", "/first-topic/");
+		expect(suggestion).toHaveAttribute("href", "/topics/first-topic/");
 	});
 });

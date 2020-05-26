@@ -14,6 +14,7 @@ using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
 using Microsoft.Net.Http.Headers;
 using System.IO;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace CKS.Web
 {
@@ -49,6 +50,12 @@ namespace CKS.Web
 			{
 				app.UseDeveloperExceptionPage();
 			}
+
+			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
+				app.UseRewriter(
+					new RewriteOptions()
+						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
+					);
 
 			app.UseDefaultFiles();
 			app.UseRouting();
