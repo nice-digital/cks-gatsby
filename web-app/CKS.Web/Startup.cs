@@ -86,7 +86,7 @@ namespace CKS.Web
 		{
 			// Serve static files straight for Gatsby's public folder when running locally.
 			// This means you don't have to copy the Gatsby output into the wwwroot folder like we do on TeamCity.
-			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public"));
+			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../../../../gatsby/public"));
 			app.UseDefaultFiles(new DefaultFilesOptions {
 					FileProvider = localGatsbyFileProvider
 				});
