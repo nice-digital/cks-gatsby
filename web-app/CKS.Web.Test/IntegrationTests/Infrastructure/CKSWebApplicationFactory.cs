@@ -65,7 +65,7 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 
 		public CKSWebApplicationFactory UseWebRoot(string path)
 		{
-			webRootPath = Directory.GetCurrentDirectory() + path;
+			webRootPath = Path.Combine(Directory.GetCurrentDirectory(), path);
 			return this;
 		}
 

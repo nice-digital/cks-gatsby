@@ -20,7 +20,7 @@ namespace CKS.Web.Test.IntegrationTests
 		public async void ReturnsMustRevalidateNoCacheHeader(string filename)
 		{			
 			using(var client = _factory
-				.UseWebRoot("\\IntegrationTests\\Fakes\\")
+				.UseWebRoot("/IntegrationTests/Fakes")
 				.CreateClient())
 			{				
 				var response = await client.GetAsync(filename);
@@ -34,7 +34,7 @@ namespace CKS.Web.Test.IntegrationTests
 		{
 			
 			using (var client = _factory
-				.UseWebRoot("\\IntegrationTests\\Fakes\\")
+				.UseWebRoot("/IntegrationTests/Fakes")
 				.CreateClient())
 			{				
 				var response = await client.GetAsync("static/test.png");
@@ -48,7 +48,7 @@ namespace CKS.Web.Test.IntegrationTests
 		{
 			
 			using (var client = _factory
-				.UseWebRoot("\\IntegrationTests\\Fakes\\")
+				.UseWebRoot("/IntegrationTests/Fakes")
 				.CreateClient())
 			{				
 				var responseForJs = await client.GetAsync("test.js");
@@ -64,7 +64,7 @@ namespace CKS.Web.Test.IntegrationTests
 		{
 			
 			using (var client = _factory
-				.UseWebRoot("\\IntegrationTests\\Fakes\\")
+				.UseWebRoot("/IntegrationTests/Fakes")
 				.CreateClient())
 			{				
 				var response = await client.GetAsync("sw.js");
