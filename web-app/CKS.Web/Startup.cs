@@ -51,11 +51,14 @@ namespace CKS.Web
 				app.UseDeveloperExceptionPage();
 			}
 
-			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
-				app.UseRewriter(
-					new RewriteOptions()
-						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
-					);
+			if(env.EnvironmentName != "Testing")
+			{
+				using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
+					app.UseRewriter(
+						new RewriteOptions()
+							.AddApacheModRewrite(gatsbyModRewriteStreamReader)
+						);
+			}
 
 			app.UseDefaultFiles();
 			app.UseRouting();
