@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+    <ShortName>CKS Search</ShortName>
+    <Description>CKS Search - A search engine for Clinical Knowledge Summaries</Description>
+    <Url type="text/html" method="get" template="https://cks.nice.org.uk/Search?q={searchTerms}"/>
+    <Image width="16" height="16">/favicon.ico</Image>
+    <InputEncoding>UTF-8</InputEncoding>
+    <SearchForm>https://cks.nice.org.uk/</SearchForm>
+</OpenSearchDescription>

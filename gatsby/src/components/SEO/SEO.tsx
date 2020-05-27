@@ -65,6 +65,12 @@ export const SEO: React.FC<SEOProps> = ({ title, description }: SEOProps) => (
 			},
 		]}
 	>
+		<link
+			rel="search"
+			type="application/opensearchdescription+xml"
+			href="/opensearch.xml"
+			title="CKS Search"
+		/>
 		<html lang="en-GB" />
 	</Helmet>
 );
