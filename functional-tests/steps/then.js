@@ -4,6 +4,7 @@ import "@nice-digital/wdio-cucumber-steps/lib/then";
 import setInputField from "@nice-digital/wdio-cucumber-steps/lib/support/action/setInputField";
 import waitFor from "@nice-digital/wdio-cucumber-steps/lib/support/action/waitFor";
 import checkContainsText from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkContainsText";
+import { getSelector } from "../support/selectors";
 
 Then("I expect that the CKS GTM container is available", () => {
 	const containerId = browser.executeAsync((done) => {
@@ -21,4 +22,10 @@ Then("I expect that the CKS GTM container is available", () => {
 Then(/^I see "([^"]*)" in the autocomplete suggestions$/, (text) => {
 	waitFor(".autocomplete__option");
 	checkContainsText("element", ".autocomplete__menu", null, text);
+});
+
+Then(/^I expect to see a list of ([^"]*)$/, (selectorName) => {
+	expect(
+		browser.elements(getSelector(selectorName)).value
+	).to.have.lengthOf.above(0);
 });
