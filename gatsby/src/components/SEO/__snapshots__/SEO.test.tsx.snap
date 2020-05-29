@@ -5,6 +5,11 @@ exports[`SEO should set default title and description when none provided 1`] = `
   <title>
     CKS | NICE
   </title>
+  <link
+    data-react-helmet="true"
+    href="/favicon.ico"
+    rel="icon"
+  />
   <meta
     content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice"
     data-react-helmet="true"
