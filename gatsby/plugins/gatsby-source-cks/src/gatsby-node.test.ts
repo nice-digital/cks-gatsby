@@ -49,6 +49,7 @@ describe("gatsby-node", () => {
 					end: (): void => void 0,
 					setStatus: (): void => void 0,
 				}),
+				info: (): void => void 0,
 			},
 		} as unknown) as SourceNodesArgs;
 
