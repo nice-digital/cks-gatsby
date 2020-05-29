@@ -106,6 +106,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 											elementType: Link,
 											destination: `/topics/${topic.slug}/`,
 										}}
+										summary={text}
 										metadata={[
 											{
 												label: "Type",
@@ -116,9 +117,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 												),
 											},
 										]}
-									>
-										{text}
-									</Card>
+									/>
 								</li>
 							);
 						})}
