@@ -72,6 +72,48 @@ describe("What's new page", () => {
 		props = getDefaultTestProps();
 	});
 
+	describe("Breadcrumbs", () => {
+		it("should render NICE homepage breadcrumb link", () => {
+			const { queryByText } = renderResult;
+
+			expect(
+				queryByText(textContentMatcher("Home"), {
+					selector: ".breadcrumbs a",
+				})
+			).toHaveAttribute("href", "https://www.nice.org.uk/");
+		});
+
+		it("should render CKS home breadcrumb", () => {
+			const { queryByText } = renderResult;
+
+			expect(
+				queryByText(textContentMatcher("CKS"), {
+					selector: ".breadcrumbs a",
+				})
+			).toHaveAttribute("href", "/");
+		});
+
+		it("should render CKS home breadcrumb", () => {
+			const { queryByText } = renderResult;
+
+			expect(
+				queryByText(textContentMatcher("CKS"), {
+					selector: ".breadcrumbs a",
+				})
+			).toHaveAttribute("href", "/");
+		});
+
+		it("should render current page breadcrumb without link", () => {
+			const { queryByText } = renderResult;
+
+			expect(
+				queryByText(textContentMatcher("What's new"), {
+					selector: ".breadcrumbs span",
+				})
+			).toBeTruthy();
+		});
+	});
+
 	describe("Page header", () => {
 		it("should render heading 1 with current date", () => {
 			const { queryByText } = renderResult;
