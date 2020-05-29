@@ -27,8 +27,6 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 			_output.WriteLine("CKSWebApplicationFactory.constructor");
 		}
 
-		protected override IWebHostBuilder CreateWebHostBuilder() => base.CreateWebHostBuilder();
-
 		protected override void ConfigureWebHost(IWebHostBuilder builder)
 		{
 			_output.WriteLine("CKSWebApplicationFactory.ConfigureWebHost");

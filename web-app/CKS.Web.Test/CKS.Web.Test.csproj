@@ -26,10 +26,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="IntegrationTests\Fakes\.htaccess">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="IntegrationTests\Fakes\FakeSearchResultsModel.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="IntegrationTests\Fakes\static\test.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

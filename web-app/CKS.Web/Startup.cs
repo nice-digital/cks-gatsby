@@ -59,22 +59,17 @@ namespace CKS.Web
 					);
 
 			app.UseDefaultFiles();
-			app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = new PWAFileExtensionContentTypeProvider() });
-
-			app.UseRouting();
-            app.UseAuthorization();
-
 			app.UseStaticFiles(new StaticFileOptions
-			{
+			{				
 				//Files in /static and files with gatsby generated file names should be
 				//cached forever as documented in https://www.gatsbyjs.org/docs/caching/
 				//Files with persistant names across builds shouldnt be cached forever eg.json, html, xml
 				OnPrepareResponse = ctx =>
-				{					
+				{
 					var fileName = ctx.File.Name;
 					var headers = ctx.Context.Response.Headers;
 
-            
+
 					if (fileName.EndsWith(".css") ||
 						ctx.Context.Request.Path.Value.Contains("/static/") ||
 						(fileName.EndsWith(".js") && fileName != "sw.js"))
@@ -83,8 +78,13 @@ namespace CKS.Web
 					}
 					else
 						headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=0";
-				}
+				},
+
+				ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
 			});
+
+			app.UseRouting();
+            app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
 			{
@@ -96,7 +96,7 @@ namespace CKS.Web
 		{
 			// Serve static files straight for Gatsby's public folder when running locally.
 			// This means you don't have to copy the Gatsby output into the wwwroot folder like we do on TeamCity.
-			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), Configuration.GetValue<string>("GatsbyOutputFolder")));
+			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public"));
 			app.UseDefaultFiles(new DefaultFilesOptions {
 					FileProvider = localGatsbyFileProvider
 				});
