@@ -7,16 +7,9 @@
 <details>
 <summary><strong>Table of contents</strong></summary>
 <!-- START doctoc -->
-- [Gatsby site for CKS](#gatsby-site-for-cks)
-  - [Stack](#stack)
-    - [Software](#software)
-    - [Tests](#tests)
-      - [Debugging tests](#debugging-tests)
-      - [Why not Enzyme?](#why-not-enzyme)
-  - [:rocket: Set up](#rocket-set-up)
-    - [Other commands](#other-commands)
-  - [Source plugin](#source-plugin)
-    - [Production API](#production-api)
+
+- [Gatsby site for CKS](#gatsby-site-for-cks) - [Stack](#stack) - [Software](#software) - [Tests](#tests) - [Debugging tests](#debugging-tests) - [Why not Enzyme?](#why-not-enzyme) - [:rocket: Set up](#rocket-set-up) - [Other commands](#other-commands) - [Source plugin](#source-plugin) - [Configuration](#configuration) - [TeamCity configuration](#teamcity-configuration)
+
 <!-- END doctoc -->
 </details>
 
@@ -122,22 +115,33 @@ In the case of CKS, the source data comes from the API provided by Clarity. The 
 
 **View the [custom source plugin (_gatsby-source-cks_)](plugins/gatsby-source-cks) folder for more information.**
 
-### Production API
+### Configuration
 
-The [source plugin](#source-plugin) (see above) points to the local, fake API (on http://lcaolhost:7000) by default. Set the following environment variables to point to a different URL:
+The source plugin can be configured by passing in options via gatsby-config.js. See the [source plugin readme](plugins/gatsby-source-cks/README.md#configuration) for details of each option.
 
-- `API_BASE_URL`
-- `API_KEY`
+Configure these options via environment variables. The Gatsby build looks for the following environment variables corresponding to each plugin option:
 
-Create a _.env.development_ file (for local development) or _.env.production_ file (for the production build) in this _gatsby_ folder to set these environment variables.
+| Config option    | Environment variable | Notes                                                                                                                |
+| ---------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| apiBaseUrl       | API_BASE_URL         | Leave blank to default to the local fake API at http://localhost:7000/api                                            |
+| apiKey           | API_KEY              | Leave blank to default to _abc123_ for the local fake API                                                            |
+| changesSinceDate | CHANGES_SINCE        | Date from which to load changes for the _what's new_ page. Leave blank to default to the start of the previous month |
 
-> Note: these .env files are deliberately ignore from git
+Set these environment variables using _.env_ files. Create a _.env.development_ file (for local development with `npm run develop`) or _.env.production_ file (for the production build with `npm run build`) in this _gatsby_ folder to set these environment variables.
+
+These _.env_ files are deliberately ignore from git.
 
 For example, create a _.env.production_ file pointing to the live API to create a live-like production build via `npm run build`:
 
 ```
+# .env.production
 API_KEY=xyzetc
 API_BASE_URL=https://whatever
+CHANGES_SINCE=2020-05-01
 ```
 
-> Note: you can get the live API key and URL from the TeamCity build parameters.
+> Note: you can get the live API key and URL from the TeamCity build parameters or ask a team member.
+
+#### TeamCity configuration
+
+Use the _Run Custom Build_ dialog in TeamCity to trigger a custom build and override `CHANGES_SINCE` environment variable. This can be useful at the end of the month to test the feed with a one-off build, where normally it would use the start of the previous month. Set the _Changes since date_ on the _Parameters_ tab within _Run Custom Build_ to override the date.

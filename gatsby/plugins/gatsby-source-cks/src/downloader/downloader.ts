@@ -55,7 +55,8 @@ const getAllFullTopics = async (
 };
 
 export const downloadAllData = async (
-	sourceNodesArgs: SourceNodesArgs
+	sourceNodesArgs: SourceNodesArgs,
+	changesSinceDate: Date
 ): Promise<DownloadResult> => {
 	const {
 		reporter: { activityTimer },
@@ -68,7 +69,7 @@ export const downloadAllData = async (
 	const partialTopicsTask = getAllPartialTopics();
 
 	apiActivity.setStatus(`Downloading monthly changes`);
-	const whatsNewChangesTask = getChangesSince();
+	const whatsNewChangesTask = getChangesSince(changesSinceDate);
 
 	const changes = await whatsNewChangesTask,
 		fullTopics = await getAllFullTopics(
