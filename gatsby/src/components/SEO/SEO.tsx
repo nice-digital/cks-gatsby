@@ -47,5 +47,6 @@ export const SEO: React.FC<SEOProps> = ({
 		{noIndex && <meta name="robots" content="noindex" />}
 
 		<html lang="en-GB" />
+		<link rel="icon" href="/favicon.ico" />
 	</Helmet>
 );

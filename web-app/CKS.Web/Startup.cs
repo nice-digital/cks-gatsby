@@ -16,8 +16,8 @@ using Microsoft.Extensions.Logging;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
-using System.IO;
 using Microsoft.AspNetCore.Rewrite;
+using CKS.Web.StaticFiles;
 
 namespace CKS.Web
 {
@@ -63,8 +63,10 @@ namespace CKS.Web
 			app.UseStatusCodePagesWithReExecute("/{0}.html");
 
 			app.UseDefaultFiles();
+
 			app.UseStaticFiles(new StaticFileOptions
 			{
+				ContentTypeProvider = new PWAFileExtensionContentTypeProvider(),
 				OnPrepareResponse = context => {
 					if (context.Context.Request.Path == "/404.html")
 						context.Context.Response.StatusCode = 404;
@@ -90,7 +92,8 @@ namespace CKS.Web
 					FileProvider = localGatsbyFileProvider
 				});
 			app.UseStaticFiles(new StaticFileOptions() {
-					FileProvider = localGatsbyFileProvider
+					FileProvider = localGatsbyFileProvider,
+					ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
 				});
 
 			Configure(app, env);
