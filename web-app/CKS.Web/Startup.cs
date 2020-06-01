@@ -1,21 +1,18 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CKS.Web.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
 using Microsoft.AspNetCore.HttpOverrides;
+using System.IO;
+using Microsoft.AspNetCore.Rewrite;
+using Microsoft.Extensions.FileProviders;
+using CKS.Web.StaticFiles;
 
 namespace CKS.Web
 {
@@ -69,6 +66,12 @@ namespace CKS.Web
 				app.UseHsts();
 			}
 
+			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
+				app.UseRewriter(
+					new RewriteOptions()
+						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
+					);
+
 			app.UseMiddleware<SecurityHeadersMiddleware>();
 
 			app.UseDefaultFiles();
@@ -83,5 +86,24 @@ namespace CKS.Web
 				endpoints.MapControllers();
 			});
 		}
+
+		public void ConfigureDevelopment(IApplicationBuilder app, IWebHostEnvironment env)
+		{
+			// Serve static files straight for Gatsby's public folder when running locally.
+			// This means you don't have to copy the Gatsby output into the wwwroot folder like we do on TeamCity.
+			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public"));
+			app.UseDefaultFiles(new DefaultFilesOptions
+			{
+				FileProvider = localGatsbyFileProvider
+			});
+			app.UseStaticFiles(new StaticFileOptions()
+			{
+				FileProvider = localGatsbyFileProvider,
+				ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
+			});
+
+			Configure(app, env);
+		}
 	}
+
 }

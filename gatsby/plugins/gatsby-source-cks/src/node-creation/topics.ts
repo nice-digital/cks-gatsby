@@ -36,7 +36,7 @@ export const createTopicNodes = (
 			const nodeContent = {
 				...topic,
 				...{
-					slug: slugify(topicName, { lower: true }),
+					slug: slugify(topicName, { lower: true, remove: /[()']/g }),
 					specialities: clinicalSpecialties,
 					chapters: topicHtmlObjects.map(t => t.itemId),
 				},

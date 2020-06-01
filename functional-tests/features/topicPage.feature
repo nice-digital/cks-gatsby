@@ -3,7 +3,7 @@ Feature: Topic Page
   I want to be able to use the CKS Topic Page
 
   Background:
-    Given I open the url "/achilles-tendinopathy/"
+    Given I open the url "/topics/achilles-tendinopathy/"
 
   Scenario: Detect Topic page accessibility issues
     Then the page should have no accessibility issues

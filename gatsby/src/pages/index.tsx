@@ -65,13 +65,7 @@ const IndexPage: React.FC<IndexProps> = ({
 			</Hero>
 
 			<h2>Topics</h2>
-			<ul>
-				{allTopics.nodes.map(({ id, topicName, slug }) => (
-					<li key={id}>
-						<Link to={`/${slug}`}>{topicName}</Link>
-					</li>
-				))}
-			</ul>
+			<p>TODO: Show A-Z of all {allTopics.nodes.length} topics</p>
 		</Layout>
 	);
 };

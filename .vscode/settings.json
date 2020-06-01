@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.rulers": [80],
+  "editor.rulers": [80, 120],
   "files.eol": "\n",
   "files.exclude": {
     "**/.git": true,
@@ -37,7 +37,10 @@
   "cucumberautocomplete.steps": [
     "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/given/definitions.js",
     "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/when/definitions.js",
-    "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/then/definitions.js"
+    "functional-tests/node_modules/@nice-digital/wdio-cucumber-steps/src/then/definitions.js",
+    "functional-tests/steps/given.js",
+    "functional-tests/steps/when.js",
+    "functional-tests/steps/then.js"
   ],
   "omnisharp.loggingLevel": "warning",
   "csharp.unitTestDebuggingOptions": {
