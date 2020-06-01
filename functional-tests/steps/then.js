@@ -27,7 +27,7 @@ Then(
 	/^I should see a meta tag named "([^"]*)" with the content "([^"]*)"$/,
 	(name, content) => {
 		var selector = "meta[name='" + name + "']";
-		expect(browser.elements(selector).getAttribute("content")).to.equal(
+		expect(browser.element(selector).getAttribute("content")).to.equal(
 			content
 		);
 	}
