@@ -10,7 +10,6 @@ Feature: 404 Page
     Then I expect that element "h1" contains the text "Page not found"
 
   Scenario: The page is blocked from search indexing
-    When I wait on element "div#header-menu" to exist
     Then I should see a meta tag named "robots" with the content "noindex"
 
   Scenario: Detect 404 page accessibility issues
