@@ -56,7 +56,7 @@ describe("SEO", () => {
 		render(<SEO noIndex={false} />);
 		await waitForDomChange();
 
-		expect(document.querySelector("meta[name='robots']")).toEqual(null);
+		expect(document.querySelector("meta[name='robots']")).toBeNull();
 	});
 
 	it("should not render robots when noIndex is not set", async () => {
