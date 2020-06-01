@@ -26,7 +26,7 @@ Then(/^I see "([^"]*)" in the autocomplete suggestions$/, (text) => {
 Then(
 	/^I should see a meta tag named "([^"]*)" with the content "([^"]*)"$/,
 	(name, content) => {
-		var selector = "meta[name='" + name + "']";
+		const selector = `meta[name='${name}]`;
 		expect(browser.element(selector).getAttribute("content")).to.equal(
 			content
 		);
