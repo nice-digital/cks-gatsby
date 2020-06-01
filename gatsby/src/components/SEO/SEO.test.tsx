@@ -63,6 +63,6 @@ describe("SEO", () => {
 		render(<SEO />);
 		await waitForDomChange();
 
-		expect(document.querySelector("meta[name='robots']")).toEqual(null);
+		expect(document.querySelector("meta[name='robots']")).toBeNull();
 	});
 });
