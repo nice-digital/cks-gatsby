@@ -3,9 +3,9 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
     <ShortName>CKS</ShortName>
     <Description>CKS Search - A search engine for Clinical Knowledge Summaries</Description>
-    <Url type="text/html" method="get" template="https://#{hostname}/search/?q={searchTerms}"/>
+    <Url type="text/html" method="get" template="https://#{Hostname}/search/?q={searchTerms}"/>
     <Image width="16" height="16">/favicon.ico</Image>
 	<Image width="64" height="64">/favicon.png</Image>
     <InputEncoding>UTF-8</InputEncoding>
-    <moz:SearchForm>https://#{hostname}</moz:SearchForm>
+    <moz:SearchForm>https://#{Hostname}</moz:SearchForm>
 </OpenSearchDescription>
