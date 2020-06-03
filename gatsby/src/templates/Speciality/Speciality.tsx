@@ -24,7 +24,7 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 			<ul>
 				{topics.map(({ id, topicName, slug }) => (
 					<li key={id}>
-						<Link to={slug}>{topicName}</Link>
+						<Link to={`/topics/${slug}/`}>{topicName}</Link>
 					</li>
 				))}
 			</ul>

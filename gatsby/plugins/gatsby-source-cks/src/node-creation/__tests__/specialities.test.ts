@@ -18,7 +18,8 @@ describe("createSpecialityNodes", () => {
 
 	const injuries = "Injuries",
 		musculoskeletal = "Musculoskeletal",
-		infections = "Infections and infestations";
+		infections = "Infections and infestations",
+		womensHealth = "Women's health (test)";
 
 	const topics = [
 		{
@@ -31,7 +32,7 @@ describe("createSpecialityNodes", () => {
 		} as ApiFullTopic,
 		{
 			topicId: "topic3",
-			clinicalSpecialties: [infections],
+			clinicalSpecialties: [infections, womensHealth],
 		} as ApiFullTopic,
 	];
 
@@ -41,7 +42,7 @@ describe("createSpecialityNodes", () => {
 
 	it("should call createNode for each speciality", () => {
 		createSpecialityNodes(topics, sourceNodesArgs);
-		expect(createNode).toHaveBeenCalledTimes(3);
+		expect(createNode).toHaveBeenCalledTimes(4);
 	});
 
 	it("should store speciality name", () => {
@@ -70,10 +71,18 @@ describe("createSpecialityNodes", () => {
 		);
 	});
 
+	it("should remove apostrophes and brackets from slug", () => {
+		createSpecialityNodes(topics, sourceNodesArgs);
+		expect(createNode.mock.calls[3][0]).toHaveProperty(
+			"slug",
+			"womens-health-test"
+		);
+	});
+
 	it("should create a unique node id from the speciality name", () => {
 		createNodeId.mockImplementation(s => `node id: ` + s);
 		createSpecialityNodes(topics, sourceNodesArgs);
-		expect(createNodeId).toHaveBeenCalledTimes(3);
+		expect(createNodeId).toHaveBeenCalledTimes(4);
 		expect(createNodeId).toHaveBeenNthCalledWith(1, "Injuries");
 		expect(createNodeId).toHaveBeenNthCalledWith(2, "Musculoskeletal");
 		expect(createNodeId).toHaveBeenNthCalledWith(

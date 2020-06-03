@@ -12,8 +12,9 @@ using Microsoft.Extensions.Hosting;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
+using Microsoft.AspNetCore.Rewrite;
+using CKS.Web.StaticFiles;
 using Microsoft.Net.Http.Headers;
-using System.IO;
 
 namespace CKS.Web
 {
@@ -50,7 +51,14 @@ namespace CKS.Web
 				app.UseDeveloperExceptionPage();
 			}
 
+			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
+				app.UseRewriter(
+					new RewriteOptions()
+						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
+					);
+
 			app.UseDefaultFiles();
+
 			app.UseRouting();
             app.UseAuthorization();
 
@@ -74,6 +82,8 @@ namespace CKS.Web
 					else
 						headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=0";
 				}
+
+				ContentTypeProvider = new PWAFileExtensionContentTypeProvider();
 			});
 
 			app.UseEndpoints(endpoints =>
@@ -86,12 +96,13 @@ namespace CKS.Web
 		{
 			// Serve static files straight for Gatsby's public folder when running locally.
 			// This means you don't have to copy the Gatsby output into the wwwroot folder like we do on TeamCity.
-			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../../../../gatsby/public"));
+			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public"));
 			app.UseDefaultFiles(new DefaultFilesOptions {
 					FileProvider = localGatsbyFileProvider
 				});
 			app.UseStaticFiles(new StaticFileOptions() {
-					FileProvider = localGatsbyFileProvider
+					FileProvider = localGatsbyFileProvider,
+					ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
 				});
 
 			Configure(app, env);

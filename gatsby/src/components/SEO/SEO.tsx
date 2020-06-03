@@ -66,5 +66,6 @@ export const SEO: React.FC<SEOProps> = ({ title, description }: SEOProps) => (
 		]}
 	>
 		<html lang="en-GB" />
+		<link rel="icon" href="/favicon.ico" />
 	</Helmet>
 );
