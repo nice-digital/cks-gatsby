@@ -7,6 +7,13 @@ exports[`SEO should set default title and description when none provided 1`] = `
   </title>
   <link
     data-react-helmet="true"
+    href="/opensearch.xml"
+    rel="search"
+    title="CKS"
+    type="application/opensearchdescription+xml"
+  />
+  <link
+    data-react-helmet="true"
     href="/favicon.ico"
     rel="icon"
   />
