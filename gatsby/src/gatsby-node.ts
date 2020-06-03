@@ -13,6 +13,20 @@ interface PageCreationQuery extends AllTopicsQuery {
 	allSpecialities: {
 		nodes: PartialSpeciality[];
 	};
+	allChapters: {
+		nodes: {
+			id: string;
+			slug: string;
+			depth: number;
+			pos: 0;
+			parentChapter?: {
+				slug: string;
+			};
+			topic: {
+				slug: string;
+			};
+		}[];
+	};
 }
 
 const createCksPages = async ({
@@ -36,6 +50,20 @@ const createCksPages = async ({
 					slug
 				}
 			}
+			allChapters: allCksChapter(filter: { depth: { lte: 2 } }) {
+				nodes {
+					id
+					slug
+					depth
+					pos
+					parentChapter {
+						slug
+					}
+					topic {
+						slug
+					}
+				}
+			}
 		}
 	`);
 
@@ -56,6 +84,17 @@ const createCksPages = async ({
 	pageCreationQuery.data?.allSpecialities.nodes.forEach(({ id, slug }) => {
 		createCksPage(id, `/specialities/${slug}/`, "Speciality");
 	});
+
+	pageCreationQuery.data?.allChapters.nodes
+		// Don't create the 'summary' chapter - this is the topic
+		.filter(c => !(c.depth === 1 && c.pos === 0))
+		.forEach(({ id, slug, parentChapter, topic }) => {
+			let chapterPath = `/topics/${topic.slug}`;
+
+			if (parentChapter) chapterPath += `/${parentChapter.slug}`;
+
+			createCksPage(id, `${chapterPath}/${slug}/`, "Chapter");
+		});
 
 	return;
 };
