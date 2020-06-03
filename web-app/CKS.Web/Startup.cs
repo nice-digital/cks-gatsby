@@ -16,8 +16,8 @@ using Microsoft.Extensions.Logging;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
-using System.IO;
 using Microsoft.AspNetCore.Rewrite;
+using CKS.Web.StaticFiles;
 
 namespace CKS.Web
 {
@@ -61,7 +61,7 @@ namespace CKS.Web
 					);
 
 			app.UseDefaultFiles();
-			app.UseStaticFiles();
+			app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = new PWAFileExtensionContentTypeProvider() });
 
 			app.UseRouting();
 
@@ -82,7 +82,8 @@ namespace CKS.Web
 					FileProvider = localGatsbyFileProvider
 				});
 			app.UseStaticFiles(new StaticFileOptions() {
-					FileProvider = localGatsbyFileProvider
+					FileProvider = localGatsbyFileProvider,
+					ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
 				});
 
 			Configure(app, env);
