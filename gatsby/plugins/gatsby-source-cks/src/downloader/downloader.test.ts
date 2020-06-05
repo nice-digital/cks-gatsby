@@ -31,9 +31,9 @@ const apiMocks = {
 	getAllPartialTopics: getAllPartialTopics as jest.Mock<
 		Promise<ApiTopicsResponse>
 	>,
-	getChangesSince: getChangesSince as jest.Mock<
+	getChangesSince: (getChangesSince as jest.Mock<
 		Promise<ApiTopicChangeResponse>
-	>,
+	>).mockResolvedValue([]),
 	getFullTopicCached: getFullTopicCached as jest.Mock<Promise<ApiFullTopic>>,
 };
 
@@ -54,6 +54,7 @@ const sourceNodesArgs: SourceNodesArgs = ({
 				setStatus: jest.fn() as Function,
 				end: jest.fn() as Function,
 			} as ActivityTracker),
+		info: jest.fn(),
 	},
 } as unknown) as SourceNodesArgs;
 
