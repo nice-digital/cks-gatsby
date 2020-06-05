@@ -78,7 +78,7 @@ export const downloadAllData = async (
 		);
 
 	changes.forEach(c => {
-		info(`Got major update for '${c.topicName}' (${c.text})`);
+		info(`Got major update for '${c.topicName}' (${c.title})`);
 	});
 
 	apiActivity.setStatus(`Received all data from the API`);
