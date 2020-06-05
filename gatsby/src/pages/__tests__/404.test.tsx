@@ -1,5 +1,6 @@
 import React from "react";
 
+import { waitForDomChange } from "@testing-library/react";
 import { renderWithRouter } from "test-utils";
 import NotFoundPage from "../404";
 
@@ -16,11 +17,14 @@ describe("404", () => {
 		expect(queryByText("Page not found")?.tagName).toBe("H1");
 	});
 
-	it("should render a meta tag named 'robots' with the content 'noindex'", async () => {
-		const { container } = renderWithRouter(<NotFoundPage />);
+	it("should render a noindex robots meta tag", async () => {
+		renderWithRouter(<NotFoundPage />);
 
-		expect(container.innerHTML).toContain(
-			'<meta name="robots" content="noindex" />'
+		await waitForDomChange();
+
+		expect(document.querySelector("meta[name='robots']")).toHaveAttribute(
+			"content",
+			"noindex"
 		);
 	});
 });
