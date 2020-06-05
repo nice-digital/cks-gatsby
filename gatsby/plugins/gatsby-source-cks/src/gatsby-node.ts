@@ -37,9 +37,13 @@ export const sourceNodes = async (
 		reporter: { activityTimer, info },
 	} = sourceNodesArgs;
 
-	info(`Changes since date is ${configOptions.changesSinceDate}`);
+	info(
+		`Date for getting major changes/updates: ${configOptions.changesSinceDate.toISOString()}`
+	);
 
-	const { start, setStatus, end } = activityTimer(`Creating nodes`);
+	const { start, setStatus, end } = activityTimer(
+		`Download data and creating CKS nodes`
+	);
 	start();
 
 	// Configure the API authentication and base URL before downloading data
@@ -55,7 +59,7 @@ export const sourceNodes = async (
 	createChangeNodes(changes, sourceNodesArgs);
 	createChapterNotes(fullTopics, sourceNodesArgs);
 
-	setStatus(`Created nodes`);
+	setStatus(`Created all nodes`);
 	end();
 
 	return;

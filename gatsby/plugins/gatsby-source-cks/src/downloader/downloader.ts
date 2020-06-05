@@ -59,7 +59,7 @@ export const downloadAllData = async (
 	changesSinceDate: Date
 ): Promise<DownloadResult> => {
 	const {
-		reporter: { activityTimer },
+		reporter: { activityTimer, info },
 	} = sourceNodesArgs;
 
 	const apiActivity = activityTimer(`Downloading data from the API`);
@@ -76,6 +76,10 @@ export const downloadAllData = async (
 			await partialTopicsTask,
 			sourceNodesArgs
 		);
+
+	changes.forEach(c => {
+		info(`Got major update for '${c.topicName}' (${c.text})`);
+	});
 
 	apiActivity.setStatus(`Received all data from the API`);
 	apiActivity.end();
