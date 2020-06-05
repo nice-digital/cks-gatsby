@@ -47,7 +47,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 				description={`Topic updates for CKS for ${changesSinceDateFormatted}`}
 			/>
 			<Breadcrumbs>
-				<Breadcrumb to="https://www.nice.org.uk/">Home</Breadcrumb>
+				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
 				<Breadcrumb to="/" elementType={Link}>
 					CKS
 				</Breadcrumb>

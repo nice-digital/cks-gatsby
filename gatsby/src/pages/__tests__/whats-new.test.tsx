@@ -77,7 +77,7 @@ describe("What's new page", () => {
 			const { queryByText } = renderResult;
 
 			expect(
-				queryByText(textContentMatcher("Home"), {
+				queryByText(textContentMatcher("NICE"), {
 					selector: ".breadcrumbs a",
 				})
 			).toHaveAttribute("href", "https://www.nice.org.uk/");
