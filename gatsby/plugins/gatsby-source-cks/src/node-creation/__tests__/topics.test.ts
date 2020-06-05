@@ -29,7 +29,7 @@ describe("createTopicNodes", () => {
 		} as ApiFullTopic,
 		{
 			topicId: "topic2",
-			topicName: "Apostrophe's (brackets)",
+			topicName: "Apostrophe's, (brackets)",
 			topicHtmlObjects: [] as ApiTopicHtmlObject[],
 		} as ApiFullTopic,
 	];
@@ -48,7 +48,7 @@ describe("createTopicNodes", () => {
 		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "a-topic-name");
 	});
 
-	it("should remove brackets and apostrophes from slug", () => {
+	it("should remove brackets, commas and apostrophes from slug", () => {
 		createTopicNodes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[1][0]).toHaveProperty(
 			"slug",

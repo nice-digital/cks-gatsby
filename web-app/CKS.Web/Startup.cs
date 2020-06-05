@@ -5,17 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
+using Microsoft.Net.Http.Headers;
+using System.IO;
 using Microsoft.AspNetCore.Rewrite;
 using CKS.Web.StaticFiles;
 
@@ -61,11 +59,32 @@ namespace CKS.Web
 					);
 
 			app.UseDefaultFiles();
-			app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = new PWAFileExtensionContentTypeProvider() });
+			app.UseStaticFiles(new StaticFileOptions
+			{				
+				//Files in /static and files with gatsby generated file names should be
+				//cached forever as documented in https://www.gatsbyjs.org/docs/caching/
+				//Files with persistant names across builds shouldnt be cached forever eg.json, html, xml
+				OnPrepareResponse = ctx =>
+				{
+					var fileName = ctx.File.Name;
+					var headers = ctx.Context.Response.Headers;
+
+
+					if (fileName.EndsWith(".css") ||
+						ctx.Context.Request.Path.Value.Contains("/static/") ||
+						(fileName.EndsWith(".js") && fileName != "sw.js"))
+					{
+						headers[HeaderNames.CacheControl] = "public,immutable,max-age=31536000";
+					}
+					else
+						headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=0";
+				},
+
+				ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
+			});
 
 			app.UseRouting();
-
-			app.UseAuthorization();
+            app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
 			{
