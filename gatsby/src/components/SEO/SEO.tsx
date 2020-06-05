@@ -20,19 +20,16 @@ export const SEO: React.FC<SEOProps> = ({
 		titleTemplate={`%s | CKS | NICE`}
 		defaultTitle="CKS | NICE"
 	>
-		<meta
-			name="description"
-			content={description ? description : defaultDescription}
-		/>
+		<meta name="description" content={description || defaultDescription} />
 		<meta
 			property="og:description"
-			content={description ? description : defaultDescription}
+			content={description || defaultDescription}
 		/>
 		<meta property="og:locale" content="en_GB" />
 		<meta property="og:type" content="website" />
 		<meta
 			property="og:title"
-			content={(title ? title + " | " : "") + "CKS | NICE"}
+			content={(title ? `${title} | ` : "") + "CKS | NICE"}
 		/>
 		<meta
 			property="og:image"
