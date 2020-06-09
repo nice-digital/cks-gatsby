@@ -98,21 +98,21 @@ However, to run the the Gatsby site on its own from the command line:
 
 There are various other commands you can run in a terminal from the _gatsby_ folder:
 
-| Script                  | What does it do                                                                    |
-| ----------------------- | ---------------------------------------------------------------------------------- |
-| `npm start`             | Runs the Gatsby site in development mode                                           |
-| `npm run build`         | Builds the production build of the Gatsby site into the _public_ folder            |
-| `npm run serve`         | Serves the built Gatsby files from `npm run build` on http://localhost:9000/       |
-| `npm run cb`            | Copies useful Gatsby info to the clipboard, useful for reporting defects on GitHub |
-| `npm test`              | Runs Jest tests                                                                    |
-| `npm run test:watch`    | Runs Jest tests and watches for file changes to re-run tests                       |
-| `npm run test:coverage` | Runs Jest tests and outputs coverage                                               |
-| `npm run lint`          | Runs prettier, eslint and typechecking                                             |
-| `npm run prettier`      | Checks files for codeformatting issues using Prettier                              |
-| `npm run prettier:fix`  | Runs prettier and fixes any code formatting issues                                 |
-| `npm run lint:ts`       | Lints TypeScript and Javacript files using ESLint                                  |
-| `npm run lint:ts:fix`   | Fixes any linting errors using ESLint                                              |
-| `npm run typecheck`     | Typechecks the TypeScript files                                                    |
+| Script                  | What does it do                                                                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `npm start`             | Runs the Gatsby site in development mode                                                                                                               |
+| `npm run build`         | Builds the production build of the Gatsby site into the _public_ folder. Note: the [fake-api](fake-api#readme) needs to be running else it won't build |
+| `npm run serve`         | Serves the built Gatsby files from `npm run build` on http://localhost:9000/                                                                           |
+| `npm run cb`            | Copies useful Gatsby info to the clipboard, useful for reporting defects on GitHub                                                                     |
+| `npm test`              | Runs Jest tests                                                                                                                                        |
+| `npm run test:watch`    | Runs Jest tests and watches for file changes to re-run tests                                                                                           |
+| `npm run test:coverage` | Runs Jest tests and outputs coverage                                                                                                                   |
+| `npm run lint`          | Runs prettier, eslint and typechecking                                                                                                                 |
+| `npm run prettier`      | Checks files for codeformatting issues using Prettier                                                                                                  |
+| `npm run prettier:fix`  | Runs prettier and fixes any code formatting issues                                                                                                     |
+| `npm run lint:ts`       | Lints TypeScript and Javacript files using ESLint                                                                                                      |
+| `npm run lint:ts:fix`   | Fixes any linting errors using ESLint                                                                                                                  |
+| `npm run typecheck`     | Typechecks the TypeScript files                                                                                                                        |
 
 ## Source plugin
 
@@ -124,7 +124,7 @@ In the case of CKS, the source data comes from the API provided by Clarity. The 
 
 ### Production API
 
-The [source plugin](#source-plugin) (see above) points to the local, fake API (on http://lcaolhost:7000) by default. Set the following environment variables to point to a different URL:
+The [source plugin](#source-plugin) (see above) points to the local, fake API (on http://localhost:7000) by default. Set the following environment variables to point to a different URL:
 
 - `API_BASE_URL`
 - `API_KEY`
