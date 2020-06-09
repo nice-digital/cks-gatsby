@@ -42,7 +42,12 @@ export const SEO: React.FC<SEOProps> = ({
 		<meta name="twitter:creator" content="@NICEcomms" />
 		<meta name="theme-color" content="#004650" />
 		{noIndex && <meta name="robots" content="noindex" />}
-
+		<link
+			rel="search"
+			type="application/opensearchdescription+xml"
+			href="/opensearch.xml"
+			title="CKS"
+		/>
 		<html lang="en-GB" />
 		<link rel="icon" href="/favicon.ico" />
 	</Helmet>
