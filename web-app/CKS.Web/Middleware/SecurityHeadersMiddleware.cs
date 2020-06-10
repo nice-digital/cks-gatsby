@@ -30,15 +30,7 @@ namespace CKS.Web.Middleware
 			context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
 			context.Response.Headers.Add("Referrer-Policy", "strict-origin-when-cross-origin");
 
-			// Ideally we'd use a restrictive policy by default, then allow what we need.
-			// E.g. default-src 'none' and add an allowlist of specific directives.
-			// BUT because of this bug:
-			// https://bugs.chromium.org/p/chromium/issues/detail?id=801561
-			// we have to default to 'self' instead and then blocklist other directives.
-			// ALSO, VWO and HotJar both require a custom CSP with unsafe inline/eval, see:
-			// https://help.vwo.com/hc/en-us/articles/360033753494-VWO-Session-Recording-FAQ-s
-			// https://help.hotjar.com/hc/en-us/articles/115011640307-Content-Security-Policies
-			context.Response.Headers.Add("Content-Security-Policy", "default-src 'self' 'unsafe-inline' 'unsafe-eval' nice.org.uk hotjar.com hotjar.io visualwebsiteoptimizer.com vwo.com; object-src 'none'; media-src 'none'; worker-src 'self' blob:");
+			// TODO: Add a content security policy, see CKS-342
 
 			// TODO: Add a feature policy header when it's no longer experimental
 			// see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
