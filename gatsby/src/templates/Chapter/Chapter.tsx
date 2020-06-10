@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
 import { PageHeader } from "@nice-digital/nds-page-header";
@@ -19,6 +19,8 @@ type ChapterPageProps = {
 	};
 } & PageProps;
 
+const stripHtml = (html: string): string => html.replace(/<[^>]*>?/gm, "");
+
 const stripHtmlComments = (html: string): string =>
 	html.replace(/<!--[\s\S]*?(?:-->)/g, "");
 
@@ -37,6 +39,13 @@ const ChapterPage: React.FC<ChapterPageProps> = ({
 	},
 }: ChapterPageProps) => {
 	const topicPath = `/topics/${topic.slug}/`;
+
+	const headerNoHtml = useMemo(() => stripHtml(htmlHeader), [htmlHeader]);
+
+	const htmlStringContentNoComments = useMemo(
+		() => stripHtmlComments(htmlStringContent),
+		[htmlStringContent]
+	);
 
 	return (
 		<Layout>
@@ -71,36 +80,37 @@ const ChapterPage: React.FC<ChapterPageProps> = ({
 				<Breadcrumb>{fullItemName}</Breadcrumb>
 			</Breadcrumbs>
 
-			<PageHeader heading={fullItemName} preheading={`${topic.topicName}: `} />
+			<PageHeader
+				heading={<span dangerouslySetInnerHTML={{ __html: headerNoHtml }} />}
+				preheading={`${topic.topicName}: `}
+			/>
 
 			<Grid gutter="loose">
 				<GridItem cols={12} sm={4} md={3}>
 					<TopicChaptersMenu chapterId={chapterId} topic={topic} />
 				</GridItem>
-				<GridItem cols={12} sm={8} md={6}>
-					{!parentChapter && stripHtmlComments(htmlStringContent) === "" ? (
-						<ul className="list--unstyled">
+				<GridItem cols={12} sm={8} md={9}>
+					{!parentChapter && htmlStringContentNoComments === "" ? (
+						<ul className="mt--0">
 							{subChapters.map(subChapter => (
 								<li key={subChapter.id}>
-									<Card
-										headingText={subChapter.fullItemName}
-										link={{
-											elementType: Link,
-											destination: `/topics/${topic.slug}/${slug}/${subChapter.slug}/`,
-										}}
-									></Card>
+									<Link
+										to={`/topics/${topic.slug}/${slug}/${subChapter.slug}/`}
+									>
+										{subChapter.fullItemName}
+									</Link>
 								</li>
 							))}
 						</ul>
 					) : (
 						<>
+							TODO: Recurse to get chapter body
 							<div
 								className={styles.body}
 								dangerouslySetInnerHTML={{
-									__html: htmlHeader + htmlStringContent,
+									__html: htmlStringContent,
 								}}
 							></div>
-
 							{parentChapter &&
 								subChapters.map(subChapter => (
 									<div key={subChapter.id}>
@@ -130,10 +140,6 @@ const ChapterPage: React.FC<ChapterPageProps> = ({
 								))}
 						</>
 					)}
-				</GridItem>
-				<GridItem cols={12} sm={12} md={3} elementType="aside">
-					<h2 className="mt--0">On this page</h2>
-					<p>TODO</p>
 				</GridItem>
 			</Grid>
 		</Layout>
