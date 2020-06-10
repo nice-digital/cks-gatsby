@@ -65,4 +65,4 @@ runTests
 error=$?
 echo "dylan $error"
 processTestOutput
-cleanupAtEnd error
+cleanupAtEnd $error
