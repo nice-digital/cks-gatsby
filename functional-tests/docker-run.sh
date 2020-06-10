@@ -20,15 +20,7 @@ function cleanupBeforeStart()
 function runTests()
 {
   # Wait for the web app to be up before running the tests
-  runTestsCmd='docker-compose run -T test-runner npm run wait-then-test'
-  searchForFailedTestsCmd='| grep "Test failed"'
-  cmd="$runTestsCmd $searchForFailedTestsCmd"
-  echo "$cmd"
-  if eval "$cmd"; then
-    return 1
-  else
-    return 0
-  fi
+  docker-compose run -T test-runner npm run wait-then-test
 }
 
 function processTestOutput()
@@ -63,10 +55,15 @@ function exitWithCode()
   fi
 }
 
+error=0
+trap 'catch' ERR
+catch() {
+  error=1
+}
+
 cleanupBeforeStart
 docker-compose up -d
 runTests
-error=$?
 processTestOutput
-cleanupAtEnd
+cleanup
 exitWithCode $error
