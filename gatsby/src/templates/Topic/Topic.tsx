@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql, PageRendererProps, Link } from "gatsby";
 
-import { Panel } from "@nice-digital/nds-panel";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { Grid, GridItem } from "@nice-digital/nds-grid";
 import { PageHeader } from "@nice-digital/nds-page-header";
@@ -22,22 +21,13 @@ type TopicPageProps = {
 const TopicPage: React.FC<TopicPageProps> = ({
 	data: { firstChapter, topic },
 }: TopicPageProps) => {
-	const {
-		slug: topicSlug,
-		topicName,
-		topicSummary,
-		chapters,
-		specialities,
-		lastRevised,
-		nextPlannedReviewByDateTime,
-		nextPlannedReviewByDisplay,
-	} = topic;
+	const { topicName, topicSummary } = topic;
 
 	return (
 		<Layout>
 			<SEO title={topicName + " | Topics A to Z"} description={topicSummary} />
 			<Breadcrumbs>
-				<Breadcrumb to="https://www.nice.org.uk/">Home</Breadcrumb>
+				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
 				<Breadcrumb to="/" elementType={Link}>
 					CKS
 				</Breadcrumb>
@@ -53,38 +43,11 @@ const TopicPage: React.FC<TopicPageProps> = ({
 				<GridItem cols={12} sm={4} md={3}>
 					<TopicChaptersMenu topic={topic} chapterId={firstChapter.id} />
 				</GridItem>
-				<GridItem cols={12} sm={8} md={6}>
+				<GridItem cols={12} sm={8} md={9}>
 					<h2 className="mt--0">{firstChapter.fullItemName}</h2>
 					<div
 						dangerouslySetInnerHTML={{ __html: firstChapter.htmlStringContent }}
 					/>
-				</GridItem>
-				<GridItem cols={12} sm={12} md={3} elementType="aside">
-					{specialities.length > 0 && (
-						<Panel>
-							<h2 className="h4">Related specialities</h2>
-							<ul className="list--unstyled">
-								{specialities.map(({ id, slug, name }) => (
-									<li key={id}>
-										<Link to={`/specialities/${slug}/`}>{name}</Link>
-									</li>
-								))}
-							</ul>
-						</Panel>
-					)}
-					<Panel>
-						<h2 className="h4">Review schedule</h2>
-						<p>{lastRevised}.</p>
-						<p>
-							Next planned review date is{" "}
-							<strong>
-								<time dateTime={nextPlannedReviewByDateTime}>
-									{nextPlannedReviewByDisplay}
-								</time>
-								.
-							</strong>
-						</p>
-					</Panel>
 				</GridItem>
 			</Grid>
 		</Layout>
