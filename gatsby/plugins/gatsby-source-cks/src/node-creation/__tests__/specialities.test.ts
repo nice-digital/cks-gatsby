@@ -19,7 +19,7 @@ describe("createSpecialityNodes", () => {
 	const injuries = "Injuries",
 		musculoskeletal = "Musculoskeletal",
 		infections = "Infections and infestations",
-		womensHealth = "Women's health (test)";
+		womensHealth = "Women's health, (test)";
 
 	const topics = [
 		{
@@ -71,7 +71,7 @@ describe("createSpecialityNodes", () => {
 		);
 	});
 
-	it("should remove apostrophes and brackets from slug", () => {
+	it("should remove apostrophes, commas and brackets from slug", () => {
 		createSpecialityNodes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[3][0]).toHaveProperty(
 			"slug",

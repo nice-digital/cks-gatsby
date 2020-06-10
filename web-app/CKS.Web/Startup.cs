@@ -1,18 +1,18 @@
 using System;
-using CKS.Web.Middleware;
+using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
-using Microsoft.AspNetCore.HttpOverrides;
-using System.IO;
+using Microsoft.Net.Http.Headers;
 using Microsoft.AspNetCore.Rewrite;
-using Microsoft.Extensions.FileProviders;
 using CKS.Web.StaticFiles;
+using CKS.Web.Middleware;
 
 namespace CKS.Web
 {
@@ -39,14 +39,6 @@ namespace CKS.Web
 			}
 
 			services.AddControllers();
-
-			services.AddHsts(options =>
-				{
-					// See https://hstspreload.org/
-					options.Preload = true;
-					options.IncludeSubDomains = true;
-					options.MaxAge = TimeSpan.FromDays(365 * 2);
-				});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,15 +48,8 @@ namespace CKS.Web
 			{
 				app.UseDeveloperExceptionPage();
 			}
-			else
-			{
-				// CKS sits behind reverse proxy in production
-				app.UseForwardedHeaders(new ForwardedHeadersOptions
-				{
-					ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-				});
-				app.UseHsts();
-			}
+
+			app.UseMiddleware<SecurityHeadersMiddleware>();
 
 			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
 				app.UseRewriter(
@@ -72,13 +57,36 @@ namespace CKS.Web
 						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
 					);
 
-			app.UseMiddleware<SecurityHeadersMiddleware>();
+			app.UseStatusCodePagesWithReExecute("/{0}.html");
 
 			app.UseDefaultFiles();
-			app.UseStaticFiles();
+			app.UseStaticFiles(new StaticFileOptions
+			{
+				//Files in /static and files with gatsby generated file names should be
+				//cached forever as documented in https://www.gatsbyjs.org/docs/caching/
+				//Files with persistant names across builds shouldnt be cached forever eg.json, html, xml
+				OnPrepareResponse = ctx =>
+				{
+					var fileName = ctx.File.Name;
+					var headers = ctx.Context.Response.Headers;
+
+					if (ctx.Context.Request.Path == "/404.html")
+						ctx.Context.Response.StatusCode = 404;
+
+					if (fileName.EndsWith(".css") ||
+						ctx.Context.Request.Path.Value.Contains("/static/") ||
+						(fileName.EndsWith(".js") && fileName != "sw.js"))
+					{
+						headers[HeaderNames.CacheControl] = "public,immutable,max-age=31536000";
+					}
+					else
+						headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=0";
+				},
+
+				ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
+			});
 
 			app.UseRouting();
-
 			app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
@@ -105,5 +113,4 @@ namespace CKS.Web
 			Configure(app, env);
 		}
 	}
-
 }
