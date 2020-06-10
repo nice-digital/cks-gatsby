@@ -20,10 +20,11 @@ function cleanupBeforeStart()
 function runTests()
 {
   # Wait for the web app to be up before running the tests
-  docker-compose run -T test-runner npm run wait-then-test
-  errormessage=$?
-  echo $errorCode
-  if [ $errorCode -eq 1 ]
+  runTestsCmd = 'docker-compose run -T test-runner npm run wait-then-test'
+  searchForFailedTestsCmd = '| grep "Test failed"'
+  cmd = "$runTestsCmd $searchForFailedTestsCmd"
+  echo "$cmd"
+  if eval "$cmd"; then
   then
     return 1
   else
