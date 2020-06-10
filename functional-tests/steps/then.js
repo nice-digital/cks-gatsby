@@ -24,6 +24,14 @@ Then(/^I see "([^"]*)" in the autocomplete suggestions$/, (text) => {
 	checkContainsText("element", ".autocomplete__menu", null, text);
 });
 
+Then(
+	/^I should see a meta tag named "([^"]*)" with the content "([^"]*)"$/,
+	(name, content) => {
+		const selector = `meta[name='${name}']`;
+		expect(browser.element(selector).getAttribute("content")).to.equal(content);
+	}
+);
+
 Then(/^I expect to see a list of ([^"]*)$/, (selectorName) => {
 	expect(
 		browser.elements(getSelector(selectorName)).value

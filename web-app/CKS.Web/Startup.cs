@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -13,7 +10,6 @@ using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
 using NICE.Search.Common.Enums;
 using Microsoft.Net.Http.Headers;
-using System.IO;
 using Microsoft.AspNetCore.Rewrite;
 using CKS.Web.StaticFiles;
 
@@ -58,9 +54,11 @@ namespace CKS.Web
 						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
 					);
 
+			app.UseStatusCodePagesWithReExecute("/{0}.html");
+
 			app.UseDefaultFiles();
 			app.UseStaticFiles(new StaticFileOptions
-			{				
+			{
 				//Files in /static and files with gatsby generated file names should be
 				//cached forever as documented in https://www.gatsbyjs.org/docs/caching/
 				//Files with persistant names across builds shouldnt be cached forever eg.json, html, xml
@@ -69,6 +67,8 @@ namespace CKS.Web
 					var fileName = ctx.File.Name;
 					var headers = ctx.Context.Response.Headers;
 
+					if (ctx.Context.Request.Path == "/404.html")
+						ctx.Context.Response.StatusCode = 404;
 
 					if (fileName.EndsWith(".css") ||
 						ctx.Context.Request.Path.Value.Contains("/static/") ||
