@@ -37,13 +37,16 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 				const chapterPath = `${topicPath}${menuChapter.slug}/`;
 
 				return (
-					<StackedNavLink
-						key={menuChapter.id}
-						elementType={Link}
-						destination={chapterPath}
-						isCurrent={menuChapter.id === chapterId}
-					>
-						{menuChapter.fullItemName}
+					<>
+						<StackedNavLink
+							key={menuChapter.id}
+							elementType={Link}
+							destination={chapterPath}
+							isCurrent={menuChapter.id === chapterId}
+						>
+							{menuChapter.fullItemName}
+						</StackedNavLink>
+
 						{shouldShowSubNav &&
 							menuChapter.subChapters.map(subChapter => (
 								<StackedNavLink
@@ -52,10 +55,10 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 									destination={`${chapterPath}${subChapter.slug}/`}
 									isCurrent={subChapter.id === chapterId}
 								>
-									{subChapter.fullItemName}
+									-- {subChapter.fullItemName}
 								</StackedNavLink>
 							))}
-					</StackedNavLink>
+					</>
 				);
 			})}
 		</StackedNav>
