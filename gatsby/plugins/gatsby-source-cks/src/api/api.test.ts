@@ -137,38 +137,13 @@ describe("api", () => {
 	});
 
 	describe("getChangesSince", () => {
-		it("should get changes since start of previous month when no provided date", async () => {
-			mockedNodeFetch.mockResolvedValueOnce(new Response(JSON.stringify({})));
-			await getChangesSince();
-
-			const startOfPreviousMonth = moment()
-				.utc()
-				.subtract(1, "months")
-				.startOf("month")
-				.toDate();
-
-			expect(mockedNodeFetch).toHaveBeenCalledWith(
-				`${apiBaseUrl}/changes-since/${startOfPreviousMonth.toISOString()}`,
-				{
-					headers: {
-						Accept: "application/json",
-						"ocp-apim-subscription-key": apiKey,
-					},
-				}
-			);
-			// Asserting that the time is 00 checks we're using UTC:
-			expect(mockedNodeFetch.mock.calls[0][0].toString()).toMatch(
-				"-01T00:00:00.000Z"
-			);
-		});
-
 		it("should return data from JSON response", async () => {
 			const responseJson = [{ a: 1 }];
 			mockedNodeFetch.mockResolvedValueOnce(
 				new Response(JSON.stringify(responseJson))
 			);
 
-			expect(await getChangesSince()).toStrictEqual(responseJson);
+			expect(await getChangesSince(new Date())).toStrictEqual(responseJson);
 		});
 
 		it("should request changes since given date", async () => {
