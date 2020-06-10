@@ -49,8 +49,6 @@ namespace CKS.Web
 				app.UseDeveloperExceptionPage();
 			}
 
-			app.UseMiddleware<SecurityHeadersMiddleware>();
-
 			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
 				app.UseRewriter(
 					new RewriteOptions()
@@ -60,31 +58,7 @@ namespace CKS.Web
 			app.UseStatusCodePagesWithReExecute("/{0}.html");
 
 			app.UseDefaultFiles();
-			app.UseStaticFiles(new StaticFileOptions
-			{
-				//Files in /static and files with gatsby generated file names should be
-				//cached forever as documented in https://www.gatsbyjs.org/docs/caching/
-				//Files with persistant names across builds shouldnt be cached forever eg.json, html, xml
-				OnPrepareResponse = ctx =>
-				{
-					var fileName = ctx.File.Name;
-					var headers = ctx.Context.Response.Headers;
-
-					if (ctx.Context.Request.Path == "/404.html")
-						ctx.Context.Response.StatusCode = 404;
-
-					if (fileName.EndsWith(".css") ||
-						ctx.Context.Request.Path.Value.Contains("/static/") ||
-						(fileName.EndsWith(".js") && fileName != "sw.js"))
-					{
-						headers[HeaderNames.CacheControl] = "public,immutable,max-age=31536000";
-					}
-					else
-						headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=0";
-				},
-
-				ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
-			});
+			app.UseStaticFiles(new GatsbyStaticFileOptions { });
 
 			app.UseRouting();
 			app.UseAuthorization();
@@ -104,10 +78,9 @@ namespace CKS.Web
 			{
 				FileProvider = localGatsbyFileProvider
 			});
-			app.UseStaticFiles(new StaticFileOptions()
+			app.UseStaticFiles(new GatsbyStaticFileOptions()
 			{
-				FileProvider = localGatsbyFileProvider,
-				ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
+				FileProvider = localGatsbyFileProvider
 			});
 
 			Configure(app, env);
