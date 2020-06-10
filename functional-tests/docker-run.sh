@@ -20,12 +20,11 @@ function cleanupBeforeStart()
 function runTests()
 {
   # Wait for the web app to be up before running the tests
-  runTestsCmd = 'docker-compose run -T test-runner npm run wait-then-test'
-  searchForFailedTestsCmd = '| grep "Test failed"'
-  cmd = "$runTestsCmd $searchForFailedTestsCmd"
+  runTestsCmd='docker-compose run -T test-runner npm run wait-then-test'
+  searchForFailedTestsCmd='| grep "Test failed"'
+  cmd="$runTestsCmd $searchForFailedTestsCmd"
   echo "$cmd"
   if eval "$cmd"; then
-  then
     return 1
   else
     return 0
@@ -41,18 +40,22 @@ function processTestOutput()
   mkdir -p docker-output
   docker cp test-runner:/tests/screenshots ./docker-output
   docker cp test-runner:/tests/allure-report ./docker-output
+
   #docker cp cks-web-app:/app/logs ./docker-output/cks-web-app
   docker-compose logs --no-color > ./docker-output/logs.txt
 }
 
 
 
-function cleanupAtEnd()
+function cleanup()
 {
-  # Clean up
   docker-compose down --remove-orphans --volumes
-  echo "$1"
-  if [ $1 -gt 0 ]
+}
+
+function exitWithCode()
+{
+  echo "exit code is: $1"
+  if [ "$1" -gt 0 ]
   then
     exit 1
   else
@@ -64,6 +67,6 @@ cleanupBeforeStart
 docker-compose up -d
 runTests
 error=$?
-echo "dylan $error"
 processTestOutput
-cleanupAtEnd $error
+cleanupAtEnd
+exitWithCode $error
