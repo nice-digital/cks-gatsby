@@ -2,16 +2,7 @@
 
 > Custom source plugin for Gatsby to retrieve data from the CKS API and turn it into Gatsby nodes
 
-- [Gatsby source plugin for CKS](#gatsby-source-plugin-for-cks)
-	- [:rocket: Quick setup](#rocket-quick-setup)
-	- [What is a source plugin?](#what-is-a-source-plugin)
-	- [CKS source plugin](#cks-source-plugin)
-		- [Plugin usage](#plugin-usage)
-		- [Configuration](#configuration)
-		- [Data fetching](#data-fetching)
-			- [Authentication](#authentication)
-		- [GraphQL node types](#graphql-node-types)
-		- [GraphQL queries](#graphql-queries)
+- [Gatsby source plugin for CKS](#gatsby-source-plugin-for-cks) - [:rocket: Quick setup](#rocket-quick-setup) - [What is a source plugin?](#what-is-a-source-plugin) - [CKS source plugin](#cks-source-plugin) - [Plugin usage](#plugin-usage) - [Configuration](#configuration) - [Data fetching](#data-fetching) - [Authentication](#authentication) - [GraphQL node types](#graphql-node-types) - [GraphQL queries](#graphql-queries)
 
 ## :rocket: Quick setup
 
@@ -57,7 +48,7 @@ The plugin gets its dependencies from the parent gatsby folder. This because it 
 
 ### Configuration
 
-The plugin has the following configuration options
+The plugin has the following configuration options. These should be passed in via gatsby-config.js.
 
 - `apiKey` {String} e.g. "abc123"
 - `apiBaseUrl` {String} e.g. "http://localhost:7000/api"
@@ -73,12 +64,14 @@ module.exports = {
 +			options: {
 +				apiKey: process.env.API_KEY || "abc123",
 +				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000/api",
-+				changesSinceDate: new Date(),
++				changesSinceDate: new Date(2020, 0, 12),
 +			},
 +		},
 	],
 };
 ```
+
+> Note: it's the responsibility of the parent Gatsby site to pass in the correct values. See [configuration](../../README.md#configuration) in the parent readme.
 
 ### Data fetching
 

@@ -115,15 +115,8 @@ export const getFullTopicCached = async (
 
 /**
  * Gets changes to topics from the API since the given date.
- * Leave date empty to default to the first day of the previous month.
  *
- * @returns A promise that resolves to a list of topic updates
+ * @returns A promise that resolves to a list of topic changes
  */
-export const getChangesSince = (
-	date: Date = moment()
-		.utc()
-		.subtract(1, "months")
-		.startOf("month")
-		.toDate()
-): Promise<ApiTopicChangeResponse> =>
+export const getChangesSince = (date: Date): Promise<ApiTopicChangeResponse> =>
 	fetchJson("/changes-since/" + date.toISOString());

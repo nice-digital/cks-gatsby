@@ -41,4 +41,28 @@ describe("SEO", () => {
 				?.getAttribute("content")
 		).toEqual("Custom description");
 	});
+
+	it("should render robots when noIndex is set to true", async () => {
+		render(<SEO noIndex={true} />);
+		await waitForDomChange();
+
+		expect(document.querySelector("meta[name='robots']")).toHaveAttribute(
+			"content",
+			"noindex"
+		);
+	});
+
+	it("should not render robots when noIndex is set to false", async () => {
+		render(<SEO noIndex={false} />);
+		await waitForDomChange();
+
+		expect(document.querySelector("meta[name='robots']")).toBeNull();
+	});
+
+	it("should not render robots when noIndex is not set", async () => {
+		render(<SEO />);
+		await waitForDomChange();
+
+		expect(document.querySelector("meta[name='robots']")).toBeNull();
+	});
 });
