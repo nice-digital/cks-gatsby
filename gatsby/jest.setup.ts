@@ -7,6 +7,12 @@ jest.mock("./src/components/Header/Header", () => {
 		Header: (): null => null,
 	};
 });
+// No need to have the footer rendered for each component
+jest.mock("./src/components/Footer/Footer", () => {
+	return {
+		Footer: (): null => null,
+	};
+});
 
 window.dataLayer = [];
 

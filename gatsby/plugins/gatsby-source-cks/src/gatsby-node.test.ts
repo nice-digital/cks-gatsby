@@ -49,12 +49,14 @@ describe("gatsby-node", () => {
 					end: (): void => void 0,
 					setStatus: (): void => void 0,
 				}),
+				info: (): void => void 0,
 			},
 		} as unknown) as SourceNodesArgs;
 
 		const config = {
 			apiBaseUrl: "t",
 			apiKey: "b",
+			changesSinceDate: new Date(2020, 0, 12),
 		};
 
 		beforeEach(() => {
@@ -65,7 +67,10 @@ describe("gatsby-node", () => {
 			await sourceNodes(sourceNodesArgs, config);
 
 			expect(downloadAllData).toHaveBeenCalledTimes(1);
-			expect(downloadAllData).toHaveBeenCalledWith(sourceNodesArgs);
+			expect(downloadAllData).toHaveBeenCalledWith(
+				sourceNodesArgs,
+				config.changesSinceDate
+			);
 		});
 
 		it("should create all 4 types of nodes", async () => {

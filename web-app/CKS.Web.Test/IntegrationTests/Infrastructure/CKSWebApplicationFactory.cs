@@ -2,6 +2,7 @@ using CKS.Web.Test.IntegrationTests.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Newtonsoft.Json;
@@ -10,7 +11,6 @@ using NICE.Search.Common.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using Xunit.Abstractions;
 
 namespace CKS.Web.Test.IntegrationTests.Infrastructure
@@ -19,6 +19,7 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 	{
 		private readonly ITestOutputHelper _output;
 		private readonly IList<Action<IServiceCollection>> serviceCollectionsActions = new List<Action<IServiceCollection>>();
+		private string webRootPath = null;
 
 		public CKSWebApplicationFactory(ITestOutputHelper output)
 		{
@@ -30,6 +31,16 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 		{
 			_output.WriteLine("CKSWebApplicationFactory.ConfigureWebHost");
 
+			builder.UseEnvironment("Testing");
+
+			var projectDir = Directory.GetCurrentDirectory();
+			var configPath = Path.Combine(projectDir, "appsettings.test.json");
+
+			builder.ConfigureAppConfiguration((context, conf) =>
+			{
+				conf.AddJsonFile(configPath);
+			});
+
 			builder.ConfigureTestServices(services =>
 			{
 				foreach (Action<IServiceCollection> action in serviceCollectionsActions)
@@ -40,12 +51,19 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 				var serviceProvider = services.BuildServiceProvider();
 			});
 
-			base.ConfigureWebHost(builder);
+			if(webRootPath != null)
+				builder.UseWebRoot(webRootPath);
 		}
 
 		public CKSWebApplicationFactory WithImplementation<TService>(TService implementation)
 		{
 			serviceCollectionsActions.Add(services => services.ReplaceService(implementation));
+			return this;
+		}
+
+		public CKSWebApplicationFactory UseWebRoot(string path)
+		{
+			webRootPath = Path.Join(Directory.GetCurrentDirectory(), path);
 			return this;
 		}
 
