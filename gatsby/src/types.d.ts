@@ -32,6 +32,13 @@ export interface Speciality extends PartialSpeciality {
 	topics: PartialTopic[];
 }
 
+export interface WhatsNewChange {
+	id: string;
+	title: string;
+	text: string;
+	topic: PartialTopic;
+}
+
 interface BasePartialChapter {
 	/** The Gatsby id and NOT the API itemId field */
 	id: string;
