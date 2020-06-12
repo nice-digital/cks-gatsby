@@ -36,5 +36,11 @@ module.exports = {
 				"@typescript-eslint/no-var-requires": "off",
 			},
 		},
+		{
+			files: ["**/*.tsx"],
+			rules: {
+				"react/prop-types": "off",
+			},
+		},
 	],
 };

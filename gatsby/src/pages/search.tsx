@@ -16,12 +16,9 @@ interface SearchResults {
 	lastResult: number;
 	finalSearchText: string;
 	finalSearchTextNoStopWords: string;
-
-	originalSearch:
-		| {
-				searchText: string;
-		  }
-		| string;
+	originalSearch: {
+		searchText: string;
+	};
 	pagerLinks: {
 		previous: {
 			fullUrl: string;
@@ -37,19 +34,19 @@ interface SearchResults {
 			isCurrent: boolean;
 		}[];
 	};
-	documents: {
-		id: string;
-		metaDescription: string;
-		contentId: string;
-		pathAndQuery: string;
-		sourceUrl: string;
-		teaser: string;
-		title: string;
-		url: string;
-	}[];
+	documents: Document[];
 }
 
-const searchPath = "/api/search";
+type Document = {
+	id: string;
+	metaDescription: string;
+	contentId: string;
+	pathAndQuery: string;
+	sourceUrl: string;
+	teaser: string;
+	title: string;
+	url: string;
+};
 
 const SearchPage: React.FC<SearchPageProps> = ({
 	location,
@@ -58,91 +55,110 @@ const SearchPage: React.FC<SearchPageProps> = ({
 
 	useEffect(() => {
 		setData(null);
-		fetch(searchPath + window.location.search)
+		fetch("/api/search" + window.location.search)
 			.then(data => data.json())
 			.then(results => setData(results as SearchResults));
 	}, [location.search]);
-
-	const ResultSummary: React.FC = () => {
-		const { resultCount, finalSearchText, originalSearch } = data;
-
-		if (resultCount === 0) {
-			return <NoResults searchText={finalSearchText} />;
-		}
-
-		return (
-			<>
-				<p>
-					{originalSearch?.searchText && (
-						<>
-							Your search for <b>{originalSearch.searchText}</b> returned no
-							results
-							<br />
-						</>
-					)}
-					{resultCount} {resultCount === 1 ? "result" : "results"}
-					{finalSearchText && (
-						<>
-							{" "}
-							for <b>{finalSearchText}</b>
-						</>
-					)}
-				</p>
-			</>
-		);
-	};
-
-	const Results: React.FC = () => (
-		<ul className="list--unstyled">
-			{data?.documents.map(({ id, title, pathAndQuery, teaser }) => (
-				<li key={id}>
-					<Card
-						summary={parser(teaser)}
-						headingText={parser(title)}
-						link={{ destination: `/topics/${pathAndQuery}`, elementType: Link }}
-					/>
-				</li>
-			))}
-		</ul>
-	);
-
-	const Pagination: React.FC = () => {
-		const { next, previous } = data.pagerLinks;
-		const pages = data.pagerLinks.pages;
-		const previousPageLink = previous?.fullUrl
-			? { destination: "/" + previous.fullUrl, elementType: Link }
-			: undefined;
-		const nextPageLink = next?.fullUrl
-			? { destination: "/" + next.fullUrl, elementType: Link }
-			: undefined;
-		const props = {
-			currentPage: 1,
-			totalPages: pages.length,
-			previousPageLink,
-			nextPageLink,
-		};
-		return <SimplePagination {...props} />;
-	};
 
 	return (
 		<Layout>
 			<SEO title="Search results" noIndex={true} />
 			<h1>Search</h1>
-			{!data && <div>Loading</div>}
+			{data && !data && <div>Loading</div>}
 			{data && data.failed && <div>Failed to load results</div>}
-			{data && !data.failed && (
-				<>
-					<ResultSummary />
-					<Results />
-					{data.pagerLinks?.pages.length > 1 && <Pagination />}
-				</>
-			)}
+			{data && !data.failed && <Results {...data} />}
 		</Layout>
 	);
 };
 
+const Results: React.FC<SearchResults> = ({
+	resultCount,
+	finalSearchText,
+	originalSearch,
+	documents,
+	pagerLinks: { next, previous },
+}) => {
+	const nextPageLink = next?.fullUrl
+		? { destination: "/" + next?.fullUrl, elementType: Link }
+		: undefined;
+	const previousPageLink = previous?.fullUrl
+		? { destination: "/" + previous?.fullUrl, elementType: Link }
+		: undefined;
+	return (
+		<>
+			<ResultSummary
+				resultCount={resultCount}
+				finalSearchText={finalSearchText}
+				originalSearch={originalSearch?.searchText}
+			/>
+
+			{documents.length > 0 && <ResultsList documents={documents} />}
+			<SimplePagination
+				currentPage={1}
+				totalPages={999}
+				nextPageLink={nextPageLink}
+				previousPageLink={previousPageLink}
+			/>
+		</>
+	);
+};
+
+interface ResultsSummary {
+	resultCount: number;
+	finalSearchText: string;
+	originalSearch: string;
+}
+
+const ResultSummary: React.FC<ResultsSummary> = ({
+	resultCount,
+	finalSearchText,
+	originalSearch,
+}) => {
+	if (resultCount === 0) {
+		return <NoResults searchText={finalSearchText} />;
+	}
+
+	return (
+		<>
+			<p>
+				{originalSearch && (
+					<>
+						Your search for <b>{originalSearch}</b> returned no results
+						<br />
+					</>
+				)}
+				{resultCount} {resultCount === 1 ? "result" : "results"}
+				{finalSearchText && (
+					<>
+						{" "}
+						for <b>{finalSearchText}</b>
+					</>
+				)}
+			</p>
+		</>
+	);
+};
+
+interface ResultsList {
+	documents: Document[];
+}
+
+const ResultsList: React.FC<ResultsList> = ({ documents }) => (
+	<ul className="list--unstyled">
+		{documents?.map(({ id, title, pathAndQuery, teaser }) => (
+			<li key={id}>
+				<Card
+					summary={parser(teaser)}
+					headingText={parser(title)}
+					link={{ destination: `/topics/${pathAndQuery}`, elementType: Link }}
+				/>
+			</li>
+		))}
+	</ul>
+);
+
 interface NoResultsProps {
-	searchText: SearchResults["finalSearchText"];
+	searchText: string;
 }
 
 const NoResults: React.FC<NoResultsProps> = ({
