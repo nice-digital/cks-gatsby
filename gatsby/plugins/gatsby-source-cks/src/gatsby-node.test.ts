@@ -1,11 +1,20 @@
-import { createSchemaCustomization, sourceNodes } from "./gatsby-node";
-import { CreateSchemaCustomizationArgs, SourceNodesArgs } from "gatsby";
+import {
+	createSchemaCustomization,
+	sourceNodes,
+	createResolvers,
+} from "./gatsby-node";
+import {
+	CreateSchemaCustomizationArgs,
+	SourceNodesArgs,
+	CreateResolversArgs,
+} from "gatsby";
 
 import { downloadAllData } from "./downloader/downloader";
 import { createTopicNodes } from "./node-creation/topics";
 import { createSpecialityNodes } from "./node-creation/specialities";
 import { createChangeNodes } from "./node-creation/changes";
 import { createChapterNotes } from "./node-creation/chapters";
+import { replaceLinksInHtml } from "./content-processor";
 
 jest
 	.mock("./downloader/downloader", () => ({
@@ -22,6 +31,9 @@ jest
 	}))
 	.mock("./node-creation/chapters", () => ({
 		createChapterNotes: jest.fn(),
+	}))
+	.mock("./content-processor", () => ({
+		replaceLinksInHtml: jest.fn(),
 	}));
 
 describe("gatsby-node", () => {
@@ -100,6 +112,43 @@ describe("gatsby-node", () => {
 			expect(createChapterNotes).toHaveBeenCalledWith(
 				[{ a: 1 }],
 				sourceNodesArgs
+			);
+		});
+	});
+
+	describe("createResolvers", () => {
+		it("should create a resolver for Chapter htmlStringContent property", () => {
+			const createResolversFn = jest.fn();
+
+			createResolvers({
+				createResolvers: createResolversFn as unknown,
+			} as CreateResolversArgs);
+
+			expect(createResolversFn).toHaveBeenCalledTimes(1);
+			expect(createResolversFn).toHaveBeenCalledWith({
+				CksChapter: { htmlStringContent: { resolve: expect.any(Function) } },
+			});
+		});
+
+		it("should create resolver that calls replaceLinksInHtml with chapter and node model", async () => {
+			const createResolversFn = jest.fn();
+
+			createResolvers({
+				createResolvers: createResolversFn as unknown,
+			} as CreateResolversArgs);
+
+			const chapter = { slug: "test" };
+			const resolveContext = { nodeModel: { runQuery: jest.fn() } };
+
+			await createResolversFn.mock.calls[0][0].CksChapter.htmlStringContent.resolve(
+				chapter,
+				{},
+				resolveContext
+			);
+
+			expect(replaceLinksInHtml).toHaveBeenCalledWith(
+				chapter,
+				resolveContext.nodeModel
 			);
 		});
 	});
