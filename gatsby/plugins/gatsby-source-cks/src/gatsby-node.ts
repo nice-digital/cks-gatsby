@@ -1,8 +1,4 @@
-import {
-	SourceNodesArgs,
-	CreateSchemaCustomizationArgs,
-	CreateResolversArgs,
-} from "gatsby";
+import { SourceNodesArgs, CreateSchemaCustomizationArgs } from "gatsby";
 
 import { schema } from "./schema";
 import { configure } from "./api/api";
@@ -10,9 +6,7 @@ import { downloadAllData } from "./downloader/downloader";
 import { createTopicNodes } from "./node-creation/topics";
 import { createSpecialityNodes } from "./node-creation/specialities";
 import { createChangeNodes } from "./node-creation/changes";
-import { createChapterNotes, ChapterNode } from "./node-creation/chapters";
-import { replaceLinksInHtml } from "./content-processor";
-import { ResolveContext } from "./content-processor/types";
+import { createChapterNotes } from "./node-creation/chapters";
 
 interface ConfigOptions {
 	/** The API base URL */
@@ -69,24 +63,4 @@ export const sourceNodes = async (
 	end();
 
 	return;
-};
-
-export const createResolvers = ({
-	createResolvers,
-}: CreateResolversArgs): void => {
-	createResolvers({
-		CksChapter: {
-			// Rewrite HTML within the body field.
-			// We do this as a resolver (rather than when we create the nodes) because this means all the nodes are available for querying.
-			htmlStringContent: {
-				async resolve(
-					chapter: ChapterNode,
-					_args: unknown,
-					resolveContext: ResolveContext
-				): Promise<string> {
-					return replaceLinksInHtml(chapter, resolveContext.nodeModel);
-				},
-			},
-		},
-	});
 };
