@@ -41,7 +41,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 
 			<Grid gutter="loose">
 				<GridItem cols={12} sm={4} md={3}>
-					<TopicChaptersMenu topic={topic} chapterId={firstChapter.id} />
+					<TopicChaptersMenu topic={topic} currentChapterId={firstChapter.id} />
 				</GridItem>
 				<GridItem cols={12} sm={8} md={9}>
 					<h2 className="mt--0">{firstChapter.fullItemName}</h2>

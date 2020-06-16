@@ -50,6 +50,8 @@ const createCksPages = async ({
 					slug
 				}
 			}
+			# Only create pages for the top 2 levels of chapters
+			# Deeper chapters are sections within the page (so aren't separate pages)
 			allChapters: allCksChapter(filter: { depth: { lte: 2 } }) {
 				nodes {
 					id
@@ -86,14 +88,16 @@ const createCksPages = async ({
 	});
 
 	pageCreationQuery.data?.allChapters.nodes
-		// Don't create the 'summary' chapter - this is the topic
+		// Don't create the 'summary' chapter - this is the topic itself
 		.filter(c => !(c.depth === 1 && c.pos === 0))
 		.forEach(({ id, slug, parentChapter, topic }) => {
-			let chapterPath = `/topics/${topic.slug}`;
+			let chapterPath = `/topics/${topic.slug}/`;
 
-			if (parentChapter) chapterPath += `/${parentChapter.slug}`;
+			if (parentChapter) chapterPath += `${parentChapter.slug}/`;
 
-			createCksPage(id, `${chapterPath}/${slug}/`, "Chapter");
+			chapterPath += `${slug}/`;
+
+			createCksPage(id, chapterPath, "Chapter");
 		});
 
 	return;

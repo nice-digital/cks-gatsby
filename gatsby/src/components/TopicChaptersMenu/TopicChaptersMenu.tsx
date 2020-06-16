@@ -7,16 +7,16 @@ import { PartialTopicWithChapters } from "src/types";
 
 type TopicChaptersMenuProps = {
 	topic: PartialTopicWithChapters;
-	chapterId: string;
+	currentChapterId: string;
 };
 
 export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 	topic,
-	chapterId,
+	currentChapterId,
 }: TopicChaptersMenuProps) => {
 	const topicPath = `/topics/${topic.slug}/`;
 
-	// Remove the summary chapter as this topic root
+	// Remove the summary chapter as this is the topic root
 	const menuChapters = topic.chapters.slice(1);
 
 	return (
@@ -26,13 +26,13 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 			link={{
 				destination: topicPath,
 				elementType: Link,
-				isCurrent: topic.chapters[0].id === chapterId,
+				isCurrent: topic.chapters[0].id === currentChapterId,
 			}}
 		>
 			{menuChapters.map(menuChapter => {
 				const shouldShowSubNav =
-					menuChapter.id === chapterId ||
-					menuChapter.subChapters.some(c => c.id === chapterId);
+					menuChapter.id === currentChapterId ||
+					menuChapter.subChapters.some(c => c.id === currentChapterId);
 
 				const chapterPath = `${topicPath}${menuChapter.slug}/`;
 
@@ -42,7 +42,7 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 							key={menuChapter.id}
 							elementType={Link}
 							destination={chapterPath}
-							isCurrent={menuChapter.id === chapterId}
+							isCurrent={menuChapter.id === currentChapterId}
 						>
 							{menuChapter.fullItemName}
 						</StackedNavLink>
@@ -53,7 +53,7 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 									key={subChapter.id}
 									elementType={Link}
 									destination={`${chapterPath}${subChapter.slug}/`}
-									isCurrent={subChapter.id === chapterId}
+									isCurrent={subChapter.id === currentChapterId}
 								>
 									-- {subChapter.fullItemName}
 								</StackedNavLink>
