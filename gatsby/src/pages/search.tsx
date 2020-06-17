@@ -50,6 +50,16 @@ type Document = {
 	url: string;
 };
 
+function titleString(text: string, page: number): string {
+	return text
+		? page > 1
+			? `Page ${page} | ${text} | `
+			: `${text} | `
+		: page > 1
+		? `Page ${page} | `
+		: "";
+}
+
 const SearchPage: React.FC<SearchPageProps> = ({
 	location,
 }: SearchPageProps) => {
@@ -66,7 +76,6 @@ const SearchPage: React.FC<SearchPageProps> = ({
 
 	return (
 		<Layout>
-			<SEO title="Search results" noIndex={true} />
 			<h1>Search</h1>
 			{!error && !data && <div>Loading</div>}
 			{data && data.failed && <div>Failed to load results</div>}
@@ -95,6 +104,8 @@ const Results: React.FC<SearchResults> = ({
 	pageSize,
 	pagerLinks: { next, previous },
 }) => {
+	const currentPage = Math.ceil(firstResult / pageSize);
+	const totalPages = Math.ceil(resultCount / pageSize);
 	const paginationProps = {
 		nextPageLink: next?.fullUrl
 			? { destination: "/" + next?.fullUrl, elementType: Link }
@@ -102,12 +113,16 @@ const Results: React.FC<SearchResults> = ({
 		previousPageLink: previous?.fullUrl
 			? { destination: "/" + previous?.fullUrl, elementType: Link }
 			: undefined,
-		currentPage: Math.ceil(firstResult / pageSize),
-		totalPages: Math.ceil(resultCount / pageSize),
+		currentPage,
+		totalPages,
 	};
 
 	return (
 		<>
+			<SEO
+				title={`${titleString(finalSearchText, currentPage)}Search results`}
+				noIndex={true}
+			/>
 			<ResultSummary
 				resultCount={resultCount}
 				finalSearchText={finalSearchText}
