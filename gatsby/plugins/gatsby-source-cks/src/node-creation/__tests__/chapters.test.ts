@@ -67,7 +67,7 @@ describe("createChangeNodes", () => {
 	it("should store slugified lowercased name in slug field", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "chapter-1");
-		expect(createNode.mock.calls[1][0]).toHaveProperty("slug", "right-topic");
+		expect(createNode.mock.calls[1][0]).toHaveProperty("slug", "chapter-11");
 	});
 
 	it("should create a unique node id from the itemId property", () => {
