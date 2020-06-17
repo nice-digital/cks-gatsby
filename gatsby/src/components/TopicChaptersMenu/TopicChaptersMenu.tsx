@@ -55,7 +55,8 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 									destination={`${chapterPath}${subChapter.slug}/`}
 									isCurrent={subChapter.id === currentChapterId}
 								>
-									-- {subChapter.fullItemName}
+									{/* TODO: Replace these spaces with a proper nested stacked nav when it supports nesting */}
+									&nbsp;&nbsp;&nbsp;&nbsp; {subChapter.fullItemName}
 								</StackedNavLink>
 							))}
 					</>
