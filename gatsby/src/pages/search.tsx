@@ -68,6 +68,9 @@ const SearchPage: React.FC<SearchPageProps> = ({
 		<Layout>
 			<SEO title="Search results" noIndex={true} />
 			<h1>Search</h1>
+			{!error && !data && <div>Loading</div>}
+			{data && data.failed && <div>Failed to load results</div>}
+			{data && !data.failed && <Results {...data} />}
 			{error?.message && (
 				<Alert type="error">
 					<pre>
@@ -79,9 +82,6 @@ const SearchPage: React.FC<SearchPageProps> = ({
 					</pre>
 				</Alert>
 			)}
-			{!data && <div>Loading</div>}
-			{data && data.failed && <div>Failed to load results</div>}
-			{data && !data.failed && <Results {...data} />}
 		</Layout>
 	);
 };
@@ -102,8 +102,8 @@ const Results: React.FC<SearchResults> = ({
 		previousPageLink: previous?.fullUrl
 			? { destination: "/" + previous?.fullUrl, elementType: Link }
 			: undefined,
-		currentPage: Math.floor(firstResult / pageSize + 1),
-		totalPages: Math.floor(resultCount / pageSize),
+		currentPage: Math.ceil(firstResult / pageSize),
+		totalPages: Math.ceil(resultCount / pageSize),
 	};
 
 	return (
