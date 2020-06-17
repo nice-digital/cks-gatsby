@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, ReactElement } from "react";
 import { Link } from "gatsby";
 
 import { stripHtmlComments, stripHtmlTags } from "../../utils/html-utils";
@@ -8,18 +8,26 @@ import styles from "./ChapterBody.module.scss";
 
 interface ChapterBodyProps {
 	chapter: Chapter;
+	/**
+	 * Whether to visually show the root h2 heading.
+	 * Setting to `false` adds a class of `visually-hidden`.
+	 */
+	showRootHeading?: boolean;
 }
 
 export const ChapterBody: React.FC<ChapterBodyProps> = ({
-	chapter: {
+	chapter,
+	showRootHeading,
+}: ChapterBodyProps) => {
+	const {
 		slug,
 		htmlHeader,
 		htmlStringContent,
 		topic,
 		parentChapter,
 		subChapters,
-	},
-}: ChapterBodyProps) => {
+	} = chapter;
+
 	const headerNoHtml = useMemo(() => stripHtmlTags(htmlHeader), [htmlHeader]);
 
 	const htmlStringContentNoComments = useMemo(
@@ -27,50 +35,51 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 		[htmlStringContent]
 	);
 
+	const renderChapterHTML = useMemo(
+		() => (c: Chapter): ReactElement => {
+			const chapterHeading =
+				c === chapter
+					? `<h2${
+							showRootHeading ? "" : ' class="visually-hidden"'
+					  }>${headerNoHtml}</h2>`
+					: c.htmlHeader;
+
+			return (
+				<section id={c.slug} aria-label={c.fullItemName}>
+					<div
+						className={styles.section}
+						dangerouslySetInnerHTML={{
+							__html: chapterHeading + c.htmlStringContent,
+						}}
+					/>
+					{c.subChapters &&
+						c.parentChapter &&
+						c.subChapters.map(subChapter => renderChapterHTML(subChapter))}
+				</section>
+			);
+		},
+		[]
+	);
+
 	return (
 		<>
-			{!parentChapter && htmlStringContentNoComments === "" ? (
-				<ul className="mt--0">
-					{subChapters.map(subChapter => (
-						<li key={subChapter.id}>
-							<Link to={`/topics/${topic.slug}/${slug}/${subChapter.slug}/`}>
-								{subChapter.fullItemName}
-							</Link>
-						</li>
-					))}
-				</ul>
+			{parentChapter || htmlStringContentNoComments ? (
+				useMemo(() => renderChapterHTML(chapter), [chapter])
 			) : (
-				<>
-					TODO: Recurse to get chapter body...
-					<section className={styles.body} id={slug} aria-label={headerNoHtml}>
-						<div
-							dangerouslySetInnerHTML={{
-								__html: htmlStringContent,
-							}}
-						/>
-						{parentChapter &&
-							subChapters.map(subChapter => (
-								<section key={subChapter.id} id={subChapter.slug}>
-									<div
-										dangerouslySetInnerHTML={{
-											__html:
-												subChapter.htmlHeader + subChapter.htmlStringContent,
-										}}
-									/>
-									{subChapter.subChapters.map(subChapter => (
-										<section
-											id={subChapter.slug}
-											key={subChapter.id}
-											dangerouslySetInnerHTML={{
-												__html:
-													subChapter.htmlHeader + subChapter.htmlStringContent,
-											}}
-										/>
-									))}
-								</section>
-							))}
-					</section>
-				</>
+				<nav className={styles.section} aria-labelledby={slug}>
+					<h2 className="visually-hidden" id={slug}>
+						{headerNoHtml}
+					</h2>
+					<ul className="mt--0" aria-labelledby={slug}>
+						{subChapters.map(subChapter => (
+							<li key={subChapter.id}>
+								<Link to={`/topics/${topic.slug}/${slug}/${subChapter.slug}/`}>
+									{subChapter.fullItemName}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</nav>
 			)}
 		</>
 	);

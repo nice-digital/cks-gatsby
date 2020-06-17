@@ -10,6 +10,7 @@ import { TopicChaptersMenu } from "../../components/TopicChaptersMenu/TopicChapt
 import { SEO } from "../../components/SEO/SEO";
 
 import { Topic, Chapter } from "../../types";
+import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
 
 type TopicPageProps = {
 	data: {
@@ -44,10 +45,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 					<TopicChaptersMenu topic={topic} currentChapterId={firstChapter.id} />
 				</GridItem>
 				<GridItem cols={12} sm={8} md={9}>
-					<h2 className="mt--0">{firstChapter.fullItemName}</h2>
-					<div
-						dangerouslySetInnerHTML={{ __html: firstChapter.htmlStringContent }}
-					/>
+					<ChapterBody chapter={firstChapter} showRootHeading={true} />
 				</GridItem>
 			</Grid>
 		</Layout>
