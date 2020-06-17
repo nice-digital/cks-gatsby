@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "gatsby";
 
 import { StackedNav, StackedNavLink } from "@nice-digital/nds-stacked-nav";
@@ -37,9 +37,8 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 				const chapterPath = `${topicPath}${menuChapter.slug}/`;
 
 				return (
-					<>
+					<Fragment key={menuChapter.id}>
 						<StackedNavLink
-							key={menuChapter.id}
 							elementType={Link}
 							destination={chapterPath}
 							isCurrent={menuChapter.id === currentChapterId}
@@ -59,7 +58,7 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 									&nbsp;&nbsp;&nbsp;&nbsp; {subChapter.fullItemName}
 								</StackedNavLink>
 							))}
-					</>
+					</Fragment>
 				);
 			})}
 		</StackedNav>
