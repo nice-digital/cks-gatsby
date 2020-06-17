@@ -1,7 +1,11 @@
 import React, { useMemo, ReactElement } from "react";
 import { Link } from "gatsby";
 
-import { stripHtmlComments, stripHtmlTags } from "../../utils/html-utils";
+import {
+	stripHtmlComments,
+	stripHtmlTags,
+	insertId,
+} from "../../utils/html-utils";
 import { Chapter } from "../../types";
 
 import styles from "./ChapterBody.module.scss";
@@ -37,23 +41,25 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 
 	const renderChapterHTML = useMemo(
 		() => (c: Chapter): ReactElement => {
+			// Rewrite the root heading from an h1 into an h2.
+			// This is because we render separate pages which have their own h1 (rather than a long single page like Clarity's)
 			const chapterHeading =
 				c === chapter
-					? `<h2${
+					? `<h2 id="${c.slug}"${
 							showRootHeading ? "" : ' class="visually-hidden"'
 					  }>${headerNoHtml}</h2>`
-					: c.htmlHeader;
+					: insertId(c.htmlHeader, c.slug);
 
 			return (
-				<section id={c.slug} aria-label={c.fullItemName}>
+				<section aria-labelledby={c.slug}>
 					<div
 						className={styles.section}
 						dangerouslySetInnerHTML={{
 							__html: chapterHeading + c.htmlStringContent,
 						}}
 					/>
-					{c.subChapters &&
-						c.parentChapter &&
+					{c.parentChapter &&
+						c.subChapters &&
 						c.subChapters.map(subChapter => renderChapterHTML(subChapter))}
 				</section>
 			);
@@ -67,7 +73,7 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 				useMemo(() => renderChapterHTML(chapter), [chapter])
 			) : (
 				<nav className={styles.section} aria-labelledby={slug}>
-					<h2 className="visually-hidden" id={slug}>
+					<h2 className={showRootHeading ? "" : "visually-hidden"} id={slug}>
 						{headerNoHtml}
 					</h2>
 					<ul className="mt--0" aria-labelledby={slug}>
