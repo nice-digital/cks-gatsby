@@ -39,28 +39,21 @@ export interface WhatsNewChange {
 	topic: PartialTopic;
 }
 
-interface BasePartialChapter {
+interface PartialChapter {
 	/** The Gatsby id and NOT the API itemId field */
 	id: string;
 	/** Path slug, for use within a URL */
 	slug: string;
 	/** Chapter name e.g. Summary */
 	fullItemName: string;
+	subChapters: PartialChapter[];
 }
 
-interface PartialChapterWithContent extends BasePartialChapter {
-	subChapters: PartialChapterWithContent[];
+export interface Chapter extends PartialChapter {
+	subChapters: Chapter[];
 	/** The HTML body of the chapter */
 	htmlStringContent: string;
 	htmlHeader: string;
-}
-
-interface PartialChapter extends BasePartialChapter {
-	subChapters: BasePartialChapter[];
-	parentChapter?: BasePartialChapter;
-}
-
-export interface Chapter extends PartialChapter, PartialChapterWithContent {
+	parentChapter?: PartialChapter;
 	topic: PartialTopicWithChapters;
-	subChapters: PartialChapterWithContent[];
 }
