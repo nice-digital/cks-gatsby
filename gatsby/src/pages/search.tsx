@@ -3,6 +3,7 @@ import { PageRendererProps, Link } from "gatsby";
 import parser from "react-html-parser";
 import { Card } from "@nice-digital/nds-card";
 import { SimplePagination } from "@nice-digital/nds-simple-pagination";
+import { Alert } from "@nice-digital/nds-alert";
 
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
@@ -16,6 +17,7 @@ interface SearchResults {
 	lastResult: number;
 	finalSearchText: string;
 	finalSearchTextNoStopWords: string;
+	pageSize: number;
 	originalSearch: {
 		searchText: string;
 	};
@@ -52,19 +54,32 @@ const SearchPage: React.FC<SearchPageProps> = ({
 	location,
 }: SearchPageProps) => {
 	const [data, setData] = useState<SearchResults | null>(null);
+	const [error, setError] = useState<Error>();
 
 	useEffect(() => {
 		setData(null);
 		fetch("/api/search" + window.location.search)
 			.then(data => data.json())
-			.then(results => setData(results as SearchResults));
+			.then(results => setData(results as SearchResults))
+			.catch(e => setError(e));
 	}, [location.search]);
 
 	return (
 		<Layout>
 			<SEO title="Search results" noIndex={true} />
 			<h1>Search</h1>
-			{data && !data && <div>Loading</div>}
+			{error?.message && (
+				<Alert type="error">
+					<pre>
+						{error.name}
+						<br />
+						{error.message}
+						<br />
+						{error.stack}
+					</pre>
+				</Alert>
+			)}
+			{!data && <div>Loading</div>}
 			{data && data.failed && <div>Failed to load results</div>}
 			{data && !data.failed && <Results {...data} />}
 		</Layout>
@@ -72,18 +87,25 @@ const SearchPage: React.FC<SearchPageProps> = ({
 };
 
 const Results: React.FC<SearchResults> = ({
+	firstResult,
 	resultCount,
 	finalSearchText,
 	originalSearch,
 	documents,
+	pageSize,
 	pagerLinks: { next, previous },
 }) => {
-	const nextPageLink = next?.fullUrl
-		? { destination: "/" + next?.fullUrl, elementType: Link }
-		: undefined;
-	const previousPageLink = previous?.fullUrl
-		? { destination: "/" + previous?.fullUrl, elementType: Link }
-		: undefined;
+	const paginationProps = {
+		nextPageLink: next?.fullUrl
+			? { destination: "/" + next?.fullUrl, elementType: Link }
+			: undefined,
+		previousPageLink: previous?.fullUrl
+			? { destination: "/" + previous?.fullUrl, elementType: Link }
+			: undefined,
+		currentPage: Math.floor(firstResult / pageSize + 1),
+		totalPages: Math.floor(resultCount / pageSize),
+	};
+
 	return (
 		<>
 			<ResultSummary
@@ -91,14 +113,8 @@ const Results: React.FC<SearchResults> = ({
 				finalSearchText={finalSearchText}
 				originalSearch={originalSearch?.searchText}
 			/>
-
 			{documents.length > 0 && <ResultsList documents={documents} />}
-			<SimplePagination
-				currentPage={1}
-				totalPages={999}
-				nextPageLink={nextPageLink}
-				previousPageLink={previousPageLink}
-			/>
+			{resultCount > pageSize && <SimplePagination {...paginationProps} />}
 		</>
 	);
 };
