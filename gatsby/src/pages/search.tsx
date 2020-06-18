@@ -8,7 +8,7 @@ import { Alert } from "@nice-digital/nds-alert";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 
-type SearchPageProps = PageRendererProps;
+export type SearchPageProps = PageRendererProps;
 
 interface SearchResults {
 	failed: boolean;
