@@ -12,6 +12,7 @@ using NICE.Search.Common.Enums;
 using Microsoft.Net.Http.Headers;
 using Microsoft.AspNetCore.Rewrite;
 using CKS.Web.StaticFiles;
+using CKS.Web.Middleware;
 
 namespace CKS.Web
 {
@@ -32,7 +33,7 @@ namespace CKS.Web
 			var environmentString = Configuration.GetValue<string>("ElasticSearchEnvironment");
 			ApplicationEnvironment environmentAsEnum;
 			Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum);
-			if(environmentAsEnum != null)
+			if (environmentAsEnum != null)
 			{
 				services.AddSingleton<ISearchProvider, SearchProvider>(ISearchProvider => new SearchProvider(environmentAsEnum));
 			}
@@ -57,34 +58,10 @@ namespace CKS.Web
 			app.UseStatusCodePagesWithReExecute("/{0}.html");
 
 			app.UseDefaultFiles();
-			app.UseStaticFiles(new StaticFileOptions
-			{
-				//Files in /static and files with gatsby generated file names should be
-				//cached forever as documented in https://www.gatsbyjs.org/docs/caching/
-				//Files with persistant names across builds shouldnt be cached forever eg.json, html, xml
-				OnPrepareResponse = ctx =>
-				{
-					var fileName = ctx.File.Name;
-					var headers = ctx.Context.Response.Headers;
-
-					if (ctx.Context.Request.Path == "/404.html")
-						ctx.Context.Response.StatusCode = 404;
-
-					if (fileName.EndsWith(".css") ||
-						ctx.Context.Request.Path.Value.Contains("/static/") ||
-						(fileName.EndsWith(".js") && fileName != "sw.js"))
-					{
-						headers[HeaderNames.CacheControl] = "public,immutable,max-age=31536000";
-					}
-					else
-						headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=0";
-				},
-
-				ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
-			});
+			app.UseStaticFiles(new GatsbyStaticFileOptions { });
 
 			app.UseRouting();
-            app.UseAuthorization();
+			app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
 			{
@@ -97,13 +74,14 @@ namespace CKS.Web
 			// Serve static files straight for Gatsby's public folder when running locally.
 			// This means you don't have to copy the Gatsby output into the wwwroot folder like we do on TeamCity.
 			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public"));
-			app.UseDefaultFiles(new DefaultFilesOptions {
-					FileProvider = localGatsbyFileProvider
-				});
-			app.UseStaticFiles(new StaticFileOptions() {
-					FileProvider = localGatsbyFileProvider,
-					ContentTypeProvider = new PWAFileExtensionContentTypeProvider()
-				});
+			app.UseDefaultFiles(new DefaultFilesOptions
+			{
+				FileProvider = localGatsbyFileProvider
+			});
+			app.UseStaticFiles(new GatsbyStaticFileOptions()
+			{
+				FileProvider = localGatsbyFileProvider
+			});
 
 			Configure(app, env);
 		}
