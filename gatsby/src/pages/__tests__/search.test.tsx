@@ -1,13 +1,14 @@
 import React from "react";
-
+import { enableFetchMocks } from "jest-fetch-mock";
 import { renderWithRouter } from "test-utils";
 
 import SearchPage from "../search";
 
+enableFetchMocks();
+
 describe("Search Page", () => {
-	it("should match snapshot", () => {
-		const { container, debug } = renderWithRouter(<SearchPage />);
-		debug();
-		expect(container).toMatchSnapshot();
+	it("should render a loading message before the request comes in", () => {
+		const el = renderWithRouter(<SearchPage />);
+		expect(el.getByText("loading")).toBeInTheDocument();
 	});
 });

@@ -95,5 +95,8 @@
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3",
     "wait-on": "^4.0.1"
+  },
+  "dependencies": {
+    "jest-fetch-mock": "^3.0.3"
   }
 }

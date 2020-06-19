@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Page should render a loading message before the request comes in 1`] = `
+<div>
+  <main
+    class="container"
+    id="content-start"
+  >
+    <div
+      class="page-header"
+    >
+      <h1
+        class="page-header__heading"
+      >
+        Search results
+      </h1>
+      <p
+        class="page-header__lead"
+      >
+        loading
+      </p>
+    </div>
+  </main>
+</div>
+`;
