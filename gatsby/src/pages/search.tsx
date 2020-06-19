@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PageRendererProps, Link } from "gatsby";
+import { Link } from "gatsby";
 import { Card } from "@nice-digital/nds-card";
 import { SimplePagination } from "@nice-digital/nds-simple-pagination";
 import { Alert } from "@nice-digital/nds-alert";
@@ -7,8 +7,6 @@ import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
-
-export type SearchPageProps = PageRendererProps;
 
 interface SearchResults {
 	failed: boolean;
@@ -56,9 +54,7 @@ function titleString(searchText: string, pageIndex: number): string {
 		.join(" | ");
 }
 
-const SearchPage: React.FC<SearchPageProps> = ({
-	location,
-}: SearchPageProps) => {
+const SearchPage: React.FC = () => {
 	const [data, setData] = useState<SearchResults | null>(null);
 	const [error, setError] = useState<Error>();
 
@@ -96,13 +92,13 @@ const Results: React.FC<SearchResults> = ({
 	const paginationProps = {
 		nextPageLink:
 			(next?.fullUrl && {
-				destination: "/" + next?.fullUrl,
+				destination: "/" + next.fullUrl,
 				elementType: Link,
 			}) ||
 			undefined,
 		previousPageLink:
 			(previous?.fullUrl && {
-				destination: "/" + previous?.fullUrl,
+				destination: "/" + previous.fullUrl,
 				elementType: Link,
 			}) ||
 			undefined,
@@ -289,7 +285,7 @@ const NoResults: React.FC<NoResultsProps> = ({
 const ErrorBlock: React.FC<{ error: Error }> = ({
 	error: { name, message, stack },
 }) => {
-	if (process?.env?.GATSBY_ENV === "development")
+	if (process?.env?.NODE_ENV === "development")
 		return (
 			<Alert type="error">
 				<pre>
