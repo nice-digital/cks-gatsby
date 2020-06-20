@@ -9,18 +9,17 @@ import { Layout } from "../../components/Layout/Layout";
 import { TopicChaptersMenu } from "../../components/TopicChaptersMenu/TopicChaptersMenu";
 import { SEO } from "../../components/SEO/SEO";
 
-import { Topic, Chapter } from "../../types";
-import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
+import { Topic } from "../../types";
 
 type TopicPageProps = {
 	data: {
-		firstChapter: Chapter;
+		//firstChapter: Chapter;
 		topic: Topic;
 	};
 } & PageRendererProps;
 
 const TopicPage: React.FC<TopicPageProps> = ({
-	data: { firstChapter, topic },
+	data: { topic },
 }: TopicPageProps) => {
 	const { topicName, topicSummary } = topic;
 
@@ -42,10 +41,10 @@ const TopicPage: React.FC<TopicPageProps> = ({
 
 			<Grid gutter="loose">
 				<GridItem cols={12} sm={4} md={3}>
-					<TopicChaptersMenu topic={topic} currentChapterId={firstChapter.id} />
+					<TopicChaptersMenu topic={topic} />
 				</GridItem>
 				<GridItem cols={12} sm={8} md={9}>
-					<ChapterBody chapter={firstChapter} showRootHeading={true} />
+					TODO
 				</GridItem>
 			</Grid>
 		</Layout>
@@ -56,13 +55,13 @@ export default TopicPage;
 
 export const TopicPageQuery = graphql`
 	query TopicById($id: String!) {
-		firstChapter: cksChapter(
-			topic: { id: { eq: $id } }
-			depth: { eq: 1 }
-			pos: { eq: 0 }
-		) {
-			...FullChapter
-		}
+		#firstChapter: cksChapter(
+		#	topic: { id: { eq: $id } }
+		#	depth: { eq: 1 }
+		#	pos: { eq: 0 }
+		#) {
+		#	...FullChapter
+		#}
 		topic: cksTopic(id: { eq: $id }) {
 			...FullTopic
 		}

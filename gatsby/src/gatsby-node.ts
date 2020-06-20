@@ -1,7 +1,12 @@
 import path, { resolve } from "path";
 import { promises as fs } from "fs";
 import { CreatePagesArgs, BuildArgs } from "gatsby";
-import { PartialTopic, PartialSpeciality } from "./types";
+import {
+	PartialTopic,
+	PartialSpeciality,
+	ChapterLevel1,
+	ChapterLevel2,
+} from "./types";
 
 interface AllTopicsQuery {
 	allTopics: {
@@ -13,19 +18,11 @@ interface PageCreationQuery extends AllTopicsQuery {
 	allSpecialities: {
 		nodes: PartialSpeciality[];
 	};
-	allChapters: {
-		nodes: {
-			id: string;
-			slug: string;
-			depth: number;
-			pos: 0;
-			parentChapter?: {
-				slug: string;
-			};
-			topic: {
-				slug: string;
-			};
-		}[];
+	level1Chapters: {
+		nodes: ChapterLevel1[];
+	};
+	level2Chapters: {
+		nodes: ChapterLevel2[];
 	};
 }
 
@@ -50,55 +47,147 @@ const createCksPages = async ({
 					slug
 				}
 			}
-			# Only create pages for the top 2 levels of chapters
-			# Deeper chapters are sections within the page (so aren't separate pages)
-			allChapters: allCksChapter(filter: { depth: { lte: 2 } }) {
+			level1Chapters: allCksChapter(filter: { depth: { eq: 1 } }) {
 				nodes {
 					id
 					slug
+					fullItemName
 					depth
-					pos
-					parentChapter {
-						slug
-					}
+					htmlHeader
+					htmlStringContent
 					topic {
+						id
+						topicId
+						topicName
 						slug
+						chapters {
+							id
+							fullItemName
+							slug
+							subChapters {
+								id
+								slug
+								fullItemName
+							}
+						}
+					}
+					subChapters {
+						id
+						slug
+						fullItemName
+					}
+				}
+			}
+			level2Chapters: allCksChapter(filter: { depth: { eq: 2 } }) {
+				nodes {
+					id
+					slug
+					fullItemName
+					depth
+					htmlHeader
+					htmlStringContent
+					topic {
+						id
+						topicId
+						topicName
+						slug
+						chapters {
+							id
+							fullItemName
+							slug
+							subChapters {
+								id
+								slug
+								fullItemName
+							}
+						}
+					}
+					parentChapter {
+						id
+						slug
+						fullItemName
+					}
+					# Load sub chapters recurisvely for levels 2+
+					subChapters {
+						id
+						slug
+						fullItemName
+						depth
+						htmlHeader
+						htmlStringContent
+						subChapters {
+							id
+							slug
+							fullItemName
+							depth
+							htmlHeader
+							htmlStringContent
+							subChapters {
+								id
+								slug
+								fullItemName
+								depth
+								htmlHeader
+								htmlStringContent
+								subChapters {
+									id
+									slug
+									fullItemName
+									depth
+									htmlHeader
+									htmlStringContent
+									subChapters {
+										id
+										slug
+										fullItemName
+										depth
+										htmlHeader
+										htmlStringContent
+									}
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 	`);
 
-	function createCksPage(id: string, path: string, templateName: string): void {
+	function createCksPage(
+		path: string,
+		templateName: string,
+		context: object
+	): void {
 		createPage({
 			path,
 			component: resolve(`src/templates/${templateName}/${templateName}.tsx`),
-			context: {
-				id,
-			},
+			context,
 		});
 	}
 
 	pageCreationQuery.data?.allTopics.nodes.forEach(({ id, slug }) => {
-		createCksPage(id, `/topics/${slug}/`, "Topic");
+		createCksPage(`/topics/${slug}/`, "Topic", { id });
 	});
 
 	pageCreationQuery.data?.allSpecialities.nodes.forEach(({ id, slug }) => {
-		createCksPage(id, `/specialities/${slug}/`, "Speciality");
+		createCksPage(`/specialities/${slug}/`, "Speciality", { id });
 	});
 
-	pageCreationQuery.data?.allChapters.nodes
-		// Don't create the 'summary' chapter - this is the topic itself
-		.filter(c => !(c.depth === 1 && c.pos === 0))
-		.forEach(({ id, slug, parentChapter, topic }) => {
-			let chapterPath = `/topics/${topic.slug}/`;
+	pageCreationQuery.data?.level1Chapters.nodes.forEach(chapter => {
+		createCksPage(
+			`/topics/${chapter.topic.slug}/${chapter.slug}/`,
+			"ChapterLevel1",
+			{ chapter }
+		);
+	});
 
-			if (parentChapter) chapterPath += `${parentChapter.slug}/`;
-
-			chapterPath += `${slug}/`;
-
-			createCksPage(id, chapterPath, "Chapter");
-		});
+	pageCreationQuery.data?.level2Chapters.nodes.forEach(chapter => {
+		createCksPage(
+			`/topics/${chapter.topic.slug}/${chapter.parentChapter.slug}/${chapter.slug}/`,
+			"ChapterLevel2",
+			{ chapter }
+		);
+	});
 
 	return;
 };

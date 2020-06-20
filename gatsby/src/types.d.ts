@@ -39,6 +39,9 @@ export interface WhatsNewChange {
 	topic: PartialTopic;
 }
 
+/**
+ * For use in lists
+ */
 interface PartialChapter {
 	/** The Gatsby id and NOT the API itemId field */
 	id: string;
@@ -49,11 +52,18 @@ interface PartialChapter {
 	subChapters: PartialChapter[];
 }
 
-export interface Chapter extends PartialChapter {
-	subChapters: Chapter[];
-	/** The HTML body of the chapter */
-	htmlStringContent: string;
+export interface ChapterLevel1 extends PartialChapter {
+	depth: number;
 	htmlHeader: string;
-	parentChapter?: PartialChapter;
+	htmlStringContent: string;
 	topic: PartialTopicWithChapters;
+}
+
+export interface ChapterLevel2 extends PartialChapter {
+	depth: number;
+	htmlHeader: string;
+	htmlStringContent: string;
+	topic: PartialTopicWithChapters;
+	subChapters: ChapterLevel2[];
+	parentChapter: PartialChapter;
 }
