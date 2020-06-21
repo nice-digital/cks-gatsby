@@ -41,7 +41,7 @@ const ChapterLevel2Page: React.FC<ChapterPageProps> = ({
 			/>
 
 			<Breadcrumbs>
-				<Breadcrumb to="https://www.nice.org.uk/">Home</Breadcrumb>
+				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
 				<Breadcrumb to="/" elementType={Link}>
 					CKS
 				</Breadcrumb>
