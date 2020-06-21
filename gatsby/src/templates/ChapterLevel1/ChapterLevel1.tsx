@@ -18,11 +18,11 @@ interface ChapterPageContext {
 	chapter: ChapterLevel1;
 }
 
-type ChapterPageProps = PageProps<null, ChapterPageContext>;
+export type ChapterLevel1PageProps = PageProps<null, ChapterPageContext>;
 
-const ChapterLevel1Page: React.FC<ChapterPageProps> = ({
+const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 	pageContext: { chapter },
-}: ChapterPageProps) => {
+}: ChapterLevel1PageProps) => {
 	const {
 		id: chapterId,
 		slug,
