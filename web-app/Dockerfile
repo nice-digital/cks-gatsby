@@ -4,9 +4,7 @@ ENV ASPNETCORE_URLS http://+:8080
 
 WORKDIR /app
 
-# Assume the CKS .NET Core app has been published into the /web-app/publish folder
-COPY ./publish ./
-
 EXPOSE 8080
 
+# Make sure yout mount a volume into the /app folder
 ENTRYPOINT ["dotnet", "CKS.Web.dll"]
