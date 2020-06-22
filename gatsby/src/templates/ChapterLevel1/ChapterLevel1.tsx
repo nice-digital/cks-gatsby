@@ -7,7 +7,6 @@ import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { ChapterLevel1 } from "../../types";
 import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
-import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
 import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
 import { stripHtmlTags, stripHtmlComments } from "../../utils/html-utils";
 

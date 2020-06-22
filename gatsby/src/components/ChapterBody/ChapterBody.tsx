@@ -6,7 +6,9 @@ import { ChapterLevel1, ChapterLevel2 } from "../../types";
 import styles from "./ChapterBody.module.scss";
 
 interface ChapterBodyProps {
+	/** The chapter, either level 1 or 2, for which to render the body */
 	chapter: ChapterLevel1 | ChapterLevel2;
+	/** The heading level for this chapter. Leave blank to default to an h2. */
 	headingLevel?: number;
 }
 
@@ -16,6 +18,12 @@ function isLevel2(
 	return (chapter as ChapterLevel2).depth > 1;
 }
 
+/**
+ * Renders the body HTML of a chapter.
+ *
+ * First level chapters just render the HTML for that chapter.
+ * Second level chapters recursively render the HTML for nested chapters too.
+ */
 export const ChapterBody: React.FC<ChapterBodyProps> = ({
 	chapter,
 	headingLevel = 2,

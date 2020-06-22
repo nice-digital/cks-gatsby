@@ -4,12 +4,11 @@ import { PageProps, Link } from "gatsby";
 import { PageHeader } from "@nice-digital/nds-page-header";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 
-import { Layout } from "../../components/Layout/Layout";
 import { ChapterLevel2 } from "../../types";
+import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
+import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
 import { stripHtmlTags } from "../../utils/html-utils";
-import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
-import { ChapterContents } from "src/components/ChapterContents/ChapterContents";
 
 interface ChapterPageContext {
 	chapter: ChapterLevel2;

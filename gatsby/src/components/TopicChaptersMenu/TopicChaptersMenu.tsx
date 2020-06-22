@@ -7,9 +7,13 @@ import { PartialTopicWithChapters } from "src/types";
 
 type TopicChaptersMenuProps = {
 	topic: PartialTopicWithChapters;
+	/** The (optional) id of the currently active chapter */
 	currentChapterId?: string;
 };
 
+/**
+ * Renders the side, stacked navigation of chapters within the given topic.
+ */
 export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 	topic,
 	currentChapterId,
