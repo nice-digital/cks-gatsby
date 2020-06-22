@@ -3,14 +3,13 @@ import { PageProps, Link } from "gatsby";
 
 import { PageHeader } from "@nice-digital/nds-page-header";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
-import { Grid, GridItem } from "@nice-digital/nds-grid";
 
 import { Layout } from "../../components/Layout/Layout";
 import { ChapterLevel2 } from "../../types";
 import { SEO } from "../../components/SEO/SEO";
-import { TopicChaptersMenu } from "../../components/TopicChaptersMenu/TopicChaptersMenu";
 import { stripHtmlTags } from "../../utils/html-utils";
 import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
+import { ChapterContents } from "src/components/ChapterContents/ChapterContents";
 
 interface ChapterPageContext {
 	chapter: ChapterLevel2;
@@ -21,13 +20,7 @@ type ChapterPageProps = PageProps<null, ChapterPageContext>;
 const ChapterLevel2Page: React.FC<ChapterPageProps> = ({
 	pageContext: { chapter },
 }: ChapterPageProps) => {
-	const {
-		id: chapterId,
-		fullItemName,
-		htmlHeader,
-		topic,
-		parentChapter,
-	} = chapter;
+	const { fullItemName, htmlHeader, topic, parentChapter } = chapter;
 
 	const topicPath = `/topics/${topic.slug}/`;
 
@@ -65,14 +58,7 @@ const ChapterLevel2Page: React.FC<ChapterPageProps> = ({
 				preheading={`${topic.topicName}: `}
 			/>
 
-			<Grid gutter="loose">
-				<GridItem cols={12} sm={4} md={3}>
-					<TopicChaptersMenu currentChapterId={chapterId} topic={topic} />
-				</GridItem>
-				<GridItem cols={12} sm={8} md={9}>
-					<ChapterBody chapter={chapter} />
-				</GridItem>
-			</Grid>
+			<ChapterContents chapter={chapter} />
 		</Layout>
 	);
 };
