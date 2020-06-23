@@ -95,9 +95,9 @@ export const getFullTopicCached = async (
 ): Promise<ApiFullTopic> => {
 	const topicCacheKey = getTopicCacheKey(partialTopic);
 
-	const cachedFullTopic = await (cache.get(
+	const cachedFullTopic = (await cache.get(
 		topicCacheKey
-	) as ApiFullTopic | null);
+	)) as ApiFullTopic | null;
 
 	if (cachedFullTopic) return cachedFullTopic;
 
