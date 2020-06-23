@@ -56,15 +56,18 @@ function titleString(searchText: string, pageIndex: number): string {
 
 const SearchPage: React.FC = () => {
 	const [data, setData] = useState<SearchResults | null>(null);
-	const [error, setError] = useState<Error>();
+	const [error, setError] = useState<Error | null>();
 
 	useEffect(() => {
 		setData(null);
 		fetch("/api/search" + window.location.search)
 			.then(data => data.json())
-			.then(results => setData(results as SearchResults))
+			.then(results => {
+				setError(null);
+				setData(results as SearchResults);
+			})
 			.catch(e => setError(e));
-	}, [location.search]);
+	}, [window.location.search]);
 
 	return (
 		<Layout>
@@ -285,7 +288,7 @@ const NoResults: React.FC<NoResultsProps> = ({
 const ErrorBlock: React.FC<{ error: Error }> = ({
 	error: { name, message, stack },
 }) => {
-	if (process?.env?.NODE_ENV === "development")
+	if (process?.env.GATSBY_ENV === "development")
 		return (
 			<Alert type="error">
 				<pre>
@@ -304,6 +307,12 @@ const ErrorBlock: React.FC<{ error: Error }> = ({
 	resolved as soon as possible. We apologise for any inconvenience caused.
 "
 		/>
+	);
+};
+
+const Announcer: React.FC<{ message: string }> = ({ message }) => {
+	return (
+		<div /*className="visually-hidden"*/ aria-live="polite">{message}</div>
 	);
 };
 
