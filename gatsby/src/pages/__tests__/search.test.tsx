@@ -1,7 +1,7 @@
 import React from "react";
 import fetch from "jest-fetch-mock";
 import { renderWithRouter, textContentMatcher } from "test-utils";
-import { waitForDomChange } from "@testing-library/react";
+import { waitForDomChange, queryByText } from "@testing-library/react";
 
 import * as searchResponseTest from "./sample-data/search-response-for-test.json";
 import * as searchResponseMonkey from "./sample-data/search-response-monkey.json";
@@ -18,7 +18,7 @@ describe("Search Page", () => {
 		const { queryByText } = renderWithRouter(<SearchPage />);
 		expect(queryByText("loading")).toBeInTheDocument();
 		await waitForDomChange();
-		expect(queryByText("loading")).toBeFalsy();
+		expect(queryByText("loading")).not.toBeInTheDocument();
 	});
 
 	it("should display the total number of search results", async () => {
@@ -52,6 +52,17 @@ describe("Search Page", () => {
 		).toBeInTheDocument();
 		expect(
 			await component.findByText(searchResponseMonkey.finalSearchText)
+		).toBeInTheDocument();
+	});
+
+	it("should fall back to error message if the response doesn't come back", async () => {
+		fetch.mockReject(new Error("Something's gone wrong!"));
+		const component = renderWithRouter(<SearchPage />);
+		await waitForDomChange();
+		expect(
+			component.queryByText(textContentMatcher("Error"), {
+				selector: "h1",
+			})
 		).toBeInTheDocument();
 	});
 });
