@@ -14,9 +14,11 @@ describe("Search Page", () => {
 		fetch.resetMocks();
 	});
 
-	it("should render a loading message before the request comes in", () => {
-		const { getByText } = renderWithRouter(<SearchPage />);
-		expect(getByText("loading")).toBeInTheDocument();
+	it("should render a loading message before the request comes in", async () => {
+		const { queryByText } = renderWithRouter(<SearchPage />);
+		expect(queryByText("loading")).toBeInTheDocument();
+		await waitForDomChange();
+		expect(queryByText("loading")).toBeFalsy();
 	});
 
 	it("should display the total number of search results", async () => {
