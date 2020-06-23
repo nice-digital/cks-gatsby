@@ -46,6 +46,7 @@ module.exports = {
 				],
 			},
 		},
+		"gatsby-plugin-split-css",
 		{
 			resolve: `gatsby-source-cks`,
 			options: {
