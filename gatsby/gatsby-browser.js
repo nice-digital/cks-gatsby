@@ -2,7 +2,7 @@ import "@nice-digital/design-system/scss/base.scss";
 
 // Gatsby hook for when the route has changed on the client side
 // See https://www.gatsbyjs.org/docs/browser-apis/#onRouteUpdate
-export const onRouteUpdate = ({ prevLocation }) => {
+export const onRouteUpdate = ({ prevLocation, location }) => {
 	if (prevLocation) {
 		// Push our own event to the dataLayer on page change rather than using the
 		// 'gatsby-route-change' event built into gatsby-plugin-google-tagmanager.
@@ -10,6 +10,7 @@ export const onRouteUpdate = ({ prevLocation }) => {
 		// AND because it doesn't use requestAnimationFrame to delay until the page title has been updated
 
 		const sendPageView = () => {
+			window.dataLayer.push({ location: location.href });
 			window.dataLayer.push({ event: "pageview" });
 		};
 
@@ -23,5 +24,7 @@ export const onRouteUpdate = ({ prevLocation }) => {
 			// simulate 2 rAF calls
 			setTimeout(sendPageView, 32);
 		}
+	} else {
+		window.dataLayer.push({ location: location.href });
 	}
 };
