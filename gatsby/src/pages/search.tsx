@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 import { Card } from "@nice-digital/nds-card";
 import { SimplePagination } from "@nice-digital/nds-simple-pagination";
-import { Alert } from "@nice-digital/nds-alert";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
+import { setTimeout } from "timers";
 
 interface SearchResults {
 	failed: boolean;
@@ -56,25 +57,46 @@ function titleString(searchText: string, pageIndex: number): string {
 
 const SearchPage: React.FC = () => {
 	const [data, setData] = useState<SearchResults | null>(null);
-	const [error, setError] = useState<Error | null>();
+	const [error, setError] = useState<boolean>(false);
+	const [a11yMessage, setA11yMessage] = useState<string>("");
+
+	function announce(message: string): void {
+		setA11yMessage(message);
+	}
+
+	const location = useLocation();
 
 	useEffect(() => {
 		setData(null);
-		fetch("/api/search" + window.location.search)
+		fetch("/api/search" + location.search)
 			.then(data => data.json())
 			.then(results => {
-				setError(null);
+				setError(false);
 				setData(results as SearchResults);
+				announce("Search results loaded");
 			})
-			.catch(e => setError(e));
-	}, [window.location.search]);
+			.catch(() => {
+				setError(true);
+				announce("There was an error getting search results");
+			});
+	}, [location]);
 
 	return (
 		<Layout>
+			<div className="visually-hidden" aria-live="polite">
+				{a11yMessage}
+			</div>
 			{!error && !data && (
-				<PageHeader heading="Search results" lead="loading" />
+				<PageHeader heading="Search results" lead="Loading" />
 			)}
-			{error?.message && <ErrorBlock error={error} />}
+			{error && (
+				<PageHeader
+					heading="Error"
+					lead="We are currently experiencing issues with search. The issue will be
+resolved as soon as possible. We apologise for any inconvenience caused.
+"
+				/>
+			)}
 			{data && data.failed && <div>Failed to load results</div>}
 			{data && !data.failed && <Results {...data} />}
 		</Layout>
@@ -122,7 +144,6 @@ const Results: React.FC<SearchResults> = ({
 		</>
 	);
 };
-
 interface ResultsSummary {
 	resultCount: number;
 	finalSearchText: string;
@@ -284,36 +305,5 @@ const NoResults: React.FC<NoResultsProps> = ({
 		</section>
 	</>
 );
-
-const ErrorBlock: React.FC<{ error: Error }> = ({
-	error: { name, message, stack },
-}) => {
-	if (process?.env.GATSBY_ENV === "development")
-		return (
-			<Alert type="error">
-				<pre>
-					{name}
-					<br />
-					{message}
-					<br />
-					{stack}
-				</pre>
-			</Alert>
-		);
-	return (
-		<PageHeader
-			heading="Error"
-			lead="We are currently experiencing issues with search. The issue will be
-	resolved as soon as possible. We apologise for any inconvenience caused.
-"
-		/>
-	);
-};
-
-const Announcer: React.FC<{ message: string }> = ({ message }) => {
-	return (
-		<div /*className="visually-hidden"*/ aria-live="polite">{message}</div>
-	);
-};
 
 export default SearchPage;
