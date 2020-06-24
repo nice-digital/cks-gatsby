@@ -7,6 +7,7 @@ import { Button } from "@nice-digital/nds-button";
 import { Layout } from "../components/Layout/Layout";
 import { PartialTopic } from "../types";
 import { SEO } from "../components/SEO/SEO";
+import { Helmet } from "react-helmet";
 
 type IndexProps = {
 	data: {
@@ -21,7 +22,17 @@ const IndexPage: React.FC<IndexProps> = ({
 }: IndexProps) => {
 	return (
 		<Layout>
-			<SEO />
+			<SEO
+				additionalMetadata={
+					//we pass in a react helmet component here as due to this bug https://github.com/nfl/react-helmet/issues/342
+					<Helmet>
+						<meta
+							name="google-site-verification"
+							content="3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4"
+						/>
+					</Helmet>
+				}
+			/>
 			<Hero
 				title="Clinical Knowledge Summaries"
 				intro="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best&nbsp;practice"
