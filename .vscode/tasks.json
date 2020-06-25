@@ -20,6 +20,47 @@
       }
     },
     {
+      "label": "Web app - tests",
+      "detail": "Runs the .NET Core web app xUnit tests",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "test",
+        "${workspaceFolder}/web-app/CKS.Web.Test/CKS.Web.Test.csproj"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Web app - tests (current file)",
+      "detail": "Runs the tests in the currently opened file",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "test",
+        "CKS.Web.Test.csproj",
+        "--filter",
+        "${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/web-app/CKS.Web.Test/"
+      },
+      "problemMatcher": "$msCompile",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
       "label": "Gatsby - wait",
       "detail": "Waits for Gatsby to be available on tcp:localhost:8000 before completing",
       "type": "shell",
