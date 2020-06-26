@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Development page Body should match snapshot for 'CKS process guide' panel 1`] = `
+<div
+  class="panel"
+>
+  <h2
+    class="h3"
+  >
+    CKS process guide
+  </h2>
+  <p>
+    Detailed information on the CKS development process:
+  </p>
+  <p>
+    <a
+      class="btn btn--secondary"
+      download=""
+      href="https://www.nice.org.uk/media/default/About/what-we-do/Evidence%20Services/CKS/CKS-guide.pdf"
+    >
+      CKS process guide (PDF, 400 KB)
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Development page Body should match snapshot for 'Help develop CKS' panel 1`] = `
+<div
+  class="panel"
+>
+  <h2
+    class="h3"
+  >
+    Help develop CKS
+  </h2>
+  <p>
+    CKS topics rely on feedback from healthcare professionals, patients groups, patients and carers to ensure they are accurate and relevant.
+  </p>
+  <ul
+    aria-label="How to help develop CKS"
+  >
+    <li>
+      <a
+        href="https://cks.clarity.co.uk/get-involved/"
+      >
+        Help develop CKS topics
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.nice.org.uk/cks-feedback"
+      >
+        Send feedback on CKS topics
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Development page Body should match snapshot for main body content 1`] = `
+<div
+  class="body"
+  data-g="12 md:7 lg:8"
+>
+  <h2>
+    New topics
+  </h2>
+  <p>
+    The topic development panel take into account the following when developing new topics:
+  </p>
+  <ul
+    aria-label="What's taken into account when developing new topics"
+  >
+    <li>
+      enquiries sent to NICE CKS
+    </li>
+    <li>
+      GP curriculum
+    </li>
+    <li>
+      new NICE clinical guidelines
+    </li>
+    <li>
+      new pressures affecting primary care as highlighted by the Department of Health and Public Health England.
+    </li>
+  </ul>
+  <p>
+    Up to 10 new CKS topics are produced each year.
+  </p>
+  <h2>
+    Updates
+  </h2>
+  <p>
+    Topics are fully reviewed and updated every 5 years. We will update a topic sooner if significant new evidence emerges such as:
+  </p>
+  <ul
+    aria-label="Reasons for updating a topic sooner"
+  >
+    <li>
+      publication of new/updated NICE guidance
+    </li>
+    <li>
+      new updated national polices or safety information
+    </li>
+    <li>
+      changes to products licenses and device availability
+    </li>
+    <li>
+      other important new evidence.
+    </li>
+  </ul>
+  <p>
+    65+ CKS updates are produced each year.
+  </p>
+  <h2>
+    Topic development
+  </h2>
+  <p>
+    CKS topics are developed for NICE by Clarity Informatics Ltd using
+     
+    <a
+      href="https://www.nice.org.uk/about/what-we-do/accreditation"
+    >
+      an accredited development process
+    </a>
+    .
+  </p>
+  <p>
+    Topics are developed and reviewed by a multidisciplinary team consisting of:
+  </p>
+  <ul
+    aria-label="Roles that develop and review topics"
+  >
+    <li>
+      clinicians
+    </li>
+    <li>
+      pharmacists
+    </li>
+    <li>
+      pharmacologists
+    </li>
+    <li>
+      information specialists
+    </li>
+    <li>
+      informatics analysts
+    </li>
+    <li>
+      technical authors.
+    </li>
+  </ul>
+  <p>
+    The process used to develop and review CKS topics includes the following:
+  </p>
+  <ul
+    aria-label="Stages to develop and review CKS topics"
+  >
+    <li>
+      topic development and selection
+    </li>
+    <li>
+      scoping
+    </li>
+    <li>
+      developing clinical questions and scenarios
+    </li>
+    <li>
+      literature searching
+    </li>
+    <li>
+      evaluating and summarising the evidence
+    </li>
+    <li>
+      developing clinical recommendations
+    </li>
+    <li>
+      external consultation
+    </li>
+    <li>
+      release.
+    </li>
+  </ul>
+  <h3>
+    Evidence-based
+  </h3>
+  <p>
+    CKS topics are developed and updated using the best available evidence. High-quality secondary evidence from NICE accredited resources (for example, NICE guidance and Cochrane systematic reviews) is identified first, and primary research and expert opinion sought where necessary.
+  </p>
+  <h3>
+    Relevant information
+  </h3>
+  <p>
+    The development process has a number of checks to make sure that the information is relevant and appropriate to primary care professionals:
+  </p>
+  <ul
+    aria-label="CKS process checks for relevant information"
+  >
+    <li>
+      thorough scoping and review process
+    </li>
+    <li>
+      input from healthcare professionals with primary care experience
+    </li>
+    <li>
+      consultation with GPs, pharmacists, lay members
+    </li>
+    <li>
+      feedback received from external reviews.
+    </li>
+  </ul>
+  <p>
+    More detailed information on the way CKS topics are developed can be found in the
+     
+    <a
+      href="https://www.nice.org.uk/media/default/About/what-we-do/Evidence%20Services/CKS/CKS-guide.pdf"
+    >
+      CKS process guide (PDF, 400 KB)
+    </a>
+    .
+  </p>
+  <p>
+    <a
+      class="btn btn--secondary"
+      download=""
+      href="https://cks.clarity.co.uk/get-involved/"
+    >
+      Help develop CKS topics
+    </a>
+  </p>
+</div>
+`;

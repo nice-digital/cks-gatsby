@@ -4,12 +4,12 @@ import { Link } from "gatsby";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { PageHeader } from "@nice-digital/nds-page-header";
 import { Grid, GridItem } from "@nice-digital/nds-grid";
-import { Panel } from "@nice-digital/nds-panel";
 
+import { HelpPanel } from "../../components/HelpPanel/HelpPanel";
 import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 
-import styles from "./index.module.scss";
+import styles from "./about.module.scss";
 
 const AboutPage: React.FC = () => {
 	return (
@@ -96,26 +96,7 @@ const AboutPage: React.FC = () => {
 					</p>
 				</GridItem>
 				<GridItem cols={12} md={5} lg={4}>
-					<Panel>
-						<h2 className="h3">Help develop CKS</h2>
-						<p>
-							CKS topics rely on feedback from healthcare professionals,
-							patients groups, patients and carers to ensure they are accurate
-							and relevant.
-						</p>
-						<ul aria-label="How to help develop CKS">
-							<li>
-								<a href="https://cks.clarity.co.uk/get-involved/">
-									Get involved in the CKS development process
-								</a>
-							</li>
-							<li>
-								<a href="https://www.nice.org.uk/cks-feedback">
-									Send feedback on CKS topics
-								</a>
-							</li>
-						</ul>
-					</Panel>
+					<HelpPanel />
 				</GridItem>
 			</Grid>
 		</Layout>
