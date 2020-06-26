@@ -10,7 +10,7 @@ Feature: 404 Page
     Then I expect that element "h1" contains the text "Page not found"
 
   Scenario: The page is blocked from search indexing
-    Then I should see a meta tag named "robots" with the content "noindex"
+    Then I expect to see a meta tag named "robots" with the content "noindex"
 
   Scenario: Detect 404 page accessibility issues
     Then the page should have no accessibility issues

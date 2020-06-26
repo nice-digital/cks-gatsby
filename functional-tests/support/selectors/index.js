@@ -1,7 +1,12 @@
+// URL is global in Node 10 and above but needs an explicit import for Node 8
+const URL = require("url").URL;
+
 import {
 	path as whatsNewPath,
 	selectors as whatsNewSelectors,
 } from "./pages/whats-new";
+
+import commonSelectors from "./common";
 
 // Map of path regular expression to selectors
 const pageMappings = [
@@ -17,7 +22,7 @@ export const getSelector = (selectorName) => {
 			typeof path === "string" ? path === browserPath : path.test(browserPath)
 		),
 		pageSelectors = pageMapping && pageMapping.selectors,
-		selectors = Object.assign({}, pageSelectors),
+		selectors = Object.assign({}, commonSelectors, pageSelectors),
 		selector = selectors[selectorName];
 
 	if (!selector)
