@@ -7,7 +7,6 @@ import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
-import { setTimeout } from "timers";
 
 interface SearchResults {
 	failed: boolean;
@@ -87,17 +86,21 @@ const SearchPage: React.FC = () => {
 				{a11yMessage}
 			</div>
 			{!error && !data && (
-				<PageHeader heading="Search results" lead="Loading" />
+				<>
+					<SEO title="Search results loading" noIndex={true} />
+					<PageHeader heading="Search results" lead="Loading" />
+				</>
 			)}
-			{error && (
-				<PageHeader
-					heading="Error"
-					lead="We are currently experiencing issues with search. The issue will be
-resolved as soon as possible. We apologise for any inconvenience caused.
-"
-				/>
+			{(error || (data && data.failed)) && (
+				<>
+					<SEO title="Error loading search results" noIndex={true} />
+					<PageHeader
+						heading="Error"
+						lead="We are currently experiencing issues with search. The issue will be
+resolved as soon as possible. We apologise for any inconvenience caused."
+					/>
+				</>
 			)}
-			{data && data.failed && <div>Failed to load results</div>}
 			{data && !data.failed && <Results {...data} />}
 		</Layout>
 	);

@@ -1,12 +1,7 @@
 import React from "react";
 import fetch from "jest-fetch-mock";
 import { renderWithRouter, textContentMatcher } from "test-utils";
-import {
-	waitForDomChange,
-	wait,
-	fireEvent,
-	waitForElementToBeRemoved,
-} from "@testing-library/react";
+import { waitForDomChange, wait, fireEvent } from "@testing-library/react";
 import * as searchResponseLong from "./sample-data/search-response-long.json";
 import * as searchResponseShort from "./sample-data/search-response-short.json";
 import SearchPage from "../search";
