@@ -4,6 +4,7 @@ import { useLocation } from "@reach/router";
 import { Card } from "@nice-digital/nds-card";
 import { SimplePagination } from "@nice-digital/nds-simple-pagination";
 import { PageHeader } from "@nice-digital/nds-page-header";
+import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
@@ -60,7 +61,10 @@ const SearchPage: React.FC = () => {
 	const [a11yMessage, setA11yMessage] = useState<string>("");
 
 	function announce(message: string): void {
-		setA11yMessage(message);
+		setA11yMessage("");
+		setTimeout(() => {
+			setA11yMessage(message);
+		}, 250);
 	}
 
 	const location = useLocation();
@@ -137,11 +141,32 @@ const Results: React.FC<SearchResults> = ({
 	return (
 		<>
 			<SEO title={titleString(finalSearchText, currentPage)} noIndex={true} />
-			<ResultSummary
-				resultCount={resultCount}
-				finalSearchText={finalSearchText}
-				originalSearchText={originalSearch?.searchText}
-			/>
+			<Breadcrumbs>
+				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
+				<Breadcrumb to="/">CKS</Breadcrumb>
+				<Breadcrumb
+					to={currentPage > 1 ? `/search?q=${finalSearchText}` : undefined}
+				>
+					Search results {finalSearchText && `for ${finalSearchText}`}
+				</Breadcrumb>
+				{currentPage > 1 ? (
+					<Breadcrumb>Page {currentPage.toString(10)}</Breadcrumb>
+				) : (
+					<></>
+				)}
+			</Breadcrumbs>
+			<div
+				id="search-results-summary"
+				data-original-search-text={originalSearch?.searchText || ""}
+				data-final-search-text={finalSearchText}
+				data-result-count={resultCount}
+			>
+				<ResultSummary
+					resultCount={resultCount}
+					finalSearchText={finalSearchText}
+					originalSearchText={originalSearch?.searchText}
+				/>
+			</div>
 			{documents.length > 0 && <ResultsList documents={documents} />}
 			{resultCount > pageSize && <SimplePagination {...paginationProps} />}
 		</>
@@ -207,9 +232,9 @@ interface ResultsList {
 }
 
 const ResultsList: React.FC<ResultsList> = ({ documents }) => (
-	<ol className="list--unstyled">
+	<ol className="list--unstyled grid">
 		{documents?.map(({ id, title, pathAndQuery, teaser }) => (
-			<li key={id}>
+			<li key={id} data-g="12 md:8">
 				<Card
 					summary={<span dangerouslySetInnerHTML={{ __html: teaser }} />}
 					headingText={<span dangerouslySetInnerHTML={{ __html: title }} />}
