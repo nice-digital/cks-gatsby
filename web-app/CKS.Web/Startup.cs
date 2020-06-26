@@ -59,13 +59,14 @@ namespace CKS.Web
 		{
 			app.UseDeveloperExceptionPage();
 
-			ConfigureRedirects(app, env);
+			var gatsbyPublicDir = Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public");
+
+			ConfigureRedirects(app, env, gatsbyPublicDir);
 
 			app.UseStatusCodePagesWithReExecute("/{0}.html");
 
 			// Serve static files straight for Gatsby's public folder when running locally.
 			// This means you don't have to copy the Gatsby output into the wwwroot folder like we do on TeamCity.
-			var gatsbyPublicDir = Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public");
 			var localGatsbyFileProvider = new PhysicalFileProvider(gatsbyPublicDir);
 			app.UseDefaultFiles(new DefaultFilesOptions
 			{
@@ -88,9 +89,10 @@ namespace CKS.Web
 			});
 		}
 
-		private void ConfigureRedirects(IApplicationBuilder app, IWebHostEnvironment env)
+		private void ConfigureRedirects(IApplicationBuilder app, IWebHostEnvironment env, string webRootPath = null)
 		{
-			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
+			string htaccessPath = webRootPath ?? env.WebRootPath;
+			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(htaccessPath, ".htaccess")))
 				app.UseRewriter(
 					new RewriteOptions()
 						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
