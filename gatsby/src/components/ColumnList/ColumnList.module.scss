@@ -1,0 +1,40 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.list {
+  background: $nds-colour-true-white;
+  border: 1px solid $nds-colour-border;
+  list-style: none;
+  margin: 0;
+  padding: rem($nds-spacing-small 0);
+
+  li {
+    break-inside: avoid;
+    display: block;
+  }
+
+  a {
+    display: block;
+    padding: rem($nds-spacing-small $nds-spacing-medium);
+  }
+
+  @include mq($from: sm) {
+    column-count: 2;
+    column-gap: rem($nds-spacing-medium);
+
+    // @supports (display: grid) {
+    //   display: grid;
+    //   grid-template-columns: 1fr 1fr 1fr;
+    //   grid-template-rows: 1fr 1fr 1fr;
+    //   grid-auto-flow: column;
+
+    //   li {
+    //     //flex: 1 1 80px;
+    //   }
+    // }
+  }
+
+  @include mq($from: md) {
+    column-count: 3;
+    column-gap: rem($nds-spacing-medium);
+  }
+}
