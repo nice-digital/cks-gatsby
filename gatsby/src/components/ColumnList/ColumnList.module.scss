@@ -20,17 +20,6 @@
   @include mq($from: sm) {
     column-count: 2;
     column-gap: rem($nds-spacing-medium);
-
-    // @supports (display: grid) {
-    //   display: grid;
-    //   grid-template-columns: 1fr 1fr 1fr;
-    //   grid-template-rows: 1fr 1fr 1fr;
-    //   grid-auto-flow: column;
-
-    //   li {
-    //     //flex: 1 1 80px;
-    //   }
-    // }
   }
 
   @include mq($from: md) {
