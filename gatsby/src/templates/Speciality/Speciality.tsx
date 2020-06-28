@@ -9,7 +9,7 @@ import { Speciality } from "../../types";
 import { SEO } from "../../components/SEO/SEO";
 import { ColumnList } from "../../components/ColumnList/ColumnList";
 
-type SpecialityPageProps = PageProps<
+export type SpecialityPageProps = PageProps<
 	{
 		speciality: Speciality;
 	},
@@ -26,9 +26,22 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 		[topics]
 	);
 
+	const metaDescription = useMemo(
+		() =>
+			[
+				"Speciality ",
+				name.charAt(0).toLowerCase() + name.slice(1),
+				", containing practical guidance on best practice for ",
+				topics.length,
+				" primary care topic",
+				topics.length > 1 ? "s" : "",
+			].join(""),
+		[name, topics]
+	);
+
 	return (
 		<Layout>
-			<SEO title={name + " | Specialities"} />
+			<SEO title={name + " | Specialities"} description={metaDescription} />
 
 			<Breadcrumbs>
 				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
