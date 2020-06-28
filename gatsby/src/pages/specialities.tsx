@@ -9,7 +9,7 @@ import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 import { ColumnList } from "../components/ColumnList/ColumnList";
 
-type SpecialitiesPageProps = PageProps<{
+export type SpecialitiesPageProps = PageProps<{
 	allSpecialities: {
 		nodes: PartialSpeciality[];
 	};
