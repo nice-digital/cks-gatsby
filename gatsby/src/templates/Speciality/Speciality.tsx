@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
@@ -21,6 +21,11 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 		speciality: { name, topics },
 	},
 }: SpecialityPageProps) => {
+	const orderedTopics = useMemo(
+		() => topics.sort((a, b) => a.topicName.localeCompare(b.topicName)),
+		[topics]
+	);
+
 	return (
 		<Layout>
 			<SEO title={name + " | Specialities"} />
@@ -39,7 +44,7 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 			<PageHeader heading={name} />
 
 			<ColumnList aria-label={`A to Z of topics within ${name}`}>
-				{topics.map(({ id, topicName, slug }) => (
+				{orderedTopics.map(({ id, topicName, slug }) => (
 					<li key={id}>
 						<Link to={`/topics/${slug}/`}>{topicName}</Link>
 					</li>
