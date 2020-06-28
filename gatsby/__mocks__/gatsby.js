@@ -3,9 +3,11 @@
 const React = require("react");
 const gatsby = jest.requireActual("gatsby");
 
+const navigate = jest.fn();
+
 module.exports = {
 	...gatsby,
-	navigate: jest.fn(),
+	navigate: navigate,
 	graphql: jest.fn(),
 	Link: jest.fn().mockImplementation(
 		// these props are invalid for an `a` tag
@@ -18,11 +20,17 @@ module.exports = {
 			ref,
 			replace,
 			to,
+			onClick,
 			...rest
 		}) =>
 			React.createElement("a", {
 				...rest,
 				href: to,
+				onClick: e => {
+					// Call the navigate mock function, so tests can asserts on calls to the mock
+					navigate(to);
+					onClick && onClick(e);
+				},
 			})
 	),
 	StaticQuery: jest.fn(),
