@@ -5,7 +5,7 @@ const isInDocker = !!process.env.IN_DOCKER,
 
 exports.config = {
 	sync: true,
-	maxInstances: isInDocker ? 5 : 2,
+	maxInstances: isInDocker ? 10 : 2,
 	services: isInDocker ? [] : ["selenium-standalone"],
 	seleniumLogs: "./logs",
 
@@ -15,13 +15,9 @@ exports.config = {
 		{
 			browserName: "chrome",
 			chromeOptions: {
-				args: ["--window-size=1366,768"],
+				args: ["--window-size=1366,768"].concat(isInDocker ? "--headless" : []),
 			},
 		},
-		//Disabled firefox tests as there is a card open to fix them: CKS-301
-		// {
-		// 	browserName: "firefox",
-		// },
 	],
 
 	logLevel: "error",

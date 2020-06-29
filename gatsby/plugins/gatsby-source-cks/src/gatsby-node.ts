@@ -13,12 +13,8 @@ interface ConfigOptions {
 	apiBaseUrl: string;
 	/** The api key for authentication via a request header */
 	apiKey: string;
-	/**
-	 * The date from which to load changes.
-	 *
-	 * Leave blank to default to the start of the previous month.
-	 */
-	changesSinceDate?: Date;
+	/** The date from which to load changes. */
+	changesSinceDate: Date;
 }
 
 /**
@@ -38,15 +34,24 @@ export const sourceNodes = async (
 	configOptions: ConfigOptions
 ): Promise<undefined> => {
 	const {
-		reporter: { activityTimer },
+		reporter: { activityTimer, info },
 	} = sourceNodesArgs;
 
-	const { start, setStatus, end } = activityTimer(`Creating nodes`);
+	info(
+		`Date for getting major changes/updates: ${configOptions.changesSinceDate.toISOString()}`
+	);
+
+	const { start, setStatus, end } = activityTimer(
+		`Download data and creating CKS nodes`
+	);
 	start();
 
 	// Configure the API authentication and base URL before downloading data
 	configure(configOptions);
-	const { fullTopics, changes } = await downloadAllData(sourceNodesArgs);
+	const { fullTopics, changes } = await downloadAllData(
+		sourceNodesArgs,
+		configOptions.changesSinceDate
+	);
 
 	// Create all of our different nodes
 	createTopicNodes(fullTopics, sourceNodesArgs);
@@ -54,7 +59,7 @@ export const sourceNodes = async (
 	createChangeNodes(changes, sourceNodesArgs);
 	createChapterNotes(fullTopics, sourceNodesArgs);
 
-	setStatus(`Created nodes`);
+	setStatus(`Created all nodes`);
 	end();
 
 	return;

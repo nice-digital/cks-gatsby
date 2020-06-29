@@ -41,5 +41,25 @@
     "functional-tests/steps/given.js",
     "functional-tests/steps/when.js",
     "functional-tests/steps/then.js"
-  ]
+  ],
+  "omnisharp.loggingLevel": "warning",
+  "csharp.unitTestDebuggingOptions": {
+    "logging": {
+      "moduleLoad": false
+    }
+  },
+  "[csharp]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [120]
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  }
 }

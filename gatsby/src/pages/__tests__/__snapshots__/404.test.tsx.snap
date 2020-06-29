@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`404 should match snapshot 1`] = `
+<div>
+  <main
+    class="container"
+    id="content-start"
+  >
+    <h1>
+      Page not found
+    </h1>
+  </main>
+</div>
+`;

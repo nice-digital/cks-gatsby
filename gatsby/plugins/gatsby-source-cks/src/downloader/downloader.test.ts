@@ -31,9 +31,9 @@ const apiMocks = {
 	getAllPartialTopics: getAllPartialTopics as jest.Mock<
 		Promise<ApiTopicsResponse>
 	>,
-	getChangesSince: getChangesSince as jest.Mock<
+	getChangesSince: (getChangesSince as jest.Mock<
 		Promise<ApiTopicChangeResponse>
-	>,
+	>).mockResolvedValue([]),
 	getFullTopicCached: getFullTopicCached as jest.Mock<Promise<ApiFullTopic>>,
 };
 
@@ -54,6 +54,7 @@ const sourceNodesArgs: SourceNodesArgs = ({
 				setStatus: jest.fn() as Function,
 				end: jest.fn() as Function,
 			} as ActivityTracker),
+		info: jest.fn(),
 	},
 } as unknown) as SourceNodesArgs;
 
@@ -74,7 +75,7 @@ describe("downloader", () => {
 
 	describe("downloadAllData", () => {
 		it("should download full topic index", async () => {
-			await downloadAllData(sourceNodesArgs);
+			await downloadAllData(sourceNodesArgs, new Date());
 			expect(getAllPartialTopics).toHaveBeenCalledTimes(1);
 			expect(getAllPartialTopics).toHaveBeenCalledWith();
 		});
@@ -86,7 +87,7 @@ describe("downloader", () => {
 
 			apiMocks.getFullTopicCached.mockResolvedValue(testFullTopic);
 
-			const { fullTopics } = await downloadAllData(sourceNodesArgs);
+			const { fullTopics } = await downloadAllData(sourceNodesArgs, new Date());
 
 			expect(getFullTopicCached).toHaveBeenCalledTimes(1);
 			expect(getFullTopicCached).toHaveBeenCalledWith(testPartialTopic, cache);
@@ -101,12 +102,14 @@ describe("downloader", () => {
 				text: "Lorem ipsum",
 			};
 
+			const date = new Date(2020, 0, 12);
+
 			apiMocks.getChangesSince.mockResolvedValue([mockChange]);
 
-			const { changes } = await downloadAllData(sourceNodesArgs);
+			const { changes } = await downloadAllData(sourceNodesArgs, date);
 
 			expect(getChangesSince).toHaveBeenCalledTimes(1);
-			expect(getChangesSince).toHaveBeenCalledWith();
+			expect(getChangesSince).toHaveBeenCalledWith(date);
 			expect(changes).toEqual([mockChange]);
 		});
 	});

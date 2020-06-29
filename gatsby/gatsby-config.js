@@ -6,10 +6,20 @@ require("dotenv").config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
+/** The date from which to get updates */
+const changesSinceDate = process.env.CHANGES_SINCE
+	? moment.utc(process.env.CHANGES_SINCE).toDate()
+	: moment()
+			.utc()
+			.subtract(1, "months")
+			.startOf("month")
+			.toDate();
+
 module.exports = {
 	siteMetadata: {
 		siteUrl: "https://cks.nice.org.uk",
 		title: "CKS",
+		changesSinceDate,
 	},
 	plugins: [
 		{
@@ -41,9 +51,7 @@ module.exports = {
 			options: {
 				apiKey: process.env.API_KEY || "abc123",
 				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000/api",
-				changesSinceDate: process.env.CHANGES_SINCE
-					? moment(process.env.CHANGES_SINCE).toDate()
-					: null,
+				changesSinceDate,
 			},
 		},
 		{

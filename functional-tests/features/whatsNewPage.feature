@@ -11,3 +11,6 @@ Feature: Whats New Page
   Scenario: Detect mobile Whats New page accessibility issues
     Given I have a screen that is 320 by 568 pixels
     Then the page should have no accessibility issues
+
+  Scenario: View list of topic changes
+    Then I expect to see a list of topic changes
