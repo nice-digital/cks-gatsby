@@ -6,6 +6,11 @@ Feature: Specialities list page
     Given I open the url "/specialities/"
     And I have a screen that is 1366 by 768 pixels
 
+  Scenario: Old URL redirect
+    And I debug
+    Given I open the url "/clinicalspeciality"
+    Then I expect that the path is "/specialities/"
+
   Scenario: Detect desktop accessibility issues
     Then the page should have no accessibility issues
 
