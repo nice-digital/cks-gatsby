@@ -92,7 +92,7 @@ const SearchPage: React.FC = () => {
 			{!error && !data && (
 				<>
 					<SEO title="Search results loading" noIndex={true} />
-					<PageHeader heading="Search results" lead="Loading" />
+					<PageHeader heading="CKS search results" lead="Loading" />
 				</>
 			)}
 			{(error || (data && data.failed)) && (
@@ -224,7 +224,7 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 		</>
 	);
 
-	return <PageHeader heading="Search results" lead={LeadText} />;
+	return <PageHeader heading="CKS search results" lead={LeadText} />;
 };
 
 interface ResultsList {

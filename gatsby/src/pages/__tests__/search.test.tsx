@@ -3,6 +3,7 @@ import fetch from "jest-fetch-mock";
 import { renderWithRouter, textContentMatcher } from "test-utils";
 import { waitForDomChange, wait, fireEvent } from "@testing-library/react";
 import * as searchResponseLong from "./sample-data/search-response-long.json";
+import * as searchResponseLongPage2 from "./sample-data/search-response-long-page-2.json";
 import * as searchResponseShort from "./sample-data/search-response-short.json";
 import SearchPage from "../search";
 
@@ -33,6 +34,29 @@ describe("Search Page", () => {
 				)
 			)
 		).toBeInTheDocument();
+	});
+
+	describe("Breadcrumbs", () => {
+		it("should not link to the original query if we're on page 1", async () => {
+			fetch.mockResponse(JSON.stringify(searchResponseLong));
+			const component = renderWithRouter(<SearchPage />);
+			await waitForDomChange();
+			expect(
+				component.queryByText(textContentMatcher("Search results for test"), {
+					selector: ".breadcrumbs a",
+				})
+			).toBeFalsy();
+		});
+		it("should include a link to the original query if we're on page >= 2", async () => {
+			fetch.mockResponse(JSON.stringify(searchResponseLongPage2));
+			const component = renderWithRouter(<SearchPage />);
+			await waitForDomChange();
+			expect(
+				component.queryByText(textContentMatcher("Search results for test"), {
+					selector: ".breadcrumbs a",
+				})
+			).toBeTruthy();
+		});
 	});
 
 	it("should not show any pagination if there are fewer results than the supplied page limit", async () => {
@@ -91,9 +115,9 @@ describe("Search Page", () => {
 			const { container, findByText } = renderWithRouter(<SearchPage />);
 			const ariaLiveDiv = container.querySelector("[aria-live]");
 			fireEvent.click(await findByText("Next page"));
-			waitForDomChange().then(() =>
-				expect(ariaLiveDiv?.textContent).toEqual("Loading search results")
-			);
+			wait().then(() => {
+				expect(ariaLiveDiv?.textContent).toEqual("Loading search results");
+			});
 		});
 	});
 });
