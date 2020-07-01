@@ -66,6 +66,14 @@ const IndexPage: React.FC<IndexProps> = ({
 
 			<h2>Topics</h2>
 			<p>TODO: Show A-Z of all {allTopics.nodes.length} topics</p>
+
+			<p>
+				{"abcdefghijklmnoprstuvw".split("").map(letter => (
+					<Link key={letter} to={`/topics/#${letter}`}>
+						{letter}&nbsp;
+					</Link>
+				))}
+			</p>
 		</Layout>
 	);
 };

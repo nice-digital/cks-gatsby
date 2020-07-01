@@ -3,6 +3,8 @@ import React, { ReactNode } from "react";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 
+import "./Layout.scss";
+
 type LayoutProps = {
 	children: ReactNode;
 };

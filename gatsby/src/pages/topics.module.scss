@@ -1,0 +1,81 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.alphabet {
+  list-style: none;
+  margin: rem(0 0 $nds-spacing-large);
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  li {
+    display: inline-block;
+    font-weight: bold;
+    margin: rem(0 $nds-spacing-small $nds-spacing-small 0);
+  }
+
+  a,
+  span {
+    display: block;
+    padding: rem($nds-spacing-small 0);
+    text-align: center;
+    width: 3.95ch;
+  }
+
+  a {
+    background: $nds-colour-true-white;
+    border: 1px solid $nds-colour-border;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    color: $nds-colour-nice-dark-grey;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    column-gap: rem($nds-spacing-small);
+    grid-template-columns: repeat(auto-fit, minmax(4ch, 1fr));
+    row-gap: rem($nds-spacing-small);
+
+    li {
+      margin: 0;
+    }
+
+    a,
+    span {
+      width: auto;
+    }
+  }
+}
+
+.topics {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.letterHeading {
+  @include nds-font-size(h4);
+  background: $nds-colour-true-white;
+  border: 1px solid $nds-colour-border;
+  font-weight: 900;
+  margin: 0;
+  max-width: 100%;
+  padding: rem($nds-spacing-small $nds-spacing-medium);
+  position: sticky;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.backToTop {
+  display: block;
+  margin: rem($nds-spacing-medium 0 $nds-spacing-x-large);
+}
