@@ -5,16 +5,17 @@
   border: 1px solid $nds-colour-border;
   list-style: none;
   margin: 0;
-  padding: rem($nds-spacing-small 0);
+  padding: rem($nds-spacing-x-small 0);
 
   li {
     break-inside: avoid;
     display: block;
+    padding: rem($nds-spacing-x-small) 0; // Make room for the anchor focus outline
   }
 
   a {
     display: block;
-    padding: rem($nds-spacing-small $nds-spacing-medium);
+    padding: rem($nds-spacing-x-small $nds-spacing-medium);
   }
 
   @include mq($from: sm) {
