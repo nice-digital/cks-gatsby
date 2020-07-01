@@ -5,6 +5,10 @@ Feature: Whats New Page
   Background:
     Given I open the url "/whats-new/"
 
+  Scenario: Old URL redirect
+    Given I open the url "/whatsnew"
+    Then I expect that the path is "/whats-new/"
+
   Scenario: Detect Whats New page accessibility issues
     Then the page should have no accessibility issues
 
