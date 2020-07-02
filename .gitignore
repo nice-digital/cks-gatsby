@@ -105,3 +105,9 @@ redux*
 
 # TernJS port file
 .tern-port
+
+# Mac folder pref files
+.DS_Store
+
+# IDE specific config
+gatsby/.idea

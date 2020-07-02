@@ -3,81 +3,154 @@ import { graphql, Link } from "gatsby";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { Hero } from "@nice-digital/nds-hero";
 import { Button } from "@nice-digital/nds-button";
+import { Grid, GridItem } from "@nice-digital/nds-grid";
 
 import { Layout } from "../components/Layout/Layout";
-import { PartialTopic } from "../types";
+import { PartialSpeciality } from "../types";
 import { SEO } from "../components/SEO/SEO";
+import { ColumnList } from "../components/ColumnList/ColumnList";
 
 type IndexProps = {
 	data: {
-		allTopics: {
-			nodes: PartialTopic[];
+		allSpecialities: {
+			nodes: PartialSpeciality[];
+		};
+		allCksTopic: {
+			distinct: string[];
 		};
 	};
 };
 
+const alphabet = [
+	"a",
+	"b",
+	"c",
+	"d",
+	"e",
+	"f",
+	"g",
+	"h",
+	"i",
+	"j",
+	"k",
+	"l",
+	"m",
+	"n",
+	"o",
+	"p",
+	"q",
+	"r",
+	"s",
+	"t",
+	"u",
+	"v",
+	"w",
+	"x",
+	"y",
+	"z",
+];
+
 const IndexPage: React.FC<IndexProps> = ({
-	data: { allTopics },
+	data: {
+		allSpecialities: { nodes: specialitiesNodes },
+		allCksTopic: { distinct: topicNames },
+	},
 }: IndexProps) => {
+	const linkableLetters = Array.from(
+		new Set(topicNames.map(topicName => topicName.charAt(0).toLowerCase()))
+	);
+
+	const allTopicButtons = alphabet.map(letter => {
+		return {
+			letter,
+			linkable: linkableLetters.includes(letter),
+		};
+	});
+
 	return (
 		<Layout>
 			<SEO />
 			<Hero
 				title="Clinical Knowledge Summaries"
 				intro="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best&nbsp;practice"
-				actions={
-					<>
-						<Button to="/topics/" variant="cta" elementType={Link}>
-							Topics A to Z
-						</Button>
-						<Button to="/specialities/" elementType={Link}>
-							Specialities
-						</Button>
-					</>
-				}
 				header={
 					<Breadcrumbs>
 						<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
 						<Breadcrumb>CKS</Breadcrumb>
 					</Breadcrumbs>
 				}
-			>
-				<h2 className="h4 mt--0-md">Most viewed topics</h2>
-				<ul className="list--unstyled list--loose">
-					<li>
-						<Link to="/topics/lyme-disease/">Lyme disease</Link>
-					</li>
-					<li>
-						<Link to="/topics/hypertension-not-diabetic/">
-							Hypertension - not diabetic
-						</Link>
-					</li>
-					<li>
-						<Link to="/topics/diabetes-type-2/">Diabetes - type 2</Link>
-					</li>
-					<li>
-						<Link to="/topics/gout/">Gout</Link>
-					</li>
-					<li>
-						<Link to="/topics/menopause/">Menopause</Link>
-					</li>
-				</ul>
-			</Hero>
+			/>
 
-			<h2>Topics</h2>
-			<p>TODO: Show A-Z of all {allTopics.nodes.length} topics</p>
+			<Grid gutter="loose">
+				<GridItem md={6} cols={12}>
+					<h2>Health topics A to Z</h2>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+						quaerat eaque ipsam non illo unde voluptate praesentium consequuntur
+						expedita reprehenderit?
+					</p>
+
+					<div>
+						{allTopicButtons.map(({ letter, linkable }) => (
+							<Link key={letter} to={linkable ? `/topics#${letter}` : ""}>
+								{letter}
+							</Link>
+						))}
+					</div>
+
+					<h3>Frequently visited topics</h3>
+					<ColumnList plain>
+						<li>
+							<a href="#">Frequent 1</a>
+						</li>
+						<li>
+							<a href="#">Frequent 2</a>
+						</li>
+						<li>
+							<a href="#">Frequent 3</a>
+						</li>
+						<li>
+							<a href="#">Frequent 4</a>
+						</li>
+						<li>
+							<a href="#">Frequent 5</a>
+						</li>
+						<li>
+							<a href="#">Frequent 6</a>
+						</li>
+					</ColumnList>
+				</GridItem>
+				<GridItem md={6} cols={12}>
+					<h2>Specialities</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis
+						porro quos facere asperiores voluptate sed maxime expedita ratione.
+						Reiciendis.
+					</p>
+					<ColumnList plain>
+						{specialitiesNodes.map(({ id, name, slug }) => (
+							<li key={id}>
+								<Link to={`/specialities/${slug}`}>{name}</Link>
+							</li>
+						))}
+					</ColumnList>
+				</GridItem>
+			</Grid>
 		</Layout>
 	);
 };
 
 export default IndexPage;
 
-export const IndexPageQuery = graphql`
+export const query = graphql`
 	{
-		allTopics: allCksTopic {
+		allSpecialities: allCksSpeciality(sort: { fields: name }) {
 			nodes {
-				...PartialTopic
+				...PartialSpeciality
 			}
+		}
+		allCksTopic {
+			distinct(field: topicName)
 		}
 	}
 `;
