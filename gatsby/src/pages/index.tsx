@@ -10,6 +10,9 @@ import { PartialSpeciality } from "../types";
 import { SEO } from "../components/SEO/SEO";
 import { ColumnList } from "../components/ColumnList/ColumnList";
 
+import styles from "./index.module.scss";
+import topicStyles from "./topics.module.scss";
+
 type IndexProps = {
 	data: {
 		allSpecialities: {
@@ -81,46 +84,60 @@ const IndexPage: React.FC<IndexProps> = ({
 				}
 			/>
 
-			<Grid gutter="loose">
-				<GridItem md={6} cols={12}>
+			<Grid gutter="none">
+				<GridItem md={6} cols={12} className={styles.topicsColumn}>
 					<h2>Health topics A to Z</h2>
+
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
-						quaerat eaque ipsam non illo unde voluptate praesentium consequuntur
-						expedita reprehenderit?
+						There are over 350 topics, with focus on the most common and
+						significant presentations in primary care.
 					</p>
 
-					<div>
+					<ol
+						aria-label="Letters A to Z"
+						className={topicStyles.alphabet}
+						tabIndex={-1}
+					>
 						{allTopicButtons.map(({ letter, linkable }) => (
-							<Link key={letter} to={linkable ? `/topics#${letter}` : ""}>
-								{letter}
-							</Link>
+							<li key={`alphabet_${letter}`}>
+								{linkable ? (
+									<Link
+										to={`/topics/#${letter}`}
+										aria-label={`Letter '${letter.toUpperCase()}'`}
+									>
+										{letter.toUpperCase()}
+									</Link>
+								) : (
+									<span>{letter.toUpperCase()}</span>
+								)}
+							</li>
 						))}
-					</div>
+					</ol>
 
 					<h3>Frequently visited topics</h3>
 					<ColumnList plain>
 						<li>
-							<a href="#">Frequent 1</a>
+							<Link to="/topics/">Frequent 1</Link>
 						</li>
 						<li>
-							<a href="#">Frequent 2</a>
+							<Link to="/topics/">Frequent 2</Link>
 						</li>
 						<li>
-							<a href="#">Frequent 3</a>
+							<Link to="/topics/">Frequent 3</Link>
 						</li>
 						<li>
-							<a href="#">Frequent 4</a>
+							<Link to="/topics/">Frequent 4</Link>
 						</li>
 						<li>
-							<a href="#">Frequent 5</a>
+							<Link to="/topics/">Frequent 5</Link>
 						</li>
 						<li>
-							<a href="#">Frequent 6</a>
+							<Link to="/topics/">Frequent 6</Link>
 						</li>
 					</ColumnList>
 				</GridItem>
-				<GridItem md={6} cols={12}>
+
+				<GridItem md={6} cols={12} className={styles.specialitiesColumn}>
 					<h2>Specialities</h2>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis

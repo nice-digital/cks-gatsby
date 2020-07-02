@@ -1,0 +1,14 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.topicsColumn {
+  @include mq($from: md) {
+    padding-right: rem($nds-spacing-x-large) !important;
+  }
+}
+
+.specialitiesColumn {
+  @include mq($from: md) {
+    padding-left: rem($nds-spacing-x-large) !important;
+    border-left: 3px solid $nds-colour-border;
+  }
+}
