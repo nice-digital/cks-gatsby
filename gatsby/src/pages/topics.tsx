@@ -1,5 +1,5 @@
 import React, { useMemo, useCallback, MouseEvent } from "react";
-import { graphql, PageRendererProps, Link } from "gatsby";
+import { graphql, PageProps, Link } from "gatsby";
 
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { PageHeader } from "@nice-digital/nds-page-header";
@@ -13,15 +13,13 @@ import styles from "./topics.module.scss";
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
-type TopicPageProps = {
-	data: {
-		allTopics: {
-			nodes: Topic[];
-		};
+export type TopicsPageProps = PageProps<{
+	allTopics: {
+		nodes: Topic[];
 	};
-} & PageRendererProps;
+}>;
 
-const TopicsPage: React.FC<TopicPageProps> = ({ data }: TopicPageProps) => {
+const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 	const { nodes: topics } = data.allTopics;
 
 	const groupedTopics = useMemo(
@@ -73,21 +71,26 @@ const TopicsPage: React.FC<TopicPageProps> = ({ data }: TopicPageProps) => {
 								{letter.toUpperCase()}
 							</a>
 						) : (
-							<span>{letter.toUpperCase()}</span>
+							<span aria-label={`Letter '${letter.toUpperCase()}' (no topics)`}>
+								{letter.toUpperCase()}
+							</span>
 						)}
 					</li>
 				))}
 			</ol>
 
 			<nav aria-label="Topics A to Z">
-				<ol className={styles.topics} aria-label="A to Z">
+				<ol
+					className={styles.topics}
+					aria-label="Letters A to Z with matching topics"
+				>
 					{lettersWithTopics.map(({ letter, topics }) => (
 						<li key={letter}>
 							<h2
 								id={letter}
 								className={styles.letterHeading}
 								tabIndex={-1}
-								aria-label={`Topics starting '${letter.toUpperCase()}'`}
+								aria-label={`Topics starting with '${letter.toUpperCase()}'`}
 							>
 								{letter.toUpperCase()}
 							</h2>
