@@ -139,11 +139,7 @@ const IndexPage: React.FC<IndexProps> = ({
 
 				<GridItem md={6} cols={12} className={styles.specialitiesColumn}>
 					<h2>Specialities</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis
-						porro quos facere asperiores voluptate sed maxime expedita ratione.
-						Reiciendis.
-					</p>
+
 					<ColumnList plain>
 						{specialitiesNodes.map(({ id, name, slug }) => (
 							<li key={id}>
