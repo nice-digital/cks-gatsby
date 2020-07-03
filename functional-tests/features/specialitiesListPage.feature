@@ -3,7 +3,7 @@ Feature: Specialities list page
   I want to be able to use the CKS Specialities List Page
 
   Background:
-    Given I open the url "/specialities/"
+    Given I open the specialities list page
     And I have a screen that is 1366 by 768 pixels
 
   Scenario: Old URL redirect
@@ -29,5 +29,5 @@ Feature: Specialities list page
     Then I expect that element "h1" matches the text "Specialities"
 
   Scenario: Link to speciality page for allergies
-    When I click on the link "Allergies"
+    When I click the "Allergies" link
     Then I expect that the path is "/specialities/allergies/"

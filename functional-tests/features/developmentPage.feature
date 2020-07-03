@@ -3,7 +3,7 @@ Feature: Development process page
   I want to be able to use the CKS development process page
 
   Background:
-    Given I open the url "/about/development/"
+    Given I open the development page
     And I have a screen that is 1366 by 768 pixels
 
   Scenario: Old URL redirect

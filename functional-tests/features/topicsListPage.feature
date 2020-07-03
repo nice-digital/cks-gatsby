@@ -3,7 +3,7 @@ Feature: Topics List Page
   I want to be able to use the CKS Topics List Page
 
   Background:
-    Given I open the url "/topics/"
+    Given I open the topics list page
 
   Scenario: Detect Topics List page accessibility issues
     Then the page should have no accessibility issues

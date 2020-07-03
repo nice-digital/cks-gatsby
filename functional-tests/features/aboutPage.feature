@@ -3,12 +3,14 @@ Feature: About Page
   I want to be able to use the CKS About Page
 
   Background:
-    Given I open the url "/about/"
+    Given I open the about page
     And I have a screen that is 1366 by 768 pixels
 
+  @pending
   Scenario: Detect desktop accessibility issues
     Then the page should have no accessibility issues
 
+  @pending
   Scenario: Detect mobile accessibility issues
     Given I have a screen that is 320 by 568 pixels
     Then the page should have no accessibility issues
@@ -25,5 +27,5 @@ Feature: About Page
     Then I expect that element "h1" matches the text "About CKS"
 
   Scenario: Link to development page
-    When I click on the link "Read more about the CKS development process"
+    When I click the "Read more about the CKS development process" link
     Then I expect that the path is "/about/development/"

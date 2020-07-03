@@ -3,11 +3,10 @@ Feature: Speciality Page
   I want to be able to use the CKS Speciality Page
 
   Background:
-    Given I open the url "/specialities/allergies/"
+    Given I open the allergies speciality page
     And I have a screen that is 1366 by 768 pixels
 
   Scenario: Detect desktop accessibility issues
-    And I debug
     Then the page should have no accessibility issues
 
   Scenario: Detect mobile accessibility issues
@@ -30,5 +29,5 @@ Feature: Speciality Page
     Then I expect that element "h1" matches the text "Allergies"
 
   Scenario: Link to topic page for allergic rhinitis
-    When I click on the link "Allergic rhinitis"
+    When I click the "Allergic rhinitis" link
     Then I expect that the path is "/topics/allergic-rhinitis/"
