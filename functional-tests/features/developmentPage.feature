@@ -18,15 +18,15 @@ Feature: Development process page
     Then the page should have no accessibility issues
 
   Scenario: NICE breadcrumb
-    When I click on the "NICE" breadcrumb
+    When I click the "NICE" breadcrumb
     Then I expect that the url is "https://www.nice.org.uk/"
 
   Scenario: Homepage breadcrumb
-    When I click on the "CKS" breadcrumb
+    When I click the "CKS" breadcrumb
     Then I expect that the path is "/"
 
   Scenario: About breadcrumb
-    When I click on the "About CKS" breadcrumb
+    When I click the "About CKS" breadcrumb
     Then I expect that the path is "/about/"
 
   Scenario: Heading text

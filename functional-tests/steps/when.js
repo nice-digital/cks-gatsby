@@ -6,6 +6,8 @@ import waitFor from "@nice-digital/wdio-cucumber-steps/lib/support/action/waitFo
 import checkIfElementExists from "@nice-digital/wdio-cucumber-steps/lib/support/lib/checkIfElementExists";
 
 import typeInSearchBox from "../support/action/typeInSearchBox";
+import scrollInToView from "../support/action/scrollInToView";
+import waitForTitleToChange from "../support/action/waitForTitleToChange";
 import { getSelector } from "../support/selectors";
 
 When(/^I type "([^"]*)" in the header search box$/, typeInSearchBox);
@@ -32,29 +34,33 @@ When(/^I click "([^"]*)" in the autocomplete options$/, (text) => {
 	);
 });
 
-When(/^I click on the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
-	const breadcrumbsListSelector = getSelector("breadcrumbs list");
+When(/^I click the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
+	const pageTitle = browser.getTitle(),
+		breadcrumbsListSelector = getSelector("breadcrumbs list");
 
-	// Scroll to the element and wait for the scroll to complete as we're using smooth scrolling
-	browser.scroll(breadcrumbsListSelector);
-	browser.waitUntil(() =>
-		browser.isVisibleWithinViewport(breadcrumbsListSelector)
-	);
-
+	checkIfElementExists(breadcrumbsListSelector);
+	scrollInToView(breadcrumbsListSelector);
 	$(breadcrumbsListSelector).$(`=${breadcrumbText}`).click();
+	waitForTitleToChange(pageTitle);
 });
 
-// Use this for link clicks as it waits for the link to scroll into view before clicking it
-// This is beacuse we're using CSS smooth scrolling, so we need to wait for the scroll to finish
-// And the ekement to be in view before we click it
+// Use this for link clicks as it waits for the link to scroll into view before clicking it.
+// This is beacuse we're using CSS smooth scrolling (scroll-behavior: smooth; in CSS), which
+// means the usual WDIO click won't work.
+// We need to wait for the following before clicking:
+// 	- the scroll to finish
+//	- the element to be in viewport
+//	- the scrolling to have stopped so the element is not moving
 When(/^I click the "([^"]*)" link$/, (linkText) => {
-	const selector = `=${linkText}`;
+	const pageTitle = browser.getTitle(),
+		selector = `=${linkText}`;
 
 	checkIfElementExists(selector);
-
-	// Scroll to the element and wait for the scroll to complete as we're using smooth scrolling
-	browser.scroll(selector);
-	browser.waitUntil(() => browser.isVisibleWithinViewport(selector));
-
+	scrollInToView(selector);
 	browser.click(selector);
+
+	// Because we use Gatsby links using history API we don't have full page loads
+	// so we have to wait for the title to change before we click. This guarantees the
+	// new page is ready before we execute the next step.
+	waitForTitleToChange(pageTitle);
 });
