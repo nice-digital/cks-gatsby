@@ -84,6 +84,17 @@ const SearchPage: React.FC = () => {
 			});
 	}, [location]);
 
+	useEffect(() => {
+		if (data) {
+			if (window.dataLayer) {
+				window.dataLayer.push({
+					event: "search.resultsLoaded",
+				});
+			}
+		}
+		return;
+	}, [data]);
+
 	return (
 		<Layout>
 			<div className="visually-hidden" aria-live="polite">
