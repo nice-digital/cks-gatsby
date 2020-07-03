@@ -16,6 +16,6 @@ Given(/^I open the (.*) page$/, (pageName) => {
 	waitFor("header");
 
 	// We don't care about the global nav banners and they just add noise, so close them
-	closeGlobalNavCookieMessage();
 	closeGlobalNavCovidMessage();
+	closeGlobalNavCookieMessage();
 });
