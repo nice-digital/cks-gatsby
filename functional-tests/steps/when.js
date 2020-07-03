@@ -53,7 +53,7 @@ When(/^I click the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
 //	- the scrolling to have stopped so the element is not moving
 When(/^I click the "([^"]*)" link$/, (linkText) => {
 	const pageTitle = browser.getTitle(),
-		selector = `=${linkText}`;
+		selector = `a=${linkText}`;
 
 	checkIfElementExists(selector);
 	scrollInToView(selector);
