@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { Hero } from "@nice-digital/nds-hero";
-import { Button } from "@nice-digital/nds-button";
 import { Grid, GridItem } from "@nice-digital/nds-grid";
 
 import { Layout } from "../components/Layout/Layout";
@@ -117,22 +116,24 @@ const IndexPage: React.FC<IndexProps> = ({
 					<h3>Frequently visited topics</h3>
 					<ColumnList plain>
 						<li>
-							<Link to="/topics/">Frequent 1</Link>
+							<Link to="/topics/hypertension-not-diabetic/">
+								Hypertension - not diabetic
+							</Link>
 						</li>
 						<li>
-							<Link to="/topics/">Frequent 2</Link>
+							<Link to="/topics/diabetes-type-2/">Diabetes - type 2</Link>
 						</li>
 						<li>
-							<Link to="/topics/">Frequent 3</Link>
+							<Link to="/topics/gout/">Gout</Link>
 						</li>
-						<li>
-							<Link to="/topics/">Frequent 4</Link>
+						<li className={styles.showAtMD}>
+							<Link to="/topics/migraine/">Migraine</Link>
 						</li>
-						<li>
-							<Link to="/topics/">Frequent 5</Link>
+						<li className={styles.showAtMD}>
+							<Link to="/topics/allergic-rhinitis/">Allergic rhinitis</Link>
 						</li>
-						<li>
-							<Link to="/topics/">Frequent 6</Link>
+						<li className={styles.showAtMD}>
+							<Link to="/topics/asthma/">Asthma</Link>
 						</li>
 					</ColumnList>
 				</GridItem>

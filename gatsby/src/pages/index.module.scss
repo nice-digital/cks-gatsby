@@ -1,4 +1,5 @@
 @import '~@nice-digital/nds-core/scss/core.scss';
+@import '~@nice-digital/design-system/scss/helpers/_helpers-visibility.scss';
 
 .topicsColumn {
   @include mq($from: md) {
@@ -11,4 +12,9 @@
     padding-left: rem($nds-spacing-x-large) !important;
     border-left: 3px solid $nds-colour-border;
   }
+}
+
+.showAtMD {
+  @extend .hide-xs;
+  @extend .show-md;
 }

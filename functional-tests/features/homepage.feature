@@ -1,10 +1,16 @@
 Feature: Homepage
   As a user of CKS I can use the Home Page
 
-  Scenario: User can see the site title
+  Background:
     Given I open the url "/"
+
+  Scenario: User can see the site title
     When I wait on element "h1" to exist
     Then I expect that element "h1" contains the text "Clinical Knowledge Summaries"
+
+  Scenario: Clicking on a topic initial takes you to the topics page at that letter
+    When I click on the link "A"
+    Then I expect the url to contain "/topics/#a"
 
   Scenario: Detect Home page accessibility issues
     Then the page should have no accessibility issues
