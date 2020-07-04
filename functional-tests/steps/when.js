@@ -1,3 +1,6 @@
+// URL is global in Node 10 and above but needs an explicit import for Node 8
+const URL = require("url").URL;
+
 import { When } from "cucumber";
 import "@nice-digital/wdio-cucumber-steps/lib/when";
 
@@ -8,6 +11,7 @@ import checkIfElementExists from "@nice-digital/wdio-cucumber-steps/lib/support/
 import typeInSearchBox from "../support/action/typeInSearchBox";
 import scrollInToView from "../support/action/scrollInToView";
 import waitForTitleToChange from "../support/action/waitForTitleToChange";
+import waitForScrollToElement from "../support/action/waitForScrollToElement";
 import { getSelector } from "../support/selectors";
 
 When(/^I type "([^"]*)" in the header search box$/, typeInSearchBox);
@@ -53,14 +57,23 @@ When(/^I click the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
 //	- the scrolling to have stopped so the element is not moving
 When(/^I click the "([^"]*)" link$/, (linkText) => {
 	const pageTitle = browser.getTitle(),
+		url = new URL(browser.getUrl()),
 		selector = `a=${linkText}`;
 
 	checkIfElementExists(selector);
 	scrollInToView(selector);
 	browser.click(selector);
 
-	// Because we use Gatsby links using history API we don't have full page loads
-	// so we have to wait for the title to change before we click. This guarantees the
-	// new page is ready before we execute the next step.
-	waitForTitleToChange(pageTitle);
+	const newUrl = new URL(browser.getUrl());
+
+	if (newUrl.pathname !== url.pathname) {
+		// Because we use Gatsby links using history API we don't have full page loads
+		// so we have to wait for the title to change before we click. This guarantees the
+		// new page is ready before we execute the next step.
+		waitForTitleToChange(pageTitle);
+	} else {
+		// We must be linking to a hash on the same page, which must be the ID of another element
+		const targetElementId = newUrl.hash;
+		waitForScrollToElement(targetElementId);
+	}
 });
