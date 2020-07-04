@@ -3,7 +3,7 @@ Feature: Whats New Page
   I want to be able to use the CKS Whats New Page
 
   Background:
-    Given I open the url "/whats-new/"
+    Given I open the what's new page
 
   Scenario: Old URL redirect
     Given I open the url "/whatsnew"
