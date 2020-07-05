@@ -11,6 +11,7 @@ import checkIfElementExists from "@nice-digital/wdio-cucumber-steps/lib/support/
 import typeInSearchBox from "../support/action/typeInSearchBox";
 import scrollInToView from "../support/action/scrollInToView";
 import waitForTitleToChange from "../support/action/waitForTitleToChange";
+import waitForUrlToChange from "../support/action/waitForUrlToChange";
 import waitForScrollToElement from "../support/action/waitForScrollToElement";
 import { getSelector } from "../support/selectors";
 
@@ -57,16 +58,19 @@ When(/^I click the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
 //	- the scrolling to have stopped so the element is not moving
 When(/^I click the "([^"]*)" link$/, (linkText) => {
 	const pageTitle = browser.getTitle(),
-		url = new URL(browser.getUrl()),
+		urlStr = browser.getUrl(),
 		selector = `a=${linkText}`;
 
 	checkIfElementExists(selector);
 	scrollInToView(selector);
 	browser.click(selector);
 
+	waitForUrlToChange(urlStr);
+
+	const oldUrl = new URL(urlStr);
 	const newUrl = new URL(browser.getUrl());
 
-	if (newUrl.pathname !== url.pathname) {
+	if (newUrl.pathname !== oldUrl.pathname) {
 		// Because we use Gatsby links using history API we don't have full page loads
 		// so we have to wait for the title to change before we click. This guarantees the
 		// new page is ready before we execute the next step.
