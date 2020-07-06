@@ -14,7 +14,7 @@ exports.config = {
 	capabilities: [
 		{
 			browserName: "chrome",
-			chromeOptions: {
+			"goog:chromeOptions": {
 				args: ["--window-size=1366,768"].concat(isInDocker ? "--headless" : []),
 			},
 		},
