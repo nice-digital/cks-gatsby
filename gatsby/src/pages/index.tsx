@@ -7,7 +7,6 @@ import { Button } from "@nice-digital/nds-button";
 import { Layout } from "../components/Layout/Layout";
 import { PartialTopic } from "../types";
 import { SEO } from "../components/SEO/SEO";
-import { Helmet } from "react-helmet";
 
 type IndexProps = {
 	data: {
@@ -23,14 +22,12 @@ const IndexPage: React.FC<IndexProps> = ({
 	return (
 		<Layout>
 			<SEO
-				additionalMetadata={
+				additionalMetadata={[
 					[
-						[
-							"google-site-verification",
-							"3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4",
-						],
-					]
-				}
+						"google-site-verification",
+						"3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4",
+					],
+				]}
 			/>
 			<Hero
 				title="Clinical Knowledge Summaries"
