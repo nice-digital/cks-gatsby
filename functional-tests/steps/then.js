@@ -19,13 +19,13 @@ Then("I expect that the CKS GTM container is available", () => {
 	expect(containerId).to.equal("GTM-54QC4NL");
 });
 
-Then(/^I see "([^"]*)" in the autocomplete suggestions$/, (text) => {
-	waitFor(".autocomplete__option");
-	checkContainsText("element", ".autocomplete__menu", null, text);
+Then(/^I expect to see "([^"]*)" in the autocomplete suggestions$/, (text) => {
+	waitFor(getSelector("autocomplete option"));
+	checkContainsText("element", getSelector("autocomplete menu"), null, text);
 });
 
 Then(
-	/^I should see a meta tag named "([^"]*)" with the content "([^"]*)"$/,
+	/^I expect to see a meta tag named "([^"]*)" with the content "([^"]*)"$/,
 	(name, content) => {
 		const selector = `meta[name='${name}']`;
 		expect(browser.element(selector).getAttribute("content")).to.equal(content);

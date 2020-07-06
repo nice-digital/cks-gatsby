@@ -32,48 +32,42 @@ namespace CKS.Web
 
 			var environmentString = Configuration.GetValue<string>("ElasticSearchEnvironment");
 			ApplicationEnvironment environmentAsEnum;
-			Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum);
-			if (environmentAsEnum != null)
+			if (Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum))
 			{
 				services.AddSingleton<ISearchProvider, SearchProvider>(ISearchProvider => new SearchProvider(environmentAsEnum));
+			}
+			else
+			{
+				throw new Exception("ElasticSearchEnvironment app setting could not be parsed");
 			}
 
 			services.AddControllers();
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
-			if (env.IsDevelopment())
-			{
-				app.UseDeveloperExceptionPage();
-			}
-
-			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(env.WebRootPath, ".htaccess")))
-				app.UseRewriter(
-					new RewriteOptions()
-						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
-					);
+			ConfigureRedirects(app, env);
 
 			app.UseStatusCodePagesWithReExecute("/{0}.html");
-
 			app.UseDefaultFiles();
 			app.UseStaticFiles(new GatsbyStaticFileOptions { });
 
-			app.UseRouting();
-			app.UseAuthorization();
-
-			app.UseEndpoints(endpoints =>
-			{
-				endpoints.MapControllers();
-			});
+			ConfigureRouting(app);
 		}
 
 		public void ConfigureDevelopment(IApplicationBuilder app, IWebHostEnvironment env)
 		{
+			app.UseDeveloperExceptionPage();
+
+			var gatsbyPublicDir = Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public");
+
+			ConfigureRedirects(app, env, gatsbyPublicDir);
+
+			app.UseStatusCodePagesWithReExecute("/{0}.html");
+
 			// Serve static files straight for Gatsby's public folder when running locally.
 			// This means you don't have to copy the Gatsby output into the wwwroot folder like we do on TeamCity.
-			var localGatsbyFileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public"));
+			var localGatsbyFileProvider = new PhysicalFileProvider(gatsbyPublicDir);
 			app.UseDefaultFiles(new DefaultFilesOptions
 			{
 				FileProvider = localGatsbyFileProvider
@@ -83,7 +77,26 @@ namespace CKS.Web
 				FileProvider = localGatsbyFileProvider
 			});
 
-			Configure(app, env);
+			ConfigureRouting(app);
+		}
+
+		private void ConfigureRouting(IApplicationBuilder app)
+		{
+			app.UseRouting();
+			app.UseEndpoints(endpoints =>
+			{
+				endpoints.MapControllers();
+			});
+		}
+
+		private void ConfigureRedirects(IApplicationBuilder app, IWebHostEnvironment env, string webRootPath = null)
+		{
+			string htaccessPath = webRootPath ?? env.WebRootPath;
+			using (StreamReader gatsbyModRewriteStreamReader = File.OpenText(Path.Join(htaccessPath, ".htaccess")))
+				app.UseRewriter(
+					new RewriteOptions()
+						.AddApacheModRewrite(gatsbyModRewriteStreamReader)
+					);
 		}
 	}
 }
