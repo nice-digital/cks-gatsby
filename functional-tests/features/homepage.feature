@@ -2,7 +2,8 @@ Feature: Homepage
   As a user of CKS I can use the Home Page
 
   Background:
-    Given I open the url "/"
+    Given I open the home page
+    And I have a screen that is 1366 by 768 pixels
 
   Scenario: User can see the site title
     When I wait on element "h1" to exist
