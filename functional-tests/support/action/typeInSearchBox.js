@@ -1,12 +1,11 @@
 import setInputField from "@nice-digital/wdio-cucumber-steps/lib/support/action/setInputField";
 import waitFor from "@nice-digital/wdio-cucumber-steps/lib/support/action/waitFor";
-
-const searchInputSelector = "header form[role='search'] [name='q']";
+import { getSelector } from "../selectors/";
 
 /**
  * Type the given characters into the header search input box
  */
 module.exports = (text) => {
-	waitFor(searchInputSelector);
-	setInputField("set", text, searchInputSelector);
+	waitFor(getSelector("header search input"));
+	setInputField("set", text, getSelector("header search input"));
 };
