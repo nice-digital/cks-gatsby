@@ -1,0 +1,13 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.body {
+  margin-bottom: rem($nds-spacing-large);
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  @include mq($from: md) {
+    margin-bottom: 0;
+  }
+}
