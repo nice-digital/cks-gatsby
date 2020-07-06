@@ -24,13 +24,12 @@ const IndexPage: React.FC<IndexProps> = ({
 		<Layout>
 			<SEO
 				additionalMetadata={
-					//we pass in a react helmet component here as due to this bug https://github.com/nfl/react-helmet/issues/342
-					<Helmet>
-						<meta
-							name="google-site-verification"
-							content="3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4"
-						/>
-					</Helmet>
+					[
+						[
+							"google-site-verification",
+							"3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4",
+						],
+					]
 				}
 			/>
 			<Hero

@@ -8,7 +8,7 @@ type SEOProps = {
 	title?: string;
 	description?: string;
 	noIndex?: boolean;
-	additionalMetadata?: React.ReactNode;
+	additionalMetadata?: Array<Array<string>>;
 };
 
 export const SEO: React.FC<SEOProps> = ({
@@ -44,6 +44,9 @@ export const SEO: React.FC<SEOProps> = ({
 			<meta name="twitter:site" content="@NICEcomms" />
 			<meta name="twitter:creator" content="@NICEcomms" />
 			<meta name="theme-color" content="#004650" />
+			{additionalMetadata?.map((x, i) => (
+				<meta key={i} name={x[0]} content={x[1]} />
+			))}
 			{noIndex && <meta name="robots" content="noindex" />}
 			<link
 				rel="search"
@@ -54,6 +57,5 @@ export const SEO: React.FC<SEOProps> = ({
 			<html lang="en-GB" />
 			<link rel="icon" href="/favicon.ico" />
 		</Helmet>
-		{additionalMetadata}
 	</>
 );
