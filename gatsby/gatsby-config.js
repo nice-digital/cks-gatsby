@@ -61,6 +61,7 @@ module.exports = {
 			resolve: "gatsby-plugin-eslint",
 			options: {
 				test: /\.(?:j|t)sx?$/,
+				exclude: /global-nav/,
 			},
 		},
 		{
