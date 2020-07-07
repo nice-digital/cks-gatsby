@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, PageRendererProps, Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Topic } from "../types";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
@@ -10,7 +10,7 @@ type TopicPageProps = {
 			nodes: Topic[];
 		};
 	};
-} & PageRendererProps;
+};
 
 const TopicsPage: React.FC<TopicPageProps> = ({ data }: TopicPageProps) => (
 	<Layout>
