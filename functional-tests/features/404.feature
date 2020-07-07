@@ -3,7 +3,7 @@ Feature: 404 Page
   I want to see the CKS 404 Page when a page is not found
 
   Background:
-    Given I open the url "/random-route"
+    Given I open the not found page
 
   Scenario: User sees custom content for 404 response
     When I wait on element "h1" to exist

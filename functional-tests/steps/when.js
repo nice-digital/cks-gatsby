@@ -3,9 +3,11 @@ import "@nice-digital/wdio-cucumber-steps/lib/when";
 
 import clickElement from "@nice-digital/wdio-cucumber-steps/lib/support/action/clickElement";
 import waitFor from "@nice-digital/wdio-cucumber-steps/lib/support/action/waitFor";
-import debug from "@nice-digital/wdio-cucumber-steps/lib/support/action/debug";
+import checkIfElementExists from "@nice-digital/wdio-cucumber-steps/lib/support/lib/checkIfElementExists";
 
 import typeInSearchBox from "../support/action/typeInSearchBox";
+import scrollInToView from "../support/action/scrollInToView";
+import waitForTitleToChange from "../support/action/waitForTitleToChange";
 import { getSelector } from "../support/selectors";
 
 When(/^I type "([^"]*)" in the header search box$/, typeInSearchBox);
@@ -32,6 +34,33 @@ When(/^I click "([^"]*)" in the autocomplete options$/, (text) => {
 	);
 });
 
-When(/^I click on the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
-	$(getSelector("breadcrumbs list")).$(`=${breadcrumbText}`).click();
+When(/^I click the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
+	const pageTitle = browser.getTitle(),
+		breadcrumbsListSelector = getSelector("breadcrumbs list");
+
+	checkIfElementExists(breadcrumbsListSelector);
+	scrollInToView(breadcrumbsListSelector);
+	$(breadcrumbsListSelector).$(`=${breadcrumbText}`).click();
+	waitForTitleToChange(pageTitle);
+});
+
+// Use this for link clicks as it waits for the link to scroll into view before clicking it.
+// This is beacuse we're using CSS smooth scrolling (scroll-behavior: smooth; in CSS), which
+// means the usual WDIO click won't work.
+// We need to wait for the following before clicking:
+// 	- the scroll to finish
+//	- the element to be in viewport
+//	- the scrolling to have stopped so the element is not moving
+When(/^I click the "([^"]*)" link$/, (linkText) => {
+	const pageTitle = browser.getTitle(),
+		selector = `a=${linkText}`;
+
+	checkIfElementExists(selector);
+	scrollInToView(selector);
+	browser.click(selector);
+
+	// Because we use Gatsby links using history API we don't have full page loads
+	// so we have to wait for the title to change before we click. This guarantees the
+	// new page is ready before we execute the next step.
+	waitForTitleToChange(pageTitle);
 });

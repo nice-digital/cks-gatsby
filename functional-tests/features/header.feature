@@ -3,7 +3,7 @@ Feature: Header
   I want to be able to use the header to navigate and search
 
   Background:
-    Given I open the url "/"
+    Given I open the home page
 
   Scenario: Use autocomplete to get a search suggestion for a topic name
     When I type "Ast" in the header search box

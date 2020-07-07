@@ -2,7 +2,7 @@ import React from "react";
 import { textContentMatcher } from "test-utils";
 import { render, RenderResult } from "@testing-library/react";
 
-import AboutPage from ".";
+import AboutPage from "../";
 
 describe("About page", () => {
 	let renderResult: RenderResult;
