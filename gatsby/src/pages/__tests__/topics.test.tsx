@@ -55,7 +55,7 @@ describe("TopicsPage", () => {
 			).toHaveAttribute("href", expectedHref);
 		});
 
-		it("should render topics A to  as current page breadcrumb without link", () => {
+		it("should render topics A to Z as current page breadcrumb without link", () => {
 			const { queryByText } = renderResult;
 
 			expect(
