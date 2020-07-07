@@ -9,7 +9,7 @@ import React, {
 import { navigate, useStaticQuery, graphql } from "gatsby";
 import { useLocation } from "@reach/router";
 import { PartialTopic } from "src/types";
-import GlobalNavHeader from "./GlobalNavHeader";
+import { Header as GlobalNavHeader } from "@nice-digital/global-nav";
 
 const allTopicsQuery = graphql`
 	query AllTopics {
@@ -93,30 +93,24 @@ export const Header: React.FC = () => {
 	}, []);
 
 	return (
-		<>
-			{typeof window !== "undefined" && (
-				<Suspense fallback={<></>}>
-					<div ref={globalNavWrapperRef}>
-						<GlobalNavHeader
-							service="cks"
-							skipLinkId="content-start"
-							onNavigating={(e): void => {
-								if (e.href[0] === "/") navigate(e.href);
-								else window.location.href = e.href;
-							}}
-							auth={false}
-							search={{
-								placeholder: "Search CKS…",
-								autocomplete: autocompleteTerms,
-								onSearching: (e): void => {
-									navigate("/search?q=" + e.query);
-								},
-								query: queryTerm,
-							}}
-						/>
-					</div>
-				</Suspense>
-			)}
-		</>
+		<div ref={globalNavWrapperRef}>
+			<GlobalNavHeader
+				service="cks"
+				skipLinkId="content-start"
+				onNavigating={(e): void => {
+					if (e.href[0] === "/") navigate(e.href);
+					else window.location.href = e.href;
+				}}
+				auth={false}
+				search={{
+					placeholder: "Search CKS…",
+					autocomplete: autocompleteTerms,
+					onSearching: (e): void => {
+						navigate("/search?q=" + e.query);
+					},
+					query: queryTerm,
+				}}
+			/>
+		</div>
 	);
 };
