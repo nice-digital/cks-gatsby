@@ -1,6 +1,5 @@
 import React from "react";
-
-const GlobalNavFooter = React.lazy(() => import("./GlobalNavFooter"));
+import GlobalNavFooter from "./GlobalNavFooter";
 
 export const Footer: React.FC = () => (
 	<>
