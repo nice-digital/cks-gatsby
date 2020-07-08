@@ -10,7 +10,7 @@ import { SEO } from "../components/SEO/SEO";
 import { ColumnList } from "../components/ColumnList/ColumnList";
 
 import styles from "./index.module.scss";
-import topicStyles from "./topics.module.scss";
+import { Alphabet, Letter } from "../components/Alphabet/Alphabet";
 
 type IndexProps = {
 	data: {
@@ -85,36 +85,29 @@ const IndexPage: React.FC<IndexProps> = ({
 
 			<Grid gutter="none">
 				<GridItem md={6} cols={12} className={styles.topicsColumn}>
-					<h2>Health topics A to Z</h2>
-
-					<p>
-						There are over 350 topics, with focus on the most common and
-						significant presentations in primary care.
+					<h2 id="topics-a-to-z">Health topics A to Z</h2>
+					<p id="topics-a-to-z-desc">
+						Over 330 topics organised alphabetically, with focus on the most
+						common and significant presentations in primary&nbsp;care.
 					</p>
 
-					<ol
-						aria-label="Letters A to Z"
-						className={topicStyles.alphabet}
-						tabIndex={-1}
+					<Alphabet
+						chunky
+						aria-labelledby="topics-a-to-z"
+						aria-describedby="topics-a-to-z-desc"
 					>
 						{allTopicButtons.map(({ letter, linkable }) => (
-							<li key={`alphabet_${letter}`}>
-								{linkable ? (
-									<Link
-										to={`/topics/#${letter}`}
-										aria-label={`Letter '${letter.toUpperCase()}'`}
-									>
-										{letter.toUpperCase()}
-									</Link>
-								) : (
-									<span>{letter.toUpperCase()}</span>
-								)}
-							</li>
+							<Letter
+								key={`alphabet_${letter}`}
+								to={linkable && `/topics/#${letter}`}
+							>
+								{letter.toUpperCase()}
+							</Letter>
 						))}
-					</ol>
+					</Alphabet>
 
-					<h3>Frequently visited topics</h3>
-					<ColumnList plain>
+					<h3 id="frequently-visited-topics">Frequently visited topics</h3>
+					<ColumnList plain aria-labelledby="frequently-visited-topics">
 						<li>
 							<Link to="/topics/hypertension-not-diabetic/">
 								Hypertension - not diabetic
@@ -139,9 +132,11 @@ const IndexPage: React.FC<IndexProps> = ({
 				</GridItem>
 
 				<GridItem md={6} cols={12} className={styles.specialitiesColumn}>
-					<h2>Specialities</h2>
+					<h2 id="specialties">Specialties</h2>
 
-					<ColumnList plain>
+					<p>Our knowledge summaries grouped by&nbsp;specialty.</p>
+
+					<ColumnList plain aria-labelledby="specialties">
 						{specialitiesNodes.map(({ id, name, slug }) => (
 							<li key={id}>
 								<Link to={`/specialities/${slug}/`}>{name}</Link>

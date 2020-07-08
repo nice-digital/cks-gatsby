@@ -47,22 +47,26 @@ describe("Home page", () => {
 		expect(queryByText("Specialities")?.tagName).toBe("H2");
 	});
 
-	it("should show any supplied specialities", () => {
-		const { queryByText } = renderResult;
-		specialities.map(({ name }) => {
-			expect(queryByText(name)).toBeInTheDocument();
+	describe("Topic list", () => {
+		it("should render an A-Z link for any topics that begin with that letter", () => {
+			const { queryByText } = renderResult;
+			expect(queryByText("A")?.tagName).toBe("A");
+			expect(queryByText("B")?.tagName).toBe("A");
+			expect(queryByText("D")?.tagName).toBe("A");
+		});
+
+		it("should not provide an A-Z link if there are no topics beginning with that letter", () => {
+			const { queryByText } = renderResult;
+			expect(queryByText("C")?.tagName).toBe("SPAN");
 		});
 	});
 
-	it("should render an A-Z link for any topics that begin with that letter", () => {
-		const { queryByText } = renderResult;
-		expect(queryByText("A")?.tagName).toBe("A");
-		expect(queryByText("B")?.tagName).toBe("A");
-		expect(queryByText("D")?.tagName).toBe("A");
-	});
-
-	it("should not provide an A-Z link if there are no topics beginning with that letter", () => {
-		const { queryByText } = renderResult;
-		expect(queryByText("C")?.tagName).toBe("SPAN");
+	describe("Specialty list", () => {
+		it("should show any supplied specialities", () => {
+			const { queryByText } = renderResult;
+			specialities.map(({ name }) => {
+				expect(queryByText(name)).toBeInTheDocument();
+			});
+		});
 	});
 });
