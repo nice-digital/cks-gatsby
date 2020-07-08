@@ -1,5 +1,3 @@
-import "@nice-digital/design-system/scss/base.scss";
-
 // Gatsby hook for when the route has changed on the client side
 // See https://www.gatsbyjs.org/docs/browser-apis/#onRouteUpdate
 export const onRouteUpdate = ({ prevLocation, location }) => {
