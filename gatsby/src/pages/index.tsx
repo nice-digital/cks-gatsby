@@ -21,7 +21,14 @@ const IndexPage: React.FC<IndexProps> = ({
 }: IndexProps) => {
 	return (
 		<Layout>
-			<SEO />
+			<SEO
+				additionalMetadata={[
+					{
+						name: "google-site-verification",
+						content: "3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4",
+					},
+				]}
+			/>
 			<Hero
 				title="Clinical Knowledge Summaries"
 				intro="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best&nbsp;practice"
