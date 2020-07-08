@@ -7,12 +7,13 @@ module.exports = {
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
 	],
-	plugins: ["react", "@typescript-eslint", "prettier"],
+	plugins: ["react", "@typescript-eslint", "prettier", "testing-library"],
 	extends: [
 		"plugin:react/recommended",
 		"plugin:prettier/recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
+		"plugin:testing-library/react",
 	],
 	parserOptions: {
 		ecmaVersion: 2018,
@@ -34,6 +35,12 @@ module.exports = {
 			rules: {
 				"@typescript-eslint/explicit-function-return-type": "off",
 				"@typescript-eslint/no-var-requires": "off",
+			},
+		},
+		{
+			files: ["**/*.tsx"],
+			rules: {
+				"react/prop-types": "off",
 			},
 		},
 	],
