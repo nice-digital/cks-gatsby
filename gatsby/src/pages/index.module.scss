@@ -1,8 +1,15 @@
 @import '~@nice-digital/nds-core/scss/core.scss';
-@import '~@nice-digital/design-system/scss/helpers/_helpers-visibility.scss';
+
+.topicsColumn h2,
+.specialitiesColumn h2 {
+  margin-top: 0;
+}
 
 .topicsColumn {
+  margin-bottom: rem($nds-spacing-large);
+
   @include mq($from: md) {
+    margin: 0;
     padding-right: rem($nds-spacing-x-large) !important;
   }
 }
@@ -10,11 +17,14 @@
 .specialitiesColumn {
   @include mq($from: md) {
     padding-left: rem($nds-spacing-x-large) !important;
-    border-left: 3px solid $nds-colour-border;
+    border-left: rem($nds-spacing-xx-small) solid $nds-colour-border;
   }
 }
 
 .showAtMD {
-  @extend .hide-xs;
-  @extend .show-md;
+  display: none !important;
+
+  @include mq($from: md) {
+    display: block !important;
+  }
 }
