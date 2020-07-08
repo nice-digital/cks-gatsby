@@ -1,0 +1,9 @@
+@import '~@nice-digital/design-system/scss/base.scss';
+
+html {
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion) {
+    scroll-behavior: auto;
+  }
+}
