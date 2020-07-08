@@ -9,7 +9,6 @@
   margin-bottom: rem($nds-spacing-large);
 
   @include mq($from: md) {
-    margin: 0;
     padding-right: rem($nds-spacing-x-large) !important;
   }
 }
@@ -18,6 +17,10 @@
   @include mq($from: md) {
     padding-left: rem($nds-spacing-x-large) !important;
     border-left: rem($nds-spacing-xx-small) solid $nds-colour-border;
+
+    ol {
+      margin-top: rem($nds-spacing-large); // To align with the left column
+    }
   }
 }
 
