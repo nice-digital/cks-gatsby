@@ -12,9 +12,6 @@ import { getPath } from "../support/pagePaths";
 Given(/^I open the (.*) page$/, (pageName) => {
 	openWebsite("url", getPath(pageName));
 
-	// TODO: Remove this when https://nicedigital.atlassian.net/browse/CKS-307 is done
-	waitFor("header");
-
 	// We don't care about the global nav banners and they just add noise, so close them
 	closeGlobalNavCovidMessage();
 	closeGlobalNavCookieMessage();
