@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, MouseEvent } from "react";
+import React, { useMemo } from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
