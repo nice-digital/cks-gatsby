@@ -144,7 +144,7 @@ const IndexPage: React.FC<IndexProps> = ({
 					<ColumnList plain>
 						{specialitiesNodes.map(({ id, name, slug }) => (
 							<li key={id}>
-								<Link to={`/specialities/${slug}`}>{name}</Link>
+								<Link to={`/specialities/${slug}/`}>{name}</Link>
 							</li>
 						))}
 					</ColumnList>
