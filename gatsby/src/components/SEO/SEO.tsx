@@ -4,11 +4,16 @@ import { Helmet } from "react-helmet";
 const defaultDescription =
 	"Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice";
 
+type MetaData = {
+	name: string;
+	content: string;
+};
+
 type SEOProps = {
 	title?: string;
 	description?: string;
 	noIndex?: boolean;
-	additionalMetadata?: Array<Array<string>>;
+	additionalMetadata?: Array<MetaData>;
 };
 
 export const SEO: React.FC<SEOProps> = ({
@@ -45,8 +50,9 @@ export const SEO: React.FC<SEOProps> = ({
 			<meta name="twitter:creator" content="@NICEcomms" />
 			<meta name="theme-color" content="#004650" />
 			{additionalMetadata?.map((x, i) => (
-				<meta key={i} name={x[0]} content={x[1]} />
+				<meta key={i} name={x.name} content={x.content} />
 			))}
+
 			{noIndex && <meta name="robots" content="noindex" />}
 			<link
 				rel="search"

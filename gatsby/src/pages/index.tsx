@@ -23,10 +23,10 @@ const IndexPage: React.FC<IndexProps> = ({
 		<Layout>
 			<SEO
 				additionalMetadata={[
-					[
-						"google-site-verification",
-						"3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4",
-					],
+					{
+						name: "google-site-verification",
+						content: "3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4",
+					},
 				]}
 			/>
 			<Hero
