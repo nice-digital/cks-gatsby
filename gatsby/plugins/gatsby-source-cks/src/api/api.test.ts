@@ -1,5 +1,4 @@
 import fetch from "node-fetch";
-import moment from "moment";
 import { Cache } from "gatsby";
 
 import {

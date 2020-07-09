@@ -31,7 +31,7 @@ describe("Header", () => {
 		const { queryByText } = renderWithRouter(<Header />);
 
 		await wait(async () => {
-			expect(await queryByText("Sign in")).toBeFalsy();
+			expect(queryByText("Sign in")).toBeFalsy();
 		});
 	});
 
@@ -49,7 +49,7 @@ describe("Header", () => {
 
 		fireEvent.click(await findByText("About CKS"), { button: 0 });
 
-		wait(() => expect(navigate).toHaveBeenCalledWith("/about"));
+		await wait(() => expect(navigate).toHaveBeenCalledWith("/about"));
 	});
 
 	it("should set search box default value from q querystring value", async () => {
