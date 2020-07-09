@@ -33,7 +33,7 @@ const SpecialitiesPage: React.FC<SpecialitiesPageProps> = ({
 
 		<PageHeader
 			heading="Specialities"
-			lead="There are over 350 topics, with focus on the most common and significant presentations in primary care"
+			lead="There are over 350 topics, with focus on the most common and significant presentations in primary care."
 		/>
 
 		<ColumnList aria-label="A to Z of specialities">
