@@ -61,9 +61,9 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 					<Letter
 						key={`alphabet_${letter}`}
 						to={topics.length > 0 && `#${letter}`}
-						aria-label={`Letter '${letter.toUpperCase()}${
-							topics.length > 0 ? " (no topics)" : ""
-						}'`}
+						label={`Letter '${letter.toUpperCase()}'${
+							topics.length === 0 ? " (no topics)" : ""
+						}`}
 					>
 						{letter.toUpperCase()}
 					</Letter>

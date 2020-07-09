@@ -34,6 +34,7 @@ export interface LetterProps {
 	label?: string;
 	chunky?: boolean;
 	to?: string | false;
+	[key: string]: unknown;
 }
 
 export const Letter: React.FC<LetterProps> = ({
@@ -41,6 +42,7 @@ export const Letter: React.FC<LetterProps> = ({
 	label,
 	to,
 	chunky,
+	...attrs
 }: LetterProps) => {
 	let body: React.ReactNode;
 
@@ -61,7 +63,10 @@ export const Letter: React.FC<LetterProps> = ({
 	}
 
 	return (
-		<li className={`${styles.letter} ${chunky ? styles.chunkyLetter : ""}`}>
+		<li
+			className={`${styles.letter} ${chunky ? styles.chunkyLetter : ""}`}
+			{...attrs}
+		>
 			{body}
 		</li>
 	);
