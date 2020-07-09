@@ -44,7 +44,7 @@ describe("Home page", () => {
 		const { queryByText } = renderResult;
 		expect(queryByText("Clinical Knowledge Summaries")?.tagName).toBe("H1");
 		expect(queryByText("Health topics A to Z")?.tagName).toBe("H2");
-		expect(queryByText("Specialities")?.tagName).toBe("H2");
+		expect(queryByText("Specialties")?.tagName).toBe("H2");
 	});
 
 	describe("Topic list", () => {
