@@ -1,30 +1,44 @@
 @import '~@nice-digital/nds-core/scss/core.scss';
 
-.list {
-  background: $nds-colour-true-white;
-  border: 1px solid $nds-colour-border;
+.base {
   list-style: none;
   margin: 0;
-  padding: rem($nds-spacing-x-small 0);
 
   li {
     break-inside: avoid;
     display: block;
-    padding: rem($nds-spacing-x-small) 0; // Make room for the anchor focus outline
+    padding: rem($nds-spacing-small) 0; // Make room for the anchor focus outline
   }
 
   a {
     display: block;
+  }
+
+  column-gap: rem($nds-spacing-medium);
+}
+
+.boxed {
+  composes: base;
+  background: $nds-colour-true-white;
+  border: 1px solid $nds-colour-border;
+
+  a {
     padding: rem($nds-spacing-x-small $nds-spacing-medium);
   }
 
-  @include mq($from: sm) {
+  @include mq($from: md) {
     column-count: 2;
-    column-gap: rem($nds-spacing-medium);
   }
 
-  @include mq($from: md) {
+  @include mq($from: lg) {
     column-count: 3;
-    column-gap: rem($nds-spacing-medium);
+  }
+}
+
+.plain {
+  composes: base;
+
+  @include mq($from: sm) {
+    column-count: 2;
   }
 }

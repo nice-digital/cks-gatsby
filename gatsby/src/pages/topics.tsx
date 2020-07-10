@@ -8,6 +8,7 @@ import { Topic } from "../types";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 import { ColumnList } from "../components/ColumnList/ColumnList";
+import { Alphabet, Letter } from "../components/Alphabet/Alphabet";
 
 import styles from "./topics.module.scss";
 
@@ -55,29 +56,19 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 				lead="There are over 350 topics, with focus on the most common and significant presentations in primary care."
 			/>
 
-			<ol
-				id="a-to-z"
-				aria-label="Letters A to Z"
-				className={styles.alphabet}
-				tabIndex={-1}
-			>
+			<Alphabet id="a-to-z" aria-label="Letters A to Z" tabIndex={-1}>
 				{groupedTopics.map(({ letter, topics }) => (
-					<li key={`alphabet_${letter}`}>
-						{topics.length > 0 ? (
-							<a
-								href={`#${letter}`}
-								aria-label={`Letter '${letter.toUpperCase()}'`}
-							>
-								{letter.toUpperCase()}
-							</a>
-						) : (
-							<span aria-label={`Letter '${letter.toUpperCase()}' (no topics)`}>
-								{letter.toUpperCase()}
-							</span>
-						)}
-					</li>
+					<Letter
+						key={`alphabet_${letter}`}
+						to={topics.length > 0 && `#${letter}`}
+						label={`Letter '${letter.toUpperCase()}'${
+							topics.length === 0 ? " (no topics)" : ""
+						}`}
+					>
+						{letter.toUpperCase()}
+					</Letter>
 				))}
-			</ol>
+			</Alphabet>
 
 			<nav aria-label="Topics A to Z">
 				<ol
