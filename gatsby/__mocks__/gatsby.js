@@ -27,9 +27,13 @@ module.exports = {
 				...rest,
 				href: to,
 				onClick: (e) => {
-					// Call the navigate mock function, so tests can asserts on calls to the mock
-					navigate(to);
 					onClick && onClick(e);
+
+					if (!e.defaultPrevented) {
+						e.preventDefault(); // To stop "Not implemented: navigation (except hash changes)" warnings
+						// Call the navigate mock function, so tests can asserts on calls to the mock
+						navigate(to);
+					}
 				},
 			})
 	),
