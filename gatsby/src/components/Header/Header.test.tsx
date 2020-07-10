@@ -60,7 +60,7 @@ describe("Header", () => {
 
 	it("should set search box default value from q querystring value", async () => {
 		const { findByRole } = renderWithRouter(<Header />, {
-			route: "/search?q=diabetes",
+			route: "/search/?q=diabetes",
 		});
 
 		expect(await findByRole("combobox")).toHaveAttribute("value", "diabetes");
@@ -68,11 +68,11 @@ describe("Header", () => {
 
 	it("should update search box value from q querystring value when URL changes", async () => {
 		const { findByRole, history } = renderWithRouter(<Header />, {
-			route: "/search?q=diabetes",
+			route: "/search/?q=diabetes",
 		});
 
 		const searchBox = await findByRole("combobox");
-		await history.navigate("/search?q=cancer");
+		await history.navigate("/search/?q=cancer");
 
 		await waitFor(() => expect(searchBox).toHaveAttribute("value", "cancer"));
 	});
@@ -85,7 +85,7 @@ describe("Header", () => {
 
 		fireEvent.submit(await findByRole("search"));
 
-		expect(navigate).toHaveBeenCalledWith("/search?q=diabetes");
+		expect(navigate).toHaveBeenCalledWith("/search/?q=diabetes");
 	});
 
 	it("should use topic names with topic URL for autocomplete suggestions", async () => {
