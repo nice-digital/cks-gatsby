@@ -1,11 +1,4 @@
-import React, {
-	useEffect,
-	Suspense,
-	lazy,
-	useState,
-	useMemo,
-	useCallback,
-} from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { navigate, useStaticQuery, graphql } from "gatsby";
 import { useLocation } from "@reach/router";
 import { PartialTopic } from "src/types";
