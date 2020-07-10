@@ -99,6 +99,7 @@ describe("Search Page", () => {
 				expect(ariaLiveDiv?.textContent).toEqual("Search results loaded");
 			});
 		});
+
 		it("should make a screen reader announcement when the search result response has errored", async () => {
 			fetch.mockReject(new Error("Something's gone wrong!"));
 			const component = renderWithRouter(<SearchPage />);
@@ -110,12 +111,13 @@ describe("Search Page", () => {
 				);
 			});
 		});
+
 		it("should make a screen reader announcement when the search result response is loading", async () => {
 			fetch.mockResponse(JSON.stringify(searchResponseLong));
 			const { container, findByText } = renderWithRouter(<SearchPage />);
 			const ariaLiveDiv = container.querySelector("[aria-live]");
 			fireEvent.click(await findByText("Next page"));
-			wait().then(() => {
+			await wait(() => {
 				expect(ariaLiveDiv?.textContent).toEqual("Loading search results");
 			});
 		});
