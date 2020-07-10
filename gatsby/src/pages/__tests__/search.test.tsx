@@ -1,7 +1,7 @@
 import React from "react";
 import fetch from "jest-fetch-mock";
 import { renderWithRouter, textContentMatcher } from "test-utils";
-import { waitForDomChange, wait, fireEvent } from "@testing-library/react";
+import { waitForDomChange, waitFor, fireEvent } from "@testing-library/react";
 import * as searchResponseLong from "./sample-data/search-response-long.json";
 import * as searchResponseLongPage2 from "./sample-data/search-response-long-page-2.json";
 import * as searchResponseShort from "./sample-data/search-response-short.json";
@@ -95,7 +95,7 @@ describe("Search Page", () => {
 			const component = renderWithRouter(<SearchPage />);
 			const ariaLiveDiv = component.container.querySelector("[aria-live]");
 			expect(ariaLiveDiv?.textContent).toEqual("");
-			await wait(() => {
+			await waitFor(() => {
 				expect(ariaLiveDiv?.textContent).toEqual("Search results loaded");
 			});
 		});
@@ -105,7 +105,7 @@ describe("Search Page", () => {
 			const component = renderWithRouter(<SearchPage />);
 			const ariaLiveDiv = component.container.querySelector("[aria-live]");
 			expect(ariaLiveDiv?.textContent).toEqual("");
-			await wait(() => {
+			await waitFor(() => {
 				expect(ariaLiveDiv?.textContent).toEqual(
 					"There was an error getting search results"
 				);
@@ -117,7 +117,7 @@ describe("Search Page", () => {
 			const { container, findByText } = renderWithRouter(<SearchPage />);
 			const ariaLiveDiv = container.querySelector("[aria-live]");
 			fireEvent.click(await findByText("Next page"));
-			await wait(() => {
+			await waitFor(() => {
 				expect(ariaLiveDiv?.textContent).toEqual("Loading search results");
 			});
 		});
