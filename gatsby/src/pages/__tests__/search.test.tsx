@@ -9,9 +9,15 @@ import SearchPage from "../search";
 
 fetch.enableMocks();
 
+jest.useFakeTimers();
+
 describe("Search Page", () => {
 	beforeEach(() => {
 		fetch.resetMocks();
+	});
+
+	afterEach(() => {
+		jest.clearAllTimers();
 	});
 
 	it("should render a loading message before the request comes in", async () => {
