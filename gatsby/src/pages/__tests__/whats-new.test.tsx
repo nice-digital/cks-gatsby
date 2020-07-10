@@ -43,6 +43,18 @@ const change3Updated = {
 	},
 };
 
+const change4New = {
+	id: "c4",
+	title: "New topic",
+	text: "Change 4 text",
+	topic: {
+		id: "t4",
+		topicId: "topic4",
+		topicName: "Topic Four",
+		slug: "topic-four",
+	},
+};
+
 const getDefaultTestProps = (): WhatsNewPageProps =>
 	(({
 		data: {
@@ -136,7 +148,7 @@ describe("What's new page", () => {
 			[[change1Updated], "1 updated topic"],
 			[[change1Updated, change1Updated], "2 updated topics"],
 			[[change2New], "1 new topic"],
-			[[change2New, change2New], "2 new topics"],
+			[[change2New, change4New], "2 new topics"],
 			[[change1Updated, change2New], "1 new topic and 1 updated topic"],
 			[
 				[change1Updated, change2New, change2New],
