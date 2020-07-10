@@ -9,6 +9,7 @@ const { Header } = jest.requireActual("./Header");
 
 describe("Header", () => {
 	beforeEach(() => {
+		jest.resetAllMocks();
 		((useStaticQuery as unknown) as jest.Mock).mockReturnValue({
 			allCksTopic: {
 				nodes: [],
@@ -49,7 +50,7 @@ describe("Header", () => {
 
 		fireEvent.click(await findByText("About CKS"), { button: 0 });
 
-		await wait(() => expect(navigate).toHaveBeenCalledWith("/about"));
+		await wait(() => expect(navigate).toHaveBeenCalledWith("/about/"));
 	});
 
 	it("should set search box default value from q querystring value", async () => {
