@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, wait } from "@testing-library/react";
+import { fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { navigate, useStaticQuery } from "gatsby";
 import { renderWithRouter } from "test-utils";
@@ -31,7 +31,7 @@ describe("Header", () => {
 	it("should hide authentication", async () => {
 		const { queryByText } = renderWithRouter(<Header />);
 
-		await wait(async () => {
+		await waitFor(() => {
 			expect(queryByText("Sign in")).toBeFalsy();
 		});
 	});
@@ -50,7 +50,13 @@ describe("Header", () => {
 
 		fireEvent.click(await findByText("About CKS"), { button: 0 });
 
-		await wait(() => expect(navigate).toHaveBeenCalledWith("/about/"));
+		await waitFor(
+			() => {
+				console.log((navigate as jest.Mock).mock.calls.length);
+				expect(navigate).toHaveBeenCalledWith("/about/");
+			},
+			{ timeout: 2500 }
+		);
 	});
 
 	it("should set search box default value from q querystring value", async () => {
@@ -69,7 +75,7 @@ describe("Header", () => {
 		const searchBox = await findByRole("combobox");
 		await history.navigate("/search?q=cancer");
 
-		await wait(() => expect(searchBox).toHaveAttribute("value", "cancer"));
+		await waitFor(() => expect(searchBox).toHaveAttribute("value", "cancer"));
 	});
 
 	it("should use gatsby navigate when submitting search form", async () => {
