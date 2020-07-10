@@ -72,8 +72,8 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		setData(null);
 		fetch("/api/search" + location.search)
-			.then(data => data.json())
-			.then(results => {
+			.then((data) => data.json())
+			.then((results) => {
 				setError(false);
 				setData(results as SearchResults);
 				announce("Search results loaded");

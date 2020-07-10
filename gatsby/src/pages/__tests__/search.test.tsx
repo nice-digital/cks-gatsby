@@ -95,7 +95,7 @@ describe("Search Page", () => {
 			const component = renderWithRouter(<SearchPage />);
 			const ariaLiveDiv = component.container.querySelector("[aria-live]");
 			expect(ariaLiveDiv?.textContent).toEqual("");
-			await wait(function() {
+			await wait(() => {
 				expect(ariaLiveDiv?.textContent).toEqual("Search results loaded");
 			});
 		});
@@ -104,7 +104,7 @@ describe("Search Page", () => {
 			const component = renderWithRouter(<SearchPage />);
 			const ariaLiveDiv = component.container.querySelector("[aria-live]");
 			expect(ariaLiveDiv?.textContent).toEqual("");
-			await wait(function() {
+			await wait(() => {
 				expect(ariaLiveDiv?.textContent).toEqual(
 					"There was an error getting search results"
 				);

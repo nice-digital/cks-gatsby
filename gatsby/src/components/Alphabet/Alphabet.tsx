@@ -22,7 +22,7 @@ export const Alphabet: React.FC<AlphabetProps> = ({
 		{...attrs}
 	>
 		{chunky
-			? Children.map(children, child =>
+			? Children.map(children, (child) =>
 					isValidElement(child) ? cloneElement(child, { chunky: true }) : child
 			  )
 			: children}
