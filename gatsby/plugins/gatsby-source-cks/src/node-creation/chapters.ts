@@ -61,7 +61,7 @@ const createTopicChapterNodes = (
 				topic: topicId,
 				parentChapter: parentId,
 				rootChapter: rootId,
-				subChapters: children.map(c => c.itemId),
+				subChapters: children.map((c) => c.itemId),
 			};
 
 			const chapterNode: ChapterNode = {

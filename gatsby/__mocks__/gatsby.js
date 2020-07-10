@@ -26,7 +26,7 @@ module.exports = {
 			React.createElement("a", {
 				...rest,
 				href: to,
-				onClick: e => {
+				onClick: (e) => {
 					// Call the navigate mock function, so tests can asserts on calls to the mock
 					navigate(to);
 					onClick && onClick(e);

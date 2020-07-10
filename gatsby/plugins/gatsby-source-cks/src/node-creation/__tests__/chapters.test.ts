@@ -71,7 +71,7 @@ describe("createChangeNodes", () => {
 	});
 
 	it("should create a unique node id from the itemId property", () => {
-		createNodeId.mockImplementation(s => `node id: ` + s);
+		createNodeId.mockImplementation((s) => `node id: ` + s);
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(3);
 		expect(createNodeId).toHaveBeenNthCalledWith(1, "chapter1");
@@ -129,7 +129,7 @@ describe("createChangeNodes", () => {
 
 	it("should set contentDigest internal field using createContentDigest utility", () => {
 		createContentDigest.mockImplementationOnce(
-			t => `contentDigest: ${t.fullItemName}`
+			(t) => `contentDigest: ${t.fullItemName}`
 		);
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty(

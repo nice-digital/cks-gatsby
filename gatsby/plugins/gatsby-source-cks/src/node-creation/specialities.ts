@@ -30,7 +30,7 @@ const extractSpecialities = (topics: ApiFullTopic[]): Map<string, string[]> => {
 	const mapping: Map<string, string[]> = new Map();
 
 	topics.forEach(({ topicId, clinicalSpecialties }) => {
-		clinicalSpecialties.forEach(speciality =>
+		clinicalSpecialties.forEach((speciality) =>
 			mapping.set(speciality, [...(mapping.get(speciality) || []), topicId])
 		);
 	});

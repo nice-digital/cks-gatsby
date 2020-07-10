@@ -57,7 +57,7 @@ describe("createTopicNodes", () => {
 	});
 
 	it("should create a node id from the topic id", () => {
-		createNodeId.mockImplementation(s => `node id: ` + s);
+		createNodeId.mockImplementation((s) => `node id: ` + s);
 		createTopicNodes(topics, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(topics.length);
 		expect(createNodeId).toHaveBeenNthCalledWith(1, "topic1");
@@ -94,7 +94,9 @@ describe("createTopicNodes", () => {
 	});
 
 	it("should set contentDigest internal field using createContentDigest utility", () => {
-		createContentDigest.mockImplementation(t => `contentDigest: ${t.topicId}`);
+		createContentDigest.mockImplementation(
+			(t) => `contentDigest: ${t.topicId}`
+		);
 		createTopicNodes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty(
 			"internal.contentDigest",

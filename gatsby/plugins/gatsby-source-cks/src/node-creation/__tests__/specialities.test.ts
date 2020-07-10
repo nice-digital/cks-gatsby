@@ -80,7 +80,7 @@ describe("createSpecialityNodes", () => {
 	});
 
 	it("should create a unique node id from the speciality name", () => {
-		createNodeId.mockImplementation(s => `node id: ` + s);
+		createNodeId.mockImplementation((s) => `node id: ` + s);
 		createSpecialityNodes(topics, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(4);
 		expect(createNodeId).toHaveBeenNthCalledWith(1, "Injuries");
@@ -117,7 +117,9 @@ describe("createSpecialityNodes", () => {
 	});
 
 	it("should set contentDigest internal field using createContentDigest utility", () => {
-		createContentDigest.mockImplementationOnce(t => `contentDigest: ${t.name}`);
+		createContentDigest.mockImplementationOnce(
+			(t) => `contentDigest: ${t.name}`
+		);
 		createSpecialityNodes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty(
 			"internal.contentDigest",

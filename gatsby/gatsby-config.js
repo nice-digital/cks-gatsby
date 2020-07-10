@@ -9,11 +9,7 @@ require("dotenv").config({
 /** The date from which to get updates */
 const changesSinceDate = process.env.CHANGES_SINCE
 	? moment.utc(process.env.CHANGES_SINCE).toDate()
-	: moment()
-			.utc()
-			.subtract(1, "months")
-			.startOf("month")
-			.toDate();
+	: moment().utc().subtract(1, "months").startOf("month").toDate();
 
 module.exports = {
 	siteMetadata: {
@@ -152,7 +148,7 @@ module.exports = {
 		},
 	],
 	// Proxy the relative search endpoint to the .NET app for local dev
-	developMiddleware: app => {
+	developMiddleware: (app) => {
 		// Proxy the relative search endpoint to the .NET app for local dev
 		app.use(createProxyMiddleware("http://localhost:5000"));
 
