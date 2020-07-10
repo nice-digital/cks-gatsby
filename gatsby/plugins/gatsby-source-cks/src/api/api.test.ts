@@ -70,8 +70,8 @@ describe("api", () => {
 		const cacheGet = jest.fn(),
 			cacheSet = jest.fn(),
 			cache = {
-				get: cacheGet as Function,
-				set: cacheSet as Function,
+				get: cacheGet as Cache["cache"]["get"],
+				set: cacheSet as Cache["cache"]["set"],
 			} as Cache["cache"];
 
 		beforeEach(() => {
