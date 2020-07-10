@@ -159,14 +159,14 @@ module.exports = {
 		// ******* or *******
 
 		// Use these settings to proxy to live search via this node app - https://github.com/wa-rren-dev/proxyToSearch
-// 		app.use(
-// 			"/api/search",
-// 			createProxyMiddleware({
-// 				target: "http://localhost:6001",
-// 				pathRewrite: {
-// 					"/api/search": "/search",
-// 				},
-// 			})
-// 		);
+		// 		app.use(
+		// 			"/api/search",
+		// 			createProxyMiddleware({
+		// 				target: "http://localhost:6001",
+		// 				pathRewrite: {
+		// 					"/api/search": "/search",
+		// 				},
+		// 			})
+		// 		);
 	},
 };
