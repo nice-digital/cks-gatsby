@@ -1,1 +1,7 @@
 **/package.json
+
+# Gatsby folders
+.cache
+coverage
+public
+static
