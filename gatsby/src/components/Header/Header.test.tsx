@@ -52,7 +52,6 @@ describe("Header", () => {
 
 		await waitFor(
 			() => {
-				console.log((navigate as jest.Mock).mock.calls.length);
 				expect(navigate).toHaveBeenCalledWith("/about/");
 			},
 			{ timeout: 2500 }
