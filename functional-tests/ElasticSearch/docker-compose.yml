@@ -1,28 +1,31 @@
 version: '3.6'
 services:
-  es01:
+  es:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.5.2
-    container_name: es01
+    container_name: es
     environment:
-      #- node.name=es01
-      #- cluster.name=es-docker-cluster
-      # - discovery.seed_hosts=es02,es03
-      #- cluster.initial_master_nodes=es01
-      #- bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
-    # ulimits:
-    #  memlock:
-    #    soft: -1
-    #    hard: -1
     volumes:
       - data01:/usr/share/elasticsearch/data
-      - ./stemmer_override.txt:/usr/share/elasticsearch/config/stemmer_override.txt
-      - ./synonyms.txt:/usr/share/elasticsearch/config/synonyms.txt
+      - ./:/usr/share/elasticsearch/setup
+      - ../../fake-api/data/topics/:/usr/share/elasticsearch/topics
     ports:
       - 9200:9200
     networks:
       - elastic
-
+    #command: ./setup/docker-run.sh
+    
+  deb:
+    image: debian:jessie
+    container_name: deb
+    volumes:
+      - ./:/elasticSetup
+      - ../../fake-api/data/topics/:/elasticSetup/topics
+    networks:
+      - elastic
+    command: bash ./elasticSetup/docker-run.sh
+    #command: tail -F anything
+    
 volumes:
   data01:
     driver: local
