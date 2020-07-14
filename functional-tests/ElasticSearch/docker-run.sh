@@ -1,7 +1,7 @@
 #!/bin/bash
 #Install curl
-apt update && apt upgrade -qq
-apt install curl -qq
+apt-get -qq update && apt-get -qq upgrade
+apt-get -qq -y install curl
 
 #Wait for elastic search container to be ready
 sleep 30s

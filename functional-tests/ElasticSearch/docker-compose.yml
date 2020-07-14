@@ -7,13 +7,10 @@ services:
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
     volumes:
       - data01:/usr/share/elasticsearch/data
-      - ./:/usr/share/elasticsearch/setup
-      - ../../fake-api/data/topics/:/usr/share/elasticsearch/topics
     ports:
       - 9200:9200
     networks:
       - elastic
-    #command: ./setup/docker-run.sh
     
   deb:
     image: debian:jessie
