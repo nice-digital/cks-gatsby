@@ -20,8 +20,8 @@ services:
       - ../../fake-api/data/topics/:/elasticSetup/topics
     networks:
       - elastic
-    command: bash ./elasticSetup/docker-run.sh
-    #command: tail -F anything
+    #command: bash ./elasticSetup/createAndPopulateIndex.sh
+    command: tail -F anything
     
 volumes:
   data01:

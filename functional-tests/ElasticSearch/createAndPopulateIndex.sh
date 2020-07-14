@@ -1,14 +1,10 @@
 #!/bin/bash
-#Install curl
-apt-get -qq update && apt-get -qq upgrade
-apt-get -qq -y install curl
-
-#Wait for elastic search container to be ready
+#Wait 30 seconds to ensure elastic search container is ready
 sleep 30s
 
 #create indexes
 #Naming the index cks means we done need to create an alias
-curl -X PUT http://es:9200/cks -H 'Content-Type: application/json' --data-binary "@./elasticSetup/CKSIndexSettings.json"
+curl -X PUT http://elasticsearch:9200/cks -H 'Content-Type: application/json' --data-binary "@./elasticSetup/CKSIndexSettings.json"
 
 #populate indexes
 arr=(./elasticSetup/topics/*)
@@ -33,9 +29,11 @@ for ((i=0; i<${#arr[@]}; i++)); do
 	boostValue='"boostvalue": 100'
 	
 	json="{$topicName $topicSummary $boostValue}"
-	url="http://es:9200/cks/document/$i"
+	url="http://elasticsearch:9200/cks/document/$i"
 	
 	curl -X PUT $url -H 'Content-Type: application/json' -d "$json"
 	echo $url
 	echo $json
 done
+
+exit 0

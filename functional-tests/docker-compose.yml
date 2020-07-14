@@ -9,8 +9,6 @@ services:
   selenium-chrome:
     image: selenium/node-chrome:3.141.59-20200525
     shm_size: "1gb"
-    depends_on:
-      - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
@@ -18,9 +16,6 @@ services:
   test-runner:
     build: .
     container_name: test-runner
-    depends_on:
-      - selenium-hub
-      - cks-web-app
     environment:
       - TEAMCITY_VERSION
     volumes:
@@ -36,6 +31,30 @@ services:
     volumes:
       - ./../web-app/publish:/app
 
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.2
+    container_name: elasticsearch
+    environment:
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    
+  debian:
+    build: ./ElasticSearch
+    container_name: debian
+    volumes:
+      - ./ElasticSearch/:/elasticSetup
+      - ../fake-api/data/topics/:/elasticSetup/topics
+    command: bash ./elasticSetup/createAndPopulateIndex.sh
+    #command: tail -F anything
+
+        
+volumes:
+  data01:
+    driver: local
+    
 networks:
   default:
     name: cks-functional-tests
