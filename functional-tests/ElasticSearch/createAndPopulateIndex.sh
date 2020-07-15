@@ -1,6 +1,8 @@
 #!/bin/bash
 #Wait 30 seconds to ensure elastic search container is ready
-sleep 30s
+echo "sleep"
+sleep 90s
+echo "awake"
 
 #create indexes
 #Naming the index cks means we done need to create an alias

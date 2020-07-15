@@ -38,6 +38,8 @@ services:
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
     volumes:
       - data01:/usr/share/elasticsearch/data
+      - ./ElasticSearch/stemmer_override.txt:/usr/share/elasticsearch/config/stemmer_override.txt
+      - ./ElasticSearch/synonyms.txt:/usr/share/elasticsearch/config/synonyms.txt
     ports:
       - 9200:9200
     
@@ -45,7 +47,8 @@ services:
     build: ./ElasticSearch
     container_name: debian
     volumes:
-      - ./ElasticSearch/:/elasticSetup
+      - ./ElasticSearch/createAndPopulateIndex.sh:/elasticSetup/createAndPopulateIndex.sh
+      - ./ElasticSearch/CKSIndexSettings.json:/elasticSetup/CKSIndexSettings.json
       - ../fake-api/data/topics/:/elasticSetup/topics
     command: bash ./elasticSetup/createAndPopulateIndex.sh
     #command: tail -F anything
