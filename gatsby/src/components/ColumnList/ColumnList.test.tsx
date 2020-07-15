@@ -15,13 +15,22 @@ describe("ColumnList", () => {
 		expect(getByText("Test").parentElement?.tagName).toBe("OL");
 	});
 
-	it("should add CSS module class name to parent list", () => {
+	it("should add CSS module class name to parent list for standard (boxed) variant", () => {
 		const { getByRole } = render(
 			<ColumnList>
 				<li>Test</li>
 			</ColumnList>
 		);
-		expect(getByRole("list").className).toBe("list");
+		expect(getByRole("list").className).toContain("boxed");
+	});
+
+	it("should add CSS module class name to parent list for the plain variant", () => {
+		const { getByRole } = render(
+			<ColumnList plain>
+				<li>Test</li>
+			</ColumnList>
+		);
+		expect(getByRole("list").className).toContain("plain");
 	});
 
 	it("should render additional props as attributes", () => {
