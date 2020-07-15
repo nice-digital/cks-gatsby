@@ -5,7 +5,7 @@
  */
 
 import fetch from "node-fetch";
-import { Cache } from "gatsby";
+import { GatsbyCache } from "gatsby";
 
 import {
 	ApiConfig,
@@ -90,7 +90,7 @@ const getSingleTopic = async (
  */
 export const getFullTopicCached = async (
 	partialTopic: ApiPartialTopic,
-	cache: Cache["cache"]
+	cache: GatsbyCache
 ): Promise<ApiFullTopic> => {
 	const topicCacheKey = getTopicCacheKey(partialTopic);
 
