@@ -12,3 +12,7 @@ Feature: Header
   Scenario: Navigate straight to a topic from an autocomplete suggestion
     When I click "Asthma" in the autocomplete options
     And I expect the url to contain "asthma"
+
+  Scenario: Search for content and be presented with type ahead
+    When I search for "cancer"
+    Then I expect to see at least 1 search result

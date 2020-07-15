@@ -1,5 +1,6 @@
 #!/bin/bash
-#Wait 30 seconds to ensure elastic search container is ready
+#Todo replace this wait with a recursive request until we get a successful response from elasticsearch
+#Wait 90 seconds to ensure elastic search container is ready
 echo "sleep"
 sleep 90s
 echo "awake"

@@ -37,3 +37,11 @@ Then(/^I expect to see a list of ([^"]*)$/, (selectorName) => {
 		browser.elements(getSelector(selectorName)).value
 	).to.have.lengthOf.above(0);
 });
+
+Then(/^I expect to see at least 1 search result/, () => {
+	//Wait for the results to load
+	browser.waitForExist("#search-results-summary", 5000);
+	expect(
+		browser.element("#search-results-summary").getAttribute("data-result-count")
+	).to.have.lengthOf.above(0);
+});

@@ -81,3 +81,10 @@ When(/^I click the "([^"]*)" link$/, (linkText) => {
 		waitForScrollToElement(targetElementId);
 	}
 });
+
+When(/^I search for "([^"]*)"$/, (term) => {
+	const searchInput = $("#autocomplete");
+	searchInput.addValue(term);
+	const submitSearchButton = $("#global-nav-search-form button[type=submit]");
+	submitSearchButton.click();
+});
