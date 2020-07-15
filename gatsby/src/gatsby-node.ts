@@ -47,7 +47,10 @@ const createCksPages = async ({
 					slug
 				}
 			}
-			level1Chapters: allCksChapter(filter: { depth: { eq: 1 } }) {
+			level1Chapters: allCksChapter(
+				# Don't create a chapter for the summary as we show that for a topic page
+				filter: { depth: { eq: 1 }, pos: { gt: 0 } }
+			) {
 				nodes {
 					id
 					slug

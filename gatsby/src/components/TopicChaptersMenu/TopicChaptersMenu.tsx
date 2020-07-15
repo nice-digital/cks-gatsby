@@ -21,21 +21,15 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 	const topicPath = `/topics/${topic.slug}/`;
 
 	return (
-		<StackedNav
-			label={topic.topicName}
-			elementType="h2"
-			link={{
-				destination: topicPath,
-				elementType: Link,
-				isCurrent: !currentChapterId,
-			}}
-		>
-			{topic.chapters.map(chapter => {
+		<StackedNav>
+			{topic.chapters.map((chapter, i) => {
 				const shouldShowSubNav =
 					chapter.id === currentChapterId ||
 					chapter.subChapters.some(c => c.id === currentChapterId);
 
-				const chapterPath = `${topicPath}${chapter.slug}/`;
+				// The summary chapter links to the topic landing page
+				const chapterPath =
+					i === 0 ? topicPath : `${topicPath}${chapter.slug}/`;
 
 				return (
 					<Fragment key={chapter.id}>

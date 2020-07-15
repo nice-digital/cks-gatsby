@@ -1,27 +1,30 @@
 import React from "react";
-import { graphql, PageRendererProps, Link } from "gatsby";
+import { graphql, PageProps, Link } from "gatsby";
 
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
-import { Grid, GridItem } from "@nice-digital/nds-grid";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Layout } from "../../components/Layout/Layout";
-import { TopicChaptersMenu } from "../../components/TopicChaptersMenu/TopicChaptersMenu";
 import { SEO } from "../../components/SEO/SEO";
+import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
+import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
 
-import { Topic } from "../../types";
+import { Topic, ChapterLevel1 } from "../../types";
 
-type TopicPageProps = {
-	data: {
-		//firstChapter: Chapter;
+export type TopicPageProps = PageProps<
+	{
+		firstChapter: ChapterLevel1;
 		topic: Topic;
-	};
-} & PageRendererProps;
+	},
+	{
+		id: string;
+	}
+>;
 
 const TopicPage: React.FC<TopicPageProps> = ({
-	data: { topic },
+	data: { topic, firstChapter },
 }: TopicPageProps) => {
-	const { topicName, topicSummary } = topic;
+	const { topicName, topicSummary, lastRevised } = topic;
 
 	return (
 		<Layout>
@@ -37,16 +40,13 @@ const TopicPage: React.FC<TopicPageProps> = ({
 				<Breadcrumb>{topicName}</Breadcrumb>
 			</Breadcrumbs>
 
-			<PageHeader heading={topicName} lead={topicSummary} />
+			<PageHeader heading={topicName} lead={lastRevised} />
 
-			<Grid gutter="loose">
-				<GridItem cols={12} sm={4} md={3}>
-					<TopicChaptersMenu topic={topic} />
-				</GridItem>
-				<GridItem cols={12} sm={8} md={9}>
-					TODO
-				</GridItem>
-			</Grid>
+			<p className="visually-hidden">{topicSummary}</p>
+
+			<ChapterContents chapter={firstChapter}>
+				<ChapterBody chapter={firstChapter} />
+			</ChapterContents>
 		</Layout>
 	);
 };
@@ -55,13 +55,24 @@ export default TopicPage;
 
 export const TopicPageQuery = graphql`
 	query TopicById($id: String!) {
-		#firstChapter: cksChapter(
-		#	topic: { id: { eq: $id } }
-		#	depth: { eq: 1 }
-		#	pos: { eq: 0 }
-		#) {
-		#	...FullChapter
-		#}
+		firstChapter: cksChapter(
+			topic: { id: { eq: $id } }
+			depth: { eq: 1 }
+			pos: { eq: 0 }
+		) {
+			id
+			slug
+			fullItemName
+			depth
+			htmlHeader
+			htmlStringContent
+			topic {
+				...PartialTopic
+				chapters {
+					...PartialChapter
+				}
+			}
+		}
 		topic: cksTopic(id: { eq: $id }) {
 			...FullTopic
 		}
