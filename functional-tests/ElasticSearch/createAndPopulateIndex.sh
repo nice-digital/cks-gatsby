@@ -40,5 +40,3 @@ do
 	echo $url
 	echo $json
 done
-
-tail -f /dev/null
