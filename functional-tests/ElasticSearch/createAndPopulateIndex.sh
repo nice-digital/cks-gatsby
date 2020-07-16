@@ -1,9 +1,10 @@
 #!/bin/bash
-#Todo replace this wait with a recursive request until we get a successful response from elasticsearch
-#Wait 90 seconds to ensure elastic search container is ready
-echo "sleep"
-sleep 90s
-echo "awake"
+#Wait until the elastic search container is ready
+while [ "$(curl -X GET -s -w '%{http_code}' http://elasticsearch:9200/_cat/indices)" -ne 200 ]
+do
+   sleep 5s
+done
+
 
 #create indexes
 #Naming the index cks means we done need to create an alias
@@ -13,7 +14,8 @@ curl -X PUT http://elasticsearch:9200/cks -H 'Content-Type: application/json' --
 arr=(./elasticSetup/topics/*)
 
 # iterate through array using a counter
-for ((i=0; i<${#arr[@]}; i++)); do
+for ((i=0; i<${#arr[@]}; i++));
+do
 	#Get topicname prop from json in the current file
 	topicName=`grep -i 'topicName' ${arr[$i]}`
 	#Change topicname to title. This is specified in the elasticsearch document definition
@@ -39,4 +41,4 @@ for ((i=0; i<${#arr[@]}; i++)); do
 	echo $json
 done
 
-exit 0
+tail -f /dev/null
