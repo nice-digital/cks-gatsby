@@ -2,95 +2,164 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { Hero } from "@nice-digital/nds-hero";
-import { Button } from "@nice-digital/nds-button";
+import { Grid, GridItem } from "@nice-digital/nds-grid";
 
 import { Layout } from "../components/Layout/Layout";
-import { PartialTopic } from "../types";
+import { PartialSpeciality } from "../types";
 import { SEO } from "../components/SEO/SEO";
+import { ColumnList } from "../components/ColumnList/ColumnList";
+
+import styles from "./index.module.scss";
+import { Alphabet, Letter } from "../components/Alphabet/Alphabet";
 
 type IndexProps = {
 	data: {
-		allTopics: {
-			nodes: PartialTopic[];
+		allSpecialities: {
+			nodes: PartialSpeciality[];
+		};
+		allCksTopic: {
+			distinct: string[];
 		};
 	};
 };
 
+const alphabet = [
+	"a",
+	"b",
+	"c",
+	"d",
+	"e",
+	"f",
+	"g",
+	"h",
+	"i",
+	"j",
+	"k",
+	"l",
+	"m",
+	"n",
+	"o",
+	"p",
+	"q",
+	"r",
+	"s",
+	"t",
+	"u",
+	"v",
+	"w",
+	"x",
+	"y",
+	"z",
+];
+
 const IndexPage: React.FC<IndexProps> = ({
-	data: { allTopics },
+	data: {
+		allSpecialities: { nodes: specialitiesNodes },
+		allCksTopic: { distinct: topicNames },
+	},
 }: IndexProps) => {
+	const linkableLetters = Array.from(
+		new Set(topicNames.map(topicName => topicName.charAt(0).toLowerCase()))
+	);
+
+	const allTopicButtons = alphabet.map(letter => {
+		return {
+			letter,
+			linkable: linkableLetters.includes(letter),
+		};
+	});
+
 	return (
 		<Layout>
-			<SEO
-				additionalMetadata={[
-					{
-						name: "google-site-verification",
-						content: "3N3Ng_4D9vTfn0AubNl1BjDivNeDmo_erefsd_ClwL4",
-					},
-				]}
-			/>
+			<SEO />
 			<Hero
 				title="Clinical Knowledge Summaries"
 				intro="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best&nbsp;practice"
-				actions={
-					<>
-						<Button to="/topics/" variant="cta" elementType={Link}>
-							Topics A to Z
-						</Button>
-						<Button to="/specialities/" elementType={Link}>
-							Specialities
-						</Button>
-					</>
-				}
 				header={
 					<Breadcrumbs>
 						<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
 						<Breadcrumb>CKS</Breadcrumb>
 					</Breadcrumbs>
 				}
-			>
-				<h2 className="h4 mt--0-md">Most viewed topics</h2>
-				<ul className="list--unstyled list--loose">
-					<li>
-						<Link to="/topics/lyme-disease/">Lyme disease</Link>
-					</li>
-					<li>
-						<Link to="/topics/hypertension-not-diabetic/">
-							Hypertension - not diabetic
-						</Link>
-					</li>
-					<li>
-						<Link to="/topics/diabetes-type-2/">Diabetes - type 2</Link>
-					</li>
-					<li>
-						<Link to="/topics/gout/">Gout</Link>
-					</li>
-					<li>
-						<Link to="/topics/menopause/">Menopause</Link>
-					</li>
-				</ul>
-			</Hero>
+			/>
 
-			<h2>Topics</h2>
-			<p>
-				{"abcdefghijklmnoprstuvw".split("").map(letter => (
-					<Link key={letter} to={`/topics/#${letter}`}>
-						{letter}&nbsp;
-					</Link>
-				))}
-			</p>
+			<Grid gutter="none">
+				<GridItem md={6} cols={12} className={styles.topicsColumn}>
+					<h2 id="topics-a-to-z">Health topics A to Z</h2>
+					<p id="topics-a-to-z-desc">
+						Over 350 topics organised alphabetically, with focus on the most
+						common and significant presentations in primary&nbsp;care.
+					</p>
+
+					<Alphabet
+						chunky
+						aria-labelledby="topics-a-to-z"
+						aria-describedby="topics-a-to-z-desc"
+					>
+						{allTopicButtons.map(({ letter, linkable }) => (
+							<Letter
+								key={`alphabet_${letter}`}
+								to={linkable && `/topics/#${letter}`}
+							>
+								{letter.toUpperCase()}
+							</Letter>
+						))}
+					</Alphabet>
+
+					<h3 id="frequently-visited-topics">Frequently visited topics</h3>
+					<ColumnList plain aria-labelledby="frequently-visited-topics">
+						<li>
+							<Link to="/topics/hypertension-not-diabetic/">
+								Hypertension - not diabetic
+							</Link>
+						</li>
+						<li>
+							<Link to="/topics/diabetes-type-2/">Diabetes - type 2</Link>
+						</li>
+						<li>
+							<Link to="/topics/gout/">Gout</Link>
+						</li>
+						<li className={styles.showAtMD}>
+							<Link to="/topics/migraine/">Migraine</Link>
+						</li>
+						<li className={styles.showAtMD}>
+							<Link to="/topics/allergic-rhinitis/">Allergic rhinitis</Link>
+						</li>
+						<li className={styles.showAtMD}>
+							<Link to="/topics/asthma/">Asthma</Link>
+						</li>
+					</ColumnList>
+				</GridItem>
+
+				<GridItem md={6} cols={12} className={styles.specialitiesColumn}>
+					<h2 id="specialties">Specialties</h2>
+
+					<p>Our knowledge summaries grouped by&nbsp;specialty.</p>
+
+					<ColumnList plain aria-labelledby="specialties">
+						{specialitiesNodes.map(({ id, name, slug }) => (
+							<li key={id}>
+								<Link to={`/specialities/${slug}/`}>{name}</Link>
+							</li>
+						))}
+					</ColumnList>
+				</GridItem>
+			</Grid>
 		</Layout>
 	);
 };
 
 export default IndexPage;
 
-export const IndexPageQuery = graphql`
+export const query = graphql`
 	{
-		allTopics: allCksTopic {
+		allSpecialities: allCksSpeciality(sort: { fields: name }) {
 			nodes {
-				...PartialTopic
+				...PartialSpeciality
 			}
+		}
+		allCksTopic {
+			distinct(field: topicName)
 		}
 	}
 `;

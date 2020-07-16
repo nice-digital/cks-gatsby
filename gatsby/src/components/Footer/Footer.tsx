@@ -1,13 +1,4 @@
 import React from "react";
+import { Footer as GlobalNavFooter } from "@nice-digital/global-nav";
 
-const GlobalNavFooter = React.lazy(() => import("./GlobalNavFooter"));
-
-export const Footer: React.FC = () => (
-	<>
-		{typeof window !== "undefined" && (
-			<React.Suspense fallback={<></>}>
-				<GlobalNavFooter service="cks" />
-			</React.Suspense>
-		)}
-	</>
-);
+export const Footer: React.FC = () => <GlobalNavFooter service="cks" />;

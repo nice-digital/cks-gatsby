@@ -1,20 +1,8 @@
-import React, {
-	useEffect,
-	Suspense,
-	lazy,
-	useState,
-	useMemo,
-	useCallback,
-} from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { navigate, useStaticQuery, graphql } from "gatsby";
 import { useLocation } from "@reach/router";
 import { PartialTopic } from "src/types";
-
-// Use lazy in tandem with Suspense to load Global Nav *only* on the client side.
-// As per https://www.gatsbyjs.org/docs/using-client-side-only-packages/#workaround-4-use-reactlazy-and-suspense-on-client-side-only
-// Because we're waiting on an upstream release in alphagov/accessible-autocomplete to fix https://github.com/alphagov/accessible-autocomplete/issues/352
-// See: https://github.com/alphagov/accessible-autocomplete/milestone/6 and https://github.com/alphagov/accessible-autocomplete/issues/433
-const GlobalNavHeader = lazy(() => import("./GlobalNavHeader"));
+import { Header as GlobalNavHeader } from "@nice-digital/global-nav";
 
 const allTopicsQuery = graphql`
 	query AllTopics {
@@ -98,30 +86,24 @@ export const Header: React.FC = () => {
 	}, []);
 
 	return (
-		<>
-			{typeof window !== "undefined" && (
-				<Suspense fallback={<></>}>
-					<div ref={globalNavWrapperRef}>
-						<GlobalNavHeader
-							service="cks"
-							skipLinkId="content-start"
-							onNavigating={(e): void => {
-								if (e.href[0] === "/") navigate(e.href);
-								else window.location.href = e.href;
-							}}
-							auth={false}
-							search={{
-								placeholder: "Search CKS…",
-								autocomplete: autocompleteTerms,
-								onSearching: (e): void => {
-									navigate("/search?q=" + e.query);
-								},
-								query: queryTerm,
-							}}
-						/>
-					</div>
-				</Suspense>
-			)}
-		</>
+		<div ref={globalNavWrapperRef}>
+			<GlobalNavHeader
+				service="cks"
+				skipLinkId="content-start"
+				onNavigating={(e): void => {
+					if (e.href[0] === "/") navigate(e.href);
+					else window.location.href = e.href;
+				}}
+				auth={false}
+				search={{
+					placeholder: "Search CKS…",
+					autocomplete: autocompleteTerms,
+					onSearching: (e): void => {
+						navigate("/search?q=" + e.query);
+					},
+					query: queryTerm,
+				}}
+			/>
+		</div>
 	);
 };
