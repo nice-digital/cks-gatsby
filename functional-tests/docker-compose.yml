@@ -49,6 +49,8 @@ services:
       - ./ElasticSearch/createAndPopulateIndex.sh:/elasticSetup/createAndPopulateIndex.sh
       - ./ElasticSearch/CKSIndexSettings.json:/elasticSetup/CKSIndexSettings.json
       - ../fake-api/data/topics/:/elasticSetup/topics
+    depends_on:
+      - elasticsearch
     command: bash ./elasticSetup/createAndPopulateIndex.sh
     #command: tail -F anything
     
