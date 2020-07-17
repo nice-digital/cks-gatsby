@@ -14,11 +14,11 @@ interface ChapterPageContext {
 	chapter: ChapterLevel2;
 }
 
-type ChapterPageProps = PageProps<null, ChapterPageContext>;
+export type ChapterLevel2PageProps = PageProps<null, ChapterPageContext>;
 
-const ChapterLevel2Page: React.FC<ChapterPageProps> = ({
+const ChapterLevel2Page: React.FC<ChapterLevel2PageProps> = ({
 	pageContext: { chapter },
-}: ChapterPageProps) => {
+}: ChapterLevel2PageProps) => {
 	const { fullItemName, htmlHeader, topic, parentChapter } = chapter;
 
 	const topicPath = `/topics/${topic.slug}/`;
