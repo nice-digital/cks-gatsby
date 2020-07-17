@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "gatsby";
 
 import { StackedNav, StackedNavLink } from "@nice-digital/nds-stacked-nav";
@@ -21,39 +21,37 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 	const topicPath = `/topics/${topic.slug}/`;
 
 	return (
-		<StackedNav>
-			{topic.chapters.map((chapter, i) => {
-				const shouldShowSubNav =
-					chapter.id === currentChapterId ||
-					chapter.subChapters.some(c => c.id === currentChapterId);
+		<StackedNav aria-label={`${topic.topicName} chapters`}>
+			{topic.chapters.map(({ id, slug, fullItemName, subChapters }, i) => {
+				const shouldShowSubChapters =
+					id === currentChapterId ||
+					subChapters.some(c => c.id === currentChapterId);
 
 				// The summary chapter links to the topic landing page
-				const chapterPath =
-					i === 0 ? topicPath : `${topicPath}${chapter.slug}/`;
+				const chapterPath = i === 0 ? topicPath : `${topicPath}${slug}/`;
 
 				return (
-					<Fragment key={chapter.id}>
-						<StackedNavLink
-							elementType={Link}
-							destination={chapterPath}
-							isCurrent={chapter.id === currentChapterId}
-						>
-							{chapter.fullItemName}
-						</StackedNavLink>
-
-						{shouldShowSubNav &&
-							chapter.subChapters.map(subChapter => (
+					<StackedNavLink
+						key={id}
+						elementType={Link}
+						destination={chapterPath}
+						isCurrent={id === currentChapterId}
+						nested={
+							shouldShowSubChapters &&
+							subChapters.map(subChapter => (
 								<StackedNavLink
 									key={subChapter.id}
 									elementType={Link}
 									destination={`${chapterPath}${subChapter.slug}/`}
 									isCurrent={subChapter.id === currentChapterId}
 								>
-									{/* TODO: Replace these spaces with a proper nested stacked nav when it supports nesting */}
-									&nbsp;&nbsp;&nbsp;&nbsp; {subChapter.fullItemName}
+									{subChapter.fullItemName}
 								</StackedNavLink>
-							))}
-					</Fragment>
+							))
+						}
+					>
+						{fullItemName}
+					</StackedNavLink>
 				);
 			})}
 		</StackedNav>
