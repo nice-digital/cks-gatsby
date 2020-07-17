@@ -60,9 +60,7 @@ export const TopicPageQuery = graphql`
 			depth: { eq: 1 }
 			pos: { eq: 0 }
 		) {
-			id
-			slug
-			fullItemName
+			...PartialChapter
 			depth
 			htmlHeader
 			htmlStringContent
