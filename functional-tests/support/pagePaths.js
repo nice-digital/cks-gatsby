@@ -7,6 +7,7 @@ export const pagePaths = {
 	"allergies speciality": "/specialities/allergies/",
 	"what's new": "/whats-new/",
 	"topics list": "/topics/",
+	"asthma topic": "/topics/asthma/",
 	"achilles tendinopathy topic": "/topics/achilles-tendinopathy/",
 };
 
