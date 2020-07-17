@@ -109,7 +109,9 @@ describe("TopicPage", () => {
 	describe("chapter menu", () => {
 		let summaryAnchor: HTMLElement;
 		beforeEach(() => {
-			summaryAnchor = renderResult.getByText("Summary");
+			summaryAnchor = renderResult.getByText(textContentMatcher("Summary"), {
+				selector: "nav a",
+			});
 		});
 
 		it("should render list of top level chapters in topic menu", () => {
@@ -118,7 +120,10 @@ describe("TopicPage", () => {
 			).toHaveLength(2);
 			expect(summaryAnchor).toHaveProperty("tagName", "A");
 			expect(
-				renderResult.getByText("Have I got the right topic?")
+				renderResult.getByText(
+					textContentMatcher("Have I got the right topic?"),
+					{ selector: "nav a" }
+				)
 			).toHaveProperty("tagName", "A");
 		});
 
