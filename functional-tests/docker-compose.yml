@@ -9,23 +9,23 @@ services:
   selenium-chrome:
     image: selenium/node-chrome:3.141.59-20200525
     shm_size: "1gb"
-    depends_on:	
-      - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
+    depends_on:
+      - selenium-hub
 
   test-runner:
     build: .
     container_name: test-runner
-    depends_on:	
-      - selenium-hub	
-      - cks-web-app
     environment:
       - TEAMCITY_VERSION
     volumes:
       - ./:/tests
       - /tests/node_modules/
+    depends_on:
+      - selenium-hub
+      - cks-web-app
 
   # CKS dotnet core web app
   cks-web-app:
