@@ -8,6 +8,8 @@ export const pagePaths = {
 	"what's new": "/whats-new/",
 	"topics list": "/topics/",
 	"asthma topic": "/topics/asthma/",
+	"asthma have I got the right topic?":
+		"/topics/asthma/have-i-got-the-right-topic/",
 	"achilles tendinopathy topic": "/topics/achilles-tendinopathy/",
 };
 
