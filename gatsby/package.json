@@ -49,7 +49,7 @@
   "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
   "devDependencies": {
     "@nice-digital/design-system": "^1.0.36-alpha.0",
-    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#44edfb9e63ad4a2290bfd7aa981cb9164fc60f4f",
+    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#01f7615bbcd4ae30ed61a5c991013352a9bb8bbc",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^10.3.1",
