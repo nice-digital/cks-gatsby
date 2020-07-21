@@ -13,16 +13,19 @@ using Microsoft.Net.Http.Headers;
 using Microsoft.AspNetCore.Rewrite;
 using CKS.Web.StaticFiles;
 using CKS.Web.Middleware;
+using Microsoft.AspNetCore.Http;
 
 namespace CKS.Web
 {
 	public class Startup
 	{
-		public Startup(IConfiguration configuration)
+		public Startup(IConfiguration configuration, IWebHostEnvironment env)
 		{
 			Configuration = configuration;
+			CurrentEnvironment = env;
 		}
 
+		private IWebHostEnvironment CurrentEnvironment { get; set; }
 		public IConfiguration Configuration { get; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
@@ -30,9 +33,9 @@ namespace CKS.Web
 		{
 			services.AddRouting(options => options.LowercaseUrls = true);
 
-			var environmentString = Configuration.GetValue<string>("ElasticSearchEnvironment");
+			var esEnv = Configuration.GetValue<string>("ElasticSearchEnvironment");
 			ApplicationEnvironment environmentAsEnum;
-			if (Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum))
+			if (Enum.TryParse<ApplicationEnvironment>(esEnv, out environmentAsEnum))
 			{
 				services.AddSingleton<ISearchProvider, SearchProvider>(ISearchProvider => new SearchProvider(environmentAsEnum));
 			}
@@ -42,10 +45,34 @@ namespace CKS.Web
 			}
 
 			services.AddControllers();
+
+			if (!CurrentEnvironment.IsDevelopment())
+			{
+				services.AddHsts(options =>
+				{
+					//TODO: Investigate why https://hstspreload.org/ times out for nice.org.uk currently
+					options.Preload = true;
+					options.IncludeSubDomains = true;
+					options.MaxAge = TimeSpan.FromDays(60);
+				});
+
+				services.AddHttpsRedirection(options =>
+				{
+					options.RedirectStatusCode = StatusCodes.Status308PermanentRedirect;
+					options.HttpsPort = 443;
+				});
+			}
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
+			if (!env.IsDevelopment())
+			{
+				app.UseExceptionHandler("/Error");
+				app.UseHttpsRedirection();
+				app.UseHsts();
+			}
+
 			ConfigureRedirects(app, env);
 
 			app.UseStatusCodePagesWithReExecute("/{0}.html");
