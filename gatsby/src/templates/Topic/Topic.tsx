@@ -40,7 +40,10 @@ const TopicPage: React.FC<TopicPageProps> = ({
 				<Breadcrumb>{topicName}</Breadcrumb>
 			</Breadcrumbs>
 
-			<PageHeader heading={topicName} lead={lastRevised} />
+			<PageHeader
+				heading={topicName}
+				lead={<span dangerouslySetInnerHTML={{ __html: lastRevised }} />}
+			/>
 
 			<p className="visually-hidden">{topicSummary}</p>
 
