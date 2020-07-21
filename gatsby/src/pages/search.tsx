@@ -110,12 +110,22 @@ const SearchPage: React.FC = () => {
 			)}
 			{(error || (data && data.failed)) && (
 				<>
-					<SEO title="Error loading search results" noIndex={true} />
+					<SEO title="Sorry, there is a problem with search" noIndex={true} />
 					<PageHeader
-						heading="Error"
-						lead="We are currently experiencing issues with search. The issue will be
-resolved as soon as possible. We apologise for any inconvenience caused."
+						heading="Sorry, there is a problem with search"
+						lead="We are working on it, please try again later"
 					/>
+					<p>
+						You can also try browsing for topics from the{" "}
+						<Link to={"/"}>CKS homepage</Link>.
+					</p>
+					<p>
+						If you need help,{" "}
+						<Link to="https://www.nice.org.uk/get-involved/contact-us">
+							contact us
+						</Link>
+						.
+					</p>
 				</>
 			)}
 			{data && !data.failed && <Results {...data} />}
