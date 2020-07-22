@@ -8,7 +8,7 @@ import TopicPage, { TopicPageProps } from "./Topic";
 
 const topic: Topic = {
 	id: "tpc987",
-	lastRevised: "Last revised in April 2020",
+	lastRevised: "Last revised in April&nbsp;2020",
 	topicName: "Asthma",
 	slug: "asthma",
 	topicId: "2a0a90e6-1c4e-4b6a-9ce2-3379dd122594",
@@ -100,9 +100,8 @@ describe("TopicPage", () => {
 		});
 
 		it("should render last revised text as lead paragraph", () => {
-			const lead = renderResult.getByText(topic.lastRevised);
-			expect(lead).toHaveProperty("tagName", "P");
-			expect(lead).toHaveClass("page-header__lead");
+			const lead = renderResult.getByText("Last revised in April 2020");
+			expect(lead.parentElement).toHaveClass("page-header__lead");
 		});
 	});
 
