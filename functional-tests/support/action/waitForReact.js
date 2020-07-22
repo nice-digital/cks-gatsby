@@ -4,7 +4,7 @@
  *
  * Use this method to wait for the page to be interactive.
  */
-module.exports = (timeoutMs = 3000) => {
+module.exports = (timeoutMs = 5000) => {
 	browser.waitUntil(
 		() =>
 			browser.execute(

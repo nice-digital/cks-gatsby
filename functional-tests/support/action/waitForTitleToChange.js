@@ -1,4 +1,4 @@
-module.exports = (oldTitle, timeoutMs = 3000) => {
+module.exports = (oldTitle, timeoutMs = 5000) => {
 	browser.waitUntil(
 		() => browser.getTitle() !== oldTitle,
 		timeoutMs,
