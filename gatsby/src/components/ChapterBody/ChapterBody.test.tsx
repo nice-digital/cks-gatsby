@@ -15,12 +15,14 @@ describe("ChapterBody", () => {
 			htmlStringContent: "<p>Some content</p>",
 			subChapters: [
 				{
+					id: "dfntn",
 					slug: "definition",
 					fullItemName: "Definition",
 					htmlHeader: "<h2>When should I suspect asthma?</h2>",
 					htmlStringContent: "<p>Take a structured clinical history</p>",
 				} as ChapterLevel2,
 				{
+					id: "prvlnc",
 					slug: "prevalence",
 					fullItemName: "Prevalence",
 					htmlHeader: "<h2>What is the prevalence of asthma?</h2>",

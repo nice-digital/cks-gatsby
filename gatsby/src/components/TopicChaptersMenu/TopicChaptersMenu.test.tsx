@@ -44,14 +44,14 @@ describe("TopicChaptersMenu", () => {
 		const { getByLabelText } = render(
 			<TopicChaptersMenu topic={topic} currentChapterId="c1" />
 		);
-		expect(getByLabelText("Asthma chapters")).toBeInTheDOM();
+		expect(getByLabelText("Asthma chapters")).toBeInTheDocument();
 	});
 
 	it("should render nav item for each root chapter", () => {
 		const { getByLabelText } = render(
 			<TopicChaptersMenu topic={topic} currentChapterId="c1" />
 		);
-		expect(getByLabelText("Asthma chapters")).toBeInTheDOM();
+		expect(getByLabelText("Asthma chapters")).toBeInTheDocument();
 	});
 
 	it("should use aria-current for current root chapter", () => {
@@ -100,16 +100,16 @@ describe("TopicChaptersMenu", () => {
 		const { getByText } = render(
 			<TopicChaptersMenu topic={topic} currentChapterId="c2" />
 		);
-		expect(getByText("Changes")).toBeInTheDOM();
-		expect(getByText("Updates")).toBeInTheDOM();
+		expect(getByText("Changes")).toBeInTheDocument();
+		expect(getByText("Updates")).toBeInTheDocument();
 	});
 
 	it("should render sub chapters sub chapter is active", () => {
 		const { getByText } = render(
 			<TopicChaptersMenu topic={topic} currentChapterId="c2.1" />
 		);
-		expect(getByText("Changes")).toBeInTheDOM();
-		expect(getByText("Updates")).toBeInTheDOM();
+		expect(getByText("Changes")).toBeInTheDocument();
+		expect(getByText("Updates")).toBeInTheDocument();
 	});
 
 	it("should use aria-current for current sub chapter", () => {

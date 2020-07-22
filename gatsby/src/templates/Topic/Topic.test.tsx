@@ -1,5 +1,5 @@
 import React from "react";
-import { render, wait, RenderResult } from "@testing-library/react";
+import { render, waitFor, RenderResult } from "@testing-library/react";
 import { textContentMatcher } from "test-utils";
 
 import { ChapterLevel1, Topic, PartialChapter } from "../../types";
@@ -52,13 +52,13 @@ describe("TopicPage", () => {
 
 	describe("SEO", () => {
 		it("should render the topic name in the page title", async () => {
-			await wait(() => {
+			await waitFor(() => {
 				expect(document.title).toContain("Asthma | Topics A to Z");
 			});
 		});
 
 		it("should use topic summary for meta description", async () => {
-			await wait(() => {
+			await waitFor(() => {
 				expect(
 					document.querySelector("meta[name='description']")
 				).toHaveAttribute("content", topic.topicSummary);

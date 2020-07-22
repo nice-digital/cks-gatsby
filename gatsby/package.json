@@ -16,7 +16,7 @@
     "// UTILS": "",
     "wait": "wait-on tcp:localhost:8000",
     "// TESTS": "",
-    "test": "jest --notify --silent",
+    "test": "jest --notify",
     "test:watch": "jest --watch",
     "test:coverage": "npm run test -- --coverage",
     "// LINTING/CODE STYLE": "",

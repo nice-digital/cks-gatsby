@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import ChapterLevel2Page, { ChapterLevel2PageProps } from "./ChapterLevel2";
 import { ChapterLevel2, PartialChapter } from "../../types";
 
@@ -37,6 +37,7 @@ describe("ChapterLevel2", () => {
 				slug: "asthma",
 				chapters: [
 					{
+						id: "smry",
 						fullItemName: "Summary",
 						subChapters: [] as PartialChapter[],
 					} as PartialChapter,
@@ -98,16 +99,18 @@ describe("ChapterLevel2", () => {
 	});
 
 	describe("title", () => {
-		it("should have title with chapter name, parent chapter name and parent topic name", () => {
+		it("should have title with chapter name, parent chapter name and parent topic name", async () => {
 			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
 				/>
 			);
 
-			expect(document.title).toEqual(
-				"Definition | Background information | Asthma | CKS | NICE"
-			);
+			await waitFor(() => {
+				expect(document.title).toEqual(
+					"Definition | Background information | Asthma | CKS | NICE"
+				);
+			});
 		});
 	});
 
