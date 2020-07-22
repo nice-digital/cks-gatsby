@@ -8,12 +8,10 @@ const NotFoundPage: React.FC = () => {
 		<Layout>
 			<SEO title="Page not found" noIndex={true} />
 			<header role="banner" className="page-header">
-				<div className="container">
-					<h1>We can't find this page</h1>
-					<p className="lead">
-						Check that the web address has been typed correctly.
-					</p>
-				</div>
+				<h1>We can't find this page</h1>
+				<p className="lead">
+					Check that the web address has been typed correctly.
+				</p>
 			</header>
 
 			<p>You can also try:</p>
