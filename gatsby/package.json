@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Website for NICE Clinical Knowledge Summaries (CKS) built with Gatsby and using the NICE Design System",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "start": "npm run develop",
     "// GATSBY": "",
     "develop": "gatsby develop",
@@ -47,8 +48,8 @@
   "license": "MIT",
   "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
   "devDependencies": {
-    "@nice-digital/design-system": "^1.0.33-alpha.0",
-    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#44edfb9e63ad4a2290bfd7aa981cb9164fc60f4f",
+    "@nice-digital/design-system": "^1.0.38-alpha.0",
+    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#01f7615bbcd4ae30ed61a5c991013352a9bb8bbc",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^10.3.1",
@@ -69,7 +70,8 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-testing-library": "^3.3.1",
-    "gatsby": "^2.21.33",
+    "gatsby": "2.24.3",
+    "gatsby-react-router-scroll": "3.0.0",
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-google-tagmanager": "^2.3.1",
     "gatsby-plugin-manifest": "^2.4.9",
@@ -78,6 +80,7 @@
     "gatsby-plugin-react-helmet": "^3.3.0",
     "gatsby-plugin-sass": "^2.1.30",
     "gatsby-plugin-sitemap": "^2.4.2",
+    "gatsby-plugin-split-css": "^1.0.2",
     "gatsby-plugin-typescript": "^2.2.0",
     "http-proxy-middleware": "^1.0.1",
     "identity-obj-proxy": "^3.0.0",
@@ -97,5 +100,8 @@
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3",
     "wait-on": "^4.0.1"
+  },
+  "resolutions": {
+    "gatsby-react-router-scroll": "3.0.0"
   }
 }

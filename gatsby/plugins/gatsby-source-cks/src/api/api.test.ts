@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { Cache } from "gatsby";
+import { GatsbyCache } from "gatsby";
 
 import {
 	configure,
@@ -72,7 +72,7 @@ describe("api", () => {
 			cache = {
 				get: cacheGet as Function,
 				set: cacheSet as Function,
-			} as Cache["cache"];
+			} as GatsbyCache;
 
 		beforeEach(() => {
 			cacheGet.mockReset();

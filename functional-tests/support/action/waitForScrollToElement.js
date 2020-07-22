@@ -9,7 +9,7 @@ import windowIsScrolledToBottom from "./windowIsScrolledToBottom";
  * @param {String} selector
  * @param {Number} timeoutMs Timeout for waiting, in milliseconds
  */
-module.exports = (selector, timeoutMs = 2000) => {
+module.exports = (selector, timeoutMs = 5000) => {
 	browser.waitUntil(
 		() => isAtTopOfScreen(selector) || windowIsScrolledToBottom(),
 		timeoutMs,
