@@ -9,6 +9,8 @@ import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 
+import styles from "./search.module.scss";
+
 interface SearchResults {
 	failed: boolean;
 	resultCount: number;
@@ -248,9 +250,9 @@ interface ResultsList {
 }
 
 const ResultsList: React.FC<ResultsList> = ({ documents }) => (
-	<ol className="list--unstyled grid">
+	<ol className={`list--unstyled ${styles.resultList}`}>
 		{documents?.map(({ id, title, pathAndQuery, teaser }) => (
-			<li key={id} data-g="12 md:8">
+			<li key={id}>
 				<Card
 					summary={<span dangerouslySetInnerHTML={{ __html: teaser }} />}
 					headingText={<span dangerouslySetInnerHTML={{ __html: title }} />}

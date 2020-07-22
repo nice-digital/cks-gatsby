@@ -1,0 +1,6 @@
+.section {
+  > :first-child,
+  > :global(.visually-hidden):first-child + * {
+    margin-top: 0;
+  }
+}
