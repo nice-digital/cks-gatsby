@@ -71,7 +71,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-testing-library": "^3.3.2",
     "gatsby": "2.24.9",
-    "gatsby-react-router-scroll": "3.0.12",
+    "gatsby-react-router-scroll": "3.0.0",
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-google-tagmanager": "^2.3.11",
     "gatsby-plugin-manifest": "^2.4.20",
@@ -102,6 +102,6 @@
     "wait-on": "^5.1.0"
   },
   "resolutions": {
-    "gatsby-react-router-scroll": "3.0.12"
+    "gatsby-react-router-scroll": "3.0.0"
   }
 }
