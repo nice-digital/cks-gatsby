@@ -110,11 +110,9 @@ const SearchPage: React.FC = () => {
 			)}
 			{(error || (data && data.failed)) && (
 				<>
-					<SEO title="Sorry, there is a problem with search" noIndex={true} />
-					<PageHeader
-						heading="Sorry, there is a problem with search"
-						lead="We are working on it, please try again later"
-					/>
+					<SEO title="There is a problem with search" noIndex={true} />
+					<PageHeader heading="Sorry, there is a problem with search" />
+					<p>We are working on it, please try again later.</p>
 					<p>
 						You can also try browsing for topics from the{" "}
 						<Link to={"/"}>CKS homepage</Link>.
