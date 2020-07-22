@@ -7,20 +7,29 @@ const NotFoundPage: React.FC = () => {
 	return (
 		<Layout>
 			<SEO title="Page not found" noIndex={true} />
-			<h1>We can't find this page</h1>
-			<p>Check that the web address has been typed correctly.</p>
-			You can also try:
+			<header role="banner" className="page-header">
+				<div className="container">
+					<h1>We can't find this page</h1>
+					<p className="lead">
+						Check that the web address has been typed correctly.
+					</p>
+				</div>
+			</header>
+
+			<p>You can also try:</p>
 			<ul>
-				<li>Look for it using the search box</li>
+				<li>looking for it using the search box</li>
 				<li>
-					Browse for it from the <Link to="/">CKS homepage.</Link>
+					browsing for it from the <Link to="/">CKS homepage</Link>.
 				</li>
 			</ul>
 			<h2>Contact us</h2>
-			<a href="https://www.nice.org.uk/get-involved/contact-us">
-				Get in touch
-			</a>{" "}
-			if you think there is a problem.
+			<p>
+				<a href="https://www.nice.org.uk/get-involved/contact-us">
+					Get in touch
+				</a>{" "}
+				if you think there is a problem.
+			</p>
 		</Layout>
 	);
 };
