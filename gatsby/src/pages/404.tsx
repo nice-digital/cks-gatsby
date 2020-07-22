@@ -2,11 +2,17 @@ import React from "react";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 import { Link } from "gatsby";
+import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 
 const NotFoundPage: React.FC = () => {
 	return (
 		<Layout>
 			<SEO title="Page not found" noIndex={true} />
+			<Breadcrumbs>
+				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
+				<Breadcrumb to="/">CKS</Breadcrumb>
+				<Breadcrumb>Page not found</Breadcrumb>
+			</Breadcrumbs>
 			<header role="banner" className="page-header">
 				<h1>We can't find this page</h1>
 				<p className="lead">
