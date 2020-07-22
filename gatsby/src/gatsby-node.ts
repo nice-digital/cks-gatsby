@@ -159,7 +159,7 @@ const createCksPages = async ({
 	function createCksPage(
 		path: string,
 		templateName: string,
-		context: object
+		context: unknown
 	): void {
 		createPage({
 			path,
@@ -176,7 +176,7 @@ const createCksPages = async ({
 		createCksPage(`/specialities/${slug}/`, "Speciality", { id });
 	});
 
-	pageCreationQuery.data?.level1Chapters.nodes.forEach(chapter => {
+	pageCreationQuery.data?.level1Chapters.nodes.forEach((chapter) => {
 		createCksPage(
 			`/topics/${chapter.topic.slug}/${chapter.slug}/`,
 			"ChapterLevel1",
@@ -184,7 +184,7 @@ const createCksPages = async ({
 		);
 	});
 
-	pageCreationQuery.data?.level2Chapters.nodes.forEach(chapter => {
+	pageCreationQuery.data?.level2Chapters.nodes.forEach((chapter) => {
 		createCksPage(
 			`/topics/${chapter.topic.slug}/${chapter.parentChapter.slug}/${chapter.slug}/`,
 			"ChapterLevel2",

@@ -25,7 +25,7 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 			{topic.chapters.map(({ id, slug, fullItemName, subChapters }, i) => {
 				const shouldShowSubChapters =
 					id === currentChapterId ||
-					subChapters.some(c => c.id === currentChapterId);
+					subChapters.some((c) => c.id === currentChapterId);
 
 				// The summary chapter links to the topic landing page
 				const chapterPath = i === 0 ? topicPath : `${topicPath}${slug}/`;
@@ -38,7 +38,7 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 						isCurrent={id === currentChapterId}
 						nested={
 							shouldShowSubChapters &&
-							subChapters.map(subChapter => (
+							subChapters.map((subChapter) => (
 								<StackedNavLink
 									key={subChapter.id}
 									elementType={Link}
