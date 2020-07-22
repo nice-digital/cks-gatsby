@@ -1,48 +1,61 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, RenderResult, cleanup } from "@testing-library/react";
 import ChapterLevel1Page, { ChapterLevel1PageProps } from "./ChapterLevel1";
 import { ChapterLevel1, PartialChapter } from "../../types";
 
-describe("ChapterLevel1", () => {
-	let chapter: ChapterLevel1;
-	beforeEach(() => {
-		chapter = {
-			id: "abc123",
-			fullItemName: "Background information",
-			depth: 1,
-			slug: "background-information",
-			htmlHeader: "<!-- Start -><h1>Background information</h1><!-- End ->",
-			htmlStringContent: "<p>Some content</p>",
-			subChapters: [
-				{
-					slug: "definition",
-					fullItemName: "Definition",
-				} as PartialChapter,
-				{
-					slug: "prevalence",
-					fullItemName: "Prevalence",
-				} as PartialChapter,
-			],
-			topic: {
-				topicName: "Asthma",
-				slug: "asthma",
-				chapters: [
+const getDefaultTestProps = (): ChapterLevel1PageProps =>
+	(({
+		pageContext: {
+			chapter: {
+				id: "abc123",
+				fullItemName: "Background information",
+				depth: 1,
+				slug: "background-information",
+				htmlHeader: "<!-- Start -><h1>Background information</h1><!-- End ->",
+				htmlStringContent: "<p>Some content</p>",
+				subChapters: [
 					{
-						fullItemName: "Summary",
-						subChapters: [] as PartialChapter[],
+						id: "dfntn",
+						slug: "definition",
+						fullItemName: "Definition",
+					} as PartialChapter,
+					{
+						id: "prvlnc",
+						slug: "prevalence",
+						fullItemName: "Prevalence",
 					} as PartialChapter,
 				],
-			},
-		} as ChapterLevel1;
+				topic: {
+					topicName: "Asthma",
+					slug: "asthma",
+					chapters: [
+						{
+							id: "smry",
+							fullItemName: "Summary",
+							subChapters: [] as PartialChapter[],
+						} as PartialChapter,
+					],
+				},
+			} as ChapterLevel1,
+		},
+	} as unknown) as ChapterLevel1PageProps);
+
+describe("ChapterLevel1", () => {
+	let props = getDefaultTestProps();
+	let renderResult: RenderResult;
+
+	beforeEach(() => {
+		renderResult = render(<ChapterLevel1Page {...props} />);
+	});
+
+	afterEach(() => {
+		// Reset props for the next test in case they've been amended
+		props = getDefaultTestProps();
 	});
 
 	describe("Breadcrumbs", () => {
 		it("should have homepage breadcrumb", () => {
-			const { getByText } = render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
+			const { getByText } = renderResult;
 
 			expect(getByText("CKS", { selector: ".breadcrumbs a" })).toHaveAttribute(
 				"href",
@@ -50,11 +63,7 @@ describe("ChapterLevel1", () => {
 			);
 		});
 		it("should have parent topic breadcrumb", () => {
-			const { getByText } = render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
+			const { getByText } = renderResult;
 
 			expect(
 				getByText("Asthma", { selector: ".breadcrumbs a" })
@@ -64,11 +73,8 @@ describe("ChapterLevel1", () => {
 
 	describe("page header", () => {
 		it("should render parent topic name with chapter name as heading 1", () => {
-			const { getAllByRole } = render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
+			const { getAllByRole } = renderResult;
+
 			const heading = getAllByRole("heading")[0];
 			expect(heading).toHaveProperty("tagName", "H1");
 			expect(heading).toHaveProperty(
@@ -80,12 +86,6 @@ describe("ChapterLevel1", () => {
 
 	describe("title", () => {
 		it("should have title with chapter name and parent topic name", () => {
-			render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
-
 			expect(document.title).toEqual(
 				"Background information | Asthma | CKS | NICE"
 			);
@@ -94,11 +94,7 @@ describe("ChapterLevel1", () => {
 
 	describe("html string content", () => {
 		it("should render html string content as chapter body", () => {
-			const { getByLabelText } = render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
+			const { getByLabelText } = renderResult;
 			expect(
 				getByLabelText("Background information", {
 					selector: "section",
@@ -109,15 +105,13 @@ describe("ChapterLevel1", () => {
 
 	describe("no html string content/custom nav", () => {
 		beforeEach(() => {
-			chapter.htmlStringContent = "<!-- No content -->";
+			cleanup();
+			props.pageContext.chapter.htmlStringContent = "<!-- No content -->";
+			renderResult = render(<ChapterLevel1Page {...props} />);
 		});
 
 		it("should render visually hidden heading 2 with html header content", () => {
-			const { getByText } = render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
+			const { getByText } = renderResult;
 
 			const heading = getByText("Background information", { selector: "h2" });
 
@@ -126,34 +120,21 @@ describe("ChapterLevel1", () => {
 		});
 
 		it("should render custom nav labelled with the chapter name", () => {
-			const { getByLabelText } = render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
-			expect(getByLabelText("Background information")).toHaveProperty(
-				"tagName",
-				"NAV"
-			);
+			const { getByLabelText } = renderResult;
+			expect(
+				getByLabelText("Background information", { selector: "nav" })
+			).toBeInTheDocument();
 		});
 
 		it("should render custom nav list with aria label", () => {
-			const { getByLabelText } = render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
+			const { getByLabelText } = renderResult;
 			expect(
 				getByLabelText("Pages within Background information")
 			).toHaveProperty("tagName", "UL");
 		});
 
 		it("should render anchors for each sub chapter", () => {
-			const { getByText } = render(
-				<ChapterLevel1Page
-					{...({ pageContext: { chapter } } as ChapterLevel1PageProps)}
-				/>
-			);
+			const { getByText } = renderResult;
 
 			const definitionLink = getByText("Definition");
 
