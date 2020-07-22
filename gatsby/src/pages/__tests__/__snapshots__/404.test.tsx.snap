@@ -6,36 +6,115 @@ exports[`404 should match snapshot 1`] = `
     class="container"
     id="content-start"
   >
-    <h1>
-      We can't find this page
-    </h1>
+    <nav
+      aria-label="Breadcrumbs"
+      role="navigation"
+    >
+      <ol
+        class="breadcrumbs"
+      >
+        <li
+          class="breadcrumbs__crumb"
+        >
+          <a
+            href="https://www.nice.org.uk/"
+          >
+            NICE
+          </a>
+        </li>
+        <li
+          class="breadcrumbs__crumb"
+        >
+          <a
+            href="/"
+          >
+            CKS
+          </a>
+        </li>
+        <li
+          class="breadcrumbs__crumb"
+        >
+          <span>
+            Page not found
+          </span>
+        </li>
+      </ol>
+    </nav>
+    <script
+      type="application/ld+json"
+    >
+      {
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://www.nice.org.uk/",
+        "name": "NICE"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "/",
+        "name": "CKS"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "name": "Page not found"
+      }
+    }
+  ]
+}
+    </script>
+    <header
+      class="page-header"
+      role="banner"
+    >
+      <h1>
+        We can't find this page
+      </h1>
+      <p
+        class="lead"
+      >
+        Check that the web address has been typed correctly.
+      </p>
+    </header>
     <p>
-      Check that the web address has been typed correctly.
+      You can also try:
     </p>
-    You can also try:
     <ul>
       <li>
-        Look for it using the search box
+        looking for it using the search box
       </li>
       <li>
-        Browse for it from the 
+        browsing for it from the 
         <a
           href="/"
         >
-          CKS homepage.
+          CKS homepage
         </a>
+        .
       </li>
     </ul>
     <h2>
       Contact us
     </h2>
-    <a
-      href="https://www.nice.org.uk/get-involved/contact-us"
-    >
-      Get in touch
-    </a>
-     
-    if you think there is a problem.
+    <p>
+      <a
+        href="https://www.nice.org.uk/get-involved/contact-us"
+      >
+        Get in touch
+      </a>
+       
+      if you think there is a problem.
+    </p>
   </main>
 </div>
 `;
