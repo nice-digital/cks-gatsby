@@ -31,7 +31,7 @@ describe("createChangeNodes", () => {
 							rootId: "chapter1",
 							parentId: "chapter1",
 							itemId: "chapter1.1",
-							fullItemName: "Chapter 1.1",
+							fullItemName: "Chapter 1.1, And (bracket's)",
 							containerElement: "rightTopic",
 							children: [] as ApiTopicHtmlObject[],
 						} as ApiTopicHtmlObject,
@@ -67,7 +67,14 @@ describe("createChangeNodes", () => {
 	it("should store slugified lowercased name in slug field", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "chapter-1");
-		expect(createNode.mock.calls[1][0]).toHaveProperty("slug", "chapter-11");
+	});
+
+	it("should remove 'and', brackets, commas and apostrophes from slug", () => {
+		createChapterNotes(topics, sourceNodesArgs);
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"slug",
+			"chapter-11-brackets"
+		);
 	});
 
 	it("should create a unique node id from the itemId property", () => {

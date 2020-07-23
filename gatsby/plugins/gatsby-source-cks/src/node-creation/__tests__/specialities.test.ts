@@ -67,7 +67,7 @@ describe("createSpecialityNodes", () => {
 		);
 		expect(createNode.mock.calls[2][0]).toHaveProperty(
 			"slug",
-			"infections-and-infestations"
+			"infections-infestations"
 		);
 	});
 
