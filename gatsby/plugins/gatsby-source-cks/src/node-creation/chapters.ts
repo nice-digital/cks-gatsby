@@ -47,10 +47,13 @@ const createTopicChapterNodes = (
 			fullItemName,
 			...chapterFields
 		}) => {
-			const slug = slugify(fullItemName.replace(/ and /gi, " "), {
-				lower: true,
-				remove: /[,*+~.()'"!?:@]/g,
-			});
+			const slug = slugify(
+				fullItemName.replace(/^Scenario: /gi, "").replace(/ and /gi, " "),
+				{
+					lower: true,
+					remove: /[,*+~.()'"!?:@]/g,
+				}
+			);
 
 			const nodeContent = {
 				...chapterFields,

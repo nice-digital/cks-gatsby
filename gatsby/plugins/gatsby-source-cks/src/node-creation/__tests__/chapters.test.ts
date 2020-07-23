@@ -22,7 +22,7 @@ describe("createChangeNodes", () => {
 			topicHtmlObjects: [
 				{
 					itemId: "chapter1",
-					fullItemName: "Chapter 1",
+					fullItemName: "Scenario: Chapter 1",
 					containerElement: "topicSummary",
 					parentId: null,
 					rootId: "chapter1",
@@ -64,12 +64,12 @@ describe("createChangeNodes", () => {
 		expect(createNode).toHaveBeenCalledTimes(3);
 	});
 
-	it("should store slugified lowercased name in slug field", () => {
+	it("should store slugified lowercased name in slug field removing 'Scenario: '", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "chapter-1");
 	});
 
-	it("should remove 'and', brackets, commas and apostrophes from slug", () => {
+	it("should remove 'and', brackets, commas, apostrophes from slug", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[1][0]).toHaveProperty(
 			"slug",
@@ -141,7 +141,7 @@ describe("createChangeNodes", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty(
 			"internal.contentDigest",
-			"contentDigest: Chapter 1"
+			"contentDigest: Scenario: Chapter 1"
 		);
 	});
 });
