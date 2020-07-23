@@ -73,19 +73,20 @@ exports[`404 should match snapshot 1`] = `
   ]
 }
     </script>
-    <header
+    <div
       class="page-header"
-      role="banner"
     >
-      <h1>
+      <h1
+        class="page-header__heading"
+      >
         We can't find this page
       </h1>
       <p
-        class="lead"
+        class="page-header__lead"
       >
         Check that the web address has been typed correctly.
       </p>
-    </header>
+    </div>
     <p>
       You can also try:
     </p>
