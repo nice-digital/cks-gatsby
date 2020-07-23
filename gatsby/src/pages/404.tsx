@@ -1,8 +1,9 @@
 import React from "react";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
-import { Link } from "gatsby";
+import { PageHeader } from "@nice-digital/nds-page-header";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { Link } from "gatsby";
 
 const NotFoundPage: React.FC = () => {
 	return (
@@ -13,12 +14,11 @@ const NotFoundPage: React.FC = () => {
 				<Breadcrumb to="/">CKS</Breadcrumb>
 				<Breadcrumb>Page not found</Breadcrumb>
 			</Breadcrumbs>
-			<header role="banner" className="page-header">
-				<h1>We can't find this page</h1>
-				<p className="lead">
-					Check that the web address has been typed correctly.
-				</p>
-			</header>
+
+			<PageHeader
+				heading={"We can't find this page"}
+				lead={"Check that the web address has been typed correctly."}
+			/>
 
 			<p>You can also try:</p>
 			<ul>
