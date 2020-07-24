@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no tests, this is just a fake API\" && exit 1",
     "start": "node index.js",
-    "debug": "node --nolazy --inspect-brk=9230 index.js"
+    "debug": "node --nolazy --inspect=9230 index.js"
   },
   "engines": {
     "node": ">=10",

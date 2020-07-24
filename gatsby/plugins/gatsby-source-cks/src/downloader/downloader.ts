@@ -77,7 +77,7 @@ export const downloadAllData = async (
 			sourceNodesArgs
 		);
 
-	changes.forEach(c => {
+	changes.forEach((c) => {
 		info(`Got major update for '${c.topicName}' (${c.title})`);
 	});
 

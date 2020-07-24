@@ -41,7 +41,7 @@ describe("createChangeNodes", () => {
 	});
 
 	it("should create a unique node id from the topic id", () => {
-		createNodeId.mockImplementation(s => `node id: ` + s);
+		createNodeId.mockImplementation((s) => `node id: ` + s);
 		createChangeNodes(changes, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(changes.length);
 		expect(createNodeId).toHaveBeenNthCalledWith(1, "Changetopic1");
@@ -73,7 +73,7 @@ describe("createChangeNodes", () => {
 
 	it("should set contentDigest internal field using createContentDigest utility", () => {
 		createContentDigest.mockImplementationOnce(
-			t => `contentDigest: ${t.title}`
+			(t) => `contentDigest: ${t.title}`
 		);
 		createChangeNodes(changes, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty(

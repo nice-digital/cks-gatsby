@@ -1,5 +1,5 @@
 import React from "react";
-import { waitForDomChange, RenderResult, render } from "@testing-library/react";
+import { waitFor, RenderResult, render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { textContentMatcher } from "test-utils";
 
@@ -36,8 +36,9 @@ describe("SpecialitiesPage", () => {
 
 	describe("SEO", () => {
 		it("should render specialities in the page title", async () => {
-			await waitForDomChange();
-			expect(document.title).toContain("Specialities | ");
+			await waitFor(() => {
+				expect(document.title).toContain("Specialities | ");
+			});
 		});
 	});
 

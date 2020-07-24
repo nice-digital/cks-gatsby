@@ -1,5 +1,5 @@
 import React from "react";
-import { render, waitForDomChange, RenderResult } from "@testing-library/react";
+import { render, waitFor, RenderResult } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { Speciality } from "../../types";
@@ -45,18 +45,20 @@ describe("SpecialityPage", () => {
 
 	describe("SEO", () => {
 		it("should render the speciality name in the page title", async () => {
-			await waitForDomChange();
-			expect(document.title).toContain("Allergies | Specialities");
+			await waitFor(() => {
+				expect(document.title).toContain("Allergies | Specialities");
+			});
 		});
 
 		it("should set meta description with multiple topics", async () => {
-			await waitForDomChange();
-			expect(
-				document.querySelector("meta[name='description']")
-			).toHaveAttribute(
-				"content",
-				"Speciality allergies, containing practical guidance on best practice for 2 primary care topics"
-			);
+			await waitFor(() => {
+				expect(
+					document.querySelector("meta[name='description']")
+				).toHaveAttribute(
+					"content",
+					"Speciality allergies, containing practical guidance on best practice for 2 primary care topics"
+				);
+			});
 		});
 
 		describe("", () => {
@@ -64,13 +66,14 @@ describe("SpecialityPage", () => {
 				speciality.topics = speciality.topics.slice(0, 1);
 			});
 			it("should set meta description with single topic", async () => {
-				await waitForDomChange();
-				expect(
-					document.querySelector("meta[name='description']")
-				).toHaveAttribute(
-					"content",
-					"Speciality allergies, containing practical guidance on best practice for 1 primary care topic"
-				);
+				await waitFor(() => {
+					expect(
+						document.querySelector("meta[name='description']")
+					).toHaveAttribute(
+						"content",
+						"Speciality allergies, containing practical guidance on best practice for 1 primary care topic"
+					);
+				});
 			});
 		});
 	});

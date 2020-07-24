@@ -73,9 +73,10 @@ const SearchPage: React.FC = () => {
 
 	useEffect(() => {
 		setData(null);
+		announce("Loading search results");
 		fetch("/api/search" + location.search)
-			.then(data => data.json())
-			.then(results => {
+			.then((data) => data.json())
+			.then((results) => {
 				setError(false);
 				setData(results as SearchResults);
 				announce("Search results loaded");
@@ -159,6 +160,10 @@ const Results: React.FC<SearchResults> = ({
 		totalPages,
 	};
 
+	const breadcrumbText = `Search results ${
+		finalSearchText ? `for ${finalSearchText}` : ""
+	}`;
+
 	return (
 		<>
 			<SEO title={titleString(finalSearchText, currentPage)} noIndex={true} />
@@ -166,12 +171,12 @@ const Results: React.FC<SearchResults> = ({
 				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
 				<Breadcrumb to="/">CKS</Breadcrumb>
 				<Breadcrumb
-					to={currentPage > 1 ? `/search?q=${finalSearchText}` : undefined}
+					to={currentPage > 1 ? `/search/?q=${finalSearchText}` : undefined}
 				>
-					Search results {finalSearchText && `for ${finalSearchText}`}
+					{breadcrumbText}
 				</Breadcrumb>
 				{currentPage > 1 ? (
-					<Breadcrumb>Page {currentPage.toString(10)}</Breadcrumb>
+					<Breadcrumb>{`Page ${currentPage.toString(10)}`}</Breadcrumb>
 				) : (
 					<></>
 				)}

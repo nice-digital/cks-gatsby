@@ -39,7 +39,7 @@ When(/^I click "([^"]*)" in the autocomplete options$/, (text) => {
 	);
 });
 
-When(/^I click the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
+When(/^I click the ([^"]*) breadcrumb$/, (breadcrumbText) => {
 	const pageTitle = browser.getTitle(),
 		breadcrumbsListSelector = getSelector("breadcrumbs list");
 
