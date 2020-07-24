@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 const { createProxyMiddleware } = require("http-proxy-middleware");
 const moment = require("moment");
 
@@ -9,11 +8,7 @@ require("dotenv").config({
 /** The date from which to get updates */
 const changesSinceDate = process.env.CHANGES_SINCE
 	? moment.utc(process.env.CHANGES_SINCE).toDate()
-	: moment()
-			.utc()
-			.subtract(1, "months")
-			.startOf("month")
-			.toDate();
+	: moment().utc().subtract(1, "months").startOf("month").toDate();
 
 module.exports = {
 	siteMetadata: {
@@ -46,6 +41,9 @@ module.exports = {
 				],
 			},
 		},
+		// Gatsby loads a single CSS bundle by default (see https://github.com/gatsbyjs/gatsby/issues/11072#issue-399193885).
+		// But we want per-page chunks to minimize size, so use this plugin to split into separate chunks:
+		"gatsby-plugin-split-css",
 		{
 			resolve: `gatsby-source-cks`,
 			options: {
@@ -58,6 +56,7 @@ module.exports = {
 			resolve: "gatsby-plugin-eslint",
 			options: {
 				test: /\.(?:j|t)sx?$/,
+				exclude: /global-nav/,
 			},
 		},
 		{
@@ -151,7 +150,21 @@ module.exports = {
 		},
 	],
 	// Proxy the relative search endpoint to the .NET app for local dev
-	developMiddleware: app => {
-		app.use(createProxyMiddleware("http://localhost:5000/api/search"));
+	developMiddleware: (app) => {
+		// Proxy the relative search endpoint to the .NET app for local dev
+		app.use(createProxyMiddleware("http://localhost:5000"));
+
+		// ******* or *******
+
+		// Use these settings to proxy to live search via this node app - https://github.com/wa-rren-dev/proxyToSearch
+		// 		app.use(
+		// 			"/api/search",
+		// 			createProxyMiddleware({
+		// 				target: "http://localhost:6001",
+		// 				pathRewrite: {
+		// 					"/api/search": "/search",
+		// 				},
+		// 			})
+		// 		);
 	},
 };

@@ -1,1 +1,10 @@
 **/package.json
+
+# Gatsby folders
+.cache
+coverage
+public
+static
+
+# https://github.com/gatsbyjs/gatsby/pull/25720
+_this_is_virtual_fs_path_

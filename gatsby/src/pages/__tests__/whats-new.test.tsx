@@ -1,5 +1,4 @@
 import React from "react";
-import { navigate } from "gatsby";
 
 import {
 	renderWithRouter,
@@ -41,6 +40,18 @@ const change3Updated = {
 		topicId: "topic3",
 		topicName: "Topic Three",
 		slug: "topic-three",
+	},
+};
+
+const change4New = {
+	id: "c4",
+	title: "New topic",
+	text: "Change 4 text",
+	topic: {
+		id: "t4",
+		topicId: "topic4",
+		topicName: "Topic Four",
+		slug: "topic-four",
 	},
 };
 
@@ -135,20 +146,20 @@ describe("What's new page", () => {
 
 		describe.each([
 			[[change1Updated], "1 updated topic"],
-			[[change1Updated, change1Updated], "2 updated topics"],
+			[[change1Updated, change3Updated], "2 updated topics"],
 			[[change2New], "1 new topic"],
-			[[change2New, change2New], "2 new topics"],
+			[[change2New, change4New], "2 new topics"],
 			[[change1Updated, change2New], "1 new topic and 1 updated topic"],
 			[
-				[change1Updated, change2New, change2New],
+				[change1Updated, change2New, change4New],
 				"2 new topics and 1 updated topic",
 			],
 			[
-				[change1Updated, change1Updated, change2New],
+				[change1Updated, change3Updated, change2New],
 				"1 new topic and 2 updated topics",
 			],
 			[
-				[change1Updated, change1Updated, change2New, change2New],
+				[change1Updated, change3Updated, change2New, change4New],
 				"2 new topics and 2 updated topics",
 			],
 		])("should render lead", (input, expected) => {

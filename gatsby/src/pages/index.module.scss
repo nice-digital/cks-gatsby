@@ -1,0 +1,33 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.topicsColumn h2,
+.specialitiesColumn h2 {
+  margin-top: 0;
+}
+
+.topicsColumn {
+  margin-bottom: rem($nds-spacing-large);
+
+  @include mq($from: md) {
+    padding-right: rem($nds-spacing-x-large) !important;
+  }
+}
+
+.specialitiesColumn {
+  @include mq($from: md) {
+    padding-left: rem($nds-spacing-x-large) !important;
+    border-left: rem($nds-spacing-xx-small) solid $nds-colour-border;
+
+    ol {
+      margin-top: rem($nds-spacing-large); // To align with the left column
+    }
+  }
+}
+
+.showAtMD {
+  display: none !important;
+
+  @include mq($from: md) {
+    display: block !important;
+  }
+}

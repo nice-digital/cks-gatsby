@@ -30,7 +30,7 @@ const extractSpecialities = (topics: ApiFullTopic[]): Map<string, string[]> => {
 	const mapping: Map<string, string[]> = new Map();
 
 	topics.forEach(({ topicId, clinicalSpecialties }) => {
-		clinicalSpecialties.forEach(speciality =>
+		clinicalSpecialties.forEach((speciality) =>
 			mapping.set(speciality, [...(mapping.get(speciality) || []), topicId])
 		);
 	});
@@ -50,7 +50,10 @@ export const createSpecialityNodes = (
 	Array.from(specialityTopicsMapping.entries()).forEach(([name, topics]) => {
 		const nodeContent = {
 			name,
-			slug: slugify(name, { lower: true, remove: /[(),']/g }),
+			slug: slugify(name.replace(/ and /gi, " "), {
+				lower: true,
+				remove: /[(),']/g,
+			}),
 			topics,
 		};
 

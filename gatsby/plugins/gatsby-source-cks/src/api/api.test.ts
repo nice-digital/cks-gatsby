@@ -1,6 +1,5 @@
 import fetch from "node-fetch";
-import moment from "moment";
-import { Cache } from "gatsby";
+import { GatsbyCache } from "gatsby";
 
 import {
 	configure,
@@ -71,9 +70,9 @@ describe("api", () => {
 		const cacheGet = jest.fn(),
 			cacheSet = jest.fn(),
 			cache = {
-				get: cacheGet as Function,
-				set: cacheSet as Function,
-			} as Cache["cache"];
+				get: cacheGet,
+				set: cacheSet,
+			} as GatsbyCache;
 
 		beforeEach(() => {
 			cacheGet.mockReset();
