@@ -3,14 +3,14 @@ import { TopicNode } from "../node-creation/topics";
 import { ChapterNode } from "../node-creation/chapters";
 import { replaceAsync } from "../utils";
 
-const topicAnchorRegex = /<a.*?"(\/Topic\/ViewTopic\/(.{36}))".*?<\/a>/gi,
-	chapterAnchorRegex = /<a.*?"(#(.{36}))".*?<\/a>/gi;
+const topicAnchorRegex = /<a.*?href="(\/Topic\/ViewTopic\/(.{36}))".*?<\/a>/gi,
+	chapterAnchorRegex = /<a.*?href="(#(.{36}))".*?<\/a>/gi;
 
 const getTopicById = (
 	topicId: string,
 	nodeModel: NodeModel
 ): Promise<TopicNode | null> =>
-	nodeModel.runQuery<TopicNode>({
+	nodeModel.runQuery({
 		query: {
 			filter: {
 				topicId: { eq: topicId },
@@ -24,7 +24,7 @@ const getChapterById = (
 	chapterItemId: string,
 	nodeModel: NodeModel
 ): Promise<ChapterNode | null> =>
-	nodeModel.runQuery<ChapterNode>({
+	nodeModel.runQuery({
 		query: {
 			filter: {
 				itemId: { eq: chapterItemId },
