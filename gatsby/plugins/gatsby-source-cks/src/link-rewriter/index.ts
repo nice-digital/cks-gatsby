@@ -1,38 +1,39 @@
 import { NodeModel } from "./types";
-import { TopicNode } from "../node-creation/topics";
-import { ChapterNode } from "../node-creation/chapters";
+import { TopicNode, topicNodeType } from "../node-creation/topics";
+import { ChapterNode, chapterNodeType } from "../node-creation/chapters";
 import { replaceAsync } from "../utils";
+import { NodeInput } from "gatsby";
 
 const topicAnchorRegex = /<a.*?href="(\/Topic\/ViewTopic\/(.{36}))".*?<\/a>/gi,
 	chapterAnchorRegex = /<a.*?href="(#(.{36}))".*?<\/a>/gi;
+
+const getNodeById = <T extends NodeInput>(
+	idField: string,
+	id: string,
+	nodeTypeName: string,
+	nodeModel: NodeModel
+): Promise<T | null> =>
+	nodeModel.runQuery({
+		query: {
+			filter: {
+				[idField]: { eq: id },
+			},
+		},
+		firstOnly: true,
+		type: nodeTypeName,
+	});
 
 const getTopicById = (
 	topicId: string,
 	nodeModel: NodeModel
 ): Promise<TopicNode | null> =>
-	nodeModel.runQuery({
-		query: {
-			filter: {
-				topicId: { eq: topicId },
-			},
-		},
-		firstOnly: true,
-		type: "CksTopic",
-	});
+	getNodeById("topicId", topicId, topicNodeType, nodeModel);
 
 const getChapterById = (
 	chapterItemId: string,
 	nodeModel: NodeModel
 ): Promise<ChapterNode | null> =>
-	nodeModel.runQuery({
-		query: {
-			filter: {
-				itemId: { eq: chapterItemId },
-			},
-		},
-		firstOnly: true,
-		type: "CksChapter",
-	});
+	getNodeById("itemId", chapterItemId, chapterNodeType, nodeModel);
 
 /**
  * Topic links are in the form /Topic/ViewTopic/<topic guid> in the feed.
@@ -75,36 +76,35 @@ const rewriteChapterLinks = (
 					`Could not find chapter '${chapterItemId}' in ${anchor} in chapter '${chapter.fullItemName}' (${chapter.itemId})`
 				);
 
-			const topicNode = await getTopicById(chapterNode.topic, nodeModel);
+			const topicNode = await getTopicById(chapterNode.topic, nodeModel),
+				topicPath = `/topics/${topicNode?.slug}/`;
 
-			let href = `/topics/${topicNode?.slug}/`;
-
+			// Top level chapter
 			if (!chapterNode.parentChapter) {
-				// Top level chapter
-				href += `${chapterNode.slug}/`;
-			} else {
-				const rootChapterNode = await getChapterById(
-					chapterNode.rootChapter,
-					nodeModel
-				);
-
-				href += `${rootChapterNode?.slug}/`;
-
-				if (chapterNode.parentChapter === chapterNode.rootChapter) {
-					// Second level chapter
-					href += `${chapterNode.slug}/`;
-				} else {
-					// Third+ level chapter
-					const parentChapterNode = await getChapterById(
-						chapterNode.parentChapter,
-						nodeModel
-					);
-
-					href += `${parentChapterNode?.slug}/#${chapterNode.slug}`;
-				}
+				return anchor.replace(originalHref, `${topicPath}${chapterNode.slug}/`);
 			}
 
-			return anchor.replace(originalHref, href);
+			// Second level chapter
+			const parentChapterNode = await getChapterById(
+				chapterNode.parentChapter,
+				nodeModel
+			);
+			if (chapterNode.parentChapter === chapterNode.rootChapter) {
+				return anchor.replace(
+					originalHref,
+					`${topicPath}${parentChapterNode?.slug}/${chapterNode.slug}/`
+				);
+			}
+
+			// Third+ level chapter
+			const rootChapterNode = await getChapterById(
+				chapterNode.rootChapter,
+				nodeModel
+			);
+			return anchor.replace(
+				originalHref,
+				`${topicPath}${rootChapterNode?.slug}/${parentChapterNode?.slug}/#${chapterNode.slug}`
+			);
 		}
 	);
 };

@@ -1,8 +1,8 @@
-import { replaceLinksInHtml } from "./";
+import { replaceLinksInHtml } from ".";
 import { NodeModel } from "./types";
 import { ChapterNode } from "../node-creation/chapters";
 
-describe("content processor", () => {
+describe("link rewriter", () => {
 	const runQuery = jest.fn(),
 		nodeModel: NodeModel = {
 			getAllNodes: jest.fn(),
@@ -54,7 +54,7 @@ describe("content processor", () => {
 
 	describe("chapter links", () => {
 		it("should rewrite root chapter links", async () => {
-			runQuery.mockImplementation(query => {
+			runQuery.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter")
@@ -74,7 +74,7 @@ describe("content processor", () => {
 		});
 
 		it("should rewrite second level chapter links", async () => {
-			runQuery.mockImplementation(query => {
+			runQuery.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter") {
@@ -105,7 +105,7 @@ describe("content processor", () => {
 		});
 
 		it("should rewrite third level chapter links", async () => {
-			runQuery.mockImplementation(query => {
+			runQuery.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter") {

@@ -12,8 +12,8 @@ import { createSpecialityNodes } from "./node-creation/specialities";
 import { createChangeNodes } from "./node-creation/changes";
 
 import { createChapterNotes, ChapterNode } from "./node-creation/chapters";
-import { replaceLinksInHtml } from "./content-processor";
-import { ResolveContext } from "./content-processor/types";
+import { replaceLinksInHtml } from "./link-rewriter";
+import { ResolveContext } from "./link-rewriter/types";
 
 interface ConfigOptions {
 	/** The API base URL */
@@ -72,6 +72,10 @@ export const sourceNodes = async (
 	return;
 };
 
+/**
+ * Gatsby hook for resolving fields
+ * See https://www.gatsbyjs.org/docs/schema-customization/#createresolvers-api
+ */
 export const createResolvers = ({
 	createResolvers,
 }: CreateResolversArgs): void => {

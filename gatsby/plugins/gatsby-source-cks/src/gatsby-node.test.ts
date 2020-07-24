@@ -14,7 +14,7 @@ import { createTopicNodes } from "./node-creation/topics";
 import { createSpecialityNodes } from "./node-creation/specialities";
 import { createChangeNodes } from "./node-creation/changes";
 import { createChapterNotes } from "./node-creation/chapters";
-import { replaceLinksInHtml } from "./content-processor";
+import { replaceLinksInHtml } from "./link-rewriter";
 
 jest
 	.mock("./downloader/downloader", () => ({
