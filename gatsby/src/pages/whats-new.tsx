@@ -92,7 +92,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 						style={{ margin: 0 }}
 						aria-labelledby="topic-updates"
 					>
-						{allCksChange.nodes.map(change => {
+						{allCksChange.nodes.map((change) => {
 							const { id, text, title, topic } = change,
 								isNew = isNewTopic(change);
 

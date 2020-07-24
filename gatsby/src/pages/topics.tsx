@@ -25,10 +25,10 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 
 	const groupedTopics = useMemo(
 		() =>
-			alphabet.map(letter => ({
+			alphabet.map((letter) => ({
 				letter,
 				topics: topics.filter(
-					topic => topic.topicName[0].toLowerCase() === letter
+					(topic) => topic.topicName[0].toLowerCase() === letter
 				),
 			})),
 		[alphabet, topics]

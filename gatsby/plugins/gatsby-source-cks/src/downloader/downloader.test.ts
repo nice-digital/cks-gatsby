@@ -44,15 +44,15 @@ const sourceNodesArgs: SourceNodesArgs = ({
 	reporter: {
 		createProgress: (): ProgressActivityTracker =>
 			({
-				tick: jest.fn() as Function,
-				done: jest.fn() as Function,
-				start: jest.fn() as Function,
+				tick: jest.fn() as ProgressActivityTracker["tick"],
+				done: jest.fn() as ProgressActivityTracker["done"],
+				start: jest.fn() as ProgressActivityTracker["start"],
 			} as ProgressActivityTracker),
 		activityTimer: (): ActivityTracker =>
 			({
-				start: jest.fn() as Function,
-				setStatus: jest.fn() as Function,
-				end: jest.fn() as Function,
+				start: jest.fn() as ActivityTracker["start"],
+				setStatus: jest.fn() as ActivityTracker["setStatus"],
+				end: jest.fn() as ActivityTracker["end"],
 			} as ActivityTracker),
 		info: jest.fn(),
 	},

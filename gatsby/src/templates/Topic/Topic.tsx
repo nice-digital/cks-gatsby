@@ -1,26 +1,55 @@
 import React from "react";
-import { graphql, PageRendererProps } from "gatsby";
+import { graphql, PageProps, Link } from "gatsby";
+
+import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Layout } from "../../components/Layout/Layout";
-import { Topic } from "../../types";
 import { SEO } from "../../components/SEO/SEO";
+import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
+import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
 
-type TopicPageProps = {
-	data: {
+import { Topic, ChapterLevel1 } from "../../types";
+
+export type TopicPageProps = PageProps<
+	{
+		firstChapter: ChapterLevel1;
 		topic: Topic;
-	};
-} & PageRendererProps;
+	},
+	{
+		id: string;
+	}
+>;
 
 const TopicPage: React.FC<TopicPageProps> = ({
-	data: {
-		topic: { topicName, topicSummary },
-	},
+	data: { topic, firstChapter },
 }: TopicPageProps) => {
+	const { topicName, topicSummary, lastRevised } = topic;
+
 	return (
 		<Layout>
-			<SEO title={topicName + " | Topics A-Z"} description={topicSummary} />
-			<h1>Topic: {topicName}</h1>
-			<p>{topicSummary}</p>
+			<SEO title={topicName + " | Topics A to Z"} description={topicSummary} />
+			<Breadcrumbs>
+				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
+				<Breadcrumb to="/" elementType={Link}>
+					CKS
+				</Breadcrumb>
+				<Breadcrumb to="/topics/" elementType={Link}>
+					Topics A to Z
+				</Breadcrumb>
+				<Breadcrumb>{topicName}</Breadcrumb>
+			</Breadcrumbs>
+
+			<PageHeader
+				heading={topicName}
+				lead={<span dangerouslySetInnerHTML={{ __html: lastRevised }} />}
+			/>
+
+			<p className="visually-hidden">{topicSummary}</p>
+
+			<ChapterContents chapter={firstChapter}>
+				<ChapterBody chapter={firstChapter} />
+			</ChapterContents>
 		</Layout>
 	);
 };
@@ -29,6 +58,22 @@ export default TopicPage;
 
 export const TopicPageQuery = graphql`
 	query TopicById($id: String!) {
+		firstChapter: cksChapter(
+			topic: { id: { eq: $id } }
+			depth: { eq: 1 }
+			pos: { eq: 0 }
+		) {
+			...PartialChapter
+			depth
+			htmlHeader
+			htmlStringContent
+			topic {
+				...PartialTopic
+				chapters {
+					...PartialChapter
+				}
+			}
+		}
 		topic: cksTopic(id: { eq: $id }) {
 			...FullTopic
 		}
