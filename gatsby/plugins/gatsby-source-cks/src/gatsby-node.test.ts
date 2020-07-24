@@ -32,7 +32,7 @@ jest
 	.mock("./node-creation/chapters", () => ({
 		createChapterNotes: jest.fn(),
 	}))
-	.mock("./content-processor", () => ({
+	.mock("./link-rewriter", () => ({
 		replaceLinksInHtml: jest.fn(),
 	}));
 
