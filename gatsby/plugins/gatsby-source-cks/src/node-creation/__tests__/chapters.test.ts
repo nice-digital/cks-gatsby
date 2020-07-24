@@ -64,7 +64,7 @@ describe("createChangeNodes", () => {
 		expect(createNode).toHaveBeenCalledTimes(3);
 	});
 
-	it("should store slugified lowercased name in slug field removing 'Scenario: '", () => {
+	it("should store slugified lowercased name in slug field and remove 'Scenario: '", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "chapter-1");
 	});
