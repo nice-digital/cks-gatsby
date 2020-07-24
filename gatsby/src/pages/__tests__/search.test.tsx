@@ -97,15 +97,16 @@ describe("Search Page", () => {
 	it("should fall back to error message if the response doesn't come back", async () => {
 		fetch.mockReject(new Error("Something's gone wrong!"));
 		const component = renderWithRouter(<SearchPage />);
-		await waitForDomChange();
-		expect(
-			component.queryByText(
-				textContentMatcher("Sorry, there is a problem with search"),
-				{
-					selector: "h1",
-				}
-			)
-		).toBeInTheDocument();
+		await waitFor(() => {
+			expect(
+				component.queryByText(
+					textContentMatcher("Sorry, there is a problem with search"),
+					{
+						selector: "h1",
+					}
+				)
+			).toBeInTheDocument();
+		});
 	});
 
 	describe("Screen reader announcements", () => {
