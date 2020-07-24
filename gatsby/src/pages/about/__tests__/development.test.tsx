@@ -1,6 +1,6 @@
 import React from "react";
 import { textContentMatcher } from "test-utils";
-import { render, RenderResult, waitForDomChange } from "@testing-library/react";
+import { render, RenderResult, waitFor } from "@testing-library/react";
 
 import DevelopmentPage from "../development";
 
@@ -13,18 +13,20 @@ describe("Development page", () => {
 
 	describe("SEO", () => {
 		it("should set page title", async () => {
-			await waitForDomChange();
-			expect(document.title).toContain("Development process | About CKS");
+			await waitFor(() => {
+				expect(document.title).toContain("Development process | About CKS");
+			});
 		});
 
 		it("should set meta description", async () => {
-			await waitForDomChange();
-			expect(
-				document.querySelector("meta[name='description']")
-			).toHaveAttribute(
-				"content",
-				"The CKS development process, including new topics, topic updates and the CKS process guide"
-			);
+			await waitFor(() => {
+				expect(
+					document.querySelector("meta[name='description']")
+				).toHaveAttribute(
+					"content",
+					"The CKS development process, including new topics, topic updates and the CKS process guide"
+				);
+			});
 		});
 	});
 

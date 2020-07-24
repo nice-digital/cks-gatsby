@@ -59,10 +59,10 @@ const IndexPage: React.FC<IndexProps> = ({
 	},
 }: IndexProps) => {
 	const linkableLetters = Array.from(
-		new Set(topicNames.map(topicName => topicName.charAt(0).toLowerCase()))
+		new Set(topicNames.map((topicName) => topicName.charAt(0).toLowerCase()))
 	);
 
-	const allTopicButtons = alphabet.map(letter => {
+	const allTopicButtons = alphabet.map((letter) => {
 		return {
 			letter,
 			linkable: linkableLetters.includes(letter),

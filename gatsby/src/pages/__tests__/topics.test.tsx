@@ -1,6 +1,6 @@
 import React from "react";
 import TopicsPage, { TopicsPageProps } from "../topics";
-import { render, RenderResult, waitForDomChange } from "@testing-library/react";
+import { render, RenderResult, waitFor } from "@testing-library/react";
 import { Topic } from "src/types";
 import { textContentMatcher } from "test-utils";
 
@@ -38,8 +38,9 @@ describe("TopicsPage", () => {
 
 	describe("SEO", () => {
 		it("should render Topics A to Z in the page title", async () => {
-			await waitForDomChange();
-			expect(document.title).toContain("Topics A to Z | ");
+			await waitFor(() => {
+				expect(document.title).toContain("Topics A to Z | ");
+			});
 		});
 	});
 

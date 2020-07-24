@@ -46,7 +46,7 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 				}}
 			/>
 			{isLevel2(chapter) &&
-				chapter.subChapters.map(subChapter => (
+				chapter.subChapters.map((subChapter) => (
 					<ChapterBody
 						key={subChapter.id}
 						chapter={subChapter}

@@ -66,9 +66,7 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 			/>
 
 			<ChapterContents chapter={chapter}>
-				{htmlStringContentNoComments ? (
-					undefined
-				) : (
+				{htmlStringContentNoComments ? undefined : (
 					<nav aria-labelledby={slug}>
 						<h2 id={slug} className="visually-hidden">
 							{headerNoHtml}
@@ -77,7 +75,7 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 							className={styles.subPagesList}
 							aria-label={`Pages within ${fullItemName}`}
 						>
-							{subChapters.map(subChapter => (
+							{subChapters.map((subChapter) => (
 								<li key={subChapter.id}>
 									<Link to={`${topicPath}${slug}/${subChapter.slug}/`}>
 										{subChapter.fullItemName}

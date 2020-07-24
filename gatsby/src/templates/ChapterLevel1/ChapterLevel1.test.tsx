@@ -1,5 +1,5 @@
 import React from "react";
-import { render, RenderResult, cleanup } from "@testing-library/react";
+import { render, RenderResult, cleanup, waitFor } from "@testing-library/react";
 import ChapterLevel1Page, { ChapterLevel1PageProps } from "./ChapterLevel1";
 import { ChapterLevel1, PartialChapter } from "../../types";
 
@@ -85,10 +85,12 @@ describe("ChapterLevel1", () => {
 	});
 
 	describe("title", () => {
-		it("should have title with chapter name and parent topic name", () => {
-			expect(document.title).toEqual(
-				"Background information | Asthma | CKS | NICE"
-			);
+		it("should have title with chapter name and parent topic name", async () => {
+			await waitFor(() => {
+				expect(document.title).toEqual(
+					"Background information | Asthma | CKS | NICE"
+				);
+			});
 		});
 	});
 

@@ -47,10 +47,13 @@ const createTopicChapterNodes = (
 			fullItemName,
 			...chapterFields
 		}) => {
-			const slug = slugify(fullItemName, {
-				lower: true,
-				remove: /[*+~.()'"!?:@]/g,
-			});
+			const slug = slugify(
+				fullItemName.replace(/^Scenario: /gi, "").replace(/ and /gi, " "),
+				{
+					lower: true,
+					remove: /[,*+~.()'"!?:@]/g,
+				}
+			);
 
 			const nodeContent = {
 				...chapterFields,
@@ -61,7 +64,7 @@ const createTopicChapterNodes = (
 				topic: topicId,
 				parentChapter: parentId,
 				rootChapter: rootId,
-				subChapters: children.map(c => c.itemId),
+				subChapters: children.map((c) => c.itemId),
 			};
 
 			const chapterNode: ChapterNode = {

@@ -22,7 +22,7 @@ describe("createChangeNodes", () => {
 			topicHtmlObjects: [
 				{
 					itemId: "chapter1",
-					fullItemName: "Chapter 1",
+					fullItemName: "Scenario: Chapter 1",
 					containerElement: "topicSummary",
 					parentId: null,
 					rootId: "chapter1",
@@ -31,7 +31,7 @@ describe("createChangeNodes", () => {
 							rootId: "chapter1",
 							parentId: "chapter1",
 							itemId: "chapter1.1",
-							fullItemName: "Chapter 1.1",
+							fullItemName: "Chapter 1.1, And (bracket's)",
 							containerElement: "rightTopic",
 							children: [] as ApiTopicHtmlObject[],
 						} as ApiTopicHtmlObject,
@@ -64,14 +64,21 @@ describe("createChangeNodes", () => {
 		expect(createNode).toHaveBeenCalledTimes(3);
 	});
 
-	it("should store slugified lowercased name in slug field", () => {
+	it("should store slugified lowercased name in slug field and remove 'Scenario: '", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty("slug", "chapter-1");
-		expect(createNode.mock.calls[1][0]).toHaveProperty("slug", "chapter-11");
+	});
+
+	it("should remove 'and', brackets, commas, apostrophes from slug", () => {
+		createChapterNotes(topics, sourceNodesArgs);
+		expect(createNode.mock.calls[1][0]).toHaveProperty(
+			"slug",
+			"chapter-11-brackets"
+		);
 	});
 
 	it("should create a unique node id from the itemId property", () => {
-		createNodeId.mockImplementation(s => `node id: ` + s);
+		createNodeId.mockImplementation((s) => `node id: ` + s);
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNodeId).toHaveBeenCalledTimes(3);
 		expect(createNodeId).toHaveBeenNthCalledWith(1, "chapter1");
@@ -129,12 +136,12 @@ describe("createChangeNodes", () => {
 
 	it("should set contentDigest internal field using createContentDigest utility", () => {
 		createContentDigest.mockImplementationOnce(
-			t => `contentDigest: ${t.fullItemName}`
+			(t) => `contentDigest: ${t.fullItemName}`
 		);
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty(
 			"internal.contentDigest",
-			"contentDigest: Chapter 1"
+			"contentDigest: Scenario: Chapter 1"
 		);
 	});
 });

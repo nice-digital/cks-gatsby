@@ -1,6 +1,6 @@
 import React from "react";
 
-import { waitForDomChange } from "@testing-library/react";
+import { waitFor } from "@testing-library/react";
 import { renderWithRouter } from "test-utils";
 import NotFoundPage from "../404";
 
@@ -20,11 +20,11 @@ describe("404", () => {
 	it("should render a noindex robots meta tag", async () => {
 		renderWithRouter(<NotFoundPage />);
 
-		await waitForDomChange();
-
-		expect(document.querySelector("meta[name='robots']")).toHaveAttribute(
-			"content",
-			"noindex"
-		);
+		await waitFor(() => {
+			expect(document.querySelector("meta[name='robots']")).toHaveAttribute(
+				"content",
+				"noindex"
+			);
+		});
 	});
 });
