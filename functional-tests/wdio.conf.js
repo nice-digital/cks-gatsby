@@ -32,7 +32,7 @@ exports.config = {
 		compiler: ["js:babel-register"], // Babel so we can use ES6 in tests
 		require: ["./steps/given.js", "./steps/when.js", "./steps/then.js"],
 		tagExpression: "not @pending", // See https://docs.cucumber.io/tag-expressions/
-		timeout: 30000,
+		timeout: 90000,
 	},
 
 	// Set up global asssertion libraries
