@@ -2,6 +2,21 @@
 
 # Runs functional tests via Docker
 
+function copyGatsbyStaticPagesToWebApp()
+{
+    echo "WARNING: Ensure you build the gatsby site with npm build"
+
+	if [ -d ../gatsby/public/ ]; then
+		if [ -z "$(ls -A ../gatsby/public/topics)" ]; then
+			echo "Error: Gatsby build directory is empty. Try running npm build"
+		fi
+	else
+		echo "Error: Gatsby build directory does not exists. Try running npm build"
+	fi
+	
+	cp -rT ../gatsby/public ../web-app/publish/wwwroot
+}
+
 function cleanupBeforeStart()
 {
   # Clean up before we start
@@ -61,6 +76,7 @@ catch() {
   error=1
 }
 
+copyGatsbyStaticPagesToWebApp
 cleanupBeforeStart
 docker-compose up -d --scale selenium-chrome=5
 runTests
