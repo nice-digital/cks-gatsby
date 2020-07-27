@@ -56,11 +56,7 @@ namespace CKS.Web
 					options.MaxAge = TimeSpan.FromDays(60);
 				});
 
-				//services.AddHttpsRedirection(options =>
-				//{
-				//	options.RedirectStatusCode = StatusCodes.Status308PermanentRedirect;
-				//	options.HttpsPort = 443;
-				//});
+
 			}
 		}
 
@@ -69,8 +65,8 @@ namespace CKS.Web
 			if (!env.IsDevelopment())
 			{
 				app.UseExceptionHandler("/Error");
-				//app.UseHttpsRedirection();
 				app.UseHsts();
+				app.UseForwardedHeaders();
 			}
 
 			ConfigureRedirects(app, env);
