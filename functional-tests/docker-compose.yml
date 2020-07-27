@@ -33,6 +33,8 @@ services:
     container_name: cks-web-app
     ports:
       - "8080:8080"
+    depends_on:
+      - elasticsearch
     volumes:
       - ./../web-app/publish:/app
 
@@ -42,22 +44,11 @@ services:
     environment:
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
     volumes:
+      - ./ElasticSearch/data:/usr/share/elasticsearch/data
       - ./ElasticSearch/stemmer_override.txt:/usr/share/elasticsearch/config/stemmer_override.txt
       - ./ElasticSearch/synonyms.txt:/usr/share/elasticsearch/config/synonyms.txt
     ports:
       - 9200:9200
-    
-  debian:
-    build: ./ElasticSearch
-    container_name: debian
-    volumes:
-      - ./ElasticSearch/createAndPopulateIndex.sh:/elasticSetup/createAndPopulateIndex.sh
-      - ./ElasticSearch/CKSIndexSettings.json:/elasticSetup/CKSIndexSettings.json
-      - ../fake-api/data/topics/:/elasticSetup/topics
-    depends_on:
-      - elasticsearch
-    command: bash ./elasticSetup/createAndPopulateIndex.sh
-    #command: tail -F anything
     
 networks:
   default:
