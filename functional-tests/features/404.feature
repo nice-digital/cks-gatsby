@@ -7,7 +7,7 @@ Feature: 404 Page
 
   Scenario: User sees custom content for 404 response
     When I wait on element "h1" to exist
-    Then I expect that element "h1" contains the text "Page not found"
+    Then I expect that element "h1" contains the text "We can't find this page"
 
   Scenario: The page is blocked from search indexing
     Then I expect to see a meta tag named "robots" with the content "noindex"
