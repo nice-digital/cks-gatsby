@@ -14,7 +14,7 @@ describe("404", () => {
 	it("should render h1 with correct text", () => {
 		const { queryByText } = renderWithRouter(<NotFoundPage />);
 
-		expect(queryByText("Page not found")?.tagName).toBe("H1");
+		expect(queryByText("We can't find this page")?.tagName).toBe("H1");
 	});
 
 	it("should render a noindex robots meta tag", async () => {
