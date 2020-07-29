@@ -11,7 +11,9 @@ const NotFoundPage: React.FC = () => {
 			<SEO title="Page not found" noIndex={true} />
 			<Breadcrumbs>
 				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
-				<Breadcrumb to="/" elementType={Link}>CKS</Breadcrumb>
+				<Breadcrumb to="/" elementType={Link}>
+					CKS
+				</Breadcrumb>
 				<Breadcrumb>Page not found</Breadcrumb>
 			</Breadcrumbs>
 
