@@ -2,10 +2,10 @@ import { NodeModel } from "./types";
 import { TopicNode, topicNodeType } from "../node-creation/topics";
 import { ChapterNode, chapterNodeType } from "../node-creation/chapters";
 import { replaceAsync } from "../utils";
-import { NodeInput } from "gatsby";
+import { NodeInput, Reporter } from "gatsby";
 
-const topicAnchorRegex = /<a.*?href="(\/Topic\/ViewTopic\/(.{36}))".*?<\/a>/gi,
-	chapterAnchorRegex = /<a.*?href="(#(.{36}))".*?<\/a>/gi;
+const topicAnchorRegex = /<a(?:(?!<a).)*href="(\/Topic\/ViewTopic\/(.{36}))".*?<\/a>/gi,
+	chapterAnchorRegex = /<a(?:(?!<a).)*href="(#(.{36}))".*?<\/a>/gi;
 
 const getNodeById = <T extends NodeInput>(
 	idField: string,
@@ -42,7 +42,9 @@ const getChapterById = (
 const rewriteTopicLinks = (
 	htmlStringContent: string,
 	chapter: ChapterNode,
-	nodeModel: NodeModel
+	topic: TopicNode,
+	nodeModel: NodeModel,
+	reporter: Reporter
 ): Promise<string> => {
 	return replaceAsync(
 		htmlStringContent,
@@ -50,10 +52,12 @@ const rewriteTopicLinks = (
 		async (anchor: string, topicHref: string, topicId: string) => {
 			const topicNode = await getTopicById(topicId, nodeModel);
 
-			if (!topicNode)
-				throw new Error(
-					`Could not find topic '${topicId}' in ${anchor} for chapter '${chapter.fullItemName}' (${chapter.itemId})`
+			if (!topicNode) {
+				reporter.warn(
+					`Could not find topic '${topicId}'\n in link ${anchor}\n in chapter '${chapter.fullItemName}' (${chapter.itemId})\n in topic '${topic.topicName}'`
 				);
+				return anchor;
+			}
 
 			return anchor.replace(topicHref, `/topics/${topicNode.slug}/`);
 		}
@@ -63,7 +67,9 @@ const rewriteTopicLinks = (
 const rewriteChapterLinks = (
 	htmlStringContent: string,
 	chapter: ChapterNode,
-	nodeModel: NodeModel
+	topic: TopicNode,
+	nodeModel: NodeModel,
+	reporter: Reporter
 ): Promise<string> => {
 	return replaceAsync(
 		htmlStringContent,
@@ -71,10 +77,12 @@ const rewriteChapterLinks = (
 		async (anchor: string, originalHref: string, chapterItemId: string) => {
 			const chapterNode = await getChapterById(chapterItemId, nodeModel);
 
-			if (!chapterNode)
-				throw new Error(
-					`Could not find chapter '${chapterItemId}' in ${anchor} in chapter '${chapter.fullItemName}' (${chapter.itemId})`
+			if (!chapterNode) {
+				reporter.warn(
+					`Could not find chapter '${chapterItemId}'\n in ${anchor}\n in chapter '${chapter.fullItemName}' (${chapter.itemId}) in ${topic.topicName}`
 				);
+				return anchor;
+			}
 
 			const topicNode = await getTopicById(chapterNode.topic, nodeModel),
 				topicPath = `/topics/${topicNode?.slug}/`;
@@ -111,20 +119,30 @@ const rewriteChapterLinks = (
 
 export const replaceLinksInHtml = async (
 	chapter: ChapterNode,
-	nodeModel: NodeModel
+	nodeModel: NodeModel,
+	reporter: Reporter
 ): Promise<string> => {
 	let { htmlStringContent } = chapter;
+	const { topic } = chapter;
+
+	const topicNode = await getTopicById(topic, nodeModel);
+
+	if (!topicNode) throw new Error(`Could not find topic with id ${topic}`);
 
 	htmlStringContent = await rewriteTopicLinks(
 		htmlStringContent,
 		chapter,
-		nodeModel
+		topicNode,
+		nodeModel,
+		reporter
 	);
 
 	htmlStringContent = await rewriteChapterLinks(
 		htmlStringContent,
 		chapter,
-		nodeModel
+		topicNode,
+		nodeModel,
+		reporter
 	);
 
 	return htmlStringContent;

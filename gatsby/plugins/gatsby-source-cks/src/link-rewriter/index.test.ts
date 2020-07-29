@@ -1,5 +1,6 @@
+import { Reporter } from "gatsby";
 import { replaceLinksInHtml } from ".";
-import { NodeModel } from "./types";
+import { NodeModel, RunQueryArgsFirst } from "./types";
 import { ChapterNode } from "../node-creation/chapters";
 
 describe("link rewriter", () => {
@@ -11,21 +12,40 @@ describe("link rewriter", () => {
 			runQuery,
 		};
 
+	const warn = jest.fn(),
+		reporter = ({
+			warn,
+		} as unknown) as Reporter;
+
 	afterEach(() => {
 		jest.resetAllMocks();
 	});
 
 	describe("topic links", () => {
 		it("should rewrite topic links", async () => {
-			runQuery.mockResolvedValueOnce({
-				slug: "achilles-tendinopathy",
+			runQuery.mockImplementation((args: RunQueryArgsFirst) => {
+				const topicId = (args.query.filter.topicId as { eq: string }).eq;
+				switch (topicId) {
+					case "e42fc175-7ae7-44c7-b7ef-b58a14733e7e":
+						return {
+							topicName: "Atrial fibrillation",
+						};
+					case "544c0dd8-12b4-472f-8325-25f15b3092e3":
+						return {
+							slug: "achilles-tendinopathy",
+						};
+					default:
+						throw new Error(`Invalid topic id ${topicId}`);
+				}
 			});
 
 			const result = await replaceLinksInHtml(
 				{
 					htmlStringContent: `<a href="/Topic/ViewTopic/544c0dd8-12b4-472f-8325-25f15b3092e3">Achilles tendinopathy</a>`,
+					topic: "e42fc175-7ae7-44c7-b7ef-b58a14733e7e",
 				} as ChapterNode,
-				nodeModel
+				nodeModel,
+				reporter
 			);
 
 			expect(result).toBe(
@@ -33,22 +53,25 @@ describe("link rewriter", () => {
 			);
 		});
 
-		it("should throw error when topic guid not found", async () => {
+		it("should warn when topic guid not found", async () => {
+			runQuery.mockImplementationOnce(() => ({
+				topicName: "Atrial fibrillation",
+			}));
 			runQuery.mockImplementationOnce(() => null);
 			expect.assertions(1);
 			const htmlStringContent = `<a href="/Topic/ViewTopic/544c0dd8-12b4-472f-8325-25f15b3092e3">Achilles tendinopathy</a>`;
-			await expect(
-				replaceLinksInHtml(
-					{
-						itemId: "123",
-						fullItemName: "Topic not found link",
-						htmlStringContent,
-					} as ChapterNode,
-					nodeModel
-				)
-			).rejects.toMatchObject({
-				message: `Could not find topic '544c0dd8-12b4-472f-8325-25f15b3092e3' in <a href="/Topic/ViewTopic/544c0dd8-12b4-472f-8325-25f15b3092e3">Achilles tendinopathy</a> for chapter 'Topic not found link' (123)`,
-			});
+			await replaceLinksInHtml(
+				{
+					itemId: "123",
+					fullItemName: "Topic not found link",
+					htmlStringContent,
+				} as ChapterNode,
+				nodeModel,
+				reporter
+			);
+			await expect(warn).toHaveBeenCalledWith(
+				`Could not find topic '544c0dd8-12b4-472f-8325-25f15b3092e3'\n in link <a href="/Topic/ViewTopic/544c0dd8-12b4-472f-8325-25f15b3092e3">Achilles tendinopathy</a>\n in chapter 'Topic not found link' (123)\n in topic 'Atrial fibrillation'`
+			);
 		});
 	});
 
@@ -65,7 +88,8 @@ describe("link rewriter", () => {
 				{
 					htmlStringContent: `<a href="#666cef38-2cdb-45b8-a427-aaffb3caa682">Achilles tendinopathy</a>`,
 				} as ChapterNode,
-				nodeModel
+				nodeModel,
+				reporter
 			);
 
 			expect(result).toBe(
@@ -96,7 +120,8 @@ describe("link rewriter", () => {
 				{
 					htmlStringContent: `<a href="#666cef38-2cdb-45b8-a427-aaffb3caa682">Achilles tendinopathy</a>`,
 				} as ChapterNode,
-				nodeModel
+				nodeModel,
+				reporter
 			);
 
 			expect(result).toBe(
@@ -131,7 +156,8 @@ describe("link rewriter", () => {
 				{
 					htmlStringContent: `<a href="#666cef38-2cdb-45b8-a427-aaffb3caa682">Achilles tendinopathy</a>`,
 				} as ChapterNode,
-				nodeModel
+				nodeModel,
+				reporter
 			);
 
 			expect(result).toBe(

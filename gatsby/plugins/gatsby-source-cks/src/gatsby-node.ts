@@ -77,6 +77,7 @@ export const sourceNodes = async (
  * See https://www.gatsbyjs.org/docs/schema-customization/#createresolvers-api
  */
 export const createResolvers = ({
+	reporter,
 	createResolvers,
 }: CreateResolversArgs): void => {
 	createResolvers({
@@ -90,7 +91,11 @@ export const createResolvers = ({
 					_args: unknown,
 					resolveContext: ResolveContext
 				): Promise<string> {
-					return replaceLinksInHtml(chapter, resolveContext.nodeModel);
+					return replaceLinksInHtml(
+						chapter,
+						resolveContext.nodeModel,
+						reporter
+					);
 				},
 			},
 		},
