@@ -99,9 +99,12 @@ describe("Search Page", () => {
 		const component = renderWithRouter(<SearchPage />);
 		await waitFor(() => {
 			expect(
-				component.queryByText(textContentMatcher("Error"), {
-					selector: "h1",
-				})
+				component.queryByText(
+					textContentMatcher("Sorry, there is a problem with search"),
+					{
+						selector: "h1",
+					}
+				)
 			).toBeInTheDocument();
 		});
 	});
