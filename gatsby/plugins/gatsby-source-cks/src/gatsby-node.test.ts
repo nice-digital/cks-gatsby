@@ -7,6 +7,7 @@ import {
 	CreateSchemaCustomizationArgs,
 	SourceNodesArgs,
 	CreateResolversArgs,
+	Reporter,
 } from "gatsby";
 
 import { downloadAllData } from "./downloader/downloader";
@@ -132,9 +133,11 @@ describe("gatsby-node", () => {
 
 		it("should create resolver that calls replaceLinksInHtml with chapter and node model", async () => {
 			const createResolversFn = jest.fn();
+			const reporter = { warn: jest.fn() };
 
 			createResolvers({
 				createResolvers: createResolversFn as unknown,
+				reporter: (reporter as unknown) as Reporter,
 			} as CreateResolversArgs);
 
 			const chapter = { slug: "test" };
@@ -148,7 +151,8 @@ describe("gatsby-node", () => {
 
 			expect(replaceLinksInHtml).toHaveBeenCalledWith(
 				chapter,
-				resolveContext.nodeModel
+				resolveContext.nodeModel,
+				reporter
 			);
 		});
 	});
