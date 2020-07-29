@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+		<LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="NICE.Logging" Version="6.0.24" />
-    <PackageReference Include="NICE.Search" Version="2.1.807-net-standard-convers" />
+    <PackageReference Include="NICE.Search" Version="2.1.816-net-standard-convers" />
   </ItemGroup>
 
 

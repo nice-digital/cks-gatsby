@@ -14,15 +14,15 @@ Feature: Speciality Page
     Then the page should have no accessibility issues
 
   Scenario: NICE breadcrumb
-    When I click the "NICE" breadcrumb
+    When I click the NICE breadcrumb
     Then I expect that the url is "https://www.nice.org.uk/"
 
   Scenario: Homepage breadcrumb
-    When I click the "CKS" breadcrumb
+    When I click the CKS breadcrumb
     Then I expect that the path is "/"
 
   Scenario: Specialities breadcrumb
-    When I click the "Specialities" breadcrumb
+    When I click the Specialities breadcrumb
     Then I expect that the path is "/specialities/"
 
   Scenario: Heading text

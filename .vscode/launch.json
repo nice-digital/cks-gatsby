@@ -91,6 +91,7 @@
         "..\\${relativeFile}"
       ],
       "console": "internalConsole",
+      "outputCapture": "std",
       "internalConsoleOptions": "openOnSessionStart",
       "disableOptimisticBPs": true,
       "windows": {
@@ -118,6 +119,7 @@
         "..\\${relativeFile}"
       ],
       "console": "internalConsole",
+      "outputCapture": "std",
       "internalConsoleOptions": "openOnSessionStart",
       "disableOptimisticBPs": true,
       "windows": {

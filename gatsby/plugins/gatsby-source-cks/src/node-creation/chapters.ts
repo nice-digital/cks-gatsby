@@ -29,9 +29,6 @@ export interface ChapterNode extends NodeInput {
 	} & NodeInput["internal"];
 }
 
-const slugifyPascalCase = (s: string): string =>
-	s.replace(/(.+)([A-Z])/g, (_, p1, p2) => `${p1}-${p2}`);
-
 const createTopicChapterNodes = (
 	topicId: string,
 	topicHtmlObjects: ApiTopicHtmlObject[],
@@ -47,21 +44,27 @@ const createTopicChapterNodes = (
 			parentId,
 			rootId,
 			children,
+			fullItemName,
 			...chapterFields
 		}) => {
-			const slug = slugify(slugifyPascalCase(containerElement), {
-				lower: true,
-			});
+			const slug = slugify(
+				fullItemName.replace(/^Scenario: /gi, "").replace(/ and /gi, " "),
+				{
+					lower: true,
+					remove: /[,*+~.()'"!?:@]/g,
+				}
+			);
 
 			const nodeContent = {
 				...chapterFields,
 				slug,
+				fullItemName,
 				containerElement,
 				itemId,
 				topic: topicId,
 				parentChapter: parentId,
 				rootChapter: rootId,
-				subChapters: children.map(c => c.itemId),
+				subChapters: children.map((c) => c.itemId),
 			};
 
 			const chapterNode: ChapterNode = {
