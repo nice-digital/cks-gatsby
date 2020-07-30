@@ -1,0 +1,72 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+// Taken from Niceorg Client
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  th {
+    vertical-align: bottom;
+  }
+  td {
+    vertical-align: top;
+  }
+  td,
+  th {
+    text-align: left;
+    padding: rem($nds-spacing-small);
+    p {
+      margin-top: 0;
+    }
+  }
+  tr {
+    &.success {
+      background: $nds-colour-success-background;
+    }
+    &.error {
+      background: $nds-colour-error-background;
+    }
+    &.warning {
+      background: $nds-colour-caution-background;
+    }
+    &.info {
+      background: $nds-colour-info-background;
+    }
+  }
+  &-bordered {
+    border: 1px solid $nds-colour-border;
+    border-collapse: collapse;
+    th,
+    td {
+      border: 1px solid $nds-colour-border;
+    }
+  }
+  &-striped {
+    tbody {
+      tr:nth-child(odd) > td {
+        background-color: $nds-colour-nice-grey-3;
+      }
+    }
+  }
+  &-hover {
+    tbody {
+      tr:hover > td {
+        background-color: $nds-colour-nice-grey-3;
+      }
+    }
+  }
+  &-condensed {
+    @include nds-font-size(-1);
+    td,
+    th {
+      padding: rem($nds-spacing-x-small);
+    }
+  }
+  &-responsive {
+    @include mq($until: md) {
+      width: 100%;
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
+  }
+}

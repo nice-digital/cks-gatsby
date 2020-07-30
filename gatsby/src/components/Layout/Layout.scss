@@ -4,6 +4,9 @@ $nds-output-visibility-classes: false;
 
 @import '~@nice-digital/design-system/scss/base.scss';
 
+// Markup components
+@import './Tables.scss';
+
 html {
   scroll-behavior: smooth;
 
