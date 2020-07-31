@@ -19,13 +19,11 @@ namespace CKS.Web
 {
 	public class Startup
 	{
-		public Startup(IConfiguration configuration, IWebHostEnvironment env)
+		public Startup(IConfiguration configuration)
 		{
 			Configuration = configuration;
-			CurrentEnvironment = env;
 		}
 
-		private IWebHostEnvironment CurrentEnvironment { get; set; }
 		public IConfiguration Configuration { get; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
@@ -46,18 +44,14 @@ namespace CKS.Web
 
 			services.AddControllers();
 
-			if (!CurrentEnvironment.IsDevelopment())
+			services.AddHsts(options =>
 			{
-				services.AddHsts(options =>
-				{
-					//TODO: Investigate why https://hstspreload.org/ times out for nice.org.uk currently
-					options.Preload = true;
-					options.IncludeSubDomains = true;
-					options.MaxAge = TimeSpan.FromDays(60);
-				});
+				//TODO: Investigate why https://hstspreload.org/ times out for nice.org.uk currently
+				options.Preload = true;
+				options.IncludeSubDomains = true;
+				options.MaxAge = TimeSpan.FromDays(60);
+			});
 
-
-			}
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
