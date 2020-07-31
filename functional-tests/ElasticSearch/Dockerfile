@@ -1,1 +1,2 @@
-From docker.elastic.co/elasticsearch/elasticsearch:6.5.2
+From debian:jessie
+Run apt-get -qq update && apt-get -qq upgrade && apt-get -qq -y install curl
