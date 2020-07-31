@@ -62,6 +62,7 @@ catch() {
 }
 
 cleanupBeforeStart
+sysctl -w vm.max_map_count=262144
 docker-compose up -d  --scale selenium-chrome=5
 runTests
 processTestOutput
