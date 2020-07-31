@@ -1,2 +1,3 @@
-From debian:jessie
-Run apt-get -qq update && apt-get -qq upgrade && apt-get -qq -y install curl
+From docker.elastic.co/elasticsearch/elasticsearch:6.5.2
+
+RUN sysctl -w vm.max_map_count=262144
