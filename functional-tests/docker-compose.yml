@@ -43,7 +43,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.5.2
     container_name: elasticsearch
     environment:
-      - "ES_JAVA_OPTS=-Xms500m -Xmx500m"
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
     volumes:
       - ./ElasticSearch/data:/usr/share/elasticsearch/data
       - ./ElasticSearch/stemmer_override.txt:/usr/share/elasticsearch/config/stemmer_override.txt
