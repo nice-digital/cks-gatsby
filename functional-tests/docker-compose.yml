@@ -48,7 +48,7 @@ services:
       - ./ElasticSearch/stemmer_override.txt:/usr/share/elasticsearch/config/stemmer_override.txt
       - ./ElasticSearch/synonyms.txt:/usr/share/elasticsearch/config/synonyms.txt
     networks:
-        cks-functional-tests:
+        default:
             aliases:
               - dev-es.nice.org.uk
     ports:
