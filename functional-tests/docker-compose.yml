@@ -57,7 +57,7 @@ services:
     volumes:
       - ./ElasticSearch/createAndPopulateIndex.sh:/elasticSetup/createAndPopulateIndex.sh
       - ./ElasticSearch/CKSIndexSettings.json:/elasticSetup/CKSIndexSettings.json
-      - ../fake-api/data/topics/:/elasticSetup/topics
+      - ./ElasticSearch/esIndexData.json:/elasticSetup/esIndexData.json
     depends_on:
       - elasticsearch
     command: bash ./elasticSetup/createAndPopulateIndex.sh
