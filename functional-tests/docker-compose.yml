@@ -47,9 +47,9 @@ services:
     ports:
       - 9200:9200
     networks:
-        cks-functional-tests:
+        default:
             aliases:
-              - default
+              - dev-es.nice.org.uk
     
   debian:
     build: ./ElasticSearch
