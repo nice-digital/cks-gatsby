@@ -6,6 +6,8 @@ arr=(../../fake-api/data/topics/*)
 # iterate through array using a counter
 for ((i=0; i<${#arr[@]}; i++));
 do
+	id="\"_id\": \"$((i+1))\""
+	
 	#Get topicname prop from json in the current file
 	topicName=`grep -i 'topicName' ${arr[$i]}`
 	#Change topicname to title. This is specified in the elasticsearch document definition
@@ -23,7 +25,7 @@ do
 	#Omission will cause any searches to fail
 	boostValue='"boostvalue": 100'
 	
-	echo '{ "index": {} }' >> esIndexData.json
+	echo "{ \"index\": {$id} }" >> esIndexData.json
 	echo "{$topicName $topicSummary $boostValue}" >> esIndexData.json
 	
 done

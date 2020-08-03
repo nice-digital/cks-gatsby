@@ -1,736 +1,736 @@
-{ "index": {} }
+{ "index": {"_id": "1"} }
 {  "title": "Sleep disorders - shift work and jet lag",   "content": "Shift work disorder and jet lag are both circadian rhythm sleep disorders (CRSDs).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "2"} }
 {  "title": "Otitis media - acute",   "content": "Acute otitis media (AOM) is inflammation in the middle ear associated with an effusion, and accompanied by the rapid onset of ear infection", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "3"} }
 {  "title": "Multimorbidity",   "content": "Multimorbidity is two or more long-term health conditions", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "4"} }
 {  "title": "Pubic lice",   "content": "Pubic lice infestation is caused by the louse Phthirus pubis.Pubic lice are blood-sucking insects, and are obligate parasites of humans.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "5"} }
 {  "title": "Hypercholesterolaemia - familial",   "content": "Familial hypercholesterolaemia (FH) is characterized by a high cholesterol concentration in the blood.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "6"} }
 {  "title": "Earwax",   "content": "Earwax is a normal physiological substance which is a combination of dead flattened cells, cerumen (a wax-like substance), sebum", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "7"} }
 {  "title": "Allergic rhinitis",   "content": "Allergic rhinitis is an inflammatory disorder of the nose which occurs when the membranes lining the nose become sensitized to allergens.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "8"} }
 {  "title": "Plantar fasciitis",   "content": "Plantar fasciitis is a condition in which there is persistent foot pain associated with chronic degenerative and reparative processes", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "9"} }
 {  "title": "Cows' milk protein allergy in children",   "content": "Cows' milk protein allergy is an immune-mediated allergic response to proteins in milk.It is one of the most common childhood food allergies", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "10"} }
 {  "title": "Otitis media - chronic suppurative",   "content": "Chronic suppurative otitis media (CSOM) is a chronic inflammation of the middle ear and mastoid cavity", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "11"} }
 {  "title": "Ankylosing spondylitis",   "content": "Ankylosing spondylitis is a chronic inflammatory rheumatic disease of unknown cause and varying clinical presentation.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "12"} }
 {  "title": "Depression in children",   "content": "The prevalence of childhood depression has been estimated to be 1% in pre-pubertal children and around 3% in post-pubertal young people.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "13"} }
 {  "title": "Impetigo",   "content": "Impetigo is a common contagious pyogenic infection of the superficial layers of the skin, usually caused by Staphylococcus aureus", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "14"} }
 {  "title": "Neutropenic sepsis",   "content": "Neutropenic sepsis is a major cause of death in people with neutropenia. It is a time-critical medical emergency", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "15"} }
 {  "title": "Otitis externa",   "content": "Otitis externa is inflammation of the external ear canal and is classified as acute - lasting 3 weeks or less or chronic - lasting longer than 3 months", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "16"} }
 {  "title": "Fungal skin infection - body and groin ",   "content": "Fungal infection of the skin (also known as ringworm or tinea) is caused by dermatophytes.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "17"} }
 {  "title": "MI - secondary prevention",   "content": "Myocardial infarction (MI), colloquially known as a heart attack, is necrosis of myocardial tissue due to ischaemia.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "18"} }
 {  "title": "Molluscum contagiosum",   "content": "Molluscum contagiosum is a viral skin infection caused by molluscum contagiosum virus (MCV), a type of Poxvirus.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "19"} }
 {  "title": "Boils, carbuncles, and staphylococcal carriage",   "content": "A boil is a deep inflammatory nodule with walled-off purulent material, arising from a hair follicle.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "20"} }
 {  "title": "Tennis elbow",   "content": "Tennis elbow or lateral epicondylitis describes a tendinosis that affects the common attachment of the common extensor origin.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "21"} }
 {  "title": "Haematospermia",   "content": "Haematospermia is the visible presence of blood in the semen.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "22"} }
 {  "title": "Itch in pregnancy",   "content": "Itch in pregnancy may be caused by a pre-existing condition, or a condition specific to pregnancy.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "23"} }
 {  "title": "Conduct disorders in children and young people",   "content": "The term 'conduct disorders' is an overarching term used to describe conduct disorder and oppositional defiant disorder.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "24"} }
 {  "title": "Cerebral palsy",   "content": "Cerebral palsy is a neurological condition which affects movement and co-ordination, caused by a problem with the brain that occurs before, during or soon after birth.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "25"} }
 {  "title": "Miscarriage",   "content": "Miscarriage is the spontaneous loss of a pregnancy before 24 weeks' gestation. Recurrent miscarriage is the consecutive loss of three pregnancies", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "26"} }
 {  "title": "Fungal skin infection - scalp",   "content": "Fungal infection of the scalp (scalp ringworm or tinea capitis) is caused by dermatophytes and is most common among prepubescent children.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "27"} }
 {  "title": "Generalized anxiety disorder",   "content": "Generalized anxiety disorder (GAD) is disproportionate, pervasive, uncontrollable, and widespread worry and a range of somatic, cognitive symptoms", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "28"} }
 {  "title": "Otitis media with effusion",   "content": "Otitis media with effusion (OME), also known as 'glue ear', is characterized by a collection of fluid within the middle ear space", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "29"} }
 {  "title": "Contraception - IUS/IUD",   "content": "Intrauterine contraceptives (IUCs) are long-acting reversible contraceptives (LARCs) which have a licensed duration of use of 3–10 years", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "30"} }
 {  "title": "Prostate cancer",   "content": "Prostate cancer is a malignant tumour of the prostate. Almost all cancers of the prostate (95%) are adenocarcinomas.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "31"} }
 {  "title": "Immunizations - travel",   "content": "Many diseases are endemic in many regions of the world. All travellers should be up to date with routinely recommended vaccinations", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "32"} }
 {  "title": "Headache - cluster",   "content": "Cluster headache is a rare but severe primary headache disorder — it is the most common trigeminal autonomic cephalalgia.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "33"} }
 {  "title": "Chilblains",   "content": "Chilblains (also known as perniosis or pernio) are localized inflammatory skin lesions on exposed extremities of the body, precipitated by cold.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "34"} }
 {  "title": "Meniere's disease",   "content": "Meniere's disease is a disorder affecting the inner ear which can affect balance and hearing.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "35"} }
 {  "title": "Dry eye syndrome",   "content": "Dry eye syndrome is a chronic condition characterised by inflammation of the ocular surface and reduction in quality and/or quantity of tears.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "36"} }
 {  "title": "Candida - female genital",   "content": "Vulvovaginal candidiasis (genital thrush) is a symptomatic inflammation of the vagina and/or vulva caused by a superficial fungal infection.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "37"} }
 {  "title": "Constipation in children",   "content": "Constipation is a decrease in the frequency of bowel movements characterized by the passing of hardened stools", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "38"} }
 {  "title": "Opioid dependence",   "content": "All opioids have dependence potential to varying degrees. Heroin  has the greatest potential for dependency. It can develop within 2–10 days of use.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "39"} }
 {  "title": "Depression",   "content": "Depression is characterised by persistent low mood and/or loss of pleasure in most activities and a range of associated emotional, cognitive, physical", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "40"} }
 {  "title": "Blepharitis",   "content": "Blepharitis describes inflammation of the margin of the eyelids.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "41"} }
 {  "title": "Sciatica (lumbar radiculopathy)",   "content": "Sciatica is the term for symptoms of pain, tingling, and numbness which arise from nerve root compression or irritation in the lumbosacral spine.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "42"} }
 {  "title": "Bites - human and animal",   "content": "Human bites are either:Occlusal injuries (inflicted by actual biting), or clenched-fist injuries - sustained when a clenched fist hits a person's teeth", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "43"} }
 {  "title": "Headache - tension-type",   "content": "Tension-type headache is a common primary headache disorder", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "44"} }
 {  "title": "Tiredness/fatigue in adults",   "content": "Tiredness (or fatigue) is often described as a lack of, or decreased, energy, and physical or mental exhaustion.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "45"} }
 {  "title": "Head injury",   "content": "Each year, 1.4 million people attend emergency departments in England and Wales with a recent head injury", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "46"} }
 {  "title": "HIV infection and AIDS",   "content": "The Human Immunodeficiency Virus (HIV) is a retrovirus that infects and destroys cells of the immune system, in particular CD4 cells", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "47"} }
 {  "title": "Dementia",   "content": "Dementia is a clinical syndrome of deterioration in mental function which interferes with activities of daily living (ADLs).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "48"} }
 {  "title": "Sinusitis",   "content": "Sinusitis is defined as inflammation of the mucosal lining of the paranasal sinuses.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "49"} }
 {  "title": "Colic - infantile",   "content": "Infantile colic is a self-limiting condition which is defined clinically as repeated episodes of excessive and inconsolable crying in an infant", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "50"} }
 {  "title": "Bronchiectasis",   "content": "Bronchiectasis is a permanent dilatation and thickening of the airways associated with chronic cough, sputum production, bacterial colonization", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "51"} }
 {  "title": "Conjunctivitis - allergic",   "content": "Allergic conjunctivitis is a term used to describe a group of ocular conditions associated with an immunoglobulin E (IgE) hypersensitivity reaction", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "52"} }
 {  "title": "Non-alcoholic fatty liver disease (NAFLD)",   "content": "Non-alcoholic fatty liver disease (NAFLD) refers to excess triglyceride accumulation in the liver (steatosis), in the absence of excessive alcohol", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "53"} }
 {  "title": "Anal fissure",   "content": "An anal fissure is a tear or ulcer in the lining of the anal canal, immediately within the anal margin.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "54"} }
 {  "title": "Shingles",   "content": "Shingles (herpes zoster) is a viral infection of nerve cells that occurs when a latent infection with varicella-zoster virus reactivates.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "55"} }
 {  "title": "Asthma",   "content": "Asthma is a chronic inflammatory condition of the airways.The airways are hyper-responsive and constrict easily in response to a wide range of stimuli", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "56"} }
 {  "title": "Lung and pleural cancers - recognition and referral",   "content": "Over 43,000 new lung cancers are diagnosed each year in the UK. A full time GP is likely to diagnose approximately 1 person with lung cancer each year", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "57"} }
 {  "title": "Olecranon bursitis",   "content": "The olecranon bursa is a sac overlying the olecranon process of the elbow beneath the skin.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "58"} }
 {  "title": "Ovarian cancer",   "content": "The lifetime risk of a woman being diagnosed with ovarian cancer is 1 in 48.The risk of ovarian cancer is increased by:Increasing age.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "59"} }
 {  "title": "Irritable bowel syndrome",   "content": "Irritable bowel syndrome (IBS) is a chronic, relapsing, and often lifelong disorder of the lower gastrointestinal tract, with no structural cause", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "60"} }
 {  "title": "Temporomandibular disorders (TMDs)",   "content": "Temporomandibular disorders are a group of conditions affecting the masticatory muscles, the temporomandibular joint and associated structures.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "61"} }
 {  "title": "Benign paroxysmal positional vertigo",   "content": "Benign paroxysmal positional vertigo (BPPV) is a disorder of the inner ear characterized by repeated episodes of positional vertigo", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "62"} }
 {  "title": "Corneal superficial injury",   "content": "Superficial corneal injuries are non-penetrating injuries affecting the outermost layer of the cornea.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "63"} }
 {  "title": "Alopecia areata",   "content": "Alopecia areata is a chronic, inflammatory, usually relapsing condition which affects the hair follicles (and which may also affect the nails).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "64"} }
 {  "title": "Breast pain - cyclical",   "content": "Cyclical breast pain is related to the menstrual cycle and is not associated with specific underlying breast disease.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "65"} }
 {  "title": "Jaundice in adults",   "content": "Jaundice is a clinical sign describing yellow pigmentation of the skin, sclera, and mucous membranes due to raised plasma bilirubin.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "66"} }
 {  "title": "Warts - anogenital",   "content": "Anogenital warts (condylomata acuminata) are benign, proliferative growths occurring in the genital, perineal, anal, and perianal areas.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "67"} }
 {  "title": "Rubella",   "content": "Rubella (also known as German measles) is an infection caused by viruses of the genus Rubivirus of the family Togaviradae.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "68"} }
 {  "title": "Palliative cancer care - pain",   "content": "Cancer-related pain may be persistent or breakthrough (episodic), and influenced by physical, psychological, social and spiritual factors.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "69"} }
 {  "title": "Greater trochanteric pain syndrome (trochanteric bursitis)",   "content": "Greater trochanteric pain syndrome is a regional pain syndrome in which chronic intermittent pain is felt around the greater trochanter", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "70"} }
 {  "title": "Head and neck cancers - recognition and referral",   "content": "Laryngeal cancerOver 2,000 new laryngeal cancers are diagnosed each year in the UK.Five year survival is 70%.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "71"} }
 {  "title": "Palliative care - nausea and vomiting",   "content": "Nausea is an unpleasant sensation of the need to vomit, which is often accompanied by autonomic symptoms, for example pallor, cold sweat, salivation", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "72"} }
 {  "title": "Contraception - assessment",   "content": "An assessment should be carried out on all women requesting contraception to identify any relevant medical conditions or medication", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "73"} }
 {  "title": "Benzodiazepine and z-drug withdrawal",   "content": "Benzodiazepines are gamma-aminobutyric acid (GABA) receptor agonists which have hypnotic, anxiolytic, anticonvulsant, and muscle relaxant properties.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "74"} }
 {  "title": "Fungal skin infection - foot",   "content": "Fungal infection of the foot (athlete's foot or tinea pedis) is a skin infection of the feet and toes, predominantly caused by dermatophytes", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "75"} }
 {  "title": "Contraception - natural family planning",   "content": "Natural family planning is a method of birth control where a woman monitors and records different fertility indicators during her menstrual cycle", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "76"} }
 {  "title": "Neuropathic pain - drug treatment",   "content": "Neuropathic pain is a symptom that develops as a result of damage to, or dysfunction of, the nervous system.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "77"} }
 {  "title": "Childhood cancers - recognition and referral",   "content": "Brain and central nervous system cancers.Consider a very urgent referral for suspected brain or central nervous system", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "78"} }
 {  "title": "Pre-conception - advice and management",   "content": "The goal of pre-conception care is to improve the long and short-term health outcomes of women and their children.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "79"} }
 {  "title": "Dyspepsia - proven functional",   "content": "The term 'dyspepsia' is used to describe a complex of upper gastrointestinal tract symptoms", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "80"} }
 {  "title": "Gilbert's syndrome",   "content": "Gilbert's syndrome is an inherited (usually autosomal recessive) metabolic disorder that causes intermittent, isolated raised unconjugated bilirubin", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "81"} }
 {  "title": "Breathlessness",   "content": "Breathlessness is a subjective, distressing sensation of awareness of difficulty with breathing.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "82"} }
 {  "title": "Appendicitis",   "content": "Appendicitis is an acute inflammation of the appendix, which is a small, narrow tube (about 5–10 cm) that is connected to the caecum", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "83"} }
 {  "title": "Obsessive-compulsive disorder",   "content": "Obsessive-compulsive disorder (OCD) is characterized by recurrent obsessional thoughts or compulsive acts or, commonly, both.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "84"} }
 {  "title": "Malaria",   "content": "Malaria is a life-threatening illness caused by infection of red blood cells by Plasmodium parasites.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "85"} }
 {  "title": "Dyspepsia - proven peptic ulcer",   "content": "The term 'dyspepsia' is used to describe a complex of upper gastrointestinal tract symptoms", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "86"} }
 {  "title": "Thrombophlebitis - superficial",   "content": "Superficial thrombophlebitis is a common disorder that occurs when a superficial vein becomes inflamed (phlebitis) and the blood within it clots.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "87"} }
 {  "title": "DVT prevention for travellers",   "content": "Deep vein thrombosis (DVT) can occur as a result of long distance travel. The risk of travel-related DVT in healthy people is extremely low", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "88"} }
 {  "title": "Tamoxifen - managing adverse effects",   "content": "Tamoxifen is an anti-oestrogen drug licensed for the treatment of breast cancer and anovulatory infertility.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "89"} }
 {  "title": "Herpes simplex - ocular",   "content": "Herpes simplex virus (HSV) ocular infections can cause inflammation of the retina (retinitis), iris and associated uveal tract (iritis or uveitis)", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "90"} }
 {  "title": "Squint in children",   "content": "A squint (strabismus) is present when one eye is misaligned in relation to the other.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "91"} }
 {  "title": "Jaundice in the newborn",   "content": "Jaundice is a yellow colouration of the skin and sclerae (whites of the eyes) caused by the accumulation of bilirubin, a bile pigment", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "92"} }
 {  "title": "Parvovirus B19 infection",   "content": "Parvovirus B19 infection may cause slapped cheek syndrome (erythema infectiosum or fifth disease), commonly in school-age children.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "93"} }
 {  "title": "Headache - assessment",   "content": "Headache is a common symptom associated with many conditions.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "94"} }
 {  "title": "Glaucoma",   "content": "Glaucoma is a group of eye diseases that cause progressive optic neuropathy.Glaucoma is commonly associated with raised intraocular pressure (IOP)", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "95"} }
 {  "title": "Fibroids",   "content": "Uterine fibroids are the most common benign tumour in women — they are a mixture of smooth muscle cells and fibroblasts,", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "96"} }
 {  "title": "Itch - widespread",   "content": "Itch (also known as pruritus) can be defined as a sensation that elicits a desire to scratch.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "97"} }
 {  "title": "Menorrhagia",   "content": "Menorrhagia is excessive (heavy) menstrual blood loss which occurs regularly (every 24 to 35 days)", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "98"} }
 {  "title": "Angio-oedema and anaphylaxis",   "content": "Angio-oedema is swelling of deep dermis, subcutaneous, or submucosal tissue, often affecting the face, genitalia, hands, or feet.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "99"} }
 {  "title": "Post-herpetic neuralgia",   "content": "Post-herpetic neuralgia occurs when the pain associated with shingles becomes chronic.Symptoms include constant or intermittent stabbing or burning", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "100"} }
 {  "title": "Warts and verrucae",   "content": "Warts are small, rough growths which are caused by certain strains of the human papilloma virus (HPV).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "101"} }
 {  "title": "Palpitations",   "content": "Palpitations are an abnormally perceived heartbeat including a feeling of the heart racing, an irregularity, or pounding sensation", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "102"} }
 {  "title": "Hyperthyroidism",   "content": "Hyperthyroidism occurs when an excess of circulating thyroid hormones (thyrotoxicosis) is produced by an overactive thyroid gland.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "103"} }
 {  "title": "Pyelonephritis - acute",   "content": "Acute pyelonephritis is caused by infection within the renal pelvis, with or without active infection of the renal parenchyma.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "104"} }
 {  "title": "Palliative care - secretions",   "content": "During the terminal phase of a person's illness, airway secretions may accumulate and result in gurgling and rattling noises during breathing", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "105"} }
 {  "title": "Styes (hordeola)",   "content": "A stye is an acute, localized infection or inflammation of the eyelid margin, and typically presents as a painful, localized eyelid swelling.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "106"} }
 {  "title": "Candida - skin",   "content": "Candida is a yeast-like fungus which is part of the normal commensal flora of the human gastrointestinal tract and the vagina.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "107"} }
 {  "title": "Varicocele",   "content": "A varicocele is a scrotal swelling consisting of a collection of dilated veins of the pampiniform plexus in the spermatic cord.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "108"} }
 {  "title": "Post-traumatic stress disorder",   "content": "Post-traumatic stress disorder can develop following a major traumatic event. It can affect people of all ages.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "109"} }
 {  "title": "Chest infections - adult",   "content": "Acute bronchitis and community-acquired pneumonia (CAP).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "110"} }
 {  "title": "Chickenpox",   "content": "Chickenpox is an acute disease, predominantly occurring in childhood. It is caused by varicella-zoster virus and is characterized by a vesicular rash", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "111"} }
 {  "title": "Gonorrhoea",   "content": "Gonorrhoea is a sexually transmitted infection (STI) caused by Neisseria gonorrhoeae.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "112"} }
 {  "title": "Red eye",   "content": "Serious and potentially sight-threatening causes of red eye include: Acute glaucoma, Corneal ulcer, corneal foreign body, Anterior uveitis, Scleritis.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "113"} }
 {  "title": "Leg ulcer - venous",   "content": "A leg ulcer is defined as the loss of skin below the knee on the leg or foot, which takes more than 2 weeks to heal.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "114"} }
 {  "title": "Urological cancers - recognition and referral",   "content": "Prostate cancer - over 41,000 new prostate cancers are diagnosed each year in the UK.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "115"} }
 {  "title": "Epistaxis (nosebleeds)",   "content": "Epistaxis is bleeding from the nose, caused by damage to the blood vessels of the nasal mucosa.Most epistaxis is self-limiting and harmless", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "116"} }
 {  "title": "Hepatitis B",   "content": "Hepatitis B is an infectious disease of the liver caused by the hepatitis B virus.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "117"} }
 {  "title": "Herpes simplex - genital",   "content": "Genital herpes simplex is a sexually transmitted infection (STI), caused by infection with herpes simplex virus (HSV) 1 or HSV-2", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "118"} }
 {  "title": "Domestic violence and abuse",   "content": "Domestic violence and abuse is a serious and common problem", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "119"} }
 {  "title": "Urinary tract infection - children",   "content": "Urinary tract infection (UTI) is illness caused by micro-organisms in the urinary tract.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "120"} }
 {  "title": "Achilles tendinopathy",   "content": "Achilles tendinopathy is a soft tissue disorder which causes pain, stiffness, and swelling of the Achilles tendon.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "121"} }
 {  "title": "Pre-patellar bursitis",   "content": "The pre-patellar bursa lies between the anterior surface of the patella and the skin. It facilitates free movement of the skin over the patella", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "122"} }
 {  "title": "Hepatitis C",   "content": "Hepatitis C is a slow, progressive disease of the liver caused by infection with the blood-borne hepatitis C virus (HCV).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "123"} }
 {  "title": "Hyponatraemia",   "content": "Hyponatraemia is defined as a serum sodium concentration of less than 135 mmol/L. It is the most commonly encountered electrolyte disorder", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "124"} }
 {  "title": "Palliative care - cough",   "content": "Cough is a defensive reflex that occurs in response to stimulation of irritant receptors which are found in the airways.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "125"} }
 {  "title": "Cardiac arrest - out of hospital care",   "content": "Cardiac arrest should be diagnosed if a person is unresponsive and not breathing normally.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "126"} }
 {  "title": "Acute kidney injury",   "content": "The causes of acute kidney injury can be divided into pre-renal, intrinsic renal and post-renal causes.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "127"} }
 {  "title": "Hepatitis A",   "content": "Hepatitis A is inflammation of the liver caused by infection with the hepatitis A virus, and transmission is by the faecal-oral route.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "128"} }
 {  "title": "Palliative care - malignant skin ulcer",   "content": "A malignant ulcer is a proliferative or cavitating primary or secondary cancer in the skin.It may appear as a crater-like wound, a nodular 'fungus'", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "129"} }
 {  "title": "Common cold",   "content": "The common cold is the conventional term used to describe a mild, self-limiting, viral, upper respiratory tract infection", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "130"} }
 {  "title": "Carpal tunnel syndrome",   "content": "Carpal tunnel syndrome (CTS) is a collection of symptoms and signs caused by compression of the median nerve in the carpal tunnel at the wrist.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "131"} }
 {  "title": "Multiple sclerosis",   "content": "Multiple sclerosis (MS) is a presumed autoimmune inflammatory condition of the central nervous system (CNS) resulting in areas of demyelination", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "132"} }
 {  "title": "NSAIDs - prescribing issues",   "content": "Nonsteroidal anti-inflammatory drugs (NSAIDs) inhibit cyclo-oxygenase (COX) enzymes", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "133"} }
 {  "title": "Developmental rheumatology in children",   "content": "Musculoskeletal problems are a common cause of visits to primary care. Many of these are for children who are healthy. This topic covers normal and red flag presentations.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "134"} }
 {  "title": "Uveitis",   "content": "Uveitis (also known as iritis) is inflammation of the uveal tract (iris, ciliary body, and choroid).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "135"} }
 {  "title": "Neck pain - non-specific",   "content": "Simple (or non-specific) neck pain is neck pain for which no specific cause can be found.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "136"} }
 {  "title": "Palliative care - constipation",   "content": "Constipation is defecation that is unsatisfactory because of infrequent stools, difficult stool passage, or seemingly incomplete defecation.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "137"} }
 {  "title": "Herpes simplex - oral",   "content": "Oral herpes simplex virus (HSV) usually causes a mild, self-limiting infection of the lips, cheeks, nose or oropharynx", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "138"} }
 {  "title": "Haemorrhoids",   "content": "Haemorrhoids (also known as piles) are abnormally swollen vascular mucosal cushions that are present in the anal canal.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "139"} }
 {  "title": "Diarrhoea - antibiotic associated",   "content": "Diarrhoea is a common consequence of treatment with antibiotics, occurring in 2–25% of people taking antibiotics", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "140"} }
 {  "title": "Attention deficit hyperactivity disorder",   "content": "Attention deficit hyperactivity disorder (ADHD) is a behavioural syndrome characterized by hyperactivity, impulsivity, and inattention.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "141"} }
 {  "title": "Stroke and TIA",   "content": "Stroke is a clinical syndrome characterised by sudden onset of rapidly developing focal or global neurological disturbance", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "142"} }
 {  "title": "Delirium",   "content": "Delirium (sometimes called 'acute confusional state') is an acute, fluctuating syndrome of inattention, impaired level of consciousness", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "143"} }
 {  "title": "Croup",   "content": "Croup (laryngotracheobronchitis) is a common childhood disease that is usually caused by a virus.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "144"} }
 {  "title": "Immunizations - pneumococcal",   "content": "Infection with the encapsulated bacteriumStreptococcus pneumoniaecauses pneumococcal infection, which may be invasive", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "145"} }
 {  "title": "Seborrhoeic dermatitis",   "content": "Seborrhoeic dermatitis is a common inflammation of the skin occurring in areas rich in sebaceous glands", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "146"} }
 {  "title": "Eczema - atopic",   "content": "Atopic eczema is a chronic, itchy, inflammatory skin condition that affects people of all ages, although it presents most frequently in childhood.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "147"} }
 {  "title": "Contraception - sterilization",   "content": "Sterilization is a form of contraception that permanently prevents a woman from getting pregnant.The operation to sterilize a man is vasectomy.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "148"} }
 {  "title": "Ulcerative colitis",   "content": "Ulcerative colitis is a chronic, unpredictable, relapsing–remitting, non-infectious inflammatory disease of the gastrointestinal tract.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "149"} }
 {  "title": "Pulmonary embolism",   "content": "Pulmonary embolism is a condition in which one or more emboli, usually arising from a blood clot formed in the veins (or, rarely, in the right heart)", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "150"} }
 {  "title": "Paronychia - acute",   "content": "An acute paronychia is a localized, superficial infection or abscess of the lateral and proximal skin fold around a nail (perionychium)", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "151"} }
 {  "title": "Hirsutism",   "content": "Hirsutism is the growth of excess terminal hair on the face, chest, linea alba, lower back, buttocks, and anterior thighs in women.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "152"} }
 {  "title": "Cellulitis - acute",   "content": "Cellulitis is an acute bacterial infection of the dermis and subcutaneous tissue.It is acute onset of red, painful, hot, swollen, and tender skin", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "153"} }
 {  "title": "Vitamin D deficiency in children",   "content": "Vitamin D is a fat soluble vitamin that regulates calcium and phosphate homeostasis and is therefore vital for musculoskeletal health.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "154"} }
 {  "title": "Cough - acute with chest signs in children",   "content": "An upper respiratory tract infection should be considered in a child with a cough, symptoms and signs of infection, and a clear chest on examination.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "155"} }
 {  "title": "Bone and soft tissue sarcoma - recognition and referral",   "content": "Bone sarcoma is seen in both sexes, and is one of the most common cancers in children, teenagers and young people.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "156"} }
 {  "title": "Leg cramps",   "content": "A cramp is a transient, involuntary episode of pain, usually sustained for several minutes (up to 10 minutes), in which muscle(s) go into spasm.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "157"} }
 {  "title": "Baker's cyst",   "content": "Baker's cysts (also known as popliteal cysts) are not true cysts. They are a distension of the gastrocnemius-semimembranosus bursa behind the knee.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "158"} }
 {  "title": "Brain and central nervous system cancers - recognition and referral",   "content": "Around 9000 new primary brain and central nervous system cancers are diagnosed each year in the UK.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "159"} }
 {  "title": "Corticosteroids - inhaled",   "content": "Corticosteroids are synthetic analogues of hormones produced by the adrenal cortex.Inhaled corticosteroids are glucocorticoids", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "160"} }
 {  "title": "Crohn's disease",   "content": "Crohn's disease is a chronic, relapsing-remitting, non-infectious inflammatory disease of the gastrointestinal tract", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "161"} }
 {  "title": "Corticosteroids - oral",   "content": "Corticosteroids are synthetic analogues of hormones produced by the adrenal cortex.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "162"} }
 {  "title": "Food allergy",   "content": "Food allergy is an adverse immune response to a food.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "163"} }
 {  "title": "Cervical screening",   "content": "Cervical screening aims to reduce the incidence of, and mortality from, cervical cancer by systematic, quality assured population-based screening", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "164"} }
 {  "title": "Palliative care - dyspnoea",   "content": "Breathlessness is an objective observable sign, whereas dyspnoea is a subjective described symptoms of difficulty in breathing.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "165"} }
 {  "title": "Urticaria",   "content": "Urticaria is a superficial swelling of the skin (epidermis and mucous membranes) that results in a red, raised, itchy rash.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "166"} }
 {  "title": "Pityriasis rosea",   "content": "Pityriasis rosea is a skin rash that is characterized by distinctive scaly, erythematous lesions.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "167"} }
 {  "title": "Acne vulgaris",   "content": "Acne vulgaris is a chronic skin condition in which blockage or inflammation of the hair follicles and accompanying sebaceous glands", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "168"} }
 {  "title": "Vitamin D deficiency in adults - treatment and prevention",   "content": "Vitamin D is a fat soluble vitamin that regulates calcium and phosphate homeostasis and is therefore vital for musculoskeletal health.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "169"} }
 {  "title": "Autism in adults",   "content": "Autism spectrum disorder is evidenced by difficulties in social interaction, communication, stereotypic behaviours, resistance to change, or restricted interests.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "170"} }
 {  "title": "Depression - antenatal and postnatal",   "content": "Depression refers to a range of mental conditions characterized by persistent low mood, absence of positive affect", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "171"} }
 {  "title": "Lyme disease",   "content": "Lyme disease is an infection caused by bacteria called Borrelia burgdorferi, which are transmitted to humans following a bite from an infected tick.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "172"} }
 {  "title": "Chlamydia - uncomplicated genital",   "content": "Genital chlamydia infection is the most common sexually transmitted bacterial infection in the UK.In men, it infects the urethra.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "173"} }
 {  "title": "Child maltreatment - recognition and management",   "content": "Child maltreatment includes any type of abuse or neglect of a child/young person caused by inflicting harm or by failing to act to prevent harm.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "174"} }
 {  "title": "Urinary tract infection (lower) - women",   "content": "A urinary tract infection (UTI) is usually caused by bacteria from the gastrointestinal tract, most commonlyEscherichia coli.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "175"} }
 {  "title": "Dental abscess",   "content": "A dental abscess is a localized collection of pus in the teeth, supporting structures of the teeth, or gums.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "176"} }
 {  "title": "Carbon monoxide poisoning",   "content": "Carbon monoxide is a colourless, odourless, tasteless gas produced by incomplete combustion of organic material.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "177"} }
 {  "title": "Vaginal discharge",   "content": "Normal physiological vaginal discharge changes with the menstrual cycle.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "178"} }
 {  "title": "Dyspepsia - proven GORD",   "content": "The term 'dyspepsia' is used to describe a complex of upper gastrointestinal tract symptoms", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "179"} }
 {  "title": "Macular degeneration - age-related",   "content": "Age-related macular degeneration (AMD) is the term applied to changes, which occur in the central area of the retina.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "180"} }
 {  "title": "GORD in children",   "content": "Gastro-oesophageal reflux disease (GORD) in children is the presence of troublesome symptoms (for example, discomfort or pain)", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "181"} }
 {  "title": "Bowel screening",   "content": "The NHS Bowel Cancer Screening Programme aims to detect bowel cancer at an early stage.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "182"} }
 {  "title": "Diarrhoea - adult's assessment",   "content": "Diarrhoea is the abnormal passing of loose or liquid stools, with increased frequency and/or increased volume.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "183"} }
 {  "title": "Contraception - progestogen-only methods",   "content": "The progestogen-only method of contraception includes the progestogen-only pill (POP), the progestogen-only implant, and the progestogen-only injectable.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "184"} }
 {  "title": "Meibomian cyst (chalazion)",   "content": "A meibomian cyst (also known as a chalazion) is a sterile, chronic, inflammatory granuloma caused by the obstruction of a meibomian gland.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "185"} }
 {  "title": "Diabetes - type 1",   "content": "Diabetes mellitus is a group of metabolic disorders characterized by persistent hyperglycaemia (random plasma glucose more than 11 mmol/L).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "186"} }
 {  "title": "Restless legs syndrome",   "content": "Restless legs syndrome (RLS) is a neurological disorder characterized by an irresistible urge to move the limbs (usually the legs)", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "187"} }
 {  "title": "Vitiligo",   "content": "Vitiligo is an acquired, chronic depigmentation disorder characterized by white patches on the skin.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "188"} }
 {  "title": "Pruritus ani",   "content": "Pruritus ani is a skin condition characterized by the sensation of perianal itching or burning.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "189"} }
 {  "title": "Nausea/vomiting in pregnancy",   "content": "The majority of women vomit or feel nauseated in early pregnancy. Symptoms usually begin between the fourth and seventh weeks of gestation", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "190"} }
 {  "title": "Roundworm",   "content": "The common human roundworm is a nematode called Ascaris lumbricoides.Infestation occurs when eggs in contaminated food, soil, or water are ingested", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "191"} }
 {  "title": "Headache - medication overuse",   "content": "Medication overuse headache results from regular overuse of headache medication such as ergotamine, triptans, opioids, or other analgesics", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "192"} }
 {  "title": "Bipolar disorder",   "content": "Bipolar disorder is a serious mental illness, that usually characterized by both episodes of depressed mood and episodes of elation", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "193"} }
 {  "title": "Insulin therapy in type 2 diabetes",   "content": "Insulin is a polypeptide hormone secreted by pancreatic beta-cells.The role of insulin is to lower blood glucose to prevent hyperglycaemia", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "194"} }
 {  "title": "Cirrhosis",   "content": "Cirrhosis is a progressive fibrotic nodular liver disease", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "195"} }
 {  "title": "Immunizations - childhood",   "content": "Healthy children should receive vaccines to prevent disease according to the ages stated by the Childhood Immunization Programme.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "196"} }
 {  "title": "Neck pain - cervical radiculopathy",   "content": "Cervical radiculopathy is usually due to compression or injury to a nerve root in the cervical spine.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "197"} }
 {  "title": "Hypercalcaemia",   "content": "Hypercalcaemia can be defined as a serum calcium concentration of 2.65 mmol/L (or higher) on two occasions", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "198"} }
 {  "title": "Measles",   "content": "Measles is a highly contagious airborne infection caused by a morbillivirus of the paramyxovirus family.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "199"} }
 {  "title": "Palliative care - general issues",   "content": "Palliative care is defined as the active holistic care of people with advanced, progressive illness.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "200"} }
 {  "title": "Migraine",   "content": "Migraine is a primary episodic headache disorder. It is characterized by severe headaches with symptoms such as photophobia, nausea and vomiting", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "201"} }
 {  "title": "Mastitis and breast abscess",   "content": "Mastitis is a painful inflammatory condition of the breast which may or may not be accompanied by infection. It is usually associated with lactation", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "202"} }
 {  "title": "Hypertension - not diabetic",   "content": "Hypertension is persistently raised arterial blood pressure (BP). It is one of several risk factors for diseases", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "203"} }
 {  "title": "Mumps",   "content": "Mumps is a moderate-to-highly contagious acute viral infection caused by a paramyxovirus, and spread by direct contact with saliva.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "204"} }
 {  "title": "Diarrhoea - prevention and advice for travellers",   "content": "Travellers' diarrhoea is a clinical syndrome associated with contaminated food or water, that occurs during or shortly after travel", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "205"} }
 {  "title": "Polycystic ovary syndrome",   "content": "Polycystic ovary syndrome (PCOS) is a complex endocrine disorder with clinical features that include hirsutism and acne (due to excess androgens)", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "206"} }
 {  "title": "Giant cell arteritis",   "content": "Giant cell arteritis is a type of chronic vasculitis characterized by granulomatous inflammation in the walls of medium and large arteries.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "207"} }
 {  "title": "Immunizations - seasonal influenza",   "content": "Influenza is an acute viral infection of the respiratory tract. Influenza types A and B are responsible for most clinical illness in the UK.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "208"} }
 {  "title": "Urinary tract infection (lower) - men",   "content": "Urinary tract infection (UTI) is infection of any part of the urinary tract, usually by bacteria.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "209"} }
 {  "title": "Febrile seizure",   "content": "A febrile seizure is a seizure associated with fever caused by infection or inflammation outside the central nervous system", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "210"} }
 {  "title": "Poisoning or overdose",   "content": "Poisoning denotes exposure to a substance that is dangerous to health or life. This may be a drug, household product, industrial chemical, plant or animal product", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "211"} }
 {  "title": "Amenorrhoea",   "content": "Amenorrhoea is the absence or cessation of menses. It may be physiological, pathological, or iatrogenic.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "212"} }
 {  "title": "Trichomoniasis",   "content": "Trichomoniasis is a sexually transmitted infection (STI) caused by the flagellated protozoan Trichomonas vaginalis.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "213"} }
 {  "title": "Healthcare-associated infections",   "content": "A healthcare-associated infection develops as a direct result of healthcare interventions, e.g. medical, surgical treatment, or direct contact with a healthcare setting.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "214"} }
 {  "title": "Falls - risk assessment",   "content": "A fall is defined as an unintentional/unexpected loss of balance resulting in coming to rest on the floor, the ground, or an object below knee level.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "215"} }
 {  "title": "Insect bites and stings",   "content": "Insects bite by puncturing the skin with piercing mouthparts (for example mosquitos and bedbugs) or by lacerating the skin", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "216"} }
 {  "title": "Cholecystitis - acute",   "content": "Acute cholecystitis is inflammation of the gallbladder, the most common cause of which is gallstones.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "217"} }
 {  "title": "Cataracts",   "content": "A cataract is an opacity (cloudy area) that forms within the lens of an eye which can reduce the transparency of the lens.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "218"} }
 {  "title": "Back pain - low (without radiculopathy)",   "content": "Low back pain affects the lumbosacral area of the back, between the bottom of the ribs and the top of the legs.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "219"} }
 {  "title": "Morton's neuroma",   "content": "Morton's neuroma is a benign fibrotic thickening of a plantar interdigital nerve that is a response to irritation.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "220"} }
 {  "title": "Bell's palsy",   "content": "Bell's palsy is an acute, unilateral, idiopathic, facial nerve paralysis. The paralysis also affects the eyelids, causing an impairment of blinking.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "221"} }
 {  "title": "Learning disabilities",   "content": "Lower intellectual ability and social functioning  < age 18", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "222"} }
 {  "title": "Contraception - emergency",   "content": "Emergency contraception (EC) is an intervention aimed at preventing unintended pregnancy after unprotected sexual intercourse (UPSI) or contraceptive", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "223"} }
 {  "title": "Urethritis - male",   "content": "Urethritis (inflammation of the urethra) is usually (but not always) caused by a sexually transmitted infection (STI).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "224"} }
 {  "title": "Hyperhidrosis",   "content": "Hyperhidrosis, or excessive sweating, can be classified by location (focal or generalized) and by the presence of an underlying cause", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "225"} }
 {  "title": "Incontinence - urinary, in women",   "content": "Urinary incontinence is defined as any involuntary leakage of urine. The main types are:Stress urinary incontinence.Urgency urinary incontinence.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "226"} }
 {  "title": "Tinnitus",   "content": "Tinnitus is the perception of sound in the absence of sound from the external environment.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "227"} }
 {  "title": "Renal or ureteric colic - acute",   "content": "The term renal colic is generally used to describe an acute and severe loin pain caused by a urinary stone obstructing the flow of urine.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "228"} }
 {  "title": "Sore throat - acute",   "content": "The term 'sore throat' describes the symptom of pain at the back of the mouth.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "229"} }
 {  "title": "Erectile dysfunction",   "content": "Erectile dysfunction is the persistent inability to attain and maintain an erection sufficient to permit satisfactory sexual performance.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "230"} }
 {  "title": "Undescended testes",   "content": "Undescended testes or cryptorchidism is defined as the incomplete descent of one or both testes and absence from the scrotum.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "231"} }
 {  "title": "Bruising",   "content": "A bruise is a haematoma which forms due to bleeding under intact skin into subcutaneous tissue, due to vascular damage or injury", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "232"} }
 {  "title": "Deep vein thrombosis",   "content": "Deep vein thrombosis (DVT) is the formation of a thrombus in a deep vein, usually in the legs, which partially or completely obstructs blood flow", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "233"} }
 {  "title": "Osteoporosis - prevention of fragility fractures",   "content": "Osteoporosis is a disease characterized by low bone mass and structural deterioration of bone tissue, with a consequent increase in bone fragility", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "234"} }
 {  "title": "Chest pain",   "content": "Chest pain refers to pain in the thorax. It can be classified by:Cause (such as cardiac or non-cardiac).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "235"} }
 {  "title": "Antiplatelet treatment",   "content": "Antiplatelet treatment prevents the formation of blood clots by preventing platelet aggregation.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "236"} }
 {  "title": "Alcohol - problem drinking",   "content": "An alcohol problem is categorized depending on the level and pattern of alcohol consumption.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "237"} }
 {  "title": "LUTS in men",   "content": "Lower urinary tract symptoms (LUTS) in men can be caused by:Structural or functional abnormalities in one or more parts of the lower urinary tract", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "238"} }
 {  "title": "Knee pain - assessment",   "content": "Knee pain is a common condition, particularly in older people.Possible causes include osteoarthritis of the knee, injuries", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "239"} }
 {  "title": "Aphthous ulcer",   "content": "Aphthous ulcers are painful, clearly defined, round or ovoid, shallow ulcers that are confined to the mouth and not associated with systemic disease", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "240"} }
 {  "title": "Whooping cough",   "content": "Whooping cough, also known as pertussis, is a highly infectious disease caused by the bacterium Bordetella pertussis.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "241"} }
 {  "title": "Contraception - combined hormonal methods",   "content": "There are three types of combined hormonal contraceptives (CHCs): oral contraceptives, transdermal patch, and vaginal ring.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "242"} }
 {  "title": "Infertility",   "content": "Infertility is the inability to conceive. A couple is regarded as infertile if, after regular sexual intercourse, they have not conceived in 1 year.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "243"} }
 {  "title": "Dyspepsia - unidentified cause",   "content": "The term 'dyspepsia' is used to describe a complex of upper gastrointestinal tract symptoms", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "244"} }
 {  "title": "Parkinson's disease",   "content": "Parkinson's disease is a chronic, progressive neurodegenerative condition resulting from loss of the dopamine-containing cells of the substantia nigra", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "245"} }
 {  "title": "Syphilis",   "content": "Syphilis is a sexually transmitted infection (STI) caused by the spirochete bacterium, Treponema pallidum.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "246"} }
 {  "title": "Polymyalgia rheumatica",   "content": "Polymyalgia rheumatica (PMR) is an inflammatory condition, characterized by aching and morning stiffness in the neck, shoulder, and pelvic girdle.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "247"} }
 {  "title": "Gastrointestinal tract (upper) cancers - recognition and referral",   "content": "Oesophageal cancer - over 8,000 new oesophageal cancers are diagnosed each year in the UK.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "248"} }
 {  "title": "Chronic kidney disease",   "content": "Chronic kidney disease (CKD) is an abnormality of kidney function or structure that is present for more than 3 months, with implications for health", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "249"} }
 {  "title": "Bacterial vaginosis",   "content": "Bacterial vaginosis (BV) is characterized by an overgrowth of predominantly anaerobic organisms and a loss of lactobacilli.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "250"} }
 {  "title": "Coeliac disease",   "content": "Coeliac disease is an autoimmune disorder in which a heightened immunological response to peptides derived from gluten proteins", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "251"} }
 {  "title": "Threadworm",   "content": "Threadworm or pinworm (Enterobius vermicularis) is a parasitic worm which infests the intestines of humans.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "252"} }
 {  "title": "Candida - oral",   "content": "Candida is a yeast-like fungus which is part of the normal commensal flora of the human gastrointestinal tract.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "253"} }
 {  "title": "Endometriosis",   "content": "Endometriosis is the presence of tissue resembling endometrial glands and stroma outside the uterine cavity", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "254"} }
 {  "title": "Meningitis - bacterial meningitis and meningococcal disease",   "content": "Bacterial meningitis is a life-threatening condition that can affect all ages, but is most common in babies and children.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "255"} }
 {  "title": "Epilepsy",   "content": "Epileptic seizure is a transient disturbance of consciousness, behaviour, emotion, motor function, or sensation, due to abnormal electrical activity", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "256"} }
 {  "title": "Teething",   "content": "Teething is a normal physiological process in which deciduous teeth (milk teeth or baby teeth) emerge through the gums.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "257"} }
 {  "title": "Hypertension in pregnancy",   "content": "Several different hypertensive disorders can complicate pregnancy.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "258"} }
 {  "title": "Gout",   "content": "Gout is a disorder of purine metabolism characterized by a raised uric acid level in the blood (hyperuricaemia) and the deposition of urate crystals", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "259"} }
 {  "title": "Gingivitis and periodontitis",   "content": "Gingivitis is inflammation of the gums.Acute necrotizing ulcerative gingivitis (ANUG) is an acute, atypical, progressive, painful bacterial infection", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "260"} }
 {  "title": "Gallstones",   "content": "A gallstone (cholelithiasis) is a solid deposit that forms within the gallbladder. One or more gallstones may form.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "261"} }
 {  "title": "Angina",   "content": "Angina is chest pain (or constricting discomfort) caused by an insufficient blood supply to the heart muscle.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "262"} }
 {  "title": "Addison's disease",   "content": "Addison's disease (primary adrenal insufficiency) is caused by destruction of the adrenal cortex.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "263"} }
 {  "title": "Burns and scalds",   "content": "A burn is an injury caused by exposure to thermal (heat), chemical, electrical, or radiation energy.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "264"} }
 {  "title": "Breast cancer - managing FH",   "content": "A family history of breast cancer is one of the strongest risk factors for developing breast cancer, increasing with the number of affected relatives.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "265"} }
 {  "title": "Nappy rash",   "content": "Nappy rash is an irritant contact dermatitis confined to the nappy area. Colonization with Candida albicans is usual.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "266"} }
 {  "title": "Influenza - seasonal",   "content": "Influenza is an acute respiratory illness caused by RNA viruses of the family Orthomyxoviridae (influenza viruses).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "267"} }
 {  "title": "Pityriasis versicolor",   "content": "Pityriasis versicolor (also known as tinea versicolor) is a common fungal infection of the skin that is localized to the stratum corneum.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "268"} }
 {  "title": "Tuberculosis",   "content": "Tuberculosis (TB) is an infection caused by bacteria of the Mycobacterium tuberculosis complex.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "269"} }
 {  "title": "Analgesia - mild-to-moderate pain",   "content": "For adults, a stepwise strategy for managing mild-to-moderate pain is recommended", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "270"} }
 {  "title": "Melanoma and pigmented lesions",   "content": "A melanoma of the skin is a malignant tumour arising from melanocytes in the skin.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "271"} }
 {  "title": "Pelvic inflammatory disease",   "content": "Pelvic inflammatory disease (PID) is a general term for infection of the upper genital tract.PID is usually due to a sexually transmitted disease", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "272"} }
 {  "title": "Hiccups",   "content": "Hiccups involve an involuntary (reflex) diaphragmatic contraction, causing sudden inspiration.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "273"} }
 {  "title": "Osgood-Schlatter disease",   "content": "Osgood–Schlatter disease is a disorder of the tibial tuberosity caused by multiple small avulsion fractures within the ossification centre", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "274"} }
 {  "title": "Lacerations",   "content": "A laceration is a tearing or splitting of the skin commonly caused by blunt trauma, or an incision caused by a sharp object, such as a knife.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "275"} }
 {  "title": "Alopecia, androgenetic - male",   "content": "Androgenetic alopeciadescribes a distinctive pattern of hair loss, which may occur in genetically predisposed men", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "276"} }
 {  "title": "Varicose veins",   "content": "Varicose veins are tortuous, dilated, superficial leg veins.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "277"} }
 {  "title": "Eating disorders",   "content": "The main types of eating disorders are:Anorexia nervosa — the person maintains a low body weight as a result of a preoccupation with weight", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "278"} }
 {  "title": "Psoriasis",   "content": "Psoriasis is a systemic, immune-mediated, inflammatory skin disease which typically has a chronic relapsing-remitting course", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "279"} }
 {  "title": "Self-harm",   "content": "Self-harm refers to an intentional act of self-poisoning or self-injury, irrespective of the motivation or apparent purpose of the act", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "280"} }
 {  "title": "Breastfeeding problems",   "content": "The World Health Organization (WHO) recommends exclusive breastfeeding until an infant is at least 6 months of age", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "281"} }
 {  "title": "Glandular fever (infectious mononucleosis)",   "content": "Glandular fever (infectious mononucleosis) is an infectious disease caused by the Epstein-Barr virus (EBV) which is a member of the human herpes virus", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "282"} }
 {  "title": "Insomnia",   "content": "Insomnia is difficulty in getting to sleep, difficulty staying asleep, early wakening, or non-restorative sleep", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "283"} }
 {  "title": "Osteoarthritis",   "content": "Osteoarthritis is defined as a disorder of synovial joints, that is characterized by focal areas of damage to the articular cartilage", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "284"} }
 {  "title": "MRSA in primary care",   "content": "Staphylococcus aureus is a bacterium that is usually commensal, neither harming nor benefiting the host.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "285"} }
 {  "title": "Cholesteatoma",   "content": "A cholesteatoma is an abnormal sac of keratinizing squamous epithelium and accumulation of keratin within the middle ear or mastoid air cell spaces", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "286"} }
 {  "title": "Feverish children - management",   "content": "A child is considered to have a fever if his or her temperature is 38°C or higher.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "287"} }
 {  "title": "Ectopic pregnancy",   "content": "An ectopic pregnancy develops outside the uterine cavity with most occurring in the fallopian tubes.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "288"} }
 {  "title": "DMARDs",   "content": "Disease-modifying anti-rheumatic drugs (DMARDs) are a class of drugs, which are designed to influence the course of a disease", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "289"} }
 {  "title": "Anaemia - B12 and folate deficiency",   "content": "Deficiency of vitamin B12 or folate is the most common cause of megaloblastic anaemia.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "290"} }
 {  "title": "Sickle cell disease",   "content": "Sickle cell disease encompasses a group of inherited conditions which have the inheritance of sickle haemoglobin in common.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "291"} }
 {  "title": "Obesity",   "content": "The terms 'overweight' and 'obesity' are used to describe excess body fat.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "292"} }
 {  "title": "Bedwetting (enuresis)",   "content": "Bedwetting is involuntary wetting during sleep, without any inherent suggestion of frequency or pathophysiology.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "293"} }
 {  "title": "Smoking cessation",   "content": "Tobacco is smoked to obtain nicotine, principally to relieve symptoms of nicotine withdrawal.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "294"} }
 {  "title": "Dysmenorrhoea",   "content": "Dysmenorrhoea is painful cramping, usually in the lower abdomen, occurring shortly before or during menstruation, or both.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "295"} }
 {  "title": "Fungal nail infection",   "content": "Fungal nail infection (onychomycosis) can involve the nail plate, nail bed, and/or the root of the nail. It affects toenails more frequently than the", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "296"} }
 {  "title": "Multiple myeloma",   "content": "Multiple myeloma is a progressive malignant disease of abnormal plasma cells in the bone marrow and abnormal monoclonal immunoglobulins", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "297"} }
 {  "title": "Feverish children - risk assessment",   "content": "A child is considered to have a fever if his or her temperature is 38°C or higher.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "298"} }
 {  "title": "Vestibular neuronitis",   "content": "Vestibular neuronitis (sometimes called vestibular neuritis) is a disorder characterised by acute, isolated, spontaneous, and prolonged vertigo", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "299"} }
 {  "title": "Bunions",   "content": "A bunion is a deformity which occurs when the great toe moves towards the second toe (and may sometimes overlie it).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "300"} }
 {  "title": "Anticoagulation - oral ",   "content": "There are five oral anticoagulants licensed for use in the UK: warfarin, apixaban, dabigatran, edoxaban and rivaroxaban.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "301"} }
 {  "title": "Rosacea - acne",   "content": "Acne rosacea is a chronic relapsing skin condition affecting the face, characterized by episodes of facial flushing, erythema, telangiectasia.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "302"} }
 {  "title": "Vertigo",   "content": "Vertigo is a symptom, not a diagnosis. It refers to a false sensation of movement (spinning or rotation) of the person or their surroundings", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "303"} }
 {  "title": "Dupuytren's disease",   "content": "Dupuytren's disease is a benign, progressive fibroproliferative condition of the hand. It causes the bands of connective tissue in the palm to thicken", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "304"} }
 {  "title": "Rheumatoid arthritis",   "content": "Rheumatoid arthritis (RA) is a chronic inflammatory disease.RA typically presents as inflammatory arthritis affecting the small joints of the hands", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "305"} }
 {  "title": "Pancreatitis - chronic",   "content": "Chronic pancreatitis is a chronic, irreversible, inflammation and/or fibrosis of the pancreas", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "306"} }
 {  "title": "Scabies",   "content": "Scabies is an intensely itchy skin infestation caused by the human parasite Sarcoptes scabiei. A person with scabies has an average of 10–15 mites.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "307"} }
 {  "title": "Skin cancers - recognition and referral",   "content": "Melanoma of the skin - just over 13,000 new melanomas are diagnosed each year in the UK.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "308"} }
 {  "title": "Diabetes - type 2",   "content": "Diabetes mellitus is a group of metabolic disorders characterized by persistent hyperglycaemia (HbA1c more than 48 mmol/mol [6.5%]", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "309"} }
 {  "title": "Dyspepsia - pregnancy-associated",   "content": "Dyspepsia in pregnancy is commonly due to gastro-oesophageal reflux, thought to involve a combination of mechanical and hormonal factors.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "310"} }
 {  "title": "Lipid modification - CVD prevention",   "content": "Cardiovascular disease (CVD) is an umbrella term for diseases that involve the heart, blood vessels, or both, caused by atherosclerosis", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "311"} }
 {  "title": "Palliative care - oral",   "content": "Common oral problems in palliative care include dry mouth, painful mouth, halitosis, alteration of taste, and excessive salivation.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "312"} }
 {  "title": "Neck lump",   "content": "There are multiple possible causes of neck lumps, including: skin infections, lymphadenopathy, tumours, salivary glands, congenital lumps", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "313"} }
 {  "title": "Pancreatitis - acute",   "content": "Acute pancreatitis is an acute inflammatory process of the pancreas with varying involvement of local tissues or more remote organ systems.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "314"} }
 {  "title": "Trigeminal neuralgia",   "content": "Trigeminal neuralgia occurs in the distribution of one or more branches of the fifth (trigeminal) cranial nerve.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "315"} }
 {  "title": "Autism in children",   "content": "Autism spectrum disorder (ASD) is a lifelong condition,which significantly limits or impairs the activities of daily life", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "316"} }
 {  "title": "Faltering growth",   "content": "Low weight or low weight gain in children", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "317"} }
 {  "title": "Peripheral arterial disease",   "content": "The term peripheral arterial disease is a narrowing or occlusion of the peripheral arteries affecting the blood supply to the lower limbs.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "318"} }
 {  "title": "Blackouts",   "content": "A blackout is a transient loss of consciousness.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "319"} }
 {  "title": "Raynaud's phenomenon",   "content": "Raynaud's phenomenon is episodic vasospasm of the arteries in the extremities.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "320"} }
 {  "title": "Antenatal care - uncomplicated pregnancy",   "content": "A woman with an uncomplicated pregnancy is usually managed in the community by a midwife.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "321"} }
 {  "title": "Gynaecological cancers - recognition and referral",   "content": "Ovarian cancer - Over 7,000 new ovarian cancers are diagnosed each year in the UK.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "322"} }
 {  "title": "Cervical cancer and HPV",   "content": "Types of cervical cancer include:Squamous cell carcinoma and Cervical adenocarcinoma", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "323"} }
 {  "title": "Head lice",   "content": "Head lice (Pediculus humanus capitis) are parasitic insects that infest the hairs of the human head and feed on blood from the scalp.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "324"} }
 {  "title": "Retinal detachment",   "content": "Retinal detachment refers to the separation of the inner neurosensory retina from the underlying retinal pigment epithelium.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "325"} }
 {  "title": "Scrotal swellings",   "content": "Common, or important causes of scrotal swelling include:Testicular cancer.Squamous cell carcinoma of the scrotum.Testicular torsion", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "326"} }
 {  "title": "Atrial fibrillation",   "content": "Atrial fibrillation (AF) is an arrhythmia. It results from irregular, disorganized electrical activity in the atria, leading to irregular ventricular rhythm", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "327"} }
 {  "title": "Chronic obstructive pulmonary disease",   "content": "Chronic obstructive pulmonary disease (COPD) is a treatable (but not curable) and largely preventable lung disease.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "328"} }
 {  "title": "Breast screening",   "content": "One in nine women will develop breast cancer, and it is more common in women over the age of 50 years.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "329"} }
 {  "title": "Neck pain - whiplash injury",   "content": "Acute whiplash injury follows sudden or excessive hyperextension, hyperflexion, or rotation of the neck affecting the soft tissues.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "330"} }
 {  "title": "Prostatitis - acute",   "content": "Acute bacterial prostatitis is a potentially serious non-sexually transmitted bacterial infection of the prostate", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "331"} }
 {  "title": "Prostatitis - chronic",   "content": "Chronic prostatitis is characterized by at least 3 months of pain in the perineum or pelvic floor, often associated with lower urinary tract symptoms", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "332"} }
 {  "title": "Venous eczema and lipodermatosclerosis",   "content": "Venous skin changes usually occur on the lower legs and are often bilateral,They vary, depending on the severity.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "333"} }
 {  "title": "Compression stockings",   "content": "Compression stockings are useful for treating conditions associated with chronic venous insufficiency, including venous ulcers, varicose veins", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "334"} }
 {  "title": "Balanitis",   "content": "Balanitis is inflammation of the glans penis and often the foreskin. It can be acute, chronic, or recurrent.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "335"} }
 {  "title": "Hypothyroidism",   "content": "Hypothyroidism is the clinical result of impaired production of thyroid hormones (thyroxine [T4] and tri-iodothyronine [T3]).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "336"} }
 {  "title": "Conjunctivitis - infective",   "content": "Infective conjunctivitis is inflammation of the conjunctiva due to viral, bacterial or parasitic infection.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "337"} }
 {  "title": "Dermatitis - contact",   "content": "Contact dermatitis is an inflammatory skin reaction (dermatitis) that occurs in response to an external stimulus acting as either an irritant", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "338"} }
 {  "title": "Alopecia, androgenetic - female",   "content": "Androgenetic alopecia (or female pattern hair loss) describes a distinctive pattern of hair loss, which may occur in genetically predisposed women", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "339"} }
 {  "title": "Diverticular disease",   "content": "Diverticula are sac-like protrusions of mucosa through the muscular wall of the colon, which occur in the sigmoid colon", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "340"} }
 {  "title": "Haematological cancers - recognition and referral",   "content": "Leukaemia Symptoms include pallor, bruising and infection.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "341"} }
 {  "title": "Gastrointestinal tract (lower) cancers - recognition and referral",   "content": "Colorectal cancer - around 40,000 new colorectal cancers are diagnosed each year in the UK, up to a quarter of these following screening.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "342"} }
 {  "title": "Breast cancer - recognition and referral",   "content": "Approximately 50,000 new cases of breast cancer are diagnosed each year in the UK, around a quarter of which through screening mammography.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "343"} }
 {  "title": "Shoulder pain",   "content": "Causes of pain arising from the shoulder include:Rotator cuff disorders.Frozen shoulder.Instability disorders.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "344"} }
 {  "title": "Gastroenteritis",   "content": "Gastroenteritis is a transient disorder due to enteric infection with viruses, bacteria, or protozoa.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "345"} }
 {  "title": "Obstructive sleep apnoea syndrome",   "content": "Obstructive sleep apnoea/hypopnoea syndrome (OSAHS) is the coexistence of excessive daytime sleepiness with irregular breathing at night.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "346"} }
 {  "title": "Constipation",   "content": "Constipation is a symptom-based disorder which describes defecation that is unsatisfactory because of infrequent stools, difficulty passing stools", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "347"} }
 {  "title": "Neck pain - acute torticollis",   "content": "Torticollis, or wry neck, is a twisted neck. Acute torticollis is thought to be due to minor local musculoskeletal irritation causing pain and spasm", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "348"} }
 {  "title": "Scarlet fever",   "content": "Scarlet fever is a notifiable infectious disease caused by toxin-producing strains of the group A streptococcus bacterium (Streptococcus pyogenes).", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "349"} }
 {  "title": "Contraception - barrier methods and spermicides",   "content": "Barrier methods of contraception include:Male and female condoms.Diaphragms and caps.Spermicides.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "350"} }
 {  "title": "CVD risk assessment and management",   "content": "Cardiovascular disease (CVD) is a significant cause of mortality and morbidity, accounting for almost a third of all deaths in the UK.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "351"} }
 {  "title": "Premenstrual syndrome",   "content": "Premenstrual syndrome is a condition in which distressing physical, behavioural, and psychological symptoms, occur in the 2nd half of the menstrual cycle.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "352"} }
 {  "title": "Pilonidal sinus disease",   "content": "Pilonidal sinus disease is a skin disorder usually found in the midline of the natal cleft.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "353"} }
 {  "title": "Pruritus vulvae",   "content": "Pruritus vulvae is itching of the vulva (which includes the mons pubis, labia majora, labia minora, clitoris, perineum, urethra and vagina", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "354"} }
 {  "title": "Menopause",   "content": "Menopause is a biological stage in a woman's life when menstruation ceases permanently due to the loss of ovarian follicular activity.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "355"} }
 {  "title": "Acute childhood limp",   "content": "The term limp refers to an abnormal gait pattern usually caused by pain, weakness, or deformity.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "356"} }
 {  "title": "Hand foot and mouth disease",   "content": "Hand, foot, and mouth disease (HFMD) is an acute viral illness characterized by vesicular eruptions in the mouth and papulovesicular skin lesions", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "357"} }
 {  "title": "Whitlow (staphylococcal and herpetic)",   "content": "Staphylococcal whitlow is a closed-space infection of the distal finger pulp.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "358"} }
 {  "title": "Sprains and strains",   "content": "A sprain is a stretch and/or tear of a ligament caused by applying abnormal or excessive force to a joint.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "359"} }
 {  "title": "Cough",   "content": "Cough is a reflex response to airway irritation. It is triggered by stimulation of airway cough receptors", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "360"} }
 {  "title": "Adverse drug reactions",   "content": "An adverse drug reaction (ADR) is an unwanted or harmful reaction which occurs after administration of a drug or drugs.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "361"} }
 {  "title": "Malaria prophylaxis",   "content": "Prophylaxis used depends on the area to be visited, the age of the person, contraindications to specific drugs in people with co-morbidities, and patient preference.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "362"} }
 {  "title": "Psychosis and schizophrenia",   "content": "Psychosis is a disordered mental state characterized principally by positive symptoms such as hallucinations, delusions, and thought disorder.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "363"} }
 {  "title": "Polycythaemia/erythrocytosis",   "content": "Erythrocytosis is an abnormally high haematocrit and haemoglobin concentration.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "364"} }
 {  "title": "Heart failure - chronic",   "content": "Heart failure is a complex syndrome in which the ability of the heart to maintain the circulation of blood", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "365"} }
 {  "title": "Anaemia - iron deficiency",   "content": "Iron deficiency occurs when the body's iron demand is not met by iron absorption from the diet.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "366"} }
 {  "title": "Halitosis",   "content": "Halitosis (bad breath) is a general term that describes an unpleasant odour in the breath, regardless of the cause of the odour.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "367"} }
 {  "title": "Corticosteroids - topical (skin), nose, and eyes",   "content": "Corticosteroids are synthetic analogues of the natural hormones that are produced by the adrenal cortex.", "boostvalue": 100}
-{ "index": {} }
+{ "index": {"_id": "368"} }
 {  "title": "Insulin therapy in type 1 diabetes",   "content": "Insulin is a polypeptide hormone secreted by pancreatic beta-cells.The role of insulin is to lower blood glucose to prevent hyperglycaemia", "boostvalue": 100}
