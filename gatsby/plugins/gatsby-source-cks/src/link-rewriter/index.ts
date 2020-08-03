@@ -97,22 +97,54 @@ const rewriteChapterLinks = (
 				chapterNode.parentChapter,
 				nodeModel
 			);
-			if (chapterNode.parentChapter === chapterNode.rootChapter) {
+			if (parentChapterNode?.itemId === chapterNode.rootChapter) {
 				return anchor.replace(
 					originalHref,
 					`${topicPath}${parentChapterNode?.slug}/${chapterNode.slug}/`
 				);
 			}
 
-			// Third+ level chapter
-			const rootChapterNode = await getChapterById(
-				chapterNode.rootChapter,
+			// Third level chapter
+			const grandParentChapterNode = await getChapterById(
+				parentChapterNode?.parentChapter as string,
 				nodeModel
 			);
-			return anchor.replace(
-				originalHref,
-				`${topicPath}${rootChapterNode?.slug}/${parentChapterNode?.slug}/#${chapterNode.slug}`
+			if (grandParentChapterNode?.itemId === chapterNode.rootChapter) {
+				return anchor.replace(
+					originalHref,
+					`${topicPath}${grandParentChapterNode?.slug}/${parentChapterNode?.slug}/#${chapterNode.slug}`
+				);
+			}
+
+			// Fourth level chapter
+			const greatGrandParentChapterNode = await getChapterById(
+				grandParentChapterNode?.parentChapter as string,
+				nodeModel
 			);
+			if (greatGrandParentChapterNode?.itemId === chapterNode.rootChapter) {
+				return anchor.replace(
+					originalHref,
+					`${topicPath}${greatGrandParentChapterNode?.slug}/${grandParentChapterNode?.slug}/#${chapterNode.slug}`
+				);
+			}
+
+			// Fifth level chapter
+			const greatGreatGrandParentChapterNode = await getChapterById(
+				greatGrandParentChapterNode?.parentChapter as string,
+				nodeModel
+			);
+			if (
+				greatGreatGrandParentChapterNode?.itemId === chapterNode.rootChapter
+			) {
+				return anchor.replace(
+					originalHref,
+					`${topicPath}${greatGreatGrandParentChapterNode?.slug}/${greatGrandParentChapterNode?.slug}/#${chapterNode.slug}`
+				);
+			} else {
+				throw new Error(
+					`6th level link found in '${chapterItemId}'\n in ${anchor}\n in chapter '${chapter.fullItemName}' (${chapter.itemId}) in ${topic.topicName}`
+				);
+			}
 		}
 	);
 };

@@ -102,17 +102,16 @@ describe("link rewriter", () => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter") {
-					if (
-						query.query.filter.itemId.eq ===
-						"666cef38-2cdb-45b8-a427-aaffb3caa682"
-					)
+					const itemId = query.query.filter.itemId.eq;
+					if (itemId === "666cef38-2cdb-45b8-a427-aaffb3caa682")
 						return Promise.resolve({
+							itemId: "666cef38-2cdb-45b8-a427-aaffb3caa682",
 							slug: "scenario",
 							parentChapter: "123",
 							rootChapter: "123",
 						});
 
-					return Promise.resolve({ slug: "management" });
+					return Promise.resolve({ itemId: "123", slug: "management" });
 				}
 			});
 
@@ -134,21 +133,69 @@ describe("link rewriter", () => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter") {
-					if (
-						query.query.filter.itemId.eq ===
-						"666cef38-2cdb-45b8-a427-aaffb3caa682"
-					)
+					const itemId = query.query.filter.itemId.eq;
+					if (itemId === "666cef38-2cdb-45b8-a427-aaffb3caa682")
 						return Promise.resolve({
+							itemId: "666cef38-2cdb-45b8-a427-aaffb3caa682",
 							slug: "test",
 							parentChapter: "123",
 							rootChapter: "987",
 						});
-					else if (query.query.filter.itemId.eq === "123")
+					else if (itemId === "123")
 						return Promise.resolve({
+							itemId: "123",
 							slug: "scenario",
 						});
 
-					return Promise.resolve({ slug: "management" });
+					return Promise.resolve({
+						itemId: "987",
+						slug: "management",
+					});
+				}
+			});
+
+			const result = await replaceLinksInHtml(
+				{
+					htmlStringContent: `<a href="#666cef38-2cdb-45b8-a427-aaffb3caa682">Achilles tendinopathy</a>`,
+				} as ChapterNode,
+				nodeModel,
+				reporter
+			);
+
+			expect(result).toBe(
+				'<a href="/topics/achilles-tendinopathy/management/scenario/#test">Achilles tendinopathy</a>'
+			);
+		});
+
+		it("should rewrite fourth level chapter links", async () => {
+			runQuery.mockImplementation((query) => {
+				if (query.type === "CksTopic")
+					return Promise.resolve({ slug: "achilles-tendinopathy" });
+				if (query.type === "CksChapter") {
+					const itemId = query.query.filter.itemId.eq;
+					if (itemId === "666cef38-2cdb-45b8-a427-aaffb3caa682")
+						return Promise.resolve({
+							itemId: "666cef38-2cdb-45b8-a427-aaffb3caa682",
+							slug: "test",
+							parentChapter: "123",
+							rootChapter: "987",
+						});
+					else if (itemId === "123")
+						return Promise.resolve({
+							itemId: "123",
+							slug: "test",
+							parentChapter: "456",
+						});
+					else if (itemId === "456")
+						return Promise.resolve({
+							itemId: "456",
+							slug: "scenario",
+						});
+
+					return Promise.resolve({
+						itemId: "987",
+						slug: "management",
+					});
 				}
 			});
 
