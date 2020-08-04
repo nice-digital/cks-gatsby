@@ -107,7 +107,9 @@ const IndexPage: React.FC<IndexProps> = ({
 						))}
 					</Alphabet>
 
-					<h3 id="frequently-visited-topics">Frequently visited topics</h3>
+					<h3 id="frequently-visited-topics">
+						Topics most frequently visited by other&nbsp;users
+					</h3>
 					<ColumnList
 						plain
 						aria-labelledby="frequently-visited-topics"
@@ -137,13 +139,13 @@ const IndexPage: React.FC<IndexProps> = ({
 				</GridItem>
 
 				<GridItem md={6} cols={12} className={styles.specialitiesColumn}>
-					<h2 id="specialties">Specialties</h2>
+					<h2 id="specialities">Specialities</h2>
 
-					<p>Our knowledge summaries grouped by&nbsp;specialty.</p>
+					<p>Our topics grouped by&nbsp;speciality.</p>
 
 					<ColumnList
 						plain
-						aria-labelledby="specialties"
+						aria-labelledby="specialities"
 						data-tracking="specialities"
 					>
 						{specialitiesNodes.map(({ id, name, slug }) => (
