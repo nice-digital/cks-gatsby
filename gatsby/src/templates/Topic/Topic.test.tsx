@@ -103,6 +103,11 @@ describe("TopicPage", () => {
 			const lead = renderResult.getByText("Last revised in April 2020");
 			expect(lead.parentElement).toHaveClass("page-header__lead");
 		});
+
+		it("should not render print button", () => {
+			const print = renderResult.queryByText("Print this page");
+			expect(print).toBeFalsy();
+		});
 	});
 
 	describe("chapter menu", () => {
