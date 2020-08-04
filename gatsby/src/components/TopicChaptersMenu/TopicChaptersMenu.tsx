@@ -32,6 +32,7 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 
 				return (
 					<StackedNavLink
+						data-tracking={fullItemName}
 						key={id}
 						elementType={Link}
 						destination={chapterPath}
@@ -40,6 +41,7 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 							shouldShowSubChapters &&
 							subChapters.map((subChapter) => (
 								<StackedNavLink
+									data-tracking={`${fullItemName} | ${subChapter.fullItemName}`}
 									key={subChapter.id}
 									elementType={Link}
 									destination={`${chapterPath}${subChapter.slug}/`}
