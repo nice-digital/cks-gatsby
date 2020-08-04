@@ -33,25 +33,25 @@ export const onRouteUpdate = ({ prevLocation, location }) => {
  */
 export const shouldUpdateScroll = ({
 	prevRouterProps,
-	routerProps,
+	routerProps: { location },
 	getSavedScrollPosition,
 }) => {
-	const savedScrollPosition = getSavedScrollPosition(routerProps.location);
+	const savedScrollPosition = getSavedScrollPosition(location);
 
 	if (
 		savedScrollPosition &&
-		prevRouterProps.location.pathname !== routerProps.location.pathname
+		prevRouterProps.location.pathname !== location.pathname
 	) {
 		return savedScrollPosition;
 	}
 
-	if (routerProps.location.hash) {
-		return routerProps.location.hash.substring(1);
+	const targetId = location.hash.substring(1) || "content-start",
+		targetElement = document.getElementById(targetId);
+
+	if (targetElement) {
+		targetElement.setAttribute("tabIndex", "-1");
+		targetElement.focus();
 	}
 
-	const contentStart = document.getElementById("content-start");
-	contentStart.setAttribute("tabIndex", "-1");
-	contentStart.focus();
-
-	return "content-start";
+	return targetId;
 };
