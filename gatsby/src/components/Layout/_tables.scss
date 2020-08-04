@@ -4,13 +4,13 @@ table {
   background: $nds-colour-true-white;
   border: 1px solid $nds-colour-border;
   border-collapse: collapse;
-  display: block;
   margin: rem(0 0 $nds-spacing-medium);
   max-width: 66ch;
   overflow-x: auto;
   width: 100%;
 
-  @include mq($until: md) {
+  @include mq($until: sm) {
+    display: block;
     max-width: 100%;
     width: 100%;
     overflow-y: hidden;
