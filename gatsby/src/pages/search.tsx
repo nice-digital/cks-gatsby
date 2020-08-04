@@ -90,9 +90,16 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		if (data) {
 			if (window.dataLayer) {
-				window.dataLayer.push({
-					event: "search.resultsLoaded",
-				});
+				window.dataLayer.push({ location: document.location.href });
+				if ("requestAnimationFrame" in window) {
+					requestAnimationFrame(() => {
+						requestAnimationFrame(() => {
+							window.dataLayer.push({
+								event: "search.resultsLoaded",
+							});
+						});
+					});
+				}
 			}
 		}
 		return;
@@ -111,12 +118,20 @@ const SearchPage: React.FC = () => {
 			)}
 			{(error || (data && data.failed)) && (
 				<>
-					<SEO title="Error loading search results" noIndex={true} />
-					<PageHeader
-						heading="Error"
-						lead="We are currently experiencing issues with search. The issue will be
-resolved as soon as possible. We apologise for any inconvenience caused."
-					/>
+					<SEO title="There is a problem with search" noIndex={true} />
+					<PageHeader heading="Sorry, there is a problem with search" />
+					<p>We are working on it, please try again later.</p>
+					<p>
+						You can also try browsing for topics from the{" "}
+						<Link to={"/"}>CKS homepage</Link>.
+					</p>
+					<p>
+						If you need help,{" "}
+						<Link to="https://www.nice.org.uk/get-involved/contact-us">
+							contact us
+						</Link>
+						.
+					</p>
 				</>
 			)}
 			{data && !data.failed && <Results {...data} />}
