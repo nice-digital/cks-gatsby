@@ -10,7 +10,7 @@ Feature: Homepage
     Then I expect that element "h1" contains the text "Clinical Knowledge Summaries"
 
   Scenario: Clicking on a topic initial takes you to the topics page at that letter
-    When I click on the link "A"
+    When I click the "A" link
     Then I expect the url to contain "/topics/#a"
 
   Scenario: Detect Home page accessibility issues
