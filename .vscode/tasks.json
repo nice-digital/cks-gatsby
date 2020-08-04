@@ -92,6 +92,21 @@
       }
     },
     {
+      "label": "Gatsby - serve",
+      "detail": "Serves the production build of the Gatsby static site on localhost:9000",
+      "type": "shell",
+      "command": "npm run serve",
+      "problemMatcher": "$tsc",
+      "options": {
+        "cwd": "${workspaceFolder}/gatsby"
+      },
+      "presentation": {
+        "clear": true,
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
       "label": "Gatsby - clean",
       "detail": "wipe out the cache (.cache folder) and public directories",
       "type": "shell",
