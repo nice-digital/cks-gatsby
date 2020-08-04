@@ -29,6 +29,7 @@ module.exports = {
 		},
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-typescript",
+		"gatsby-plugin-catch-links",
 		"gatsby-plugin-sass",
 		{
 			resolve: "gatsby-plugin-prefetch-google-fonts",
