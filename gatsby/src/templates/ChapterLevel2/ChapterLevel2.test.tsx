@@ -35,6 +35,7 @@ describe("ChapterLevel2", () => {
 			topic: {
 				topicName: "Asthma",
 				slug: "asthma",
+				lastRevised: "Last revised in April&nbsp;2020",
 				chapters: [
 					{
 						id: "smry",
@@ -95,6 +96,16 @@ describe("ChapterLevel2", () => {
 			const heading = getAllByRole("heading")[0];
 			expect(heading).toHaveProperty("tagName", "H1");
 			expect(heading).toHaveProperty("textContent", "Asthma: What is it?");
+		});
+
+		it("should render last revised text as lead paragraph", () => {
+			const { getByText } = render(
+				<ChapterLevel2Page
+					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
+				/>
+			);
+			const lead = getByText("Last revised in April 2020");
+			expect(lead.parentElement).toHaveClass("page-header__lead");
 		});
 	});
 
