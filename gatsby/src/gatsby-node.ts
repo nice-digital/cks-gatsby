@@ -156,6 +156,10 @@ const createCksPages = async ({
 		}
 	`);
 
+	if (pageCreationQuery.errors) {
+		throw pageCreationQuery.errors;
+	}
+
 	function createCksPage(
 		path: string,
 		templateName: string,
