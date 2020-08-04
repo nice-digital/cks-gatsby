@@ -2,6 +2,31 @@
 
 # Runs functional tests via Docker
 
+function prepairForLocalTestRun()
+{
+	echo "Preparing to run the tests locally"
+	buildGatsbySite
+	buildWebApp
+	publishWebApp
+	copyGatsbyStaticPagesToWebApp
+}
+
+function buildWebApp()
+{
+	dotnet restore ../web-app
+	dotnet build ../web-app
+}
+
+function buildGatsbySite()
+{
+	cd ../gatsby && npm run build
+}
+
+function publishWebApp()
+{
+	cd ../web-app && dotnet publish CKS.Web/CKS.Web.csproj -o publish
+}
+
 function copyGatsbyStaticPagesToWebApp()
 {
     echo "WARNING: Ensure you build the gatsby site with npm build"
@@ -19,6 +44,7 @@ function copyGatsbyStaticPagesToWebApp()
 
 function cleanupBeforeStart()
 {
+  echo "Cleanup before start"
   # Clean up before we start
   rm -rf docker-output && rm -rf allure-results && rm -rf allure-report
 
@@ -31,15 +57,22 @@ function cleanupBeforeStart()
 }
 
 
+function startDockerContainer()
+{
+  echo "Starting docker containers"
+  docker-compose up -d --scale selenium-chrome=5
+}
 
 function runTests()
 {
+  echo "Running tests"
   # Wait for the web app to be up before running the tests
   docker-compose run -T test-runner npm run wait-then-test
 }
 
 function processTestOutput()
 {
+  echo "Process  test outfit"
   # Generate an Allure test report
   docker-compose run -T test-runner allure generate --clean
 
@@ -56,6 +89,7 @@ function processTestOutput()
 
 function cleanup()
 {
+  echo "Running docker cleanup"
   docker-compose down --remove-orphans --volumes
 }
 
@@ -76,9 +110,10 @@ catch() {
   error=1
 }
 
-copyGatsbyStaticPagesToWebApp
+#Uncomment next line to run tests locally
+#prepairForLocalTestRun
 cleanupBeforeStart
-docker-compose up -d --scale selenium-chrome=5
+startDockerContainer
 runTests
 processTestOutput
 cleanup
