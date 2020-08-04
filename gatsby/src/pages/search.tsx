@@ -90,9 +90,16 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		if (data) {
 			if (window.dataLayer) {
-				window.dataLayer.push({
-					event: "search.resultsLoaded",
-				});
+				window.dataLayer.push({ location: document.location.href });
+				if ("requestAnimationFrame" in window) {
+					requestAnimationFrame(() => {
+						requestAnimationFrame(() => {
+							window.dataLayer.push({
+								event: "search.resultsLoaded",
+							});
+						});
+					});
+				}
 			}
 		}
 		return;
