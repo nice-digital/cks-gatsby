@@ -77,15 +77,15 @@ describe("Header", () => {
 		await waitFor(() => expect(searchBox).toHaveAttribute("value", "cancer"));
 	});
 
-	it("should use gatsby navigate when submitting search form", async () => {
+	it("should use gatsby navigate with encoded query when submitting search form", async () => {
 		const { findByRole } = renderWithRouter(<Header />);
 
 		const searchBox = (await findByRole("combobox")) as HTMLInputElement;
-		searchBox.value = "diabetes";
+		searchBox.value = "diabetes 20%";
 
 		fireEvent.submit(await findByRole("search"));
 
-		expect(navigate).toHaveBeenCalledWith("/search/?q=diabetes");
+		expect(navigate).toHaveBeenCalledWith("/search/?q=diabetes%2020%25");
 	});
 
 	it("should use topic names with topic URL for autocomplete suggestions", async () => {

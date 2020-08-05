@@ -1,6 +1,64 @@
-.section {
-  > :first-child,
-  > :global(.visually-hidden):first-child + * {
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.basisWrapper {
+  border: 1px solid $nds-colour-border;
+  max-width: 66ch;
+
+  .headerWrapper > :first-child {
     margin-top: 0;
+  }
+
+  .body {
+    padding: rem(0 $nds-spacing-medium $nds-spacing-medium $nds-spacing-medium);
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.headerWrapper {
+  padding: rem($nds-spacing-medium);
+  position: relative;
+}
+
+.toggleBtn {
+  @include nds-link-default;
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  margin-top: rem(-$nds-spacing-small);
+  padding: 0;
+
+  &:after {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  svg {
+    @include nds-font-size(1);
+    color: $nds-colour-nice-rich-black;
+    margin-right: rem($nds-spacing-small);
+    vertical-align: text-bottom;
+  }
+
+  &:hover svg {
+    color: $nds-colour-link-hover;
+  }
+}
+
+.body {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  &[aria-hidden='true'] {
+    display: none;
   }
 }
