@@ -1,7 +1,15 @@
 @import '~@nice-digital/nds-core/scss/core.scss';
 
+.wrapper {
+  // Bit of a horrible rule, but it allows us to have the correct spacing
+  > :global(.visually-hidden):first-child + * > :first-child {
+    margin-top: 0;
+  }
+}
+
 .basisWrapper {
   border: 1px solid $nds-colour-border;
+  margin-top: rem($nds-spacing-medium);
   max-width: 66ch;
 
   .headerWrapper > :first-child {
@@ -54,10 +62,6 @@
 }
 
 .body {
-  > :first-child {
-    margin-top: 0;
-  }
-
   &[aria-hidden='true'] {
     display: none;
   }

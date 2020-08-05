@@ -10,7 +10,7 @@ import React, {
 import ChevronDownIcon from "@nice-digital/icons/lib/ChevronDown";
 import ChevronUpIcon from "@nice-digital/icons/lib/ChevronUp";
 
-import { stripHtmlTags } from "../../utils/html-utils";
+import { stripHtmlTags, stripHtmlComments } from "../../utils/html-utils";
 
 import { ChapterLevel1, ChapterLevel2 } from "../../types";
 
@@ -75,10 +75,15 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 		chapter.htmlHeader,
 	]);
 
+	const htmlStringContentNoComments = useMemo(
+		() => stripHtmlComments(chapter.htmlStringContent),
+		[chapter.htmlStringContent]
+	);
+
 	return (
 		<section
 			aria-labelledby={chapter.slug}
-			className={isBasis ? styles.basisWrapper : undefined}
+			className={`${styles.wrapper} ${isBasis ? styles.basisWrapper : ""}`}
 		>
 			{isClient && isBasis ? (
 				<div className={styles.headerWrapper}>
@@ -114,13 +119,15 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 					className={headingLevel == 2 ? "visually-hidden" : undefined}
 				/>
 			)}
-			<div
-				className={styles.body}
-				aria-hidden={isBasis && !isBasisExpanded}
-				dangerouslySetInnerHTML={{
-					__html: chapter.htmlStringContent,
-				}}
-			/>
+			{htmlStringContentNoComments ? (
+				<div
+					className={styles.body}
+					aria-hidden={isBasis && !isBasisExpanded}
+					dangerouslySetInnerHTML={{
+						__html: chapter.htmlStringContent,
+					}}
+				/>
+			) : null}
 			{isLevel2(chapter) &&
 				chapter.subChapters.map((subChapter) => (
 					<ChapterBody
