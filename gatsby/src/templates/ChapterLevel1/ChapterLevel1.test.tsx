@@ -28,6 +28,7 @@ const getDefaultTestProps = (): ChapterLevel1PageProps =>
 				topic: {
 					topicName: "Asthma",
 					slug: "asthma",
+					lastRevised: "Last revised in April&nbsp;2020",
 					chapters: [
 						{
 							id: "smry",
@@ -81,6 +82,12 @@ describe("ChapterLevel1", () => {
 				"textContent",
 				"Asthma: Background information"
 			);
+		});
+
+		it("should render last revised text as lead paragraph", () => {
+			const { getByText } = renderResult;
+			const lead = getByText("Last revised in April 2020");
+			expect(lead.parentElement).toHaveClass("page-header__lead");
 		});
 	});
 

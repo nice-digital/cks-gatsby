@@ -9,6 +9,7 @@ const topic: PartialTopicWithChapters = {
 	topicName: "Asthma",
 	id: "a1b2",
 	slug: "asthma",
+	lastRevised: "Last revised in April&nbsp;2020",
 	topicId: "t1",
 	chapters: [
 		{

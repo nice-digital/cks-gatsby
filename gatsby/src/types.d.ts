@@ -10,6 +10,7 @@ export interface PartialTopic {
 }
 
 export interface PartialTopicWithChapters extends PartialTopic {
+	lastRevised: string;
 	chapters: PartialChapter[];
 }
 
@@ -18,7 +19,6 @@ export interface Topic extends PartialTopicWithChapters {
 	topicSummary: string;
 	nextPlannedReviewByDateTime: string;
 	nextPlannedReviewByDisplay: string;
-	lastRevised: string;
 	specialities: PartialSpeciality[];
 }
 

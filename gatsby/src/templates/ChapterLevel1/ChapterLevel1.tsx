@@ -63,6 +63,7 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 			<PageHeader
 				heading={<span dangerouslySetInnerHTML={{ __html: headerNoHtml }} />}
 				preheading={`${topic.topicName}: `}
+				lead={<span dangerouslySetInnerHTML={{ __html: topic.lastRevised }} />}
 			/>
 
 			<ChapterContents chapter={chapter}>
