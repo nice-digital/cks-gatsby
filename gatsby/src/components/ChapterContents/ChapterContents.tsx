@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-import PrintIcon from "@nice-digital/icons/lib/print";
+import PrintIcon from "@nice-digital/icons/lib/Print";
 
 import { ChapterLevel1, ChapterLevel2 } from "src/types";
 import { TopicChaptersMenu } from "../TopicChaptersMenu/TopicChaptersMenu";
