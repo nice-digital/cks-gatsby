@@ -15,3 +15,13 @@
     width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-small)});
   }
 }
+
+@include mq($from: md) {
+  .menu {
+    width: calc(#{percentage(1 / 4)} - #{rem($nds-spacing-medium)});
+  }
+
+  .body {
+    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-medium)});
+  }
+}
