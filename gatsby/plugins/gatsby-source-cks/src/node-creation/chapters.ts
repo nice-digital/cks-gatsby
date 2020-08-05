@@ -7,6 +7,8 @@ import slugify from "slugify";
 
 import { ApiFullTopic, ApiTopicHtmlObject } from "../api/types";
 
+const BasisChapterTitle = "Basis for recommendation";
+
 export const chapterNodeType = "CksChapter";
 
 export interface ChapterNode extends NodeInput {
@@ -45,9 +47,11 @@ const createTopicChapterNodes = (
 			rootId,
 			children,
 			fullItemName,
+			depth,
+			pos,
 			...chapterFields
 		}) => {
-			const slug = slugify(
+			let slug = slugify(
 				fullItemName.replace(/^Scenario: /gi, "").replace(/ and /gi, " "),
 				{
 					lower: true,
@@ -55,8 +59,16 @@ const createTopicChapterNodes = (
 				}
 			);
 
+			// There can be multiple basis for recs on the same page, so distinguish the slugs
+			// See example at: /topics/angina/management/new-diagnosis/
+			if (fullItemName === BasisChapterTitle) {
+				slug = `${slug}-${depth}-${pos}`;
+			}
+
 			const nodeContent = {
 				...chapterFields,
+				depth,
+				pos,
 				slug,
 				fullItemName,
 				containerElement,
