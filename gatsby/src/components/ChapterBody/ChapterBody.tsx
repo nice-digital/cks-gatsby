@@ -62,7 +62,6 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 				e.preventDefault();
 			} else if (e.type === "click") e.currentTarget.blur();
 
-			console.log("which", e.type);
 			setIsBasisExpanded((s) => !s);
 		},
 		[]
@@ -104,7 +103,7 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 							<>
 								<ChevronDownIcon /> Show
 							</>
-						)}
+						)}{" "}
 						<span className="visually-hidden">{headerText}</span>
 					</button>
 				</div>
