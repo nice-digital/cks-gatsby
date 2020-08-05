@@ -7,21 +7,11 @@
 
   .menu {
     float: left;
-    width: calc(#{percentage(1 / 3)} - #{rem($nds-spacing-small)});
+    width: calc(#{percentage(1 / 4)} - #{rem($nds-spacing-small)});
   }
 
   .body {
     float: right;
-    width: calc(#{percentage(2 / 3)} - #{rem($nds-spacing-small)});
-  }
-}
-
-@include mq($from: md) {
-  .menu {
-    width: calc(#{percentage(1 / 4)} - #{rem($nds-spacing-medium)});
-  }
-
-  .body {
-    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-medium)});
+    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-small)});
   }
 }
