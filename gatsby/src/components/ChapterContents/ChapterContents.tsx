@@ -11,13 +11,11 @@ import { ChapterBody } from "../ChapterBody/ChapterBody";
 interface ChapterContentsProps {
 	chapter: ChapterLevel1 | ChapterLevel2;
 	children?: React.ReactElement;
-	showPrint?: boolean;
 }
 
 export const ChapterContents: React.FC<ChapterContentsProps> = ({
 	chapter,
 	children,
-	showPrint = true,
 }: ChapterContentsProps) => {
 	const [isClient, setIsClient] = useState(false);
 	useEffect(() => {
@@ -30,7 +28,7 @@ export const ChapterContents: React.FC<ChapterContentsProps> = ({
 
 	return (
 		<div className={styles.wrapper}>
-			{showPrint && isClient && (
+			{isClient && (
 				<button
 					type="button"
 					className={styles.printBtn}

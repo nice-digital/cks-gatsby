@@ -104,9 +104,9 @@ describe("TopicPage", () => {
 			expect(lead.parentElement).toHaveClass("page-header__lead");
 		});
 
-		it("should not render print button", () => {
+		it("should render print button", () => {
 			const print = renderResult.queryByText("Print this page");
-			expect(print).toBeFalsy();
+			expect(print).toBeInTheDocument();
 		});
 	});
 

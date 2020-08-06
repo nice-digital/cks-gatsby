@@ -47,7 +47,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 
 			<p className="visually-hidden">{topicSummary}</p>
 
-			<ChapterContents chapter={firstChapter} showPrint={false}>
+			<ChapterContents chapter={firstChapter}>
 				<ChapterBody chapter={firstChapter} />
 			</ChapterContents>
 		</Layout>
