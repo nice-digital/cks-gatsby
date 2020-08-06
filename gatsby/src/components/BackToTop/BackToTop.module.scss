@@ -1,4 +1,15 @@
-.wrapper {
+@import '~@nice-digital/nds-core/scss/core';
+
+.backToTop {
   background: red;
-  margin-bottom: -2rem;
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: -(rem($nds-spacing-large));
+}
+
+.fixed {
+  background: green;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
 }
