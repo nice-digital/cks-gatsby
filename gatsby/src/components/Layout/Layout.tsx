@@ -5,6 +5,7 @@ import { Footer } from "../Footer/Footer";
 import { BackToTop } from "../BackToTop/BackToTop";
 
 import "./Layout.scss";
+import styles from "../BackToTop/BackToTop.module.scss";
 
 type LayoutProps = {
 	children: ReactNode;
@@ -15,7 +16,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 		<>
 			<Header />
 			<main className="container" id="content-start">
-				{children}
+				<div className={styles.backToTopSpacing}>{children}</div>
 			</main>
 			<BackToTop />
 			<Footer />

@@ -1,15 +1,22 @@
 @import '~@nice-digital/nds-core/scss/core';
 
-.backToTop {
-  background: $nds-colour-nice-grey-3;
+.static {
   width: 100%;
-  margin: rem($nds-spacing-large) 0 (-(rem($nds-spacing-large)));
-  padding: rem($nds-spacing-medium) 0;
-  border-top: 1px solid #bcbcbc;
+  position: absolute;
+  transform: translateY((-(rem($nds-spacing-medium))));
 }
 
 .fixed {
-  position: fixed;
+  padding: rem($nds-spacing-medium) 0;
+  width: 100%;
+  background: $nds-colour-nice-grey-3;
+  border-top: 1px solid #bcbcbc;
   bottom: 0;
-  margin-bottom: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+// This is necessary to prevent the Back To Top anchor from overlapping the main footer
+.backToTopSpacing {
+  padding-bottom: rem($nds-spacing-x-large);
 }

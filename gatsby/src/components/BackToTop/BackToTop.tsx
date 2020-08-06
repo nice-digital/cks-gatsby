@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import ChevronUp from "@nice-digital/icons/lib/ChevronUp";
 
 import styles from "./BackToTop.module.scss";
 
 interface BackToTopProps {
-	scrollTo?: string;
+	scrollTargetId?: string;
 }
 
 export const BackToTop: React.FC<BackToTopProps> = ({
-	scrollTo = "content-start",
+	scrollTargetId: scrollTo = "content-start",
 }: BackToTopProps) => {
 	const [isFixed, setIsFixed] = useState(false);
 
-	function handleScroll() {
+	const handleScroll = useCallback(() => {
 		const footer = document.querySelector("footer");
 		if (!footer) return;
 		const footerVisible =
 			window.scrollY + window.innerHeight >
 			document.body.scrollHeight - footer.clientHeight;
-		const scrolledDown = window.scrollY > 800;
-		setIsFixed(!footerVisible && scrolledDown);
-	}
+		// const scrolledDown = window.scrollY > 200;
+		setIsFixed(!footerVisible);
+		// setIsFixed(!footerVisible && scrolledDown);
+	}, []);
 
 	useEffect(() => {
 		document.addEventListener("scroll", handleScroll);
@@ -30,9 +31,7 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 	}, []);
 
 	return (
-		<div
-			className={[styles.backToTop, isFixed === true && styles.fixed].join(" ")}
-		>
+		<div className={isFixed ? styles.fixed : styles.static}>
 			<div className="container">
 				<a href={`#${scrollTo}`}>
 					<ChevronUp /> Back to top
