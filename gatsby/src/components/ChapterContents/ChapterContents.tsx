@@ -8,7 +8,7 @@ import { ChapterBody } from "../ChapterBody/ChapterBody";
 
 interface ChapterContentsProps {
 	chapter: ChapterLevel1 | ChapterLevel2;
-	children?: React.ReactElement;
+	children?: React.ReactNode;
 }
 
 export const ChapterContents: React.FC<ChapterContentsProps> = ({
