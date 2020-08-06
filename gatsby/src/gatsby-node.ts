@@ -63,6 +63,7 @@ const createCksPages = async ({
 						topicId
 						topicName
 						slug
+						lastRevised
 						chapters {
 							id
 							fullItemName
@@ -94,6 +95,7 @@ const createCksPages = async ({
 						topicId
 						topicName
 						slug
+						lastRevised
 						chapters {
 							id
 							fullItemName
