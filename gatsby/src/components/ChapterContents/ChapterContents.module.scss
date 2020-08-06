@@ -1,5 +1,13 @@
 @import '~@nice-digital/nds-core/scss/core.scss';
 
+.wrapper {
+  position: relative;
+}
+
+.printBtn {
+  display: none;
+}
+
 @include mq($from: sm) {
   .wrapper {
     @include nds-clearfix;
@@ -12,6 +20,55 @@
 
   .body {
     float: right;
-    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-small)});
+    width: calc(#{percentage(2 / 3)} - #{rem($nds-spacing-small)});
+  }
+}
+
+@include mq($from: md) {
+  .printBtn {
+    @include nds-link-default;
+    appearance: none;
+    background: none;
+    border: 0;
+    bottom: 100%;
+    cursor: pointer;
+    display: block;
+    margin-bottom: rem($nds-spacing-x-large);
+    padding: 0;
+    position: absolute;
+    right: 0;
+
+    svg {
+      @include nds-font-size(2);
+      color: $nds-colour-nice-rich-black;
+      margin-right: rem($nds-spacing-small);
+      vertical-align: text-bottom;
+    }
+
+    &:hover svg {
+      color: $nds-colour-link-hover;
+    }
+  }
+
+  .menu {
+    width: calc(#{percentage(1 / 4)} - #{rem($nds-spacing-medium)});
+  }
+
+  .body {
+    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-medium)});
+  }
+}
+
+@media print {
+  .menu {
+    display: none;
+  }
+
+  .body {
+    width: 100%;
+  }
+
+  .printBtn {
+    display: none;
   }
 }
