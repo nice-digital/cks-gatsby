@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ChevronUp from "@nice-digital/icons/lib/ChevronUp";
 
 import styles from "./BackToTop.module.scss";
 
@@ -34,7 +35,7 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 		>
 			<div className="container">
 				<a href={`#${scrollTo}`}>
-					Back to top (going to scroll to #{scrollTo})
+					<ChevronUp /> Back to top
 				</a>
 			</div>
 		</div>

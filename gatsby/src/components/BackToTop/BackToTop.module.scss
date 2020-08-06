@@ -1,14 +1,14 @@
 @import '~@nice-digital/nds-core/scss/core';
 
 .backToTop {
-  background: red;
+  background: $nds-colour-nice-grey-3;
   width: 100%;
-  margin-left: 0;
-  margin-bottom: -(rem($nds-spacing-large));
+  margin: rem($nds-spacing-large) 0 (-(rem($nds-spacing-large)));
+  padding: rem($nds-spacing-medium) 0;
+  border-top: 1px solid #bcbcbc;
 }
 
 .fixed {
-  background: green;
   position: fixed;
   bottom: 0;
   margin-bottom: 0;
