@@ -43,6 +43,7 @@ describe("createChangeNodes", () => {
 							parentId: "chapter1",
 							itemId: "chapter1.2",
 							fullItemName: "Basis for recommendation",
+							htmlStringContent: "",
 							containerElement: "basis",
 							depth: 1,
 							pos: 2,
