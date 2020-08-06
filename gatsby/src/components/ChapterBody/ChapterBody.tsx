@@ -46,11 +46,12 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 }: ChapterBodyProps) => {
 	const isBasis = chapter.fullItemName == BasisChapterTitle;
 
-	const [isBasisExpanded, setIsBasisExpanded] = useState(false);
+	const [isBasisExpanded, setIsBasisExpanded] = useState(true);
 
 	const [isClient, setIsClient] = useState(false);
 	useEffect(() => {
 		setIsClient(true);
+		setIsBasisExpanded(false);
 	}, []);
 
 	const basisClickHandler = useCallback(
@@ -62,7 +63,7 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 				e.preventDefault();
 			} else if (e.type === "click") e.currentTarget.blur();
 
-			setIsBasisExpanded((s) => !s);
+			setIsBasisExpanded((isExpanded) => !isExpanded);
 		},
 		[]
 	);
@@ -83,7 +84,9 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 	return (
 		<section
 			aria-labelledby={chapter.slug}
-			className={`${styles.wrapper} ${isBasis ? styles.basisWrapper : ""}`}
+			className={`${styles.wrapper} ${
+				isClient && isBasis ? styles.basisWrapper : ""
+			}`}
 		>
 			{isClient && isBasis ? (
 				<div className={styles.headerWrapper}>
