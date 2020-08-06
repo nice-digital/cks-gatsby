@@ -47,6 +47,7 @@ const createTopicChapterNodes = (
 			rootId,
 			children,
 			fullItemName,
+			htmlStringContent,
 			...chapterFields
 		}) => {
 			let slug = slugify(
@@ -63,8 +64,17 @@ const createTopicChapterNodes = (
 				slug = `${slug}-${itemId.substring(0, 3)}`;
 			}
 
+			// The feed content has absolute paths to the old development page
+			// so we replace them with the relative path so that the links work
+			// locally and use Gatsby's navigate function
+			htmlStringContent = htmlStringContent.replace(
+				/http:\/\/cks\.nice\.org\.uk\/development/g,
+				"/about/development/"
+			);
+
 			const nodeContent = {
 				...chapterFields,
+				htmlStringContent,
 				slug,
 				fullItemName,
 				containerElement,

@@ -24,6 +24,8 @@ describe("createChangeNodes", () => {
 					itemId: "chapter1",
 					fullItemName: "Scenario: Chapter 1",
 					containerElement: "topicSummary",
+					htmlStringContent:
+						'This is an <a href="http://cks.nice.org.uk/development" data-hyperlink-id="d175091b-5231-4195-9e45-a9910072da73">About Us</a> link',
 					parentId: null,
 					rootId: "chapter1",
 					children: [
@@ -32,6 +34,7 @@ describe("createChangeNodes", () => {
 							parentId: "chapter1",
 							itemId: "chapter1.1",
 							fullItemName: "Chapter 1.1, And (bracket's)",
+							htmlStringContent: "",
 							containerElement: "rightTopic",
 							children: [] as ApiTopicHtmlObject[],
 						} as ApiTopicHtmlObject,
@@ -58,6 +61,7 @@ describe("createChangeNodes", () => {
 					rootId: "chapter2",
 					parentId: null,
 					fullItemName: "Chapter 2",
+					htmlStringContent: "",
 					containerElement: "annualKnowNewEvidence",
 					children: [] as ApiTopicHtmlObject[],
 				} as ApiTopicHtmlObject,
@@ -150,6 +154,14 @@ describe("createChangeNodes", () => {
 		expect(createNode.mock.calls[1][0]).toHaveProperty(
 			"parentChapter",
 			"chapter1"
+		);
+	});
+
+	it("should replace absolute URL for development paeg", () => {
+		createChapterNotes(topics, sourceNodesArgs);
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"htmlStringContent",
+			'This is an <a href="/about/development/" data-hyperlink-id="d175091b-5231-4195-9e45-a9910072da73">About Us</a> link'
 		);
 	});
 

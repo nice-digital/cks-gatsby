@@ -1,5 +1,7 @@
 import React from "react";
 import { render, RenderResult, cleanup, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
 import ChapterLevel1Page, { ChapterLevel1PageProps } from "./ChapterLevel1";
 import { ChapterLevel1, PartialChapter } from "../../types";
 
@@ -88,6 +90,22 @@ describe("ChapterLevel1", () => {
 			const { getByText } = renderResult;
 			const lead = getByText("Last revised in April 2020");
 			expect(lead.parentElement).toHaveClass("page-header__lead");
+		});
+	});
+
+	describe("print", () => {
+		it("should render print button", () => {
+			expect(renderResult.getByText("Print this page")).toBeInTheDocument();
+		});
+
+		it("should print window on print button click", () => {
+			const oldPrint = global.print;
+			const printSpy = jest.fn();
+			global.print = printSpy;
+			const printBtn = renderResult.getByText("Print this page");
+			userEvent.click(printBtn);
+			expect(printSpy).toHaveBeenCalled();
+			global.print = oldPrint;
 		});
 	});
 
