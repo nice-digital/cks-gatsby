@@ -153,7 +153,13 @@ module.exports = {
 	// Proxy the relative search endpoint to the .NET app for local dev
 	developMiddleware: (app) => {
 		// Proxy the relative search endpoint to the .NET app for local dev
-		app.use(createProxyMiddleware("http://localhost:5000"));
+		app.use(
+			"/api",
+			createProxyMiddleware({
+				target: "http://localhost:5000/",
+				changeOrigin: true,
+			})
+		);
 
 		// ******* or *******
 
