@@ -12,3 +12,16 @@ declare module "@nice-digital/icons/lib/Print" {
 
 	export default PrintIcon;
 }
+
+declare module "@nice-digital/icons/lib/ChevronUp" {
+	import { FC } from "react";
+
+	export interface IconProps {
+		colour?: string;
+		[key: string]: unknown;
+	}
+
+	const ChevronUpIcon: FC<IconProps>;
+
+	export default ChevronUpIcon;
+}

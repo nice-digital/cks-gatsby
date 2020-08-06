@@ -13,25 +13,33 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 	const [isFixed, setIsFixed] = useState(false);
 
 	const handleScroll = useCallback(() => {
-		const footer = document.querySelector("footer");
+		const footer: Element | null = document.querySelector("footer");
+
 		if (!footer) return;
-		const footerVisible =
+
+		const footerVisible: boolean =
 			window.scrollY + window.innerHeight >
 			document.body.scrollHeight - footer.clientHeight;
-		// const scrolledDown = window.scrollY > 200;
-		setIsFixed(!footerVisible);
-		// setIsFixed(!footerVisible && scrolledDown);
+
+		const scrolledDown: boolean = window.scrollY > 800;
+
+		setIsFixed(!footerVisible && scrolledDown);
 	}, []);
 
 	useEffect(() => {
 		document.addEventListener("scroll", handleScroll);
+
 		return () => {
 			document.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
 
 	return (
-		<div className={isFixed ? styles.fixed : styles.static}>
+		<div
+			role="navigation"
+			aria-label="Back to top"
+			className={isFixed ? styles.fixed : styles.static}
+		>
 			<div className="container">
 				<a href={`#${scrollTo}`}>
 					<ChevronUp /> Back to top
