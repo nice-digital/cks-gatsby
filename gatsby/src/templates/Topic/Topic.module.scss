@@ -1,0 +1,16 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.landingSection {
+  border-bottom: 1px solid $nds-colour-border;
+  margin-bottom: rem($nds-spacing-medium);
+  padding-bottom: rem($nds-spacing-medium);
+}
+
+.lastLandingSection {
+  margin-bottom: rem($nds-spacing-large);
+}
+
+.landingHeading {
+  @include nds-font-size(h3);
+  margin-top: 0;
+}

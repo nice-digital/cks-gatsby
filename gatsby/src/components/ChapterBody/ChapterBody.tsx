@@ -10,6 +10,7 @@ interface ChapterBodyProps {
 	chapter: ChapterLevel1 | ChapterLevel2;
 	/** The heading level for this chapter. Leave blank to default to an h2. */
 	headingLevel?: number;
+	showHeading?: boolean;
 }
 
 function isLevel2(
@@ -26,13 +27,14 @@ function isLevel2(
  */
 export const ChapterBody: React.FC<ChapterBodyProps> = ({
 	chapter,
+	showHeading = false,
 	headingLevel = 2,
 }: ChapterBodyProps) => {
 	// Make sure heading levels are always correct for the depth of chapter
 	const chapterHeadingHtml = [
 		`<h${headingLevel}`,
 		` id="${chapter.slug}"`,
-		headingLevel == 2 ? ` class="visually-hidden">` : `>`,
+		headingLevel == 2 && !showHeading ? ` class="visually-hidden">` : `>`,
 		`${stripHtmlTags(chapter.htmlHeader)}`,
 		`</h${headingLevel}>`,
 	].join("");
