@@ -87,11 +87,11 @@ describe("createChangeNodes", () => {
 		);
 	});
 
-	it("should append depth and pos for basis for recommendation slugs", () => {
+	it("should create unique slug for basis for recommendation chapters", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[2][0]).toHaveProperty(
 			"slug",
-			"basis-for-recommendation-1-2"
+			"basis-for-recommendation-cha"
 		);
 	});
 

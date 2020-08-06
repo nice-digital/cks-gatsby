@@ -47,8 +47,6 @@ const createTopicChapterNodes = (
 			rootId,
 			children,
 			fullItemName,
-			depth,
-			pos,
 			...chapterFields
 		}) => {
 			let slug = slugify(
@@ -62,13 +60,11 @@ const createTopicChapterNodes = (
 			// There can be multiple basis for recs on the same page, so distinguish the slugs
 			// See example at: /topics/angina/management/new-diagnosis/
 			if (fullItemName === BasisChapterTitle) {
-				slug = `${slug}-${depth}-${pos}`;
+				slug = `${slug}-${itemId.substring(0, 3)}`;
 			}
 
 			const nodeContent = {
 				...chapterFields,
-				depth,
-				pos,
 				slug,
 				fullItemName,
 				containerElement,
