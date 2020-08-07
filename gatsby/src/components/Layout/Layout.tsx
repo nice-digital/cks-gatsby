@@ -15,8 +15,11 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 	return (
 		<>
 			<Header />
-			<main className="container" id="content-start">
-				<div className={styles.backToTopSpacing}>{children}</div>
+			<main
+				className={`container ${styles.backToTopSpacing}`}
+				id="content-start"
+			>
+				{children}
 			</main>
 			<BackToTop />
 			<Footer />
