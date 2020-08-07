@@ -149,10 +149,9 @@ describe("TopicPage", () => {
 			).toBeInTheDocument();
 		});
 
-		it("should render hidden heading 2 for summary body", () => {
+		it("should render heading 2 for summary body", () => {
 			const heading = renderResult.getByText("Asthma: Summary");
 			expect(heading).toHaveProperty("tagName", "H2");
-			expect(heading).toHaveClass("visually-hidden");
 			expect(heading).toHaveAttribute("id", "summary");
 		});
 	});

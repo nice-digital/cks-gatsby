@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
@@ -8,8 +8,11 @@ import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
 import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
+import { ColumnList } from "../../components/ColumnList/ColumnList";
 
-import { Topic, ChapterLevel1 } from "../../types";
+import { Topic, ChapterLevel1, PartialChapter } from "../../types";
+
+import styles from "./Topic.module.scss";
 
 export type TopicPageProps = PageProps<
 	{
@@ -21,10 +24,29 @@ export type TopicPageProps = PageProps<
 	}
 >;
 
+const LandingChapterHeadings = [
+	"Diagnosis",
+	"Management",
+	"Prescribing information",
+	"Background information",
+];
+
+const isLandingLink = (c: PartialChapter) =>
+	LandingChapterHeadings.indexOf(c.fullItemName) > -1;
+
+const landingLinkComparer = (a: PartialChapter, b: PartialChapter) =>
+	LandingChapterHeadings.indexOf(a.fullItemName) -
+	LandingChapterHeadings.indexOf(b.fullItemName);
+
 const TopicPage: React.FC<TopicPageProps> = ({
 	data: { topic, firstChapter },
 }: TopicPageProps) => {
-	const { topicName, topicSummary, lastRevised } = topic;
+	const { topicName, topicSummary, lastRevised, chapters } = topic;
+
+	const landingLinks = useMemo(
+		() => chapters.filter(isLandingLink).sort(landingLinkComparer),
+		[chapters]
+	);
 
 	return (
 		<Layout>
@@ -48,7 +70,37 @@ const TopicPage: React.FC<TopicPageProps> = ({
 			<p className="visually-hidden">{topicSummary}</p>
 
 			<ChapterContents chapter={firstChapter}>
-				<ChapterBody chapter={firstChapter} />
+				{landingLinks.map((chapter, i) => (
+					<section
+						key={chapter.id}
+						aria-labelledby={chapter.slug}
+						className={[
+							styles.landingSection,
+							i == landingLinks.length - 1 ? styles.lastLandingSection : "",
+						].join(" ")}
+					>
+						<h2 id={chapter.slug} className={styles.landingHeading}>
+							{chapter.fullItemName}
+						</h2>
+						<ColumnList
+							plain
+							columns={3}
+							aria-label={`${chapter.fullItemName} chapters`}
+						>
+							{chapter.subChapters.map((subChapter) => (
+								<li key={subChapter.id}>
+									<Link
+										to={`/topics/${topic.slug}/${chapter.slug}/${subChapter.slug}/`}
+										data-tracking="landing-link"
+									>
+										{subChapter.fullItemName}
+									</Link>
+								</li>
+							))}
+						</ColumnList>
+					</section>
+				))}
+				<ChapterBody chapter={firstChapter} showHeading={true} />
 			</ChapterContents>
 		</Layout>
 	);
