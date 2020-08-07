@@ -8,7 +8,6 @@ import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
 import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
-import { ColumnList } from "../../components/ColumnList/ColumnList";
 
 import { Topic, ChapterLevel1, PartialChapter } from "../../types";
 
@@ -82,9 +81,8 @@ const TopicPage: React.FC<TopicPageProps> = ({
 						<h2 id={chapter.slug} className={styles.landingHeading}>
 							{chapter.fullItemName}
 						</h2>
-						<ColumnList
-							plain
-							columns={3}
+						<ul
+							className={styles.landingList}
 							aria-label={`${chapter.fullItemName} chapters`}
 						>
 							{chapter.subChapters.map((subChapter) => (
@@ -97,7 +95,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 									</Link>
 								</li>
 							))}
-						</ColumnList>
+						</ul>
 					</section>
 				))}
 				<ChapterBody chapter={firstChapter} showHeading={true} />
