@@ -26,3 +26,7 @@ html {
   padding: 0;
   border: 0;
 }
+
+#content-start:focus {
+  outline: none;
+}
