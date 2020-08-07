@@ -117,7 +117,8 @@ exports[`404 should match snapshot 1`] = `
       if you think there is a problem.
     </p>
   </main>
-  <div
+  <nav
+    aria-labelledby="back-to-top-link"
     class="static"
   >
     <div
@@ -125,6 +126,7 @@ exports[`404 should match snapshot 1`] = `
     >
       <a
         href="#content-start"
+        id="back-to-top-link"
       >
         <svg
           aria-hidden="true"
@@ -142,6 +144,6 @@ exports[`404 should match snapshot 1`] = `
          Back to top
       </a>
     </div>
-  </div>
+  </nav>
 </div>
 `;

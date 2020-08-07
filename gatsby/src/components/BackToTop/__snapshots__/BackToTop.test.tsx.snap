@@ -2,7 +2,8 @@
 
 exports[`BackToTop should match snapshot 1`] = `
 <div>
-  <div
+  <nav
+    aria-labelledby="back-to-top-link"
     class="static"
   >
     <div
@@ -10,6 +11,7 @@ exports[`BackToTop should match snapshot 1`] = `
     >
       <a
         href="#content-start"
+        id="back-to-top-link"
       >
         <svg
           aria-hidden="true"
@@ -27,6 +29,6 @@ exports[`BackToTop should match snapshot 1`] = `
          Back to top
       </a>
     </div>
-  </div>
+  </nav>
 </div>
 `;
