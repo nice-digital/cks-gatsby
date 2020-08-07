@@ -245,5 +245,34 @@ describe("link rewriter", () => {
 				'<a href="/topics/achilles-tendinopathy/references/">Achilles ref</a>'
 			);
 		});
+
+		it("should rewrite topic summary chapter links", async () => {
+			runQuery.mockImplementation((query) => {
+				if (query.type === "CksTopic")
+					return Promise.resolve({
+						slug: "achilles-tendinopathy",
+						topicid: "a549c958-335f-4dcd-b76d-e9f87325d888",
+					});
+				return Promise.resolve({
+					itemId: "67439879-2ad5-4721-b865-5aadd9bebe52",
+					slug: "summary",
+					parentChapter: null,
+					rootChapter: "123",
+					topic: "a549c958-335f-4dcd-b76d-e9f87325d888",
+				});
+			});
+
+			const result = await replaceLinksInHtml(
+				{
+					htmlStringContent: `<a href="/Topic/ViewTopic/a549c958-335f-4dcd-b76d-e9f87325d888#67439879-2ad5-4721-b865-5aadd9bebe52">Achilles summary</a>`,
+				} as ChapterNode,
+				nodeModel,
+				reporter
+			);
+
+			expect(result).toBe(
+				'<a href="/topics/achilles-tendinopathy/">Achilles summary</a>'
+			);
+		});
 	});
 });

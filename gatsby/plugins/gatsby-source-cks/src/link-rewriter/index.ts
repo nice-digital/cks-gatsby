@@ -128,7 +128,9 @@ const getChapterHref = async (
 
 	// Top level chapter
 	if (!targetChapterNode.parentChapter) {
-		return `${topicPath}${targetChapterNode.slug}/`;
+		return targetChapterNode.slug === "summary"
+			? topicPath
+			: `${topicPath}${targetChapterNode.slug}/`;
 	}
 
 	// Second level chapter
