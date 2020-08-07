@@ -26,3 +26,32 @@ export const onRouteUpdate = ({ prevLocation, location }) => {
 		window.dataLayer.push({ location: location.href });
 	}
 };
+
+/**
+ * Gatsby hook for overriding scroll position
+ * See https://www.gatsbyjs.org/docs/browser-apis/#shouldUpdateScroll
+ */
+export const shouldUpdateScroll = ({
+	prevRouterProps,
+	routerProps: { location },
+	getSavedScrollPosition,
+}) => {
+	const savedScrollPosition = getSavedScrollPosition(location);
+
+	if (
+		savedScrollPosition &&
+		prevRouterProps.location.pathname !== location.pathname
+	) {
+		return savedScrollPosition;
+	}
+
+	const targetId = location.hash.substring(1) || "content-start",
+		targetElement = document.getElementById(targetId);
+
+	if (targetElement) {
+		targetElement.setAttribute("tabIndex", "-1");
+		targetElement.focus();
+	}
+
+	return targetId;
+};
