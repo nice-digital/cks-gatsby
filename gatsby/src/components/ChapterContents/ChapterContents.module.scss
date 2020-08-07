@@ -20,7 +20,7 @@
 
   .body {
     float: right;
-    width: calc(#{percentage(2 / 3)} - #{rem($nds-spacing-small)});
+    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-small)});
   }
 }
 
