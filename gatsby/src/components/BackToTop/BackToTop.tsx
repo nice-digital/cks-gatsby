@@ -4,12 +4,8 @@ import throttle from "lodash/throttle";
 
 import styles from "./BackToTop.module.scss";
 
-let scrollThreshold = 1000;
-const scrollThrottle = 150;
-
-if (typeof window !== `undefined`) {
-	scrollThreshold = window.innerHeight * 2;
-}
+const scrollThrottle = 100;
+const pagesScrollThreshold = 1.5; // number of viewports to scroll before "back to top" appears
 
 interface BackToTopProps {
 	scrollTargetId?: string;
@@ -29,7 +25,8 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 			window.scrollY + window.innerHeight >
 			document.body.scrollHeight - footer.clientHeight;
 
-		const scrolledDown: boolean = window.scrollY > scrollThreshold;
+		const scrolledDown: boolean =
+			window.scrollY > window.innerHeight * pagesScrollThreshold;
 
 		setIsFixed(!footerVisible && scrolledDown);
 	}, []);
