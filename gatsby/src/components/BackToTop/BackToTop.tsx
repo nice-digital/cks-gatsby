@@ -4,8 +4,12 @@ import throttle from "lodash/throttle";
 
 import styles from "./BackToTop.module.scss";
 
-const scrollThreshold: number = window.innerHeight || 1000;
+let scrollThreshold = 1000;
 const scrollThrottle = 150;
+
+if (typeof window !== `undefined`) {
+	scrollThreshold = window.innerHeight * 2;
+}
 
 interface BackToTopProps {
 	scrollTargetId?: string;

@@ -3,50 +3,47 @@
 exports[`404 should match snapshot 1`] = `
 <div>
   <main
-    class="container"
+    class="container backToTopSpacing"
     id="content-start"
   >
-    <div
-      class="backToTopSpacing"
+    <nav
+      aria-label="Breadcrumbs"
+      role="navigation"
     >
-      <nav
-        aria-label="Breadcrumbs"
-        role="navigation"
+      <ol
+        class="breadcrumbs"
       >
-        <ol
-          class="breadcrumbs"
+        <li
+          class="breadcrumbs__crumb"
         >
-          <li
-            class="breadcrumbs__crumb"
+          <a
+            href="https://www.nice.org.uk/"
           >
-            <a
-              href="https://www.nice.org.uk/"
-            >
-              NICE
-            </a>
-          </li>
-          <li
-            class="breadcrumbs__crumb"
+            NICE
+          </a>
+        </li>
+        <li
+          class="breadcrumbs__crumb"
+        >
+          <a
+            href="/"
           >
-            <a
-              href="/"
-            >
-              CKS
-            </a>
-          </li>
-          <li
-            class="breadcrumbs__crumb"
-          >
-            <span>
-              Page not found
-            </span>
-          </li>
-        </ol>
-      </nav>
-      <script
-        type="application/ld+json"
-      >
-        {
+            CKS
+          </a>
+        </li>
+        <li
+          class="breadcrumbs__crumb"
+        >
+          <span>
+            Page not found
+          </span>
+        </li>
+      </ol>
+    </nav>
+    <script
+      type="application/ld+json"
+    >
+      {
   "@context": "http://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -75,51 +72,50 @@ exports[`404 should match snapshot 1`] = `
     }
   ]
 }
-      </script>
-      <div
-        class="page-header"
+    </script>
+    <div
+      class="page-header"
+    >
+      <h1
+        class="page-header__heading"
       >
-        <h1
-          class="page-header__heading"
-        >
-          We can't find this page
-        </h1>
-        <p
-          class="page-header__lead"
-        >
-          Check that the web address has been typed correctly.
-        </p>
-      </div>
-      <p>
-        You can also try:
-      </p>
-      <ul>
-        <li>
-          looking for it using the search box
-        </li>
-        <li>
-          browsing for it from the 
-          <a
-            href="/"
-          >
-            CKS homepage
-          </a>
-          .
-        </li>
-      </ul>
-      <h2>
-        Contact us
-      </h2>
-      <p>
-        <a
-          href="https://www.nice.org.uk/get-involved/contact-us"
-        >
-          Get in touch
-        </a>
-         
-        if you think there is a problem.
+        We can't find this page
+      </h1>
+      <p
+        class="page-header__lead"
+      >
+        Check that the web address has been typed correctly.
       </p>
     </div>
+    <p>
+      You can also try:
+    </p>
+    <ul>
+      <li>
+        looking for it using the search box
+      </li>
+      <li>
+        browsing for it from the 
+        <a
+          href="/"
+        >
+          CKS homepage
+        </a>
+        .
+      </li>
+    </ul>
+    <h2>
+      Contact us
+    </h2>
+    <p>
+      <a
+        href="https://www.nice.org.uk/get-involved/contact-us"
+      >
+        Get in touch
+      </a>
+       
+      if you think there is a problem.
+    </p>
   </main>
   <div
     class="static"
