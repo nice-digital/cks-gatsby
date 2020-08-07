@@ -1,5 +1,8 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, RenderResult } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
+import { textContentMatcher } from "test-utils";
 import { ChapterBody } from "./ChapterBody";
 import { ChapterLevel1, ChapterLevel2, PartialChapter } from "src/types";
 
@@ -28,6 +31,14 @@ describe("ChapterBody", () => {
 					htmlHeader: "<h2>What is the prevalence of asthma?</h2>",
 					htmlStringContent:
 						"<p>Asthma affects more than 300 million people worldwide</p>",
+				} as ChapterLevel2,
+				{
+					id: "bss",
+					slug: "basis-for-recommendation",
+					fullItemName: "Basis for recommendation",
+					htmlHeader: "<h2>Basis for recommendation</h2>",
+					htmlStringContent:
+						"<p>These recommendations are based on nothing</p>",
 				} as ChapterLevel2,
 			] as PartialChapter[],
 			topic: {
@@ -111,5 +122,49 @@ describe("ChapterBody", () => {
 			"prevalence",
 			"Asthma affects more than 300 million people worldwide"
 		);
+	});
+
+	describe("basis for recommendation", () => {
+		let renderResult: RenderResult;
+		beforeEach(() => {
+			chapter.depth = 2;
+
+			renderResult = render(
+				<ChapterBody
+					chapter={{ ...chapter, parentChapter: {} as PartialChapter }}
+				/>
+			);
+		});
+
+		it("should render toggle button for basis for recommendations", () => {
+			expect(
+				renderResult.getByText(
+					textContentMatcher("Show Basis for recommendation")
+				)
+			).toBeInTheDocument();
+		});
+
+		it("should hide basis for recommendation by default", () => {
+			const toggleButton = renderResult.getByText(
+				textContentMatcher("Show Basis for recommendation")
+			);
+			const bodyText = renderResult.getByText(
+				"These recommendations are based on nothing"
+			);
+			expect(toggleButton).toHaveAttribute("aria-expanded", "false");
+			expect(bodyText.parentElement).toHaveAttribute("aria-hidden", "true");
+		});
+
+		it("should expand basis for recommendation on button click", () => {
+			const toggleButton = renderResult.getByText(
+				textContentMatcher("Show Basis for recommendation")
+			);
+			userEvent.click(toggleButton);
+			const bodyText = renderResult.getByText(
+				"These recommendations are based on nothing"
+			);
+			expect(toggleButton).toHaveAttribute("aria-expanded", "true");
+			expect(bodyText.parentElement).toHaveAttribute("aria-hidden", "false");
+		});
 	});
 });
