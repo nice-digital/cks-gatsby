@@ -73,7 +73,7 @@ module.exports = {
 				name: `CKS (Clinical Knowledge Summaries)`,
 				short_name: `CKS | NICE`,
 				description: `Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice`,
-				start_url: `/?utm_source=a2hs`,
+				start_url: `/?utm_source=a2hs&utm_medium=a2hs`,
 				background_color: `#fff`,
 				theme_color: `#004650`,
 				display: `minimal-ui`,
@@ -85,19 +85,19 @@ module.exports = {
 				shortcuts: [
 					{
 						name: "Topics A to Z",
-						url: "/topics/?utm_source=shortcuts",
+						url: "/topics/?utm_source=a2hs&utm_medium=shortcuts",
 					},
 					{
 						name: "Specialities",
-						url: "/specialities/?utm_source=shortcuts",
+						url: "/specialities/?utm_source=a2hs&utm_medium=shortcuts",
 					},
 					{
 						name: "What's new",
-						url: "/whats-new/?utm_source=shortcuts",
+						url: "/whats-new/?utm_source=a2hs&utm_medium=shortcuts",
 					},
 					{
 						name: "About CKS",
-						url: "/about/?utm_source=shortcuts",
+						url: "/about/?utm_source=a2hs&utm_medium=shortcuts",
 					},
 				],
 			},
@@ -153,7 +153,13 @@ module.exports = {
 	// Proxy the relative search endpoint to the .NET app for local dev
 	developMiddleware: (app) => {
 		// Proxy the relative search endpoint to the .NET app for local dev
-		app.use(createProxyMiddleware("http://localhost:5000"));
+		app.use(
+			"/api",
+			createProxyMiddleware({
+				target: "http://localhost:5000/",
+				changeOrigin: true,
+			})
+		);
 
 		// ******* or *******
 

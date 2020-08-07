@@ -24,6 +24,8 @@ describe("createChangeNodes", () => {
 					itemId: "chapter1",
 					fullItemName: "Scenario: Chapter 1",
 					containerElement: "topicSummary",
+					htmlStringContent:
+						'This is an <a href="http://cks.nice.org.uk/development" data-hyperlink-id="d175091b-5231-4195-9e45-a9910072da73">About Us</a> link',
 					parentId: null,
 					rootId: "chapter1",
 					children: [
@@ -32,7 +34,19 @@ describe("createChangeNodes", () => {
 							parentId: "chapter1",
 							itemId: "chapter1.1",
 							fullItemName: "Chapter 1.1, And (bracket's)",
+							htmlStringContent: "",
 							containerElement: "rightTopic",
+							children: [] as ApiTopicHtmlObject[],
+						} as ApiTopicHtmlObject,
+						{
+							rootId: "chapter1",
+							parentId: "chapter1",
+							itemId: "chapter1.2",
+							fullItemName: "Basis for recommendation",
+							htmlStringContent: "",
+							containerElement: "basis",
+							depth: 1,
+							pos: 2,
 							children: [] as ApiTopicHtmlObject[],
 						} as ApiTopicHtmlObject,
 					],
@@ -48,6 +62,7 @@ describe("createChangeNodes", () => {
 					rootId: "chapter2",
 					parentId: null,
 					fullItemName: "Chapter 2",
+					htmlStringContent: "",
 					containerElement: "annualKnowNewEvidence",
 					children: [] as ApiTopicHtmlObject[],
 				} as ApiTopicHtmlObject,
@@ -59,9 +74,9 @@ describe("createChangeNodes", () => {
 		jest.clearAllMocks();
 	});
 
-	it("should call createNode for each nested chapters", () => {
+	it("should call createNode for each nested chapter", () => {
 		createChapterNotes(topics, sourceNodesArgs);
-		expect(createNode).toHaveBeenCalledTimes(3);
+		expect(createNode).toHaveBeenCalledTimes(4);
 	});
 
 	it("should store slugified lowercased name in slug field and remove 'Scenario: '", () => {
@@ -77,10 +92,18 @@ describe("createChangeNodes", () => {
 		);
 	});
 
+	it("should create unique slug for basis for recommendation chapters", () => {
+		createChapterNotes(topics, sourceNodesArgs);
+		expect(createNode.mock.calls[2][0]).toHaveProperty(
+			"slug",
+			"basis-for-recommendation-cha"
+		);
+	});
+
 	it("should create a unique node id from the itemId property", () => {
 		createNodeId.mockImplementation((s) => `node id: ` + s);
 		createChapterNotes(topics, sourceNodesArgs);
-		expect(createNodeId).toHaveBeenCalledTimes(3);
+		expect(createNodeId).toHaveBeenCalledTimes(4);
 		expect(createNodeId).toHaveBeenNthCalledWith(1, "chapter1");
 		expect(createNodeId).toHaveBeenNthCalledWith(2, "chapter1.1");
 		expect(createNode.mock.calls[0][0]).toHaveProperty(
@@ -106,6 +129,7 @@ describe("createChangeNodes", () => {
 		createChapterNotes(topics, sourceNodesArgs);
 		expect(createNode.mock.calls[0][0]).toHaveProperty("subChapters", [
 			"chapter1.1",
+			"chapter1.2",
 		]);
 	});
 
@@ -131,6 +155,14 @@ describe("createChangeNodes", () => {
 		expect(createNode.mock.calls[1][0]).toHaveProperty(
 			"parentChapter",
 			"chapter1"
+		);
+	});
+
+	it("should replace absolute URL for development paeg", () => {
+		createChapterNotes(topics, sourceNodesArgs);
+		expect(createNode.mock.calls[0][0]).toHaveProperty(
+			"htmlStringContent",
+			'This is an <a href="/about/development/" data-hyperlink-id="d175091b-5231-4195-9e45-a9910072da73">About Us</a> link'
 		);
 	});
 
