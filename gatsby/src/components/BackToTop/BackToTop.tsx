@@ -43,12 +43,15 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 	}, []);
 
 	return (
-		<div className={isFixed ? styles.fixed : styles.static}>
+		<nav
+			aria-labelledby="back-to-top-link"
+			className={isFixed ? styles.fixed : styles.static}
+		>
 			<div className="container">
-				<a href={`#${scrollTo}`}>
+				<a id="back-to-top-link" href={`#${scrollTo}`}>
 					<ChevronUp /> Back to top
 				</a>
 			</div>
-		</div>
+		</nav>
 	);
 };
