@@ -13,8 +13,10 @@ describe("link rewriter", () => {
 		};
 
 	const warn = jest.fn(),
+		error = jest.fn(console.error),
 		reporter = ({
 			warn,
+			error,
 		} as unknown) as Reporter;
 
 	afterEach(() => {
@@ -55,6 +57,7 @@ describe("link rewriter", () => {
 
 		it("should warn when topic guid not found", async () => {
 			runQuery.mockImplementationOnce(() => ({
+				topicId: "abc",
 				topicName: "Atrial fibrillation",
 			}));
 			runQuery.mockImplementationOnce(() => null);
@@ -70,7 +73,7 @@ describe("link rewriter", () => {
 				reporter
 			);
 			await expect(warn).toHaveBeenCalledWith(
-				`Could not find topic '544c0dd8-12b4-472f-8325-25f15b3092e3'\n in link <a href="/Topic/ViewTopic/544c0dd8-12b4-472f-8325-25f15b3092e3">Achilles tendinopathy</a>\n in chapter 'Topic not found link' (123)\n in topic 'Atrial fibrillation'`
+				`Could not find topic '544c0dd8-12b4-472f-8325-25f15b3092e3'\n in link <a href="/Topic/ViewTopic/544c0dd8-12b4-472f-8325-25f15b3092e3">Achilles tendinopathy</a>\n in chapter 'Topic not found link' (123)\n in topic 'Atrial fibrillation' (abc)`
 			);
 		});
 	});
@@ -209,6 +212,66 @@ describe("link rewriter", () => {
 
 			expect(result).toBe(
 				'<a href="/topics/achilles-tendinopathy/management/scenario/#test">Achilles tendinopathy</a>'
+			);
+		});
+	});
+
+	describe("topic chapter links", () => {
+		it("should rewrite topic root chapter links", async () => {
+			runQuery.mockImplementation((query) => {
+				if (query.type === "CksTopic")
+					return Promise.resolve({
+						slug: "achilles-tendinopathy",
+						topicid: "a549c958-335f-4dcd-b76d-e9f87325d888",
+					});
+				return Promise.resolve({
+					itemId: "67439879-2ad5-4721-b865-5aadd9bebe52",
+					slug: "references",
+					parentChapter: null,
+					rootChapter: "123",
+					topic: "a549c958-335f-4dcd-b76d-e9f87325d888",
+				});
+			});
+
+			const result = await replaceLinksInHtml(
+				{
+					htmlStringContent: `<a href="/Topic/ViewTopic/a549c958-335f-4dcd-b76d-e9f87325d888#67439879-2ad5-4721-b865-5aadd9bebe52">Achilles ref</a>`,
+				} as ChapterNode,
+				nodeModel,
+				reporter
+			);
+
+			expect(result).toBe(
+				'<a href="/topics/achilles-tendinopathy/references/">Achilles ref</a>'
+			);
+		});
+
+		it("should rewrite topic summary chapter links", async () => {
+			runQuery.mockImplementation((query) => {
+				if (query.type === "CksTopic")
+					return Promise.resolve({
+						slug: "achilles-tendinopathy",
+						topicid: "a549c958-335f-4dcd-b76d-e9f87325d888",
+					});
+				return Promise.resolve({
+					itemId: "67439879-2ad5-4721-b865-5aadd9bebe52",
+					slug: "summary",
+					parentChapter: null,
+					rootChapter: "123",
+					topic: "a549c958-335f-4dcd-b76d-e9f87325d888",
+				});
+			});
+
+			const result = await replaceLinksInHtml(
+				{
+					htmlStringContent: `<a href="/Topic/ViewTopic/a549c958-335f-4dcd-b76d-e9f87325d888#67439879-2ad5-4721-b865-5aadd9bebe52">Achilles summary</a>`,
+				} as ChapterNode,
+				nodeModel,
+				reporter
+			);
+
+			expect(result).toBe(
+				'<a href="/topics/achilles-tendinopathy/">Achilles summary</a>'
 			);
 		});
 	});
