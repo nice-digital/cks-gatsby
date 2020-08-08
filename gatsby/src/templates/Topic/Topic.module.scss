@@ -14,3 +14,75 @@
   @include nds-font-size(h3);
   margin-top: 0;
 }
+
+.landingList {
+  list-style: none;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0;
+
+  li {
+    display: block;
+    padding: rem($nds-spacing-small) 0;
+  }
+
+  a {
+    display: block;
+  }
+
+  @include mq($from: sm) {
+    a {
+      padding-right: rem($nds-spacing-medium);
+    }
+
+    li {
+      float: left;
+      width: 50%;
+
+      &:nth-child(2n + 1) {
+        clear: left;
+      }
+    }
+  }
+
+  @include mq($from: md) {
+    li {
+      width: 33.33%;
+
+      &:nth-child(2n + 1) {
+        clear: none;
+      }
+
+      &:nth-child(3n + 1) {
+        clear: left;
+      }
+    }
+  }
+
+  // Grid is nicer than the floats above, because:
+  // it's shorter/more elegant and doesn't need the overflow hidden to clear the floats
+  // But IE11 doesn't do grids so we need the floats fallback
+  @supports (display: grid) {
+    @include mq($from: sm) {
+      display: grid;
+      column-gap: rem($nds-spacing-medium);
+      grid-template-columns: repeat(2, 1fr);
+      overflow: visible;
+      row-gap: rem($nds-spacing-medium);
+
+      a {
+        padding: 0;
+      }
+
+      li {
+        padding: 0;
+        width: auto;
+      }
+    }
+
+    @include mq($from: md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
