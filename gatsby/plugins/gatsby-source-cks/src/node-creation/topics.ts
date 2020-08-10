@@ -3,7 +3,7 @@
  */
 
 import { SourceNodesArgs, NodeInput } from "gatsby";
-import slugify from "slugify";
+import { slugify } from "./../utils";
 
 import { ApiSingleTopicResponse, ApiFullTopic } from "../api/types";
 
@@ -36,10 +36,7 @@ export const createTopicNodes = (
 			const nodeContent = {
 				...topic,
 				...{
-					slug: slugify(topicName.replace(/ and /gi, " "), {
-						lower: true,
-						remove: /[,*+~.()'"!?:@\/]/g,
-					}),
+					slug: slugify(topicName),
 					specialities: clinicalSpecialties,
 					chapters: topicHtmlObjects.map((t) => t.itemId),
 				},
