@@ -61,9 +61,13 @@ RewriteRule ^/whitlow-staphylococcal-and-herpetic /topics/whitlow-staphylococcal
 
 # CKS-406 Fixes issue with slashes in topic names
 RewriteRule ^/topics/contraception-ius/iud/ /topics/contraception-ius-iud/ [L,R=301]
+RewriteRule ^/contraception-iusiud /topics/contraception-ius-iud/ [L,R=301]
 RewriteRule ^/topics/nausea/vomiting-in-pregnancy/ /topics/nausea-vomiting-in-pregnancy/ [L,R=301]
+RewriteRule ^/nauseavomiting-in-pregnancy /topics/nausea-vomiting-in-pregnancy/ [L,R=301]
 RewriteRule ^/topics/polycythaemia/erythrocytosis/ /topics/polycythaemia-erythrocytosis/ [L,R=301]
+RewriteRule ^/polycythaemiaerythrocytosis /topics/polycythaemia-erythrocytosis/ [L,R=301]
 RewriteRule ^/topics/tiredness/fatigue-in-adults/ /topics/tiredness-fatigue-in-adults/ [L,R=301]
+RewriteRule ^/tirednessfatigue-in-adults /topics/tiredness-fatigue-in-adults/ [L,R=301]
 
 # CKS-406 Renamed topics
 RewriteRule ^/cows-milk-protein-allergy-in-children /topics/cows-milk-allergy-in-children/ [L,R=301]
