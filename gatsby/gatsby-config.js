@@ -105,15 +105,6 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-offline`,
 			options: {
-				precachePages: [
-					`/specialities/`,
-					`/specialities/*`,
-					`/about/`,
-					`/about/development/`,
-					`/topics/`,
-					`/topics/*`,
-					`/search/`,
-				],
 				workboxConfig: {
 					// Use the default gatsby runtimeCaching with 2 key differences:
 					// use NetworkFirst for page-data.json and for HTML pages
