@@ -58,3 +58,18 @@ RewriteRule ^/venous-eczema-and-lipodermatosclerosis /topics/venous-eczema-lipod
 RewriteRule ^/vitamin-d-deficiency-in-adults-treatment-and-prevention /topics/vitamin-d-deficiency-in-adults-treatment-prevention/ [L,R=301]
 RewriteRule ^/warts-and-verrucae /topics/warts-verrucae/ [L,R=301]
 RewriteRule ^/whitlow-staphylococcal-and-herpetic /topics/whitlow-staphylococcal-herpetic/ [L,R=301]
+
+# CKS-406 Fixes issue with slashes in topic names
+RewriteRule ^/topics/contraception-ius/iud/ /topics/contraception-ius-iud/ [L,R=301]
+RewriteRule ^/contraception-iusiud /topics/contraception-ius-iud/ [L,R=301]
+RewriteRule ^/topics/nausea/vomiting-in-pregnancy/ /topics/nausea-vomiting-in-pregnancy/ [L,R=301]
+RewriteRule ^/nauseavomiting-in-pregnancy /topics/nausea-vomiting-in-pregnancy/ [L,R=301]
+RewriteRule ^/topics/polycythaemia/erythrocytosis/ /topics/polycythaemia-erythrocytosis/ [L,R=301]
+RewriteRule ^/polycythaemiaerythrocytosis /topics/polycythaemia-erythrocytosis/ [L,R=301]
+RewriteRule ^/topics/tiredness/fatigue-in-adults/ /topics/tiredness-fatigue-in-adults/ [L,R=301]
+RewriteRule ^/tirednessfatigue-in-adults /topics/tiredness-fatigue-in-adults/ [L,R=301]
+
+# CKS-406 Renamed topics
+RewriteRule ^/cows-milk-protein-allergy-in-children /topics/cows-milk-allergy-in-children/ [L,R=301]
+RewriteRule ^/scrotal-swellings /topics/scrotal-pain-swelling/ [L,R=301]
+RewriteRule ^/hepatitis-C /topics/hepatitis-c/ [L,R=301]
