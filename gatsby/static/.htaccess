@@ -68,3 +68,4 @@ RewriteRule ^/topics/tiredness/fatigue-in-adults/ /topics/tiredness-fatigue-in-a
 # CKS-406 Renamed topics
 RewriteRule ^/cows-milk-protein-allergy-in-children /topics/cows-milk-allergy-in-children/ [L,R=301]
 RewriteRule ^/scrotal-swellings /topics/scrotal-pain-swelling/ [L,R=301]
+RewriteRule ^/hepatitis-C /topics/hepatitis-c/ [L,R=301]
