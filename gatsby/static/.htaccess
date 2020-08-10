@@ -64,3 +64,7 @@ RewriteRule ^/topics/contraception-ius/iud/ /topics/contraception-ius-iud/ [L,R=
 RewriteRule ^/topics/nausea/vomiting-in-pregnancy/ /topics/nausea-vomiting-in-pregnancy/ [L,R=301]
 RewriteRule ^/topics/polycythaemia/erythrocytosis/ /topics/polycythaemia-erythrocytosis/ [L,R=301]
 RewriteRule ^/topics/tiredness/fatigue-in-adults/ /topics/tiredness-fatigue-in-adults/ [L,R=301]
+
+# CKS-406 Renamed topics
+RewriteRule ^/cows-milk-protein-allergy-in-children /topics/cows-milk-allergy-in-children/ [L,R=301]
+RewriteRule ^/scrotal-swellings /topics/scrotal-pain-swelling/ [L,R=301]
