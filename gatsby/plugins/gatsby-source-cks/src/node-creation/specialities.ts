@@ -52,7 +52,7 @@ export const createSpecialityNodes = (
 			name,
 			slug: slugify(name.replace(/ and /gi, " "), {
 				lower: true,
-				remove: /[(),']/g,
+				remove: /[,*+~.()'"!?:@\/]/g,
 			}),
 			topics,
 		};

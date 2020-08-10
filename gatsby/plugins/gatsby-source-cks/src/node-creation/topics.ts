@@ -38,7 +38,7 @@ export const createTopicNodes = (
 				...{
 					slug: slugify(topicName.replace(/ and /gi, " "), {
 						lower: true,
-						remove: /[(),']/g,
+						remove: /[,*+~.()'"!?:@\/]/g,
 					}),
 					specialities: clinicalSpecialties,
 					chapters: topicHtmlObjects.map((t) => t.itemId),

@@ -54,7 +54,7 @@ const createTopicChapterNodes = (
 				fullItemName.replace(/^Scenario: /gi, "").replace(/ and /gi, " "),
 				{
 					lower: true,
-					remove: /[,*+~.()'"!?:@]/g,
+					remove: /[,*+~.()'"!?:@\/]/g,
 				}
 			);
 
