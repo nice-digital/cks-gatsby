@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback } from "react";
 import ChevronUp from "@nice-digital/icons/lib/ChevronUp";
-import throttle from "lodash/throttle";
+import throttle from "lodash.throttle";
 
 import styles from "./BackToTop.module.scss";
 
 const scrollThrottle = 100;
-const pagesScrollThreshold = 1.5; // number of viewports to scroll before "back to top" appears
+const pagesScrollThreshold = 1; // number of viewports to scroll before "back to top" appears
 
 interface BackToTopProps {
 	scrollTargetId?: string;
@@ -22,20 +22,22 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 		if (!footer) return;
 
 		const footerVisible: boolean =
-			window.scrollY + window.innerHeight >
-			document.body.scrollHeight - footer.clientHeight;
+			footer.getBoundingClientRect().top - window.innerHeight < 0;
 
 		const scrolledDown: boolean =
-			window.scrollY > window.innerHeight * pagesScrollThreshold;
+			document.documentElement.scrollTop >
+			window.innerHeight * pagesScrollThreshold;
 
 		setIsFixed(!footerVisible && scrolledDown);
 	}, []);
 
+	const throttledHandleScroll = throttle(handleScroll, scrollThrottle);
+
 	useEffect(() => {
-		document.addEventListener("scroll", throttle(handleScroll, scrollThrottle));
+		document.addEventListener("scroll", throttledHandleScroll);
 
 		return () => {
-			document.removeEventListener("scroll", handleScroll);
+			document.removeEventListener("scroll", throttledHandleScroll);
 		};
 	}, []);
 
