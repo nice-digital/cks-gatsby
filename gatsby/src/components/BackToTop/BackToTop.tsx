@@ -31,7 +31,10 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 		setIsFixed(!footerVisible && scrolledDown);
 	}, []);
 
-	const throttledHandleScroll = throttle(handleScroll, scrollThrottle);
+	const throttledHandleScroll = useCallback(
+		throttle(handleScroll, scrollThrottle),
+		[]
+	);
 
 	useEffect(() => {
 		document.addEventListener("scroll", throttledHandleScroll);
