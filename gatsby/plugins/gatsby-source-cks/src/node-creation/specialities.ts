@@ -3,7 +3,7 @@
  */
 
 import { SourceNodesArgs, NodeInput } from "gatsby";
-import slugify from "slugify";
+import { slugify } from "./../utils";
 
 import { ApiFullTopic } from "../api/types";
 
@@ -50,10 +50,7 @@ export const createSpecialityNodes = (
 	Array.from(specialityTopicsMapping.entries()).forEach(([name, topics]) => {
 		const nodeContent = {
 			name,
-			slug: slugify(name.replace(/ and /gi, " "), {
-				lower: true,
-				remove: /[(),']/g,
-			}),
+			slug: slugify(name),
 			topics,
 		};
 

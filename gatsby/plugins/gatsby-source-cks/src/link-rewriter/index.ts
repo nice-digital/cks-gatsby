@@ -1,181 +1,216 @@
+import { Reporter } from "gatsby";
 import { NodeModel } from "./types";
-import { TopicNode, topicNodeType } from "../node-creation/topics";
-import { ChapterNode, chapterNodeType } from "../node-creation/chapters";
+import { ChapterNode } from "../node-creation/chapters";
 import { replaceAsync } from "../utils";
-import { NodeInput, Reporter } from "gatsby";
 
-const topicAnchorRegex = /<a(?:(?!<a).)*href="(\/Topic\/ViewTopic\/(.{36}))".*?<\/a>/gi,
-	chapterAnchorRegex = /<a(?:(?!<a).)*href="(#(.{36}))".*?<\/a>/gi;
+import { getTopicById, getChapterById } from "./node-model-extensions";
+import {
+	topicAnchorRegex,
+	chapterAnchorRegex,
+	topicChapterAnchorRegex,
+} from "./link-regexes";
 
-const getNodeById = <T extends NodeInput>(
-	idField: string,
-	id: string,
-	nodeTypeName: string,
-	nodeModel: NodeModel
-): Promise<T | null> =>
-	nodeModel.runQuery({
-		query: {
-			filter: {
-				[idField]: { eq: id },
-			},
-		},
-		firstOnly: true,
-		type: nodeTypeName,
-	});
-
-const getTopicById = (
-	topicId: string,
-	nodeModel: NodeModel
-): Promise<TopicNode | null> =>
-	getNodeById("topicId", topicId, topicNodeType, nodeModel);
-
-const getChapterById = (
-	chapterItemId: string,
-	nodeModel: NodeModel
-): Promise<ChapterNode | null> =>
-	getNodeById("itemId", chapterItemId, chapterNodeType, nodeModel);
+interface LinkRewriteArgs {
+	htmlStringContent: string;
+	nodeModel: NodeModel;
+	//reporter: Reporter;
+	//getErrorMessage: (message: string, anchor: string) => string;
+	warn: (message: string, anchor: string) => void;
+	error: (message: string, anchor: string) => void;
+}
 
 /**
  * Topic links are in the form /Topic/ViewTopic/<topic guid> in the feed.
  * So these need to be written into the form /topics/<slug>
  */
-const rewriteTopicLinks = (
-	htmlStringContent: string,
-	chapter: ChapterNode,
-	topic: TopicNode,
-	nodeModel: NodeModel,
-	reporter: Reporter
-): Promise<string> => {
+const rewriteTopicLinks = ({
+	htmlStringContent,
+	nodeModel,
+	warn,
+}: LinkRewriteArgs): Promise<string> => {
 	return replaceAsync(
 		htmlStringContent,
 		topicAnchorRegex,
-		async (anchor: string, topicHref: string, topicId: string) => {
-			const topicNode = await getTopicById(topicId, nodeModel);
+		async (anchor: string, originalHref: string, targetTopicId: string) => {
+			const targetTopic = await getTopicById(targetTopicId, nodeModel);
 
-			if (!topicNode) {
-				reporter.warn(
-					`Could not find topic '${topicId}'\n in link ${anchor}\n in chapter '${chapter.fullItemName}' (${chapter.itemId})\n in topic '${topic.topicName}'`
-				);
+			if (!targetTopic) {
+				warn(`Could not find topic '${targetTopicId}'`, anchor);
 				return anchor;
 			}
 
-			return anchor.replace(topicHref, `/topics/${topicNode.slug}/`);
+			return anchor.replace(originalHref, `/topics/${targetTopic.slug}/`);
 		}
 	);
 };
 
-const rewriteChapterLinks = (
-	htmlStringContent: string,
-	chapter: ChapterNode,
-	topic: TopicNode,
-	nodeModel: NodeModel,
-	reporter: Reporter
-): Promise<string> => {
+const rewriteChapterLinks = ({
+	htmlStringContent,
+	nodeModel,
+	warn,
+	error,
+}: LinkRewriteArgs): Promise<string> => {
 	return replaceAsync(
 		htmlStringContent,
 		chapterAnchorRegex,
-		async (anchor: string, originalHref: string, chapterItemId: string) => {
-			const chapterNode = await getChapterById(chapterItemId, nodeModel);
+		async (anchor: string, originalHref: string, targetChapterId: string) => {
+			const targetChapter = await getChapterById(targetChapterId, nodeModel);
 
-			if (!chapterNode) {
-				reporter.warn(
-					`Could not find chapter '${chapterItemId}'\n in ${anchor}\n in chapter '${chapter.fullItemName}' (${chapter.itemId}) in ${topic.topicName}`
-				);
+			if (!targetChapter) {
+				warn(`Could not find chapter '${targetChapterId}'`, anchor);
 				return anchor;
 			}
 
-			const topicNode = await getTopicById(chapterNode.topic, nodeModel),
-				topicPath = `/topics/${topicNode?.slug}/`;
+			const targetChapterhref = await getChapterHref(targetChapter, nodeModel);
 
-			// Top level chapter
-			if (!chapterNode.parentChapter) {
-				return anchor.replace(originalHref, `${topicPath}${chapterNode.slug}/`);
+			if (!targetChapterhref) {
+				error(`6th level link found in '${targetChapterId}'`, anchor);
+				return anchor;
 			}
 
-			// Second level chapter
-			const parentChapterNode = await getChapterById(
-				chapterNode.parentChapter,
-				nodeModel
-			);
-			if (parentChapterNode?.itemId === chapterNode.rootChapter) {
-				return anchor.replace(
-					originalHref,
-					`${topicPath}${parentChapterNode?.slug}/${chapterNode.slug}/`
-				);
-			}
-
-			// Third level chapter
-			const grandParentChapterNode = await getChapterById(
-				parentChapterNode?.parentChapter as string,
-				nodeModel
-			);
-			if (grandParentChapterNode?.itemId === chapterNode.rootChapter) {
-				return anchor.replace(
-					originalHref,
-					`${topicPath}${grandParentChapterNode?.slug}/${parentChapterNode?.slug}/#${chapterNode.slug}`
-				);
-			}
-
-			// Fourth level chapter
-			const greatGrandParentChapterNode = await getChapterById(
-				grandParentChapterNode?.parentChapter as string,
-				nodeModel
-			);
-			if (greatGrandParentChapterNode?.itemId === chapterNode.rootChapter) {
-				return anchor.replace(
-					originalHref,
-					`${topicPath}${greatGrandParentChapterNode?.slug}/${grandParentChapterNode?.slug}/#${chapterNode.slug}`
-				);
-			}
-
-			// Fifth level chapter
-			const greatGreatGrandParentChapterNode = await getChapterById(
-				greatGrandParentChapterNode?.parentChapter as string,
-				nodeModel
-			);
-			if (
-				greatGreatGrandParentChapterNode?.itemId === chapterNode.rootChapter
-			) {
-				return anchor.replace(
-					originalHref,
-					`${topicPath}${greatGreatGrandParentChapterNode?.slug}/${greatGrandParentChapterNode?.slug}/#${chapterNode.slug}`
-				);
-			} else {
-				throw new Error(
-					`6th level link found in '${chapterItemId}'\n in ${anchor}\n in chapter '${chapter.fullItemName}' (${chapter.itemId}) in ${topic.topicName}`
-				);
-			}
+			return anchor.replace(originalHref, targetChapterhref);
 		}
 	);
 };
 
+const rewriteTopicChapterLinks = ({
+	htmlStringContent,
+	nodeModel,
+	warn,
+	error,
+}: LinkRewriteArgs): Promise<string> =>
+	replaceAsync(
+		htmlStringContent,
+		topicChapterAnchorRegex,
+		async (
+			anchor: string,
+			originalHref: string,
+			targetTopicId: string,
+			targetChapterId: string
+		) => {
+			const targetTopic = await getTopicById(targetTopicId, nodeModel);
+
+			if (!targetTopic) {
+				warn(`Could not find topic '${targetTopicId}'`, anchor);
+				return anchor;
+			}
+
+			const targetChapter = await getChapterById(targetChapterId, nodeModel);
+
+			if (!targetChapter) {
+				warn(`Could not find chapter '${targetChapterId}'`, anchor);
+				return anchor;
+			} else if (targetChapter.topic !== targetTopicId) {
+				warn(
+					`Chapter '${targetChapterId}' topic (${targetChapter.topic}) doesn't match topic in href (${targetTopicId})`,
+					anchor
+				);
+				return anchor;
+			}
+
+			const targetChapterhref = await getChapterHref(targetChapter, nodeModel);
+
+			if (!targetChapterhref) {
+				error(`6th level link found in '${targetChapterId}'`, anchor);
+				return anchor;
+			}
+
+			return anchor.replace(originalHref, targetChapterhref);
+		}
+	);
+
+const getChapterHref = async (
+	targetChapterNode: ChapterNode,
+	nodeModel: NodeModel
+): Promise<string | null> => {
+	const topicNode = await getTopicById(targetChapterNode.topic, nodeModel),
+		topicPath = `/topics/${topicNode?.slug}/`;
+
+	// Top level chapter
+	if (!targetChapterNode.parentChapter) {
+		return targetChapterNode.slug === "summary"
+			? topicPath
+			: `${topicPath}${targetChapterNode.slug}/`;
+	}
+
+	// Second level chapter
+	const parentChapterNode = await getChapterById(
+		targetChapterNode.parentChapter,
+		nodeModel
+	);
+	if (parentChapterNode?.itemId === targetChapterNode.rootChapter) {
+		return `${topicPath}${parentChapterNode?.slug}/${targetChapterNode.slug}/`;
+	}
+
+	// Third level chapter
+	const grandParentChapterNode = await getChapterById(
+		parentChapterNode?.parentChapter as string,
+		nodeModel
+	);
+	if (grandParentChapterNode?.itemId === targetChapterNode.rootChapter) {
+		return `${topicPath}${grandParentChapterNode?.slug}/${parentChapterNode?.slug}/#${targetChapterNode.slug}`;
+	}
+
+	// Fourth level chapter
+	const greatGrandParentChapterNode = await getChapterById(
+		grandParentChapterNode?.parentChapter as string,
+		nodeModel
+	);
+	if (greatGrandParentChapterNode?.itemId === targetChapterNode.rootChapter) {
+		return `${topicPath}${greatGrandParentChapterNode?.slug}/${grandParentChapterNode?.slug}/#${targetChapterNode.slug}`;
+	}
+
+	// Fifth level chapter
+	const greatGreatGrandParentChapterNode = await getChapterById(
+		greatGrandParentChapterNode?.parentChapter as string,
+		nodeModel
+	);
+	if (
+		greatGreatGrandParentChapterNode?.itemId === targetChapterNode.rootChapter
+	) {
+		return `${topicPath}${greatGreatGrandParentChapterNode?.slug}/${greatGrandParentChapterNode?.slug}/#${targetChapterNode.slug}`;
+	}
+
+	// 6th level isn't supported
+	return null;
+};
+
 export const replaceLinksInHtml = async (
-	chapter: ChapterNode,
+	currentChapter: ChapterNode,
 	nodeModel: NodeModel,
 	reporter: Reporter
 ): Promise<string> => {
-	let { htmlStringContent } = chapter;
-	const { topic } = chapter;
+	const { htmlStringContent } = currentChapter;
+	const { topic: topicId } = currentChapter;
 
-	const topicNode = await getTopicById(topic, nodeModel);
+	const currentTopic = await getTopicById(topicId, nodeModel);
 
-	if (!topicNode) throw new Error(`Could not find topic with id ${topic}`);
+	if (!currentTopic) {
+		reporter.error(`Could not find topic with id ${topicId}`);
+		return "Error";
+	}
 
-	htmlStringContent = await rewriteTopicLinks(
+	// Generates a useful error message with the anchor location to make it easier to find the bad link in the feed
+	const getErrorMessage = (message: string, anchor: string) =>
+		[
+			message,
+			` in link ${anchor}`,
+			` in chapter '${currentChapter.fullItemName}' (${currentChapter.itemId})`,
+			` in topic '${currentTopic.topicName}' (${currentTopic.topicId})`,
+		].join("\n");
+
+	const args: LinkRewriteArgs = {
 		htmlStringContent,
-		chapter,
-		topicNode,
 		nodeModel,
-		reporter
-	);
+		warn: (message: string, anchor: string) =>
+			reporter.warn(getErrorMessage(message, anchor)),
+		error: (message: string, anchor: string) =>
+			reporter.error(getErrorMessage(message, anchor)),
+	};
 
-	htmlStringContent = await rewriteChapterLinks(
-		htmlStringContent,
-		chapter,
-		topicNode,
-		nodeModel,
-		reporter
-	);
+	args.htmlStringContent = await rewriteTopicLinks(args);
+	args.htmlStringContent = await rewriteChapterLinks(args);
+	args.htmlStringContent = await rewriteTopicChapterLinks(args);
 
-	return htmlStringContent;
+	return args.htmlStringContent;
 };

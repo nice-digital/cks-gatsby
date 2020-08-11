@@ -3,7 +3,7 @@
  */
 
 import { NodeInput, SourceNodesArgs } from "gatsby";
-import slugify from "slugify";
+import { slugify } from "./../utils";
 
 import { ApiFullTopic, ApiTopicHtmlObject } from "../api/types";
 
@@ -50,13 +50,7 @@ const createTopicChapterNodes = (
 			htmlStringContent,
 			...chapterFields
 		}) => {
-			let slug = slugify(
-				fullItemName.replace(/^Scenario: /gi, "").replace(/ and /gi, " "),
-				{
-					lower: true,
-					remove: /[,*+~.()'"!?:@]/g,
-				}
-			);
+			let slug = slugify(fullItemName);
 
 			// There can be multiple basis for recs on the same page, so distinguish the slugs
 			// See example at: /topics/angina/management/new-diagnosis/
