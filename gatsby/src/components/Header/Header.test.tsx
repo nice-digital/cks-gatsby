@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, wait } from "@testing-library/react";
+import { fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { navigate, useStaticQuery } from "gatsby";
 import { renderWithRouter } from "test-utils";
@@ -31,7 +31,7 @@ describe("Header", () => {
 	it("should hide authentication", async () => {
 		const { queryByText } = renderWithRouter(<Header />);
 
-		await wait(async () => {
+		await waitFor(() => {
 			expect(queryByText("Sign in")).toBeFalsy();
 		});
 	});
@@ -50,12 +50,17 @@ describe("Header", () => {
 
 		fireEvent.click(await findByText("About CKS"), { button: 0 });
 
-		await wait(() => expect(navigate).toHaveBeenCalledWith("/about/"));
+		await waitFor(
+			() => {
+				expect(navigate).toHaveBeenCalledWith("/about/");
+			},
+			{ timeout: 2500 }
+		);
 	});
 
 	it("should set search box default value from q querystring value", async () => {
 		const { findByRole } = renderWithRouter(<Header />, {
-			route: "/search?q=diabetes",
+			route: "/search/?q=diabetes",
 		});
 
 		expect(await findByRole("combobox")).toHaveAttribute("value", "diabetes");
@@ -63,24 +68,24 @@ describe("Header", () => {
 
 	it("should update search box value from q querystring value when URL changes", async () => {
 		const { findByRole, history } = renderWithRouter(<Header />, {
-			route: "/search?q=diabetes",
+			route: "/search/?q=diabetes",
 		});
 
 		const searchBox = await findByRole("combobox");
-		await history.navigate("/search?q=cancer");
+		await history.navigate("/search/?q=cancer");
 
-		await wait(() => expect(searchBox).toHaveAttribute("value", "cancer"));
+		await waitFor(() => expect(searchBox).toHaveAttribute("value", "cancer"));
 	});
 
-	it("should use gatsby navigate when submitting search form", async () => {
+	it("should use gatsby navigate with encoded query when submitting search form", async () => {
 		const { findByRole } = renderWithRouter(<Header />);
 
 		const searchBox = (await findByRole("combobox")) as HTMLInputElement;
-		searchBox.value = "diabetes";
+		searchBox.value = "diabetes 20%";
 
 		fireEvent.submit(await findByRole("search"));
 
-		expect(navigate).toHaveBeenCalledWith("/search?q=diabetes");
+		expect(navigate).toHaveBeenCalledWith("/search/?q=diabetes%2020%25");
 	});
 
 	it("should use topic names with topic URL for autocomplete suggestions", async () => {

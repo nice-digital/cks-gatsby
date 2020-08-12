@@ -3,6 +3,7 @@
 .base {
   list-style: none;
   margin: 0;
+  max-width: 100%;
 
   li {
     break-inside: avoid;
@@ -32,6 +33,10 @@
 
   @include mq($from: lg) {
     column-count: 3;
+
+    &.cols2 {
+      column-count: 2;
+    }
   }
 }
 
@@ -40,5 +45,11 @@
 
   @include mq($from: sm) {
     column-count: 2;
+  }
+
+  @include mq($from: lg) {
+    &.cols3 {
+      column-count: 3;
+    }
   }
 }

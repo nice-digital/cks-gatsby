@@ -3,9 +3,11 @@
  */
 
 import { NodeInput, SourceNodesArgs } from "gatsby";
-import slugify from "slugify";
+import { slugify } from "./../utils";
 
 import { ApiFullTopic, ApiTopicHtmlObject } from "../api/types";
+
+const BasisChapterTitle = "Basis for recommendation";
 
 export const chapterNodeType = "CksChapter";
 
@@ -29,9 +31,6 @@ export interface ChapterNode extends NodeInput {
 	} & NodeInput["internal"];
 }
 
-const slugifyPascalCase = (s: string): string =>
-	s.replace(/(.+)([A-Z])/g, (_, p1, p2) => `${p1}-${p2}`);
-
 const createTopicChapterNodes = (
 	topicId: string,
 	topicHtmlObjects: ApiTopicHtmlObject[],
@@ -47,21 +46,37 @@ const createTopicChapterNodes = (
 			parentId,
 			rootId,
 			children,
+			fullItemName,
+			htmlStringContent,
 			...chapterFields
 		}) => {
-			const slug = slugify(slugifyPascalCase(containerElement), {
-				lower: true,
-			});
+			let slug = slugify(fullItemName);
+
+			// There can be multiple basis for recs on the same page, so distinguish the slugs
+			// See example at: /topics/angina/management/new-diagnosis/
+			if (fullItemName === BasisChapterTitle) {
+				slug = `${slug}-${itemId.substring(0, 3)}`;
+			}
+
+			// The feed content has absolute paths to the old development page
+			// so we replace them with the relative path so that the links work
+			// locally and use Gatsby's navigate function
+			htmlStringContent = htmlStringContent.replace(
+				/http:\/\/cks\.nice\.org\.uk\/development/g,
+				"/about/development/"
+			);
 
 			const nodeContent = {
 				...chapterFields,
+				htmlStringContent,
 				slug,
+				fullItemName,
 				containerElement,
 				itemId,
 				topic: topicId,
 				parentChapter: parentId,
 				rootChapter: rootId,
-				subChapters: children.map(c => c.itemId),
+				subChapters: children.map((c) => c.itemId),
 			};
 
 			const chapterNode: ChapterNode = {

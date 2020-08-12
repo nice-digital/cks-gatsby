@@ -7,3 +7,12 @@ export const PartialSpeciality = graphql`
 		slug
 	}
 `;
+
+export const FullSpeciality = graphql`
+	fragment FullSpeciality on CksSpeciality {
+		...PartialSpeciality
+		topics {
+			...PartialTopic
+		}
+	}
+`;

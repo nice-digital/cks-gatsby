@@ -9,6 +9,8 @@ import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 
+import styles from "./search.module.scss";
+
 interface SearchResults {
 	failed: boolean;
 	resultCount: number;
@@ -71,9 +73,10 @@ const SearchPage: React.FC = () => {
 
 	useEffect(() => {
 		setData(null);
+		announce("Loading search results");
 		fetch("/api/search" + location.search)
-			.then(data => data.json())
-			.then(results => {
+			.then((data) => data.json())
+			.then((results) => {
 				setError(false);
 				setData(results as SearchResults);
 				announce("Search results loaded");
@@ -87,9 +90,16 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		if (data) {
 			if (window.dataLayer) {
-				window.dataLayer.push({
-					event: "search.resultsLoaded",
-				});
+				window.dataLayer.push({ location: document.location.href });
+				if ("requestAnimationFrame" in window) {
+					requestAnimationFrame(() => {
+						requestAnimationFrame(() => {
+							window.dataLayer.push({
+								event: "search.resultsLoaded",
+							});
+						});
+					});
+				}
 			}
 		}
 		return;
@@ -108,12 +118,20 @@ const SearchPage: React.FC = () => {
 			)}
 			{(error || (data && data.failed)) && (
 				<>
-					<SEO title="Error loading search results" noIndex={true} />
-					<PageHeader
-						heading="Error"
-						lead="We are currently experiencing issues with search. The issue will be
-resolved as soon as possible. We apologise for any inconvenience caused."
-					/>
+					<SEO title="There is a problem with search" noIndex={true} />
+					<PageHeader heading="Sorry, there is a problem with search" />
+					<p>We are working on it, please try again later.</p>
+					<p>
+						You can also try browsing for topics from the{" "}
+						<Link to={"/"}>CKS homepage</Link>.
+					</p>
+					<p>
+						If you need help,{" "}
+						<Link to="https://www.nice.org.uk/get-involved/contact-us">
+							contact us
+						</Link>
+						.
+					</p>
 				</>
 			)}
 			{data && !data.failed && <Results {...data} />}
@@ -149,6 +167,10 @@ const Results: React.FC<SearchResults> = ({
 		totalPages,
 	};
 
+	const breadcrumbText = `Search results ${
+		finalSearchText ? `for ${finalSearchText}` : ""
+	}`;
+
 	return (
 		<>
 			<SEO title={titleString(finalSearchText, currentPage)} noIndex={true} />
@@ -156,12 +178,12 @@ const Results: React.FC<SearchResults> = ({
 				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
 				<Breadcrumb to="/">CKS</Breadcrumb>
 				<Breadcrumb
-					to={currentPage > 1 ? `/search?q=${finalSearchText}` : undefined}
+					to={currentPage > 1 ? `/search/?q=${finalSearchText}` : undefined}
 				>
-					Search results {finalSearchText && `for ${finalSearchText}`}
+					{breadcrumbText}
 				</Breadcrumb>
 				{currentPage > 1 ? (
-					<Breadcrumb>Page {currentPage.toString(10)}</Breadcrumb>
+					<Breadcrumb>{`Page ${currentPage.toString(10)}`}</Breadcrumb>
 				) : (
 					<></>
 				)}
@@ -243,9 +265,9 @@ interface ResultsList {
 }
 
 const ResultsList: React.FC<ResultsList> = ({ documents }) => (
-	<ol className="list--unstyled grid">
+	<ol className={`list--unstyled ${styles.resultList}`}>
 		{documents?.map(({ id, title, pathAndQuery, teaser }) => (
-			<li key={id} data-g="12 md:8">
+			<li key={id}>
 				<Card
 					summary={<span dangerouslySetInnerHTML={{ __html: teaser }} />}
 					headingText={<span dangerouslySetInnerHTML={{ __html: title }} />}

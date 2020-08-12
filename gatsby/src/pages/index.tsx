@@ -59,10 +59,10 @@ const IndexPage: React.FC<IndexProps> = ({
 	},
 }: IndexProps) => {
 	const linkableLetters = Array.from(
-		new Set(topicNames.map(topicName => topicName.charAt(0).toLowerCase()))
+		new Set(topicNames.map((topicName) => topicName.charAt(0).toLowerCase()))
 	);
 
-	const allTopicButtons = alphabet.map(letter => {
+	const allTopicButtons = alphabet.map((letter) => {
 		return {
 			letter,
 			linkable: linkableLetters.includes(letter),
@@ -95,6 +95,7 @@ const IndexPage: React.FC<IndexProps> = ({
 						chunky
 						aria-labelledby="topics-a-to-z"
 						aria-describedby="topics-a-to-z-desc"
+						data-tracking="topics-a-to-z"
 					>
 						{allTopicButtons.map(({ letter, linkable }) => (
 							<Letter
@@ -106,8 +107,14 @@ const IndexPage: React.FC<IndexProps> = ({
 						))}
 					</Alphabet>
 
-					<h3 id="frequently-visited-topics">Frequently visited topics</h3>
-					<ColumnList plain aria-labelledby="frequently-visited-topics">
+					<h3 id="frequently-visited-topics">
+						Topics most frequently visited by other&nbsp;users
+					</h3>
+					<ColumnList
+						plain
+						aria-labelledby="frequently-visited-topics"
+						data-tracking="frequently-visited-topics"
+					>
 						<li>
 							<Link to="/topics/hypertension-not-diabetic/">
 								Hypertension - not diabetic
@@ -132,11 +139,15 @@ const IndexPage: React.FC<IndexProps> = ({
 				</GridItem>
 
 				<GridItem md={6} cols={12} className={styles.specialitiesColumn}>
-					<h2 id="specialties">Specialties</h2>
+					<h2 id="specialities">Specialities</h2>
 
-					<p>Our knowledge summaries grouped by&nbsp;specialty.</p>
+					<p>Our topics grouped by&nbsp;speciality.</p>
 
-					<ColumnList plain aria-labelledby="specialties">
+					<ColumnList
+						plain
+						aria-labelledby="specialities"
+						data-tracking="specialities"
+					>
 						{specialitiesNodes.map(({ id, name, slug }) => (
 							<li key={id}>
 								<Link to={`/specialities/${slug}/`}>{name}</Link>

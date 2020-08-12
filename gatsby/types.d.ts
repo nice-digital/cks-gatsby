@@ -2,7 +2,8 @@ export {};
 
 // Mock window.dataLayer, part of GTM. Global nav header relies on this
 export type DataLayerEntry = {
-	event: string;
+	location?: string;
+	event?: string;
 	eventCallback?: () => void;
 	eventTimeout?: number;
 } & { [key: string]: string };

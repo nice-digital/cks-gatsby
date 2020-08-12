@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
 					placeholder: "Search CKS…",
 					autocomplete: autocompleteTerms,
 					onSearching: (e): void => {
-						navigate("/search?q=" + e.query);
+						navigate("/search/?q=" + encodeURIComponent(e.query));
 					},
 					query: queryTerm,
 				}}

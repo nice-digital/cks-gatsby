@@ -1,3 +1,6 @@
 node_modules
 public
 .cache
+
+# https://github.com/gatsbyjs/gatsby/pull/25720
+_this_is_virtual_fs_path_

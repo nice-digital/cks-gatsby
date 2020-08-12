@@ -18,6 +18,7 @@ import { getSelector } from "../support/selectors";
 When(/^I type "([^"]*)" in the header search box$/, typeInSearchBox);
 
 When(/^I click "([^"]*)" in the autocomplete options$/, (text) => {
+	const pageTitle = browser.getTitle();
 	typeInSearchBox("Ast");
 	waitFor(getSelector("autocomplete option"));
 
@@ -37,9 +38,10 @@ When(/^I click "([^"]*)" in the autocomplete options$/, (text) => {
 		text,
 		getSelector("autocomplete anchor")
 	);
+	waitForTitleToChange(pageTitle);
 });
 
-When(/^I click the "([^"]*)" breadcrumb$/, (breadcrumbText) => {
+When(/^I click the ([^"]*) breadcrumb$/, (breadcrumbText) => {
 	const pageTitle = browser.getTitle(),
 		breadcrumbsListSelector = getSelector("breadcrumbs list");
 
