@@ -58,9 +58,9 @@ namespace CKS.Web
 		{
 			if (!env.IsDevelopment())
 			{
+				app.UseForwardedHeaders();
 				app.UseExceptionHandler("/Error");
 				app.UseHsts();
-				app.UseForwardedHeaders();
 			}
 
 			ConfigureRedirects(app, env);
