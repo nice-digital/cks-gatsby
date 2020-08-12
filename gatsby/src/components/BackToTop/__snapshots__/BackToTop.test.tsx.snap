@@ -4,7 +4,7 @@ exports[`BackToTop should match snapshot 1`] = `
 <div>
   <nav
     aria-labelledby="back-to-top-link"
-    class="static"
+    class="hide-print static"
   >
     <div
       class="container"

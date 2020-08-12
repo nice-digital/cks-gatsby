@@ -47,7 +47,9 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 	return (
 		<nav
 			aria-labelledby="back-to-top-link"
-			className={isFixed ? styles.fixed : styles.static}
+			className={["hide-print", isFixed ? styles.fixed : styles.static].join(
+				" "
+			)}
 		>
 			<div className="container">
 				<a id="back-to-top-link" href={`#${scrollTo}`}>

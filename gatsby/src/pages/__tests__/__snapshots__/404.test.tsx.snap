@@ -119,7 +119,7 @@ exports[`404 should match snapshot 1`] = `
   </main>
   <nav
     aria-labelledby="back-to-top-link"
-    class="static"
+    class="hide-print static"
   >
     <div
       class="container"
