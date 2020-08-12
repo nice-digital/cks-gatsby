@@ -23,7 +23,7 @@ exports.config = {
 	logLevel: "error",
 	coloredLogs: true,
 	screenshotPath: "./screenshots/",
-	baseUrl: "http://localhost:5000/",
+	baseUrl: "http://localhost:8000/",
 	reporters: isTeamCity ? ["spec", "teamcity", "allure"] : ["spec"],
 
 	// Use BDD with Cucumber
