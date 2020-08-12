@@ -56,6 +56,10 @@ function cleanupBeforeStart()
   docker-compose down --remove-orphans --volumes && docker-compose rm -vf
 }
 
+function IncreaseVirtualMemory()
+{
+  sysctl -w vm.max_map_count=262144
+}
 
 function startDockerContainer()
 {
@@ -110,9 +114,10 @@ catch() {
   error=1
 }
 
-#Uncomment next line to run tests locally
+#Uncomment next line to run tests locally in docker
 #prepairForLocalTestRun
 cleanupBeforeStart
+IncreaseVirtualMemory
 startDockerContainer
 runTests
 processTestOutput
