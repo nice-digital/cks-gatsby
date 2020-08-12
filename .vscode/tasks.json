@@ -110,7 +110,7 @@
       "label": "Functional tests - all",
       "detail": "Runs the functional tests against the web app on port 5000",
       "type": "shell",
-      "command": "npm test",
+      "command": "npm run test:local",
       "options": {
         "cwd": "${workspaceFolder}/functional-tests"
       },
@@ -124,7 +124,7 @@
       "label": "Functional tests - current feature",
       "detail": "Runs the functional tests for the currently open feature file",
       "type": "shell",
-      "command": "npm test -- --spec ${fileBasenameNoExtension}",
+      "command": "npm run test:local -- --spec ${fileBasenameNoExtension}",
       "options": {
         "cwd": "${workspaceFolder}/functional-tests"
       },
