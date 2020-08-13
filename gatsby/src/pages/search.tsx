@@ -85,7 +85,7 @@ const SearchPage: React.FC = () => {
 				setError(true);
 				announce("There was an error getting search results");
 			});
-	}, [location]);
+	}, [location.search]);
 
 	useEffect(() => {
 		if (data) {

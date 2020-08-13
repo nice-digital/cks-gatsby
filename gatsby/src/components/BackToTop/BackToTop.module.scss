@@ -1,0 +1,22 @@
+@import '~@nice-digital/nds-core/scss/core';
+
+.static {
+  position: absolute;
+  transform: translateY((-(rem($nds-spacing-medium))));
+  width: 100%;
+}
+
+.fixed {
+  background: $nds-colour-nice-grey-3;
+  border-top: 1px solid #bcbcbc;
+  bottom: 0;
+  padding: rem($nds-spacing-medium) 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+// This is used in Layout.tsx and is necessary to prevent the Back To Top anchor from overlapping the main footer
+.backToTopSpacing {
+  padding-bottom: rem($nds-spacing-x-large);
+}
