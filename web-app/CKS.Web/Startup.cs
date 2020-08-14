@@ -45,12 +45,6 @@ namespace CKS.Web
 
 			services.AddControllers();
 
-			services.Configure<ForwardedHeadersOptions>(options =>
-			{
-				options.ForwardedHeaders =
-					ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-			});
-
 			services.AddHsts(options =>
 			{
 				//TODO: Investigate why https://hstspreload.org/ times out for nice.org.uk currently
@@ -65,7 +59,10 @@ namespace CKS.Web
 		{
 			if (!env.IsDevelopment())
 			{
-				app.UseForwardedHeaders();
+				app.UseForwardedHeaders(new ForwardedHeadersOptions
+				{
+					ForwardedHeaders = ForwardedHeaders.XForwardedProto | ForwardedHeaders.XForwardedFor
+				});
 				app.UseExceptionHandler("/Error");
 				app.UseHsts();
 			}
