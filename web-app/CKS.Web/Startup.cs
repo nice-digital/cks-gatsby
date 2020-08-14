@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Rewrite;
 using CKS.Web.StaticFiles;
 using CKS.Web.Middleware;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace CKS.Web
 {
@@ -43,6 +44,12 @@ namespace CKS.Web
 			}
 
 			services.AddControllers();
+
+			services.Configure<ForwardedHeadersOptions>(options =>
+			{
+				options.ForwardedHeaders =
+					ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+			});
 
 			services.AddHsts(options =>
 			{
