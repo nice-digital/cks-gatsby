@@ -6,6 +6,7 @@ import { BackToTop } from "../BackToTop/BackToTop";
 
 import "./Layout.scss";
 import styles from "../BackToTop/BackToTop.module.scss";
+import { Helmet } from "react-helmet";
 
 type LayoutProps = {
 	children: ReactNode;
@@ -14,6 +15,12 @@ type LayoutProps = {
 export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 	return (
 		<>
+			<Helmet>
+				<script
+					src="//alpha-cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
+					type="text/javascript"
+				></script>
+			</Helmet>
 			<Header />
 			<main
 				className={`container ${styles.backToTopSpacing}`}
