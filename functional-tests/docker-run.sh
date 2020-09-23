@@ -20,7 +20,8 @@ function cleanupBeforeStart()
 function runTests()
 {
   # Wait for the web app to be up before running the tests
-  docker-compose run -T test-runner npm run wait-then-test
+  #docker-compose run -T test-runner npm run wait-then-test
+  winpty docker-compose exec test-runner bash
 }
 
 function processTestOutput()

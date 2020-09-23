@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node --no-deprecation --no-warnings node_modules/webdriverio/bin/wdio",
-    "test:docker": "npm test -- --host selenium-hub --baseUrl http://cks-web-app:8080",
-    "wait:docker": "wait-on http://cks-web-app:8080 --timeout 30000",
+    "test:docker": "npm test -- --host selenium-hub --baseUrl http://cks-functional-tests.nice.org.uk:8080",
+    "wait:docker": "wait-on http://cks-functional-tests.nice.org.uk:8080 --timeout 30000",
     "wait-then-test": "npm run wait:docker && npm run test:docker"
   },
   "repository": {
