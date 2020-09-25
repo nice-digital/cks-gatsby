@@ -17,7 +17,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 		<>
 			<Helmet>
 				<script
-					src="//alpha-cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
+					src="//cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
 					type="text/javascript"
 				></script>
 			</Helmet>
