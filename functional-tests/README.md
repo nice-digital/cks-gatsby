@@ -7,19 +7,19 @@
 ## Table of contents
 
 - [Functional tests for CKS](#functional-tests-for-cks)
-	- [Table of contents](#table-of-contents)
-	- [Stack](#stack)
-		- [Software](#software)
-	- [:rocket: Set up](#rocket-set-up)
-		- [Using VSCode](#using-vscode)
-		- [Using npm](#using-npm)
-			- [Different URLs](#different-urls)
-		- [Docker](#docker)
-			- [Development mode](#development-mode)
-	- [Excluding tests](#excluding-tests)
-	- [Running single features](#running-single-features)
-	- [Troubleshooting](#troubleshooting)
-		- [Issue wih node-fibers](#issue-wih-node-fibers)
+  - [Table of contents](#table-of-contents)
+  - [Stack](#stack)
+    - [Software](#software)
+  - [:rocket: Set up](#rocket-set-up)
+    - [Using VSCode](#using-vscode)
+    - [Using npm](#using-npm)
+      - [Different URLs](#different-urls)
+    - [Docker](#docker)
+      - [Development mode](#development-mode)
+  - [Excluding tests](#excluding-tests)
+  - [Running single features](#running-single-features)
+  - [Troubleshooting](#troubleshooting)
+    - [Issue wih node-fibers](#issue-wih-node-fibers)
 
 ## Stack
 
@@ -121,7 +121,7 @@ Instead, we can run the following command:
 docker-compose up -d && docker-compose run test-runner bash
 ```
 
-This runs the docker network in 'detached' mode, which leaves the containers running. It then runs bash against the test runner container. This allows us to then run the tests from within the Docker network, but the CKS web app runs on http://cks-web-app:8080 inside Docker so we have a simple npm alias command to run the tests within Docker:
+This runs the docker network in 'detached' mode, which leaves the containers running. It then runs bash against the test runner container. This allows us to then run the tests from within the Docker network, but the CKS web app runs on http://cks-functional-tests.nice.org.uk:8080 inside Docker so we have a simple npm alias command to run the tests within Docker:
 
 ```sh
 npm run test:docker

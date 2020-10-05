@@ -88,6 +88,7 @@ export const Header: React.FC = () => {
 	return (
 		<div ref={globalNavWrapperRef}>
 			<GlobalNavHeader
+				cookie={false}
 				service="cks"
 				skipLinkId="content-start"
 				onNavigating={(e): void => {
