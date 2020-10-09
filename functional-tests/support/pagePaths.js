@@ -11,6 +11,7 @@ export const pagePaths = {
 	"asthma have I got the right topic?":
 		"/topics/asthma/have-i-got-the-right-topic/",
 	"achilles tendinopathy topic": "/topics/achilles-tendinopathy/",
+	search: "/search/",
 };
 
 export const getPath = (pageName) => {

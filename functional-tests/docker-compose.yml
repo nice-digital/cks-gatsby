@@ -35,6 +35,11 @@ services:
       - "8080:8080"
     volumes:
       - ./../web-app/publish:/app
+    networks:
+      default:
+        aliases:
+          # Make sure the app uses a nice.org.uk domain so that the cookie banner license works
+          - cks-functional-tests.nice.org.uk
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.5.2
