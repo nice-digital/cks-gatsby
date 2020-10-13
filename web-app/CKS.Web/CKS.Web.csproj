@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="NICE.Logging" Version="6.0.24" />
-    <PackageReference Include="NICE.Search" Version="2.1.932-net-standard-convers" />
+    <PackageReference Include="NICE.Search" Version="2.1.946-net-standard-convers" />
   </ItemGroup>
 
 
