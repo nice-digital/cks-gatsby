@@ -6,8 +6,6 @@ import waitForScrollToElement from "./waitForScrollToElement";
 module.exports = (selector) => {
 	checkIfElementExists(selector);
 
-	if (!isVisible(selector)) {
-		browser.scroll(selector, 0, 0);
-		waitForScrollToElement(selector);
-	}
+	browser.scroll(selector, 0, 0);
+	waitForScrollToElement(selector);
 };
