@@ -42,7 +42,7 @@ exports[`About page Body should match snapshot for main body content 1`] = `
     Quick answers to clinical questions
   </h2>
   <p>
-    Clinical Knowledge Summaries are concise, accessible summaries of current evidence for primary care professionals. There are over 350 topics to chose from.
+    Clinical Knowledge Summaries are concise, accessible summaries of current evidence for primary care professionals. There are over 370 topics to choose from.
   </p>
   <p>
     The topics focus on the most common and significant presentations in primary care. They give trusted information to support safe decision-making and improve standards of patient care.
@@ -79,7 +79,7 @@ exports[`About page Body should match snapshot for main body content 1`] = `
     Evidence-based
   </h2>
   <p>
-    CKS topics are developed and updated using the best available evidence. High-quality secondary evidence from NICE accredited resources - like NICE guidance and Cochrane systematic reviews - is identified first. Primary research and expert opinion is sought where necessary.
+    CKS topics are developed and updated using the best available evidence. High-quality secondary evidence from NICE accredited resources - like NICE guidance and Cochrane systematic reviews - is identified first. Primary research and expert opinion are sought where necessary.
   </p>
   <h2>
     Designed for primary care professionals
