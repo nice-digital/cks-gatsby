@@ -12,6 +12,9 @@ namespace CKS.Web.Controllers
 	[Route("api/[controller]")]
 	public class SearchController : ControllerBase
 	{
+		public static readonly int DEFAULT_PAGE_SIZE = 15;
+		public static readonly int MIN_PAGE_SIZE = 10;
+
 		private readonly ILogger<SearchController> _logger;
 		private readonly ISearchProvider _provider;
 
@@ -22,8 +25,10 @@ namespace CKS.Web.Controllers
 		}
 
 		[HttpGet]
-		public JsonResult Get([FromQuery]SearchUrl searchUrl)
+		public JsonResult Get([FromQuery] SearchUrl searchUrl)
 		{
+			searchUrl.ps = searchUrl.ps.HasValue ? Math.Max(searchUrl.ps.Value, MIN_PAGE_SIZE) : DEFAULT_PAGE_SIZE;
+
 			var search = _provider.Search(searchUrl);
 			int statusCode = 200;
 
