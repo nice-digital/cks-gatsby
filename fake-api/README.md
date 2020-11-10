@@ -7,17 +7,17 @@
 ## Table of contents
 
 - [Fake API for CKS](#fake-api-for-cks)
-  - [Table of contents](#table-of-contents)
-  - [Stack](#stack)
-  - [:rocket: Set up](#rocket-set-up)
-    - [Command line setup](#command-line-setup)
-      - [Commands](#commands)
-  - [Authentication](#authentication)
-  - [Endpoints](#endpoints)
-    - [All topics](#all-topics)
-    - [Individual topic](#individual-topic)
-    - [Changes since](#changes-since)
-  - [Postman](#postman)
+	- [Table of contents](#table-of-contents)
+	- [Stack](#stack)
+	- [:rocket: Set up](#rocket-set-up)
+		- [Command line setup](#command-line-setup)
+			- [Commands](#commands)
+	- [Authentication](#authentication)
+	- [Endpoints](#endpoints)
+		- [All topics](#all-topics)
+		- [Individual topic](#individual-topic)
+		- [Changes since](#changes-since)
+	- [Postman](#postman)
 
 ## Stack
 
