@@ -3,11 +3,12 @@ Feature: Search Page
   I want to be able to use the CKS Search Page
 
   Background:
-    Given I open the url "/search/"
+    Given I open the search page
+    And I have a screen that is 1366 by 768 pixels
 
-  Scenario: Detect Search page accessibility issues
+  Scenario: Detect accessibility issues
     Then the page should have no accessibility issues
 
-  Scenario: Detect mobile Search page accessibility issues
+  Scenario: Detect mobile accessibility issues
     Given I have a screen that is 320 by 568 pixels
     Then the page should have no accessibility issues

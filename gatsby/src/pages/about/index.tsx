@@ -16,7 +16,7 @@ const AboutPage: React.FC = () => {
 		<Layout>
 			<SEO
 				title={`About CKS`}
-				description={`Clinical Knowledge Summaries are concise, accessible summaries of current evidence for primary care professionals. There are over 350 topics to chose from.`}
+				description={`Clinical Knowledge Summaries are concise, accessible summaries of current evidence for primary care professionals. There are over 370 topics to choose from.`}
 			/>
 			<Breadcrumbs>
 				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
@@ -33,8 +33,8 @@ const AboutPage: React.FC = () => {
 					<h2>Quick answers to clinical questions</h2>
 					<p>
 						Clinical Knowledge Summaries are concise, accessible summaries of
-						current evidence for primary care professionals. There are over 350
-						topics to chose from.
+						current evidence for primary care professionals. There are over 370
+						topics to choose from.
 					</p>
 					<p>
 						The topics focus on the most common and significant presentations in
@@ -68,7 +68,7 @@ const AboutPage: React.FC = () => {
 						CKS topics are developed and updated using the best available
 						evidence. High-quality secondary evidence from NICE accredited
 						resources - like NICE guidance and Cochrane systematic reviews - is
-						identified first. Primary research and expert opinion is sought
+						identified first. Primary research and expert opinion are sought
 						where necessary.
 					</p>
 					<h2>Designed for primary care professionals</h2>
