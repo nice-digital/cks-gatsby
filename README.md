@@ -101,7 +101,7 @@ The easiest way to get the project running is:
 Launching the app via `Launch CKS` does the following:
 
 1. http://localhost:5000/ - Builds and runs the .NET core web app in the background
-2. http://localhost:7000/ - Creates a local, fake CKS api
+2. http://localhost:8001/ - Creates a local, fake CKS api
 3. http://localhost:8000/ - Builds the Gatsby static site then launches it in Chrome once it's built
 4. Proxies http://localhost:8000/api/search (in the Gatsby site) to http://localhost:5000/api/search (in the .NET core app)
 
