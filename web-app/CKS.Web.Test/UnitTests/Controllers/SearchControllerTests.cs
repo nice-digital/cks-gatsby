@@ -31,7 +31,7 @@ namespace CKS.Web.Test.UnitTests.Controllers
 		public void AFailedSearchWillReturn500()
 		{
 			var searchProvider = new Mock<ISearchProvider>();
-			searchProvider.Setup(sp => sp.Search(It.IsAny<ISearchUrl>())).Returns(new SearchResults() { Failed = true});
+			searchProvider.Setup(sp => sp.Search(It.IsAny<ISearchUrl>())).Returns(new SearchResults() { Failed = true });
 			var searchController = new SearchController(Mock.Of<ILogger<SearchController>>(), searchProvider.Object);
 
 			var response = searchController.Get(new SearchUrl());
@@ -60,6 +60,20 @@ namespace CKS.Web.Test.UnitTests.Controllers
 
 			mockLogger.VerifyLog(Times.Once);
 
+		}
+
+		[Fact]
+		public void ShouldSetDefaultPageSize()
+		{
+			var searchProvider = new Mock<ISearchProvider>();
+			searchProvider.Setup(sp => sp.Search(It.IsAny<ISearchUrl>())).Returns(new SearchResults() { });
+
+			var searchController = new SearchController(Mock.Of<ILogger<SearchController>>(), searchProvider.Object);
+
+			var searchUrl = new SearchUrl();
+			searchController.Get(searchUrl);
+
+			searchUrl.ps.ShouldBe(SearchController.DEFAULT_PAGE_SIZE);
 		}
 	}
 }
