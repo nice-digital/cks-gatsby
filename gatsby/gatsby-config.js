@@ -49,7 +49,7 @@ module.exports = {
 			resolve: `gatsby-source-cks`,
 			options: {
 				apiKey: process.env.API_KEY || "abc123",
-				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000/api",
+				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:8001/api",
 				changesSinceDate,
 			},
 		},
