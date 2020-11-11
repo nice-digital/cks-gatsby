@@ -78,7 +78,7 @@ describe("TopicsPage", () => {
 		it("should render lead paragraph", () => {
 			expect(
 				renderResult.queryByText(
-					"There are over 350 topics, with focus on the most common and significant presentations in primary care."
+					"There are over 370 topics, with focus on the most common and significant presentations in primary care."
 				)
 			).toBeInTheDocument();
 		});

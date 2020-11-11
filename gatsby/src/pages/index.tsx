@@ -87,7 +87,7 @@ const IndexPage: React.FC<IndexProps> = ({
 				<GridItem md={6} cols={12} className={styles.topicsColumn}>
 					<h2 id="topics-a-to-z">Health topics A to Z</h2>
 					<p id="topics-a-to-z-desc">
-						Over 350 topics organised alphabetically, with focus on the most
+						Over 370 topics organised alphabetically, with focus on the most
 						common and significant presentations in primary&nbsp;care.
 					</p>
 
