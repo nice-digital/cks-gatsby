@@ -6,7 +6,7 @@ import {
 	PartialSpeciality,
 	ChapterLevel1,
 	ChapterLevel2,
-} from "./types";
+} from "./src/types";
 
 interface AllTopicsQuery {
 	allTopics: {

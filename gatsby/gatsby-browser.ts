@@ -1,6 +1,20 @@
+import { ShouldUpdateScrollArgs, RouteUpdateArgs } from "gatsby";
+import {
+	getCLS,
+	getFID,
+	getLCP,
+	getTTFB,
+	getFCP,
+	Metric,
+	ReportHandler,
+} from "web-vitals";
+
 // Gatsby hook for when the route has changed on the client side
 // See https://www.gatsbyjs.org/docs/browser-apis/#onRouteUpdate
-export const onRouteUpdate = ({ prevLocation, location }) => {
+export const onRouteUpdate = ({
+	prevLocation,
+	location,
+}: RouteUpdateArgs): void => {
 	if (prevLocation) {
 		// Push our own event to the dataLayer on page change rather than using the
 		// 'gatsby-route-change' event built into gatsby-plugin-google-tagmanager.
@@ -35,12 +49,12 @@ export const shouldUpdateScroll = ({
 	prevRouterProps,
 	routerProps: { location },
 	getSavedScrollPosition,
-}) => {
+}: ShouldUpdateScrollArgs): string => {
 	const savedScrollPosition = getSavedScrollPosition(location);
 
 	if (
 		savedScrollPosition &&
-		prevRouterProps.location.pathname !== location.pathname
+		prevRouterProps?.location.pathname !== location.pathname
 	) {
 		return savedScrollPosition;
 	}
@@ -54,4 +68,31 @@ export const shouldUpdateScroll = ({
 	}
 
 	return targetId;
+};
+
+/**
+ * Gatsby hook for when the runtime first starts client side
+ * See https://www.gatsbyjs.com/docs/browser-apis#onClientEntry
+ */
+export const onClientEntry = (): void => {
+	getCLS(sendWebVitalToGTM);
+	getFID(sendWebVitalToGTM);
+	getLCP(sendWebVitalToGTM);
+	getFCP(sendWebVitalToGTM);
+	getTTFB(sendWebVitalToGTM);
+};
+
+const sendWebVitalToGTM: ReportHandler = ({
+	name,
+	delta,
+	id,
+}: Metric): void => {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: "web-vitals",
+		eventCategory: "Web Vitals",
+		eventAction: name,
+		eventLabel: id,
+		eventValue: Math.round(name === "CLS" ? delta * 1000 : delta),
+	});
 };
