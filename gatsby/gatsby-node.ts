@@ -247,7 +247,7 @@ export const onPostBuild = async ({
 		existingHtaccessContents + "\n" + topicRules?.join("\n");
 
 	await fs.writeFile(
-		path.join(__dirname, "../public", ".htaccess"),
+		path.join(__dirname, "public", ".htaccess"),
 		htaccessContents
 	);
 
