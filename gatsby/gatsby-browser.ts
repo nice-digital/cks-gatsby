@@ -76,9 +76,9 @@ export const shouldUpdateScroll = ({
  */
 export const onClientEntry = (): void => {
 	getCLS(sendWebVitalToGTM);
+	getFCP(sendWebVitalToGTM);
 	getFID(sendWebVitalToGTM);
 	getLCP(sendWebVitalToGTM);
-	getFCP(sendWebVitalToGTM);
 	getTTFB(sendWebVitalToGTM);
 };
 
