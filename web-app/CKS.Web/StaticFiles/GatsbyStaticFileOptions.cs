@@ -37,7 +37,10 @@ namespace CKS.Web.StaticFiles
 				response.Headers[HeaderNames.CacheControl] = "public,immutable,max-age=31536000";
 			}
 			else
-				response.Headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=0";
+			{
+				// Use a small (5 minute) cache for other files like HTML
+				response.Headers[HeaderNames.CacheControl] = "public,must-revalidate,max-age=300";
+			}
 		};
 	}
 }

@@ -42,26 +42,37 @@ namespace CKS.Web
 			}
 
 			services.AddControllers();
+
+			services.AddResponseCaching(options =>
+				{
+					// Increase the size limit (default is 100MB)
+					options.SizeLimit = 500 * 1024 * 1024;
+				});
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
-			ConfigureRedirects(app, env);
+			app.UseResponseCaching();
 
 			app.UseStatusCodePagesWithReExecute("/{0}.html");
+
 			app.UseDefaultFiles();
 			app.UseStaticFiles(new GatsbyStaticFileOptions { });
 
 			ConfigureRouting(app);
+
+			// Do redirects last so we don't have to evaluate them for requests to static files.
+			// UseStaticFiles is a terminating middleware, so requests won't carry on executing
+			ConfigureRedirects(app, env);
 		}
 
 		public void ConfigureDevelopment(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			app.UseDeveloperExceptionPage();
 
-			var gatsbyPublicDir = Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public");
+			app.UseResponseCaching();
 
-			ConfigureRedirects(app, env, gatsbyPublicDir);
+			var gatsbyPublicDir = Path.Combine(Directory.GetCurrentDirectory(), "../../gatsby/public");
 
 			app.UseStatusCodePagesWithReExecute("/{0}.html");
 
@@ -78,6 +89,8 @@ namespace CKS.Web
 			});
 
 			ConfigureRouting(app);
+
+			ConfigureRedirects(app, env, gatsbyPublicDir);
 		}
 
 		private void ConfigureRouting(IApplicationBuilder app)
