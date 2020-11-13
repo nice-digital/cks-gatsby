@@ -230,7 +230,7 @@ export const onPostBuild = async ({
 	`);
 
 	const existingHtaccessContents = await fs.readFile(
-		path.join(__dirname, "../static", ".htaccess"),
+		path.join(__dirname, "static", ".htaccess"),
 		"utf-8"
 	);
 
