@@ -39,6 +39,7 @@ namespace CKS.Web
 				.ConfigureServices(services =>
 					{
 						services.AddTransient<IStartupFilter, SecurityHeadersStartupFilter>();
+						services.AddTransient<IStartupFilter, HeadersStartupFilter>();
 					});
 	}
 }
