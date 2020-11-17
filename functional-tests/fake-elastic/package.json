@@ -14,7 +14,9 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/nice-digital/cks-gatsby/functional-tests/fake-elastic/#readme",
-  "devDependencies": {
-    "express": "^4.17.1"
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "jsonpath": "^1.0.2"
   }
 }

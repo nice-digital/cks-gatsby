@@ -1,8 +1,15 @@
 FROM node:12
 
-COPY package.json /tests
-COPY package-lock.json /tests
+WORKDIR /app
+
+COPY package.json /app
+COPY package-lock.json /app
 
 RUN npm ci
 
-COPY . /tests
+COPY . /app
+
+# Use default ElasticSearch port
+EXPOSE 9200
+
+CMD [ "npm", "start" ]
