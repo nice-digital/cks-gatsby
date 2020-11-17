@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="NICE.Logging" Version="6.0.24" />
-    <PackageReference Include="NICE.Search" Version="2.1.963-SRCH-475-Change-nice" />
+    <PackageReference Include="NICE.Search" Version="2.1.992-SRCH-475-Change-nice" />
   </ItemGroup>
 
 
