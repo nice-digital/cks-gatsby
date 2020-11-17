@@ -30,6 +30,12 @@ namespace CKS.Web.StaticFiles
 			if (request.Path == "/404.html")
 				response.StatusCode = 404;
 
+			if (fileName.EndsWith(".html"))
+				response.Headers.Add("Link",
+					"<https://apikeys.civiccomputing.com>; rel=preconnect; crossorigin," +
+					"<https://www.googletagmanager.com>; rel=preconnect," +
+					"<https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js>; rel=preload; as=script");
+
 			if (fileName.EndsWith(".css") ||
 				request.Path.Value.Contains("/static/") ||
 				(fileName.EndsWith(".js") && fileName != "sw.js"))
