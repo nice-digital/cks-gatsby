@@ -52,7 +52,7 @@ cd fake-api
 npm ci
 # Run the express server
 npm start
-# Open http://localhost:7000 in a browser
+# Open http://localhost:8001 in a browser
 ```
 
 #### Commands
@@ -73,21 +73,21 @@ The following endpoints are available within the API (both real and fake):
 
 ### All topics
 
-http://localhost:7000/api/topics
+http://localhost:8001/api/topics
 
 Serves an index file of all 370+ topics, with only partial, top level fields like title.
 
 Example request:
 
 ```sh
-curl --location --request GET 'http://localhost:7000/api/topics' --header 'ocp-apim-subscription-key: abc123'
+curl --location --request GET 'http://localhost:8001/api/topics' --header 'ocp-apim-subscription-key: abc123'
 ```
 
 ### Individual topic
 
-http://localhost:7000/api/topic/<topic id>
+http://localhost:8001/api/topic/<topic id>
 
-Serves a full single topic, with all the chapter HTML information. For example Asthma is available at http://localhost:7000/api/topic/2a0a90e6-1c4e-4b6a-9ce2-3379dd122594.
+Serves a full single topic, with all the chapter HTML information. For example Asthma is available at http://localhost:8001/api/topic/2a0a90e6-1c4e-4b6a-9ce2-3379dd122594.
 
 > NOTE: Asthma is the only freely available topic on Clarity's Prodigy so it's the only full 'real' topic we include in the fake feed by default.
 
@@ -96,19 +96,19 @@ Other topics apart from Asthma just serve a single, dummy chapter. This means qu
 Example request:
 
 ```sh
-curl --location --request GET 'http://localhost:7000/api/topic/2a0a90e6-1c4e-4b6a-9ce2-3379dd122594' --header 'ocp-apim-subscription-key: abc123'
+curl --location --request GET 'http://localhost:8001/api/topic/2a0a90e6-1c4e-4b6a-9ce2-3379dd122594' --header 'ocp-apim-subscription-key: abc123'
 ```
 
 ### Changes since
 
-http://localhost:7000/api/changes-since/<date>
+http://localhost:8001/api/changes-since/<date>
 
 Returns a list of changes to topics since the given date. The must be in an ISO 8601 format e.g. 2019-10-01T00:00:00.000Z.
 
 Example request:
 
 ```sh
-curl --location --request GET 'http://localhost:7000/api/changes-since/2019-10-01T00:00:00.000Z' --header 'ocp-apim-subscription-key: abc123'
+curl --location --request GET 'http://localhost:8001/api/changes-since/2019-10-01T00:00:00.000Z' --header 'ocp-apim-subscription-key: abc123'
 ```
 
 ## Postman
@@ -119,7 +119,7 @@ Each endpoint above includes a curl example which can be easily imported into Po
 
 Alternatively, save the following JSON to a file on your machine, and import into Postman.
 
-> Note: you'll need to set up variables for `CKSApiKey` and `CKSApiBaseUrl` before you can use it. For example set `CKSApiBaseUrl` to http://localhost:7000/api/ and `CKSApiBaseUrl` to abc123.
+> Note: you'll need to set up variables for `CKSApiKey` and `CKSApiBaseUrl` before you can use it. For example set `CKSApiBaseUrl` to http://localhost:8001/api/ and `CKSApiBaseUrl` to abc123.
 
 <details>
   <summary>Postman Collection v2.1 JSON export</summary>

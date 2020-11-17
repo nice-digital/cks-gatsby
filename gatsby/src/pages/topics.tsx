@@ -53,7 +53,7 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 
 			<PageHeader
 				heading="Topics A to Z"
-				lead="There are over 350 topics, with focus on the most common and significant presentations in primary care."
+				lead="There are over 370 topics, with focus on the most common and significant presentations in primary care."
 			/>
 
 			<Alphabet id="a-to-z" aria-label="Letters A to Z" tabIndex={-1}>
