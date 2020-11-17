@@ -29,10 +29,16 @@ module.exports = {
 		},
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-typescript",
+		"gatsby-plugin-preact",
 		"gatsby-plugin-catch-links",
-		"gatsby-plugin-sass",
 		{
-			resolve: "gatsby-plugin-prefetch-google-fonts",
+			resolve: `gatsby-plugin-sass`,
+			options: {
+				implementation: require("sass"),
+			},
+		},
+		{
+			resolve: "@el7cosmos/gatsby-plugin-prefetch-google-fonts",
 			options: {
 				fonts: [
 					{
@@ -57,7 +63,7 @@ module.exports = {
 			resolve: "gatsby-plugin-eslint",
 			options: {
 				test: /\.(?:j|t)sx?$/,
-				exclude: /global-nav/,
+				exclude: /(global-nav|node_modules|.cache|public)/,
 			},
 		},
 		{

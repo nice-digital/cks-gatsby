@@ -19,7 +19,8 @@
 
 - [VS Code IDE](https://code.visualstudio.com/)
   - With recommended extensions (VS Code will prompt you to install these automatically)
-- [Gatsby](https://www.gatsbyjs.org/) and [React](https://reactjs.org/) for static site generation
+- [Gatsby](https://www.gatsbyjs.org/) and [Preact](https://preactjs.com/) for static site generation
+  - Note: we use Preact as a 'drop in' replacement via [gatsby-plugin-preact](https://www.gatsbyjs.com/plugins/gatsby-plugin-preact/) because it's [smaller and faster than React](https://dev.to/hdoro/make-gatsby-faster-with-preact-1-loc-4nd6)
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Prettier](https://prettier.io/) for code formatting
 - [ESLint](https://eslint.org/) for JavaScript/TypeScripting linting
