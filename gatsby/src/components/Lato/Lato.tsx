@@ -2,7 +2,7 @@ import React, { SyntheticEvent } from "react";
 import { Helmet } from "react-helmet";
 
 const cssHref =
-	"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap";
+	"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=fallback";
 
 /**
  * Loads Lato from Google fonts asynchronously as per https://csswizardry.com/2020/05/the-fastest-google-fonts/
