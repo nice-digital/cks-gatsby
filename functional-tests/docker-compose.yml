@@ -31,6 +31,8 @@ services:
   cks-web-app:
     build: ../web-app
     container_name: cks-web-app
+    depends_on:
+      - fake-elastic
     ports:
       - "8080:8080"
     volumes:
@@ -46,11 +48,11 @@ services:
     container_name: fake-elastic
     ports:
       - "9200:9200"
-  networks:
-    default:
-      aliases:
-        # Pretend to be the dev instance of elastic search: the web app uses CKSTest index which resolves to dev-es
-        - dev-es.nice.org.uk
+    networks:
+      default:
+        aliases:
+          # Pretend to be the dev instance of elastic search: the web app uses CKSTest index which resolves to dev-es
+          - dev-es.nice.org.uk
 
 networks:
   default:
