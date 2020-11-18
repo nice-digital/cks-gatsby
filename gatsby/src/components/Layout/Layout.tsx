@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { BackToTop } from "../BackToTop/BackToTop";
+import { Lato } from "../Lato/Lato";
 
 import "./Layout.scss";
 import styles from "../BackToTop/BackToTop.module.scss";
@@ -15,9 +16,10 @@ type LayoutProps = {
 export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 	return (
 		<>
+			<Lato />
 			<Helmet>
 				<script
-					src="//cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
+					src="https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
 					type="text/javascript"
 				></script>
 			</Helmet>
