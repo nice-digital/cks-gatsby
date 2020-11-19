@@ -19,6 +19,9 @@ app.post("/cks/document/_search", async ({ body }, res, next) => {
 	// Suggest requests are in the form {"suggest":{"suggester":{"text":"paracetmol"...
 	const { suggest } = body;
 	if (suggest) {
+		if (suggest.suggester.text === "")
+			return res.sendFile(path.join(suggestDirectory, "empty.json"));
+
 		const suggestFilePath = path.join(
 			suggestDirectory,
 			suggest.suggester.text + ".json"
@@ -32,6 +35,9 @@ app.post("/cks/document/_search", async ({ body }, res, next) => {
 	// Look for the first query in the request document. Note: this isn't the raw
 	// query term passed in: it's capitalized and pre-processed by search client
 	const queryTerm = jsonpath.query(body, "$..query_string.query")[0];
+
+	if (typeof queryTerm === "undefined")
+		return res.sendFile(path.join(resultsDirectory, "empty.json"));
 
 	// Look for a file in the results directory that matches the given query term
 	const resultFileName = (await fs.readdir(resultsDirectory))

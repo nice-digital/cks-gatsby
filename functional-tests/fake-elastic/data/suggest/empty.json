@@ -1,0 +1,11 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": { "total": 1, "successful": 1, "skipped": 0, "failed": 0 },
+  "hits": { "total": 0, "max_score": 0.0, "hits": [] },
+  "suggest": {
+    "phrase#suggester": [
+      { "text": "", "offset": 0, "length": 0, "options": [] }
+    ]
+  }
+}
