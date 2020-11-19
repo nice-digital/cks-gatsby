@@ -14,39 +14,45 @@ const port = 9200;
 // Allow us to parse request bodies as JSON: https://stackoverflow.com/a/49943829/486434
 app.use(express.json());
 
+// Response extensions for sending the fake elastic JSON responses
+app.use(async (req, res, next) => {
+	const sendElasticResponse = async (fileName, next, directory, type) => {
+		const filePath = path.join(directory, `${fileName}.json`);
+		if (await fs.pathExists(filePath)) res.sendFile(filePath);
+		else next(new Error(`Couldn't find ${type} file for ${fileName}`));
+	};
+
+	res.sendSuggest = async (fileName, next) => {
+		console.info(`Suggest request for ${fileName}`);
+		sendElasticResponse(fileName, next, suggestDirectory, "suggest");
+	};
+
+	res.sendResults = async (fileName, next) => {
+		console.info(`Results request for ${fileName}`);
+		sendElasticResponse(fileName, next, resultsDirectory, "results");
+	};
+
+	next();
+});
+
 // This endpoint is called twice from search client: once for results and once for suggestions
 app.post("/cks/document/_search", async ({ body }, res, next) => {
 	// Suggest requests are in the form {"suggest":{"suggester":{"text":"paracetmol"...
-	const { suggest } = body;
-	if (suggest) {
-		if (suggest.suggester.text === "")
-			return res.sendFile(path.join(suggestDirectory, "empty.json"));
-
-		const suggestFilePath = path.join(
-			suggestDirectory,
-			suggest.suggester.text + ".json"
-		);
-
-		return (await fs.pathExists(suggestFilePath))
-			? res.sendFile(suggestFilePath)
-			: next(new Error(`Couldn't find suggest file at ${suggestFilePath}`));
-	}
+	if (body.suggest)
+		return res.sendSuggest(body.suggest.suggester.text || "empty", next);
 
 	// Look for the first query in the request document. Note: this isn't the raw
 	// query term passed in: it's capitalized and pre-processed by search client
 	const queryTerm = jsonpath.query(body, "$..query_string.query")[0];
 
-	if (typeof queryTerm === "undefined")
-		return res.sendFile(path.join(resultsDirectory, "empty.json"));
+	if (typeof queryTerm === "undefined") return res.sendResults("empty", next);
 
 	// Look for a file in the results directory that matches the given query term
 	const resultFileName = (await fs.readdir(resultsDirectory))
 		.map(removeJsonFileExtension)
 		.find((f) => new RegExp(f, "i").test(queryTerm));
 
-	return resultFileName
-		? res.sendFile(path.join(resultsDirectory, resultFileName + ".json"))
-		: next(new Error(`Couldn't find results file for query '${queryTerm}'`));
+	return res.sendResults(resultFileName || queryTerm, next);
 });
 
 // 404 handler
