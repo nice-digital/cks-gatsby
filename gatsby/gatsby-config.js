@@ -37,17 +37,6 @@ module.exports = {
 				implementation: require("sass"),
 			},
 		},
-		{
-			resolve: "@el7cosmos/gatsby-plugin-prefetch-google-fonts",
-			options: {
-				fonts: [
-					{
-						family: "Lato",
-						variants: ["400", "700", "900"],
-					},
-				],
-			},
-		},
 		// Gatsby loads a single CSS bundle by default (see https://github.com/gatsbyjs/gatsby/issues/11072#issue-399193885).
 		// But we want per-page chunks to minimize size, so use this plugin to split into separate chunks:
 		"gatsby-plugin-split-css",
@@ -55,7 +44,7 @@ module.exports = {
 			resolve: `gatsby-source-cks`,
 			options: {
 				apiKey: process.env.API_KEY || "abc123",
-				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000/api",
+				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:8001/api",
 				changesSinceDate,
 			},
 		},
