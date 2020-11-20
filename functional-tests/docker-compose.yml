@@ -37,7 +37,6 @@ services:
       - "8080:8080"
     volumes:
       - ./../web-app/publish:/app
-    dns: 8.8.8.8
     networks:
       default:
         aliases:
