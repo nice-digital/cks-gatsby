@@ -6,5 +6,5 @@ import { getSelector } from "../selectors";
  * @param {int} timeoutMs The timeout, in milliseconds, to wait
  */
 module.exports = (timeoutMs = 5000) => {
-	browser.waitForExist(getSelector("search results page"), timeoutMs);
+	browser.waitForVisible(getSelector("search results page"), timeoutMs);
 };
