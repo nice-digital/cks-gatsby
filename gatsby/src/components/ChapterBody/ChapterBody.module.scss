@@ -66,3 +66,11 @@
     display: none;
   }
 }
+
+@media print {
+  .body {
+    &[aria-hidden='true'] {
+      display: block;
+    }
+  }
+}
