@@ -1,9 +1,6 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 const moment = require("moment");
 
-require("source-map-support").install();
-require("ts-node/register/transpile-only");
-
 require("dotenv").config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
