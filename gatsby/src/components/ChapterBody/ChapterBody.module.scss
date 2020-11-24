@@ -68,9 +68,19 @@
 }
 
 @media print {
-  .body {
-    &[aria-hidden='true'] {
-      display: block;
+  .basisWrapper {
+    .headerWrapper > :first-child {
+      margin-bottom: 0;
+    }
+
+    .body {
+      &[aria-hidden='true'] {
+        display: block;
+      }
+    }
+
+    .toggleBtn {
+      display: none;
     }
   }
 }
