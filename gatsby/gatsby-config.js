@@ -29,8 +29,14 @@ module.exports = {
 		},
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-typescript",
+		"gatsby-plugin-preact",
 		"gatsby-plugin-catch-links",
-		"gatsby-plugin-sass",
+		{
+			resolve: `gatsby-plugin-sass`,
+			options: {
+				implementation: require("sass"),
+			},
+		},
 		// Gatsby loads a single CSS bundle by default (see https://github.com/gatsbyjs/gatsby/issues/11072#issue-399193885).
 		// But we want per-page chunks to minimize size, so use this plugin to split into separate chunks:
 		"gatsby-plugin-split-css",
@@ -46,7 +52,7 @@ module.exports = {
 			resolve: "gatsby-plugin-eslint",
 			options: {
 				test: /\.(?:j|t)sx?$/,
-				exclude: /global-nav/,
+				exclude: /(global-nav|node_modules|.cache|public)/,
 			},
 		},
 		{
