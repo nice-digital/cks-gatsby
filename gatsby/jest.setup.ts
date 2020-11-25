@@ -23,16 +23,6 @@ jest.mock("./src/hooks/useSiteMetadata", () => {
 	};
 });
 
-// Mock the useLocation hook as it can be used anywhere
-jest.mock("@reach/router", () => {
-	return {
-		...(jest.requireActual("@reach/router") as Record<string, unknown>),
-		useLocation: () => ({
-			pathname: "/test/",
-		}),
-	};
-});
-
 window.dataLayer = [];
 const originalPush = window.dataLayer.push;
 
