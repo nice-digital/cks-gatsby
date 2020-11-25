@@ -1,22 +1,7 @@
 import React from "react";
 import { render, waitFor, cleanup } from "@testing-library/react";
-import { useLocation } from "@reach/router";
-
-import { useSiteMetadata } from "../../hooks/useSiteMetadata";
 
 import { SEO } from "./SEO";
-
-jest.mock("../../hooks/useSiteMetadata", () => ({
-	useSiteMetadata: () => ({
-		siteUrl: "https://cks.nice.org.uk",
-	}),
-}));
-
-jest.mock("@reach/router", () => ({
-	useLocation: () => ({
-		pathname: "/test/",
-	}),
-}));
 
 // Shouldn't need a timeout this big, but tests sometimes fail without it
 const timeout = 4000;

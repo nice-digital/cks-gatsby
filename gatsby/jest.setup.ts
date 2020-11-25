@@ -14,8 +14,26 @@ jest.mock("./src/components/Footer/Footer", () => {
 	};
 });
 
-window.dataLayer = [];
+// Mock the useSiteMetadata hook as it uses useStaticQuery under the hood, which itself mocked!
+jest.mock("./src/hooks/useSiteMetadata", () => {
+	return {
+		useSiteMetadata: (): unknown => ({
+			siteUrl: "https://cks.nice.org.uk",
+		}),
+	};
+});
 
+// Mock the useLocation hook as it can be used anywhere
+jest.mock("@reach/router", () => {
+	return {
+		...(jest.requireActual("@reach/router") as Record<string, unknown>),
+		useLocation: () => ({
+			pathname: "/test/",
+		}),
+	};
+});
+
+window.dataLayer = [];
 const originalPush = window.dataLayer.push;
 
 window.dataLayer.push = jest.fn<number, DataLayerEntry[]>(
