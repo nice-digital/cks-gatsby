@@ -32,17 +32,12 @@ module.exports = {
 		},
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-typescript",
+		"gatsby-plugin-preact",
 		"gatsby-plugin-catch-links",
-		"gatsby-plugin-sass",
 		{
-			resolve: "gatsby-plugin-prefetch-google-fonts",
+			resolve: `gatsby-plugin-sass`,
 			options: {
-				fonts: [
-					{
-						family: "Lato",
-						variants: ["400", "700", "900"],
-					},
-				],
+				implementation: require("sass"),
 			},
 		},
 		// Gatsby loads a single CSS bundle by default (see https://github.com/gatsbyjs/gatsby/issues/11072#issue-399193885).
@@ -60,7 +55,7 @@ module.exports = {
 			resolve: "gatsby-plugin-eslint",
 			options: {
 				test: /\.(?:j|t)sx?$/,
-				exclude: /global-nav/,
+				exclude: /(global-nav|node_modules|.cache|public)/,
 			},
 		},
 		{
