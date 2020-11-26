@@ -6,7 +6,7 @@ import {
 	PartialSpeciality,
 	ChapterLevel1,
 	ChapterLevel2,
-} from "./types";
+} from "./src/types";
 
 interface AllTopicsQuery {
 	allTopics: {
@@ -230,7 +230,7 @@ export const onPostBuild = async ({
 	`);
 
 	const existingHtaccessContents = await fs.readFile(
-		path.join(__dirname, "../static", ".htaccess"),
+		path.join(__dirname, "static", ".htaccess"),
 		"utf-8"
 	);
 
@@ -247,7 +247,7 @@ export const onPostBuild = async ({
 		existingHtaccessContents + "\n" + topicRules?.join("\n");
 
 	await fs.writeFile(
-		path.join(__dirname, "../public", ".htaccess"),
+		path.join(__dirname, "public", ".htaccess"),
 		htaccessContents
 	);
 

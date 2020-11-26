@@ -6,7 +6,9 @@ export type DataLayerEntry = {
 	event?: string;
 	eventCallback?: () => void;
 	eventTimeout?: number;
-} & { [key: string]: string };
+	eventValue?: number;
+	[key: string]: unknown;
+};
 
 declare global {
 	interface Window {

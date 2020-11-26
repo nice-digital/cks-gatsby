@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
+    "lib": ["ES2015", "DOM"],
     "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
