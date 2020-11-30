@@ -72,5 +72,23 @@ namespace CKS.Web.Test.IntegrationTests
 				response.Headers.CacheControl.ToString().ShouldBe("public, must-revalidate, max-age=0");
 			}
 		}
+
+		[Fact]
+		public async void HtmlDocumentReturnsLinkHeaders()
+		{
+
+			using (var client = _factory
+				.UseWebRoot("/IntegrationTests/Fakes")
+				.CreateClient())
+			{
+				var responseForHtml = await client.GetAsync("test.html");
+
+				responseForHtml.Headers.GetValues("Link")
+					.First().ShouldBe(
+						"<https://apikeys.civiccomputing.com>; rel=preconnect; crossorigin," +
+						"<https://www.googletagmanager.com>; rel=preconnect," +
+						"<https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js>; rel=preload; as=script");
+			}
+		}
 	}
 }
