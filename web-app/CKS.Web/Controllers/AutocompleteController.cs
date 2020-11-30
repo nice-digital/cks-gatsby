@@ -45,11 +45,13 @@ namespace CKS.Web.Controllers
 			}
 
 			var autoCompleteResponses = from result in search.Results
+										let TitlePostfix = result.TypeAheadType == TitleTypeAheadType ? " (Topic)" : ""
+										let Link = GetLink(result)
 										select new
 										{
-											Title = result.Title,
-											TypeAheadType = result.TypeAheadType,
-											Link = GetLink(result)
+											Title = result.Title + TitlePostfix,
+											result.TypeAheadType,
+											Link
 										};
 
 			// Use Capitalized property names, rather than the default camel cased as this is what global nav looks for
