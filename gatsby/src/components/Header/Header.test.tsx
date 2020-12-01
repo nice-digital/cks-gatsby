@@ -1,9 +1,7 @@
 import React from "react";
 import { fireEvent, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { navigate } from "gatsby";
 import { renderWithRouter } from "test-utils";
-import { useLocation } from "@reach/router";
 
 // Header is mocked globally in setup
 const { Header } = jest.requireActual("./Header");
