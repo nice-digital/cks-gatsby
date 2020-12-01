@@ -1,8 +1,10 @@
+using CKS.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Common.Models;
 using NICE.Search.Common.Urls;
+using System;
 using System.Linq;
 using System.Text.Json;
 
@@ -41,17 +43,16 @@ namespace CKS.Web.Controllers
 					searchUrl
 					);
 
-				return new JsonResult(new string[] { }) { StatusCode = 500 };
+				return new JsonResult(Enumerable.Empty<object>()) { StatusCode = 500 };
 			}
 
 			var autoCompleteResponses = from result in search.Results
 										let TitlePostfix = result.TypeAheadType == TitleTypeAheadType ? " (Topic)" : ""
-										let Link = GetLink(result)
-										select new
+										select new AutocompleteItemResponse
 										{
 											Title = result.Title + TitlePostfix,
-											result.TypeAheadType,
-											Link
+											TypeAheadType = result.TypeAheadType,
+											Link = GetLink(result)
 										};
 
 			// Use Capitalized property names, rather than the default camel cased as this is what global nav looks for
@@ -76,7 +77,7 @@ namespace CKS.Web.Controllers
 					searchUrl
 					);
 
-				return new JsonResult(new object[] { searchUrl.q, new string[] { }, new string[] { }, new string[] { } }) { StatusCode = 500 };
+				return new JsonResult(new object[] { searchUrl.q, Enumerable.Empty<string>(), Enumerable.Empty<string>(), Enumerable.Empty<string>() }) { StatusCode = 500 };
 			}
 
 			// Open search suggestions have this weird nested list format
