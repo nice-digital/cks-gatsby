@@ -1,0 +1,392 @@
+{
+  "took": 7,
+  "timed_out": false,
+  "_shards": { "total": 1, "successful": 1, "skipped": 0, "failed": 0 },
+  "hits": {
+    "total": 248,
+    "max_score": 29.727575,
+    "hits": [
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2255422",
+        "_score": 29.727575,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "metadescription": "For prescribing information on paracetamol, see the CKS topic on Analgesia - mild-to-moderate pain .",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2255422,
+          "title": "Gout: Paracetamol",
+          "url": "https://cks.nice.org.uk/topics/gout/prescribing-information/paracetamol/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/gout/prescribing-information/paracetamol/"
+        },
+        "highlight": {
+          "title": ["Gout: <b>Paracetamol</b>"],
+          "content": [
+            "<mark>Paracetamol</mark> For prescribing information on <mark>paracetamol</mark>, see the CKS topic on  Analgesia - mild-to-moderate pain ."
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2256594",
+        "_score": 29.172785,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "metadescription": "For detailed prescribing information on paracetamol, see the CKS&nbsp;topic on&nbsp;Analgesia - mild-to-moderate pain .",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2256594,
+          "title": "Whooping cough: Paracetamol",
+          "url": "https://cks.nice.org.uk/topics/whooping-cough/prescribing-information/paracetamol/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/whooping-cough/prescribing-information/paracetamol/"
+        },
+        "highlight": {
+          "title": ["Whooping cough: <b>Paracetamol</b>"],
+          "content": [
+            "<mark>Paracetamol</mark> For detailed prescribing information on <mark>paracetamol</mark>, see the CKS topic on Analgesia - mild-to-moderate pain ."
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2254755",
+        "_score": 27.946064,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "metadescription": "For prescribing information on paracetamol, see the CKS topic&nbsp;on&nbsp;Analgesia - mild-to-moderate pain .",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2254755,
+          "title": "Breastfeeding problems: Paracetamol",
+          "url": "https://cks.nice.org.uk/topics/breastfeeding-problems/prescribing-information/paracetamol/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/breastfeeding-problems/prescribing-information/paracetamol/"
+        },
+        "highlight": {
+          "title": ["Breastfeeding problems: <b>Paracetamol</b>"],
+          "content": [
+            "<mark>Paracetamol</mark> For prescribing information on <mark>paracetamol</mark>, see the CKS topic on Analgesia - mild-to-moderate pain ."
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2254940",
+        "_score": 27.943584,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "metadescription": "For detailed prescribing information on paracetamol, see the CKS topic on Analgesia - mild-to-moderate pain .",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2254940,
+          "title": "Common cold: Paracetamol",
+          "url": "https://cks.nice.org.uk/topics/common-cold/prescribing-information/paracetamol/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/common-cold/prescribing-information/paracetamol/"
+        },
+        "highlight": {
+          "title": ["Common cold: <b>Paracetamol</b>"],
+          "content": [
+            "<mark>Paracetamol</mark> For detailed prescribing information on <mark>paracetamol</mark>, see the CKS topic on Analgesia - mild-to-moderate pain ."
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2255050",
+        "_score": 27.463514,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2255050,
+          "title": "Croup: Paracetamol and ibuprofen",
+          "url": "https://cks.nice.org.uk/topics/croup/prescribing-information/paracetamol-ibuprofen/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/croup/prescribing-information/paracetamol-ibuprofen/"
+        },
+        "highlight": {
+          "title": ["Croup: <b>Paracetamol</b> and ibuprofen"],
+          "content": [
+            "<mark>Paracetamol</mark> and ibuprofen For detailed prescribing information on <mark>paracetamol</mark> and ibuprofen, please see the CKS topic on Analgesia - mild-to-moderate pain"
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2254590",
+        "_score": 26.768055,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2254590,
+          "title": "Ankylosing spondylitis: Paracetamol and codeine",
+          "url": "https://cks.nice.org.uk/topics/ankylosing-spondylitis/prescribing-information/paracetamol-codeine/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/ankylosing-spondylitis/prescribing-information/paracetamol-codeine/"
+        },
+        "highlight": {
+          "title": ["Ankylosing spondylitis: <b>Paracetamol</b> and codeine"],
+          "content": [
+            "<mark>Paracetamol</mark> and codeine What issues should I consider before prescribing <mark>paracetamol</mark> and codeine? For more information on prescribing analgesia such as",
+            "as <mark>paracetamol</mark> and codeine, see the CKS topic on Analgesia - mild-to-moderate pain . What issues should I consider before prescribing <mark>paracetamol</mark> and codeine",
+            "codeine? For more information on prescribing analgesia such as <mark>paracetamol</mark> and codeine, see the CKS topic on Analgesia - mild-to-moderate pain ."
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2254556",
+        "_score": 26.244135,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "managing;management",
+          "metadescription": "There are no contraindications to the use of paracetamol.",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2254556,
+          "title": "Analgesia - mild-to-moderate pain: Scenario: Paracetamol",
+          "url": "https://cks.nice.org.uk/topics/analgesia-mild-to-moderate-pain/management/paracetamol/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/analgesia-mild-to-moderate-pain/management/paracetamol/"
+        },
+        "highlight": {
+          "title": [
+            "Analgesia - mild-to-moderate pain: Scenario: <b>Paracetamol</b>"
+          ],
+          "content": [
+            "Scenario: <mark>Paracetamol</mark> From age 3 months onwards. What are the contraindications and cautions for <mark>paracetamol</mark>? There are no contraindications to the use",
+            "use of <mark>paracetamol.</mark> Prescribe <mark>paracetamol</mark> with caution (and consider a dose reduction ): If there are risk factors for hepatotoxicity and inadvertent paracetamol",
+            "<mark>paracetamol</mark> overdose, including:Alcohol dependency. Malnutrition. Chronic dehydration. Body weight less than 50 kg. Severe liver disease â  pharmacokinetics",
+            " pharmacokinetics of <mark>paracetamol</mark> is altered in severe liver disease, and the hazards of overdose are greater in people  with non-cirrhotic alcoholic liver disease",
+            "disease. Increasing age and/or frailty  â a reduction of the clearance of <mark>paracetamol</mark> has been associated with increased age and frailty. In addition, elderly"
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2256407",
+        "_score": 26.022318,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2256407,
+          "title": "Sinusitis: Prescribing paracetamol and ibuprofen",
+          "url": "https://cks.nice.org.uk/topics/sinusitis/prescribing-information/analgesia/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/sinusitis/prescribing-information/analgesia/"
+        },
+        "highlight": {
+          "title": ["Sinusitis: Prescribing <b>paracetamol</b> and ibuprofen"],
+          "content": [
+            "Prescribing <mark>paracetamol</mark> and ibuprofen For information on prescribing <mark>paracetamol</mark> and ibuprofen, see the CKS topics on Analgesia - mild-to-moderate pain"
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2256216",
+        "_score": 26.01491,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2256216,
+          "title": "Prostatitis - chronic: Paracetamol and NSAIDs",
+          "url": "https://cks.nice.org.uk/topics/prostatitis-chronic/prescribing-information/paracetamol-ibuprofen-codeine/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/prostatitis-chronic/prescribing-information/paracetamol-ibuprofen-codeine/"
+        },
+        "highlight": {
+          "title": ["Prostatitis - chronic: <b>Paracetamol</b> and NSAIDs"],
+          "content": [
+            "<mark>Paracetamol</mark> and NSAIDs For prescribing information on <mark>paracetamol</mark> and nonsteroidal anti-inflammatory drugs (NSAIDs), see the CKS topics on Analgesia -"
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2256428",
+        "_score": 25.1511,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2256428,
+          "title": "Sore throat - acute: Paracetamol andibuprofen",
+          "url": "https://cks.nice.org.uk/topics/sore-throat-acute/prescribing-information/paracetamol-ibuprofen/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/sore-throat-acute/prescribing-information/paracetamol-ibuprofen/"
+        },
+        "highlight": {
+          "title": ["Sore throat - acute: <b>Paracetamol</b> andibuprofen"],
+          "content": [
+            "<mark>Paracetamol</mark> and  ibuprofen For detailed prescribing information on <mark>paracetamol</mark> and ibuprofen, see the CKS topics on  Analgesia - mild-to-moderate pain"
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2256172",
+        "_score": 24.798567,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2256172,
+          "title": "Post-herpetic neuralgia: Paracetamol and codeine",
+          "url": "https://cks.nice.org.uk/topics/post-herpetic-neuralgia/prescribing-information/paracetamol-codeine/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/post-herpetic-neuralgia/prescribing-information/paracetamol-codeine/"
+        },
+        "highlight": {
+          "title": ["Post-herpetic neuralgia: <b>Paracetamol</b> and codeine"],
+          "content": [
+            "<mark>Paracetamol</mark> and codeine For detailed prescribing information on <mark>paracetamol</mark> and codeine, please see the CKS topic on Analgesia - mild-to-moderate pain"
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2255954",
+        "_score": 24.786211,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2255954,
+          "title": "Osgood-Schlatter disease: Paracetamol and NSAIDs",
+          "url": "https://cks.nice.org.uk/topics/osgood-schlatter-disease/prescribing-information/paracetamol-nsaids/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/osgood-schlatter-disease/prescribing-information/paracetamol-nsaids/"
+        },
+        "highlight": {
+          "title": ["Osgood-Schlatter disease: <b>Paracetamol</b> and NSAIDs"],
+          "content": [
+            "<mark>Paracetamol</mark> and NSAIDs For prescribing information on <mark>paracetamol</mark> and nonsteroidal anti-inflammatory drugs (NSAIDs), see the CKS topics on Analgesia -"
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2254666",
+        "_score": 24.057741,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2254666,
+          "title": "Back pain - low (without radiculopathy): Paracetamol",
+          "url": "https://cks.nice.org.uk/topics/back-pain-low-without-radiculopathy/prescribing-information/paracetamol/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/back-pain-low-without-radiculopathy/prescribing-information/paracetamol/"
+        },
+        "highlight": {
+          "title": [
+            "Back pain - low (without radiculopathy): <b>Paracetamol</b>"
+          ],
+          "content": [
+            "<mark>Paracetamol</mark> For detailed information on prescribing <mark>paracetamol</mark>, see the CKS topic on Analgesia - mild-to-moderate pain ."
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2256132",
+        "_score": 23.73275,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "metadescription": "For more information on prescribing paracetamol and weak opioids, see the CKS&nbsp;topic on Analgesia - mild-to-moderate pain .",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2256132,
+          "title": "Peripheral arterial disease: Paracetamol and weak opioids",
+          "url": "https://cks.nice.org.uk/topics/peripheral-arterial-disease/prescribing-information/paracetamol-weak-opioids/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/peripheral-arterial-disease/prescribing-information/paracetamol-weak-opioids/"
+        },
+        "highlight": {
+          "title": [
+            "Peripheral arterial disease: <b>Paracetamol</b> and weak opioids"
+          ],
+          "content": [
+            "<mark>Paracetamol</mark> and weak opioids For more information on prescribing <mark>paracetamol</mark> and weak opioids, see the CKS topic on Analgesia - mild-to-moderate pain "
+          ]
+        }
+      },
+      {
+        "_index": "cks_2020_08_27",
+        "_type": "document",
+        "_id": "2255979",
+        "_score": 23.730278,
+        "_source": {
+          "altsourceshort": ["CKS"],
+          "keywords": "prescribing;prescription",
+          "boostvalue": 100,
+          "feedertype": "pfeeders",
+          "accredited": "False",
+          "clusterid": -2255979,
+          "title": "Otitis media - acute: Prescribing paracetamol and ibuprofen",
+          "url": "https://cks.nice.org.uk/topics/otitis-media-acute/prescribing-information/analgesia/",
+          "source_name": "CKS subsections",
+          "landing_url": "https://cks.nice.org.uk/topics/otitis-media-acute/prescribing-information/analgesia/"
+        },
+        "highlight": {
+          "title": [
+            "Otitis media - acute: Prescribing <b>paracetamol</b> and ibuprofen"
+          ],
+          "content": [
+            "Prescribing <mark>paracetamol</mark> and ibuprofen For information on prescribing <mark>paracetamol</mark> and ibuprofen, see the CKS topics on Analgesia - mild-to-moderate pain"
+          ]
+        }
+      }
+    ]
+  },
+  "aggregations": { "cardinality#unique_count": { "value": 248 } }
+}

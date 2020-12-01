@@ -4,6 +4,7 @@ const URL = require("url").URL;
 import { When } from "cucumber";
 import "@nice-digital/wdio-cucumber-steps/lib/when";
 
+import openWebsite from "@nice-digital/wdio-cucumber-steps/lib/support/action/openWebsite";
 import clickElement from "@nice-digital/wdio-cucumber-steps/lib/support/action/clickElement";
 import waitFor from "@nice-digital/wdio-cucumber-steps/lib/support/action/waitFor";
 import checkIfElementExists from "@nice-digital/wdio-cucumber-steps/lib/support/lib/checkIfElementExists";
@@ -13,7 +14,11 @@ import scrollInToView from "../support/action/scrollInToView";
 import waitForTitleToChange from "../support/action/waitForTitleToChange";
 import waitForUrlToChange from "../support/action/waitForUrlToChange";
 import waitForScrollToElement from "../support/action/waitForScrollToElement";
+import acceptCookieBanner from "../support/action/acceptCookieBanner";
+import waitForReact from "../support/action/waitForReact";
+import waitForSearchLoad from "../support/action/waitForSearchLoad";
 import { getSelector } from "../support/selectors";
+import { getPath } from "../support/pagePaths";
 
 When(/^I type "([^"]*)" in the header search box$/, typeInSearchBox);
 
@@ -82,4 +87,34 @@ When(/^I click the "([^"]*)" link$/, (linkText) => {
 		const targetElementId = newUrl.hash;
 		waitForScrollToElement(targetElementId);
 	}
+});
+
+When("I search for {string}", (searchTerm) => {
+	const pageTitle = browser.getTitle();
+	typeInSearchBox(searchTerm);
+	clickElement("click", "element", getSelector("header search button"));
+	waitForTitleToChange(pageTitle);
+	waitForSearchLoad();
+});
+
+When("I view the search results page for {string}", (searchTerm) => {
+	openWebsite(
+		"url",
+		getPath("search") + "?q=" + encodeURIComponent(searchTerm)
+	);
+
+	waitForReact();
+	acceptCookieBanner();
+	waitForSearchLoad();
+});
+
+When("I view the 2nd page of search results for {string}", (searchTerm) => {
+	openWebsite(
+		"url",
+		`${getPath("search")}?q=${encodeURIComponent(searchTerm)}&pa=2`
+	);
+
+	waitForReact();
+	acceptCookieBanner();
+	waitForSearchLoad();
 });

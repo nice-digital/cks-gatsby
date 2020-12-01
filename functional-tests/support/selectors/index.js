@@ -6,6 +6,11 @@ import {
 	selectors as whatsNewSelectors,
 } from "./pages/whats-new";
 
+import {
+	path as searchPath,
+	selectors as searchSelectors,
+} from "./pages/search";
+
 import commonSelectors from "./common";
 
 // Map of path regular expression to selectors
@@ -13,6 +18,10 @@ const pageMappings = [
 	{
 		path: whatsNewPath,
 		selectors: whatsNewSelectors,
+	},
+	{
+		path: searchPath,
+		selectors: searchSelectors,
 	},
 ];
 
