@@ -153,6 +153,12 @@ Or you can use a keyword to filter e.g.:
 npm test -- --spec homepage
 ```
 
+Note: this can be combined with other options, for example to run _just_ the search page tests against live CKS, run:
+
+```sh
+npm test -- --spec search --baseUrl http://cks.nice.org.uk
+```
+
 Finally, if you've grouped your specs into suites you can run and individual suite with:
 
 ```sh
