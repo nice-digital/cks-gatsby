@@ -24,6 +24,9 @@
       "protocol": "inspector",
       "program": "${workspaceFolder}/gatsby/node_modules/gatsby/dist/bin/gatsby",
       "args": ["develop"],
+      "env": {
+        "GATSBY_HOT_LOADER": "fast-refresh"
+      },
       "cwd": "${workspaceFolder}/gatsby",
       "localRoot": "${workspaceFolder}/gatsby",
       "remoteRoot": "${workspaceFolder}/gatsby",
