@@ -5,12 +5,10 @@ Feature: Header
   Background:
     Given I open the home page
 
-  @pending
   Scenario: Use autocomplete to get a search suggestion for a topic name
     When I type "Ast" in the header search box
     Then I expect to see "Asthma" in the autocomplete suggestions
 
-  @pending
   Scenario: Navigate straight to a topic from an autocomplete suggestion
     When I click "Asthma" in the autocomplete options
     And I expect the url to contain "asthma"
