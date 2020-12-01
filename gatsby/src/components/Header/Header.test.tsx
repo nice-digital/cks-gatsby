@@ -2,11 +2,25 @@ import React from "react";
 import { fireEvent, waitFor } from "@testing-library/react";
 import { navigate } from "gatsby";
 import { renderWithRouter } from "test-utils";
+import { useLocation } from "@reach/router";
 
 // Header is mocked globally in setup
 const { Header } = jest.requireActual("./Header");
 
 describe("Header", () => {
+	beforeEach(() => {
+		jest.restoreAllMocks();
+
+		// The useLocation is mocked globally but because we're using renderWithRouter here
+		// (ie with a LocationProvider) we want to use the actual implementation of useLocation
+		(useLocation as jest.Mock).mockImplementation(() =>
+			jest.requireActual("@reach/router").useLocation()
+		);
+
+		// Global nav uses a fetch to load autocomplete suggestions, and changing the input value triggers this fetch
+		fetchMock.mockResponseOnce(JSON.stringify([]));
+	});
+
 	it("should render global nav with CKS highlighted in the nav", async () => {
 		const { findByText } = renderWithRouter(<Header />);
 
