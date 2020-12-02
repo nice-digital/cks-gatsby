@@ -17,6 +17,11 @@ exports[`SEO should set default title and description when none provided 1`] = `
     href="/favicon.ico"
     rel="icon"
   />
+  <link
+    data-react-helmet="true"
+    href="https://cks.nice.org.uk/test/"
+    rel="canonical"
+  />
   <meta
     content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice"
     data-react-helmet="true"
@@ -26,6 +31,11 @@ exports[`SEO should set default title and description when none provided 1`] = `
     content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice"
     data-react-helmet="true"
     property="og:description"
+  />
+  <meta
+    content="https://cks.nice.org.uk/test/"
+    data-react-helmet="true"
+    property="og:url"
   />
   <meta
     content="en_GB"

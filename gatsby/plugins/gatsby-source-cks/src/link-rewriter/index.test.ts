@@ -20,7 +20,7 @@ describe("link rewriter", () => {
 		} as unknown) as Reporter;
 
 	afterEach(() => {
-		jest.resetAllMocks();
+		jest.restoreAllMocks();
 	});
 
 	describe("topic links", () => {

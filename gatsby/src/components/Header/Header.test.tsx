@@ -3,13 +3,21 @@ import { fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { navigate, useStaticQuery } from "gatsby";
 import { renderWithRouter } from "test-utils";
+import { useLocation } from "@reach/router";
 
 // Header is mocked globally in setup
 const { Header } = jest.requireActual("./Header");
 
 describe("Header", () => {
 	beforeEach(() => {
-		jest.resetAllMocks();
+		jest.restoreAllMocks();
+
+		// The useLocation is mocked globally but because we're using renderWithRouter here
+		// (ie with a LocationProvider) we want to use the actual implementation of useLocation
+		(useLocation as jest.Mock).mockImplementation(() =>
+			jest.requireActual("@reach/router").useLocation()
+		);
+
 		((useStaticQuery as unknown) as jest.Mock).mockReturnValue({
 			allCksTopic: {
 				nodes: [],
