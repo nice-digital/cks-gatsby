@@ -12,4 +12,9 @@
   <ItemGroup>
     <ProjectReference Include="..\aws-cks-lambda-demo\aws-cks-lambda-demo.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="http-api-v2-request.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
