@@ -1,6 +1,4 @@
 import { Config } from "webdriverio";
-import { CucumberOpts } from "@wdio/cucumber-framework";
-import path from "path";
 
 const isInDocker = !!process.env.IN_DOCKER,
 	isTeamCity = !!process.env.TEAMCITY_VERSION;
