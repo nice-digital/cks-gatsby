@@ -7,7 +7,7 @@
     "ts": "tsc --noEmit",
     "pretest": "npm run ts",
     "test": "wdio run wdio.conf.js",
-    "test:docker": "npm test -- --host selenium-hub --baseUrl http://cks-functional-tests.nice.org.uk:8080",
+    "test:docker": "npm test -- --hostname selenium-hub --baseUrl http://cks-functional-tests.nice.org.uk:8080",
     "wait:docker": "wait-on http://cks-functional-tests.nice.org.uk:8080 --timeout 30000",
     "wait-then-test": "npm run wait:docker && npm run test:docker"
   },
