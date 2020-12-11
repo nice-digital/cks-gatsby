@@ -15,6 +15,7 @@ export const config: Config = {
 					},
 				],
 		  ],
+	path: "/wd/hub",
 
 	specs: ["./features/**/*.feature"],
 
