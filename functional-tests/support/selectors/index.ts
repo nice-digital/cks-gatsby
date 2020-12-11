@@ -1,6 +1,3 @@
-// URL is global in Node 10 and above but needs an explicit import for Node 8
-const URL = require("url").URL;
-
 import {
 	path as whatsNewPath,
 	selectors as whatsNewSelectors,
@@ -12,6 +9,11 @@ import {
 } from "./pages/search";
 
 import commonSelectors from "./common";
+
+export type SelectorName =
+	| keyof typeof commonSelectors
+	| keyof typeof whatsNewSelectors
+	| keyof typeof searchSelectors;
 
 // Map of path regular expression to selectors
 const pageMappings = [
@@ -25,14 +27,19 @@ const pageMappings = [
 	},
 ];
 
-export const getSelector = (selectorName) => {
-	const browserPath = new URL(browser.getUrl()).pathname,
-		pageMapping = pageMappings.find(({ path }) =>
-			typeof path === "string" ? path === browserPath : path.test(browserPath)
-		),
-		pageSelectors = pageMapping && pageMapping.selectors,
-		selectors = Object.assign({}, commonSelectors, pageSelectors),
-		selector = selectors[selectorName];
+export const getSelector = async (
+	selectorName: SelectorName
+): Promise<string> => {
+	const browserPath = new URL(await browser.getUrl()).pathname,
+		pageMapping = pageMappings.find(({ path }) => path === browserPath);
+
+	const pageSelectors = pageMapping && pageMapping.selectors;
+
+	const selectors = { ...commonSelectors, ...pageSelectors } as Record<
+			SelectorName,
+			string
+		>,
+		selector: string = selectors[selectorName];
 
 	if (!selector)
 		throw new Error(

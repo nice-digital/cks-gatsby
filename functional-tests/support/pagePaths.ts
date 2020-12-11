@@ -14,10 +14,12 @@ export const pagePaths = {
 	search: "/search/",
 };
 
-export const getPath = (pageName) => {
+export type PageName = keyof typeof pagePaths;
+
+export const getPath = (pageName: PageName) => {
 	const path = pagePaths[pageName];
 
-	if (!path) throw new Error(`Path for page ${pageName} could not be resolved`);
+	if (!path) throw `Path for page ${pageName} could not be resolved`;
 
 	return path;
 };

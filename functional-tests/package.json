@@ -4,7 +4,9 @@
   "description": "Functional, browser-based tests for CKS",
   "main": "index.js",
   "scripts": {
-    "test": "node --no-deprecation --no-warnings node_modules/webdriverio/bin/wdio",
+    "ts": "tsc --noEmit",
+    "pretest": "npm run ts",
+    "test": "wdio run wdio.conf.js",
     "test:docker": "npm test -- --host selenium-hub --baseUrl http://cks-functional-tests.nice.org.uk:8080",
     "wait:docker": "wait-on http://cks-functional-tests.nice.org.uk:8080 --timeout 30000",
     "wait-then-test": "npm run wait:docker && npm run test:docker"
@@ -18,7 +20,7 @@
     "webdriverio"
   ],
   "engines": {
-    "node": ">=10",
+    "node": ">=12.16.1",
     "npm": ">=6"
   },
   "author": "NICE Digital (https://www.nice.org.uk/digital)",
@@ -29,19 +31,19 @@
   "license": "MIT",
   "homepage": "https://github.com/nice-digital/cks-gatsby/functional-tests#readme",
   "devDependencies": {
-    "@nice-digital/wdio-cucumber-steps": "^0.11.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-flow": "^6.23.0",
-    "babel-register": "^6.26.0",
-    "chai": "^4.0.2",
-    "cross-env": "^7.0.2",
+    "@nice-digital/wdio-cucumber-steps": "^1.0.1-0",
+    "@types/node": "^14.14.12",
+    "@wdio/allure-reporter": "^6.10.6",
+    "@wdio/cli": "^6.10.5",
+    "@wdio/cucumber-framework": "^6.10.4",
+    "@wdio/local-runner": "^6.10.6",
+    "@wdio/selenium-standalone-service": "^6.10.6",
+    "@wdio/spec-reporter": "^6.8.1",
+    "cross-env": "^7.0.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.2",
     "wait-on": "^5.1.0",
-    "wdio-allure-reporter": "^0.8.3",
-    "wdio-cucumber-framework": "^2.2.8",
-    "wdio-selenium-standalone-service": "0.0.12",
-    "wdio-spec-reporter": "^0.1.4",
-    "wdio-teamcity-reporter": "^1.1.1",
-    "webdriverio": "^4.14.4"
+    "wdio-teamcity-reporter": "^2.3.0",
+    "webdriverio": "^6.10.5"
   }
 }

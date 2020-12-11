@@ -7,19 +7,17 @@
 ## Table of contents
 
 - [Functional tests for CKS](#functional-tests-for-cks)
-  - [Table of contents](#table-of-contents)
-  - [Stack](#stack)
-    - [Software](#software)
-  - [:rocket: Set up](#rocket-set-up)
-    - [Using VSCode](#using-vscode)
-    - [Using npm](#using-npm)
-      - [Different URLs](#different-urls)
-    - [Docker](#docker)
-      - [Development mode](#development-mode)
-  - [Excluding tests](#excluding-tests)
-  - [Running single features](#running-single-features)
-  - [Troubleshooting](#troubleshooting)
-    - [Issue wih node-fibers](#issue-wih-node-fibers)
+	- [Table of contents](#table-of-contents)
+	- [Stack](#stack)
+		- [Software](#software)
+	- [:rocket: Set up](#rocket-set-up)
+		- [Using VSCode](#using-vscode)
+		- [Using npm](#using-npm)
+			- [Different URLs](#different-urls)
+		- [Docker](#docker)
+			- [Development mode](#development-mode)
+	- [Excluding tests](#excluding-tests)
+	- [Running single features](#running-single-features)
 
 ## Stack
 
@@ -27,15 +25,12 @@
 
 - [VS Code IDE](https://code.visualstudio.com/)
   - With recommended extensions (VS Code will prompt you to install these automatically)
-- [WebdriverIO](http://v4.webdriver.io/) v4
+- [WebdriverIO 6](<[http://.webdriver.io/](https://webdriver.io/)>)
   - [Cucumber.js](https://github.com/cucumber/cucumber-js) for running BDD gherkin-syntax feature files
-  - [Chai](https://www.chaijs.com/) for assertions
   - [wdio-cucumber-steps](https://github.com/nice-digital/wdio-cucumber-steps) for shared step definitions for Cucumber JS BDD tests in WebdriverIO
   - [Axe core](https://github.com/dequelabs/axe-core) for automatic accessibility testing
   - [Allure](https://docs.qameta.io/allure/) to generate a test report
 - [Docker](https://www.docker.com/) for running the tests in TeamCity against Chrome and Firefox
-
-> Note: we're using v4 of WebdriverIO so be sure to use the correct version of the docs at http://v4.webdriver.io/!
 
 ## :rocket: Set up
 
@@ -49,7 +44,7 @@ Using VSCode to run the tests will launch browsers on your local machine to run 
 
 This runs the tests against the [web-app](../web-app/) running on http://localhost:5000.
 
-1. Install Node 10
+1. Install Node 12+ LTS
 2. Install Chrome
 3. Clone this repository
 4. Open the root of the repository in VS Code
@@ -63,8 +58,6 @@ This runs the tests against the [web-app](../web-app/) running on http://localho
 8. Run 'Webapp - launch' to run the webapp on port 5000
 9. Run 'Run Test Task' from the command palette (_Ctrl+Shift+P_) and choose 'Functional tests - all'
    1. Or run 'Functional tests - current feature' to run just the currently opened feature file.
-
-> Note: the tests seem to run with Node 12 OK on Linux, but not on Windows. They fail with errors installing fibers. So stick with Node 10 for the time being.
 
 We run the tests against the web application (and _not_ the Gatsby development site) for 2 reasons:
 
@@ -81,7 +74,7 @@ Follow the instructions from the [VSCode](#using-vscode) section above, but inst
 
 #### Different URLs
 
-Use the `-b` (or `--baseUrl`) [CLI parameter](http://v4.webdriver.io/guide/testrunner/gettingstarted.html) from WebdriverIO to override the URL for the tests.
+Use the `-b` (or `--baseUrl`) [CLI parameter](https://webdriver.io/docs/clioptions.html) from WebdriverIO to override the URL for the tests.
 
 For example, to run against the test environment:
 
@@ -95,7 +88,7 @@ We run the tests in Docker on TeamCity because it allows us to spin up a self-co
 
 It can be harder to debug tests running inside Docker as you can't watch the tests run in the browser, but we do save error screenshots and logs into the docker-output folder for debugging.
 
-1. Install Node 10
+1. Install Node 12
 2. Build the [Gatsby site](../gatsby/):
    1. `cd gatsby && npm run build`
 3. Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
@@ -165,14 +158,4 @@ Finally, if you've grouped your specs into suites you can run and individual sui
 npm test -- --suite homepage
 ```
 
-See [organizing test suites](http://v4.webdriver.io/guide/testrunner/organizesuite.html) in the WebdriverIO docs for more info.
-
-## Troubleshooting
-
-### Issue wih node-fibers
-
-If you run `npm test` and get an issue like:
-
-> There is an issue with `node-fibers`... Couldn't initialise framework "wdio-cucumber-framework" Missing binary. See message above.
-
-Then, check you're running Node 10. If you're using NVM and switch to Node 12+ you'll get this issue, so switch back to 10.
+See [organizing test suites](https://webdriver.io/docs/organizingsuites.html) in the WebdriverIO docs for more info.
