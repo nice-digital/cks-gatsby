@@ -21,7 +21,7 @@ Then("I expect that the CKS GTM container is available", async () => {
 
 Then(
 	/^I expect to see "([^"]*)" in the autocomplete suggestions$/,
-	async (text) => {
+	async (text: string) => {
 		const optionElement = await $(await getSelector("autocomplete option"));
 		await optionElement.waitForExist();
 
@@ -32,7 +32,7 @@ Then(
 
 Then(
 	/^I expect to see a meta tag named "([^"]*)" with the content "([^"]*)"$/,
-	async (name, content) => {
+	async (name: string, content: string) => {
 		const element = await $(`meta[name='${name}']`);
 		expect(element).toHaveAttribute("content", content);
 	}
