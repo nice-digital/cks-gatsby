@@ -25,6 +25,7 @@
 
   .heading {
     @include nds-font(h4);
+    margin-top: 0;
   }
 
   @supports (position: sticky) {
