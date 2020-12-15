@@ -56,7 +56,7 @@ namespace aws_cks_lambda_demo.Tests
 			Assert.Equal(1, request.QueryStringParameters.Count);
 			Assert.Equal("testingtesting", request.QueryStringParameters["input"]);
 
-			Assert.Equal("TESTINGTESTING", response);
+			Assert.Equal("TESTINGTESTING", response.Body);
 
 		}
 	}

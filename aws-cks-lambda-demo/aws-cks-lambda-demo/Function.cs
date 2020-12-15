@@ -18,10 +18,16 @@ namespace aws_cks_lambda_demo
 	    /// <param name="request"></param>
 	    /// <param name="context"></param>
 	    /// <returns></returns>
-	    public string GetUpperCaseHandler(APIGatewayHttpApiV2ProxyRequest request, ILambdaContext context)
+	    public APIGatewayHttpApiV2ProxyResponse GetUpperCaseHandler(APIGatewayHttpApiV2ProxyRequest request, ILambdaContext context)
         {
 	        var inputQueryStringParameter = request.QueryStringParameters["input"];
-            return inputQueryStringParameter?.ToUpper();
+	        var response = new APIGatewayHttpApiV2ProxyResponse
+	        {
+		        Body = inputQueryStringParameter?.ToUpper()
+	        };
+
+	        return response;
+
         }
     }
 }
