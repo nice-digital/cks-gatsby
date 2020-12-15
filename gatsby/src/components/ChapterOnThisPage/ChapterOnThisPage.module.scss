@@ -1,0 +1,55 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.wrapper {
+  margin-bottom: rem($nds-spacing-large);
+}
+
+.heading {
+  margin-top: 0;
+}
+
+.rootList {
+  list-style: disc;
+}
+
+.subList {
+  list-style: circle;
+}
+
+@include mq($from: md) {
+  .wrapper {
+    margin-bottom: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .heading {
+    @include nds-font(h4);
+  }
+
+  @supports (position: sticky) {
+    .rootList {
+      a {
+        &[aria-current='location'] {
+          font-weight: bold;
+        }
+
+        &:focus + .subList {
+          @include nds-invisible-off;
+        }
+      }
+    }
+
+    .subList {
+      @include nds-invisible;
+
+      &:focus-within {
+        @include nds-invisible-off;
+      }
+    }
+
+    .expandedSubList {
+      @include nds-invisible-off;
+    }
+  }
+}

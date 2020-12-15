@@ -5,7 +5,35 @@
 }
 
 .printBtn {
+  @include nds-link-default;
+  appearance: none;
+  background: none;
+  border: 0;
+  bottom: 100%;
+  cursor: pointer;
   display: none;
+  padding: 0;
+
+  svg {
+    @include nds-font-size(2);
+    color: $nds-colour-nice-rich-black;
+    margin-right: rem($nds-spacing-small);
+    vertical-align: text-bottom;
+  }
+
+  &:hover svg {
+    color: $nds-colour-link-hover;
+  }
+}
+
+.menu {
+  grid-area: menu;
+}
+.body {
+  grid-area: body;
+}
+.onThisPage {
+  grid-area: onThisPage;
 }
 
 @include mq($from: sm) {
@@ -15,60 +43,83 @@
 
   .menu {
     float: left;
-    width: calc(#{percentage(1 / 4)} - #{rem($nds-spacing-small)});
+    margin-right: rem($nds-spacing-medium);
+    width: calc(#{percentage(3 / 12)} - #{rem($nds-spacing-small)});
+  }
+
+  .onThisPage {
+    float: right;
+    width: calc(#{percentage(9 / 12)} - #{rem($nds-spacing-small)});
   }
 
   .body {
-    float: right;
-    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-small)});
+    float: left;
+    width: calc(#{percentage(9 / 12)} - #{rem($nds-spacing-small)});
+  }
+
+  @supports (display: grid) {
+    .wrapper {
+      column-gap: rem($nds-spacing-medium);
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto;
+      grid-template-areas: 'menu onThisPage' 'menu body';
+
+      .menu,
+      .onThisPage,
+      .body {
+        margin: 0;
+        width: auto;
+      }
+    }
   }
 }
 
 @include mq($from: md) {
   .printBtn {
-    @include nds-link-default;
-    appearance: none;
-    background: none;
-    border: 0;
-    bottom: 100%;
-    cursor: pointer;
     display: block;
     margin-bottom: rem($nds-spacing-x-large);
-    padding: 0;
     position: absolute;
     right: 0;
-
-    svg {
-      @include nds-font-size(2);
-      color: $nds-colour-nice-rich-black;
-      margin-right: rem($nds-spacing-small);
-      vertical-align: text-bottom;
-    }
-
-    &:hover svg {
-      color: $nds-colour-link-hover;
-    }
   }
 
   .menu {
-    width: calc(#{percentage(1 / 4)} - #{rem($nds-spacing-medium)});
+    margin-right: rem($nds-spacing-large);
+    width: calc(#{percentage(3 / 12)} - #{rem($nds-spacing-medium)});
+  }
+
+  .onThisPage {
+    width: calc(#{percentage(2 / 12)} - #{rem($nds-spacing-medium)});
   }
 
   .body {
-    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-medium)});
+    width: calc(#{percentage(7 / 12)} - #{rem($nds-spacing-large)});
+  }
+
+  @supports (display: grid) {
+    .wrapper {
+      column-gap: rem($nds-spacing-large);
+      grid-template-columns: 3fr 7fr 2fr;
+      grid-template-areas: 'menu body onThisPage';
+    }
+
+    .menu,
+    .onThisPage,
+    .body {
+      margin: 0;
+      width: auto;
+    }
   }
 }
 
 @media print {
-  .menu {
+  .printBtn,
+  .menu,
+  .onThisPage {
     display: none;
   }
 
   .body {
     width: 100%;
-  }
-
-  .printBtn {
-    display: none;
   }
 }
