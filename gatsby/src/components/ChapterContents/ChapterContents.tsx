@@ -27,7 +27,10 @@ export const ChapterContents: React.FC<ChapterContentsProps> = ({
 		window.print();
 	}, []);
 
-	const showOnthisPage = useMemo(() => chapter.depth == 2, [chapter]);
+	const showOnthisPage = useMemo(
+		() => chapter.depth == 2 && chapter.subChapters.length > 1,
+		[chapter]
+	);
 
 	return (
 		<div className={styles.wrapper}>
