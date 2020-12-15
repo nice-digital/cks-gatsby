@@ -23,7 +23,8 @@ namespace aws_cks_lambda_demo
 	        var inputQueryStringParameter = request.QueryStringParameters["input"];
 	        var response = new APIGatewayHttpApiV2ProxyResponse
 	        {
-		        Body = inputQueryStringParameter?.ToUpper()
+		        Body = inputQueryStringParameter?.ToUpper(),
+				StatusCode = 200
 	        };
 
 	        return response;
