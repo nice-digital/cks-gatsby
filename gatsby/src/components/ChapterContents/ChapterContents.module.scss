@@ -1,7 +1,7 @@
 @import '~@nice-digital/nds-core/scss/core.scss';
 
 .wrapper {
-  position: relative;
+  position: relative; // The sticky 'on this page' nav is relative to this
 }
 
 .printBtn {
@@ -26,16 +26,6 @@
   }
 }
 
-.menu {
-  grid-area: menu;
-}
-.body {
-  grid-area: body;
-}
-.onThisPage {
-  grid-area: onThisPage;
-}
-
 @include mq($from: sm) {
   .wrapper {
     @include nds-clearfix;
@@ -44,34 +34,23 @@
   .menu {
     float: left;
     margin-right: rem($nds-spacing-medium);
-    width: calc(#{percentage(3 / 12)} - #{rem($nds-spacing-small)});
+    width: calc(25% - #{rem($nds-spacing-small)});
+  }
+
+  .landing {
+    float: right;
+    width: calc(75% - #{rem($nds-spacing-small)});
   }
 
   .onThisPage {
     float: right;
-    width: calc(#{percentage(9 / 12)} - #{rem($nds-spacing-small)});
+    width: calc(75% - #{rem($nds-spacing-small)});
   }
 
   .body {
-    float: left;
-    width: calc(#{percentage(9 / 12)} - #{rem($nds-spacing-small)});
-  }
-
-  @supports (display: grid) {
-    .wrapper {
-      column-gap: rem($nds-spacing-medium);
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-      grid-template-rows: auto;
-      grid-template-areas: 'menu onThisPage' 'menu body';
-
-      .menu,
-      .onThisPage,
-      .body {
-        margin: 0;
-        width: auto;
-      }
-    }
+    margin-left: calc(25% + #{rem($nds-spacing-small)});
+    overflow: hidden; // Because headings are cleared by default
+    width: calc(75% - #{rem($nds-spacing-small)});
   }
 }
 
@@ -88,27 +67,19 @@
     width: calc(#{percentage(3 / 12)} - #{rem($nds-spacing-medium)});
   }
 
+  .landing {
+    width: calc(#{percentage(9 / 12)} - #{rem($nds-spacing-medium)});
+  }
+
   .onThisPage {
+    position: sticky;
+    top: 0;
     width: calc(#{percentage(2 / 12)} - #{rem($nds-spacing-medium)});
   }
 
   .body {
+    margin-left: calc(25% + #{rem($nds-spacing-medium)});
     width: calc(#{percentage(7 / 12)} - #{rem($nds-spacing-large)});
-  }
-
-  @supports (display: grid) {
-    .wrapper {
-      column-gap: rem($nds-spacing-large);
-      grid-template-columns: 3fr 7fr 2fr;
-      grid-template-areas: 'menu body onThisPage';
-    }
-
-    .menu,
-    .onThisPage,
-    .body {
-      margin: 0;
-      width: auto;
-    }
   }
 }
 

@@ -12,11 +12,13 @@ import { ChapterOnThisPage } from "../ChapterOnThisPage/ChapterOnThisPage";
 interface ChapterContentsProps {
 	chapter: ChapterLevel1 | ChapterLevel2;
 	children?: React.ReactNode;
+	showHeading?: boolean;
 }
 
 export const ChapterContents: React.FC<ChapterContentsProps> = ({
 	chapter,
 	children,
+	showHeading,
 }: ChapterContentsProps) => {
 	const [isClient, setIsClient] = useState(false);
 	useEffect(() => {
@@ -27,8 +29,12 @@ export const ChapterContents: React.FC<ChapterContentsProps> = ({
 		window.print();
 	}, []);
 
+	const { subChapters } = chapter;
 	const showOnthisPage = useMemo(
-		() => chapter.depth == 2 && chapter.subChapters.length > 1,
+		() =>
+			chapter.depth == 2 &&
+			(subChapters.length > 1 ||
+				(subChapters.length === 1 && subChapters[0].subChapters.length > 0)),
 		[chapter]
 	);
 
@@ -53,11 +59,12 @@ export const ChapterContents: React.FC<ChapterContentsProps> = ({
 			</div>
 			{showOnthisPage && (
 				<div className={styles.onThisPage}>
-					<ChapterOnThisPage chapter={chapter as ChapterLevel2} />
+					<ChapterOnThisPage subChapters={subChapters} />
 				</div>
 			)}
+			{children ? <div className={styles.landing}>{children}</div> : null}
 			<div className={styles.body}>
-				{children || <ChapterBody chapter={chapter} />}
+				<ChapterBody chapter={chapter} showHeading={showHeading} />
 			</div>
 		</div>
 	);

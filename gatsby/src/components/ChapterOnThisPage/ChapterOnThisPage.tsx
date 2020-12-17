@@ -1,11 +1,13 @@
 import React, { useEffect, useCallback, useRef, useState } from "react";
 import throttle from "lodash.throttle";
 
-import { ChapterLevel2 } from "src/types";
+import { PartialChapter } from "src/types";
+import { BasisChapterTitle } from "../../utils/constants";
+
 import styles from "./ChapterOnThisPage.module.scss";
 
 interface ChapterOnThisPageProps {
-	chapter: ChapterLevel2;
+	subChapters: PartialChapter[];
 }
 
 interface PositionedHeading {
@@ -44,7 +46,7 @@ const isScrolledPast = (heading: PositionedHeading): boolean =>
 	heading.y - scrollTolerance <= 0;
 
 export const ChapterOnThisPage: React.FC<ChapterOnThisPageProps> = ({
-	chapter,
+	subChapters,
 }: ChapterOnThisPageProps) => {
 	const [activeHeadingId, setActiveHeadingId] = useState<string | null>(null);
 
@@ -87,49 +89,51 @@ export const ChapterOnThisPage: React.FC<ChapterOnThisPageProps> = ({
 				On this page
 			</h2>
 			<ol className={styles.rootList} aria-label="Sections on this">
-				{(chapter as ChapterLevel2).subChapters.map(
-					({ slug, id, fullItemName, subChapters }) => {
-						const href = `#${slug}`,
-							isCurrent = slug === activeHeadingId,
-							hasActiveChild = subChapters.some(
-								(s) => s.slug === activeHeadingId
-							);
-
-						return (
-							<li key={id}>
-								<a
-									href={href}
-									aria-current={isCurrent ? "location" : undefined}
-								>
-									{fullItemName}
-								</a>
-								{subChapters.length > 0 && (
-									<ol
-										aria-label={`Sections within ${fullItemName}`}
-										className={`${styles.subList} ${
-											isCurrent || hasActiveChild ? styles.expandedSubList : ""
-										}`}
-									>
-										{subChapters.map((subSubChapter) => (
-											<li key={subSubChapter.id}>
-												<a
-													href={`#${subSubChapter.slug}`}
-													aria-current={
-														subSubChapter.slug === activeHeadingId
-															? "location"
-															: undefined
-													}
-												>
-													{subSubChapter.fullItemName}
-												</a>
-											</li>
-										))}
-									</ol>
-								)}
-							</li>
+				{subChapters.map(({ slug, id, fullItemName, subChapters }) => {
+					const href = `#${slug}`,
+						isCurrent = slug === activeHeadingId,
+						hasActiveChild = subChapters.some(
+							(s) => s.slug === activeHeadingId
 						);
-					}
-				)}
+
+					return (
+						<li key={id}>
+							<a href={href} aria-current={isCurrent ? "location" : undefined}>
+								{fullItemName}
+							</a>
+							{subChapters.length > 0 && (
+								<ol
+									aria-label={`Sections within ${fullItemName}`}
+									className={`${styles.subList} ${
+										isCurrent || hasActiveChild ? styles.expandedSubList : ""
+									}`}
+								>
+									{subChapters.map((subSubChapter) => (
+										<li
+											key={subSubChapter.id}
+											className={
+												subSubChapter.fullItemName === BasisChapterTitle
+													? styles.basisForRecs
+													: ""
+											}
+										>
+											<a
+												href={`#${subSubChapter.slug}`}
+												aria-current={
+													subSubChapter.slug === activeHeadingId
+														? "location"
+														: undefined
+												}
+											>
+												{subSubChapter.fullItemName}
+											</a>
+										</li>
+									))}
+								</ol>
+							)}
+						</li>
+					);
+				})}
 			</ol>
 		</nav>
 	);

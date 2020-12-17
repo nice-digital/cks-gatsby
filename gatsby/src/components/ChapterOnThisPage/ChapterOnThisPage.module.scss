@@ -16,13 +16,13 @@
   list-style: circle;
 }
 
-@include mq($from: md) {
-  .wrapper {
-    margin-bottom: 0;
-    position: sticky;
-    top: 0;
-  }
+// Basis for recommendation links are 'noise' when the 'on this page' nav is
+// all expanded by default, so only show them when the nav sticks
+.basisForRecs {
+  display: none;
+}
 
+@include mq($from: md) {
   .heading {
     @include nds-font(h4);
     margin-top: 0;
@@ -51,6 +51,10 @@
 
     .expandedSubList {
       @include nds-invisible-off;
+    }
+
+    .basisForRecs {
+      display: list-item;
     }
   }
 }

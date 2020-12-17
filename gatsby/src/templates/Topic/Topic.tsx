@@ -7,7 +7,6 @@ import { PageHeader } from "@nice-digital/nds-page-header";
 import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
-import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
 
 import { Topic, ChapterLevel1, PartialChapter } from "../../types";
 
@@ -68,7 +67,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 
 			<p className="visually-hidden">{topicSummary}</p>
 
-			<ChapterContents chapter={firstChapter}>
+			<ChapterContents chapter={firstChapter} showHeading={true}>
 				{landingLinks.map((chapter, i) => (
 					<section
 						key={chapter.id}
@@ -98,7 +97,6 @@ const TopicPage: React.FC<TopicPageProps> = ({
 						</ul>
 					</section>
 				))}
-				<ChapterBody chapter={firstChapter} showHeading={true} />
 			</ChapterContents>
 		</Layout>
 	);
