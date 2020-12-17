@@ -1,7 +1,7 @@
 {
   "name": "@nice-digital/cks-gatsby",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Website for NICE Clinical Knowledge Summaries (CKS) built with Gatsby and using the NICE Design System",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
