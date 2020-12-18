@@ -22,7 +22,7 @@ To update the runtime configuration of your deployed function use the Configurat
 
 To view execution logs of invocations of your function use the Logs tab in the opened Function View window.
 
-## Here are some steps to follow to get started from the command line:
+## Steps to follow to get started from the command line:
 
 Once you have edited your template and code you can deploy your application using the [Amazon.Lambda.Tools Global Tool](https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools) from the command line.
 
