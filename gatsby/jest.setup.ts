@@ -1,5 +1,9 @@
 import "@testing-library/jest-dom/extend-expect";
+import { enableFetchMocks } from "jest-fetch-mock";
 import { DataLayerEntry } from "types";
+
+// Enable mock fetch, mostly for the autocomplete requests from the header
+enableFetchMocks();
 
 // Header uses useStaticQuery in it, so easier to mock it globally as a no-op
 jest.mock("./src/components/Header/Header", () => {

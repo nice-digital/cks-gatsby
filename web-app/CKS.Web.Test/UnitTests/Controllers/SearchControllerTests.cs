@@ -56,10 +56,9 @@ namespace CKS.Web.Test.UnitTests.Controllers
 			var mockLogger = new Mock<ILogger<SearchController>>();
 			var searchController = new SearchController(mockLogger.Object, searchProvider.Object);
 
-			var response = searchController.Get(new SearchUrl());
+			var response = searchController.Get(new SearchUrl() { q = "cancer" });
 
-			mockLogger.VerifyLog(Times.Once);
-
+			mockLogger.VerifyLog(logger => logger.LogError("Search exception - Some error message. Search url - search?ps=15&q=cancer."));
 		}
 
 		[Fact]

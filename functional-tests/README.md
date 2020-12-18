@@ -7,19 +7,20 @@
 ## Table of contents
 
 - [Functional tests for CKS](#functional-tests-for-cks)
-  - [Table of contents](#table-of-contents)
-  - [Stack](#stack)
-    - [Software](#software)
-  - [:rocket: Set up](#rocket-set-up)
-    - [Using VSCode](#using-vscode)
-    - [Using npm](#using-npm)
-      - [Different URLs](#different-urls)
-    - [Docker](#docker)
-      - [Development mode](#development-mode)
-  - [Excluding tests](#excluding-tests)
-  - [Running single features](#running-single-features)
-  - [Troubleshooting](#troubleshooting)
-    - [Issue wih node-fibers](#issue-wih-node-fibers)
+	- [Table of contents](#table-of-contents)
+	- [Stack](#stack)
+		- [Software](#software)
+	- [:rocket: Set up](#rocket-set-up)
+		- [Using VSCode](#using-vscode)
+		- [Using npm](#using-npm)
+			- [Different URLs](#different-urls)
+		- [Docker](#docker)
+			- [Development mode](#development-mode)
+	- [Excluding tests](#excluding-tests)
+	- [Running single features](#running-single-features)
+	- [Troubleshooting](#troubleshooting)
+		- [Issue wih node-fibers](#issue-wih-node-fibers)
+		- [session not created: This version of ChromeDriver only supports Chrome version xx](#session-not-created-this-version-of-chromedriver-only-supports-chrome-version-xx)
 
 ## Stack
 
@@ -176,3 +177,7 @@ If you run `npm test` and get an issue like:
 > There is an issue with `node-fibers`... Couldn't initialise framework "wdio-cucumber-framework" Missing binary. See message above.
 
 Then, check you're running Node 10. If you're using NVM and switch to Node 12+ you'll get this issue, so switch back to 10.
+
+### session not created: This version of ChromeDriver only supports Chrome version xx
+
+This usually occurrs after updating Chrome on your PC. When you run `npm i` (or `npm ci`), there's a package called _selenium-standalone_ that downloads the _latest_ ChromeDriver binaries at the point of install. This binary is tied to a specific Chrome version, so if you update Chrome there's then a mismatch. So run `npm i selenium-standalone` to reinstall the package and update the Chromedriver binary to the latest.

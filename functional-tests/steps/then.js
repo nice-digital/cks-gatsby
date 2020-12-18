@@ -21,7 +21,7 @@ Then("I expect that the CKS GTM container is available", () => {
 });
 
 Then(/^I expect to see "([^"]*)" in the autocomplete suggestions$/, (text) => {
-	waitFor(getSelector("autocomplete option"));
+	waitFor(getSelector("autocomplete option"), "20000");
 	checkContainsText("element", getSelector("autocomplete menu"), null, text);
 });
 

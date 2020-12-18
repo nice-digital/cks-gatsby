@@ -10,5 +10,6 @@ Feature: Header
     Then I expect to see "Asthma" in the autocomplete suggestions
 
   Scenario: Navigate straight to a topic from an autocomplete suggestion
+    Given I type "Ast" in the header search box
     When I click "Asthma" in the autocomplete options
-    And I expect the url to contain "asthma"
+    Then I expect the url to contain "asthma"

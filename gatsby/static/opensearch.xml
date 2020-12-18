@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-    <ShortName>CKS</ShortName>
-    <Description>CKS Search - A search engine for Clinical Knowledge Summaries</Description>
-    <Url type="text/html" method="get" template="https://#{Hostname}/search/?q={searchTerms}&amp;utm_source=opensearch&amp;utm_medium=opensearch"/>
-    <Image width="16" height="16" type="image/x-icon">/favicon.ico</Image>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+	xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+	<ShortName>CKS</ShortName>
+	<LongName>Clinical Knowledge Summaries</LongName>
+	<Description>CKS Search - A search engine for Clinical Knowledge Summaries</Description>
+	<Url type="text/html" rel="results" template="https://#{Hostname}/search/?q={searchTerms}&amp;utm_source=opensearch&amp;utm_medium=opensearch"/>
+	<Url type="application/x-suggestions+json" rel="suggestions" template="https://#{Hostname}/api/autocomplete/opensearch?q={searchTerms}"/>
+	<Url type="application/opensearchdescription+xml" rel="self" template="https://#{Hostname}/opensearch.xml"/>
+	<Image width="16" height="16" type="image/x-icon">/favicon.ico</Image>
 	<Image width="64" height="64" type="image/png">/favicon.png</Image>
-    <InputEncoding>UTF-8</InputEncoding>
-    <moz:SearchForm>https://#{Hostname}</moz:SearchForm>
+	<Query role="example" searchTerms="asthma" />
+	<InputEncoding>UTF-8</InputEncoding>
+	<OutputEncoding>UTF-8</OutputEncoding>
+	<Attribution>Copyright NICE. All rights reserved. Subject to Notice of rights.</Attribution>
+	<Contact>nice@nice.org.uk</Contact>
+	<moz:SearchForm>https://#{Hostname}</moz:SearchForm>
 </OpenSearchDescription>
