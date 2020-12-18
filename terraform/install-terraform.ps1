@@ -43,14 +43,16 @@ function Install-Terraform {
 }
 
 #Run the last function in this file unless this script is dotsourced, using any arguments provided
-if ($myinvocation.Line -notmatch '^\. ') {
-    $command = 'beginblock','processblock','endblock' | foreach {
-        $myInvocation.mycommand.scriptblock.ast.$PSItem.statements
-    } | Where-Object {$PSItem -is [Management.Automation.Language.FunctionDefinitionAst]} | % name | Select-Object -last 1
-    $myargs = $myinvocation.UnboundArguments
-    [ScriptBlock]$invokeScriptBlock = [Scriptblock]::Create("$command $myargs")
-    invoke-command $invokeScriptBlock
-}
+# if ($myinvocation.Line -notmatch '^\. ') {
+#     $command = 'beginblock','processblock','endblock' | foreach {
+#         $myInvocation.mycommand.scriptblock.ast.$PSItem.statements
+#     } | Where-Object {$PSItem -is [Management.Automation.Language.FunctionDefinitionAst]} | % name | Select-Object -last 1
+#     $myargs = $myinvocation.UnboundArguments
+#     [ScriptBlock]$invokeScriptBlock = [Scriptblock]::Create("$command $myargs")
+#     invoke-command $invokeScriptBlock
+# }
+
+Install-Terraform
 
 Write-Host "Deploying with Terraform"
 terraform --version
