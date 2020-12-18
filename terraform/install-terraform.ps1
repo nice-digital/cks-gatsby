@@ -1,6 +1,7 @@
-Write-Host 'Hello, World!'
+Write-Host 'Checking PowerShell version.....'
+$PSVersionTable.PSVersion
 
-echo "Starting Terraform Install"
+Write-Host "Starting Terraform Install"
 function Install-Terraform {
     [CmdletBinding()]
     param (
