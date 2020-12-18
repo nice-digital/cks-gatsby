@@ -88,7 +88,10 @@ export const ChapterOnThisPage: React.FC<ChapterOnThisPageProps> = ({
 			<h2 className={styles.heading} id="on-this-page">
 				On this page
 			</h2>
-			<ol className={styles.rootList} aria-label="Sections on this">
+			<ol
+				className={styles.rootList}
+				aria-label="Jump links to section on this page"
+			>
 				{subChapters.map(({ slug, id, fullItemName, subChapters }) => {
 					const href = `#${slug}`,
 						isCurrent = slug === activeHeadingId,
