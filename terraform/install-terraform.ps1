@@ -51,3 +51,6 @@ if ($myinvocation.Line -notmatch '^\. ') {
     [ScriptBlock]$invokeScriptBlock = [Scriptblock]::Create("$command $myargs")
     invoke-command $invokeScriptBlock
 }
+
+Write-Host "Deploying with Terraform"
+terraform --version
