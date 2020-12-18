@@ -1,6 +1,9 @@
 Write-Host 'Checking PowerShell version.....'
 $PSVersionTable.PSVersion
 
+Write-Host 'Setting TLS version....'
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 Write-Host "Starting Terraform Install"
 Write-Host "Downloading Terraform....."
 $url = "https://releases.hashicorp.com/terraform/0.14.3/terraform_0.14.3_windows_amd64.zip"
