@@ -62,10 +62,13 @@ export const ChapterContents: React.FC<ChapterContentsProps> = ({
 					<ChapterOnThisPage subChapters={subChapters} />
 				</div>
 			)}
-			{children ? <div className={styles.landing}>{children}</div> : null}
-			<div className={styles.body}>
-				<ChapterBody chapter={chapter} showHeading={showHeading} />
-			</div>
+			{children ? (
+				<div className={styles.landing}>{children}</div>
+			) : (
+				<div className={styles.body}>
+					<ChapterBody chapter={chapter} showHeading={showHeading} />
+				</div>
+			)}
 		</div>
 	);
 };
