@@ -1,13 +1,11 @@
 Write-Host 'Checking PowerShell version.....'
 $PSVersionTable.PSVersion
 
-Write-Host "Getting octo dir parameters.............."
+Write-Host "Getting octo parameter collection.............."
 
-Write-Host $OctopusParameters["Octopus.Action.Package.CustomInstallationDirectory"]
-
-Write-Host "Getting octo parameters.............."
-
-Write-Host $OctopusParameters
+foreach ($key in $OctopusParameters.Keys) {
+    Write-Host "Key: $key    Value: $($OctopusParameters[$key])"
+}
 
 Write-Host 'Setting TLS version....'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
