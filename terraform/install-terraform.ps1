@@ -29,6 +29,9 @@ Write-Host $extractCommandSring
 
 iex $extractCommandSring
 
+Write-Host "Deploying with Terraform"
+c:\terraform\terraform.exe --version
+
 
 
 
