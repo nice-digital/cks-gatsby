@@ -22,9 +22,14 @@ $output = "terraform.zip"
 
 Invoke-WebRequest -Uri $url -OutFile $output
 
-Write-Host "Unziping Terraform....."
+Write-Host "Current extract directory....."
 
-Expand-Archive -Path $output
+# Expand-Archive -Path $output
+Write-Host $OctopusParameters."Octopus.Action[Extract Terraform files].Output.Package.InstallationDirectoryPath"
+
+# $extractCommandSring = -join("wscript .\extract.vbs /path:", Octopus.Action[Extract Terraform files].Output.Package.InstallationDirectoryPath)
+
+# cmd /c
 
 
 
