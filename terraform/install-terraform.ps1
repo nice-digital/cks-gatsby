@@ -10,17 +10,13 @@ foreach ($key in $OctopusParameters.Keys) {
 Write-Host 'Setting TLS version....'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-Write-Host "Check if PowerShell.Archive is available......"
-Get-Module "Microsoft.PowerShell.Archive" -ListAvailable
-Import-Module Microsoft.PowerShell.Archive
+# Write-Host "Starting Terraform Install"
+# Write-Host "Downloading Terraform....."
+# $url = "https://releases.hashicorp.com/terraform/0.14.3/terraform_0.14.3_windows_amd64.zip"
 
-Write-Host "Starting Terraform Install"
-Write-Host "Downloading Terraform....."
-$url = "https://releases.hashicorp.com/terraform/0.14.3/terraform_0.14.3_windows_amd64.zip"
+# $output = "terraform.zip"
 
-$output = "terraform.zip"
-
-Invoke-WebRequest -Uri $url -OutFile $output
+# Invoke-WebRequest -Uri $url -OutFile $output
 
 Write-Host "Current extract directory....."
 
