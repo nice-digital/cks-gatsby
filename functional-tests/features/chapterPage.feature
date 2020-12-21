@@ -22,7 +22,7 @@ Feature: Chapter Page
     Then I expect that the path is "/"
 
   Scenario: Health topics A to Z breadcrumb
-    When I click the Topics A to Z breadcrumb
+    When I click the Health topics A to Z breadcrumb
     Then I expect that the path is "/topics/"
 
   Scenario: Asthma breadcrumb
