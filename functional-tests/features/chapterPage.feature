@@ -21,7 +21,7 @@ Feature: Chapter Page
     When I click the CKS breadcrumb
     Then I expect that the path is "/"
 
-  Scenario: Topics A to Z breadcrumb
+  Scenario: Health topics A to Z breadcrumb
     When I click the Topics A to Z breadcrumb
     Then I expect that the path is "/topics/"
 

@@ -37,9 +37,9 @@ describe("TopicsPage", () => {
 	});
 
 	describe("SEO", () => {
-		it("should render Topics A to Z in the page title", async () => {
+		it("should render Health topics A to Z in the page title", async () => {
 			await waitFor(() => {
-				expect(document.title).toContain("Topics A to Z | ");
+				expect(document.title).toContain("Health topics A to Z | ");
 			});
 		});
 	});
@@ -60,7 +60,7 @@ describe("TopicsPage", () => {
 			const { queryByText } = renderResult;
 
 			expect(
-				queryByText(textContentMatcher("Topics A to Z"), {
+				queryByText(textContentMatcher("Health topics A to Z"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();
@@ -70,7 +70,7 @@ describe("TopicsPage", () => {
 	describe("Page header", () => {
 		it("should render heading 1 with speciality name", () => {
 			expect(
-				renderResult.queryByText("Topics A to Z", {
+				renderResult.queryByText("Health topics A to Z", {
 					selector: "h1",
 				})
 			).toBeInTheDocument();
@@ -128,7 +128,10 @@ describe("TopicsPage", () => {
 	describe("A to Z", () => {
 		it("should render A to Z navigation element", () => {
 			const { getByLabelText } = renderResult;
-			expect(getByLabelText("Topics A to Z")).toHaveProperty("tagName", "NAV");
+			expect(getByLabelText("Health topics A to Z")).toHaveProperty(
+				"tagName",
+				"NAV"
+			);
 		});
 
 		it("should render ordered list of letters that have at least 1 topic", () => {
