@@ -10,22 +10,24 @@ foreach ($key in $OctopusParameters.Keys) {
 Write-Host 'Setting TLS version....'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-# Write-Host "Starting Terraform Install"
-# Write-Host "Downloading Terraform....."
-# $url = "https://releases.hashicorp.com/terraform/0.14.3/terraform_0.14.3_windows_amd64.zip"
+Write-Host "Starting Terraform Install"
+Write-Host "Downloading Terraform....."
+$url = "https://releases.hashicorp.com/terraform/0.14.3/terraform_0.14.3_windows_amd64.zip"
 
-# $output = "terraform.zip"
+$output = "terraform.zip"
 
-# Invoke-WebRequest -Uri $url -OutFile $output
+Invoke-WebRequest -Uri $url -OutFile $output
 
 Write-Host "Current extract directory....."
 
 # Expand-Archive -Path $output
 Write-Host $OctopusParameters."Octopus.Action[Extract Terraform files].Output.Package.InstallationDirectoryPath"
 
-# $extractCommandSring = -join("wscript .\extract.vbs /path:", Octopus.Action[Extract Terraform files].Output.Package.InstallationDirectoryPath)
+$extractCommandSring = -join("wscript .\extract.vbs /path:", $OctopusParameters."Octopus.Action[Extract Terraform files].Output.Package.InstallationDirectoryPath")
 
-# cmd /c
+Write-Host $extractCommandSring
+
+iex $extractCommandSring
 
 
 
