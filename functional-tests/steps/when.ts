@@ -22,7 +22,6 @@ When(
 	/^I click "([^"]*)" in the autocomplete options$/,
 	async (text: string) => {
 		const pageTitle = await browser.getTitle();
-		await typeInSearchBox("Ast");
 
 		const optionElement = await $(await getSelector("autocomplete option"));
 		await optionElement.waitForExist();

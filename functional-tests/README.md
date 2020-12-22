@@ -18,6 +18,8 @@
 			- [Development mode](#development-mode)
 	- [Excluding tests](#excluding-tests)
 	- [Running single features](#running-single-features)
+	- [Troubleshooting](#troubleshooting)
+		- [session not created: This version of ChromeDriver only supports Chrome version xx](#session-not-created-this-version-of-chromedriver-only-supports-chrome-version-xx)
 
 ## Stack
 
@@ -158,4 +160,10 @@ Finally, if you've grouped your specs into suites you can run and individual sui
 npm test -- --suite homepage
 ```
 
-See [organizing test suites](https://webdriver.io/docs/organizingsuites.html) in the WebdriverIO docs for more info.
+See [organizing test suites](http://v4.webdriver.io/guide/testrunner/organizesuite.html) in the WebdriverIO docs for more info.
+
+## Troubleshooting
+
+### session not created: This version of ChromeDriver only supports Chrome version xx
+
+This usually occurrs after updating Chrome on your PC. When you run `npm i` (or `npm ci`), there's a package called _selenium-standalone_ that downloads the _latest_ ChromeDriver binaries at the point of install. This binary is tied to a specific Chrome version, so if you update Chrome there's then a mismatch. So run `npm i selenium-standalone` to reinstall the package and update the Chromedriver binary to the latest.

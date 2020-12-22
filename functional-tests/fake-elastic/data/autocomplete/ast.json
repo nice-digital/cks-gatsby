@@ -1,0 +1,25 @@
+{
+  "took": 49,
+  "timed_out": false,
+  "_shards": { "total": 1, "successful": 1, "skipped": 0, "failed": 0 },
+  "hits": {
+    "total": 1,
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "cks_autocomplete",
+        "_type": "typeahead",
+        "_id": "ta_5",
+        "_score": 0.35238037,
+        "_source": {
+          "title": "Asthma",
+          "typeAheadType": "title",
+          "typeAheadLink": "/topics/asthma/"
+        },
+        "fields": { "title.untouched": ["asthma"] },
+        "highlight": { "title": ["<mark>Ast</mark>hma"] },
+        "sort": [0.35238037, "asthma"]
+      }
+    ]
+  }
+}
