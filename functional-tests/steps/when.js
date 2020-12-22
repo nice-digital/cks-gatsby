@@ -24,8 +24,7 @@ When(/^I type "([^"]*)" in the header search box$/, typeInSearchBox);
 
 When(/^I click "([^"]*)" in the autocomplete options$/, (text) => {
 	const pageTitle = browser.getTitle();
-	typeInSearchBox("Ast");
-	waitFor(getSelector("autocomplete option"));
+	waitFor(getSelector("autocomplete option"), "20000");
 
 	// For some reason we can't click on an autocomplete suggestion via wdio's
 	// browser.click(element). So we have to use this workaround:

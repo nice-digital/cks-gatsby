@@ -19,6 +19,8 @@ An ExpressJS Node app that fakes out ElasticSearch. It serves pre-defined static
 
 - _cancer_
 - _paracetmol_. Notice the intentional spelling mistake, for testing spelling correction.
+- typeahead search for _diab_
+- typeahead search for _ast_
 - TODO: other scenarios and paging
 
 ## Usage
