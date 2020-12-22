@@ -161,12 +161,5 @@ describe("TopicsPage", () => {
 				"/topics/acne-vulgaris/"
 			);
 		});
-
-		it("should render a back to top anchor for each letter with href to the alphabet element", () => {
-			const { getAllByText } = renderResult;
-			const backToTopLinks = getAllByText("Back to top (A to Z)");
-			expect(backToTopLinks).toHaveLength(2);
-			expect(backToTopLinks[0]).toHaveAttribute("href", "#a-to-z");
-		});
 	});
 });
