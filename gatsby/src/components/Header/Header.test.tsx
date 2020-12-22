@@ -1,7 +1,6 @@
 import React from "react";
 import { fireEvent, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { navigate, useStaticQuery } from "gatsby";
+import { navigate } from "gatsby";
 import { renderWithRouter } from "test-utils";
 import { useLocation } from "@reach/router";
 
@@ -18,11 +17,8 @@ describe("Header", () => {
 			jest.requireActual("@reach/router").useLocation()
 		);
 
-		((useStaticQuery as unknown) as jest.Mock).mockReturnValue({
-			allCksTopic: {
-				nodes: [],
-			},
-		});
+		// Global nav uses a fetch to load autocomplete suggestions, and changing the input value triggers this fetch
+		fetchMock.mockResponseOnce(JSON.stringify([]));
 	});
 
 	it("should render global nav with CKS highlighted in the nav", async () => {
@@ -94,31 +90,5 @@ describe("Header", () => {
 		fireEvent.submit(await findByRole("search"));
 
 		expect(navigate).toHaveBeenCalledWith("/search/?q=diabetes%2020%25");
-	});
-
-	it("should use topic names with topic URL for autocomplete suggestions", async () => {
-		((useStaticQuery as unknown) as jest.Mock).mockReturnValueOnce({
-			allCksTopic: {
-				nodes: [
-					{
-						topicName: "First topic",
-						slug: "first-topic",
-					},
-				],
-			},
-		});
-
-		const { findByRole, findByText } = renderWithRouter(<Header />);
-
-		const searchBox = (await findByRole("combobox")) as HTMLInputElement;
-
-		await userEvent.type(searchBox, "Fir");
-
-		const suggestion = await findByText(
-			(_, element) => element.textContent == "First topic",
-			{ selector: "a" }
-		);
-
-		expect(suggestion).toHaveAttribute("href", "/topics/first-topic/");
 	});
 });

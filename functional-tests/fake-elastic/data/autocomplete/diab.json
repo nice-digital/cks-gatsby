@@ -1,0 +1,66 @@
+{
+  "took": 49,
+  "timed_out": false,
+  "_shards": { "total": 1, "successful": 1, "skipped": 0, "failed": 0 },
+  "hits": {
+    "total": 4,
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "cks_autocomplete",
+        "_type": "typeahead",
+        "_id": "ta_4",
+        "_score": 3.698295,
+        "_source": {
+          "title": "diabetes",
+          "typeAheadType": "keyword"
+        },
+        "fields": { "title.untouched": ["diabetes"] },
+        "highlight": { "title": ["<mark>diab</mark>etes"] },
+        "sort": [3.698295, "diabetes"]
+      },
+      {
+        "_index": "cks_autocomplete",
+        "_type": "typeahead",
+        "_id": "ta_1",
+        "_score": 2.3284154,
+        "_source": {
+          "title": "Diabetes - type 1",
+          "typeAheadType": "title",
+          "typeAheadLink": "/topics/diabetes-type-1/"
+        },
+        "fields": { "title.untouched": ["diabetes - type 1"] },
+        "highlight": { "title": ["<mark>Diab</mark>etes - type 1"] },
+        "sort": [2.3284154, "diabetes - type 1"]
+      },
+      {
+        "_index": "cks_autocomplete",
+        "_type": "typeahead",
+        "_id": "ta_2",
+        "_score": 2.3284154,
+        "_source": {
+          "title": "Diabetes - type 2",
+          "typeAheadType": "title",
+          "typeAheadLink": "/topics/diabetes-type-2/"
+        },
+        "fields": { "title.untouched": ["diabetes - type 2"] },
+        "highlight": { "title": ["<mark>Diab</mark>etes - type 2"] },
+        "sort": [2.3284154, "diabetes - type 2"]
+      },
+      {
+        "_index": "cks_autocomplete",
+        "_type": "typeahead",
+        "_id": "ta_3",
+        "_score": 0.35238037,
+        "_source": {
+          "title": "Hypertension - not diabetic",
+          "typeAheadType": "title",
+          "typeAheadLink": "/topics/hypertension-not-diabetic/"
+        },
+        "fields": { "title.untouched": ["hypertension - not diabetic"] },
+        "highlight": { "title": ["Hypertension - not <mark>diab</mark>etic"] },
+        "sort": [0.35238037, "hypertension - not diabetic"]
+      }
+    ]
+  }
+}

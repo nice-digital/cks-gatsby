@@ -4,7 +4,8 @@ const path = require("path"),
 	jsonpath = require("jsonpath");
 
 const suggestDirectory = path.join(__dirname, "data", "suggest"),
-	resultsDirectory = path.join(__dirname, "data", "results");
+	resultsDirectory = path.join(__dirname, "data", "results"),
+	autocompleteDirectory = path.join(__dirname, "data", "autocomplete");
 
 const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 
@@ -32,6 +33,11 @@ app.use(async (req, res, next) => {
 		sendElasticResponse(fileName, next, resultsDirectory, "results");
 	};
 
+	res.sendAutocomplete = async (fileName, next) => {
+		console.info(`Autocomplete request for ${fileName}`);
+		sendElasticResponse(fileName, next, autocompleteDirectory, "autocomplete");
+	};
+
 	next();
 });
 
@@ -53,6 +59,11 @@ app.post("/cks/document/_search", async ({ body }, res, next) => {
 		.find((f) => new RegExp(f, "i").test(queryTerm));
 
 	return res.sendResults(resultFileName || queryTerm, next);
+});
+
+app.post("/cks_autocomplete/typeahead/_search", async ({ body }, res, next) => {
+	var query = body.query.function_score.query.match.title.query;
+	return res.sendAutocomplete(query, next);
 });
 
 // 404 handler

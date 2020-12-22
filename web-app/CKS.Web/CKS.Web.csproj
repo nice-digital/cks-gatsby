@@ -1,14 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<LangVersion>latest</LangVersion>
-  </PropertyGroup>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="NICE.Logging" Version="6.0.24" />
-    <PackageReference Include="NICE.Search" Version="2.1.995" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NICE.Logging" Version="6.0.24" />
+		<PackageReference Include="NICE.Search" Version="2.1.1000" />
+	</ItemGroup>
 
 
 </Project>
