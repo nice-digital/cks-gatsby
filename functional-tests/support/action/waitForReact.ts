@@ -4,13 +4,15 @@
  *
  * Use this method to wait for the page to be interactive.
  */
-module.exports = (timeoutMs = 5000) => {
-	browser.waitUntil(
+export async function waitForReact(timeout = 5000): Promise<void> {
+	await browser.waitUntil(
 		() =>
 			browser.execute(
 				() => !!document.documentElement.getAttribute("data-react-helmet")
-			).value,
-		timeoutMs,
-		"JavaScript React bundle not loaded"
+			),
+		{
+			timeout,
+			timeoutMsg: "JavaScript React bundle not loaded",
+		}
 	);
-};
+}
