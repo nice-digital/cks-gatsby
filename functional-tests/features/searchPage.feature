@@ -7,8 +7,8 @@ Feature: Search Page
 
   Scenario: Search for cancer from the homepage
     Given I open the home page
-    When I search for "cancer"
-    Then I expect to see search results for "cancer"
+    When I search for cancer
+    Then I expect to see search results for cancer
 
   Scenario: Detect accessibility issues
     When I open the search page
@@ -20,11 +20,11 @@ Feature: Search Page
     Then the page should have no accessibility issues
 
   Scenario: 15 search results per page
-    When I view the search results page for "cancer"
+    When I view the search results page for cancer
     Then I expect to see a list of 15 search results
 
   Scenario: Total number of results
-    When I view the search results page for "cancer"
-    Then I expect to see 489 total search results for "cancer"
+    When I view the search results page for cancer
+    Then I expect to see 489 total search results for cancer
 
 # TODO: Current page number, page titles, pagination, spelling corrections, no results, empty search

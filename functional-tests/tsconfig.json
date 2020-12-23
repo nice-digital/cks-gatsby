@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonjs",
+    "lib": ["DOM"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "types": ["node", "webdriverio", "@wdio/cucumber-framework"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveSymlinks": true
+  }
+}
