@@ -1,18 +1,15 @@
-using System;
-using System.IO;
+using CKS.Web.StaticFiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Hosting;
+using NICE.Search.Common.Enums;
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Providers;
-using NICE.Search.Common.Enums;
-using Microsoft.Net.Http.Headers;
-using Microsoft.AspNetCore.Rewrite;
-using CKS.Web.StaticFiles;
-using CKS.Web.Middleware;
+using System;
+using System.IO;
 
 namespace CKS.Web
 {
