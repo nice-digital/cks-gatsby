@@ -33,6 +33,7 @@ The content is provided by a third party, [Clarity](https://clarity.co.uk/clinic
 | [gatsby](gatsby#readme)                     | Static site built with React and Gatsby                                             |
 | [web-app](web-app#readme)                   | Web application that wraps the static site and provides the search results endpoint |
 | [functional-tests](functional-tests#readme) | Browser-based functional tests in WebdriverIO                                       |
+| [search-lambda](search-lambda#readme)       | AWS Lambda running behind API Gateway for the search endpoint                       |
 
 > Note: Each of these folders has its own readme with detailed setup steps etc
 
