@@ -1,0 +1,3 @@
+dotnet publish -c Release -r linux-x64 ..\search-lambda\CKS.SearchLambda\CKS.SearchLambda.csproj
+
+
