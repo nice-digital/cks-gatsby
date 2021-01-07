@@ -2,11 +2,12 @@ module "lambda" {
   source  = "terraform-aws-modules/lambda/aws"
   version = "~> 1.0"
 
-  function_name = "CKS-Search-Lambda"
+  function_name = "${random_pet.this.id}-CKS-Search-Lambda"
   description   = "CKS Search Lambda API"
   handler       = "CKS.SearchLambda::CKS.SearchLambda.Function::FunctionHandler"
   runtime       = "dotnetcore3.1"
   publish       = true
+  timeout		= 30
 
   source_path = "../search-lambda/CKS.SearchLambda/bin/Release/netcoreapp3.1/linux-x64"
 
@@ -22,7 +23,7 @@ module "lambda_alias" {
   source  = "terraform-aws-modules/lambda/aws//modules/alias"
   version = "~> 1.0"
 
-  name = "prod"
+  name = "dev"
 
   function_name = module.lambda.this_lambda_function_name
 
