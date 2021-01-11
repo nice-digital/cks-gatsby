@@ -47,13 +47,15 @@ export const SEO: React.FC<SEOProps> = ({
 					property="og:title"
 					content={(title ? `${title} | ` : "") + "CKS | NICE"}
 				/>
-				<meta
-					property="og:image"
-					content="https://cks.nice.org.uk/open-graph-image.png"
-				/>
+				<meta property="og:image" content={`${siteUrl}/open-graph-image.png`} />
 				<meta property="og:image:width" content="1200" />
 				<meta property="og:image:height" content="630" />
 				<meta name="twitter:card" content="summary" />
+				<meta
+					name="twitter:image"
+					content={`${siteUrl}/twitter-summary-image.png`}
+				/>
+				<meta name="twitter:image:alt" content="NICE and CKS logos" />
 				<meta name="twitter:site" content="@NICEcomms" />
 				<meta name="twitter:creator" content="@NICEcomms" />
 				<meta name="theme-color" content="#004650" />

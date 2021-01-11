@@ -73,6 +73,16 @@ exports[`SEO should set default title and description when none provided 1`] = `
     name="twitter:card"
   />
   <meta
+    content="https://cks.nice.org.uk/twitter-summary-image.png"
+    data-react-helmet="true"
+    name="twitter:image"
+  />
+  <meta
+    content="NICE and CKS logos"
+    data-react-helmet="true"
+    name="twitter:image:alt"
+  />
+  <meta
     content="@NICEcomms"
     data-react-helmet="true"
     name="twitter:site"
