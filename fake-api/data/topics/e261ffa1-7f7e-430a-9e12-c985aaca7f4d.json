@@ -22,9 +22,8 @@
       "term": "Uterine Cervical Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "62798cdb-acc8-47ec-9144-15692d5db506",

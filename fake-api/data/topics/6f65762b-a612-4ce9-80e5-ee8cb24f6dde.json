@@ -14,10 +14,8 @@
       "term": "Bone Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Cancer", "Musculoskeletal"],
+  "aliases": ["Sarcoma (bone and soft tissue) - recognition and referral"],
   "topicHtmlObjects": [
     {
       "itemId": "7463ff6b-b39c-486c-814f-057efef875fb",

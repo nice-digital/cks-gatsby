@@ -14,10 +14,8 @@
       "term": "Amenorrhea"
     }
   ],
-  "clinicalSpecialties": [
-    "Sexual health",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Sexual health", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "cc766985-fb32-4551-8355-367b2382bc9d",

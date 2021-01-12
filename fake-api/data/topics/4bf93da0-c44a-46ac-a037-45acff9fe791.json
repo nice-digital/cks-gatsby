@@ -22,9 +22,8 @@
       "term": "Conjunctivitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "80994f4c-606c-4b3d-bf4a-9a833e4a1e3a",

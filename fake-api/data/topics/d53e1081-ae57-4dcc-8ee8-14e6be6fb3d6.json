@@ -14,10 +14,8 @@
       "term": "Vestibular Neuronitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "4b9980b1-3a16-414e-ba9e-81c4c2b1b3e0",

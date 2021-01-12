@@ -14,9 +14,8 @@
       "term": "Child Abuse"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health"
-  ],
+  "clinicalSpecialties": ["Child health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "74fdab4a-e119-4c1d-a227-bd89aae917dc",

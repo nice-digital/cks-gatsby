@@ -34,10 +34,8 @@
       "term": "Neuroma"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3f8b4fcf-701f-4018-9d52-1f25e04613ed",

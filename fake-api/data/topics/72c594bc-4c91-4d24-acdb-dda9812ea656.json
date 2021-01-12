@@ -18,9 +18,8 @@
       "term": "Administration, Oral"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices"
-  ],
+  "clinicalSpecialties": ["Drugs and devices"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "4b8cc538-0851-4774-a24f-72bcd0826803",

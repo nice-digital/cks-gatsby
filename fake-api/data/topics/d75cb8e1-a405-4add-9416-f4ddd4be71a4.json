@@ -14,10 +14,8 @@
       "term": "Vertigo"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d2b4b845-7b1b-4c85-8eea-371c4db2c054",

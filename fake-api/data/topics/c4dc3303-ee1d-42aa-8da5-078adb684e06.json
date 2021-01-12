@@ -14,10 +14,8 @@
       "term": "Alopecia"
     }
   ],
-  "clinicalSpecialties": [
-    "Men's health",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Men's health", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "86d5c694-f449-4c6d-9b6c-6136b91b1b16",

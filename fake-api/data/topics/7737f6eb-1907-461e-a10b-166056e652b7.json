@@ -14,9 +14,8 @@
       "term": "Acne vulgaris"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a96c0360-a4af-43f4-be49-c17fca0dd796",

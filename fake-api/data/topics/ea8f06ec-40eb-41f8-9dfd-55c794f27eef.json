@@ -26,10 +26,8 @@
       "term": "Varicose Veins"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a27c465c-e137-4c31-a394-de883d06b045",

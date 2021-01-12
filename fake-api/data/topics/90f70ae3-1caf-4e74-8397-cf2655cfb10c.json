@@ -14,9 +14,8 @@
       "term": "Polycystic Ovary Syndrome"
     }
   ],
-  "clinicalSpecialties": [
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "391970ff-7b4d-4615-8d43-82b95eaea243",

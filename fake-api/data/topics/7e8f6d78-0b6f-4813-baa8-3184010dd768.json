@@ -14,9 +14,8 @@
       "term": "Abscess"
     }
   ],
-  "clinicalSpecialties": [
-    "Oral health"
-  ],
+  "clinicalSpecialties": ["Oral health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "270d35a5-85ea-423e-ba67-4014c129b36a",

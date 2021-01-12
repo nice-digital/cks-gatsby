@@ -14,10 +14,8 @@
       "term": "Epilepsy"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Child health", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "8e59d2d0-7e90-43d0-a441-8eb01ab7fddc",

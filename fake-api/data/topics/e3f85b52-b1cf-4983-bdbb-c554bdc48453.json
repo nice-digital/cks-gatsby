@@ -50,9 +50,8 @@
       "term": "Scrotum"
     }
   ],
-  "clinicalSpecialties": [
-    "Men's health"
-  ],
+  "clinicalSpecialties": ["Men's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "dea60f9f-fac2-48da-8102-716aa1dab047",

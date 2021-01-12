@@ -14,9 +14,8 @@
       "term": "Fasciitis, Plantar"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "4c5fb986-4414-44dd-a4f8-fde89dffad7f",

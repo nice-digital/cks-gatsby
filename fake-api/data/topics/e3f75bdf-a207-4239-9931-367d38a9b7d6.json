@@ -14,10 +14,8 @@
       "term": "Retinal Detachment"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes",
-    "Injuries"
-  ],
+  "clinicalSpecialties": ["Eyes", "Injuries"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6faba25d-4faa-4dc9-ab11-202d1fd5b045",

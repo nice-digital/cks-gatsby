@@ -14,10 +14,8 @@
       "term": "Urticaria"
     }
   ],
-  "clinicalSpecialties": [
-    "Allergies",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Allergies", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "256d8551-003e-4cc9-83f8-9b3b76782e28",

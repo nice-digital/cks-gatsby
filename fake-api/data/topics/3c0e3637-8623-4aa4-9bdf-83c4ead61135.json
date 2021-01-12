@@ -14,9 +14,8 @@
       "term": "Thrombophlebitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7acf5239-3a9e-4762-a14b-adc0564ce462",

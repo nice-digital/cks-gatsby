@@ -14,9 +14,8 @@
       "term": "Head and Neck Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "35f5c36d-823e-45fb-a6e9-8faa517317ae",

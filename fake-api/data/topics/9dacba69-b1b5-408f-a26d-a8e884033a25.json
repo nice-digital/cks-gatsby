@@ -14,9 +14,8 @@
       "term": "Hyperhidrosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7ad6c165-4334-497a-8767-eea348011d53",

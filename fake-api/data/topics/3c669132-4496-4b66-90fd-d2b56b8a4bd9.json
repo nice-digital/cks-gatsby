@@ -14,10 +14,8 @@
       "term": "Venous Thrombosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Preventative medicine"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f8eea6e1-8b78-4c8d-b1eb-632c890bbee2",

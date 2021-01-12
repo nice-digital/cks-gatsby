@@ -26,10 +26,8 @@
       "term": "Herpes Simplex"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Oral health"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Oral health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "697c2f1f-583d-49b6-a9c3-a7290a67282f",

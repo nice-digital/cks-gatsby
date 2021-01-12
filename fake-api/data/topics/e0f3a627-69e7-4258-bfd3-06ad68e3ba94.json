@@ -14,10 +14,8 @@
       "term": "Raynaud Disease"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "5091bb3a-4b08-459a-bfea-2866e80f32cc",

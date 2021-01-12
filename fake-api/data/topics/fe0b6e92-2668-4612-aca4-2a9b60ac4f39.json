@@ -14,10 +14,8 @@
       "term": "Halitosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal",
-    "Oral health"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal", "Oral health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "2797ce29-94e4-4879-8722-0b2357456073",

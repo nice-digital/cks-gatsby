@@ -14,10 +14,8 @@
       "term": "Carpal Tunnel Syndrome"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0155cbc6-b575-43f5-acbb-5c07ee535690",

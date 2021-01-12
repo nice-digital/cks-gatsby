@@ -14,9 +14,8 @@
       "term": "Breast"
     }
   ],
-  "clinicalSpecialties": [
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "631c69ec-0c6b-4694-8017-f8096e85b0e9",

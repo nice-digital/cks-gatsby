@@ -18,10 +18,8 @@
       "term": "Measles"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Child health", "Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c3db1250-7cfb-4a5d-8f25-05ab230eff37",

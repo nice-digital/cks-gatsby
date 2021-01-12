@@ -14,10 +14,8 @@
       "term": "Hypercalcemia"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic",
-    "Palliative care"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic", "Palliative care"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "726e9a91-c41f-42f1-bd7d-d9ee7a40c92c",

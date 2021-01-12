@@ -34,9 +34,8 @@
       "term": "Headache"
     }
   ],
-  "clinicalSpecialties": [
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "258513a4-edb6-49bf-932e-4e4e00784e84",

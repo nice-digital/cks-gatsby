@@ -14,9 +14,8 @@
       "term": "Syphilis"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "e9b58e60-8bd0-4954-9742-b3b9d5047fda",

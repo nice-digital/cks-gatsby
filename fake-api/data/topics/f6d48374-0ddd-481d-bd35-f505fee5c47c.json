@@ -14,9 +14,8 @@
       "term": "Premenstrual Syndrome"
     }
   ],
-  "clinicalSpecialties": [
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "aa582206-a32c-445f-a4f3-204b46b27ebc",

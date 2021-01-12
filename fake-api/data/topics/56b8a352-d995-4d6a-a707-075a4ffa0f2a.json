@@ -14,9 +14,8 @@
       "term": "Acute Kidney Injury"
     }
   ],
-  "clinicalSpecialties": [
-    "Kidney disease and urology"
-  ],
+  "clinicalSpecialties": ["Kidney disease and urology"],
+  "aliases": ["Kidney injury - acute"],
   "topicHtmlObjects": [
     {
       "itemId": "5d0bef9a-1423-485c-9e85-0d52bda4cd94",

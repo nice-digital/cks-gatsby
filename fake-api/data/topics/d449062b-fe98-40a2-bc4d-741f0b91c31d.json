@@ -18,9 +18,8 @@
       "term": "Myeloma Proteins"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "255109be-f4b3-4859-835f-8c9a9b209c07",

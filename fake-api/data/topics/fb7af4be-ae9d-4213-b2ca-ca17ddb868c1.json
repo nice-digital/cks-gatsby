@@ -14,9 +14,8 @@
       "term": "Drug Toxicity"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices"
-  ],
+  "clinicalSpecialties": ["Drugs and devices"],
+  "aliases": ["Drugs - adverse reactions"],
   "topicHtmlObjects": [
     {
       "itemId": "5764ad76-7fd3-4176-9db7-50c04ddc37ba",

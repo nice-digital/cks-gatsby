@@ -14,6 +14,12 @@ import styles from "./topics.module.scss";
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
+interface TopicLink {
+	name: string;
+	slug: string;
+	isAlias: boolean;
+}
+
 export type TopicsPageProps = PageProps<{
 	allTopics: {
 		nodes: Topic[];
@@ -23,15 +29,38 @@ export type TopicsPageProps = PageProps<{
 const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 	const { nodes: topics } = data.allTopics;
 
+	const topicsAndAliases = useMemo(() => {
+		const directTopicLinks = topics.map(
+			({ slug, topicName }) =>
+				({ slug, name: topicName, isAlias: false } as TopicLink)
+		);
+
+		const topicAliases = topics.reduce(
+			(accumulator, currentValue) =>
+				accumulator.concat(
+					currentValue.aliases.map((alias) => ({
+						slug: currentValue.slug,
+						name: alias,
+						isAlias: true,
+					}))
+				),
+			[] as TopicLink[]
+		);
+
+		return directTopicLinks
+			.concat(topicAliases)
+			.sort((a, b) => a.name.localeCompare(b.name));
+	}, [topics]);
+
 	const groupedTopics = useMemo(
 		() =>
 			alphabet.map((letter) => ({
 				letter,
-				topics: topics.filter(
-					(topic) => topic.topicName[0].toLowerCase() === letter
+				topics: topicsAndAliases.filter(
+					(topicLink) => topicLink.name[0].toLowerCase() === letter
 				),
 			})),
-		[alphabet, topics]
+		[alphabet, topicsAndAliases]
 	);
 
 	const lettersWithTopics = useMemo(
@@ -86,9 +115,11 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 								{letter.toUpperCase()}
 							</h2>
 							<ColumnList aria-labelledby={letter}>
-								{topics.map(({ id, slug, topicName }) => (
-									<li key={id}>
-										<Link to={`/topics/${slug}/`}>{topicName}</Link>
+								{topics.map(({ slug, name, isAlias }) => (
+									<li key={name}>
+										<Link to={`/topics/${slug}/`} data-alias={isAlias}>
+											{name}
+										</Link>
 									</li>
 								))}
 							</ColumnList>

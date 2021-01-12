@@ -14,10 +14,8 @@
       "term": "Obesity"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic", "Preventative medicine"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3db47cd7-f53b-48f0-aa34-f401594f230e",
