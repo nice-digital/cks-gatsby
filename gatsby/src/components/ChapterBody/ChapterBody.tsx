@@ -11,12 +11,11 @@ import ChevronDownIcon from "@nice-digital/icons/lib/ChevronDown";
 import ChevronUpIcon from "@nice-digital/icons/lib/ChevronUp";
 
 import { stripHtmlTags, stripHtmlComments } from "../../utils/html-utils";
+import { BasisChapterTitle } from "../../utils/constants";
 
 import { ChapterLevel1, ChapterLevel2 } from "../../types";
 
 import styles from "./ChapterBody.module.scss";
-
-const BasisChapterTitle = "Basis for recommendation";
 
 const EnterKeyCode = 13;
 const SpaceKeyCode = 32;

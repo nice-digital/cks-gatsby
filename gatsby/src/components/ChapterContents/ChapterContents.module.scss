@@ -1,11 +1,29 @@
 @import '~@nice-digital/nds-core/scss/core.scss';
 
 .wrapper {
-  position: relative;
+  position: relative; // The sticky 'on this page' nav is relative to this
 }
 
 .printBtn {
+  @include nds-link-default;
+  appearance: none;
+  background: none;
+  border: 0;
+  bottom: 100%;
+  cursor: pointer;
   display: none;
+  padding: 0;
+
+  svg {
+    @include nds-font-size(2);
+    color: $nds-colour-nice-rich-black;
+    margin-right: rem($nds-spacing-small);
+    vertical-align: text-bottom;
+  }
+
+  &:hover svg {
+    color: $nds-colour-link-hover;
+  }
 }
 
 @include mq($from: sm) {
@@ -15,60 +33,64 @@
 
   .menu {
     float: left;
-    width: calc(#{percentage(1 / 4)} - #{rem($nds-spacing-small)});
+    margin-right: rem($nds-spacing-medium);
+    width: calc(25% - #{rem($nds-spacing-small)});
+  }
+
+  .landing {
+    float: right;
+    width: calc(75% - #{rem($nds-spacing-small)});
+  }
+
+  .onThisPage {
+    float: right;
+    width: calc(75% - #{rem($nds-spacing-small)});
   }
 
   .body {
-    float: right;
-    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-small)});
+    margin-left: calc(25% + #{rem($nds-spacing-small)});
+    overflow: hidden; // Because headings are cleared by default
+    width: calc(75% - #{rem($nds-spacing-small)});
   }
 }
 
 @include mq($from: md) {
   .printBtn {
-    @include nds-link-default;
-    appearance: none;
-    background: none;
-    border: 0;
-    bottom: 100%;
-    cursor: pointer;
     display: block;
     margin-bottom: rem($nds-spacing-x-large);
-    padding: 0;
     position: absolute;
     right: 0;
-
-    svg {
-      @include nds-font-size(2);
-      color: $nds-colour-nice-rich-black;
-      margin-right: rem($nds-spacing-small);
-      vertical-align: text-bottom;
-    }
-
-    &:hover svg {
-      color: $nds-colour-link-hover;
-    }
   }
 
   .menu {
-    width: calc(#{percentage(1 / 4)} - #{rem($nds-spacing-medium)});
+    margin-right: rem($nds-spacing-large);
+    width: calc(#{percentage(3 / 12)} - #{rem($nds-spacing-medium)});
+  }
+
+  .landing {
+    width: calc(#{percentage(9 / 12)} - #{rem($nds-spacing-medium)});
+  }
+
+  .onThisPage {
+    position: sticky;
+    top: 0;
+    width: calc(#{percentage(2 / 12)} - #{rem($nds-spacing-medium)});
   }
 
   .body {
-    width: calc(#{percentage(3 / 4)} - #{rem($nds-spacing-medium)});
+    margin-left: calc(25% + #{rem($nds-spacing-medium)});
+    width: calc(#{percentage(7 / 12)} - #{rem($nds-spacing-large)});
   }
 }
 
 @media print {
-  .menu {
+  .printBtn,
+  .menu,
+  .onThisPage {
     display: none;
   }
 
   .body {
     width: 100%;
-  }
-
-  .printBtn {
-    display: none;
   }
 }
