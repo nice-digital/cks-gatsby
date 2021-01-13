@@ -23,7 +23,7 @@ Then(
 	/^I expect to see "([^"]*)" in the autocomplete suggestions$/,
 	async (text: string) => {
 		const optionElement = await $(await getSelector("autocomplete option"));
-		await optionElement.waitForExist();
+		await optionElement.waitForExist({ timeout: 20000 });
 
 		const menuSelector = await getSelector("autocomplete menu");
 		await checkContainsText("element", menuSelector, "", text);
