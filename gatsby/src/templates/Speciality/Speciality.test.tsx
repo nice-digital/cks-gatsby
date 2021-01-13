@@ -19,12 +19,14 @@ const getDefaultSpecialityTestData = (): Speciality => ({
 			slug: "angio-oedema-and-anaphylaxis",
 			topicName: "Angio-oedema and anaphylaxis",
 			topicId: "41b219ac-b62a-42d3-9d76-7b3897b21bdd",
+			aliases: [],
 		},
 		{
 			id: "topic1",
 			slug: "allergic-rhinitis",
 			topicName: "Allergic rhinitis",
 			topicId: "0473d89c-2999-40d1-911f-d265b4bd3942",
+			aliases: [],
 		},
 	],
 });

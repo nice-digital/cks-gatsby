@@ -11,6 +11,7 @@ const topic: PartialTopicWithChapters = {
 	slug: "asthma",
 	lastRevised: "Last revised in April&nbsp;2020",
 	topicId: "t1",
+	aliases: [],
 	chapters: [
 		{
 			fullItemName: "Summary",
