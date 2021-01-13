@@ -75,7 +75,7 @@
       },
       "presentation": {
         "hidden": false,
-        "group": "Tests",
+        "group": "Jest tests",
         "order": 1
       }
     },
@@ -102,7 +102,7 @@
       },
       "presentation": {
         "hidden": false,
-        "group": "Tests",
+        "group": "Jest tests",
         "order": 2
       }
     },
@@ -130,7 +130,7 @@
       },
       "presentation": {
         "hidden": false,
-        "group": "Tests",
+        "group": "Jest tests",
         "order": 2
       }
     },
@@ -151,6 +151,35 @@
         "group": "Fake API",
         "order": 1
       }
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Functional tests - current feature",
+      "cwd": "${workspaceFolder}/functional-tests",
+      "localRoot": "${workspaceFolder}/functional-tests",
+      "remoteRoot": "${workspaceFolder}/functional-tests",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "test",
+        "--",
+        "--spec",
+        "${fileBasenameNoExtension}",
+        "--baseUrl",
+        "${input:baseUrl}"
+      ],
+      "outFiles": ["${workspaceFolder}/functional-tests/lib/**/*.js"],
+      "console": "integratedTerminal",
+      "protocol": "inspector",
+      "sourceMaps": true,
+      "disableOptimisticBPs": true,
+      "presentation": {
+        "hidden": false,
+        "group": "Functional tests",
+        "order": 1
+      }
     }
   ],
   "compounds": [
@@ -167,6 +196,21 @@
         "group": "_",
         "order": 0
       }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "baseUrl",
+      "description": "Base URL",
+      "default": "http://localhost:5000",
+      "type": "pickString",
+      "options": [
+        "http://localhost:5000",
+        "https://dev.cks.nice.org.uk",
+        "https://test.cks.nice.org.uk",
+        "https://beta-cks.nice.org.uk",
+        "https://cks.nice.org.uk"
+      ]
     }
   ]
 }

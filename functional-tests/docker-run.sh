@@ -30,9 +30,8 @@ function processTestOutput()
   # Generate an Allure test report
   docker-compose run -T test-runner allure generate --clean
 
-  # Copy error shots and logs to use as a TeamCity artifact for debugging purposes
+  # Copy logs to use as a TeamCity artifact for debugging purposes
   mkdir -p docker-output
-  docker cp test-runner:/tests/screenshots ./docker-output
   docker cp test-runner:/tests/allure-report ./docker-output
 
   #docker cp cks-web-app:/app/logs ./docker-output/cks-web-app

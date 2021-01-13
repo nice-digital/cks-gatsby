@@ -76,7 +76,7 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 					aria-label="Letters A to Z with matching topics"
 				>
 					{lettersWithTopics.map(({ letter, topics }) => (
-						<li key={letter}>
+						<li key={letter} className={styles.letter}>
 							<h2
 								id={letter}
 								className={styles.letterHeading}
@@ -92,10 +92,6 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 									</li>
 								))}
 							</ColumnList>
-
-							<a href="#a-to-z" className={styles.backToTop}>
-								Back to top (A to Z)
-							</a>
 						</li>
 					))}
 				</ol>

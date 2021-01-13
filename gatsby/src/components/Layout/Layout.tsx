@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import { Helmet } from "react-helmet";
 
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
@@ -17,13 +16,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 	return (
 		<>
 			<Lato />
-			<Helmet>
-				<script
-					src="https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
-					type="text/javascript"
-					async
-				></script>
-			</Helmet>
 			<Header />
 			<main
 				className={`container ${styles.backToTopSpacing}`}

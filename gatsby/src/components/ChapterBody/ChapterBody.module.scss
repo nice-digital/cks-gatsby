@@ -5,6 +5,15 @@
   > :global(.visually-hidden):first-child + * > :first-child {
     margin-top: 0;
   }
+
+  // To avoid the black border when using hash links: https://stackoverflow.com/a/6203344/486434
+  h2:focus,
+  h3:focus,
+  h4:focus,
+  h5:focus,
+  h6:focus {
+    outline: 0 !important;
+  }
 }
 
 .basisWrapper {

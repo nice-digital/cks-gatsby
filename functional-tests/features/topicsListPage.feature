@@ -28,10 +28,6 @@ Feature: Topics List Page
     When I click the "C" link
     Then I expect that the path is "/topics/#c"
 
-  Scenario: Back to top
-    When I click the "Back to top (A to Z)" link
-    Then I expect that the path is "/topics/#a-to-z"
-
   Scenario: Scroll to and click topic (Obesity)
     When I click the "Obesity" link
     Then I expect that the path is "/topics/obesity/"
