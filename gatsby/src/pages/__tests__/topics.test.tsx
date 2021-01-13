@@ -10,16 +10,19 @@ describe("TopicsPage", () => {
 			id: "t1",
 			topicName: "Achilles tendinopathy",
 			slug: "achilles-tendinopathy",
+			aliases: [] as string[],
 		} as Topic,
 		{
 			id: "t2",
 			topicName: "Acne vulgaris",
 			slug: "acne-vulgaris",
+			aliases: [] as string[],
 		} as Topic,
 		{
 			id: "t3",
 			topicName: "Cataracts",
 			slug: "cataracts",
+			aliases: [] as string[],
 		} as Topic,
 	];
 
