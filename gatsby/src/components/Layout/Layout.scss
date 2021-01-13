@@ -8,6 +8,7 @@ $nds-output-visibility-classes: false;
 @import './tables';
 
 html {
+  overflow-x: visible; // Override the overflow from NDS, otherwise position sticky doesn't work
   scroll-behavior: smooth;
 
   @media (prefers-reduced-motion) {
