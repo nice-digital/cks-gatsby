@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1-dose",
+    "slug": "dose",
+    "fullItemName": "Dose",
+    "subChapters": [
+      {
+        "id": "2-theophylline",
+        "slug": "theophylline",
+        "fullItemName": "Theophylline",
+        "subChapters": [
+          {
+            "id": "3-something",
+            "slug": "something",
+            "fullItemName": "Something",
+            "subChapters": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1-contraindications",
+    "slug": "contraindications-cautions",
+    "fullItemName": "Contraindications and cautions",
+    "subChapters": [
+      {
+        "id": "2-basis",
+        "slug": "basis",
+        "fullItemName": "Basis for recommendation",
+        "subChapters": []
+      }
+    ]
+  }
+]

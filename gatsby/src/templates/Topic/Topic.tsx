@@ -68,7 +68,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 
 			<p className="visually-hidden">{topicSummary}</p>
 
-			<ChapterContents chapter={firstChapter}>
+			<ChapterContents chapter={firstChapter} showHeading={true}>
 				{landingLinks.map((chapter, i) => (
 					<section
 						key={chapter.id}
