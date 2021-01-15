@@ -12,6 +12,11 @@ sudo ./aws/install --update
 
 aws --version
 
+echo "set aws cli access keys...."
+export AWS_ACCESS_KEY_ID=$($OctopusParameters["TFAWSAccessKey"])
+export AWS_SECRET_ACCESS_KEY=$($OctopusParameters["TFAWSAccessSecret"])
+export AWS_DEFAULT_REGION=eu-west-1
+
 echo "check that aws cli is working...."
 
 aws s3 ls
