@@ -12,4 +12,8 @@ sudo ./aws/install
 
 aws --version
 
+echo "check that aws cli is working...."
+
+aws s3 ls
+
 # terraform --version
