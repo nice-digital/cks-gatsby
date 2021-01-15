@@ -15,7 +15,6 @@ aws --version
 echo "set aws cli access keys...."
 echo $TFAWSAccessKey
 export AWS_ACCESS_KEY_ID=$(get_octopusvariable "TFAWSAccessKey")
-# export AWS_SECRET_ACCESS_KEY=$TFAWSAccessSecret
 export AWS_SECRET_ACCESS_KEY=$(get_octopusvariable "TFAWSAccessSecret")
 export AWS_DEFAULT_REGION=eu-west-1
 accesskey=$(get_octopusvariable "TFAWSAccessKey")
