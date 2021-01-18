@@ -1,6 +1,4 @@
 #!/bin/sh
-cat /etc/*-release
-
 echo "install useful tools...."
 
 apt-get update

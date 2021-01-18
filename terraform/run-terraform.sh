@@ -1,5 +1,6 @@
 #!/bin/sh
 echo "install terraform and support tools...."
+chmod +x install-terraform.sh
 sudo install-terraform.sh
 
 echo "set aws cli access keys...."
