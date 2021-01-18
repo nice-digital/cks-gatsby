@@ -1,4 +1,10 @@
 #!/bin/sh
+
+echo "set aws cli access keys...."
+export AWS_ACCESS_KEY_ID=$(get_octopusvariable "TFAWSAccessKey")
+export AWS_SECRET_ACCESS_KEY=$(get_octopusvariable "TFAWSAccessSecret")
+export AWS_DEFAULT_REGION=eu-west-1
+
 # dotnet publish -c Release -r linux-x64 ../search-lambda/CKS.SearchLambda/CKS.SearchLambda.csproj
 terraform init -input=false
 terraform plan
