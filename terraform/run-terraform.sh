@@ -12,4 +12,4 @@ export AWS_DEFAULT_REGION=eu-west-1
 terraform init -input=false
 terraform plan
 terraform apply -auto-approve
-aws s3 sync ../test-static-site/ s3://$(terraform output this_s3_bucket_id | jq -r .)
+# aws s3 sync ../test-static-site/ s3://$(terraform output this_s3_bucket_id | jq -r .)
