@@ -52,7 +52,7 @@
   "devDependencies": {
     "@el7cosmos/gatsby-plugin-prefetch-google-fonts": "^2.0.2",
     "@nice-digital/design-system": "^1.0.40-alpha.0",
-    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#aa521002daf155870b82c8fc6b7d0256dd23e290",
+    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#bd7f4964303cba16fd05d844cc3cd3fbbc51d7f0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.1",
     "@testing-library/user-event": "^12.2.2",
