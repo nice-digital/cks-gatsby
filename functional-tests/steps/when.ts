@@ -24,7 +24,7 @@ When(
 		const pageTitle = await browser.getTitle();
 
 		const optionElement = await $(await getSelector("autocomplete option"));
-		await optionElement.waitForExist();
+		await optionElement.waitForExist({ timeout: 20000 });
 
 		const anchorSelector = await getSelector("autocomplete anchor");
 
