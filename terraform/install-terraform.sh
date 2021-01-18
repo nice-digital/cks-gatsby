@@ -4,11 +4,11 @@ cat /etc/*-release
 echo "install useful tools...."
 
 sudo apt-get update
-sudo apt-get install zip unzip
+sudo apt-get install zip unzip wget
 
 echo "install aws cli...."
 
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+wget "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip -q awscliv2.zip
 sudo ./aws/install --update
 
