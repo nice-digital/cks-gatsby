@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "install terraform and support tools...."
 chmod +x install-terraform.sh
-sudo install-terraform.sh
+sudo ./install-terraform.sh
 
 echo "set aws cli access keys...."
 export AWS_ACCESS_KEY_ID=$(get_octopusvariable "TFAWSAccessKey")
