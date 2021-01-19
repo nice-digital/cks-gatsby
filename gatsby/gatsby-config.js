@@ -83,7 +83,7 @@ module.exports = {
 				include_favicon: false,
 				shortcuts: [
 					{
-						name: "Topics A to Z",
+						name: "Health topics A to Z",
 						url: "/topics/?utm_source=a2hs&utm_medium=shortcuts",
 					},
 					{
