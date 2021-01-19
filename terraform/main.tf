@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-2"
+  region = "eu-west-1"
 
   # Make it faster by skipping something
   skip_get_ec2_platforms      = true
@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "random_pet" "this" {
-  length = 2
+  length = 3
 }
 
 # Put all extra resources which don't belong anywhere
