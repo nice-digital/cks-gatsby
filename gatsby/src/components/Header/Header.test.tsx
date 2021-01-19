@@ -25,7 +25,10 @@ describe("Header", () => {
 		const { findByText } = renderWithRouter(<Header />);
 
 		const cksAnchor = await findByText(
-			(_content, element) => element.textContent === "CKS",
+			(_content, element) =>
+				element.textContent ===
+				// Odd spacing because of the nested spans inside global nav
+				"CKS Clinical Knowledge SummariesClinical Knowledge Summaries",
 			{ selector: "a" }
 		);
 

@@ -22,7 +22,7 @@ Feature: Topics List Page
     Then I expect that the path is "/"
 
   Scenario: Heading text
-    Then I expect that element "h1" matches the text "Topics A to Z"
+    Then I expect that element "h1" matches the text "Health topics A to Z"
 
   Scenario: Click alphabet letter
     When I click the "C" link
