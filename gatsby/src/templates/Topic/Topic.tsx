@@ -49,14 +49,17 @@ const TopicPage: React.FC<TopicPageProps> = ({
 
 	return (
 		<Layout>
-			<SEO title={topicName + " | Topics A to Z"} description={topicSummary} />
+			<SEO
+				title={topicName + " | Health topics A to Z"}
+				description={topicSummary}
+			/>
 			<Breadcrumbs>
 				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
 				<Breadcrumb to="/" elementType={Link}>
 					CKS
 				</Breadcrumb>
 				<Breadcrumb to="/topics/" elementType={Link}>
-					Topics A to Z
+					Health topics A to Z
 				</Breadcrumb>
 				<Breadcrumb>{topicName}</Breadcrumb>
 			</Breadcrumbs>

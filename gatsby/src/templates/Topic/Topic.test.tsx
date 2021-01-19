@@ -53,7 +53,7 @@ describe("TopicPage", () => {
 	describe("SEO", () => {
 		it("should render the topic name in the page title", async () => {
 			await waitFor(() => {
-				expect(document.title).toContain("Asthma | Topics A to Z");
+				expect(document.title).toContain("Asthma | Health topics A to Z");
 			});
 		});
 
@@ -70,7 +70,7 @@ describe("TopicPage", () => {
 		it.each([
 			["NICE", "https://www.nice.org.uk/"],
 			["CKS", "/"],
-			["Topics A to Z", "/topics/"],
+			["Health topics A to Z", "/topics/"],
 		])("Breadcrumbs (%s)", (breadcrumbText, expectedHref) => {
 			expect(
 				renderResult.queryByText(textContentMatcher(breadcrumbText), {
