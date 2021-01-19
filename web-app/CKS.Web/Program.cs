@@ -1,10 +1,7 @@
-using System;
-using CKS.Web.Hosting;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Serilog;
+using System;
 
 namespace CKS.Web
 {
@@ -35,10 +32,6 @@ namespace CKS.Web
 						webBuilder
 							.ConfigureKestrel(o => o.AddServerHeader = false)
 							.UseStartup<Startup>();
-					})
-				.ConfigureServices(services =>
-					{
-						services.AddTransient<IStartupFilter, SecurityHeadersStartupFilter>();
 					});
 	}
 }
