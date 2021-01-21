@@ -18,5 +18,6 @@ releaseEnvironment=$(get_octopusvariable "Octopus.Environment.Name")
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 cd $releaseEnvironment
 terraform init -input=false
-terraform apply -auto-approve -var "teamcity_build_number=$releaseNumber"
+terraform plan -input=false
+terraform apply -input=false -var "teamcity_build_number=$releaseNumber"
 # aws s3 sync ../test-static-site/ s3://$(terraform output this_s3_bucket_id | jq -r .)
