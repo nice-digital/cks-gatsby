@@ -11,6 +11,8 @@ variable "environment_name" {
 }
 variable "created_by" {
 	description = "The name of the user or service that created the service or resouce"
+	type = string
+	default = "terraform"
 }
 
 variable "teamcity_build_number" {

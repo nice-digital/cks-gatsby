@@ -1,9 +1,11 @@
 variable "application_name" {
 	type = string
+	default = "nice-app"
 }
 
 variable "environment_name" {
 	type = string
+	default = "local"
 }
 
 variable "created_by" {
