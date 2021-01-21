@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "b" {
+resource "aws_s3_bucket" "s3_website_bucket" {
   bucket = "${var.application_name}-s3_website-${var.environment_name}"
   acl    = "public-read"
 
@@ -41,8 +41,8 @@ resource "aws_s3_bucket" "b" {
 # }
 
 resource "aws_s3_bucket_policy" "test-static-site-policy" {
-	depends_on = [ aws_s3_bucket.b ]
-    bucket = aws_s3_bucket.b.id
+	depends_on = [ aws_s3_bucket.s3_website_bucket ]
+    bucket = aws_s3_bucket.s3_website_bucket.id
   policy = <<POLICY
 {
   "Version": "2012-10-17",
@@ -56,7 +56,7 @@ resource "aws_s3_bucket_policy" "test-static-site-policy" {
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::${aws_s3_bucket.b.id}/*"
+                "arn:aws:s3:::${aws_s3_bucket.s3_website_bucket.id}/*"
             ]
         }
     ]
