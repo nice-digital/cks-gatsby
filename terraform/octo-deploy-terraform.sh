@@ -14,7 +14,9 @@ export AWS_DEFAULT_REGION=eu-west-1
 
 # dotnet publish -c Release -r linux-x64 ../search-lambda/CKS.SearchLambda/CKS.SearchLambda.csproj
 releaseNumber=$(get_octopusvariable "Octopus.Release.Number")
-echo "Deploying Release Number: $releaseNumber"
+releaseEnvironment=$(get_octopusvariable "Octopus.Environment.Name")
+echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
+cd $releaseEnvironment
 terraform init -input=false
 terraform apply -auto-approve -var "teamcity_build_number=$releaseNumber"
 # aws s3 sync ../test-static-site/ s3://$(terraform output this_s3_bucket_id | jq -r .)
