@@ -21,9 +21,14 @@ variable "teamcity_build_number" {
   default = "xxx"
 }
 
-
 terraform {
   required_version = ">= 0.14"
+  backend "s3" {
+	  encrypt = true
+	  bucket = "terraform-state-nice-cks-dev"
+	  region = "eu-west-1"
+	  key = "nice/cks/dev"
+  }
 }
 
 provider "aws" {
