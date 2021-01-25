@@ -20,4 +20,4 @@ cd $releaseEnvironment
 terraform init -input=false
 terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber"
 terraform apply -input=false tfplan
-# aws s3 sync ../test-static-site/ s3://$(terraform output this_s3_bucket_id | jq -r .)
+aws s3 sync ../../test-static-site/ s3://$(terraform output s3_hosting_bucket_id | jq -r .)
