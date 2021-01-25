@@ -7,8 +7,9 @@ import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { ChapterLevel1 } from "../../types";
 import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
+import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
 import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
-import { stripHtmlTags, stripHtmlComments } from "../../utils/html-utils";
+import { stripHtmlTags } from "../../utils/html-utils";
 
 import styles from "./ChapterLevel1.module.scss";
 
@@ -25,7 +26,7 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 		slug,
 		fullItemName,
 		htmlHeader,
-		htmlStringContent,
+		summary,
 		topic,
 		subChapters,
 	} = chapter;
@@ -34,16 +35,11 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 
 	const headerNoHtml = useMemo(() => stripHtmlTags(htmlHeader), [htmlHeader]);
 
-	const htmlStringContentNoComments = useMemo(
-		() => stripHtmlComments(htmlStringContent),
-		[htmlStringContent]
-	);
-
 	return (
 		<Layout>
 			<SEO
 				title={`${fullItemName} | ${topic.topicName}`}
-				description={`${fullItemName}, ${topic.topicName}, CKS`}
+				description={summary || `${fullItemName}, ${topic.topicName}, CKS`}
 			/>
 
 			<Breadcrumbs>
@@ -67,11 +63,9 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 			/>
 
 			<ChapterContents chapter={chapter}>
-				{htmlStringContentNoComments ? undefined : (
+				<ChapterBody chapter={chapter} showHeading={false} />
+				{subChapters.length === 0 ? undefined : (
 					<nav aria-labelledby={slug}>
-						<h2 id={slug} className="visually-hidden">
-							{headerNoHtml}
-						</h2>
 						<ul
 							className={styles.subPagesList}
 							aria-label={`Pages within ${fullItemName}`}
@@ -81,6 +75,7 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 									<Link to={`${topicPath}${slug}/${subChapter.slug}/`}>
 										{subChapter.fullItemName}
 									</Link>
+									{subChapter.summary && <>: {subChapter.summary}</>}
 								</li>
 							))}
 						</ul>

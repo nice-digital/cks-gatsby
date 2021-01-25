@@ -23,6 +23,11 @@ export const chapterSchema = `
 		"""
 		htmlHeader: String!
 
+		"""
+		Summary for chapter e.g. 'Covers the management of children and adults with newly diagnosed or suspected asthma.'
+		"""
+		summary: String
+
 		"The HTML body of the chapter"
 		htmlStringContent: String!
 
