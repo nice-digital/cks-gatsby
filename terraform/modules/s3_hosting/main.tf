@@ -2,6 +2,8 @@ resource "aws_s3_bucket" "s3_website_bucket" {
   bucket = "${var.application_name}-s3-website-${var.environment_name}"
   acl    = "public-read"
 
+  force_destroy = true
+
   website {
     index_document = "index.html"
     error_document = "error.html"
