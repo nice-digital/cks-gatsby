@@ -14,10 +14,8 @@
       "term": "Neuralgia"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Drugs and devices", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "08a7d0f6-02a3-4246-956b-762d4cd722dd",

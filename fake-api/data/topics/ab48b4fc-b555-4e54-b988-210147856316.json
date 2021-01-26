@@ -14,10 +14,8 @@
       "term": "Infertility"
     }
   ],
-  "clinicalSpecialties": [
-    "Sexual health",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Sexual health", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "833c5435-0f4a-4ce3-a2fe-f37f5a5b5264",

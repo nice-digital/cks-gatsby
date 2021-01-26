@@ -18,10 +18,8 @@
       "term": "Meningococcal Infections"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Child health"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Child health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1ebb202d-2b5d-4233-beb0-b614a25af2f5",

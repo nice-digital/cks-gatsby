@@ -50,9 +50,8 @@
       "term": "Dyspepsia"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "2219eda5-a8f2-4b31-b41d-4fd3e31286d7",

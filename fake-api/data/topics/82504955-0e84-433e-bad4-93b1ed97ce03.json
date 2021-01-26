@@ -14,10 +14,8 @@
       "term": "Mass Screening"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal", "Preventative medicine"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6ea2eb57-0619-4b06-9848-3ee551ebf48f",

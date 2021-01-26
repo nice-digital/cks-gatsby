@@ -22,10 +22,8 @@
       "term": "Mass Screening"
     }
   ],
-  "clinicalSpecialties": [
-    "Preventative medicine",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Preventative medicine", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1900d4a8-51b8-43e0-956b-f65f34bed259",

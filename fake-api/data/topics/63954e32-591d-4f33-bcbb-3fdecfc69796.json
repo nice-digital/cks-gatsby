@@ -18,10 +18,8 @@
       "term": "Stroke"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "4a4d928f-b730-4ea9-bf09-0512e62c5453",

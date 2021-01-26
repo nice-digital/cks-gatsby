@@ -22,9 +22,8 @@
       "term": "Kidney"
     }
   ],
-  "clinicalSpecialties": [
-    "Kidney disease and urology"
-  ],
+  "clinicalSpecialties": ["Kidney disease and urology"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d1f55a72-d015-4772-880a-5d2f7b2bdbb9",

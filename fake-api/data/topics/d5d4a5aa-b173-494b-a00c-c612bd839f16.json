@@ -14,9 +14,8 @@
       "term": "Hallux Valgus"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "9acfc99c-c241-4ca4-8a14-9c6105e14db2",

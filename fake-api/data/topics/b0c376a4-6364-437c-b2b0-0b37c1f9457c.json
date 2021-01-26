@@ -14,10 +14,8 @@
       "term": "Candidiasis, Oral"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Oral health"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Oral health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3a6814df-0e3d-47ff-aca7-9a67370d194f",

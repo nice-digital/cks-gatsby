@@ -14,9 +14,8 @@
       "term": "Anemia, Iron-Deficiency"
     }
   ],
-  "clinicalSpecialties": [
-    "Haematology"
-  ],
+  "clinicalSpecialties": ["Haematology"],
+  "aliases": ["Iron deficiency anaemia"],
   "topicHtmlObjects": [
     {
       "itemId": "39031c95-0da6-4e6d-9379-7c59e11da67d",

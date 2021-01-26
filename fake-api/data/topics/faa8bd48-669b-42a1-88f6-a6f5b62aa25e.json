@@ -62,10 +62,8 @@
       "term": "Rotator Cuff"
     }
   ],
-  "clinicalSpecialties": [
-    "Injuries",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Injuries", "Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1b093b82-e20b-4d94-8e73-91ce39eace14",

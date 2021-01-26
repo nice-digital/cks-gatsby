@@ -18,10 +18,8 @@
       "term": "Prostatitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Kidney disease and urology",
-    "Men's health"
-  ],
+  "clinicalSpecialties": ["Kidney disease and urology", "Men's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6ddf2816-262a-432f-a8b1-f24c41e8c03b",

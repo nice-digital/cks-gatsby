@@ -14,10 +14,8 @@
       "term": "Dermatomycoses"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "43560064-4729-47e7-897c-0580e7810348",

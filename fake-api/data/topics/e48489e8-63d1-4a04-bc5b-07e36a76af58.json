@@ -26,9 +26,8 @@
       "term": "Pulmonary Disease, Chronic Obstructive"
     }
   ],
-  "clinicalSpecialties": [
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "22e502e8-364f-4fca-ae93-27ac9d6f82b9",

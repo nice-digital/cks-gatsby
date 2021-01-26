@@ -14,10 +14,8 @@
       "term": "Head Injuries, Closed"
     }
   ],
-  "clinicalSpecialties": [
-    "Injuries",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Injuries", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b2f7a081-4d19-45b1-b3b2-4d947c19edf1",

@@ -14,10 +14,8 @@
       "term": "Pancreatitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic",
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic", "Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d19135e7-5744-469d-9af5-2fd313376837",

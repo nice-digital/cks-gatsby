@@ -18,10 +18,8 @@
       "term": "Benzodiazepines"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices",
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Drugs and devices", "Mental health"],
+  "aliases": ["Z-drug and benzodiazepine withdrawal"],
   "topicHtmlObjects": [
     {
       "itemId": "e9513a3b-fb6b-4289-a1b2-837dae786119",

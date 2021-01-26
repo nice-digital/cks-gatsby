@@ -14,10 +14,8 @@
       "term": "Osteochondrosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Child health", "Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0005ac27-95f9-4810-afaf-b89abd7f4baf",

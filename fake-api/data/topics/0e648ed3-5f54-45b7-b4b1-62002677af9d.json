@@ -14,10 +14,8 @@
       "term": "Tennis Elbow"
     }
   ],
-  "clinicalSpecialties": [
-    "Injuries",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Injuries", "Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b3662334-207e-4a8c-959e-ed9a4abf8981",

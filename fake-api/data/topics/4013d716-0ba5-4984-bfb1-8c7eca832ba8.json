@@ -14,9 +14,8 @@
       "term": "Menorrhagia"
     }
   ],
-  "clinicalSpecialties": [
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "9b1a8a5e-b04d-47bf-b677-7a4bd49f48ff",

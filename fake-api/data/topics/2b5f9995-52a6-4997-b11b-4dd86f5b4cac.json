@@ -14,10 +14,8 @@
       "term": "Ovarian Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Cancer", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d86e7430-aa83-4054-9055-18d503164437",

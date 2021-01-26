@@ -26,9 +26,8 @@
       "term": "Sciatica"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6e6c0d5e-2ca6-41e0-ba96-8b2f8baed0cf",

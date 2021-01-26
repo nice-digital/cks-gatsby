@@ -18,10 +18,8 @@
       "term": "Staphylococcus aureus"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c510fdf9-d19c-4ff9-81af-9f90f9615cba",

@@ -26,10 +26,8 @@
       "term": "Nausea"
     }
   ],
-  "clinicalSpecialties": [
-    "Pregnancy",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Pregnancy", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6664f2f2-5750-4e2d-9ff3-2e7bbcbfc733",

@@ -34,10 +34,8 @@
       "term": "Pharyngitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0f282588-fad0-41ec-99df-7db7e76b1afc",

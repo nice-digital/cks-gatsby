@@ -14,9 +14,8 @@
       "term": "Sleep Apnea, Obstructive"
     }
   ],
-  "clinicalSpecialties": [
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f82fd04e-32e2-460e-a74a-d6ede3c0c01f",

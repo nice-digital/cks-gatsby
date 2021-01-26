@@ -14,10 +14,8 @@
       "term": "Dermatitis, Seborrheic"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Child health", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "624f1114-ed79-456b-9861-b0b0a11932bc",

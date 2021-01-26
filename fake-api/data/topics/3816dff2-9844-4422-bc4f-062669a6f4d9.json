@@ -14,10 +14,8 @@
       "term": "Dyspnea"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1c292407-5093-4e79-8190-6bde41f78a49",

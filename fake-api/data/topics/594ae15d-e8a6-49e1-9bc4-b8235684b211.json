@@ -18,10 +18,8 @@
       "term": "Palliative Care"
     }
   ],
-  "clinicalSpecialties": [
-    "Palliative care",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Palliative care", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "622bc110-ebcb-43c8-a5aa-1cd3eb8b2d43",

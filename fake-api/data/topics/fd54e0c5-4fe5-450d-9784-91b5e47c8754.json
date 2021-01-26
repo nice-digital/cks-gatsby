@@ -18,9 +18,8 @@
       "term": "Polycythemia"
     }
   ],
-  "clinicalSpecialties": [
-    "Haematology"
-  ],
+  "clinicalSpecialties": ["Haematology"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "2c75120c-e2f6-4a08-8119-1e86fb446f24",

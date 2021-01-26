@@ -14,10 +14,8 @@
       "term": "Abortion, Spontaneous"
     }
   ],
-  "clinicalSpecialties": [
-    "Pregnancy",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Pregnancy", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "5481cc73-44b9-4ac9-b101-ae34a935bef2",

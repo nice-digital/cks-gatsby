@@ -14,9 +14,8 @@
       "term": "Irritable Bowel Syndrome"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1baa5dae-c1d9-42ce-ac59-27de61b0909c",

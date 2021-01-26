@@ -18,10 +18,8 @@
       "term": "Tinea Versicolor"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0f3e812b-e6c8-4e77-9248-a073dacda9ea",

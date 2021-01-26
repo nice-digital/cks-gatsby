@@ -18,9 +18,8 @@
       "term": "Pediatrics"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health"
-  ],
+  "clinicalSpecialties": ["Child health"],
+  "aliases": ["Childhood limp - acute", "Limp (childhood) - acute"],
   "topicHtmlObjects": [
     {
       "itemId": "ec3dd83a-5616-4eed-829a-211f74a29707",

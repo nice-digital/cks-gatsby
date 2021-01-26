@@ -18,10 +18,8 @@
       "term": "Gastroesophageal Reflux"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Child health", "Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1803d75a-f61a-40a2-aa2d-54cf75582f2c",

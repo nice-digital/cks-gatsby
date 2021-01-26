@@ -14,10 +14,8 @@
       "term": "Seizures, Febrile"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Child health", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "ce9560cb-01ee-42d8-baf5-1650305b6c0f",

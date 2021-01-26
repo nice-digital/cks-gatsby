@@ -18,9 +18,8 @@
       "term": "Nebulizers and Vaporizers"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices"
-  ],
+  "clinicalSpecialties": ["Drugs and devices"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "44f61cd7-169d-46fe-b86b-5e01282a0366",

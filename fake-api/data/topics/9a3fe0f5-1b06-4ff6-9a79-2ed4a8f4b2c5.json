@@ -14,9 +14,8 @@
       "term": "Cataract"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b93a48f9-3308-445e-8171-4960294f01a4",

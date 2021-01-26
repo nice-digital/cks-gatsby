@@ -14,9 +14,8 @@
       "term": "Palliative Care"
     }
   ],
-  "clinicalSpecialties": [
-    "Palliative care"
-  ],
+  "clinicalSpecialties": ["Palliative care"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "51cc0305-5a97-4a5b-9b2e-9e3e38594372",

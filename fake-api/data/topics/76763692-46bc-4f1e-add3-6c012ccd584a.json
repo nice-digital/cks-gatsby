@@ -14,10 +14,8 @@
       "term": "Pityriasis Rosea"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "63e08b77-43da-4a24-b50b-8d267c026301",

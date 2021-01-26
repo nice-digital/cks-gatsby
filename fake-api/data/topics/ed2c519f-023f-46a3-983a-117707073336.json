@@ -26,10 +26,8 @@
       "term": "Conjunctivitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes",
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Eyes", "Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "52c2691e-d718-4de4-8e20-874210222d0e",

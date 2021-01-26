@@ -14,9 +14,8 @@
       "term": "Bipolar Disorder"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0b9418cf-a927-4834-9a0c-4ec712ac5521",

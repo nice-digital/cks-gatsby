@@ -14,10 +14,8 @@
       "term": "Epistaxis"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat",
-    "Injuries"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat", "Injuries"],
+  "aliases": ["Nosebleeds (epistaxis)"],
   "topicHtmlObjects": [
     {
       "itemId": "6d4a3746-1266-407a-8c7b-f0b8a1a8c061",

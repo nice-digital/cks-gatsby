@@ -22,9 +22,8 @@
       "term": "Osteoarthritis"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "325ed438-8192-488e-99c2-177f12b262c5",
