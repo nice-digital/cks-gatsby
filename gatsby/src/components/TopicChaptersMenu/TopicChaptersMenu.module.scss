@@ -1,0 +1,51 @@
+@import '~@nice-digital/nds-core/scss/core.scss';
+
+.toggleButton {
+  appearance: none;
+  background: $nds-colour-nice-grey-3;
+  border: 1px solid $nds-colour-border;
+  color: $nds-colour-link;
+  cursor: pointer;
+  display: block;
+  margin: rem(0 0 $nds-spacing-large);
+  padding: rem(
+    $nds-spacing-small $nds-spacing-large $nds-spacing-small $nds-spacing-small
+  );
+  position: relative;
+  text-align: left;
+  width: 100%;
+
+  &:focus {
+    @include nds-default-focus-style;
+    z-index: 1;
+  }
+
+  &[aria-expanded='false'] + :global(.stacked-nav) {
+    display: none;
+  }
+
+  &[aria-expanded='true'] {
+    border-bottom: 0;
+    margin: 0;
+
+    + :global(.stacked-nav) {
+      display: block;
+    }
+  }
+
+  @include mq($from: sm) {
+    display: none;
+
+    &[aria-expanded] + :global(.stacked-nav) {
+      display: block;
+    }
+  }
+}
+
+.icon {
+  color: $nds-colour-link;
+  right: rem($nds-spacing-small);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
