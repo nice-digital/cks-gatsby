@@ -14,9 +14,8 @@
       "term": "Urologic Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "dbf9837b-f416-430d-a78d-02e74f86824c",

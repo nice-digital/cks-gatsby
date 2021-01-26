@@ -14,9 +14,8 @@
       "term": "Dysmenorrhea"
     }
   ],
-  "clinicalSpecialties": [
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a7a7af91-791a-4db2-98f3-d8b206a9ca9a",

@@ -22,9 +22,8 @@
       "term": "Bursitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "956ad9e2-ab21-4291-a021-aa85b5eec47a",

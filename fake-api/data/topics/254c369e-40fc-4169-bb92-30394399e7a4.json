@@ -18,10 +18,8 @@
       "term": "Colic"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Child health", "Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "40dd3446-f659-401e-8086-7109796796ff",

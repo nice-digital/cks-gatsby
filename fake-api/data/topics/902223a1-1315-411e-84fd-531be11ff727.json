@@ -14,10 +14,8 @@
       "term": "Mumps"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Child health", "Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "bd2ff188-928d-4179-b286-81ba24a85410",

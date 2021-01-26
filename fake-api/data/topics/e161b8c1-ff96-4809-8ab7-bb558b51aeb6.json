@@ -14,10 +14,8 @@
       "term": "Prenatal Diagnosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Pregnancy",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Pregnancy", "Women's health"],
+  "aliases": ["Pregnancy (uncomplicated) - antenatal care"],
   "topicHtmlObjects": [
     {
       "itemId": "7b57bf95-dd9d-4ae1-a790-deef91b03f5a",

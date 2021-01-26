@@ -16,6 +16,7 @@ const change1Updated = {
 		topicId: "topic1",
 		topicName: "Topic One",
 		slug: "topic-one",
+		aliases: [],
 	},
 };
 
@@ -28,6 +29,7 @@ const change2New = {
 		topicId: "topic2",
 		topicName: "Topic Two",
 		slug: "topic-two",
+		aliases: [],
 	},
 };
 
@@ -40,6 +42,7 @@ const change3Updated = {
 		topicId: "topic3",
 		topicName: "Topic Three",
 		slug: "topic-three",
+		aliases: [],
 	},
 };
 
@@ -52,6 +55,7 @@ const change4New = {
 		topicId: "topic4",
 		topicName: "Topic Four",
 		slug: "topic-four",
+		aliases: [],
 	},
 };
 

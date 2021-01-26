@@ -18,10 +18,8 @@
       "term": "Palliative Care"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal",
-    "Palliative care"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal", "Palliative care"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "2335cfbc-f754-4370-8d89-8d66cd01570d",

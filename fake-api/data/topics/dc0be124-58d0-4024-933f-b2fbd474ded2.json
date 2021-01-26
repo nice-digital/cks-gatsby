@@ -54,11 +54,8 @@
       "term": "Pregnancy"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal",
-    "Pregnancy",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal", "Pregnancy", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "28a44c3b-dafe-4e39-a78e-ed99c6535c22",

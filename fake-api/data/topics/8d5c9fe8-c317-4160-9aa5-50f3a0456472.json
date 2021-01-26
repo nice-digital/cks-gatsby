@@ -14,9 +14,8 @@
       "term": "Migraine Disorders"
     }
   ],
-  "clinicalSpecialties": [
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "83b87f43-d6ad-4c05-8db6-5749a6c11eff",

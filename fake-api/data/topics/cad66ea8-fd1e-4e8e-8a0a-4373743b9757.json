@@ -14,9 +14,8 @@
       "term": "Fever"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health"
-  ],
+  "clinicalSpecialties": ["Child health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "9f72f560-6a00-4f93-bdc2-d2510c5def18",

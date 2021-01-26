@@ -26,10 +26,8 @@
       "term": "Depression"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Child health", "Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "617496eb-0d37-4598-a220-b544f6be1683",

@@ -22,9 +22,8 @@
       "term": "Arthritis, Rheumatoid"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1adab124-da57-4fc6-acbc-076e8f478cee",

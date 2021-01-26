@@ -14,9 +14,8 @@
       "term": "Blepharitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6397a591-acc3-41de-9dda-c5f53213cdeb",

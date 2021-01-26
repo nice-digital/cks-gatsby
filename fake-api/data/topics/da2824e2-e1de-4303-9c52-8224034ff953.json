@@ -14,10 +14,8 @@
       "term": "Scabies"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1973c972-038b-46f2-b0f6-b35ff7417b4e",

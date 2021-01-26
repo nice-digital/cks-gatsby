@@ -14,9 +14,8 @@
       "term": "Spondylitis, Ankylosing"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "e71954c0-4de4-406e-95b7-3fde14ee210c",

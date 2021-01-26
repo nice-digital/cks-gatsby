@@ -14,9 +14,8 @@
       "term": "Rosacea"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3a76a468-cc1e-4481-b5fe-50208363e8a6",

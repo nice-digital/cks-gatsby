@@ -14,11 +14,8 @@
       "term": "Domestic violence"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Women's health",
-    "Men's health"
-  ],
+  "clinicalSpecialties": ["Child health", "Women's health", "Men's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "28c062c1-bdfe-4623-ad73-a8e200a8f27f",

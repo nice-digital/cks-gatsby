@@ -14,9 +14,8 @@
       "term": "Gastrointestinal Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "21cff868-d0b2-4a77-b9d6-631628accc51",

@@ -14,10 +14,8 @@
       "term": "Hypertension"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Preventative medicine"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "89dd036b-a574-478f-8a4f-e68dea10c683",

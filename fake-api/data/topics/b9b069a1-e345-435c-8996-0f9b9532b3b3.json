@@ -18,9 +18,8 @@
       "term": "Addison Disease"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "9e9ec46f-c6c0-4b90-bd7c-ee947cfb16b2",

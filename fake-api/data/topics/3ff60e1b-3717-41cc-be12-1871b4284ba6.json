@@ -14,10 +14,8 @@
       "term": "Pruritus"
     }
   ],
-  "clinicalSpecialties": [
-    "Kidney disease and urology",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Kidney disease and urology", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f3b26c31-2dc4-4ed6-8a4c-b17707dfaa23",

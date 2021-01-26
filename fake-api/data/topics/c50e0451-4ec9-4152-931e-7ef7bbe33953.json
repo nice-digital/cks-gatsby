@@ -18,9 +18,8 @@
       "term": "Varicose Veins"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "fb088d23-ab21-4e34-a9f9-aa4390fbbf7a",

@@ -18,9 +18,8 @@
       "term": "Chalazion"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1fb234ab-5e5a-4c29-9d37-258b10a08694",

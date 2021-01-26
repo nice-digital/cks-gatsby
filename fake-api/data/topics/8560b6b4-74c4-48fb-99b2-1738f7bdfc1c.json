@@ -14,9 +14,8 @@
       "term": "Restless Legs Syndrome"
     }
   ],
-  "clinicalSpecialties": [
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f29ce708-4f4e-43f9-84d2-b0ad8cc92572",

@@ -65,6 +65,9 @@ export const topicSchema = `
 		"A list of terms related to this topic. Not every topic has other terms."
 		terms: [CksTopicTerm!]!
 
+		"A list of alternative names or synonyms"
+		aliases: [String!]!
+
 		"""
 		A list of specialities to which this topic belongs.
 

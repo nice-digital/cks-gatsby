@@ -14,9 +14,8 @@
       "term": "Sinusitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "359b344f-9ad5-4c91-bbbe-97083e97f819",

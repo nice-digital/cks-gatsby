@@ -14,9 +14,8 @@
       "term": "Skin Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "30c3f645-e6c9-42ed-bed4-2135b5a6a2d7",

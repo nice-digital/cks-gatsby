@@ -14,9 +14,8 @@
       "term": "Cryptorchidism"
     }
   ],
-  "clinicalSpecialties": [
-    "Kidney disease and urology"
-  ],
+  "clinicalSpecialties": ["Kidney disease and urology"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "067cef93-8fcd-4ee2-9ec2-36c1829b0b66",

@@ -18,10 +18,8 @@
       "term": "Ascariasis"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal",
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal", "Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6329113e-c5f1-4391-b308-124b84990062",

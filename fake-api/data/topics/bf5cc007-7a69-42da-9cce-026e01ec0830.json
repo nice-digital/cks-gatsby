@@ -14,10 +14,8 @@
       "term": "Diaper Rash"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Child health", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3bce4d77-99cd-48a6-ae4c-345eb5d575cf",

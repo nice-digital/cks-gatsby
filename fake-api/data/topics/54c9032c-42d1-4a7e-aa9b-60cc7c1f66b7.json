@@ -26,9 +26,8 @@
       "term": "Patella"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "ecee2df2-10b4-4920-8233-5198d6788ae7",

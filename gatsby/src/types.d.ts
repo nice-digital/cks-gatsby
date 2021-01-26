@@ -1,4 +1,4 @@
-export interface PartialTopic {
+interface PartialTopic {
 	/** The Gatsby id and NOT the API id */
 	id: string;
 	/** API id of the topic */
@@ -7,6 +7,7 @@ export interface PartialTopic {
 	topicName: string;
 	/** Path slug, for use within a URL */
 	slug: string;
+	aliases: string[];
 }
 
 export interface PartialTopicWithChapters extends PartialTopic {

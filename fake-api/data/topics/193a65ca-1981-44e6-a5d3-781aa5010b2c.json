@@ -14,9 +14,8 @@
       "term": "Meniere Disease"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "fee2b0ce-3786-46de-9b15-b97ceda917a2",

@@ -14,10 +14,8 @@
       "term": "Prostatic Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Kidney disease and urology",
-    "Men's health"
-  ],
+  "clinicalSpecialties": ["Kidney disease and urology", "Men's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a1bb49fe-b261-4b26-a2ca-bd60e667c21b",

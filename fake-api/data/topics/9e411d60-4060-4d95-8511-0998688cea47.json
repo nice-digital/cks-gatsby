@@ -18,10 +18,8 @@
       "term": "Urinary Incontinence"
     }
   ],
-  "clinicalSpecialties": [
-    "Kidney disease and urology",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Kidney disease and urology", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7f1822dc-707c-4ab8-9169-90eadae9a8af",

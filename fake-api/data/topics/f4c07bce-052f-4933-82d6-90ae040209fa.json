@@ -18,9 +18,8 @@
       "term": "Neck Pain"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "8e975db8-ef97-41da-8c27-cf18049d63d4",

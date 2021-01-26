@@ -18,9 +18,8 @@
       "term": "growth disorders"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health"
-  ],
+  "clinicalSpecialties": ["Child health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a93d4efd-1696-4258-8402-a8e200b7dc24",

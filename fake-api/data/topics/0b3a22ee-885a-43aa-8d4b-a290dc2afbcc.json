@@ -14,9 +14,8 @@
       "term": "Myocardial Infarction"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7a9e7571-dc63-4576-9591-2c8277f138f4",

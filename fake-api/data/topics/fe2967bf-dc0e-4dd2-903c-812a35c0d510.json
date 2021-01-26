@@ -18,9 +18,8 @@
       "term": "Administration, Topical"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices"
-  ],
+  "clinicalSpecialties": ["Drugs and devices"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "36b3035d-87cd-450b-8733-54f230e70eb0",

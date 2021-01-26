@@ -14,9 +14,8 @@
       "term": "Malaria"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "e54c9706-6a9d-438e-981e-2447325fdd43",

@@ -14,9 +14,8 @@
       "term": "Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "ca8026e7-cc75-4940-9845-e3e999508b1f",

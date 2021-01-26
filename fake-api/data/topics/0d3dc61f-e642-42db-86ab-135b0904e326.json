@@ -18,9 +18,10 @@
       "term": "Furunculosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [
+    "Carbuncles, boils and staphylococcal carriage",
+    "Staphylococcal carriage, boils and carbuncles"
   ],
   "topicHtmlObjects": [
     {

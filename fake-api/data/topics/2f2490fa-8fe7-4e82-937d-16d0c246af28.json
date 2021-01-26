@@ -14,10 +14,8 @@
       "term": "Jaundice"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3cc25d8c-f959-4b5a-a775-ee92f82e9b4a",

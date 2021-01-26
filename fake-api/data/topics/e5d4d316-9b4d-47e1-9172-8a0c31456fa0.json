@@ -22,10 +22,8 @@
       "term": "Mammography"
     }
   ],
-  "clinicalSpecialties": [
-    "Preventative medicine",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Preventative medicine", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1bc173d4-3fcd-4206-8797-4e1c9f8c30cb",

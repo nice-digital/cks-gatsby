@@ -14,9 +14,8 @@
       "term": "Cholesteatoma"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "4a065a4c-708b-4ef1-9737-beefc482998f",

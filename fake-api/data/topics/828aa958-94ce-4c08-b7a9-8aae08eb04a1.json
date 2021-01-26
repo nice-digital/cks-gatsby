@@ -22,10 +22,8 @@
       "term": "Gastroenteritis"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal",
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal", "Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "01583145-95d3-4f3e-b780-679d935e9224",

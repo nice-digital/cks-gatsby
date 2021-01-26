@@ -18,9 +18,8 @@
       "term": "Heart Arrest"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "ee967cb6-3d59-447d-855d-d94049b48ae3",

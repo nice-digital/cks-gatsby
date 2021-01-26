@@ -18,10 +18,8 @@
       "term": "Corneal Perforation"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes",
-    "Injuries"
-  ],
+  "clinicalSpecialties": ["Eyes", "Injuries"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0faa7186-9479-40f0-847e-a4afbad7826c",

@@ -59,6 +59,7 @@ export interface ApiSingleTopicResponse {
 	 * The spelling mistake is present in the API.
 	 */
 	clinicalSpecialties: string[];
+	aliases: string[];
 	topicHtmlObjects: ApiTopicHtmlObject[];
 	latestChanges: {
 		dateFrom: string;

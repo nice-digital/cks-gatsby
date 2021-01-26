@@ -14,9 +14,8 @@
       "term": "Stomatitis, Aphthous"
     }
   ],
-  "clinicalSpecialties": [
-    "Oral health"
-  ],
+  "clinicalSpecialties": ["Oral health"],
+  "aliases": ["Ulcers - aphthous"],
   "topicHtmlObjects": [
     {
       "itemId": "8f489c7d-2b2c-4161-a87f-714859400b30",
