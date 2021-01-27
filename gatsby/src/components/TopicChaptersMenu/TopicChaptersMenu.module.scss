@@ -9,7 +9,8 @@
   display: block;
   margin: rem(0 0 $nds-spacing-large);
   padding: rem(
-    $nds-spacing-small $nds-spacing-large $nds-spacing-small $nds-spacing-small
+    $nds-spacing-medium $nds-spacing-large $nds-spacing-medium
+      $nds-spacing-small
   );
   position: relative;
   text-align: left;
