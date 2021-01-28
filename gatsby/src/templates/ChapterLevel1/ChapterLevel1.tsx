@@ -72,7 +72,10 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 						>
 							{subChapters.map((subChapter) => (
 								<li key={subChapter.id}>
-									<Link to={`${topicPath}${slug}/${subChapter.slug}/`}>
+									<Link
+										to={`${topicPath}${slug}/${subChapter.slug}/`}
+										data-tracking="sub-landing-link"
+									>
 										{subChapter.fullItemName}
 									</Link>
 									{subChapter.summary && <>: {subChapter.summary}</>}
