@@ -57,6 +57,7 @@ const createCksPages = async ({
 					fullItemName
 					depth
 					htmlHeader
+					summary
 					htmlStringContent
 					topic {
 						id
@@ -79,6 +80,7 @@ const createCksPages = async ({
 						id
 						slug
 						fullItemName
+						summary
 					}
 				}
 			}
@@ -89,6 +91,7 @@ const createCksPages = async ({
 					fullItemName
 					depth
 					htmlHeader
+					summary
 					htmlStringContent
 					topic {
 						id
@@ -119,6 +122,7 @@ const createCksPages = async ({
 						fullItemName
 						depth
 						htmlHeader
+						summary
 						htmlStringContent
 						subChapters {
 							id
@@ -126,6 +130,7 @@ const createCksPages = async ({
 							fullItemName
 							depth
 							htmlHeader
+							summary
 							htmlStringContent
 							subChapters {
 								id
@@ -133,6 +138,7 @@ const createCksPages = async ({
 								fullItemName
 								depth
 								htmlHeader
+								summary
 								htmlStringContent
 								subChapters {
 									id
@@ -140,6 +146,7 @@ const createCksPages = async ({
 									fullItemName
 									depth
 									htmlHeader
+									summary
 									htmlStringContent
 									subChapters {
 										id
@@ -147,6 +154,7 @@ const createCksPages = async ({
 										fullItemName
 										depth
 										htmlHeader
+										summary
 										htmlStringContent
 									}
 								}

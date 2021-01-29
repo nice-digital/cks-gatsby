@@ -51,6 +51,7 @@ interface PartialChapter {
 	/** Chapter name e.g. Summary */
 	fullItemName: string;
 	subChapters: PartialChapter[];
+	summary?: string;
 }
 
 export interface ChapterLevel1 extends PartialChapter {
