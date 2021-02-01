@@ -1,26 +1,3 @@
-variable "application_name" {
-  description = "The name of application"
-  	type = string
-	default = "nice-cks"
-}
-
-variable "environment_name" {
-  description = "The name of environment"
-  	type = string
-	default = "dev"
-}
-variable "created_by" {
-	description = "The name of the user or service that created the service or resouce"
-	type = string
-	default = "terraform"
-}
-
-variable "teamcity_build_number" {
-  description = "The TeamCity build number of the build that triggered the creation of this resource"
-  type = string
-  default = "xxx"
-}
-
 terraform {
   required_version = ">= 0.14"
   backend "s3" {
@@ -30,6 +7,10 @@ terraform {
 	  key = "nice/cks/dev"
   }
 }
+
+##################################################################################
+# PROVIDERS
+##################################################################################
 
 provider "aws" {
   region = "eu-west-1"
@@ -44,6 +25,10 @@ provider "aws" {
   skip_requesting_account_id = false
 }
 
+##################################################################################
+# DATA
+##################################################################################
+
 # resource "random_pet" "this" {
 #   length = 3
 # }
@@ -53,6 +38,10 @@ provider "aws" {
 #   name             = random_pet.this.id
 #   compute_platform = "Lambda"
 # }
+
+##################################################################################
+# MODULES
+##################################################################################
 
 module "s3_hosting" {
   source = "../modules/s3_hosting"
