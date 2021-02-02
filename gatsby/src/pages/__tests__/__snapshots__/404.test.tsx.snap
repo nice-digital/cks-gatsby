@@ -95,7 +95,7 @@ exports[`404 should match snapshot 1`] = `
         looking for it using the search box
       </li>
       <li>
-        browsing for it from the
+        browsing for it from the 
         <a
           href="/"
         >
@@ -113,7 +113,7 @@ exports[`404 should match snapshot 1`] = `
       >
         Get in touch
       </a>
-
+       
       if you think there is a problem.
     </p>
   </main>
