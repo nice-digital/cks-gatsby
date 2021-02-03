@@ -7,8 +7,15 @@
 
 
 # dotnet publish -c Release -r linux-x64 ../search-lambda/CKS.SearchLambda/CKS.SearchLambda.csproj
+runningInOctoDeploy=false
 
-if [ -a /home/cksocto/.octopus/OctopusServer/ ] # Check to see if this script is runing in octo
+if [ -d /home/cksocto/.octopus/OctopusServer/ ]
+  then
+    runningInOctoDeploy=true
+fi
+
+
+if [ "$runningInOctoDeploy" = true ] # Check to see if this script is runing in octo
   then
     echo "install terraform and support tools...."
     chmod +x install-terraform.sh
@@ -25,7 +32,7 @@ if [ -a /home/cksocto/.octopus/OctopusServer/ ] # Check to see if this script is
   dotnet lambda package CKS.SearchLambda.zip --project-location ../search-lambda/CKS.SearchLambda
   searchLambdaSourceLocation="./CKS.SearchLambda.zip"
   releaseEnvironment="dev"
-  $releaseNumber="local-01"
+  releaseNumber="local-01"
 fi
 
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
@@ -39,7 +46,8 @@ echo "Current working directory is...$(pwd)"
 aws s3 cp ./../test-static-site/css/* s3://$(terraform output s3_hosting_bucket_id | jq -r .)/css/ --cache-control max-age=31536000
 aws s3 cp ./../test-static-site/*.html s3://$(terraform output s3_hosting_bucket_id | jq -r .)/ --cache-control max-age=30
 
-if [ ! -a /home/cksocto/.octopus/OctopusServer/ ] # Check to see if this script is runing in octo
-  cd ..
-  rm $searchLambdaSourceLocation
+if [ "$runningInOctoDeploy" = false ]
+  then # Check to see if this script is runing in octo
+    cd ..
+    rm $searchLambdaSourceLocation
 fi
