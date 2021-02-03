@@ -39,7 +39,7 @@ echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 echo "Using lambda search source files from..... $searchLambdaSourceLocation"
 cd $releaseEnvironment
 terraform init -input=false
-terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber"
+terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber" -var "search_lambda_source_filename=$searchLambdaSourceLocation"
 terraform apply -input=false tfplan
 echo "Current working directory is...$(pwd)"
 # aws s3 sync ../test-static-site/ s3://$(terraform output s3_hosting_bucket_id | jq -r .)

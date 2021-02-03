@@ -24,3 +24,7 @@ variable "teamcity_build_number" {
   type = string
   default = "xxx"
 }
+
+variable "search_lambda_source_filename" {
+	type = string
+}

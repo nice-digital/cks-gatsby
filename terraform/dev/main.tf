@@ -50,3 +50,13 @@ module "s3_hosting" {
   environment_name = var.environment_name
   teamcity_build_number = var.teamcity_build_number
 }
+
+module "lambda" {
+  source = "../modules/lambda"
+
+  application_name = var.application_name
+  environment_name = var.environment_name
+  teamcity_build_number = var.teamcity_build_number
+  lambda_source_filename = var.search_lambda_source_filename
+
+}
