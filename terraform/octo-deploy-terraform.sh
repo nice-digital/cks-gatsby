@@ -8,7 +8,7 @@
 
 # dotnet publish -c Release -r linux-x64 ../search-lambda/CKS.SearchLambda/CKS.SearchLambda.csproj
 
-if [ -a /home/cksocto/.octopus/OctopusServer/ ] # Check to see if this script is runing in octo - skip octo vars and installs if false
+if [ -a /home/cksocto/.octopus/OctopusServer/ ] # Check to see if this script is runing in octo
   then
     echo "install terraform and support tools...."
     chmod +x install-terraform.sh
@@ -29,6 +29,7 @@ if [ -a /home/cksocto/.octopus/OctopusServer/ ] # Check to see if this script is
 fi
 
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
+echo "Using lambda search source files from..... $searchLambdaSourceLocation"
 cd $releaseEnvironment
 terraform init -input=false
 terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber"
@@ -37,5 +38,8 @@ echo "Current working directory is...$(pwd)"
 # aws s3 sync ../test-static-site/ s3://$(terraform output s3_hosting_bucket_id | jq -r .)
 aws s3 cp ./../test-static-site/css/* s3://$(terraform output s3_hosting_bucket_id | jq -r .)/css/ --cache-control max-age=31536000
 aws s3 cp ./../test-static-site/*.html s3://$(terraform output s3_hosting_bucket_id | jq -r .)/ --cache-control max-age=30
-cd ..
-rm $searchLambdaSourceLocation
+
+if [ ! -a /home/cksocto/.octopus/OctopusServer/ ] # Check to see if this script is runing in octo
+  cd ..
+  rm $searchLambdaSourceLocation
+fi
