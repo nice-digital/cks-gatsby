@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "Website for NICE Clinical Knowledge Summaries (CKS) built with Gatsby and using the NICE Design System",
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "start": "npm run develop",
     "// GATSBY": "",
     "develop": "cross-env GATSBY_HOT_LOADER=fast-refresh gatsby develop",
@@ -86,7 +85,6 @@
     "gatsby-plugin-sitemap": "^2.7.0",
     "gatsby-plugin-split-css": "^1.0.2",
     "gatsby-plugin-typescript": "^2.7.0",
-    "gatsby-react-router-scroll": "3.0.0",
     "http-proxy-middleware": "^1.0.6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
@@ -110,9 +108,6 @@
     "typescript": "^4.1.2",
     "wait-on": "^5.2.1",
     "web-vitals": "^0.2.4"
-  },
-  "resolutions": {
-    "gatsby-react-router-scroll": "3.0.0"
   },
   "dependencies": {}
 }

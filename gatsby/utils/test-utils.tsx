@@ -25,4 +25,4 @@ export const renderWithRouter = (
 export const textContentMatcher = (text: string): MatcherFunction => (
 	_,
 	element
-): boolean => element.textContent?.trim() == text;
+): boolean => element?.textContent?.trim() == text;

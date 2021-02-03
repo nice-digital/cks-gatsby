@@ -51,28 +51,26 @@ export const onRouteUpdate = ({
  * See https://www.gatsbyjs.org/docs/browser-apis/#shouldUpdateScroll
  */
 export const shouldUpdateScroll = ({
-	prevRouterProps,
 	routerProps: { location },
 	getSavedScrollPosition,
-}: ShouldUpdateScrollArgs): string => {
-	const savedScrollPosition = getSavedScrollPosition(location);
+}: ShouldUpdateScrollArgs): boolean | string | [number, number] => {
+	const savedScrollY = getSavedScrollPosition(location)[1] as
+		| number
+		| undefined;
 
-	if (
-		savedScrollPosition &&
-		prevRouterProps?.location.pathname !== location.pathname
-	) {
-		return savedScrollPosition;
-	}
+	// Returning true here uses Gatsby's default behaviour.
+	// I.e. if there's a saved position or a hash then just let Gatsby deal with it
+	if ((savedScrollY && savedScrollY != 0) || location.hash) return true;
 
-	const targetId = location.hash.substring(1) || "content-start",
-		targetElement = document.getElementById(targetId);
+	const contentStartElement = document.getElementById("content-start");
 
-	if (targetElement) {
-		targetElement.setAttribute("tabIndex", "-1");
-		targetElement.focus();
-	}
+	if (!contentStartElement) return true;
 
-	return targetId;
+	contentStartElement.setAttribute("tabIndex", "-1");
+	contentStartElement.focus();
+	contentStartElement.scrollIntoView();
+
+	return false;
 };
 
 /**
