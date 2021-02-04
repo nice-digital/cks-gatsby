@@ -13,7 +13,7 @@ if [ -d /home/cksocto/.octopus/OctopusServer/ ]
   then
     runningInOctoDeploy=true
     echo "running script in octo......."
-    searchLambdaSourceLocation=$(get_octopusvariable "[Octopus.Action[Copy Search Lambda Package].Output.Package.FilePath]")
+    searchLambdaSourceLocation=$(get_octopusvariable "[Octopus.Action[Copy Search Lambda Package].Output[CKS-Terraform].Package.FilePath]")
     echo "search lambda location....... $searchLambdaSourceLocation"
 fi
 
