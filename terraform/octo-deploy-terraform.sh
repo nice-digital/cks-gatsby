@@ -14,7 +14,6 @@ if [ -d /home/cksocto/.octopus/OctopusServer/ ]
     runningInOctoDeploy=true
     echo "running script in octo......."
     searchLambdaSourceLocation=$(get_octopusvariable "Octopus.Action[Copy Search Lambda Package].Output[CKS-Terraform].Package.FilePath")
-    testResult=$(get_octopusvariable "Octopus.Action[StepA].Output.TestResult")
     echo "search lambda location....... $searchLambdaSourceLocation"
 fi
 
@@ -31,7 +30,6 @@ if [ "$runningInOctoDeploy" = true ] # Check to see if this script is runing in 
     export AWS_DEFAULT_REGION=eu-west-1
     releaseNumber=$(get_octopusvariable "Octopus.Release.Number")
     releaseEnvironment=$(get_octopusvariable "Octopus.Environment.Name")
-    searchLambdaSourceLocation=$(get_octopusvariable "[Octopus.Action[Copy Search Lambda Package].Output.Package.FilePath]")
   else
   dotnet lambda package CKS.SearchLambda.zip --project-location ../search-lambda/CKS.SearchLambda
   searchLambdaSourceLocation="../CKS.SearchLambda.zip"
