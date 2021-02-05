@@ -34,7 +34,7 @@ if [ "$runningInOctoDeploy" = true ] # Check to see if this script is runing in 
     searchLambdaSourceLocation=$(get_octopusvariable "[Octopus.Action[Copy Search Lambda Package].Output.Package.FilePath]")
   else
   dotnet lambda package CKS.SearchLambda.zip --project-location ../search-lambda/CKS.SearchLambda
-  searchLambdaSourceLocation="./CKS.SearchLambda.zip"
+  searchLambdaSourceLocation="../CKS.SearchLambda.zip"
   releaseEnvironment="dev"
   releaseNumber="local-01"
 fi
@@ -42,18 +42,20 @@ fi
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 echo "Using lambda search source files from..... $searchLambdaSourceLocation"
 cd $releaseEnvironment
-terraform init -input=false
-terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber" -var "search_lambda_source_filename=$searchLambdaSourceLocation"
+# terraform init -input=false
+terraform plan -input=false -out=tfplan \
+    -var "application_name=cks" \
+    -var "environment_name=$releaseEnvironment" \
+    -var "created_by=terraform" \
+    -var "teamcity_build_number=$releaseNumber" \
+    -var "search_lambda_source_filename=$searchLambdaSourceLocation"
 terraform apply -input=false tfplan
 echo "Current working directory is...$(pwd)"
 # aws s3 sync ../test-static-site/ s3://$(terraform output s3_hosting_bucket_id | jq -r .)
 aws s3 cp ./../test-static-site/css/* s3://$(terraform output s3_hosting_bucket_id | jq -r .)/css/ --cache-control max-age=31536000
 aws s3 cp ./../test-static-site/*.html s3://$(terraform output s3_hosting_bucket_id | jq -r .)/ --cache-control max-age=30
 
-if [ "$runningInOctoDeploy" = false ]
-  then # Check to see if this script is runing in octo
-    cd ..
-    rm $searchLambdaSourceLocation
-fi
+rm $searchLambdaSourceLocation
+
 
 
