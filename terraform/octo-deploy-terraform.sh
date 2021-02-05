@@ -55,3 +55,5 @@ if [ "$runningInOctoDeploy" = false ]
     cd ..
     rm $searchLambdaSourceLocation
 fi
+
+
