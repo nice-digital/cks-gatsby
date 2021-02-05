@@ -42,7 +42,7 @@ fi
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 echo "Using lambda search source files from..... $searchLambdaSourceLocation"
 cd $releaseEnvironment
-# terraform init -input=false
+terraform init -input=false
 terraform plan -input=false -out=tfplan \
     -var "application_name=cks" \
     -var "environment_name=$releaseEnvironment" \
