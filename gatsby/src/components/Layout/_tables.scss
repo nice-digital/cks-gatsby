@@ -9,7 +9,7 @@ table {
   max-width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
-  width: 100%;
+  width: 100% !important; // Important because some tables come in from the feed with widths in style attributes
 
   th {
     vertical-align: bottom;
