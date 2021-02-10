@@ -58,5 +58,16 @@ module "lambda" {
   environment_name = var.environment_name
   teamcity_build_number = var.teamcity_build_number
   lambda_source_filename = var.search_lambda_source_filename
+  apigatewayv2_api_execution_arn = module.api_gateway.this_apigatewayv2_api_execution_arn
+
+}
+
+module "api_gateway" {
+  source = "../modules/apigateway"
+
+  application_name = var.application_name
+  environment_name = var.environment_name
+  teamcity_build_number = var.teamcity_build_number
+  lambda_invoke_arn = module.lambda.this_lambda_invoke_arn
 
 }

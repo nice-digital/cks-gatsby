@@ -22,15 +22,12 @@ variable "teamcity_build_number" {
 	default = "xxx"
 }
 
-variable "lambda_source_filename" {
+variable "api_name" {
+	type = string
+	default = "nice-lambda-api"
+}
+
+variable "lambda_invoke_arn" {
 	type = string
 }
 
-variable "lambda_name" {
-	type = string
-	default = "nice-lambda"
-}
-
-variable "apigatewayv2_api_execution_arn" {
-	type = string
-}
