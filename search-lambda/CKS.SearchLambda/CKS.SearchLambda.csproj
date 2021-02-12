@@ -15,5 +15,6 @@
     <PackageReference Include="Amazon.Lambda.Core" Version="1.2.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.1.0" />
     <PackageReference Include="NICE.Search" Version="2.1.1006" />
+	<PackageReference Include="Microsoft.NETCore.Targets" Version="3.1.0" PrivateAssets="all" />
   </ItemGroup>
 </Project>
