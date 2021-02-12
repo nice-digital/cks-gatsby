@@ -60,3 +60,4 @@ aws s3 cp ./../test-static-site/*.html s3://$(terraform output s3_hosting_bucket
 
 
 
+# hello
