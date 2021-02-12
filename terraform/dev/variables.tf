@@ -28,3 +28,7 @@ variable "teamcity_build_number" {
 variable "search_lambda_source_filename" {
 	type = string
 }
+
+variable "edge_lambda_source_filename" {
+	type = string
+}

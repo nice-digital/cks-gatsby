@@ -52,10 +52,10 @@ resource "aws_lambda_function" "edge_lambda" {
   source_code_hash = filebase64sha256(var.lambda_source_filename)
 }
 
-resource "aws_lambda_permission" "api_gateway_execute" {
-	action        = "lambda:InvokeFunction"
-	function_name = aws_lambda_function.dotnet_lambda.arn
-	principal     = "apigateway.amazonaws.com"
+# resource "aws_lambda_permission" "api_gateway_execute" {
+# 	action        = "lambda:InvokeFunction"
+# 	function_name = aws_lambda_function.dotnet_lambda.arn
+# 	principal     = "apigateway.amazonaws.com"
 
-	source_arn = "${var.apigatewayv2_api_execution_arn}/*/*"
-}
+# 	source_arn = "${var.apigatewayv2_api_execution_arn}/*/*"
+# }

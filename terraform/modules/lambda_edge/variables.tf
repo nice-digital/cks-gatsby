@@ -28,7 +28,7 @@ variable "lambda_source_filename" {
 
 variable "lambda_name" {
 	type = string
-	default = "nice-lambda"
+	default = "nice-edge-lambda"
 }
 
 # variable "apigatewayv2_api_execution_arn" {

@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "s3_website_bucket" {
   bucket = local.s3_origin_id
   acl    = "public-read"
 
-  force_destroy = true
+#   force_destroy = true
 
   website {
     index_document = "index.html"
@@ -108,6 +108,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     max_ttl                = 31536000
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
+
+	lambda_function_association {
+      event_type = "origin-request"
+      lambda_arn = var.edge_lambda_qualified_arn
+    }
   }
 
 #   price_class = "PriceClass_200"
@@ -129,4 +134,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   viewer_certificate {
     cloudfront_default_certificate = true
   }
+
+
 }

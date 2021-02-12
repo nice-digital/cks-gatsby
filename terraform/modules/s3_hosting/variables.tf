@@ -21,3 +21,11 @@ variable "teamcity_build_number" {
 	type = string
 	default = "xxx"
 }
+
+variable "edge_lambda_arn" {
+	type = string
+}
+
+variable "edge_lambda_qualified_arn" {
+	type = string
+}
