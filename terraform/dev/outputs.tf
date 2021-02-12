@@ -14,5 +14,5 @@ output s3_hosting_website_domain {
 
 output search_lambda_api_endpoint {
 	description = "The endpoint of the search api."
-	value = "${module.api_gateway.this_apigatewayv2_domain_name}"
+	value = module.api_gateway.this_apigatewayv2_domain_name
 }
