@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "s3_website_bucket" {
   bucket = local.s3_origin_id
   acl    = "public-read"
 
-#   force_destroy = true
+  force_destroy = true
 
   website {
     index_document = "index.html"
@@ -81,26 +81,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       }
     }
 
-    viewer_protocol_policy = "allow-all"
-    min_ttl                = 0
-    default_ttl            = 3600
-    max_ttl                = 86400
-  }
-
-  # Cache behavior with precedence 0
-  ordered_cache_behavior {
-    path_pattern     = "/*"
-    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
-    cached_methods   = ["GET", "HEAD", "OPTIONS"]
-    target_origin_id = local.s3_origin_id
-
-    forwarded_values {
-      query_string = false
-      headers      = ["Origin"]
-
-      cookies {
-        forward = "none"
-      }
+	lambda_function_association {
+      event_type = "origin-response"
+      lambda_arn = var.edge_lambda_qualified_arn
     }
 
     min_ttl                = 0
@@ -108,13 +91,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     max_ttl                = 31536000
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
-
-	lambda_function_association {
-      event_type = "origin-request"
-      lambda_arn = var.edge_lambda_qualified_arn
-    }
   }
-
 #   price_class = "PriceClass_200"
 
   restrictions {
@@ -134,6 +111,4 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   viewer_certificate {
     cloudfront_default_certificate = true
   }
-
-
 }

@@ -41,7 +41,7 @@ module "s3_hosting" {
   application_name = var.application_name
   environment_name = var.environment_name
   teamcity_build_number = var.teamcity_build_number
-  edge_lambda_arn = module.edge_lambda.this_lambda_qualified_arn
+  edge_lambda_qualified_arn = module.edge_lambda.this_lambda_qualified_arn
 }
 
 module "lambda" {

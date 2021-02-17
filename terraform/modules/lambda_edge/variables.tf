@@ -31,6 +31,3 @@ variable "lambda_name" {
 	default = "nice-edge-lambda"
 }
 
-# variable "apigatewayv2_api_execution_arn" {
-# 	type = string
-# }
