@@ -22,17 +22,13 @@ resource "aws_s3_bucket" "s3_website_bucket" {
     error_document = "error.html"
 	}
 
-  tags = {
-	application_name = var.application_name
-	created_by = var.created_by
-	environment_name = var.environment_name
-	teamcity_build_number = var.teamcity_build_number
-  }
+	tags = var.tags
 }
 
 resource "aws_s3_bucket_policy" "test-static-site-policy" {
 	depends_on = [ aws_s3_bucket.s3_website_bucket ]
     bucket = aws_s3_bucket.s3_website_bucket.id
+
   policy = <<POLICY
 {
   "Version": "2012-10-17",
@@ -65,6 +61,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   is_ipv6_enabled     = true
   comment             = "CKS test static website CloudFront"
   default_root_object = "index.html"
+
+  price_class = "PriceClass_100" # speed up changes/dev by only deploying to eu/us
 
 #   aliases = ["mysite.example.com", "yoursite.example.com"]
 
@@ -101,12 +99,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     }
   }
 
-  tags = {
-	application_name = var.application_name
-	created_by = var.created_by
-	environment_name = var.environment_name
-	teamcity_build_number = var.teamcity_build_number
-  }
+  tags = var.tags
 
   viewer_certificate {
     cloudfront_default_certificate = true

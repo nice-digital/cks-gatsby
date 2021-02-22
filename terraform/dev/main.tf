@@ -29,7 +29,14 @@ provider "aws" {
 # DATA
 ##################################################################################
 
-
+locals {
+	default_tags = {
+		application_name = var.application_name
+		environment_name = var.environment_name
+		teamcity_build_number = var.teamcity_build_number
+		created_by = var.created_by
+	}
+}
 
 ##################################################################################
 # MODULES
@@ -38,40 +45,40 @@ provider "aws" {
 module "s3_hosting" {
   source = "../modules/s3_hosting"
 
-  application_name = var.application_name
-  environment_name = var.environment_name
-  teamcity_build_number = var.teamcity_build_number
   edge_lambda_qualified_arn = module.edge_lambda.this_lambda_qualified_arn
+
+  tags = local.default_tags
+
 }
 
 module "lambda" {
   source = "../modules/lambda"
 
+  lambda_source_filename = var.search_lambda_source_filename
+  apigatewayv2_api_execution_arn = module.api_gateway.this_apigatewayv2_api_execution_arn
+
   application_name = var.application_name
   environment_name = var.environment_name
   teamcity_build_number = var.teamcity_build_number
-  lambda_source_filename = var.search_lambda_source_filename
-  apigatewayv2_api_execution_arn = module.api_gateway.this_apigatewayv2_api_execution_arn
 
 }
 
 module "api_gateway" {
   source = "../modules/apigateway"
 
+  lambda_invoke_arn = module.lambda.this_lambda_invoke_arn
+
   application_name = var.application_name
   environment_name = var.environment_name
   teamcity_build_number = var.teamcity_build_number
-  lambda_invoke_arn = module.lambda.this_lambda_invoke_arn
-
 }
 
 module "edge_lambda" {
   source = "../modules/lambda_edge"
 
+  lambda_source_filename = var.edge_lambda_source_filename
+
   application_name = var.application_name
   environment_name = var.environment_name
   teamcity_build_number = var.teamcity_build_number
-  lambda_source_filename = var.edge_lambda_source_filename
-
-
 }
