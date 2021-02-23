@@ -28,29 +28,6 @@ resource aws_iam_role lambda_at_edge {
   tags               = var.tags
 }
 
-# data aws_iam_policy_document lambda_logs_policy_doc {
-#   statement {
-#     effect    = "Allow"
-#     resources = ["*"]
-#     actions = [
-#       "logs:CreateLogStream",
-#       "logs:PutLogEvents",
-#       "logs:CreateLogGroup",
-#     ]
-#   }
-# }
-
-# resource aws_iam_role_policy logs_role_policy {
-#   name   = "${var.name}-georestriction-edge-lambda-logs"
-#   role   = aws_iam_role.lambda_at_edge.id
-#   policy = data.aws_iam_policy_document.lambda_logs_policy_doc.json
-# }
-
-# resource aws_cloudwatch_log_group log_group {
-#   name = "/aws/lambda/${var.name}"
-#   tags = var.tags
-# }
-
 resource "aws_lambda_function" "edge_lambda" {
 	filename		= var.lambda_source_filename
 	function_name	= "${var.name}-georestriction-edge-lambda"
