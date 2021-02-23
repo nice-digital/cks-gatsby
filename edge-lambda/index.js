@@ -1,12 +1,34 @@
-"use strict";
+const allowedCounties = [
+	"GB",
+	"IO",
+	"GI",
+	"BM",
+	"FK",
+	"GS",
+	"SH",
+	"MS",
+	"VG",
+	"KY",
+	"TC",
+	"AI",
+	"PN",
+	"IM",
+	"GG",
+	"JE",
+];
+
 exports.handler = (event, context, callback) => {
-	//Get contents of response
-	const response = event.Records[0].cf.response;
-	const headers = response.headers;
+	let request = event.Records[0].cf.request;
+	const countryHeader = request.headers["cloudfront-viewer-country"];
+	const countryCode = countryHeader[0].value;
 
-	//Set new headers
-	headers["x-nice-test1"] = [{ key: "X-Nice-Test1", value: "Hello from nice" }];
-
-	//Return modified response
-	callback(null, response);
+	if (allowedCounties.includes(countryCode)) {
+		callback(null, request);
+	} else {
+		const redirectResponse = {
+			status: "403",
+			statusDescription: "Forbidden",
+		};
+		callback(null, redirectResponse);
+	}
 };

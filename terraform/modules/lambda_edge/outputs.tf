@@ -16,8 +16,3 @@ output this_lambda_qualified_arn {
 	description = "The qualified arn of the lambda"
 	value = aws_lambda_function.edge_lambda.qualified_arn
 }
-
-# output this_lambda_invoke_arn {
-# 	description = "The arn to invoke the lambda from apigateway"
-# 	value = aws_lambda_function.dotnet_lambda.invoke_arn
-# }

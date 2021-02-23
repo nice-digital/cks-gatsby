@@ -8,6 +8,12 @@ terraform {
   }
 }
 
+####
+# Naming convetion
+# org-application-env-component
+# nice-cks-local-s3-hosting
+####
+
 ##################################################################################
 # PROVIDERS
 ##################################################################################
@@ -26,25 +32,28 @@ provider "aws" {
 }
 
 ##################################################################################
-# DATA
+# Locals
 ##################################################################################
 
 locals {
 	default_tags = {
+		org_name = var.org_name
 		application_name = var.application_name
 		environment_name = var.environment_name
 		teamcity_build_number = var.teamcity_build_number
 		created_by = var.created_by
 	}
+	name = "${var.org_name}-${var.application_name}-${var.environment_name}"
 }
 
 ##################################################################################
 # MODULES
 ##################################################################################
 
-module "s3_hosting" {
-  source = "../modules/s3_hosting"
+module "cf_hosting" {
+  source = "../modules/cf_hosting"
 
+  name = local.name
   edge_lambda_qualified_arn = module.edge_lambda.this_lambda_qualified_arn
 
   tags = local.default_tags
@@ -78,7 +87,7 @@ module "edge_lambda" {
 
   lambda_source_filename = var.edge_lambda_source_filename
 
-  application_name = var.application_name
-  environment_name = var.environment_name
-  teamcity_build_number = var.teamcity_build_number
+  name = local.name
+
+  tags = local.default_tags
 }
