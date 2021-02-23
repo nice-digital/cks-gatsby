@@ -11,6 +11,7 @@ terraform {
 ####
 # Naming convetion
 # org-application-env-component
+# eg....org = nice, application = cks, env = local, component = s3-hosing
 # nice-cks-local-s3-hosting
 ####
 
@@ -50,15 +51,7 @@ locals {
 # MODULES
 ##################################################################################
 
-module "cf_hosting" {
-  source = "../modules/cf_hosting"
-
-  name = local.name
-  edge_lambda_qualified_arn = module.edge_lambda.this_lambda_qualified_arn
-
-  tags = local.default_tags
-
-}
+# Search endpoint service
 
 module "lambda" {
   source = "../modules/lambda"
@@ -80,6 +73,18 @@ module "api_gateway" {
   application_name = var.application_name
   environment_name = var.environment_name
   teamcity_build_number = var.teamcity_build_number
+}
+
+# Cloudfront / Hosting / Georestrictions
+
+module "cf_hosting" {
+  source = "../modules/cf_hosting"
+
+  name = local.name
+  edge_lambda_qualified_arn = module.edge_lambda.this_lambda_qualified_arn
+
+  tags = local.default_tags
+
 }
 
 module "edge_lambda" {

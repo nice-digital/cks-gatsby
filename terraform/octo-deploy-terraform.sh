@@ -52,12 +52,10 @@ terraform plan -input=false -out=tfplan -var "application_name=cks" -var "enviro
 terraform apply -input=false tfplan
 echo "Current working directory is...$(pwd)"
 # # aws s3 sync ../test-static-site/ s3://$(terraform output s3_hosting_bucket_id | jq -r .)
-aws s3 cp ./../test-static-site/css/* s3://$(terraform output s3_hosting_bucket_id | jq -r .)/css/ --cache-control max-age=31536000
-aws s3 cp ./../test-static-site/*.html s3://$(terraform output s3_hosting_bucket_id | jq -r .)/ --cache-control max-age=30
+# aws s3 cp ./../test-static-site/css/* s3://$(terraform output s3_hosting_bucket_id | jq -r .)/css/ --cache-control max-age=31536000
+# aws s3 cp ./../test-static-site/*.html s3://$(terraform output s3_hosting_bucket_id | jq -r .)/ --cache-control max-age=30
+aws s3 cp ./../test-static-site/ s3://$(terraform output s3_hosting_bucket_id | jq -r .)/ --recursive --cache-control max-age=31536000 # copy all files
 
-# rm $searchLambdaSourceLocation
-# rm $edgeLambdaSourceLocation
+rm $searchLambdaSourceLocation
+rm $edgeLambdaSourceLocation
 
-
-
-# hello
