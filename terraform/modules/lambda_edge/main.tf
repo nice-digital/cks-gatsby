@@ -23,14 +23,14 @@ data aws_iam_policy_document assume_role_policy_doc {
 }
 
 resource aws_iam_role lambda_at_edge {
-  name               = "${var.name}-georestriction-edge-lambda-role"
+  name               = "${var.name}-origin-request-edge-lambda-role"
   assume_role_policy = data.aws_iam_policy_document.assume_role_policy_doc.json
   tags               = var.tags
 }
 
-resource "aws_lambda_function" "edge_lambda" {
+resource "aws_lambda_function" "origin-request_edge_lambda" {
 	filename		= var.lambda_source_filename
-	function_name	= "${var.name}-georestriction-edge-lambda"
+	function_name	= "${var.name}-origin-request"
 	role			= aws_iam_role.lambda_at_edge.arn
 	handler 		= "index.handler"
 	runtime 		= "nodejs12.x"
