@@ -6,7 +6,7 @@ variable "name" {
 	type = string
 }
 
-variable "edge_lambda_qualified_arn" {
+variable "origin_request_edge_lambda_qualified_arn" {
 	type = string
 }
 

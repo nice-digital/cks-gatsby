@@ -8,12 +8,12 @@ terraform {
   }
 }
 
-####
-# Naming convetion
+################################################################################
+# AWS Naming convetion
 # org-application-env-component
 # eg....org = nice, application = cks, env = local, component = s3-hosing
 # nice-cks-local-s3-hosting
-####
+################################################################################
 
 ##################################################################################
 # PROVIDERS
@@ -81,14 +81,14 @@ module "cf_hosting" {
   source = "../modules/cf_hosting"
 
   name = local.name
-  edge_lambda_qualified_arn = module.edge_lambda.this_lambda_qualified_arn
+  origin_request_edge_lambda_qualified_arn = module.origin_request_edge_lambda.this_lambda_qualified_arn
 
   tags = local.default_tags
 
 }
 
-module "edge_lambda" {
-  source = "../modules/lambda_edge"
+module "origin_request_edge_lambda" {
+  source = "../modules/origin_request_edge_lambda"
 
   lambda_source_filename = var.edge_lambda_source_filename
 

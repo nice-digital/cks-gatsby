@@ -28,7 +28,7 @@ resource aws_iam_role lambda_at_edge {
   tags               = var.tags
 }
 
-resource "aws_lambda_function" "origin-request_edge_lambda" {
+resource "aws_lambda_function" "origin_request_edge_lambda" {
 	filename		= var.lambda_source_filename
 	function_name	= "${var.name}-origin-request"
 	role			= aws_iam_role.lambda_at_edge.arn
