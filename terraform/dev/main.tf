@@ -54,25 +54,22 @@ locals {
 # Search endpoint service
 
 module "lambda" {
-  source = "../modules/lambda"
+	source = "../modules/lambda"
+	name = "${local.name}-search"
 
-  lambda_source_filename = var.search_lambda_source_filename
-  apigatewayv2_api_execution_arn = module.api_gateway.this_apigatewayv2_api_execution_arn
+	lambda_source_filename = var.search_lambda_source_filename
+	apigatewayv2_api_execution_arn = module.api_gateway.this_apigatewayv2_api_execution_arn
 
-  application_name = var.application_name
-  environment_name = var.environment_name
-  teamcity_build_number = var.teamcity_build_number
-
+	tags = local.default_tags
 }
 
 module "api_gateway" {
-  source = "../modules/apigateway"
+	source = "../modules/apigateway"
+	name = "${local.name}-search"
 
-  lambda_invoke_arn = module.lambda.this_lambda_invoke_arn
+	lambda_invoke_arn = module.lambda.this_lambda_invoke_arn
 
-  application_name = var.application_name
-  environment_name = var.environment_name
-  teamcity_build_number = var.teamcity_build_number
+	tags = local.default_tags
 }
 
 # Cloudfront / Hosting / Georestrictions
@@ -84,7 +81,6 @@ module "cf_hosting" {
   origin_request_edge_lambda_qualified_arn = module.origin_request_edge_lambda.this_lambda_qualified_arn
 
   tags = local.default_tags
-
 }
 
 module "origin_request_edge_lambda" {
