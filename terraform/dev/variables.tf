@@ -27,4 +27,10 @@ variable "teamcity_build_number" {
 
 variable "search_lambda_source_filename" {
 	type = string
+	default = "../CKS.SearchLambda.zip"
+}
+
+variable "edge_lambda_source_filename" {
+	type = string
+	default = "../CKS.EdgeLambda.zip"
 }
