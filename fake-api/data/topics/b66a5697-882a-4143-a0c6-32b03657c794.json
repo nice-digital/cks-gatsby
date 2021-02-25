@@ -14,9 +14,8 @@
       "term": "Gallstones"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c95ac327-eca1-45cb-a25e-d1b1d1fb3cc5",

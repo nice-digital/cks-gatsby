@@ -22,9 +22,8 @@
       "term": "Headache"
     }
   ],
-  "clinicalSpecialties": [
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "efd6acca-271c-4013-b96c-4570b34e7991",

@@ -14,10 +14,8 @@
       "term": "Bronchiectasis"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a60c32be-3309-4d4c-94a5-31c63c9037fd",

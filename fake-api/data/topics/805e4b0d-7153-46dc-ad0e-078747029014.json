@@ -14,10 +14,8 @@
       "term": "Carbon Monoxide Poisoning"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices",
-    "Haematology"
-  ],
+  "clinicalSpecialties": ["Drugs and devices", "Haematology"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "9fb9b77b-e513-4026-adb0-598550bffd3d",

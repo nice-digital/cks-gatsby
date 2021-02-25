@@ -18,10 +18,8 @@
       "term": "Dementia"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Mental health", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "2fadc1a1-5aeb-4c18-9321-27f2142659b1",

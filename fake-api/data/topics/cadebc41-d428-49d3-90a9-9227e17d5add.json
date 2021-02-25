@@ -14,10 +14,8 @@
       "term": "Pregnancy, Ectopic"
     }
   ],
-  "clinicalSpecialties": [
-    "Pregnancy",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Pregnancy", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d3bdfb71-402d-49b1-a9e4-997054e0ccea",

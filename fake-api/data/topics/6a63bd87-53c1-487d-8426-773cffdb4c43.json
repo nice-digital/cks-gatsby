@@ -18,9 +18,8 @@
       "term": "Inflammatory Bowel Diseases"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7f73b937-3e2c-4e01-95ab-e503355f43d1",

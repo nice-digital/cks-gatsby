@@ -34,9 +34,8 @@
       "term": "Shoulder Pain"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b420a573-fea9-48d8-bb08-497e6480d265",

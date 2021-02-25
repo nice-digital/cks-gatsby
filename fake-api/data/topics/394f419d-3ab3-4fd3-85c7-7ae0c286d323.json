@@ -22,9 +22,8 @@
       "term": "Obsessive-Compulsive Disorder"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b717bce3-6c5e-43ec-b652-68e6e4b86a5f",

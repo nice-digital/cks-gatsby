@@ -14,11 +14,8 @@
       "term": "Pruritus Vulvae"
     }
   ],
-  "clinicalSpecialties": [
-    "Sexual health",
-    "Skin and nail",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Sexual health", "Skin and nail", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "9fa91b15-f9bf-4819-a630-50c3aafe0d4a",

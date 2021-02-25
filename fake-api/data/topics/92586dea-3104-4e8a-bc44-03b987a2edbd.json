@@ -26,10 +26,8 @@
       "term": "Influenza Vaccines"
     }
   ],
-  "clinicalSpecialties": [
-    "Immunizations",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Immunizations", "Preventative medicine"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6330de38-83e2-491e-a689-9577138a5412",

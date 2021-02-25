@@ -22,10 +22,8 @@
       "term": "Eating Disorders"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Child health", "Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "822f1851-f50b-43fa-827a-9dce92d47cd7",

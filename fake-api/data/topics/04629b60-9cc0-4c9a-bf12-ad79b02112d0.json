@@ -14,9 +14,8 @@
       "term": "Cerumen"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "ea43cbf9-ec90-425d-a56e-da773fa432e8",

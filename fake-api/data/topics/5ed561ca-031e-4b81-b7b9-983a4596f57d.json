@@ -30,9 +30,8 @@
       "term": "Uveitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "edbc109d-7062-438a-b87e-a839d054fffe",

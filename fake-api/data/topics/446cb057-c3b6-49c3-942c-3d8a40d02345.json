@@ -18,10 +18,8 @@
       "term": "Palliative Care"
     }
   ],
-  "clinicalSpecialties": [
-    "Palliative care",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Palliative care", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a5b0faa4-5aa4-4c3a-a0c0-95b248bed40c",

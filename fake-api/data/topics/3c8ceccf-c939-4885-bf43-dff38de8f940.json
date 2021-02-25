@@ -14,10 +14,8 @@
       "term": "Tamoxifen"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Drugs and devices", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0845f642-9890-4944-91cd-c221e12362a5",

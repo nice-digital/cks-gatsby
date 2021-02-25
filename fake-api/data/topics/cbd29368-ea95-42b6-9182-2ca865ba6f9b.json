@@ -22,8 +22,10 @@
       "term": "Vitamin B 12 Deficiency"
     }
   ],
-  "clinicalSpecialties": [
-    "Haematology"
+  "clinicalSpecialties": ["Haematology"],
+  "aliases": [
+    "B12 and folate deficiency anaemia",
+    "Folate and B12 deficiency anaemia"
   ],
   "topicHtmlObjects": [
     {

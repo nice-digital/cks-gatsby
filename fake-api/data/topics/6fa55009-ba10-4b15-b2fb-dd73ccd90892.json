@@ -14,9 +14,8 @@
       "term": "Popliteal Cyst"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "08baeeea-899e-43ac-8ae1-9af784ba4900",

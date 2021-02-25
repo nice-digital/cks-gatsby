@@ -18,9 +18,8 @@
       "term": "Confusion"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "392513b6-d283-40bc-9c81-6c8f7295f326",

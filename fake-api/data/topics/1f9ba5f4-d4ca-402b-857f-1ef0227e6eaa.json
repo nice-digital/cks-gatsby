@@ -14,9 +14,8 @@
       "term": "Bites and Stings"
     }
   ],
-  "clinicalSpecialties": [
-    "Injuries"
-  ],
+  "clinicalSpecialties": ["Injuries"],
+  "aliases": ["Animal and human bites", "Human and animal bites"],
   "topicHtmlObjects": [
     {
       "itemId": "bd5feb77-f54d-431c-8948-0d4b3d313fb6",

@@ -14,9 +14,8 @@
       "term": "Lung Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b12afd3f-d80f-40e8-aac7-f85bcfd840d2",

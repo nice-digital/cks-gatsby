@@ -22,9 +22,8 @@
       "term": "Angina Pectoris"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "13885a4f-8963-4e2e-bc92-9cf0b6556dec",

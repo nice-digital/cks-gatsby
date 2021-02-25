@@ -14,9 +14,8 @@
       "term": "Diverticulitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "8f32c1e6-ab33-4452-9798-e9ba02c6301b",

@@ -14,9 +14,8 @@
       "term": "Vitiligo"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "e43925e6-ed19-473d-8117-e1fa9d037d9e",

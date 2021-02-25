@@ -22,9 +22,8 @@
       "term": "Methicillin Resistance"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "81cc2a26-a971-4038-a933-4595a848bbd1",

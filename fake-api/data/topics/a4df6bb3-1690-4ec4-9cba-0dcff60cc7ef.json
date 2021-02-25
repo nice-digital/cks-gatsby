@@ -18,10 +18,8 @@
       "term": "Venous Thromboembolism"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Haematology"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Haematology"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "43b8d97f-728b-4244-a1a1-95e4133af93b",

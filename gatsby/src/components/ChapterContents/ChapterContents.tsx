@@ -52,10 +52,7 @@ export const ChapterContents: React.FC<ChapterContentsProps> = ({
 				</button>
 			)}
 			<div className={styles.menu}>
-				<TopicChaptersMenu
-					currentChapterId={chapter.id}
-					topic={chapter.topic}
-				/>
+				<TopicChaptersMenu currentChapter={chapter} topic={chapter.topic} />
 			</div>
 			{showOnthisPage && (
 				<div className={styles.onThisPage}>

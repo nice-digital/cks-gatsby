@@ -14,9 +14,8 @@
       "term": "Cholecystitis, Acute"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b76a7722-6a28-4a5b-868b-3c558bdb1fe4",

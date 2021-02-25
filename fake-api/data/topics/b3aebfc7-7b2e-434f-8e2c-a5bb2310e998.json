@@ -14,10 +14,8 @@
       "term": "Tooth Eruption"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Oral health"
-  ],
+  "clinicalSpecialties": ["Child health", "Oral health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1cde3b69-a08f-4561-8af3-52dd8b345f16",

@@ -22,11 +22,8 @@
       "term": "Contusions"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Haematology",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Child health", "Haematology", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7649d7e1-bcf9-469f-a086-53dec7f66c8f",

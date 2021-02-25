@@ -18,11 +18,8 @@
       "term": "Hypertension"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Pregnancy",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Pregnancy", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7b332f47-bd89-4570-bcc6-1fec0e2e9772",

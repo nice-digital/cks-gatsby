@@ -14,9 +14,8 @@
       "term": "Macular Degeneration"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "09a54df8-1f12-4d38-b90c-a1c4c35d9c61",

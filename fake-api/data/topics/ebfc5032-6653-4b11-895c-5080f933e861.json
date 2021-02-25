@@ -14,9 +14,8 @@
       "term": "Hypothyroidism"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7d66bcf2-dd81-489b-8409-f6e7c5c9b898",

@@ -26,9 +26,8 @@
       "term": "Olecranon Process"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c202d4fc-7433-4926-811a-ae4a21e49104",

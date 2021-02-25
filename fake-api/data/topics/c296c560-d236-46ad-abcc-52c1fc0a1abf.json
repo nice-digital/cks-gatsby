@@ -22,10 +22,8 @@
       "term": "Melanoma"
     }
   ],
-  "clinicalSpecialties": [
-    "Preventative medicine",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Preventative medicine", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c9d0c8dd-bbb5-4067-b855-9bd5cab2a14c",

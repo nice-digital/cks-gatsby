@@ -14,9 +14,8 @@
       "term": "Cardiovascular Diseases"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "5037fdb2-9f26-41aa-b9ed-f344709f4427",

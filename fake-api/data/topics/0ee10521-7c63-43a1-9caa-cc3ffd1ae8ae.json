@@ -18,10 +18,8 @@
       "term": "Conduct Disorder"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Child health", "Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "ca3318ca-591b-4453-b24e-9542eec24434",

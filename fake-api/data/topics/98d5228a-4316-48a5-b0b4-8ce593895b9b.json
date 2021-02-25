@@ -14,10 +14,8 @@
       "term": "Insect Bites and Stings"
     }
   ],
-  "clinicalSpecialties": [
-    "Allergies",
-    "Injuries"
-  ],
+  "clinicalSpecialties": ["Allergies", "Injuries"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "9094b534-b2ea-4a0c-8dae-c9ff87d52295",

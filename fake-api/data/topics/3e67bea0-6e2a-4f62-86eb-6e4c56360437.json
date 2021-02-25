@@ -14,10 +14,8 @@
       "term": "Strabismus"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes",
-    "Child health"
-  ],
+  "clinicalSpecialties": ["Eyes", "Child health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "585e39f3-27f7-4148-8aa5-6b38986a3b00",

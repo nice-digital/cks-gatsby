@@ -18,10 +18,8 @@
       "term": "Palliative Care"
     }
   ],
-  "clinicalSpecialties": [
-    "Oral health",
-    "Palliative care"
-  ],
+  "clinicalSpecialties": ["Oral health", "Palliative care"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3bd3311f-f15b-4c67-bd3a-41617390e3e4",

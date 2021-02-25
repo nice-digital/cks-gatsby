@@ -26,9 +26,8 @@
       "term": "Glaucoma, Angle-Closure"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "cc51cd5b-2918-4085-ae6f-1fb47b3dbdd7",

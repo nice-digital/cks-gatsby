@@ -18,9 +18,8 @@
       "term": "Schizophrenia"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "9f37ffb9-89b0-4fb6-93d6-572ffe0e6cd2",
