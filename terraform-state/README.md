@@ -24,4 +24,5 @@ This project is intended to be run locally and will create resources in AWS
 The easiest way to get the project running is:
 
 1. Install and configure AWS CLI
+1. Install Terraform
 1. Make sure you set your credentials (in the form of a an access key and secret) using `aws configure` command (see main Terraform project for info on AWS credentials)
