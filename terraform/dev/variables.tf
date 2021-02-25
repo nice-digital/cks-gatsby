@@ -40,6 +40,3 @@ variable "edge_lambda_source_filename" {
 	default = "../CKS.EdgeLambda.zip"
 }
 
-variable "edge_lambda_source_filename" {
-	type = string
-}
