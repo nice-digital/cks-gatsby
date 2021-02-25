@@ -32,7 +32,8 @@ namespace CKS.Web.Controllers
 					new CookieOptions()
 					{
 						Path = "/",
-						MaxAge = TimeSpan.FromDays(durationInDays)
+						MaxAge = TimeSpan.FromDays(durationInDays),
+						Domain = "nice.org.uk"
 					}
 				);
 			}

@@ -42,7 +42,7 @@ namespace CKS.Web.Test.IntegrationTests
 
 			// Assert
 			var expectedSetCookieHeaderValues = new string[] {
-					"_ga=foo; max-age=63072000; path=/"
+					"_ga=foo; max-age=63072000; domain=nice.org.uk; path=/"
 				};
 			response.Headers.GetValues("Set-Cookie").ShouldBe(expectedSetCookieHeaderValues);
 		}
@@ -62,7 +62,7 @@ namespace CKS.Web.Test.IntegrationTests
 
 			// Assert
 			var expectedSetCookieHeaderValues = new string[] {
-					"_gaexp=bar; max-age=7776000; path=/"
+					"_gaexp=bar; max-age=7776000; domain=nice.org.uk; path=/"
 				};
 			response.Headers.GetValues("Set-Cookie").ShouldBe(expectedSetCookieHeaderValues);
 		}
@@ -82,8 +82,8 @@ namespace CKS.Web.Test.IntegrationTests
 
 			// Assert
 			var expectedSetCookieHeaderValues = new string[] {
-					"_ga=foo; max-age=63072000; path=/",
-					"_gaexp=bar; max-age=7776000; path=/"
+					"_ga=foo; max-age=63072000; domain=nice.org.uk; path=/",
+					"_gaexp=bar; max-age=7776000; domain=nice.org.uk; path=/"
 				};
 			response.Headers.GetValues("Set-Cookie").ShouldBe(expectedSetCookieHeaderValues);
 		}
