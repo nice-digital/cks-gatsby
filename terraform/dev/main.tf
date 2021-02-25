@@ -8,6 +8,13 @@ terraform {
 #   }
 }
 
+################################################################################
+# AWS Naming convetion
+# org-application-env-component
+# eg....org = nice, application = cks, env = local, component = s3-hosing
+# nice-cks-local-s3-hosting
+################################################################################
+
 ##################################################################################
 # PROVIDERS
 ##################################################################################
@@ -26,40 +33,62 @@ provider "aws" {
 }
 
 ##################################################################################
-# DATA
+# Locals
 ##################################################################################
 
-
+locals {
+	default_tags = {
+		org_name = var.org_name
+		application_name = var.application_name
+		environment_name = var.environment_name
+		teamcity_build_number = var.teamcity_build_number
+		created_by = var.created_by
+	}
+	name = "${var.org_name}-${var.application_name}-${var.environment_name}"
+}
 
 ##################################################################################
 # MODULES
 ##################################################################################
 
-module "s3_hosting" {
-  source = "../modules/s3_hosting"
-
-  application_name = var.application_name
-  environment_name = var.environment_name
-  teamcity_build_number = var.teamcity_build_number
-}
+# Search endpoint service
 
 module "lambda" {
-  source = "../modules/lambda"
+	source = "../modules/lambda"
+	name = "${local.name}-search"
 
-  application_name = var.application_name
-  environment_name = var.environment_name
-  teamcity_build_number = var.teamcity_build_number
-  lambda_source_filename = var.search_lambda_source_filename
-  apigatewayv2_api_execution_arn = module.api_gateway.this_apigatewayv2_api_execution_arn
+	lambda_source_filename = var.search_lambda_source_filename
+	apigatewayv2_api_execution_arn = module.api_gateway.this_apigatewayv2_api_execution_arn
 
+	tags = local.default_tags
 }
 
 module "api_gateway" {
-  source = "../modules/apigateway"
+	source = "../modules/apigateway"
+	name = "${local.name}-search"
 
-  application_name = var.application_name
-  environment_name = var.environment_name
-  teamcity_build_number = var.teamcity_build_number
-  lambda_invoke_arn = module.lambda.this_lambda_invoke_arn
+	lambda_invoke_arn = module.lambda.this_lambda_invoke_arn
 
+	tags = local.default_tags
+}
+
+# Cloudfront / Hosting / Georestrictions
+
+module "cf_hosting" {
+  source = "../modules/cf_hosting"
+
+  name = local.name
+  origin_request_edge_lambda_qualified_arn = module.origin_request_edge_lambda.this_lambda_qualified_arn
+
+  tags = local.default_tags
+}
+
+module "origin_request_edge_lambda" {
+  source = "../modules/origin_request_edge_lambda"
+
+  lambda_source_filename = var.edge_lambda_source_filename
+
+  name = local.name
+
+  tags = local.default_tags
 }

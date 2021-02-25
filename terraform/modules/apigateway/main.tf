@@ -1,19 +1,12 @@
 ##################################################################################
-# Locals
-##################################################################################
-
-locals {
-	api_gateway_name = "${var.application_name}-${var.api_name}-${var.environment_name}"
-}
-
-##################################################################################
 # Resources
 ##################################################################################
 
 resource "aws_apigatewayv2_api" "lambda_api" {
-  name          = local.api_gateway_name
+  name          = "${var.name}-lambda-api"
   protocol_type = "HTTP"
 
+  tags = var.tags
 }
 
 
@@ -33,6 +26,7 @@ resource "aws_apigatewayv2_route" "lambda_api_index_route" {
   api_id    = aws_apigatewayv2_api.lambda_api.id
   route_key = "GET /"
   target 	= "integrations/${aws_apigatewayv2_integration.lambda_api_integration.id}"
+
 }
 
 resource "aws_apigatewayv2_stage" "default" {
@@ -40,4 +34,5 @@ resource "aws_apigatewayv2_stage" "default" {
   name        = "$default"
   auto_deploy = true
 
+  tags = var.tags
 }
