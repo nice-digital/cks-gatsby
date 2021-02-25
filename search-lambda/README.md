@@ -16,5 +16,5 @@
 ## Deployment
 
 1. Make sure you have your aws credentials setup and correctly working before attempting to use terraform.
-1. Make sure you have terraform setup and running on your machine (Linux and Windows both work fine) also making sure that its in your $path envrionment variable
+1. Make sure you have terraform setup and running on your machine (Linux and Windows both work fine) also making sure that its in your $path env variable
 1. Change to terraform directory and run
