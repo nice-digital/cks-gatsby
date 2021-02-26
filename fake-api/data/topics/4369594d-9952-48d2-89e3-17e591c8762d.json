@@ -14,9 +14,8 @@
       "term": "Hyperthyroidism"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "cd2365d3-dcb8-492b-a199-823df39fabad",

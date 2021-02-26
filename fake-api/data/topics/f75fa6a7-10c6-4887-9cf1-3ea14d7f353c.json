@@ -14,9 +14,8 @@
       "term": "Menopause"
     }
   ],
-  "clinicalSpecialties": [
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "06e39ad8-84aa-41aa-b2e1-a09786e49739",

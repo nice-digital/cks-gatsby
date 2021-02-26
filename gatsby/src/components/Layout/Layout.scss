@@ -2,6 +2,8 @@ $nds-include-spacing-modifiers: false;
 $nds-output-text-classes: false;
 $nds-output-visibility-classes: false;
 
+@import './lato';
+
 @import '~@nice-digital/design-system/scss/base.scss';
 
 // Markup components

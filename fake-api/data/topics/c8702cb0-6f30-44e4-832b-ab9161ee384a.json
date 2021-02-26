@@ -14,9 +14,8 @@
       "term": "Psoriasis"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "e1c6d08f-c254-4b91-9de4-f757ccffbc4c",

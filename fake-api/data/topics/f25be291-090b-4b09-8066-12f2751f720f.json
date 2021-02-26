@@ -14,9 +14,8 @@
       "term": "Breast Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer"
-  ],
+  "clinicalSpecialties": ["Cancer"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b3d82e0a-c96b-4fb9-814c-504492c6e188",

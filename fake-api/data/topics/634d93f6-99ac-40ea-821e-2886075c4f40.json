@@ -14,9 +14,8 @@
       "term": "Attention Deficit Disorder with Hyperactivity"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "62c932e6-a232-4f82-9bf5-db804b579ca4",

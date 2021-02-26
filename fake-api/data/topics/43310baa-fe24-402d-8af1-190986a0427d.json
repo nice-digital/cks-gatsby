@@ -18,9 +18,8 @@
       "term": "Arrhythmias, Cardiac"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "4c83f0e3-0a4b-42aa-96f9-f7df58065a80",

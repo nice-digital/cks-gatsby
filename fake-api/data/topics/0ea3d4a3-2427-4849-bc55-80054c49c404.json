@@ -34,11 +34,8 @@
       "term": "Pruritus"
     }
   ],
-  "clinicalSpecialties": [
-    "Pregnancy",
-    "Skin and nail",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Pregnancy", "Skin and nail", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "66cd6785-9547-4549-9ac2-f29c354d1788",

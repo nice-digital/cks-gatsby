@@ -14,9 +14,8 @@
       "term": "Food Hypersensitivity"
     }
   ],
-  "clinicalSpecialties": [
-    "Allergies"
-  ],
+  "clinicalSpecialties": ["Allergies"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f4108f30-1d91-4189-bb71-a8e200ba443a",

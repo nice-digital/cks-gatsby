@@ -18,10 +18,8 @@
       "term": "Temporomandibular Joint Disorders"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal",
-    "Oral health"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal", "Oral health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "2c720686-7642-45f7-a0ea-51c9bec460a8",

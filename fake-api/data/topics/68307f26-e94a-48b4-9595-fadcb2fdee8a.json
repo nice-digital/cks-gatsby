@@ -18,9 +18,8 @@
       "term": "Dermatitis, Atopic"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "35209149-9917-475a-80b5-1e14fcdd4346",

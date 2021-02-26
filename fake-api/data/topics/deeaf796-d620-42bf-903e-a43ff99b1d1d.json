@@ -14,9 +14,8 @@
       "term": "Peripheral Arterial Disease"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c3a12d82-32b0-48db-aac1-bf6de4b2d884",

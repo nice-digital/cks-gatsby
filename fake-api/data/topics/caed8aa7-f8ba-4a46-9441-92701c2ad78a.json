@@ -26,10 +26,8 @@
       "term": "Biological Agents"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Drugs and devices", "Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3c1e8e99-1f58-4f1b-a06f-2b76e5996382",

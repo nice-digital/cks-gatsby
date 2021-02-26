@@ -14,9 +14,8 @@
       "term": "Self-Injurious Behavior"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "94122786-7f2c-4bb4-bcc6-f7168cb4e722",

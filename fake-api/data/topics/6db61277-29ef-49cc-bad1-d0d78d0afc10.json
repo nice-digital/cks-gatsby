@@ -14,10 +14,8 @@
       "term": "Cellulitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "abcb02ac-98d5-493f-b97a-b7de3a5f2ee3",

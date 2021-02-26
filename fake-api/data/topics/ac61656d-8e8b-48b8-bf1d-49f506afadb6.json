@@ -14,9 +14,8 @@
       "term": "Parkinson Disease"
     }
   ],
-  "clinicalSpecialties": [
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "5c3c4745-bbce-4bc9-9cef-a98f8612491b",

@@ -30,7 +30,6 @@ resource "aws_apigatewayv2_route" "lambda_api_index_route" {
 }
 
 resource "aws_apigatewayv2_stage" "default" {
-
   api_id      = aws_apigatewayv2_route.lambda_api_index_route.api_id
   name        = "$default"
   auto_deploy = true

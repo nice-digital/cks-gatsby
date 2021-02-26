@@ -6,6 +6,7 @@ export const PartialTopic = graphql`
 		topicId
 		topicName
 		slug
+		aliases
 	}
 `;
 

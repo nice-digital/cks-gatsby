@@ -14,10 +14,8 @@
       "term": "Warts"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "27014995-a6d7-4c4e-9176-5cfd938a1e59",

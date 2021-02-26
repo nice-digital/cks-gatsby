@@ -22,10 +22,8 @@
       "term": "Chest Pain"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "daf79740-9cd0-4a6a-8f75-3019546c7c23",

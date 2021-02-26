@@ -14,10 +14,8 @@
       "term": "Otitis Media with Effusion"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Ear, nose and throat"
-  ],
+  "clinicalSpecialties": ["Child health", "Ear, nose and throat"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7055f210-0618-470e-8ee4-eb3ba0d6dc81",

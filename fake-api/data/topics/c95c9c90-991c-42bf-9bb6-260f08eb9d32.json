@@ -14,9 +14,8 @@
       "term": "Sleep Initiation and Maintenance Disorders"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "e679279e-77ee-4898-8874-aff80d1bd02b",

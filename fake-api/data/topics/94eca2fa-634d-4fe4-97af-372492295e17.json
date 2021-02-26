@@ -18,11 +18,8 @@
       "term": "Poisoning"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices",
-    "Mental health",
-    "Poisoning"
-  ],
+  "clinicalSpecialties": ["Drugs and devices", "Mental health", "Poisoning"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "234268f1-c9c3-44c0-8737-5ea0bbe09aaf",

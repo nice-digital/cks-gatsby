@@ -30,10 +30,8 @@
       "term": "Alcohol Drinking"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Mental health", "Preventative medicine"],
+  "aliases": ["Problem drinking - alcohol"],
   "topicHtmlObjects": [
     {
       "itemId": "21952425-9d10-4b15-8e4e-6a253dd63375",

@@ -14,10 +14,8 @@
       "term": "Hirsutism"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Skin and nail", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "4cfd9c4c-59ed-4384-b576-81ed1a7bdd51",

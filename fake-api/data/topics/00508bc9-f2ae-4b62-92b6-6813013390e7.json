@@ -18,10 +18,8 @@
       "term": "Jet Lag Syndrome"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Mental health", "Preventative medicine"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "73220e4d-b489-41cc-869e-9efa5ce9718a",

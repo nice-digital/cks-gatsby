@@ -14,9 +14,8 @@
       "term": "Constipation"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b1cc3612-1375-46e4-81f3-efd49fbd8f3a",

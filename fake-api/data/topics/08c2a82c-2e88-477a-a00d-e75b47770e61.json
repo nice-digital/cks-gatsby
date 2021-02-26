@@ -14,9 +14,8 @@
       "term": "Impetigo"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f183b935-73d0-4c23-b39a-ab6985fa09ef",

@@ -14,10 +14,8 @@
       "term": "Hiccup"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a236d78d-2c3e-405c-81ec-1f4d917e7d5b",

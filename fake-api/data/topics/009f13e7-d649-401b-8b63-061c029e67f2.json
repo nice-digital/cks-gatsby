@@ -14,10 +14,8 @@
       "term": "Otitis Media"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Ear, nose and throat"
-  ],
+  "clinicalSpecialties": ["Child health", "Ear, nose and throat"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c0fde562-cd6b-4779-8cd1-f988b737303c",

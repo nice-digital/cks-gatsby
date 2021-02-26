@@ -22,9 +22,8 @@
       "term": "Gingivitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Oral health"
-  ],
+  "clinicalSpecialties": ["Oral health"],
+  "aliases": ["Periodontitis and gingivitis"],
   "topicHtmlObjects": [
     {
       "itemId": "3c15f704-bf5a-48d5-b43b-547d84064b65",

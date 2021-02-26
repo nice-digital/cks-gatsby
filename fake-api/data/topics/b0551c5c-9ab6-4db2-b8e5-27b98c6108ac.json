@@ -14,9 +14,8 @@
       "term": "Celiac Disease"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "30247e4b-a455-4ec5-91d5-93ff523b2c25",

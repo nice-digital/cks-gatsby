@@ -18,10 +18,8 @@
       "term": "Enuresis"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Kidney disease and urology"
-  ],
+  "clinicalSpecialties": ["Child health", "Kidney disease and urology"],
+  "aliases": ["Enuresis - bedwetting", "Nocturnal enuresis - bedwetting"],
   "topicHtmlObjects": [
     {
       "itemId": "6fcfeced-f6c8-4a74-a1aa-69413fef4868",

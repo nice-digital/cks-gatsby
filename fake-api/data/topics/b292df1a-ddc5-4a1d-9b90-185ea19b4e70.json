@@ -14,9 +14,8 @@
       "term": "Endometriosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d2ce4763-9c7c-428c-b1c7-12b2c3266be0",

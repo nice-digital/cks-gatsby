@@ -14,9 +14,8 @@
       "term": "Dry Eye Syndromes"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "58badcbf-58eb-4db1-be60-ab5fe1a55761",

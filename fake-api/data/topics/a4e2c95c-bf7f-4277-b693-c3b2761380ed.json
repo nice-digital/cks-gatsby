@@ -26,10 +26,8 @@
       "term": "Osteoporosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal", "Preventative medicine"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "8bf1b2ab-f239-44f4-acbb-7cf49f6cfe63",

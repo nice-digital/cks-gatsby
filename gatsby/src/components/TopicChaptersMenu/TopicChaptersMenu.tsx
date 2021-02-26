@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState, useCallback, useLayoutEffect } from "react";
 import { Link } from "gatsby";
 
 import { StackedNav, StackedNavLink } from "@nice-digital/nds-stacked-nav";
+import ChevronDownIcon from "@nice-digital/icons/lib/ChevronDown";
+import ChevronUpIcon from "@nice-digital/icons/lib/ChevronUp";
 
-import { PartialTopicWithChapters } from "src/types";
+import {
+	ChapterLevel1,
+	ChapterLevel2,
+	PartialTopicWithChapters,
+} from "src/types";
+
+import styles from "./TopicChaptersMenu.module.scss";
 
 type TopicChaptersMenuProps = {
 	topic: PartialTopicWithChapters;
 	/** The (optional) id of the currently active chapter */
-	currentChapterId?: string;
+	currentChapter: ChapterLevel1 | ChapterLevel2;
 };
 
 /**
@@ -16,46 +24,78 @@ type TopicChaptersMenuProps = {
  */
 export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 	topic,
-	currentChapterId,
+	currentChapter,
 }: TopicChaptersMenuProps) => {
 	const topicPath = `/topics/${topic.slug}/`;
 
+	const [isExpanded, setIsExpanded] = useState(true);
+	const [isClient, setIsClient] = useState(false);
+
+	useLayoutEffect(() => {
+		setIsExpanded(false);
+		setIsClient(true);
+	}, []);
+
+	const clickHandler = useCallback(() => {
+		setIsExpanded((s) => !s);
+	}, []);
+
 	return (
-		<StackedNav aria-label={`${topic.topicName} chapters`}>
-			{topic.chapters.map(({ id, slug, fullItemName, subChapters }, i) => {
-				const shouldShowSubChapters =
-					id === currentChapterId ||
-					subChapters.some((c) => c.id === currentChapterId);
+		<>
+			{isClient && (
+				<button
+					type="button"
+					className={styles.toggleButton}
+					onClick={clickHandler}
+					aria-expanded={isExpanded}
+					aria-label={`${isExpanded ? "Collapse" : "Expand"} menu for ${
+						topic.topicName
+					}`}
+				>
+					{currentChapter.fullItemName}{" "}
+					{isExpanded ? (
+						<ChevronUpIcon className={styles.icon} />
+					) : (
+						<ChevronDownIcon className={styles.icon} />
+					)}
+				</button>
+			)}
+			<StackedNav aria-label={`${topic.topicName} chapters`}>
+				{topic.chapters.map(({ id, slug, fullItemName, subChapters }, i) => {
+					const shouldShowSubChapters =
+						id === currentChapter.id ||
+						subChapters.some((c) => c.id === currentChapter.id);
 
-				// The summary chapter links to the topic landing page
-				const chapterPath = i === 0 ? topicPath : `${topicPath}${slug}/`;
+					// The summary chapter links to the topic landing page
+					const chapterPath = i === 0 ? topicPath : `${topicPath}${slug}/`;
 
-				return (
-					<StackedNavLink
-						data-tracking={fullItemName}
-						key={id}
-						elementType={Link}
-						destination={chapterPath}
-						isCurrent={id === currentChapterId}
-						nested={
-							shouldShowSubChapters &&
-							subChapters.map((subChapter) => (
-								<StackedNavLink
-									data-tracking={`${fullItemName} | ${subChapter.fullItemName}`}
-									key={subChapter.id}
-									elementType={Link}
-									destination={`${chapterPath}${subChapter.slug}/`}
-									isCurrent={subChapter.id === currentChapterId}
-								>
-									{subChapter.fullItemName}
-								</StackedNavLink>
-							))
-						}
-					>
-						{fullItemName}
-					</StackedNavLink>
-				);
-			})}
-		</StackedNav>
+					return (
+						<StackedNavLink
+							data-tracking={fullItemName}
+							key={id}
+							elementType={Link}
+							destination={chapterPath}
+							isCurrent={id === currentChapter.id}
+							nested={
+								shouldShowSubChapters &&
+								subChapters.map((subChapter) => (
+									<StackedNavLink
+										data-tracking={`${fullItemName} | ${subChapter.fullItemName}`}
+										key={subChapter.id}
+										elementType={Link}
+										destination={`${chapterPath}${subChapter.slug}/`}
+										isCurrent={subChapter.id === currentChapter.id}
+									>
+										{subChapter.fullItemName}
+									</StackedNavLink>
+								))
+							}
+						>
+							{fullItemName}
+						</StackedNavLink>
+					);
+				})}
+			</StackedNav>
+		</>
 	);
 };

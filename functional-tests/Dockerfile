@@ -1,20 +1,17 @@
-FROM node:12
+FROM node:12-alpine
 
 ENV IN_DOCKER=true
 
 # Install Java (for Allure) see https://stackoverflow.com/a/44154721/486434
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive \
-		#apt-get install -y software-properties-common && \
-    apt-get install -y default-jre-headless
+RUN apk add openjdk8
+
+# Curl isn't in Alpine and needed to install allure
+RUN apk add curl
 
 # Install Allure for generating a report
 RUN curl -o allure-2.13.7.tgz -Ls https://repo1.maven.org/maven2/io/qameta/allure/allure-commandline/2.13.7/allure-commandline-2.13.7.tgz \
 	&& tar -zxf allure-2.13.7.tgz -C /usr/local --strip-components=1 \
   && rm allure-2.13.7.tgz
-
-# Clean up
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /tests
 

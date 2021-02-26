@@ -1,5 +1,5 @@
 import React from "react";
-import { render, waitFor } from "@testing-library/react";
+import { render, waitFor, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ChapterLevel2Page, { ChapterLevel2PageProps } from "./ChapterLevel2";
 import { ChapterLevel2, PartialChapter } from "../../types";
@@ -84,6 +84,39 @@ describe("ChapterLevel2", () => {
 			expect(
 				getByText("Background information", { selector: ".breadcrumbs a" })
 			).toHaveAttribute("href", "/topics/asthma/background-information/");
+		});
+	});
+
+	describe("SEO", () => {
+		it("should use fallback meta description when summary is empty", async () => {
+			render(
+				<ChapterLevel2Page
+					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
+				/>
+			);
+			await waitFor(() => {
+				expect(
+					document.querySelector("meta[name='description']")
+				).toHaveAttribute(
+					"content",
+					"Definition, Background information, Asthma, CKS"
+				);
+			});
+		});
+
+		it("should use summary field for meta description", async () => {
+			cleanup();
+			chapter.summary = "this is some summary text";
+			render(
+				<ChapterLevel2Page
+					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
+				/>
+			);
+			await waitFor(() => {
+				expect(
+					document.querySelector("meta[name='description']")
+				).toHaveAttribute("content", "this is some summary text");
+			});
 		});
 	});
 

@@ -14,10 +14,8 @@
       "term": "Milk hypersensitivity"
     }
   ],
-  "clinicalSpecialties": [
-    "Allergies",
-    "Child health"
-  ],
+  "clinicalSpecialties": ["Allergies", "Child health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "450e4c84-db11-4f4e-a22d-02d9a9ea619d",

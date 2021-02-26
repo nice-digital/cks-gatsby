@@ -30,10 +30,8 @@
       "term": "Candidiasis, Cutaneous"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "692c4c73-aaf1-472c-be22-313de7bd344c",

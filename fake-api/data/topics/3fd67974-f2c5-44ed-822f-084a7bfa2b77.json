@@ -14,9 +14,8 @@
       "term": "Leiomyoma"
     }
   ],
-  "clinicalSpecialties": [
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f723d230-30ce-4fc2-92b1-53a92b719154",

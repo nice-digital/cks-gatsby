@@ -14,9 +14,8 @@
       "term": "Trigeminal Neuralgia"
     }
   ],
-  "clinicalSpecialties": [
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "db520430-a268-48bc-8ce5-931c0c91a7ee",

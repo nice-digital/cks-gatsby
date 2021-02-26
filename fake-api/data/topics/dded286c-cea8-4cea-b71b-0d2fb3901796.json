@@ -14,9 +14,8 @@
       "term": "Autistic Disorder"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health"
-  ],
+  "clinicalSpecialties": ["Child health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f4f7905a-674c-4f50-9a13-2679fa00b62b",

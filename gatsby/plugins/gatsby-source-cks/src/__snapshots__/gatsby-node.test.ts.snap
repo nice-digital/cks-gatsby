@@ -68,6 +68,9 @@ exports[`gatsby-node createSchemaCustomization should call createTypes with cust
 		\\"A list of terms related to this topic. Not every topic has other terms.\\"
 		terms: [CksTopicTerm!]!
 
+		\\"A list of alternative names or synonyms\\"
+		aliases: [String!]!
+
 		\\"\\"\\"
 		A list of specialities to which this topic belongs.
 
@@ -125,6 +128,11 @@ exports[`gatsby-node createSchemaCustomization should call createTypes with cust
 		- the text isn't necessarily the same as \`fullItemName\` (although often it is)
 		\\"\\"\\"
 		htmlHeader: String!
+
+		\\"\\"\\"
+		Summary for chapter e.g. 'Covers the management of children and adults with newly diagnosed or suspected asthma.'
+		\\"\\"\\"
+		summary: String
 
 		\\"The HTML body of the chapter\\"
 		htmlStringContent: String!

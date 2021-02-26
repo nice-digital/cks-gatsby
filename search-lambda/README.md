@@ -13,8 +13,18 @@
 - [Terraform 0.14^](https://www.terraform.io/)
 - [AWS VS Tools]()
 
-## Deployment
+## :rocket: Set up
 
-1. Make sure you have your aws credentials setup and correctly working before attempting to use terraform.
-1. Make sure you have terraform setup and running on your machine (Linux and Windows both work fine) also making sure that its in your $path env variable
-1. Change to terraform directory and run
+### Running locally
+
+It is possible to run, debug and deploy this locally in either WSL 2 or Windows. If you use Visual Studio a lot of these steps are done for you. However if you want use VS Code then the steps are as follows....
+
+1. Install and configure .NET Core 3.1 SDK - this is the version of dotnet recommended and supported by AWS currently (Feb 2021)
+1. Install and configure [AWS lambda tools] (https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/lambda-cli-publish.html)
+1. Use
+
+### Deployment to AWS using AWS and Terraform
+
+1. Install and configure AWS CLI
+1. Install Terraform
+1. Make sure you set your credentials (in the form of a an access key and secret) using `aws configure` command (see main Terraform project for info on AWS credentials)

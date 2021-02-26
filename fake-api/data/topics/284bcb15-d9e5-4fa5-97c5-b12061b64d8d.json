@@ -14,9 +14,8 @@
       "term": "Non alcoholic Fatty Liver Disease"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d227fa5e-a40b-411c-b6a3-7ca3a4eebb6e",

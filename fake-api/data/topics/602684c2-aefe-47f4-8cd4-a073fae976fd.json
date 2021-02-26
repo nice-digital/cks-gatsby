@@ -14,9 +14,8 @@
       "term": "Hemorrhoids"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "84ba0c29-f18b-4375-9501-82bf7221585b",

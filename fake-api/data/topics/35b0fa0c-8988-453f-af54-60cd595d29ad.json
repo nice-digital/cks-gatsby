@@ -18,10 +18,8 @@
       "term": "Tinea Pedis"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "52f7875e-47c6-4bff-8b6f-8f916b41253c",

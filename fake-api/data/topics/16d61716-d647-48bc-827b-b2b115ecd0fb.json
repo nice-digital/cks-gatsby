@@ -22,10 +22,8 @@
       "term": "Immunization"
     }
   ],
-  "clinicalSpecialties": [
-    "Immunizations",
-    "Preventative medicine"
-  ],
+  "clinicalSpecialties": ["Immunizations", "Preventative medicine"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6a2b03bd-35e8-45ca-8098-b0883b31d49d",

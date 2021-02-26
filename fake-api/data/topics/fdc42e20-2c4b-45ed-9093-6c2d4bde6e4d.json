@@ -26,9 +26,8 @@
       "term": "Heart Failure"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "5eb05804-6345-4912-bd81-17050a7e562a",

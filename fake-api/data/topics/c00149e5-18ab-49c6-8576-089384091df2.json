@@ -14,10 +14,8 @@
       "term": "Influenza, Human"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "29287cd6-4188-4da1-82c4-e50209180047",

@@ -14,10 +14,8 @@
       "term": "Otitis Externa"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d043a3aa-9404-45d8-938f-cb4116b7d69f",

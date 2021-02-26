@@ -18,10 +18,8 @@
       "term": "Insulin"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices",
-    "Endocrine and metabolic"
-  ],
+  "clinicalSpecialties": ["Drugs and devices", "Endocrine and metabolic"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1dbf6f70-2ca8-48a9-868e-d9fa12cc567e",

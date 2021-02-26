@@ -14,9 +14,8 @@
       "term": "Stress Disorders, Post-Traumatic"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "a03db1b8-f4dd-46a1-8ec1-72a55c8dd25e",

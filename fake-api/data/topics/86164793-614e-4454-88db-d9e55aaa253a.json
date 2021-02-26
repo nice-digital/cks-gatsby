@@ -22,9 +22,8 @@
       "term": "Hygiene"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "be5adfe1-238a-46bd-a9e4-4d3db3dc909c",

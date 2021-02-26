@@ -18,10 +18,8 @@
       "term": "Tendinopathy"
     }
   ],
-  "clinicalSpecialties": [
-    "Injuries",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Injuries", "Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "bf5b0d63-5d3d-4535-8bf0-7deabd06911f",

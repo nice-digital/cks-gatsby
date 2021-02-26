@@ -18,10 +18,8 @@
       "term": "Chalazion"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes",
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Eyes", "Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "6ba132b1-4572-422e-be1c-8531cc8d71ee",
