@@ -25,6 +25,7 @@ body {
   // We use Roboto for Android devices
   font-family: 'Lato', 'Trebuchet MS', 'Roboto', 'Helvetica Neue', Helvetica,
     Arial, sans-serif;
+  position: relative;
 }
 
 // $nds-output-visibility-classes stops visually-hidden being output
@@ -41,4 +42,8 @@ body {
 
 #content-start:focus {
   outline: none;
+}
+
+footer {
+  margin-top: 0 !important;
 }

@@ -2,34 +2,38 @@
 
 exports[`BackToTop should match snapshot 1`] = `
 <div>
-  <nav
-    aria-labelledby="back-to-top-link"
-    class="hide-print static"
+  <div
+    class="wrapper"
   >
-    <div
-      class="container"
+    <nav
+      aria-labelledby="back-to-top-link"
+      class="nav"
     >
       <a
+        class="anchor"
         href="#content-start"
         id="back-to-top-link"
       >
-        <svg
-          aria-hidden="true"
-          class="icon"
-          fill="none"
-          focusable="false"
-          height="1em"
-          viewBox="0 0 512 512"
-          width="1em"
+        <div
+          class="container"
         >
-          <path
-            d="M478.152 338.576c0 10.091-3.525 18.661-10.576 25.712l-21.424 21.424c-7.243 7.243-15.909 10.864-26 10.864-10.283 0-18.853-3.621-25.712-10.864L255.576 247.136 116.712 385.712c-6.859 7.243-15.429 10.864-25.712 10.864s-18.853-3.621-25.712-10.864l-21.424-21.424C36.621 357.429 33 348.859 33 338.576c0-10.091 3.621-18.757 10.864-26l186-186c7.051-7.051 15.621-10.576 25.712-10.576 9.909 0 18.576 3.525 26 10.576l185.712 186c7.243 7.243 10.864 15.909 10.864 26z"
-            fill="currentColor"
-          />
-        </svg>
-         Back to top
+          <svg
+            aria-hidden="true"
+            class="icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 512 512"
+            width="1em"
+          >
+            <path
+              d="M478.152 338.576c0 10.091-3.525 18.661-10.576 25.712l-21.424 21.424c-7.243 7.243-15.909 10.864-26 10.864-10.283 0-18.853-3.621-25.712-10.864L255.576 247.136 116.712 385.712c-6.859 7.243-15.429 10.864-25.712 10.864s-18.853-3.621-25.712-10.864l-21.424-21.424C36.621 357.429 33 348.859 33 338.576c0-10.091 3.621-18.757 10.864-26l186-186c7.051-7.051 15.621-10.576 25.712-10.576 9.909 0 18.576 3.525 26 10.576l185.712 186c7.243 7.243 10.864 15.909 10.864 26z"
+              fill="currentColor"
+            />
+          </svg>
+           Back to top
+        </div>
       </a>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </div>
 `;

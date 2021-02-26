@@ -9,6 +9,8 @@ import {
 	ReportHandler,
 } from "web-vitals";
 
+import "./src/styles/global.scss";
+
 // Gatsby hook for when the route has changed on the client side
 // See https://www.gatsbyjs.org/docs/browser-apis/#onRouteUpdate
 export const onRouteUpdate = ({
