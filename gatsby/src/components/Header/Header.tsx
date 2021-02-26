@@ -40,17 +40,22 @@ export const Header: React.FC = () => {
 	// We do this to make our axe tests pass
 	// Wait for the search box to appear before removing the aria-activedescendant attribute
 	const globalNavWrapperRef = useCallback((node: HTMLDivElement) => {
-		const removeActiveDescendantAttr = (): boolean => {
-			const searchInput = document.querySelector(searchInputSelector);
-			searchInput && searchInput.setAttribute("aria-activedescendant", "");
-			return !!searchInput;
-		};
-
-		if (!removeActiveDescendantAttr() && "MutationObserver" in window) {
-			new MutationObserver((_mutationsList, observer) => {
-				removeActiveDescendantAttr();
-				observer.disconnect();
-			}).observe(node, { childList: true });
+		let searchInput: HTMLElement | null;
+		if ("MutationObserver" in window) {
+			new MutationObserver(() => {
+				searchInput =
+					searchInput || document.querySelector(searchInputSelector);
+				if (
+					searchInput &&
+					searchInput.getAttribute("aria-activedescendant") === "false"
+				) {
+					searchInput.setAttribute("aria-activedescendant", "");
+				}
+			}).observe(node, {
+				attributeFilter: ["aria-activedescendant"],
+				childList: true,
+				subtree: true,
+			});
 		}
 	}, []);
 
