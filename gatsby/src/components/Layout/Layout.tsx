@@ -4,6 +4,7 @@ import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { BackToTop } from "../BackToTop/BackToTop";
 
+import "./../../styles/global.scss";
 import styles from "./Layout.module.scss";
 
 type LayoutProps = {
