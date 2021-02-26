@@ -6,6 +6,10 @@ $back-to-top-height: rem(
 
 .wrapper {
   margin-top: rem($nds-spacing-x-large);
+
+  @media print {
+    display: none;
+  }
 }
 
 .nav {
