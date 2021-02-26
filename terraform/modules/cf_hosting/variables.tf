@@ -6,16 +6,7 @@ variable "name" {
 	type = string
 }
 
-variable "lambda_source_filename" {
-	type = string
-}
-
-variable "lambda_name" {
-	type = string
-	default = "nice-lambda"
-}
-
-variable "apigatewayv2_api_execution_arn" {
+variable "origin_request_edge_lambda_qualified_arn" {
 	type = string
 }
 

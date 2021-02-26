@@ -1,17 +1,23 @@
 ##################################################################################
-# Locals
-##################################################################################
-
-locals {
-	lambda_name = "${var.application_name}-${var.lambda_name}-${var.environment_name}"
-}
-
-##################################################################################
 # Resources
 ##################################################################################
 
+resource "aws_lambda_function" "dotnet_lambda" {
+  function_name = "${var.name}-dotnet-lambda"
+  filename      = var.lambda_source_filename
+  role          = aws_iam_role.iam_for_lambda.arn
+  handler       = "CKS.SearchLambda::CKS.SearchLambda.Function::FunctionHandler"
+  runtime       = "dotnetcore3.1"
+  timeout 		= 20
+
+  source_code_hash = filebase64sha256(var.lambda_source_filename)
+
+  tags = var.tags
+}
+
+
 resource "aws_iam_role" "iam_for_lambda" {
-  name = "iam-${local.lambda_name}"
+  name = "${var.name}-dotnet-lambda-role"
 
   assume_role_policy = <<EOF
 {
@@ -28,17 +34,6 @@ resource "aws_iam_role" "iam_for_lambda" {
   ]
 }
 EOF
-}
-
-resource "aws_lambda_function" "dotnet_lambda" {
-  filename      = var.lambda_source_filename
-  function_name = local.lambda_name
-  role          = aws_iam_role.iam_for_lambda.arn
-  handler       = "CKS.SearchLambda::CKS.SearchLambda.Function::FunctionHandler"
-  runtime       = "dotnetcore3.1"
-  timeout 		= 20
-
-  source_code_hash = filebase64sha256(var.lambda_source_filename)
 }
 
 resource "aws_lambda_permission" "api_gateway_execute" {
