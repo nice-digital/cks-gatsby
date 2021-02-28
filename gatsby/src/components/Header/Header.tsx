@@ -39,9 +39,9 @@ export const Header: React.FC = () => {
 	// TODO: Remove this hack to fix https://github.com/alphagov/accessible-autocomplete/issues/434
 	// We do this to make our axe tests pass
 	// Wait for the search box to appear before removing the aria-activedescendant attribute
-	const globalNavWrapperRef = useCallback((node: HTMLDivElement) => {
+	const globalNavWrapperRef = useCallback((node: HTMLDivElement | null) => {
 		let searchInput: HTMLElement | null;
-		if ("MutationObserver" in window) {
+		if (node && "MutationObserver" in window) {
 			new MutationObserver(() => {
 				searchInput =
 					searchInput || document.querySelector(searchInputSelector);
