@@ -24,6 +24,10 @@ $back-to-top-height: rem(
   line-height: rem($nds-spacing-medium);
   padding: rem($nds-spacing-medium) 0;
 
+  &:visited {
+    color: $nds-colour-link;
+  }
+
   svg {
     transition: all 0.25s ease;
   }
@@ -45,7 +49,7 @@ $back-to-top-height: rem(
     pointer-events: none;
     position: absolute;
     right: 0;
-    top: 100vh;
+    top: min(100vh, calc(100% - #{$back-to-top-height}));
     width: 100%;
     z-index: 99;
   }
