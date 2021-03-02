@@ -9,6 +9,8 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	is_ipv6_enabled     = true
 	default_root_object = "index.html"
 
+	comment             = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}"
+
 	price_class = "PriceClass_100" # speed up changes/dev by only deploying to eu/us
 
 #   aliases = ["mysite.example.com", "yoursite.example.com"]
@@ -59,6 +61,12 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 		max_ttl                = 31536000
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
+	}
+
+	restrictions {
+		geo_restriction {
+			restriction_type = "none"
+		}
 	}
 
 	custom_error_response {
