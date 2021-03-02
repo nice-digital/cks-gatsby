@@ -7,7 +7,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="NICE.Logging" Version="6.0.24" />
-		<PackageReference Include="NICE.Search" Version="2.1.1000" />
+		<PackageReference Include="NICE.Search" Version="2.1.1058-main-bnf-search-chag" />
 	</ItemGroup>
 
 
