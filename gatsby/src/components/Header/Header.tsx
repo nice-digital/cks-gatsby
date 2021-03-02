@@ -53,6 +53,7 @@ export const Header: React.FC = () => {
 				}
 			}).observe(node, {
 				attributeFilter: ["aria-activedescendant"],
+				attributes: true, // See https://stackoverflow.com/a/50593541/486434
 				childList: true,
 				subtree: true,
 			});
