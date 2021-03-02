@@ -1,34 +1,24 @@
-const allowedCounties = [
-	"GB",
-	"IO",
-	"GI",
-	"BM",
-	"FK",
-	"GS",
-	"SH",
-	"MS",
-	"VG",
-	"KY",
-	"TC",
-	"AI",
-	"PN",
-	"IM",
-	"GG",
-	"JE",
-];
+const redirects = require("./redirects.json").map(
+	({ source, destination }) => ({
+		source: new RegExp(source),
+		destination,
+	})
+);
 
-exports.handler = (event, context, callback) => {
-	let request = event.Records[0].cf.request;
-	const countryHeader = request.headers["cloudfront-viewer-country"];
-	const countryCode = countryHeader[0].value;
+exports.handler = async (event) => {
+	const request = event.Records[0].cf.request;
 
-	if (allowedCounties.includes(countryCode)) {
-		callback(null, request);
-	} else {
-		const redirectResponse = {
-			status: "403",
-			statusDescription: "Forbidden",
-		};
-		callback(null, redirectResponse);
+	for (const { source, destination } of redirects) {
+		if (source.test(request.uri)) {
+			return {
+				status: "302",
+				statusDescription: "Found",
+				headers: {
+					location: [{ value: request.uri.replace(source, destination) }],
+				},
+			};
+		}
 	}
+
+	return request;
 };
