@@ -21,6 +21,7 @@ exports.handler = (event, context, callback) => {
 			statusDescription: "Forbidden",
 		};
 		callback(null, redirectResponse);
+		return;
 	}
 
 	for (const { source, destination } of redirects) {
@@ -34,6 +35,7 @@ exports.handler = (event, context, callback) => {
 				},
 			};
 			callback(null, redirectResponse);
+			return;
 		}
 	}
 
