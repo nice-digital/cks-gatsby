@@ -14,10 +14,8 @@
       "term": "Dupuytren Contracture"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "fc6262cf-0036-4efe-a145-3c664bc0e396",

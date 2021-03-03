@@ -14,9 +14,8 @@
       "term": "Pilonidal sinus"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0a1b72d4-06ac-4009-8e5c-30689100b0b7",

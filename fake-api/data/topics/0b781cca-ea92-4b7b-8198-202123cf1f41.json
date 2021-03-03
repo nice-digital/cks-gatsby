@@ -18,9 +18,8 @@
       "term": "Molluscum contagiosum virus"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d899ac7c-baba-4971-85d6-9d5f6436af0e",

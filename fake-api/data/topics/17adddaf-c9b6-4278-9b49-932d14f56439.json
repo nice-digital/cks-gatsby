@@ -14,9 +14,8 @@
       "term": "Chilblains"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f018c7cf-9e03-4038-8cfe-a3e6c2c28537",

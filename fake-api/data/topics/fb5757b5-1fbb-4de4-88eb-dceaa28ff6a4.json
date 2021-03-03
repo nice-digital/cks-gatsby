@@ -14,9 +14,8 @@
       "term": "Cough"
     }
   ],
-  "clinicalSpecialties": [
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "da9f5e64-7d97-4e54-a5df-a3d835f98d4f",

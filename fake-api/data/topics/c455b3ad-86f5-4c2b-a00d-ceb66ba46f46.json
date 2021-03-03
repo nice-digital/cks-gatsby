@@ -14,9 +14,8 @@
       "term": "Lacerations"
     }
   ],
-  "clinicalSpecialties": [
-    "Injuries"
-  ],
+  "clinicalSpecialties": ["Injuries"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3b5f3c59-e14a-44b8-b64e-75aadf8a2727",

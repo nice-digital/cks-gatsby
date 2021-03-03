@@ -22,9 +22,8 @@
       "term": "Hemoglobin, Sickle"
     }
   ],
-  "clinicalSpecialties": [
-    "Haematology"
-  ],
+  "clinicalSpecialties": ["Haematology"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c88bf5d9-27dd-484c-8351-77857e1bdf13",

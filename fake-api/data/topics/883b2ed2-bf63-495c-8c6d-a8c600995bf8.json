@@ -14,9 +14,8 @@
       "term": "Liver Cirrhosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "49f88c73-14e7-408d-89f6-a8c600996383",

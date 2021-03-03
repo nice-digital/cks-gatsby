@@ -18,10 +18,8 @@
       "term": "Onychomycosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "f4660b91-5760-4ccc-9024-a76eed10b9b9",

@@ -14,10 +14,8 @@
       "term": "Alopecia"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Skin and nail", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "04b6f872-bf81-4cf5-a5c3-8d96806dfdec",

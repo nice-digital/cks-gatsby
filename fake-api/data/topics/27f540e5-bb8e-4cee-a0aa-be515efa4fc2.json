@@ -18,10 +18,8 @@
       "term": "Conjunctivitis, Allergic"
     }
   ],
-  "clinicalSpecialties": [
-    "Allergies",
-    "Eyes"
-  ],
+  "clinicalSpecialties": ["Allergies", "Eyes"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "1a5998f6-8304-483c-9af0-54f5c6bef7e1",

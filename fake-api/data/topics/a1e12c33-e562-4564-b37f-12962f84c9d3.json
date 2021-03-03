@@ -14,10 +14,8 @@
       "term": "Tinnitus"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat", "Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "87babb33-64c8-430d-a61d-1c3bbb4442ba",

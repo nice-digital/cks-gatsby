@@ -14,9 +14,8 @@
       "term": "Alopecia Areata"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "4b851b4a-121e-4564-bb3f-9b718381376d",

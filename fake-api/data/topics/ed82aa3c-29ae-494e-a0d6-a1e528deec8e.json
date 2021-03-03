@@ -14,9 +14,8 @@
       "term": "Dermatitis, Contact"
     }
   ],
-  "clinicalSpecialties": [
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "cf979a3b-9738-4da4-81e5-abec4e4a7d41",

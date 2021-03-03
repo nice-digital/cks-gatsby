@@ -16,6 +16,10 @@ export const onRouteUpdate = ({
 	location,
 }: RouteUpdateArgs): void => {
 	if (prevLocation) {
+		// Cast is needed because of https://github.com/gatsbyjs/gatsby/issues/29124
+		const prevPath = (prevLocation as Location).pathname,
+			path = location.pathname;
+
 		// Push our own event to the dataLayer on page change rather than using the
 		// 'gatsby-route-change' event built into gatsby-plugin-google-tagmanager.
 		// Because gatsby-route-change is pushed on initial page load as well as route change,
@@ -23,7 +27,8 @@ export const onRouteUpdate = ({
 
 		const sendPageView = () => {
 			window.dataLayer.push({ location: location.href });
-			window.dataLayer.push({ event: "pageview" });
+			// Don't consider hash changes to be a page view - pageviews only happy when the path changes
+			if (prevPath != path) window.dataLayer.push({ event: "pageview" });
 		};
 
 		// Delay before push to the data layer, to make sure the page title has been updated
@@ -46,28 +51,26 @@ export const onRouteUpdate = ({
  * See https://www.gatsbyjs.org/docs/browser-apis/#shouldUpdateScroll
  */
 export const shouldUpdateScroll = ({
-	prevRouterProps,
 	routerProps: { location },
 	getSavedScrollPosition,
-}: ShouldUpdateScrollArgs): string => {
-	const savedScrollPosition = getSavedScrollPosition(location);
+}: ShouldUpdateScrollArgs): boolean | string | [number, number] => {
+	const savedScrollY = getSavedScrollPosition(location)[1] as
+		| number
+		| undefined;
 
-	if (
-		savedScrollPosition &&
-		prevRouterProps?.location.pathname !== location.pathname
-	) {
-		return savedScrollPosition;
-	}
+	// Returning true here uses Gatsby's default behaviour.
+	// I.e. if there's a saved position or a hash then just let Gatsby deal with it
+	if ((savedScrollY && savedScrollY != 0) || location.hash) return true;
 
-	const targetId = location.hash.substring(1) || "content-start",
-		targetElement = document.getElementById(targetId);
+	const contentStartElement = document.getElementById("content-start");
 
-	if (targetElement) {
-		targetElement.setAttribute("tabIndex", "-1");
-		targetElement.focus();
-	}
+	if (!contentStartElement) return true;
 
-	return targetId;
+	contentStartElement.setAttribute("tabIndex", "-1");
+	contentStartElement.focus();
+	contentStartElement.scrollIntoView();
+
+	return false;
 };
 
 /**

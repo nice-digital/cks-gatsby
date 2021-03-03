@@ -18,11 +18,8 @@
       "term": "Rhinitis, Allergic, Perennial"
     }
   ],
-  "clinicalSpecialties": [
-    "Allergies",
-    "Ear, nose and throat",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Allergies", "Ear, nose and throat", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "891fafb1-8f5b-46a3-bf40-7f0ac298a0aa",

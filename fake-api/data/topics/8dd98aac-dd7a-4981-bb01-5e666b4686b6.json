@@ -22,10 +22,8 @@
       "term": "Mastitis"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "e610bcd0-be95-432b-851f-3a44c726cbf4",

@@ -22,10 +22,8 @@
       "term": "Opioid-Related Disorders"
     }
   ],
-  "clinicalSpecialties": [
-    "Drugs and devices",
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Drugs and devices", "Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "2d4a34e3-2cd5-4f3b-a10c-2ffa34612816",

@@ -14,9 +14,9 @@
       "term": "Brain Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Cancer",
-    "Neurological"
+  "clinicalSpecialties": ["Cancer", "Neurological"],
+  "aliases": [
+    "Central nervous system and brain cancers - recognition and referral"
   ],
   "topicHtmlObjects": [
     {

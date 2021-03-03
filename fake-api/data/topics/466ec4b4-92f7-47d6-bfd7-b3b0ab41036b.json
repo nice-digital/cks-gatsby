@@ -14,10 +14,8 @@
       "term": "Varicocele"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Men's health"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Men's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "88be4808-924e-4abf-ba77-6d97d93d51b9",

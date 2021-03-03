@@ -18,10 +18,8 @@
       "term": "Tuberculosis, Pulmonary"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "fb2b361b-c974-4d9c-8d27-16c6bb96c22f",

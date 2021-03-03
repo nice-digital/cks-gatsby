@@ -14,10 +14,8 @@
       "term": "Chickenpox"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c2b7ac1f-4807-4b7f-95fd-f3f77cabace8",

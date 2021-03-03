@@ -19,7 +19,7 @@ export type ChapterLevel2PageProps = PageProps<null, ChapterPageContext>;
 const ChapterLevel2Page: React.FC<ChapterLevel2PageProps> = ({
 	pageContext: { chapter },
 }: ChapterLevel2PageProps) => {
-	const { fullItemName, htmlHeader, topic, parentChapter } = chapter;
+	const { fullItemName, htmlHeader, summary, topic, parentChapter } = chapter;
 
 	const topicPath = `/topics/${topic.slug}/`;
 
@@ -29,7 +29,10 @@ const ChapterLevel2Page: React.FC<ChapterLevel2PageProps> = ({
 		<Layout>
 			<SEO
 				title={`${fullItemName} | ${parentChapter.fullItemName} | ${topic.topicName}`}
-				description={`${fullItemName}, ${parentChapter.fullItemName}, ${topic.topicName}, CKS`}
+				description={
+					summary ||
+					`${fullItemName}, ${parentChapter.fullItemName}, ${topic.topicName}, CKS`
+				}
 			/>
 
 			<Breadcrumbs>
@@ -57,6 +60,8 @@ const ChapterLevel2Page: React.FC<ChapterLevel2PageProps> = ({
 				preheading={`${topic.topicName}: `}
 				lead={<span dangerouslySetInnerHTML={{ __html: topic.lastRevised }} />}
 			/>
+
+			{summary && <p className="visually-hidden">{summary}</p>}
 
 			<ChapterContents chapter={chapter} />
 		</Layout>

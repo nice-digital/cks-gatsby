@@ -18,9 +18,8 @@
       "term": "Muscle Cramp"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "31855f7b-b088-41b4-af22-58fd655379f9",

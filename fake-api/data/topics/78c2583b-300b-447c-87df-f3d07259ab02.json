@@ -26,10 +26,10 @@
       "term": "Depression"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health",
-    "Pregnancy",
-    "Women's health"
+  "clinicalSpecialties": ["Mental health", "Pregnancy", "Women's health"],
+  "aliases": [
+    "Antenatal and postnatal depression",
+    "Postnatal and antenatal depression"
   ],
   "topicHtmlObjects": [
     {

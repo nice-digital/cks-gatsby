@@ -14,11 +14,8 @@
       "term": "Pulmonary Embolism"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular",
-    "Haematology",
-    "Respiratory"
-  ],
+  "clinicalSpecialties": ["Cardiovascular", "Haematology", "Respiratory"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3f213c5e-7075-4e43-9bbd-437eb031e9f1",

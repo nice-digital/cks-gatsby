@@ -18,9 +18,8 @@
       "term": "Multiple Sclerosis"
     }
   ],
-  "clinicalSpecialties": [
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Neurological"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3486e2db-8f7d-4ffb-90ff-d74ffc6b8477",

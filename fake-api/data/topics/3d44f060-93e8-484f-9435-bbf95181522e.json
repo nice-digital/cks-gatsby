@@ -18,10 +18,8 @@
       "term": "Herpes Simplex"
     }
   ],
-  "clinicalSpecialties": [
-    "Eyes",
-    "Infections and infestations"
-  ],
+  "clinicalSpecialties": ["Eyes", "Infections and infestations"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "144e9bad-763d-42b3-bf6f-258a8dcdee77",

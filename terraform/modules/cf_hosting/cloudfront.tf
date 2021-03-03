@@ -7,7 +7,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 	enabled             = true
 	is_ipv6_enabled     = true
-	comment             = "CKS test static website CloudFront"
 	default_root_object = "index.html"
 
 	price_class = "PriceClass_100" # speed up changes/dev by only deploying to eu/us
@@ -65,7 +64,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	restrictions {
 		geo_restriction {
 			restriction_type = "none"
-			#   locations        = ["US", "CA", "GB", "DE"]
 		}
 	}
 

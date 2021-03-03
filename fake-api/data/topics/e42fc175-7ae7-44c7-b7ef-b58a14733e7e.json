@@ -14,9 +14,8 @@
       "term": "Atrial Fibrillation"
     }
   ],
-  "clinicalSpecialties": [
-    "Cardiovascular"
-  ],
+  "clinicalSpecialties": ["Cardiovascular"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "0ce286ae-e439-4f1a-9468-5cf021fac937",

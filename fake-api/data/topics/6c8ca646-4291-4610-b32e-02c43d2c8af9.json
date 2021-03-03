@@ -14,10 +14,8 @@
       "term": "Paronychia"
     }
   ],
-  "clinicalSpecialties": [
-    "Infections and infestations",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Infections and infestations", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "54f9bdf2-9451-4dcd-8533-2cb1b6db0287",

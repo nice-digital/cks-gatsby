@@ -54,10 +54,8 @@
       "term": "Osteochondritis Dissecans"
     }
   ],
-  "clinicalSpecialties": [
-    "Injuries",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Injuries", "Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "7ab6d9fa-b818-42c3-8574-09ae5b78def6",

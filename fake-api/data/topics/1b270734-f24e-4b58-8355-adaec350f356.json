@@ -26,9 +26,8 @@
       "term": "Depression"
     }
   ],
-  "clinicalSpecialties": [
-    "Mental health"
-  ],
+  "clinicalSpecialties": ["Mental health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "979e8975-2f40-4697-8edd-3033e1daba90",

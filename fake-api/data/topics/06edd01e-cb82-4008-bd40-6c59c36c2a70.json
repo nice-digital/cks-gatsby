@@ -14,10 +14,8 @@
       "term": "Otitis Media, Suppurative"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Ear, nose and throat"
-  ],
+  "clinicalSpecialties": ["Child health", "Ear, nose and throat"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "effe6d41-27fa-4145-8647-446dd8e6b8a0",

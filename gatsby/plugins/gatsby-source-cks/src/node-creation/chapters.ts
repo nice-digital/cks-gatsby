@@ -16,6 +16,7 @@ export interface ChapterNode extends NodeInput {
 	itemId: string;
 	fullItemName: string;
 	htmlHeader: string;
+	summary?: string;
 	htmlStringContent: string;
 	containerElement: string;
 	depth: number;

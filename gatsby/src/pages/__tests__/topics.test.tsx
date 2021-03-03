@@ -10,16 +10,19 @@ describe("TopicsPage", () => {
 			id: "t1",
 			topicName: "Achilles tendinopathy",
 			slug: "achilles-tendinopathy",
+			aliases: ["Tendinopathy (achilles)"],
 		} as Topic,
 		{
 			id: "t2",
 			topicName: "Acne vulgaris",
 			slug: "acne-vulgaris",
+			aliases: [] as string[],
 		} as Topic,
 		{
 			id: "t3",
 			topicName: "Cataracts",
 			slug: "cataracts",
+			aliases: [] as string[],
 		} as Topic,
 	];
 
@@ -138,14 +141,18 @@ describe("TopicsPage", () => {
 			const { getByLabelText } = renderResult;
 			const list = getByLabelText("Letters A to Z with matching topics");
 			expect(list).toHaveProperty("tagName", "OL");
-			expect(list.children).toHaveLength(2); // See test data above
+			expect(list.children).toHaveLength(3); // See test data above - 2 topics and 1 alias
 		});
 
 		it("should render heading 2 with id and label for each letter", () => {
 			const { getByLabelText } = renderResult;
-			const letterHeading = getByLabelText("Topics starting with 'A'");
-			expect(letterHeading).toHaveProperty("tagName", "H2");
-			expect(letterHeading).toHaveAttribute("id", "a");
+			const letterHeadingA = getByLabelText("Topics starting with 'A'");
+			expect(letterHeadingA).toHaveProperty("tagName", "H2");
+			expect(letterHeadingA).toHaveAttribute("id", "a");
+
+			const letterHeadingT = getByLabelText("Topics starting with 'T'");
+			expect(letterHeadingT).toHaveProperty("tagName", "H2");
+			expect(letterHeadingT).toHaveAttribute("id", "t");
 		});
 
 		it("should render list of topics labelled by the letter heading for each letter", () => {
@@ -162,6 +169,14 @@ describe("TopicsPage", () => {
 			expect(getByText("Acne vulgaris")).toHaveAttribute(
 				"href",
 				"/topics/acne-vulgaris/"
+			);
+		});
+
+		it("should render topic link for aliases", () => {
+			const { getByText } = renderResult;
+			expect(getByText("Tendinopathy (achilles)")).toHaveAttribute(
+				"href",
+				"/topics/achilles-tendinopathy/"
 			);
 		});
 	});

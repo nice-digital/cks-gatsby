@@ -30,10 +30,8 @@
       "term": "Infant, Newborn"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Child health", "Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "b2c37873-40ea-4572-b686-53c22a76443d",

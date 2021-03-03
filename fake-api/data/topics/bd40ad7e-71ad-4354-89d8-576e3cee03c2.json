@@ -14,10 +14,8 @@
       "term": "Burns"
     }
   ],
-  "clinicalSpecialties": [
-    "Injuries",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Injuries", "Skin and nail"],
+  "aliases": ["Scalds and burns"],
   "topicHtmlObjects": [
     {
       "itemId": "66646945-5ec0-4065-b615-3a7ed88741f9",

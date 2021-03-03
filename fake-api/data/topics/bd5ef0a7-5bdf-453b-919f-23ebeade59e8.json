@@ -14,10 +14,8 @@
       "term": "Breast Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Preventative medicine",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Preventative medicine", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "22e21ccb-5dcb-4f1c-9fa9-f8ac04d94c24",

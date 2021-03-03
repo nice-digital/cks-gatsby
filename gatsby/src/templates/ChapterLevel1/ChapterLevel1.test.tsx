@@ -74,6 +74,27 @@ describe("ChapterLevel1", () => {
 		});
 	});
 
+	describe("SEO", () => {
+		it("should use fallback meta description when summary is empty", async () => {
+			await waitFor(() => {
+				expect(
+					document.querySelector("meta[name='description']")
+				).toHaveAttribute("content", "Background information, Asthma, CKS");
+			});
+		});
+
+		it("should use summary field for meta description", async () => {
+			cleanup();
+			props.pageContext.chapter.summary = "this is some summary text";
+			renderResult = render(<ChapterLevel1Page {...props} />);
+			await waitFor(() => {
+				expect(
+					document.querySelector("meta[name='description']")
+				).toHaveAttribute("content", "this is some summary text");
+			});
+		});
+	});
+
 	describe("page header", () => {
 		it("should render parent topic name with chapter name as heading 1", () => {
 			const { getAllByRole } = renderResult;

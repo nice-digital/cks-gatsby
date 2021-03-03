@@ -14,9 +14,8 @@
       "term": "Whiplash Injuries"
     }
   ],
-  "clinicalSpecialties": [
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "c8147ef6-05f5-4356-a2b2-0aa182774b54",

@@ -38,10 +38,8 @@
       "term": "Head and Neck Neoplasms"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic",
-    "Skin and nail"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic", "Skin and nail"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d1e22634-21bc-4da5-817b-3e9e1d68257c",

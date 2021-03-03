@@ -14,10 +14,8 @@
       "term": "Benign paroxysmal positional vertigo"
     }
   ],
-  "clinicalSpecialties": [
-    "Ear, nose and throat",
-    "Neurological"
-  ],
+  "clinicalSpecialties": ["Ear, nose and throat", "Neurological"],
+  "aliases": ["Vertigo - benign paroxysmal positional"],
   "topicHtmlObjects": [
     {
       "itemId": "2d2edb91-483f-4d80-b1ad-598ab93e8f3a",

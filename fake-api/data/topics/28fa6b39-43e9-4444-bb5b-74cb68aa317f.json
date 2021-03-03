@@ -14,9 +14,8 @@
       "term": "Fissure in Ano"
     }
   ],
-  "clinicalSpecialties": [
-    "Gastrointestinal"
-  ],
+  "clinicalSpecialties": ["Gastrointestinal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "3d31ace6-2dd6-4dff-b8eb-ad5e3e822a69",

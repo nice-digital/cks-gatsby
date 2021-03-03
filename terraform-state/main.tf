@@ -3,16 +3,26 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-west-1"
+	region = "eu-west-1"
 
-  # Make it faster by skipping something
-  skip_get_ec2_platforms      = true
-  skip_metadata_api_check     = true
-  skip_region_validation      = true
-  skip_credentials_validation = true
+	# Make it faster by skipping something
+	skip_get_ec2_platforms      = true
+	skip_metadata_api_check     = true
+	skip_region_validation      = true
+	skip_credentials_validation = true
 
-  # skip_requesting_account_id should be disabled to generate valid ARN in apigatewayv2_api_execution_arn
-  skip_requesting_account_id = false
+	# skip_requesting_account_id should be disabled to generate valid ARN in apigatewayv2_api_execution_arn
+	skip_requesting_account_id = false
+}
+
+locals {
+	default_tags = {
+		org_name = var.org_name
+		application_name = var.application_name
+		environment_name = var.environment_name
+		created_by = var.created_by
+	}
+	name = "${var.org_name}-${var.application_name}-${var.environment_name}"
 }
 
 
@@ -35,35 +45,5 @@ resource "aws_s3_bucket" "b" {
 		}
 	}
 
-	tags = {
-		application_name = "cks"
-		created_by = "cm"
-		environment_name = "state-storage"
-	}
+	tags = local.default_tags
 }
-
-
-# resource "aws_s3_bucket_policy" "terrafrom-state-policy" {
-# 	# depends_on = [ module.s3_bucket ]
-#     # bucket = local.bucket_name
-#     bucket = aws_s3_bucket.b.bucket
-
-
-#   policy = <<POLICY
-# {
-#   "Version": "2012-10-17",
-#   "Statement": [
-#     {
-#       "Effect": "Allow",
-#       "Action": "s3:ListBucket",
-#       "Resource": "arn:aws:s3:::mybucket"
-#     },
-#     {
-#       "Effect": "Allow",
-#       "Action": ["s3:GetObject", "s3:PutObject"],
-#       "Resource": "arn:aws:s3:::${aws_s3_bucket.b.bucket}"
-#     }
-#   ]
-# }
-# POLICY
-# }

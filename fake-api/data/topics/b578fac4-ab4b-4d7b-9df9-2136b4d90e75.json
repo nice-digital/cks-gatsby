@@ -14,10 +14,8 @@
       "term": "Gout"
     }
   ],
-  "clinicalSpecialties": [
-    "Endocrine and metabolic",
-    "Musculoskeletal"
-  ],
+  "clinicalSpecialties": ["Endocrine and metabolic", "Musculoskeletal"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "d1373c46-dc69-411a-8774-ab0208ff028a",

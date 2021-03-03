@@ -26,11 +26,8 @@
       "term": "Breast"
     }
   ],
-  "clinicalSpecialties": [
-    "Child health",
-    "Pregnancy",
-    "Women's health"
-  ],
+  "clinicalSpecialties": ["Child health", "Pregnancy", "Women's health"],
+  "aliases": [],
   "topicHtmlObjects": [
     {
       "itemId": "769a05a5-76c0-405b-89f3-780cfde41ef5",
