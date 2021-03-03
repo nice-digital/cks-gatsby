@@ -43,3 +43,7 @@ variable "edge_lambda_source_filename" {
 variable "edge_lambda_source_filename" {
 	type = string
 }
+
+variable "edge_lambda_source_filename" {
+	type = string
+}

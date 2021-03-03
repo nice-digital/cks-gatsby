@@ -34,7 +34,8 @@ if [ "$runningInOctoDeploy" = true ] # Check to see if this script is runing in 
 
   # Build files locally
   dotnet lambda package CKS.SearchLambda.zip --project-location ../search-lambda/CKS.SearchLambda
-  zip -r -D -j CKS.OriginRequestEdgeLambda.zip ../origin_request_edge_lambda/*
+
+  zip -r -D -j CKS.OriginRequestEdgeLambda.zip ../origin-request-edge-lambda/*
 
   # Set local parameters for local development
   searchLambdaSourceLocation="../CKS.SearchLambda.zip"

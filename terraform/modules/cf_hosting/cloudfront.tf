@@ -61,6 +61,12 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 		viewer_protocol_policy = "redirect-to-https"
 	}
 
+	restrictions {
+		geo_restriction {
+			restriction_type = "none"
+		}
+	}
+
 	custom_error_response {
 			error_caching_min_ttl = 3600
 			error_code            = 500
