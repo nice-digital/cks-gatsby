@@ -25,30 +25,29 @@ exports.handler = (event, context, callback) => {
 			statusDescription: "Forbidden",
 		};
 		callback(null, redirectResponse);
+		return;
 	}
 
 	for (const { source, destination } of redirects) {
 		if (source.test(request.uri)) {
 			//if uri matches entry in rewrite list return modified uri
 			const redirectResponse = {
-				status: "302",
-				statusDescription: "Found",
+				status: "301",
+				statusDescription: "Moved Permanently",
 				headers: {
 					location: [{ value: request.uri.replace(source, destination) }],
 				},
 			};
 			callback(null, redirectResponse);
+			return;
 		}
 	}
 
 	callback(null, request);
 };
 
-function isInCountryAllowList(countryCode) {
-	if (allowedCounties.includes(countryCode)) {
-		return true;
-	}
-	return false;
+function isInAllowList(countryCode) {
+	return allowedCounties.includes(countryCode);
 }
 
 function isInIpAllowList(sourceIpAddress) {

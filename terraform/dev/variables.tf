@@ -39,3 +39,7 @@ variable "edge_lambda_source_filename" {
 	type = string
 	default = "../CKS.OriginRequestEdgeLambda.zip"
 }
+
+variable "edge_lambda_source_filename" {
+	type = string
+}
