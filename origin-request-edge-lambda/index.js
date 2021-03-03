@@ -11,14 +11,14 @@ const allowedCounties = require("./allowedCounties.json").map(
 	(country) => country
 );
 
-const ipListJson = require("./ipAllowList.json");
+const ipAllowList = require("./ipAllowList.json");
 
 exports.handler = (event, context, callback) => {
 	let request = event.Records[0].cf.request;
 	const countryHeader = request.headers["cloudfront-viewer-country"];
 	const countryCode = countryHeader[0].value;
 
-	if (!isInCountryAllowList(countryCode)) {
+	if (!isInCountryAllowList(countryCode) | !isInIpAllowList) {
 		//if request is from non UK country and not in ip allow list
 		const redirectResponse = {
 			status: "403",
@@ -46,16 +46,12 @@ exports.handler = (event, context, callback) => {
 	callback(null, request);
 };
 
-function isInAllowList(countryCode) {
+function isInCountryAllowList(countryCode) {
 	return allowedCounties.includes(countryCode);
 }
 
 function isInIpAllowList(sourceIpAddress) {
-	ipListArray = ipListJson
-		.split(/\s*1(?:;|$)\s*/)
-		.filter((ipElement) => ipElement != "");
-
-	var netBlockArray = ipListArray.map((addressMask) => {
+	var netBlockArray = ipAllowList.map((addressMask) => {
 		block = new Netmask(addressMask);
 		if (block.contains(sourceIpAddress)) {
 			return true;
