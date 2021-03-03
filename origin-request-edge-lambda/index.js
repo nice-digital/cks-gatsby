@@ -28,8 +28,8 @@ exports.handler = (event, context, callback) => {
 		if (source.test(request.uri)) {
 			//if uri matches entry in rewrite list return modified uri
 			const redirectResponse = {
-				status: "302",
-				statusDescription: "Found",
+				status: "301",
+				statusDescription: "Moved Permanently",
 				headers: {
 					location: [{ value: request.uri.replace(source, destination) }],
 				},
