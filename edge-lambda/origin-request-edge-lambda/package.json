@@ -1,5 +1,6 @@
 {
   "name": "origin-request-edge-lambda",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,5 +9,6 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "bundledDependencies": []
 }
