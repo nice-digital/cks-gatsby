@@ -38,8 +38,16 @@ variable "search_lambda_source_filename" {
 variable "edge_lambda_source_filename" {
 	type = string
 	default = "../CKS.OriginRequestEdgeLambda.zip"
+	description = "value"
 }
 
-variable "edge_lambda_source_filename" {
+variable "origin_request_edge_lambda_source_filename" {
 	type = string
 }
+variable "origin_response_edge_lambda_source_filename" {
+	type = string
+}
+variable "viewer_request_edge_lambda_source_filename" {
+	type = string
+}
+
