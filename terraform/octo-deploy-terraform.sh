@@ -46,10 +46,10 @@ fi
 
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 
-cd $releaseEnvironment
-terraform init -input=false
-terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber" -var "search_lambda_source_filename=$searchLambdaLocation" -var "origin_request_edge_lambda_source_filename=$edgeLambdaSourceLocation" -var "origin_response_edge_lambda_source_filename=$edgeLambdaSourceLocation" -var "viewer_request_edge_lambda_source_filename=$edgeLambdaSourceLocation"
-terraform apply -input=false tfplan
+# cd $releaseEnvironment
+# terraform init -input=false
+# terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber" -var "search_lambda_source_filename=$searchLambdaLocation" -var "origin_request_edge_lambda_source_filename=$edgeLambdaSourceLocation" -var "origin_response_edge_lambda_source_filename=$edgeLambdaSourceLocation" -var "viewer_request_edge_lambda_source_filename=$edgeLambdaSourceLocation"
+# terraform apply -input=false tfplan
 
 
 # echo "Current working directory is...$(pwd)"
@@ -58,6 +58,6 @@ terraform apply -input=false tfplan
 # aws s3 cp ./../test-static-site/*.html s3://$(terraform output s3_hosting_bucket_id | jq -r .)/ --cache-control max-age=30
 # aws s3 cp ./../test-static-site/ s3://$(terraform output s3_hosting_bucket_id | jq -r .)/ --recursive --cache-control max-age=31536000 # copy all files
 
-rm $searchLambdaSourceLocation
-rm $edgeLambdaSourceLocation
+# rm $searchLambdaSourceLocation
+# rm $edgeLambdaSourceLocation
 
