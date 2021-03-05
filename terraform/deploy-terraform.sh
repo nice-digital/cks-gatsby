@@ -3,16 +3,52 @@
 #This script install and runs terraform and supporting tools to deploy a complete
 #serverless web project to aws using cloudfront/s3/lambda
 
-# Usage deploy-terraform.sh <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> <releaseNumber> <releaseEnvironment>
+# Usage deploy-terraform.sh <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> <releaseNumber> <releaseEnvironment> <local or octo>
 
-echo "seting aws cli access keys...."
-export AWS_ACCESS_KEY_ID=$1
-export AWS_SECRET_ACCESS_KEY=$2
-export AWS_DEFAULT_REGION=eu-west-1
+if [ "$5" = "octo" ]
+  then
+    runningInOctoDeploy=true
+  else
+    runningInOctoDeploy=false
+fi
 
-echo "setting release and evniroment vars..."
+echo "setting release to $3 and deploying to environment $4"
 releaseNumber=$3
 releaseEnvironment=$4
+
+if [ "$runningInOctoDeploy" = true ]
+  then
+    echo "seting aws cli access keys...."
+    export AWS_ACCESS_KEY_ID=$1
+    export AWS_SECRET_ACCESS_KEY=$2
+    export AWS_DEFAULT_REGION=eu-west-1
+  else
+    dotnet lambda package $searchLambdaLocation --project-location ../search-lambda/CKS.SearchLambda
+
+    ./package-lambda.sh origin-request-edge-lambda
+    ./package-lambda.sh origin-response-edge-lambda
+    ./package-lambda.sh viewer-request-edge-lambda
+fi
+
+searchLambdaLocation="../lambdas/search-lambda.zip"
+
+originRequestEdgeLambdaLocation="../lambdas/origin-request-edge-lambda.zip"
+originResponseEdgeLambdaLocation="../lambdas/origin-reponse-edge-lambda.zip"
+viewerRequestEdgeLambdaLocation="../lambdas/viewer-request-edge-lambda.zip"
+
+echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
+
+cd $releaseEnvironment
+terraform init -input=false
+
+echo "running cmd terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber" -var "search_lambda_source_filename=$searchLambdaLocation" -var "origin_request_edge_lambda_source_filename=$originRequestEdgeLambdaLocation" -var "origin_response_edge_lambda_source_filename=$originResponseEdgeLambdaLocation" -var "viewer_request_edge_lambda_source_filename=$viewerRequestEdgeLambdaLocation""
+
+terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber" -var "search_lambda_source_filename=$searchLambdaLocation" -var "origin_request_edge_lambda_source_filename=$originRequestEdgeLambdaLocation" -var "origin_response_edge_lambda_source_filename=$originResponseEdgeLambdaLocation" -var "viewer_request_edge_lambda_source_filename=$viewerRequestEdgeLambdaLocation"
+
+# terraform apply -input=false tfplan
+
+
+
 
 # runningInOctoDeploy=false
 
@@ -25,42 +61,33 @@ releaseEnvironment=$4
 # fi
 
 
-originRequestEdgeLambdaLocation="./lambdas/origin-request-edge-lambda.zip"
-originResponseEdgeLambdaLocation="./lambdas/origin-reponse-edge-lambda.zip"
-viewerRequestEdgeLambdaLocation="./lambdas/viewer-request-edge-lambda.zip"
 
-searchLambdaLocation="./lambdas/search-lambda.zip"
 
-if [ "$runningInOctoDeploy" = true ]
-  then
-  # echo "install terraform and support tools...."
-  # chmod +x install-terraform.sh
-  # sudo ./install-terraform.sh
+# if [ "$runningInOctoDeploy" = false ]
+#   then
+#   # echo "install terraform and support tools...."
+#   # chmod +x install-terraform.sh
+#   # sudo ./install-terraform.sh
 
-  # echo "set aws cli access keys...."
-  # export AWS_ACCESS_KEY_ID=$(get_octopusvariable "TFAWSAccessKey")
-  # export AWS_SECRET_ACCESS_KEY=$(get_octopusvariable "TFAWSAccessSecret")
-  # export AWS_DEFAULT_REGION=eu-west-1
-  # releaseNumber=$(get_octopusvariable "Octopus.Release.Number")
-  # releaseEnvironment=$(get_octopusvariable "Octopus.Environment.Name")
+#   # echo "set aws cli access keys...."
+#   # export AWS_ACCESS_KEY_ID=$(get_octopusvariable "TFAWSAccessKey")
+#   # export AWS_SECRET_ACCESS_KEY=$(get_octopusvariable "TFAWSAccessSecret")
+#   # export AWS_DEFAULT_REGION=eu-west-1
+#   # releaseNumber=$(get_octopusvariable "Octopus.Release.Number")
+#   # releaseEnvironment=$(get_octopusvariable "Octopus.Environment.Name")
 
-else # local
-  dotnet lambda package $searchLambdaLocation --project-location ../search-lambda/CKS.SearchLambda
+# # else # local
+#   dotnet lambda package $searchLambdaLocation --project-location ../search-lambda/CKS.SearchLambda
 
-  ./package-lambda.sh origin-request-edge-lambda
-  ./package-lambda.sh origin-response-edge-lambda
-  ./package-lambda.sh viewer-request-edge-lambda
+#   ./package-lambda.sh origin-request-edge-lambda
+#   ./package-lambda.sh origin-response-edge-lambda
+#   ./package-lambda.sh viewer-request-edge-lambda
 
-  releaseEnvironment="local"
-  releaseNumber="local-01"
-fi
+#   releaseEnvironment="local"
+#   releaseNumber="local-01"
+# fi
 
-echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
-
-# cd $releaseEnvironment
-# terraform init -input=false
-# terraform plan -input=false -out=tfplan -var "application_name=cks" -var "environment_name=$releaseEnvironment" -var "created_by=terraform" -var "teamcity_build_number=$releaseNumber" -var "search_lambda_source_filename=$searchLambdaLocation" -var "origin_request_edge_lambda_source_filename=$edgeLambdaSourceLocation" -var "origin_response_edge_lambda_source_filename=$edgeLambdaSourceLocation" -var "viewer_request_edge_lambda_source_filename=$edgeLambdaSourceLocation"
-# terraform apply -input=false tfplan
+# echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 
 
 # echo "Current working directory is...$(pwd)"
