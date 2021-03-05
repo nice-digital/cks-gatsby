@@ -1,11 +1,6 @@
 terraform {
-	required_version = ">= 0.14"
-	# backend "s3" {
-	# 	encrypt = true
-	# 	bucket = "#{TerraformStateBucketName}"
-	# 	region = "eu-west-1"
-	# 	key = "nice/cks/#{Octopus.Environment.Name}"
-	# }
+  required_version = ">= 0.14"
+
 }
 
 ################################################################################
