@@ -1,9 +1,22 @@
 #!/bin/sh
+# Usage deploy-terraform.sh <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> <releaseNumber> <releaseEnvironment>
+
+
+
+echo "seting aws cli access keys...."
+export AWS_ACCESS_KEY_ID=$1
+export AWS_SECRET_ACCESS_KEY=$2
+export AWS_DEFAULT_REGION=eu-west-1
+
+
+releaseNumber=$3
+releaseEnvironment=$4
+
 
 #This script install and runs terraform and supporting tools to deploy a complete
 #serverless web project to aws using cloudfront/s3/lambda
 
-runningInOctoDeploy=false
+# runningInOctoDeploy=false
 
 # if [ -d /home/cksocto/.octopus/OctopusServer/ ]
   # then
@@ -26,12 +39,12 @@ if [ "$runningInOctoDeploy" = true ]
   # chmod +x install-terraform.sh
   # sudo ./install-terraform.sh
 
-  echo "set aws cli access keys...."
-  export AWS_ACCESS_KEY_ID=$(get_octopusvariable "TFAWSAccessKey")
-  export AWS_SECRET_ACCESS_KEY=$(get_octopusvariable "TFAWSAccessSecret")
-  export AWS_DEFAULT_REGION=eu-west-1
-  releaseNumber=$(get_octopusvariable "Octopus.Release.Number")
-  releaseEnvironment=$(get_octopusvariable "Octopus.Environment.Name")
+  # echo "set aws cli access keys...."
+  # export AWS_ACCESS_KEY_ID=$(get_octopusvariable "TFAWSAccessKey")
+  # export AWS_SECRET_ACCESS_KEY=$(get_octopusvariable "TFAWSAccessSecret")
+  # export AWS_DEFAULT_REGION=eu-west-1
+  # releaseNumber=$(get_octopusvariable "Octopus.Release.Number")
+  # releaseEnvironment=$(get_octopusvariable "Octopus.Environment.Name")
 
 else # local
   dotnet lambda package $searchLambdaLocation --project-location ../search-lambda/CKS.SearchLambda
