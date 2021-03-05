@@ -57,3 +57,9 @@ terraform plan -input=false -out=tfplan \
 terraform apply -input=false tfplan
 
 terraform output
+
+if [ "$runningInOctoDeploy" = true ]
+  then
+    s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)
+    set_octopusvariable "StaticSiteS3BucketName" $s3BucketName
+fi
