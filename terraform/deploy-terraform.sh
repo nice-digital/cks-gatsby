@@ -55,8 +55,7 @@ terraform plan -input=false -out=tfplan \
 
 terraform apply -input=false tfplan
 
-
-
+terraform output
 
 # runningInOctoDeploy=false
 
