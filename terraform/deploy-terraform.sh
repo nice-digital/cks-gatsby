@@ -1,20 +1,18 @@
 #!/bin/sh
+
+#This script install and runs terraform and supporting tools to deploy a complete
+#serverless web project to aws using cloudfront/s3/lambda
+
 # Usage deploy-terraform.sh <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> <releaseNumber> <releaseEnvironment>
-
-
 
 echo "seting aws cli access keys...."
 export AWS_ACCESS_KEY_ID=$1
 export AWS_SECRET_ACCESS_KEY=$2
 export AWS_DEFAULT_REGION=eu-west-1
 
-
+echo "setting release and evniroment vars..."
 releaseNumber=$3
 releaseEnvironment=$4
-
-
-#This script install and runs terraform and supporting tools to deploy a complete
-#serverless web project to aws using cloudfront/s3/lambda
 
 # runningInOctoDeploy=false
 
@@ -53,7 +51,7 @@ else # local
   ./package-lambda.sh origin-response-edge-lambda
   ./package-lambda.sh viewer-request-edge-lambda
 
-  releaseEnvironment="dev"
+  releaseEnvironment="local"
   releaseNumber="local-01"
 fi
 
