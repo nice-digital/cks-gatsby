@@ -5,13 +5,15 @@ variable "org_name" {
 }
 
 variable "application_name" {
-  description = "The name of application/project"
-  	type = string
+	description = "The name of application/project"
+	type = string
+	default = "cks"
 }
 
 variable "environment_name" {
-  description = "The name of environment"
-  	type = string
+	description = "The name of environment"
+	type = string
+	default = "dev"
 }
 variable "created_by" {
 	description = "The name of the user or service that created the service or resouce"
