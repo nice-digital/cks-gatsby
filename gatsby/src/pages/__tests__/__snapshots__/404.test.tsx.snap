@@ -3,47 +3,50 @@
 exports[`404 should match snapshot 1`] = `
 <div>
   <main
-    class="container backToTopSpacing"
+    class="main"
     id="content-start"
   >
-    <nav
-      aria-label="Breadcrumbs"
-      role="navigation"
+    <div
+      class="container"
     >
-      <ol
-        class="breadcrumbs"
+      <nav
+        aria-label="Breadcrumbs"
+        role="navigation"
       >
-        <li
-          class="breadcrumbs__crumb"
+        <ol
+          class="breadcrumbs"
         >
-          <a
-            href="https://www.nice.org.uk/"
+          <li
+            class="breadcrumbs__crumb"
           >
-            NICE
-          </a>
-        </li>
-        <li
-          class="breadcrumbs__crumb"
-        >
-          <a
-            href="/"
+            <a
+              href="https://www.nice.org.uk/"
+            >
+              NICE
+            </a>
+          </li>
+          <li
+            class="breadcrumbs__crumb"
           >
-            CKS
-          </a>
-        </li>
-        <li
-          class="breadcrumbs__crumb"
-        >
-          <span>
-            Page not found
-          </span>
-        </li>
-      </ol>
-    </nav>
-    <script
-      type="application/ld+json"
-    >
-      {
+            <a
+              href="/"
+            >
+              CKS
+            </a>
+          </li>
+          <li
+            class="breadcrumbs__crumb"
+          >
+            <span>
+              Page not found
+            </span>
+          </li>
+        </ol>
+      </nav>
+      <script
+        type="application/ld+json"
+      >
+        {
   "@context": "http://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -72,79 +75,85 @@ exports[`404 should match snapshot 1`] = `
     }
   ]
 }
-    </script>
-    <div
-      class="page-header"
-    >
-      <h1
-        class="page-header__heading"
+      </script>
+      <div
+        class="page-header"
       >
-        We can't find this page
-      </h1>
-      <p
-        class="page-header__lead"
-      >
-        Check that the web address has been typed correctly.
+        <h1
+          class="page-header__heading"
+        >
+          We can't find this page
+        </h1>
+        <p
+          class="page-header__lead"
+        >
+          Check that the web address has been typed correctly.
+        </p>
+      </div>
+      <p>
+        You can also try:
+      </p>
+      <ul>
+        <li>
+          looking for it using the search box
+        </li>
+        <li>
+          browsing for it from the 
+          <a
+            href="/"
+          >
+            CKS homepage
+          </a>
+          .
+        </li>
+      </ul>
+      <h2>
+        Contact us
+      </h2>
+      <p>
+        <a
+          href="https://www.nice.org.uk/get-involved/contact-us"
+        >
+          Get in touch
+        </a>
+         
+        if you think there is a problem.
       </p>
     </div>
-    <p>
-      You can also try:
-    </p>
-    <ul>
-      <li>
-        looking for it using the search box
-      </li>
-      <li>
-        browsing for it from the 
-        <a
-          href="/"
-        >
-          CKS homepage
-        </a>
-        .
-      </li>
-    </ul>
-    <h2>
-      Contact us
-    </h2>
-    <p>
-      <a
-        href="https://www.nice.org.uk/get-involved/contact-us"
-      >
-        Get in touch
-      </a>
-       
-      if you think there is a problem.
-    </p>
-  </main>
-  <nav
-    aria-labelledby="back-to-top-link"
-    class="hide-print static"
-  >
     <div
-      class="container"
+      class="wrapper"
     >
-      <a
-        href="#content-start"
-        id="back-to-top-link"
+      <nav
+        aria-labelledby="back-to-top-link"
+        class="nav"
       >
-        <svg
-          aria-hidden="true"
-          class="icon"
-          fill="none"
-          focusable="false"
-          height="1em"
-          viewBox="0 0 512 512"
-          width="1em"
+        <a
+          class="anchor"
+          href="#content-start"
+          id="back-to-top-link"
         >
-          <path
-            d="M478.152 338.576c0 10.091-3.525 18.661-10.576 25.712l-21.424 21.424c-7.243 7.243-15.909 10.864-26 10.864-10.283 0-18.853-3.621-25.712-10.864L255.576 247.136 116.712 385.712c-6.859 7.243-15.429 10.864-25.712 10.864s-18.853-3.621-25.712-10.864l-21.424-21.424C36.621 357.429 33 348.859 33 338.576c0-10.091 3.621-18.757 10.864-26l186-186c7.051-7.051 15.621-10.576 25.712-10.576 9.909 0 18.576 3.525 26 10.576l185.712 186c7.243 7.243 10.864 15.909 10.864 26z"
-            fill="currentColor"
-          />
-        </svg>
-         Back to top
-      </a>
+          <div
+            class="container"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon"
+              fill="none"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 512 512"
+              width="1em"
+            >
+              <path
+                d="M478.152 338.576c0 10.091-3.525 18.661-10.576 25.712l-21.424 21.424c-7.243 7.243-15.909 10.864-26 10.864-10.283 0-18.853-3.621-25.712-10.864L255.576 247.136 116.712 385.712c-6.859 7.243-15.429 10.864-25.712 10.864s-18.853-3.621-25.712-10.864l-21.424-21.424C36.621 357.429 33 348.859 33 338.576c0-10.091 3.621-18.757 10.864-26l186-186c7.051-7.051 15.621-10.576 25.712-10.576 9.909 0 18.576 3.525 26 10.576l185.712 186c7.243 7.243 10.864 15.909 10.864 26z"
+                fill="currentColor"
+              />
+            </svg>
+             Back to top
+          </div>
+        </a>
+      </nav>
     </div>
-  </nav>
+  </main>
 </div>
 `;
