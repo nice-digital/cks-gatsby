@@ -1,22 +1,66 @@
 @import '~@nice-digital/nds-core/scss/core';
 
-.static {
-  position: absolute;
-  transform: translateY((-(rem($nds-spacing-medium))));
-  width: 100%;
+$back-to-top-height: rem(
+  $nds-spacing-medium * 3
+); // Line height + bottom and top padding
+
+.wrapper {
+  margin-top: rem($nds-spacing-x-large);
+
+  @media print {
+    display: none;
+  }
 }
 
-.fixed {
+.nav {
   background: $nds-colour-nice-grey-3;
-  border-top: 1px solid #bcbcbc;
-  bottom: 0;
-  padding: rem($nds-spacing-medium) 0;
-  position: fixed;
+  border-top: 1px solid $nds-colour-border;
   width: 100%;
   z-index: 1;
 }
 
-// This is used in Layout.tsx and is necessary to prevent the Back To Top anchor from overlapping the main footer
-.backToTopSpacing {
-  padding-bottom: rem($nds-spacing-x-large);
+.anchor {
+  display: block;
+  line-height: rem($nds-spacing-medium);
+  padding: rem($nds-spacing-medium) 0;
+
+  &:visited {
+    color: $nds-colour-link;
+  }
+
+  svg {
+    transition: all 0.25s ease;
+  }
+
+  &:hover {
+    background: $nds-colour-body;
+
+    svg {
+      transform: translateY(-#{rem($nds-spacing-xx-small)});
+    }
+  }
+}
+
+@supports (position: sticky) {
+  .wrapper {
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: min(100vh, calc(100% - #{$back-to-top-height}));
+    width: 100%;
+    z-index: 99;
+  }
+
+  .nav {
+    position: sticky;
+    pointer-events: all;
+    top: calc(100vh - #{$back-to-top-height});
+    background: $nds-colour-nice-grey-3;
+    border-top: 1px solid $nds-colour-border;
+    width: 100%;
+    z-index: 1;
+  }
 }
