@@ -24,8 +24,8 @@ exports.handler = async (event, context) => {
 		{
 			key: "link",
 			value:
-				// "<https://apikeys.civiccomputing.com>; rel=preconnect; crossorigin,<https://www.googletagmanager.com>; rel=preconnect,<https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js>; rel=preload; as=script,</fonts/lato-v17-latin-regular.woff2>; rel=preload; as=font; crossorigin=anonymous,</fonts/lato-v17-latin-italic.woff2>; rel=preload; as=font; crossorigin=anonymous,</fonts/lato-v17-latin-700.woff2>; rel=preload; as=font; crossorigin=anonymous,</fonts/lato-v17-latin-900.woff2>; rel=preload; as=font; crossorigin=anonymous",
-				"<https://apikeys.civiccomputing.com>; rel=preconnect; crossorigin,<https://www.googletagmanager.com>; rel=preconnect,<https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js>; rel=preload; as=script",
+				"<https://apikeys.civiccomputing.com>; rel=preconnect; crossorigin,<https://www.googletagmanager.com>; rel=preconnect,<https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js>; rel=preload; as=script,</fonts/lato-v17-latin-regular.woff2>; rel=preload; as=font; crossorigin=anonymous,</fonts/lato-v17-latin-italic.woff2>; rel=preload; as=font; crossorigin=anonymous,</fonts/lato-v17-latin-700.woff2>; rel=preload; as=font; crossorigin=anonymous,</fonts/lato-v17-latin-900.woff2>; rel=preload; as=font; crossorigin=anonymous",
+			// "<https://apikeys.civiccomputing.com>; rel=preconnect; crossorigin,<https://www.googletagmanager.com>; rel=preconnect,<https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js>; rel=preload; as=script",
 		},
 	];
 
