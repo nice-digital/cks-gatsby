@@ -61,5 +61,6 @@ terraform output
 if [ "$runningInOctoDeploy" = true ]
   then
     s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)
+    echo "Static S3 hosting bucket name is.....$s3BucketName"
     set_octopusvariable "StaticSiteS3BucketName" $s3BucketName
 fi
