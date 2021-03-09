@@ -11,8 +11,8 @@ echo "Deploying files to S3 bucket: $s3BucketName from folder $pathToStaticFiles
 if [ "$runningInOctoDeploy" = true ]
   then
     echo "seting aws cli access keys...."
-    export AWS_ACCESS_KEY_ID=$1
-    export AWS_SECRET_ACCESS_KEY=$2
+    export AWS_ACCESS_KEY_ID=$4
+    export AWS_SECRET_ACCESS_KEY=$5
     export AWS_DEFAULT_REGION=eu-west-1
 fi
 
@@ -24,7 +24,7 @@ aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
  --include "*.json" \
  --include "sw.js" \
  --exclude "/static/*" \
- --recursive
+ --recursive --no-progress
 
 # cache-control: cache-control: public, max-age=31536000, immutable
 aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
@@ -37,7 +37,7 @@ aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
   --include "*.woff" \
   --include "*.woff2" \
   --include "/static/*" \
-  --recursive
+  --recursive --no-progress
 
 # copy every thing with no cache headers set
 aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
@@ -52,4 +52,4 @@ aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
   --exclude "*.woff" \
   --exclude "*.woff2" \
   --exclude "/static/*" \
-  --recursive
+  --recursive --no-progress
