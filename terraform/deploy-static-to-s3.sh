@@ -1,18 +1,25 @@
 #!/bin/sh
-# Usage deploy-static-to-s3.sh <name of s3 bucket> <releaseNumber> <static site files path>
+# Usage deploy-static-to-s3.sh  <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> <name of s3 bucket> <releaseNumber> <static site files path> <local or octo>
 # eg deploy-static-to-s3.sh nice-cks-local-s3-web-hosting 123 ../gatsby/public
 
-s3BucketName=$1
-releaseNumber=$2
-pathToStaticFiles=$3
+s3BucketName=$3
+releaseNumber=$4
+pathToStaticFiles=$5
+
+if [ "$6" = "octo" ]
+  then
+    runningInOctoDeploy=true
+  else
+    runningInOctoDeploy=false
+fi
 
 echo "Deploying files to S3 bucket: $s3BucketName from folder $pathToStaticFiles into $releaseNumber"
 
 if [ "$runningInOctoDeploy" = true ]
   then
     echo "seting aws cli access keys...."
-    export AWS_ACCESS_KEY_ID=$4
-    export AWS_SECRET_ACCESS_KEY=$5
+    export AWS_ACCESS_KEY_ID=$1
+    export AWS_SECRET_ACCESS_KEY=$2
     export AWS_DEFAULT_REGION=eu-west-1
 fi
 
