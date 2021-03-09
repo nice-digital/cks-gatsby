@@ -8,6 +8,14 @@ pathToStaticFiles=$3
 
 echo "Deploying files to S3 bucket: $s3BucketName from folder $pathToStaticFiles into $releaseNumber"
 
+if [ "$runningInOctoDeploy" = true ]
+  then
+    echo "seting aws cli access keys...."
+    export AWS_ACCESS_KEY_ID=$1
+    export AWS_SECRET_ACCESS_KEY=$2
+    export AWS_DEFAULT_REGION=eu-west-1
+fi
+
 # cache-control: public, max-age=0, must-revalidate
 aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
  --cache-control 'public, max-age=0, must-revalidate' \

@@ -140,3 +140,11 @@ nupkg/
 
 # Visual Studio
 .vs/
+
+terraform/dev/.terraform.lock.hcl
+terraform/dev/tfplan
+terraform/local/.terraform.lock.hcl
+.gitignore
+terraform-state/.terraform/providers/registry.terraform.io/hashicorp/aws/3.29.1/linux_amd64/terraform-provider-aws_v3.29.1_x5
+terraform-state/.terraform.lock.hcl
+terraform/local/tfplan
