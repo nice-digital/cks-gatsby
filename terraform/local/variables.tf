@@ -24,21 +24,8 @@ variable "created_by" {
 	default = "terraform"
 }
 
-variable "teamcity_build_number" {
-  description = "The TeamCity build number of the build that triggered the creation of this resource"
-  type = string
-  default = "xxx"
-}
-
 variable "search_lambda_source_filename" {
 	type = string
-	default = "../CKS.SearchLambda.zip"
-}
-
-variable "edge_lambda_source_filename" {
-	type = string
-	default = "../CKS.OriginRequestEdgeLambda.zip"
-	description = "value"
 }
 
 variable "origin_request_edge_lambda_source_filename" {

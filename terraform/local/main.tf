@@ -36,7 +36,6 @@ locals {
 		org_name = var.org_name
 		application_name = var.application_name
 		environment_name = var.environment_name
-		teamcity_build_number = var.teamcity_build_number
 		created_by = var.created_by
 	}
 	name = "${var.org_name}-${var.application_name}-${var.environment_name}"
@@ -74,8 +73,8 @@ module "cf_hosting" {
 
   name = local.name
   origin_request_edge_lambda_qualified_arn = module.origin_request_edge_lambda.this_lambda_qualified_arn
-  origin_repsonse_edge_lambda_qualified_arn = module.origin_response_edge_lambda.this_lambda_qualified_arn
-  viewer_request_edge_lambda_qualified_arn = module.viewer_request_edge_lambda.this_lambda_qualified_arn
+#   origin_repsonse_edge_lambda_qualified_arn = module.origin_response_edge_lambda.this_lambda_qualified_arn
+#   viewer_request_edge_lambda_qualified_arn = module.viewer_request_edge_lambda.this_lambda_qualified_arn
 
 
   tags = local.default_tags
@@ -92,24 +91,24 @@ module "origin_request_edge_lambda" {
   tags = local.default_tags
 }
 
-module "origin_response_edge_lambda" {
-  source = "../modules/edge_lambda"
+# module "origin_response_edge_lambda" {
+#   source = "../modules/edge_lambda"
 
-  lambda_source_filename = var.origin_response_edge_lambda_source_filename
+#   lambda_source_filename = var.origin_response_edge_lambda_source_filename
 
-  name = local.name
-  event_type = "origin-response"
+#   name = local.name
+#   event_type = "origin-response"
 
-  tags = local.default_tags
-}
+#   tags = local.default_tags
+# }
 
-module "viewer_request_edge_lambda" {
-  source = "../modules/edge_lambda"
+# module "viewer_request_edge_lambda" {
+#   source = "../modules/edge_lambda"
 
-  lambda_source_filename = var.viewer_request_edge_lambda_source_filename
+#   lambda_source_filename = var.viewer_request_edge_lambda_source_filename
 
-  name = local.name
-  event_type = "viewer-request"
+#   name = local.name
+#   event_type = "viewer-request"
 
-  tags = local.default_tags
-}
+#   tags = local.default_tags
+# }

@@ -29,10 +29,10 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 			}
 		}
 
-		# lambda_function_association {
-		# 	event_type = "origin-request"
-		# 	lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		# }
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
 
 		min_ttl                = 0
 		default_ttl            = 86400
