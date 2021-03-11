@@ -1,32 +1,45 @@
 #!/bin/sh
-# Usage deploy-static-to-s3.sh  <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> <s3 bucket name> <releaseNumber> <static site files path> <local or octo>
-# eg deploy-static-to-s3.sh nice-cks-local-s3-web-hosting 123 ../gatsby/public
+# Usage deploy-static-to-s3.sh  <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> <releaseNumber> <static site files path> <releaseEnvironment> <local or octo>
+# eg deploy-static-to-s3.sh -a "xxxx" -s "xxxx" -b"nice-cks-local-s3-web-hosting" -r "123" -p "../gatsby/public" -o "local"
 
-s3BucketName=$3
-releaseNumber=$4
-pathToStaticFiles=$5
+while getopts a:s:b:r:p:e:o: flag
+do
+    case "${flag}" in
+        a) awsAccessKeyId=${OPTARG};;
+        s) awsSecretAccessKey=${OPTARG};;
+        b) s3BucketName=${OPTARG};;
+        r) releaseNumber=${OPTARG};;
+        p) pathToStaticFiles=${OPTARG};;
+        e) releaseEnvironment=${OPTARG};;
+        o) runningInOctoDeploy=${OPTARG};;
+    esac
+done
+echo "deploying to....."
+echo "awsAccessKey: $awsAccessKeyId";
+echo "s3BucketName: $s3BucketName";
+echo "releaseNumber: $releaseNumber";
+echo "pathToStaticFiles: $pathToStaticFiles";
+echo "releaseEnvironment: $releaseEnvironment";
+echo "runningInOctoDeploy: $runningInOctoDeploy";
 
-if [ "$6" = "octo" ]
-  then
-    runningInOctoDeploy=true
-  else
-    runningInOctoDeploy=false
-fi
-
-echo "Deploying files to S3 bucket: $s3BucketName from folder $pathToStaticFiles into $releaseNumber"
+echo "Deploying files to S3 bucket: $s3BucketName from $pathToStaticFiles into $s3BucketName/$releaseNumber"
 
 if [ "$runningInOctoDeploy" = true ]
   then
     echo "seting aws cli access keys...."
-    export AWS_ACCESS_KEY_ID=$1
-    export AWS_SECRET_ACCESS_KEY=$2
+    export AWS_ACCESS_KEY_ID=$awsAccessKeyId
+    export AWS_SECRET_ACCESS_KEY=$awsSecretAccessKey
     export AWS_DEFAULT_REGION=eu-west-1
 fi
 
-s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)
-echo "Static S3 hosting bucket name is.....$s3BucketName"
+if [ "$s3BucketName" = "" ]
+  then
+    echo "Trying to get s3BucketName"
 
-cd $releaseEnvironment
+    s3BucketName=$(cd $releaseEnvironment && terraform output s3_hosting_bucket_id | jq -r .)
+
+    echo "s3BucketName hosting bucket name is.....$s3BucketName"
+fi
 
 # cache-control: public, max-age=0, must-revalidate
 aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
