@@ -2,21 +2,34 @@
 
 #This script install and runs terraform and supporting tools to deploy a complete
 #serverless web project to aws using cloudfront/s3/lambda
+# Command
+# ./deploy-terraform.sh
+#
+# Arguments
+# -a "awsAccessKeyId" -s "awsSecretAccessKey" -r "releaseNumber" -e "local, dev, aplpha, beta, live" -o "true or false"
+#
+# Example Usage
+# ./deploy-terraform.sh -e "local" -r "2"
 
-# Usage deploy-terraform.sh <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> <releaseNumber> <releaseEnvironment> <local or octo>
+while getopts a:s:r:p:e:o: flag
+do
+    case "${flag}" in
+        a) awsAccessKeyId=${OPTARG};;
+        s) awsSecretAccessKey=${OPTARG};;
+        r) releaseNumber=${OPTARG};;
+        e) releaseEnvironment=${OPTARG};;
+        o) runningInOctoDeploy=${OPTARG};;
+    esac
+done
+echo "deploying to....."
+echo "awsAccessKey: $awsAccessKeyId";
+echo "releaseNumber: $releaseNumber";
+echo "releaseEnvironment: $releaseEnvironment";
+echo "runningInOctoDeploy: $runningInOctoDeploy";
 
-if [ "$5" = "octo" ]
-  then
-    runningInOctoDeploy=true
-  else
-    runningInOctoDeploy=false
-fi
+echo "setting release to $releaseNumber and deploying to environment $releaseEnvironment"
 
-echo "setting release to $3 and deploying to environment $4"
-releaseNumber=$3
-releaseEnvironment=$4
-
-if [ "$runningInOctoDeploy" = true ]
+if [ "$runningInOctoDeploy" = "true" ]
   then
     echo "seting aws cli access keys...."
     export AWS_ACCESS_KEY_ID=$1
@@ -57,9 +70,9 @@ terraform apply -input=false tfplan
 
 terraform output
 
-if [ "$runningInOctoDeploy" = true ]
-  then
-    s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)
-    echo "Static S3 hosting bucket name is.....$s3BucketName"
-    set_octopusvariable "StaticSiteS3BucketName" $s3BucketName
-fi
+# if [ "$runningInOctoDeploy" = "true" ]
+#   then
+#     s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)
+#     echo "Static S3 hosting bucket name is.....$s3BucketName"
+#     set_octopusvariable "StaticSiteS3BucketName" $s3BucketName
+# fi
