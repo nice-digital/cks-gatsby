@@ -73,9 +73,8 @@ module "cf_hosting" {
 
   name = local.name
   origin_request_edge_lambda_qualified_arn = module.origin_request_edge_lambda.this_lambda_qualified_arn
-#   origin_repsonse_edge_lambda_qualified_arn = module.origin_response_edge_lambda.this_lambda_qualified_arn
+  origin_repsonse_edge_lambda_qualified_arn = module.origin_response_edge_lambda.this_lambda_qualified_arn
 #   viewer_request_edge_lambda_qualified_arn = module.viewer_request_edge_lambda.this_lambda_qualified_arn
-
 
   tags = local.default_tags
 }
