@@ -91,16 +91,16 @@ module "origin_request_edge_lambda" {
   tags = local.default_tags
 }
 
-# module "origin_response_edge_lambda" {
-#   source = "../modules/edge_lambda"
+module "origin_response_edge_lambda" {
+  source = "../modules/edge_lambda"
 
-#   lambda_source_filename = var.origin_response_edge_lambda_source_filename
+  lambda_source_filename = var.origin_response_edge_lambda_source_filename
 
-#   name = local.name
-#   event_type = "origin-response"
+  name = local.name
+  event_type = "origin-response"
 
-#   tags = local.default_tags
-# }
+  tags = local.default_tags
+}
 
 # module "viewer_request_edge_lambda" {
 #   source = "../modules/edge_lambda"
