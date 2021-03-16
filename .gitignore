@@ -148,3 +148,9 @@ terraform/local/.terraform.lock.hcl
 terraform-state/.terraform/providers/registry.terraform.io/hashicorp/aws/3.29.1/linux_amd64/terraform-provider-aws_v3.29.1_x5
 terraform-state/.terraform.lock.hcl
 terraform/local/tfplan
+terraform/lambdas/origin-request-edge-lambda.zip
+terraform/lambdas/origin-response-edge-lambda.zip
+terraform/lambdas/search-lambda.zip
+terraform/lambdas/viewer-request-edge-lambda.zip
+terraform-state/terraform.tfstate
+terraform-state/terraform.tfstate.backup
