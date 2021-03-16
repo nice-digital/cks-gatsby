@@ -6,7 +6,7 @@
 # ./deploy-terraform.sh
 #
 # Arguments
-# -a "awsAccessKeyId" -s "awsSecretAccessKey" -r "releaseNumber" -e "local, dev, aplpha, beta, live" -o "true or false"
+# -a "awsAccessKeyId" -s "awsSecretAccessKey" -r "releaseNumber" -e "local, dev, aplpha, beta, live" -o "octo"
 #
 # Example Usage
 # ./deploy-terraform.sh -e "local" -r "2"
@@ -29,7 +29,7 @@ echo "runningInOctoDeploy: $runningInOctoDeploy";
 
 echo "setting release to $releaseNumber and deploying to environment $releaseEnvironment"
 
-if [ "$runningInOctoDeploy" = "true" ]
+if [ "$runningInOctoDeploy" = "octo" ]
   then
     echo "seting aws cli access keys...."
     export AWS_ACCESS_KEY_ID=$1
@@ -70,9 +70,9 @@ terraform apply -input=false tfplan
 
 terraform output
 
-# if [ "$runningInOctoDeploy" = "true" ]
-#   then
-#     s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)
-#     echo "Static S3 hosting bucket name is.....$s3BucketName"
-#     set_octopusvariable "StaticSiteS3BucketName" $s3BucketName
-# fi
+if [ "$runningInOctoDeploy" = "octo" ]
+  then
+    s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)
+    echo "Static S3 hosting bucket name is.....$s3BucketName"
+    set_octopusvariable "StaticSiteS3BucketName" $s3BucketName
+fi
