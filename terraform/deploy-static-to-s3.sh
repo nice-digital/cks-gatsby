@@ -1,3 +1,6 @@
+#!/bin/sh
+# Usage deploy-static-to-s3.sh  -a "<AWS_ACCESS_KEY_ID>" -s "<AWS_SECRET_ACCESS_KEY>" -r "<releaseNumber>" -p "<static site files path>" -e "<releaseEnvironment>" -o "<running in octo true>""
+# eg deploy-static-to-s3.sh -a "xxxx" -s "xxxx" -b"nice-cks-local-s3-web-hosting" -r "123" -p "../gatsby/public" -o "true"
 
 while getopts a:s:b:r:p:e:o: flag
 do
