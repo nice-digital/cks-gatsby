@@ -1,11 +1,6 @@
 terraform {
-	required_version = ">= 0.14"
-	backend "s3" {
-		encrypt = true
-		bucket = "#{TerraformStateBucketName}"
-		region = "eu-west-1"
-		key = "nice/cks/#{Octopus.Environment.Name}"
-	}
+  required_version = ">= 0.14"
+
 }
 
 ################################################################################
@@ -80,6 +75,7 @@ module "cf_hosting" {
   origin_request_edge_lambda_qualified_arn = module.origin_request_edge_lambda.this_lambda_qualified_arn
 #   origin_repsonse_edge_lambda_qualified_arn = module.origin_response_edge_lambda.this_lambda_qualified_arn
 #   viewer_request_edge_lambda_qualified_arn = module.viewer_request_edge_lambda.this_lambda_qualified_arn
+
 
   tags = local.default_tags
 }
