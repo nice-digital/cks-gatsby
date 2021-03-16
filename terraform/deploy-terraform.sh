@@ -27,6 +27,8 @@ echo "releaseNumber: $releaseNumber";
 echo "releaseEnvironment: $releaseEnvironment";
 echo "runningInOctoDeploy: $runningInOctoDeploy";
 
+searchLambdaLocation="../lambdas/search-lambda.zip"
+
 echo "setting release to $releaseNumber and deploying to environment $releaseEnvironment"
 
 if [ "$runningInOctoDeploy" = "octo" ]
@@ -36,17 +38,15 @@ if [ "$runningInOctoDeploy" = "octo" ]
     export AWS_SECRET_ACCESS_KEY=$awsSecretAccessKey
     export AWS_DEFAULT_REGION=eu-west-1
   else
-    dotnet lambda package $searchLambdaLocation --project-location ../search-lambda/CKS.SearchLambda
+    dotnet lambda package ./lambdas/search-lambda.zip --project-location ../search-lambda/CKS.SearchLambda
 
     ./package-lambda.sh origin-request-edge-lambda
     ./package-lambda.sh origin-response-edge-lambda
     ./package-lambda.sh viewer-request-edge-lambda
 fi
 
-searchLambdaLocation="../lambdas/search-lambda.zip"
-
 originRequestEdgeLambdaLocation="../lambdas/origin-request-edge-lambda.zip"
-originResponseEdgeLambdaLocation="../lambdas/origin-reponse-edge-lambda.zip"
+originResponseEdgeLambdaLocation="../lambdas/origin-response-edge-lambda.zip"
 viewerRequestEdgeLambdaLocation="../lambdas/viewer-request-edge-lambda.zip"
 
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
