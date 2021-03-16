@@ -21,7 +21,7 @@ echo "runningInOctoDeploy: $runningInOctoDeploy";
 
 echo "Deploying files to S3 bucket: $s3BucketName from $pathToStaticFiles into $s3BucketName/$releaseNumber"
 
-if [ "$runningInOctoDeploy" = true ]
+if [ "$runningInOctoDeploy" = "true" ]
   then
     echo "seting aws cli access keys...."
     export AWS_ACCESS_KEY_ID=$awsAccessKeyId
@@ -38,40 +38,40 @@ if [ "$s3BucketName" = "" ]
     echo "s3BucketName hosting bucket name is.....$s3BucketName"
 fi
 
-# # cache-control: public, max-age=0, must-revalidate
-# aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
-#  --cache-control 'public, max-age=0, must-revalidate' \
-#  --exclude "*" \
-#  --include "*.html" \
-#  --include "*.json" \
-#  --include "sw.js" \
-#  --exclude "/static/*" \
-#  --recursive --no-progress
+# cache-control: public, max-age=0, must-revalidate
+aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
+ --cache-control 'public, max-age=0, must-revalidate' \
+ --exclude "*" \
+ --include "*.html" \
+ --include "*.json" \
+ --include "sw.js" \
+ --exclude "/static/*" \
+ --recursive --no-progress
 
-# # cache-control: cache-control: public, max-age=31536000, immutable
-# aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
-#   --cache-control 'public, max-age=31536000, immutable' \
-#   --exclude "*" \
-#   --include "*.js" \
-#   --include "*.css" \
-#   --include "*.jpg" \
-#   --include "*.png" \
-#   --include "*.woff" \
-#   --include "*.woff2" \
-#   --include "/static/*" \
-#   --recursive --no-progress
+# cache-control: cache-control: public, max-age=31536000, immutable
+aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
+  --cache-control 'public, max-age=31536000, immutable' \
+  --exclude "*" \
+  --include "*.js" \
+  --include "*.css" \
+  --include "*.jpg" \
+  --include "*.png" \
+  --include "*.woff" \
+  --include "*.woff2" \
+  --include "/static/*" \
+  --recursive --no-progress
 
-# # copy every thing with no cache headers set
-# aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
-#   --include "*" \
-#   --exclude "*.html" \
-#   --exclude "*.json" \
-#   --exclude "sw.js" \
-#   --exclude "*.js" \
-#   --exclude "*.css" \
-#   --exclude "*.jpg" \
-#   --exclude "*.png" \
-#   --exclude "*.woff" \
-#   --exclude "*.woff2" \
-#   --exclude "/static/*" \
-#   --recursive --no-progress
+# copy every thing with no cache headers set
+aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
+  --include "*" \
+  --exclude "*.html" \
+  --exclude "*.json" \
+  --exclude "sw.js" \
+  --exclude "*.js" \
+  --exclude "*.css" \
+  --exclude "*.jpg" \
+  --exclude "*.png" \
+  --exclude "*.woff" \
+  --exclude "*.woff2" \
+  --exclude "/static/*" \
+  --recursive --no-progress
