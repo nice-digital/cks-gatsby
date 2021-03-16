@@ -48,9 +48,13 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
+  "browserslist": [
+    "extends @nice-digital/browserslist-config"
+  ],
   "devDependencies": {
-    "@nice-digital/design-system": "^1.0.40-alpha.0",
-    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#69a9b3e5607a49520de9632afdc26fe84421651d",
+    "@nice-digital/browserslist-config": "^2.0.1",
+    "@nice-digital/design-system": "^1.1.1",
+    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#35b663ee31045041ac09b6c8790745c35b98bfd2",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.1",
     "@testing-library/user-event": "^12.2.2",
