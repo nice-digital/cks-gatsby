@@ -32,8 +32,8 @@ echo "setting release to $releaseNumber and deploying to environment $releaseEnv
 if [ "$runningInOctoDeploy" = "octo" ]
   then
     echo "seting aws cli access keys...."
-    export AWS_ACCESS_KEY_ID=$1
-    export AWS_SECRET_ACCESS_KEY=$2
+    export AWS_ACCESS_KEY_ID=$awsAccessKeyId
+    export AWS_SECRET_ACCESS_KEY=$awsSecretAccessKey
     export AWS_DEFAULT_REGION=eu-west-1
   else
     dotnet lambda package $searchLambdaLocation --project-location ../search-lambda/CKS.SearchLambda
