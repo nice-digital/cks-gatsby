@@ -42,6 +42,6 @@ exports.handler = (event, context, callback) => {
 	callback(null, request);
 };
 
-function isInAllowList(countryCode) {
+function isInCountryAllowList(countryCode) {
 	return allowedCounties.includes(countryCode);
 }
