@@ -1,5 +1,3 @@
-var Netmask = require("netmask").Netmask;
-
 const redirects = require("./redirects.json").map(
 	({ source, destination }) => ({
 		source: new RegExp(source),
@@ -10,8 +8,6 @@ const redirects = require("./redirects.json").map(
 const allowedCounties = require("./allowedCounties.json").map(
 	(country) => country
 );
-
-const ipAllowList = require("./ipAllowList.json");
 
 exports.handler = (event, context, callback) => {
 	let request = event.Records[0].cf.request;
@@ -48,16 +44,4 @@ exports.handler = (event, context, callback) => {
 
 function isInCountryAllowList(countryCode) {
 	return allowedCounties.includes(countryCode);
-}
-
-function isInIpAllowList(sourceIpAddress) {
-	var netBlockArray = ipAllowList.map((addressMask) => {
-		block = new Netmask(addressMask);
-		if (block.contains(sourceIpAddress)) {
-			return true;
-		}
-		return false;
-	});
-
-	return netBlockArray.includes(true);
 }

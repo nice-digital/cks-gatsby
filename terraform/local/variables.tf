@@ -18,6 +18,7 @@ variable "environment_name" {
   	type = string
 	default = "local"
 }
+
 variable "created_by" {
 	description = "The name of the user or service that created the service or resouce"
 	type = string
