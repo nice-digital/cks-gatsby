@@ -39,18 +39,24 @@ export const Header: React.FC = () => {
 	// TODO: Remove this hack to fix https://github.com/alphagov/accessible-autocomplete/issues/434
 	// We do this to make our axe tests pass
 	// Wait for the search box to appear before removing the aria-activedescendant attribute
-	const globalNavWrapperRef = useCallback((node: HTMLDivElement) => {
-		const removeActiveDescendantAttr = (): boolean => {
-			const searchInput = document.querySelector(searchInputSelector);
-			searchInput && searchInput.setAttribute("aria-activedescendant", "");
-			return !!searchInput;
-		};
-
-		if (!removeActiveDescendantAttr() && "MutationObserver" in window) {
-			new MutationObserver((_mutationsList, observer) => {
-				removeActiveDescendantAttr();
-				observer.disconnect();
-			}).observe(node, { childList: true });
+	const globalNavWrapperRef = useCallback((node: HTMLDivElement | null) => {
+		let searchInput: HTMLElement | null;
+		if (node && "MutationObserver" in window) {
+			new MutationObserver(() => {
+				searchInput =
+					searchInput || document.querySelector(searchInputSelector);
+				if (
+					searchInput &&
+					searchInput.getAttribute("aria-activedescendant") === "false"
+				) {
+					searchInput.setAttribute("aria-activedescendant", "");
+				}
+			}).observe(node, {
+				attributeFilter: ["aria-activedescendant"],
+				attributes: true, // See https://stackoverflow.com/a/50593541/486434
+				childList: true,
+				subtree: true,
+			});
 		}
 	}, []);
 
