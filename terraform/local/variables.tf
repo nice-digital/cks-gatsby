@@ -18,10 +18,16 @@ variable "environment_name" {
   	type = string
 	default = "local"
 }
+
 variable "created_by" {
 	description = "The name of the user or service that created the service or resouce"
 	type = string
 	default = "terraform"
+}
+
+variable "release_number" {
+	type = string
+	default = "1"
 }
 
 variable "search_lambda_source_filename" {

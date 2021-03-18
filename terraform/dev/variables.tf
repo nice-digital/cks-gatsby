@@ -24,6 +24,11 @@ variable "created_by" {
 	default = "terraform"
 }
 
+variable "release_number" {
+	type = string
+	default = "1"
+}
+
 variable "search_lambda_source_filename" {
 	type = string
 }

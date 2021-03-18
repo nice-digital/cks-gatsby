@@ -1,8 +1,10 @@
 resource "aws_cloudfront_distribution" "s3_distribution" {
 
 	origin {
+		# domain_name = aws_s3_bucket.s3_website_bucket.id
 		domain_name = aws_s3_bucket.s3_website_bucket.bucket_regional_domain_name
-		origin_id   = aws_s3_bucket.s3_website_bucket.id
+		origin_id   = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
+		origin_path = "/${var.release_number}"
 	}
 
 	enabled             = true
@@ -18,7 +20,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	default_cache_behavior {
 		allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
 		cached_methods   = ["GET", "HEAD"]
-		target_origin_id = aws_s3_bucket.s3_website_bucket.id
+		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
 		forwarded_values {
 			query_string = false
@@ -29,9 +31,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 			}
 		}
 
+		# lambda_function_association {
+		# 	event_type = "origin-request"
+		# 	lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		# }
+
 		lambda_function_association {
-			event_type = "origin-request"
-			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+			event_type = "origin-response"
+			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 
 		min_ttl                = 0
@@ -46,7 +53,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		allowed_methods  = ["GET", "HEAD"]
 		cached_methods   = ["GET", "HEAD"]
-		target_origin_id = aws_s3_bucket.s3_website_bucket.id
+		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
 		forwarded_values {
 			query_string = false
