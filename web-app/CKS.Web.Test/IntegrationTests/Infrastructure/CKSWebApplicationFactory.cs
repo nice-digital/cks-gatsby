@@ -25,6 +25,8 @@ namespace CKS.Web.Test.IntegrationTests.Infrastructure
 		{
 			_output = output;
 			_output.WriteLine("CKSWebApplicationFactory.constructor");
+
+			this.ClientOptions.BaseAddress = new Uri("https://cks-integration-tests.nice.org.uk");
 		}
 
 		protected override void ConfigureWebHost(IWebHostBuilder builder)
