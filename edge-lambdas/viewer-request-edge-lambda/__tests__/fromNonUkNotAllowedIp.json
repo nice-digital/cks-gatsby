@@ -1,0 +1,30 @@
+{
+  "Records": [
+    {
+      "cf": {
+        "config": {
+          "distributionId": "TEST"
+        },
+        "request": {
+          "uri": "/",
+          "method": "GET",
+          "clientIp": "169.254.20.6",
+          "headers": {
+            "host": [
+              {
+                "key": "Host",
+                "value": "d123.cf.net"
+              }
+            ],
+            "cloudfront-viewer-country": [
+              {
+                "key": "CloudFront-Viewer-Country",
+                "value": "FR"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
