@@ -2,11 +2,11 @@ const LambdaTester = require("lambda-tester");
 
 const originRequestHandler = require("../index").handler;
 
-const fromNonUkTestObject = require("../fromNonUkTestObject.json");
-const fromNonUkTestObjectInAllowList = require("../fromNonUkTestObjectInAllowList.json");
+const fromNonUkTestObject = require("./fromNonUkTestObject.json");
+const fromUkTestObject = require("./fromUkTestObject.json");
 
 describe("handler", function () {
-	it("test request from non uk", async function () {
+	it("request from non uk", async function () {
 		await LambdaTester(originRequestHandler)
 			.event(fromNonUkTestObject)
 			.expectResult((result) => {
@@ -16,11 +16,11 @@ describe("handler", function () {
 });
 
 describe("handler", function () {
-	it("test request from non uk in whitelist", async function () {
+	it("request from uk", async function () {
 		await LambdaTester(originRequestHandler)
-			.event(fromNonUkTestObjectInAllowList)
+			.event(fromUkTestObject)
 			.expectResult((result) => {
-				// expect(result.status).toEqual("403");
+				expect(result.status).not.toEqual("403");
 			});
 	});
 });
