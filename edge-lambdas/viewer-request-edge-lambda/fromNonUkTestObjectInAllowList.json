@@ -8,7 +8,7 @@
         "request": {
           "uri": "/",
           "method": "GET",
-          "clientIp": "154.58.64.2",
+          "clientIp": "169.254.1.3",
           "headers": {
             "host": [
               {
