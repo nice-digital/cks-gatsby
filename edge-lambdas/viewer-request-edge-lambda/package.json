@@ -1,5 +1,5 @@
 {
-  "name": "origin-request-edge-lambda",
+  "name": "viewer-request-edge-lambda",
   "private": true,
   "version": "1.0.0",
   "description": "",
