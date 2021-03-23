@@ -1,7 +1,6 @@
 resource "aws_cloudfront_distribution" "s3_distribution" {
 
 	origin {
-		# domain_name = aws_s3_bucket.s3_website_bucket.id
 		domain_name = "${aws_s3_bucket.s3_website_bucket.id}.${aws_s3_bucket.s3_website_bucket.website_domain}"
 		origin_id   = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 		origin_path = "/${var.release_number}"
@@ -15,7 +14,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 	enabled             = true
 	is_ipv6_enabled     = true
-	# default_root_object = "index.html"
+	# default_root_object = "index.html" - set the default object using s3 website hosting as this covers more than just /
 
 	comment             = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}"
 
@@ -30,21 +29,23 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		forwarded_values {
 			query_string = false
-			headers      = ["CloudFront-Viewer-Country"]
+			headers      = ["CloudFront-Viewer-Country", "x-nice-allowed-ip"]
 
 			cookies {
 				forward = "none"
 			}
 		}
-
-		# lambda_function_association {
-		# 	event_type = "origin-request"
-		# 	lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		# }
-
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
 		lambda_function_association {
 			event_type = "origin-response"
 			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
+		}
+		lambda_function_association {
+			event_type = "viewer-request"
+			lambda_arn = var.viewer_request_edge_lambda_qualified_arn
 		}
 
 		compress               = true
@@ -66,6 +67,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 				forward = "none"
 			}
 		}
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
+		lambda_function_association {
+			event_type = "origin-response"
+			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
+		}
 
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
@@ -86,6 +95,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 				forward = "none"
 			}
 		}
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
+		lambda_function_association {
+			event_type = "origin-response"
+			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
+		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
 	}
@@ -104,6 +121,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 			cookies {
 				forward = "none"
 			}
+		}
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
+		lambda_function_association {
+			event_type = "origin-response"
+			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
@@ -124,6 +149,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 				forward = "none"
 			}
 		}
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
+		lambda_function_association {
+			event_type = "origin-response"
+			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
+		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
 	}
@@ -142,6 +175,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 			cookies {
 				forward = "none"
 			}
+		}
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
+		lambda_function_association {
+			event_type = "origin-response"
+			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
@@ -162,6 +203,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 				forward = "none"
 			}
 		}
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
+		lambda_function_association {
+			event_type = "origin-response"
+			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
+		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
 	}
@@ -180,6 +229,14 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 			cookies {
 				forward = "none"
 			}
+		}
+		lambda_function_association {
+			event_type = "origin-request"
+			lambda_arn = var.origin_request_edge_lambda_qualified_arn
+		}
+		lambda_function_association {
+			event_type = "origin-response"
+			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
