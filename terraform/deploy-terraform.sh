@@ -61,6 +61,7 @@ terraform plan -input=false -out=tfplan \
  -var "application_name=cks" \
  -var "environment_name=$releaseEnvironment" \
  -var "created_by=terraform" \
+ -var "release_number=$releaseNumber" \
  -var "search_lambda_source_filename=$searchLambdaLocation" \
  -var "origin_request_edge_lambda_source_filename=$originRequestEdgeLambdaLocation" \
  -var "origin_response_edge_lambda_source_filename=$originResponseEdgeLambdaLocation" \

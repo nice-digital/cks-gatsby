@@ -75,7 +75,7 @@ module "api_gateway" {
 
 module "cf_hosting" {
   source = "../modules/cf_hosting"
-
+  release_number = var.release_number
   name = local.name
   origin_request_edge_lambda_qualified_arn = module.origin_request_edge_lambda.this_lambda_qualified_arn
   origin_repsonse_edge_lambda_qualified_arn = module.origin_response_edge_lambda.this_lambda_qualified_arn
