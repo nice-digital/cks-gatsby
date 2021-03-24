@@ -23,7 +23,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 #   aliases = ["mysite.example.com", "yoursite.example.com"]
 
 	default_cache_behavior {
-		allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
 		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
@@ -55,7 +55,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	ordered_cache_behavior {
 		path_pattern = "*.js"
 
-		allowed_methods  = ["GET", "HEAD"]
+		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
 		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
@@ -83,7 +83,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	ordered_cache_behavior {
 		path_pattern = "*.css"
 
-		allowed_methods  = ["GET", "HEAD"]
+		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
 		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
@@ -110,7 +110,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	ordered_cache_behavior {
 		path_pattern = "*.jpg"
 
-		allowed_methods  = ["GET", "HEAD"]
+		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
 		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
@@ -137,7 +137,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	ordered_cache_behavior {
 		path_pattern = "*.png"
 
-		allowed_methods  = ["GET", "HEAD"]
+		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
 		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
@@ -164,7 +164,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	ordered_cache_behavior {
 		path_pattern = "*.woff"
 
-		allowed_methods  = ["GET", "HEAD"]
+		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
 		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
@@ -191,7 +191,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	ordered_cache_behavior {
 		path_pattern = "*.woff2"
 
-		allowed_methods  = ["GET", "HEAD"]
+		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
 		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
@@ -218,7 +218,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	ordered_cache_behavior {
 		path_pattern = "/static/*"
 
-		allowed_methods  = ["GET", "HEAD"]
+		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
 		target_origin_id = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}-orgin"
 
@@ -247,18 +247,23 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 			restriction_type = "none"
 		}
 	}
-
 	custom_error_response {
 			error_caching_min_ttl = 3600
-			error_code            = 500
-			response_code         = 500
-			response_page_path    = "/errors/403-forbidden.html"
+			error_code            = 403
+			response_code         = 403
+			response_page_path    = "/errors/403.html"
 		}
 	custom_error_response {
 			error_caching_min_ttl = 3600
 			error_code            = 403
 			response_code         = 403
-			response_page_path    = "/errors/403-forbidden.html"
+			response_page_path    = "/errors/403.html"
+		}
+	custom_error_response {
+			error_caching_min_ttl = 3600
+			error_code            = 500
+			response_code         = 500
+			response_page_path    = "/errors/500.html"
 		}
 
 	tags = var.tags
