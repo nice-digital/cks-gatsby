@@ -95,6 +95,6 @@ aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
   --recursive --no-progress
 
 # copy error pages to non geo restricted folder
-aws s3 cp $pathToStaticFiles/403.html s3://$s3BucketName/$releaseNumber/errors/403.html
-aws s3 cp $pathToStaticFiles/404.html s3://$s3BucketName/$releaseNumber/errors/404.html
-aws s3 cp $pathToStaticFiles/500.html s3://$s3BucketName/$releaseNumber/errors/500.html
+aws s3 cp $pathToStaticFiles/403/index.html s3://$s3BucketName/$releaseNumber/errors/403.html
+aws s3 cp $pathToStaticFiles/404/index.html s3://$s3BucketName/$releaseNumber/errors/404.html
+aws s3 cp $pathToStaticFiles/500/index.html s3://$s3BucketName/$releaseNumber/errors/500.html
