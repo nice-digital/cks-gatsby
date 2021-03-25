@@ -11,9 +11,7 @@ const ForbiddenPage: React.FC = () => {
 			<SEO title="CKS is only available in the UK" noIndex={true} />
 			<Breadcrumbs>
 				<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
-				<Breadcrumb to="/" elementType={Link}>
-					CKS
-				</Breadcrumb>
+				<Breadcrumb>CKS</Breadcrumb>
 				<Breadcrumb>CKS is only available in the UK</Breadcrumb>
 			</Breadcrumbs>
 
