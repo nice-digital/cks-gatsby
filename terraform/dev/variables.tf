@@ -26,7 +26,6 @@ variable "created_by" {
 
 variable "release_number" {
 	type = string
-	default = "1"
 }
 
 variable "search_lambda_source_filename" {
