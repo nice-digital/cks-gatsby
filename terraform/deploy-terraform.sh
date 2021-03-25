@@ -43,7 +43,8 @@ if [ "$runningInOctoDeploy" = "octo" ]
     export AWS_DEFAULT_REGION=eu-west-1
 
     echo "updating ipAllowList.json"
-    sudo ./update-ip-allowList-viewer-request.sh
+    chmod +x ./update-ip-allowList-viewer-request.sh
+    ./update-ip-allowList-viewer-request.sh
   else
     dotnet lambda package ./lambdas/search-lambda.zip --project-location ../search-lambda/CKS.SearchLambda
 
