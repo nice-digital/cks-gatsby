@@ -10,7 +10,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "gatsby/{.cache,public,coverage}": true,
+    "gatsby/{.cache,coverage}": true,
     "gatsby/reduxcache*": true,
     "functional-tests/allure-results": true
   },
@@ -71,5 +71,9 @@
   },
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "terraform.languageServer": {
+    "external": true,
+    "args": ["serve", "-tf-exec=/usr/bin/terraform"]
   }
 }

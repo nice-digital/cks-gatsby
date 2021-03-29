@@ -1,0 +1,2081 @@
+[
+  { "source": "^/(.*)index.html$", "destination": "/$1" },
+  { "source": "^/whatsnew", "destination": "/whats-new/" },
+  { "source": "^/development", "destination": "/about/development/" },
+  { "source": "^/clinicalspeciality", "destination": "/specialities/" },
+  { "source": "^/clinical_topics", "destination": "/topics/" },
+  {
+    "source": "^/anaemia-b12-and-folate-deficiency",
+    "destination": "/topics/anaemia-b12-folate-deficiency/"
+  },
+  {
+    "source": "^/angio-oedema-and-anaphylaxis",
+    "destination": "/topics/angio-oedema-anaphylaxis/"
+  },
+  {
+    "source": "^/benzodiazepine-and-z-drug-withdrawal",
+    "destination": "/topics/benzodiazepine-z-drug-withdrawal/"
+  },
+  {
+    "source": "^/bites-human-and-animal",
+    "destination": "/topics/bites-human-animal/"
+  },
+  {
+    "source": "^/boils-carbuncles-and-staphylococcal-carriage",
+    "destination": "/topics/boils-carbuncles-staphylococcal-carriage/"
+  },
+  {
+    "source": "^/bone-and-soft-tissue-sarcoma-recognition-and-referral",
+    "destination": "/topics/bone-soft-tissue-sarcoma-recognition-referral/"
+  },
+  {
+    "source": "^/brain-and-central-nervous-system-cancers-recognition-and-referral",
+    "destination": "/topics/brain-central-nervous-system-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/breast-cancer-recognition-and-referral",
+    "destination": "/topics/breast-cancer-recognition-referral/"
+  },
+  { "source": "^/burns-and-scalds", "destination": "/topics/burns-scalds/" },
+  {
+    "source": "^/cervical-cancer-and-hpv",
+    "destination": "/topics/cervical-cancer-hpv/"
+  },
+  {
+    "source": "^/child-maltreatment-recognition-and-management",
+    "destination": "/topics/child-maltreatment-recognition-management/"
+  },
+  {
+    "source": "^/childhood-cancers-recognition-and-referral",
+    "destination": "/topics/childhood-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/conduct-disorders-in-children-and-young-people",
+    "destination": "/topics/conduct-disorders-in-children-young-people/"
+  },
+  {
+    "source": "^/contraception-barrier-methods-and-spermicides",
+    "destination": "/topics/contraception-barrier-methods-spermicides/"
+  },
+  {
+    "source": "^/corticosteroids-topical-skin-nose-and-eyes",
+    "destination": "/topics/corticosteroids-topical-skin-nose-eyes/"
+  },
+  {
+    "source": "^/cvd-risk-assessment-and-management",
+    "destination": "/topics/cvd-risk-assessment-management/"
+  },
+  {
+    "source": "^/depression-antenatal-and-postnatal",
+    "destination": "/topics/depression-antenatal-postnatal/"
+  },
+  {
+    "source": "^/diarrhoea-prevention-and-advice-for-travellers",
+    "destination": "/topics/diarrhoea-prevention-advice-for-travellers/"
+  },
+  {
+    "source": "^/domestic-violence-and-abuse",
+    "destination": "/topics/domestic-violence-abuse/"
+  },
+  {
+    "source": "^/fungal-skin-infection-body-and-groin",
+    "destination": "/topics/fungal-skin-infection-body-groin/"
+  },
+  {
+    "source": "^/gastrointestinal-tract-lower-cancers-recognition-and-referral",
+    "destination": "/topics/gastrointestinal-tract-lower-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/gastrointestinal-tract-upper-cancers-recognition-and-referral",
+    "destination": "/topics/gastrointestinal-tract-upper-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/gingivitis-and-periodontitis",
+    "destination": "/topics/gingivitis-periodontitis/"
+  },
+  {
+    "source": "^/gynaecological-cancers-recognition-and-referral",
+    "destination": "/topics/gynaecological-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/haematological-cancers-recognition-and-referral",
+    "destination": "/topics/haematological-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/hand-foot-and-mouth-disease",
+    "destination": "/topics/hand-foot-mouth-disease/"
+  },
+  {
+    "source": "^/head-and-neck-cancers-recognition-and-referral",
+    "destination": "/topics/head-neck-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/hiv-infection-and-aids",
+    "destination": "/topics/hiv-infection-aids/"
+  },
+  {
+    "source": "^/insect-bites-and-stings",
+    "destination": "/topics/insect-bites-stings/"
+  },
+  {
+    "source": "^/lung-and-pleural-cancers-recognition-and-referral",
+    "destination": "/topics/lung-pleural-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/mastitis-and-breast-abscess",
+    "destination": "/topics/mastitis-breast-abscess/"
+  },
+  {
+    "source": "^/melanoma-and-pigmented-lesions",
+    "destination": "/topics/melanoma-pigmented-lesions/"
+  },
+  {
+    "source": "^/meningitis-bacterial-meningitis-and-meningococcal-disease",
+    "destination": "/topics/meningitis-bacterial-meningitis-meningococcal-disease/"
+  },
+  {
+    "source": "^/palliative-care-nausea-and-vomiting",
+    "destination": "/topics/palliative-care-nausea-vomiting/"
+  },
+  {
+    "source": "^/pre-conception-advice-and-management",
+    "destination": "/topics/pre-conception-advice-management/"
+  },
+  {
+    "source": "^/psychosis-and-schizophrenia",
+    "destination": "/topics/psychosis-schizophrenia/"
+  },
+  {
+    "source": "^/scrotal-pain-and-swelling",
+    "destination": "/topics/scrotal-pain-swelling/"
+  },
+  {
+    "source": "^/skin-cancers-recognition-and-referral",
+    "destination": "/topics/skin-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/sleep-disorders-shift-work-and-jet-lag",
+    "destination": "/topics/sleep-disorders-shift-work-jet-lag/"
+  },
+  {
+    "source": "^/sprains-and-strains",
+    "destination": "/topics/sprains-strains/"
+  },
+  { "source": "^/stroke-and-tia", "destination": "/topics/stroke-tia/" },
+  {
+    "source": "^/urological-cancers-recognition-and-referral",
+    "destination": "/topics/urological-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/venous-eczema-and-lipodermatosclerosis",
+    "destination": "/topics/venous-eczema-lipodermatosclerosis/"
+  },
+  {
+    "source": "^/vitamin-d-deficiency-in-adults-treatment-and-prevention",
+    "destination": "/topics/vitamin-d-deficiency-in-adults-treatment-prevention/"
+  },
+  {
+    "source": "^/warts-and-verrucae",
+    "destination": "/topics/warts-verrucae/"
+  },
+  {
+    "source": "^/whitlow-staphylococcal-and-herpetic",
+    "destination": "/topics/whitlow-staphylococcal-herpetic/"
+  },
+  {
+    "source": "^/topics/contraception-ius/iud/",
+    "destination": "/topics/contraception-ius-iud/"
+  },
+  {
+    "source": "^/contraception-iusiud",
+    "destination": "/topics/contraception-ius-iud/"
+  },
+  {
+    "source": "^/topics/nausea/vomiting-in-pregnancy/",
+    "destination": "/topics/nausea-vomiting-in-pregnancy/"
+  },
+  {
+    "source": "^/nauseavomiting-in-pregnancy",
+    "destination": "/topics/nausea-vomiting-in-pregnancy/"
+  },
+  {
+    "source": "^/topics/polycythaemia/erythrocytosis/",
+    "destination": "/topics/polycythaemia-erythrocytosis/"
+  },
+  {
+    "source": "^/polycythaemiaerythrocytosis",
+    "destination": "/topics/polycythaemia-erythrocytosis/"
+  },
+  {
+    "source": "^/topics/tiredness/fatigue-in-adults/",
+    "destination": "/topics/tiredness-fatigue-in-adults/"
+  },
+  {
+    "source": "^/tirednessfatigue-in-adults",
+    "destination": "/topics/tiredness-fatigue-in-adults/"
+  },
+  {
+    "source": "^/cows-milk-protein-allergy-in-children",
+    "destination": "/topics/cows-milk-allergy-in-children/"
+  },
+  {
+    "source": "^/scrotal-swellings",
+    "destination": "/topics/scrotal-pain-swelling/"
+  },
+  { "source": "^/hepatitis-C", "destination": "/topics/hepatitis-c/" },
+  { "source": "^/hepatitis-A", "destination": "/topics/hepatitis-a/" },
+  { "source": "^/hepatitis-B", "destination": "/topics/hepatitis-b/" },
+  {
+    "source": "^/anaemia-B12-folate-deficiency",
+    "destination": "/topics/anaemia-b12-folate-deficiency/"
+  },
+  {
+    "source": "^/breast-cancer-managing-FH",
+    "destination": "/topics/breast-cancer-managing-fh/"
+  },
+  {
+    "source": "^/cervical-cancer-HPV",
+    "destination": "/topics/cervical-cancer-hpv/"
+  },
+  {
+    "source": "^/CVD-risk-assessment-management",
+    "destination": "/topics/cvd-risk-assessment-management/"
+  },
+  {
+    "source": "^/dyspepsia-proven-GORD",
+    "destination": "/topics/dyspepsia-proven-gord/"
+  },
+  { "source": "^/DMARDS", "destination": "/topics/dmards/" },
+  {
+    "source": "^/DVT-prevention-for-travellers",
+    "destination": "/topics/dvt-prevention-for-travellers/"
+  },
+  {
+    "source": "^/GORD-in-children",
+    "destination": "/topics/gord-in-children/"
+  },
+  {
+    "source": "^/hiv-infection-AIDS",
+    "destination": "/topics/hiv-infection-aids/"
+  },
+  {
+    "source": "^/lipid-modification-CVD-prevention",
+    "destination": "/topics/lipid-modification-cvd-prevention/"
+  },
+  { "source": "^/LUTS-in-men", "destination": "/topics/luts-in-men/" },
+  {
+    "source": "^/MI-secondary-prevention",
+    "destination": "/topics/mi-secondary-prevention/"
+  },
+  {
+    "source": "^/MRSA-in-primary-care",
+    "destination": "/topics/mrsa-in-primary-care/"
+  },
+  {
+    "source": "^/non-alcoholic-fatty-liver-disease-NAFLD",
+    "destination": "/topics/non-alcoholic-fatty-liver-disease-nafld/"
+  },
+  {
+    "source": "^/NSAIDS-prescribing-issues",
+    "destination": "/topics/nsaids-prescribing-issues/"
+  },
+  {
+    "source": "^/parvovirus-B19-infection",
+    "destination": "/topics/parvovirus-b19-infection/"
+  },
+  { "source": "^/stroke-TIA", "destination": "/topics/stroke-tia/" },
+  {
+    "source": "^/vitamin-D-deficiency-in-adults-treatment-prevention",
+    "destination": "/topics/vitamin-d-deficiency-in-adults-treatment-prevention/"
+  },
+  {
+    "source": "^/vitamin-D-deficiency-in-children",
+    "destination": "/topics/vitamin-d-deficiency-in-children/"
+  },
+  {
+    "source": "^/temporomandibular-disorders-TMDs",
+    "destination": "/topics/temporomandibular-disorders-tmds/"
+  },
+  { "source": "^/Mortons-neuroma", "destination": "/topics/mortons-neuroma" },
+  {
+    "source": "^/Osgood-Schlatter-disease",
+    "destination": "/topics/osgood-schlatter-disease/"
+  },
+  {
+    "source": "^/Osgood-schlatter-disease",
+    "destination": "/topics/osgood-schlatter-disease/"
+  },
+  {
+    "source": "^/osgood-Schlatter-disease",
+    "destination": "/topics/osgood-schlatter-disease/"
+  },
+  {
+    "source": "^/coronavirus-COVID-19",
+    "destination": "/topics/coronavirus-covid-19/"
+  },
+  {
+    "source": "^/Dupuytrens-disease",
+    "destination": "/topics/dupuytrens-disease/"
+  },
+  {
+    "source": "^/Addisons-disease",
+    "destination": "/topics/addisons-disease/"
+  },
+  {
+    "source": "^/Gilberts-syndrome",
+    "destination": "/topics/gilberts-syndrome/"
+  },
+  {
+    "source": "^/Menieres-disease",
+    "destination": "/topics/menieres-disease/"
+  },
+  {
+    "source": "^/Parkinsons-disease",
+    "destination": "/topics/parkinsons-disease/"
+  },
+  {
+    "source": "^/Raynauds-phenomenon",
+    "destination": "/topics/raynauds-phenomenon/"
+  },
+  { "source": "^/(achilles-tendinopathy)", "destination": "/topics/$1/" },
+  {
+    "source": "^/achilles_tendinopathy$",
+    "destination": "/topics/achilles-tendinopathy/"
+  },
+  { "source": "^/(acne-vulgaris)", "destination": "/topics/$1/" },
+  { "source": "^/acne_vulgaris$", "destination": "/topics/acne-vulgaris/" },
+  { "source": "^/(acute-childhood-limp)", "destination": "/topics/$1/" },
+  {
+    "source": "^/acute_childhood_limp$",
+    "destination": "/topics/acute-childhood-limp/"
+  },
+  { "source": "^/(acute-kidney-injury)", "destination": "/topics/$1/" },
+  {
+    "source": "^/acute_kidney_injury$",
+    "destination": "/topics/acute-kidney-injury/"
+  },
+  { "source": "^/(addisons-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/addisons_disease$",
+    "destination": "/topics/addisons-disease/"
+  },
+  { "source": "^/(adverse-drug-reactions)", "destination": "/topics/$1/" },
+  {
+    "source": "^/adverse_drug_reactions$",
+    "destination": "/topics/adverse-drug-reactions/"
+  },
+  { "source": "^/(alcohol-problem-drinking)", "destination": "/topics/$1/" },
+  {
+    "source": "^/alcohol_problem_drinking$",
+    "destination": "/topics/alcohol-problem-drinking/"
+  },
+  { "source": "^/(allergic-rhinitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/allergic_rhinitis$",
+    "destination": "/topics/allergic-rhinitis/"
+  },
+  { "source": "^/(alopecia-areata)", "destination": "/topics/$1/" },
+  { "source": "^/alopecia_areata$", "destination": "/topics/alopecia-areata/" },
+  {
+    "source": "^/(alopecia-androgenetic-female)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/alopecia_androgenetic_female$",
+    "destination": "/topics/alopecia-androgenetic-female/"
+  },
+  { "source": "^/(alopecia-androgenetic-male)", "destination": "/topics/$1/" },
+  {
+    "source": "^/alopecia_androgenetic_male$",
+    "destination": "/topics/alopecia-androgenetic-male/"
+  },
+  { "source": "^/(amenorrhoea)", "destination": "/topics/$1/" },
+  { "source": "^/amenorrhoea$", "destination": "/topics/amenorrhoea/" },
+  {
+    "source": "^/(anaemia-b12-folate-deficiency)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/anaemia_b12_folate_deficiency$",
+    "destination": "/topics/anaemia-b12-folate-deficiency/"
+  },
+  { "source": "^/(anaemia-iron-deficiency)", "destination": "/topics/$1/" },
+  {
+    "source": "^/anaemia_iron_deficiency$",
+    "destination": "/topics/anaemia-iron-deficiency/"
+  },
+  { "source": "^/(anal-fissure)", "destination": "/topics/$1/" },
+  { "source": "^/anal_fissure$", "destination": "/topics/anal-fissure/" },
+  {
+    "source": "^/(analgesia-mild-to-moderate-pain)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/analgesia_mild_to_moderate_pain$",
+    "destination": "/topics/analgesia-mild-to-moderate-pain/"
+  },
+  { "source": "^/(angina)", "destination": "/topics/$1/" },
+  { "source": "^/angina$", "destination": "/topics/angina/" },
+  { "source": "^/(angio-oedema-anaphylaxis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/angio_oedema_anaphylaxis$",
+    "destination": "/topics/angio-oedema-anaphylaxis/"
+  },
+  { "source": "^/(ankylosing-spondylitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/ankylosing_spondylitis$",
+    "destination": "/topics/ankylosing-spondylitis/"
+  },
+  {
+    "source": "^/(antenatal-care-uncomplicated-pregnancy)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/antenatal_care_uncomplicated_pregnancy$",
+    "destination": "/topics/antenatal-care-uncomplicated-pregnancy/"
+  },
+  { "source": "^/(anticoagulation-oral)", "destination": "/topics/$1/" },
+  {
+    "source": "^/anticoagulation_oral$",
+    "destination": "/topics/anticoagulation-oral/"
+  },
+  { "source": "^/(antiplatelet-treatment)", "destination": "/topics/$1/" },
+  {
+    "source": "^/antiplatelet_treatment$",
+    "destination": "/topics/antiplatelet-treatment/"
+  },
+  { "source": "^/(aphthous-ulcer)", "destination": "/topics/$1/" },
+  { "source": "^/aphthous_ulcer$", "destination": "/topics/aphthous-ulcer/" },
+  { "source": "^/(appendicitis)", "destination": "/topics/$1/" },
+  { "source": "^/appendicitis$", "destination": "/topics/appendicitis/" },
+  { "source": "^/(asthma)", "destination": "/topics/$1/" },
+  { "source": "^/asthma$", "destination": "/topics/asthma/" },
+  { "source": "^/(atrial-fibrillation)", "destination": "/topics/$1/" },
+  {
+    "source": "^/atrial_fibrillation$",
+    "destination": "/topics/atrial-fibrillation/"
+  },
+  {
+    "source": "^/(attention-deficit-hyperactivity-disorder)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/attention_deficit_hyperactivity_disorder$",
+    "destination": "/topics/attention-deficit-hyperactivity-disorder/"
+  },
+  { "source": "^/(autism-in-adults)", "destination": "/topics/$1/" },
+  {
+    "source": "^/autism_in_adults$",
+    "destination": "/topics/autism-in-adults/"
+  },
+  { "source": "^/(autism-in-children)", "destination": "/topics/$1/" },
+  {
+    "source": "^/autism_in_children$",
+    "destination": "/topics/autism-in-children/"
+  },
+  {
+    "source": "^/(back-pain-low-without-radiculopathy)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/back_pain_low_without_radiculopathy$",
+    "destination": "/topics/back-pain-low-without-radiculopathy/"
+  },
+  { "source": "^/(bacterial-vaginosis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/bacterial_vaginosis$",
+    "destination": "/topics/bacterial-vaginosis/"
+  },
+  { "source": "^/(bakers-cyst)", "destination": "/topics/$1/" },
+  { "source": "^/bakers_cyst$", "destination": "/topics/bakers-cyst/" },
+  { "source": "^/(balanitis)", "destination": "/topics/$1/" },
+  { "source": "^/balanitis$", "destination": "/topics/balanitis/" },
+  { "source": "^/(bedwetting-enuresis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/bedwetting_enuresis$",
+    "destination": "/topics/bedwetting-enuresis/"
+  },
+  { "source": "^/(bells-palsy)", "destination": "/topics/$1/" },
+  { "source": "^/bells_palsy$", "destination": "/topics/bells-palsy/" },
+  {
+    "source": "^/(benign-paroxysmal-positional-vertigo)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/benign_paroxysmal_positional_vertigo$",
+    "destination": "/topics/benign-paroxysmal-positional-vertigo/"
+  },
+  {
+    "source": "^/(benzodiazepine-z-drug-withdrawal)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/benzodiazepine_z_drug_withdrawal$",
+    "destination": "/topics/benzodiazepine-z-drug-withdrawal/"
+  },
+  { "source": "^/(bipolar-disorder)", "destination": "/topics/$1/" },
+  {
+    "source": "^/bipolar_disorder$",
+    "destination": "/topics/bipolar-disorder/"
+  },
+  { "source": "^/(bites-human-animal)", "destination": "/topics/$1/" },
+  {
+    "source": "^/bites_human_animal$",
+    "destination": "/topics/bites-human-animal/"
+  },
+  { "source": "^/(blackouts)", "destination": "/topics/$1/" },
+  { "source": "^/blackouts$", "destination": "/topics/blackouts/" },
+  { "source": "^/(blepharitis)", "destination": "/topics/$1/" },
+  { "source": "^/blepharitis$", "destination": "/topics/blepharitis/" },
+  {
+    "source": "^/(boils-carbuncles-staphylococcal-carriage)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/boils_carbuncles_staphylococcal_carriage$",
+    "destination": "/topics/boils-carbuncles-staphylococcal-carriage/"
+  },
+  {
+    "source": "^/(bone-soft-tissue-sarcoma-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/bone_soft_tissue_sarcoma_recognition_referral$",
+    "destination": "/topics/bone-soft-tissue-sarcoma-recognition-referral/"
+  },
+  { "source": "^/(bowel-screening)", "destination": "/topics/$1/" },
+  { "source": "^/bowel_screening$", "destination": "/topics/bowel-screening/" },
+  {
+    "source": "^/(brain-central-nervous-system-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/brain_central_nervous_system_cancers_recognition_referral$",
+    "destination": "/topics/brain-central-nervous-system-cancers-recognition-referral/"
+  },
+  { "source": "^/(breast-cancer-managing-fh)", "destination": "/topics/$1/" },
+  {
+    "source": "^/breast_cancer_managing_fh$",
+    "destination": "/topics/breast-cancer-managing-fh/"
+  },
+  {
+    "source": "^/(breast-cancer-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/breast_cancer_recognition_referral$",
+    "destination": "/topics/breast-cancer-recognition-referral/"
+  },
+  { "source": "^/(breast-pain-cyclical)", "destination": "/topics/$1/" },
+  {
+    "source": "^/breast_pain_cyclical$",
+    "destination": "/topics/breast-pain-cyclical/"
+  },
+  { "source": "^/(breast-screening)", "destination": "/topics/$1/" },
+  {
+    "source": "^/breast_screening$",
+    "destination": "/topics/breast-screening/"
+  },
+  { "source": "^/(breastfeeding-problems)", "destination": "/topics/$1/" },
+  {
+    "source": "^/breastfeeding_problems$",
+    "destination": "/topics/breastfeeding-problems/"
+  },
+  { "source": "^/(breathlessness)", "destination": "/topics/$1/" },
+  { "source": "^/breathlessness$", "destination": "/topics/breathlessness/" },
+  { "source": "^/(bronchiectasis)", "destination": "/topics/$1/" },
+  { "source": "^/bronchiectasis$", "destination": "/topics/bronchiectasis/" },
+  { "source": "^/(bruising)", "destination": "/topics/$1/" },
+  { "source": "^/bruising$", "destination": "/topics/bruising/" },
+  { "source": "^/(bunions)", "destination": "/topics/$1/" },
+  { "source": "^/bunions$", "destination": "/topics/bunions/" },
+  { "source": "^/(burns-scalds)", "destination": "/topics/$1/" },
+  { "source": "^/burns_scalds$", "destination": "/topics/burns-scalds/" },
+  { "source": "^/(candida-female-genital)", "destination": "/topics/$1/" },
+  {
+    "source": "^/candida_female_genital$",
+    "destination": "/topics/candida-female-genital/"
+  },
+  { "source": "^/(candida-oral)", "destination": "/topics/$1/" },
+  { "source": "^/candida_oral$", "destination": "/topics/candida-oral/" },
+  { "source": "^/(candida-skin)", "destination": "/topics/$1/" },
+  { "source": "^/candida_skin$", "destination": "/topics/candida-skin/" },
+  { "source": "^/(carbon-monoxide-poisoning)", "destination": "/topics/$1/" },
+  {
+    "source": "^/carbon_monoxide_poisoning$",
+    "destination": "/topics/carbon-monoxide-poisoning/"
+  },
+  {
+    "source": "^/(cardiac-arrest-out-of-hospital-care)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/cardiac_arrest_out_of_hospital_care$",
+    "destination": "/topics/cardiac-arrest-out-of-hospital-care/"
+  },
+  { "source": "^/(carpal-tunnel-syndrome)", "destination": "/topics/$1/" },
+  {
+    "source": "^/carpal_tunnel_syndrome$",
+    "destination": "/topics/carpal-tunnel-syndrome/"
+  },
+  { "source": "^/(cataracts)", "destination": "/topics/$1/" },
+  { "source": "^/cataracts$", "destination": "/topics/cataracts/" },
+  { "source": "^/(cellulitis-acute)", "destination": "/topics/$1/" },
+  {
+    "source": "^/cellulitis_acute$",
+    "destination": "/topics/cellulitis-acute/"
+  },
+  { "source": "^/(cerebral-palsy)", "destination": "/topics/$1/" },
+  { "source": "^/cerebral_palsy$", "destination": "/topics/cerebral-palsy/" },
+  { "source": "^/(cervical-cancer-hpv)", "destination": "/topics/$1/" },
+  {
+    "source": "^/cervical_cancer_hpv$",
+    "destination": "/topics/cervical-cancer-hpv/"
+  },
+  { "source": "^/(cervical-screening)", "destination": "/topics/$1/" },
+  {
+    "source": "^/cervical_screening$",
+    "destination": "/topics/cervical-screening/"
+  },
+  { "source": "^/(chest-infections-adult)", "destination": "/topics/$1/" },
+  {
+    "source": "^/chest_infections_adult$",
+    "destination": "/topics/chest-infections-adult/"
+  },
+  { "source": "^/(chest-pain)", "destination": "/topics/$1/" },
+  { "source": "^/chest_pain$", "destination": "/topics/chest-pain/" },
+  { "source": "^/(chickenpox)", "destination": "/topics/$1/" },
+  { "source": "^/chickenpox$", "destination": "/topics/chickenpox/" },
+  { "source": "^/(chilblains)", "destination": "/topics/$1/" },
+  { "source": "^/chilblains$", "destination": "/topics/chilblains/" },
+  {
+    "source": "^/(child-maltreatment-recognition-management)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/child_maltreatment_recognition_management$",
+    "destination": "/topics/child-maltreatment-recognition-management/"
+  },
+  {
+    "source": "^/(childhood-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/childhood_cancers_recognition_referral$",
+    "destination": "/topics/childhood-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/(chlamydia-uncomplicated-genital)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/chlamydia_uncomplicated_genital$",
+    "destination": "/topics/chlamydia-uncomplicated-genital/"
+  },
+  { "source": "^/(cholecystitis-acute)", "destination": "/topics/$1/" },
+  {
+    "source": "^/cholecystitis_acute$",
+    "destination": "/topics/cholecystitis-acute/"
+  },
+  { "source": "^/(cholesteatoma)", "destination": "/topics/$1/" },
+  { "source": "^/cholesteatoma$", "destination": "/topics/cholesteatoma/" },
+  { "source": "^/(chronic-kidney-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/chronic_kidney_disease$",
+    "destination": "/topics/chronic-kidney-disease/"
+  },
+  {
+    "source": "^/(chronic-obstructive-pulmonary-disease)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/chronic_obstructive_pulmonary_disease$",
+    "destination": "/topics/chronic-obstructive-pulmonary-disease/"
+  },
+  { "source": "^/(cirrhosis)", "destination": "/topics/$1/" },
+  { "source": "^/cirrhosis$", "destination": "/topics/cirrhosis/" },
+  { "source": "^/(coeliac-disease)", "destination": "/topics/$1/" },
+  { "source": "^/coeliac_disease$", "destination": "/topics/coeliac-disease/" },
+  { "source": "^/(colic-infantile)", "destination": "/topics/$1/" },
+  { "source": "^/colic_infantile$", "destination": "/topics/colic-infantile/" },
+  { "source": "^/(common-cold)", "destination": "/topics/$1/" },
+  { "source": "^/common_cold$", "destination": "/topics/common-cold/" },
+  { "source": "^/(compression-stockings)", "destination": "/topics/$1/" },
+  {
+    "source": "^/compression_stockings$",
+    "destination": "/topics/compression-stockings/"
+  },
+  {
+    "source": "^/(conduct-disorders-in-children-young-people)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/conduct_disorders_in_children_young_people$",
+    "destination": "/topics/conduct-disorders-in-children-young-people/"
+  },
+  { "source": "^/(conjunctivitis-allergic)", "destination": "/topics/$1/" },
+  {
+    "source": "^/conjunctivitis_allergic$",
+    "destination": "/topics/conjunctivitis-allergic/"
+  },
+  { "source": "^/(conjunctivitis-infective)", "destination": "/topics/$1/" },
+  {
+    "source": "^/conjunctivitis_infective$",
+    "destination": "/topics/conjunctivitis-infective/"
+  },
+  { "source": "^/(constipation)", "destination": "/topics/$1/" },
+  { "source": "^/constipation$", "destination": "/topics/constipation/" },
+  { "source": "^/(constipation-in-children)", "destination": "/topics/$1/" },
+  {
+    "source": "^/constipation_in_children$",
+    "destination": "/topics/constipation-in-children/"
+  },
+  { "source": "^/(contraception-assessment)", "destination": "/topics/$1/" },
+  {
+    "source": "^/contraception_assessment$",
+    "destination": "/topics/contraception-assessment/"
+  },
+  {
+    "source": "^/(contraception-barrier-methods-spermicides)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/contraception_barrier_methods_spermicides$",
+    "destination": "/topics/contraception-barrier-methods-spermicides/"
+  },
+  {
+    "source": "^/(contraception-combined-hormonal-methods)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/contraception_combined_hormonal_methods$",
+    "destination": "/topics/contraception-combined-hormonal-methods/"
+  },
+  { "source": "^/(contraception-emergency)", "destination": "/topics/$1/" },
+  {
+    "source": "^/contraception_emergency$",
+    "destination": "/topics/contraception-emergency/"
+  },
+  { "source": "^/(contraception-ius-iud)", "destination": "/topics/$1/" },
+  {
+    "source": "^/contraception_ius_iud$",
+    "destination": "/topics/contraception-ius-iud/"
+  },
+  {
+    "source": "^/(contraception-natural-family-planning)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/contraception_natural_family_planning$",
+    "destination": "/topics/contraception-natural-family-planning/"
+  },
+  {
+    "source": "^/(contraception-progestogen-only-methods)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/contraception_progestogen_only_methods$",
+    "destination": "/topics/contraception-progestogen-only-methods/"
+  },
+  { "source": "^/(contraception-sterilization)", "destination": "/topics/$1/" },
+  {
+    "source": "^/contraception_sterilization$",
+    "destination": "/topics/contraception-sterilization/"
+  },
+  { "source": "^/(corneal-superficial-injury)", "destination": "/topics/$1/" },
+  {
+    "source": "^/corneal_superficial_injury$",
+    "destination": "/topics/corneal-superficial-injury/"
+  },
+  { "source": "^/(coronavirus-covid-19)", "destination": "/topics/$1/" },
+  {
+    "source": "^/coronavirus_covid_19$",
+    "destination": "/topics/coronavirus-covid-19/"
+  },
+  { "source": "^/(corticosteroids-inhaled)", "destination": "/topics/$1/" },
+  {
+    "source": "^/corticosteroids_inhaled$",
+    "destination": "/topics/corticosteroids-inhaled/"
+  },
+  { "source": "^/(corticosteroids-oral)", "destination": "/topics/$1/" },
+  {
+    "source": "^/corticosteroids_oral$",
+    "destination": "/topics/corticosteroids-oral/"
+  },
+  {
+    "source": "^/(corticosteroids-topical-skin-nose-eyes)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/corticosteroids_topical_skin_nose_eyes$",
+    "destination": "/topics/corticosteroids-topical-skin-nose-eyes/"
+  },
+  { "source": "^/(cough)", "destination": "/topics/$1/" },
+  { "source": "^/cough$", "destination": "/topics/cough/" },
+  {
+    "source": "^/(cough-acute-with-chest-signs-in-children)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/cough_acute_with_chest_signs_in_children$",
+    "destination": "/topics/cough-acute-with-chest-signs-in-children/"
+  },
+  {
+    "source": "^/(cows-milk-allergy-in-children)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/cows_milk_allergy_in_children$",
+    "destination": "/topics/cows-milk-allergy-in-children/"
+  },
+  { "source": "^/(crohns-disease)", "destination": "/topics/$1/" },
+  { "source": "^/crohns_disease$", "destination": "/topics/crohns-disease/" },
+  { "source": "^/(croup)", "destination": "/topics/$1/" },
+  { "source": "^/croup$", "destination": "/topics/croup/" },
+  {
+    "source": "^/(cvd-risk-assessment-management)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/cvd_risk_assessment_management$",
+    "destination": "/topics/cvd-risk-assessment-management/"
+  },
+  { "source": "^/(deep-vein-thrombosis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/deep_vein_thrombosis$",
+    "destination": "/topics/deep-vein-thrombosis/"
+  },
+  { "source": "^/(delirium)", "destination": "/topics/$1/" },
+  { "source": "^/delirium$", "destination": "/topics/delirium/" },
+  { "source": "^/(dementia)", "destination": "/topics/$1/" },
+  { "source": "^/dementia$", "destination": "/topics/dementia/" },
+  { "source": "^/(dental-abscess)", "destination": "/topics/$1/" },
+  { "source": "^/dental_abscess$", "destination": "/topics/dental-abscess/" },
+  { "source": "^/(depression)", "destination": "/topics/$1/" },
+  { "source": "^/depression$", "destination": "/topics/depression/" },
+  {
+    "source": "^/(depression-antenatal-postnatal)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/depression_antenatal_postnatal$",
+    "destination": "/topics/depression-antenatal-postnatal/"
+  },
+  { "source": "^/(depression-in-children)", "destination": "/topics/$1/" },
+  {
+    "source": "^/depression_in_children$",
+    "destination": "/topics/depression-in-children/"
+  },
+  { "source": "^/(dermatitis-contact)", "destination": "/topics/$1/" },
+  {
+    "source": "^/dermatitis_contact$",
+    "destination": "/topics/dermatitis-contact/"
+  },
+  {
+    "source": "^/(developmental-rheumatology-in-children)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/developmental_rheumatology_in_children$",
+    "destination": "/topics/developmental-rheumatology-in-children/"
+  },
+  { "source": "^/(diabetes-type-1)", "destination": "/topics/$1/" },
+  { "source": "^/diabetes_type_1$", "destination": "/topics/diabetes-type-1/" },
+  { "source": "^/(diabetes-type-2)", "destination": "/topics/$1/" },
+  { "source": "^/diabetes_type_2$", "destination": "/topics/diabetes-type-2/" },
+  { "source": "^/(diarrhoea-adults-assessment)", "destination": "/topics/$1/" },
+  {
+    "source": "^/diarrhoea_adults_assessment$",
+    "destination": "/topics/diarrhoea-adults-assessment/"
+  },
+  {
+    "source": "^/(diarrhoea-antibiotic-associated)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/diarrhoea_antibiotic_associated$",
+    "destination": "/topics/diarrhoea-antibiotic-associated/"
+  },
+  {
+    "source": "^/(diarrhoea-prevention-advice-for-travellers)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/diarrhoea_prevention_advice_for_travellers$",
+    "destination": "/topics/diarrhoea-prevention-advice-for-travellers/"
+  },
+  { "source": "^/(diverticular-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/diverticular_disease$",
+    "destination": "/topics/diverticular-disease/"
+  },
+  { "source": "^/(dmards)", "destination": "/topics/$1/" },
+  { "source": "^/dmards$", "destination": "/topics/dmards/" },
+  { "source": "^/(domestic-violence-abuse)", "destination": "/topics/$1/" },
+  {
+    "source": "^/domestic_violence_abuse$",
+    "destination": "/topics/domestic-violence-abuse/"
+  },
+  { "source": "^/(dry-eye-syndrome)", "destination": "/topics/$1/" },
+  {
+    "source": "^/dry_eye_syndrome$",
+    "destination": "/topics/dry-eye-syndrome/"
+  },
+  { "source": "^/(dupuytrens-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/dupuytrens_disease$",
+    "destination": "/topics/dupuytrens-disease/"
+  },
+  {
+    "source": "^/(dvt-prevention-for-travellers)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/dvt_prevention_for_travellers$",
+    "destination": "/topics/dvt-prevention-for-travellers/"
+  },
+  { "source": "^/(dysmenorrhoea)", "destination": "/topics/$1/" },
+  { "source": "^/dysmenorrhoea$", "destination": "/topics/dysmenorrhoea/" },
+  {
+    "source": "^/(dyspepsia-pregnancy-associated)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/dyspepsia_pregnancy_associated$",
+    "destination": "/topics/dyspepsia-pregnancy-associated/"
+  },
+  { "source": "^/(dyspepsia-proven-functional)", "destination": "/topics/$1/" },
+  {
+    "source": "^/dyspepsia_proven_functional$",
+    "destination": "/topics/dyspepsia-proven-functional/"
+  },
+  { "source": "^/(dyspepsia-proven-gord)", "destination": "/topics/$1/" },
+  {
+    "source": "^/dyspepsia_proven_gord$",
+    "destination": "/topics/dyspepsia-proven-gord/"
+  },
+  {
+    "source": "^/(dyspepsia-proven-peptic-ulcer)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/dyspepsia_proven_peptic_ulcer$",
+    "destination": "/topics/dyspepsia-proven-peptic-ulcer/"
+  },
+  {
+    "source": "^/(dyspepsia-unidentified-cause)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/dyspepsia_unidentified_cause$",
+    "destination": "/topics/dyspepsia-unidentified-cause/"
+  },
+  { "source": "^/(earwax)", "destination": "/topics/$1/" },
+  { "source": "^/earwax$", "destination": "/topics/earwax/" },
+  { "source": "^/(eating-disorders)", "destination": "/topics/$1/" },
+  {
+    "source": "^/eating_disorders$",
+    "destination": "/topics/eating-disorders/"
+  },
+  { "source": "^/(ectopic-pregnancy)", "destination": "/topics/$1/" },
+  {
+    "source": "^/ectopic_pregnancy$",
+    "destination": "/topics/ectopic-pregnancy/"
+  },
+  { "source": "^/(eczema-atopic)", "destination": "/topics/$1/" },
+  { "source": "^/eczema_atopic$", "destination": "/topics/eczema-atopic/" },
+  {
+    "source": "^/(end-of-life-care-in-children)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/end_of_life_care_in_children$",
+    "destination": "/topics/end-of-life-care-in-children/"
+  },
+  { "source": "^/(endometriosis)", "destination": "/topics/$1/" },
+  { "source": "^/endometriosis$", "destination": "/topics/endometriosis/" },
+  { "source": "^/(epilepsy)", "destination": "/topics/$1/" },
+  { "source": "^/epilepsy$", "destination": "/topics/epilepsy/" },
+  { "source": "^/(epistaxis-nosebleeds)", "destination": "/topics/$1/" },
+  {
+    "source": "^/epistaxis_nosebleeds$",
+    "destination": "/topics/epistaxis-nosebleeds/"
+  },
+  { "source": "^/(erectile-dysfunction)", "destination": "/topics/$1/" },
+  {
+    "source": "^/erectile_dysfunction$",
+    "destination": "/topics/erectile-dysfunction/"
+  },
+  { "source": "^/(falls-risk-assessment)", "destination": "/topics/$1/" },
+  {
+    "source": "^/falls_risk_assessment$",
+    "destination": "/topics/falls-risk-assessment/"
+  },
+  { "source": "^/(faltering-growth)", "destination": "/topics/$1/" },
+  {
+    "source": "^/faltering_growth$",
+    "destination": "/topics/faltering-growth/"
+  },
+  { "source": "^/(febrile-seizure)", "destination": "/topics/$1/" },
+  { "source": "^/febrile_seizure$", "destination": "/topics/febrile-seizure/" },
+  {
+    "source": "^/(feverish-children-management)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/feverish_children_management$",
+    "destination": "/topics/feverish-children-management/"
+  },
+  {
+    "source": "^/(feverish-children-risk-assessment)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/feverish_children_risk_assessment$",
+    "destination": "/topics/feverish-children-risk-assessment/"
+  },
+  { "source": "^/(fibroids)", "destination": "/topics/$1/" },
+  { "source": "^/fibroids$", "destination": "/topics/fibroids/" },
+  { "source": "^/(food-allergy)", "destination": "/topics/$1/" },
+  { "source": "^/food_allergy$", "destination": "/topics/food-allergy/" },
+  { "source": "^/(fungal-nail-infection)", "destination": "/topics/$1/" },
+  {
+    "source": "^/fungal_nail_infection$",
+    "destination": "/topics/fungal-nail-infection/"
+  },
+  {
+    "source": "^/(fungal-skin-infection-body-groin)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/fungal_skin_infection_body_groin$",
+    "destination": "/topics/fungal-skin-infection-body-groin/"
+  },
+  { "source": "^/(fungal-skin-infection-foot)", "destination": "/topics/$1/" },
+  {
+    "source": "^/fungal_skin_infection_foot$",
+    "destination": "/topics/fungal-skin-infection-foot/"
+  },
+  { "source": "^/(fungal-skin-infection-scalp)", "destination": "/topics/$1/" },
+  {
+    "source": "^/fungal_skin_infection_scalp$",
+    "destination": "/topics/fungal-skin-infection-scalp/"
+  },
+  { "source": "^/(gallstones)", "destination": "/topics/$1/" },
+  { "source": "^/gallstones$", "destination": "/topics/gallstones/" },
+  { "source": "^/(gastroenteritis)", "destination": "/topics/$1/" },
+  { "source": "^/gastroenteritis$", "destination": "/topics/gastroenteritis/" },
+  {
+    "source": "^/(gastrointestinal-tract-lower-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/gastrointestinal_tract_lower_cancers_recognition_referral$",
+    "destination": "/topics/gastrointestinal-tract-lower-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/(gastrointestinal-tract-upper-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/gastrointestinal_tract_upper_cancers_recognition_referral$",
+    "destination": "/topics/gastrointestinal-tract-upper-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/(generalized-anxiety-disorder)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/generalized_anxiety_disorder$",
+    "destination": "/topics/generalized-anxiety-disorder/"
+  },
+  { "source": "^/(giant-cell-arteritis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/giant_cell_arteritis$",
+    "destination": "/topics/giant-cell-arteritis/"
+  },
+  { "source": "^/(gilberts-syndrome)", "destination": "/topics/$1/" },
+  {
+    "source": "^/gilberts_syndrome$",
+    "destination": "/topics/gilberts-syndrome/"
+  },
+  { "source": "^/(gingivitis-periodontitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/gingivitis_periodontitis$",
+    "destination": "/topics/gingivitis-periodontitis/"
+  },
+  {
+    "source": "^/(glandular-fever-infectious-mononucleosis)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/glandular_fever_infectious_mononucleosis$",
+    "destination": "/topics/glandular-fever-infectious-mononucleosis/"
+  },
+  { "source": "^/(glaucoma)", "destination": "/topics/$1/" },
+  { "source": "^/glaucoma$", "destination": "/topics/glaucoma/" },
+  { "source": "^/(gonorrhoea)", "destination": "/topics/$1/" },
+  { "source": "^/gonorrhoea$", "destination": "/topics/gonorrhoea/" },
+  { "source": "^/(gord-in-children)", "destination": "/topics/$1/" },
+  {
+    "source": "^/gord_in_children$",
+    "destination": "/topics/gord-in-children/"
+  },
+  { "source": "^/(gout)", "destination": "/topics/$1/" },
+  { "source": "^/gout$", "destination": "/topics/gout/" },
+  {
+    "source": "^/(greater-trochanteric-pain-syndrome-trochanteric-bursitis)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/greater_trochanteric_pain_syndrome_trochanteric_bursitis$",
+    "destination": "/topics/greater-trochanteric-pain-syndrome-trochanteric-bursitis/"
+  },
+  {
+    "source": "^/(gynaecological-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/gynaecological_cancers_recognition_referral$",
+    "destination": "/topics/gynaecological-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/(haematological-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/haematological_cancers_recognition_referral$",
+    "destination": "/topics/haematological-cancers-recognition-referral/"
+  },
+  { "source": "^/(haematospermia)", "destination": "/topics/$1/" },
+  { "source": "^/haematospermia$", "destination": "/topics/haematospermia/" },
+  { "source": "^/(haemorrhoids)", "destination": "/topics/$1/" },
+  { "source": "^/haemorrhoids$", "destination": "/topics/haemorrhoids/" },
+  { "source": "^/(halitosis)", "destination": "/topics/$1/" },
+  { "source": "^/halitosis$", "destination": "/topics/halitosis/" },
+  { "source": "^/(hand-foot-mouth-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/hand_foot_mouth_disease$",
+    "destination": "/topics/hand-foot-mouth-disease/"
+  },
+  {
+    "source": "^/(head-neck-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/head_neck_cancers_recognition_referral$",
+    "destination": "/topics/head-neck-cancers-recognition-referral/"
+  },
+  { "source": "^/(head-injury)", "destination": "/topics/$1/" },
+  { "source": "^/head_injury$", "destination": "/topics/head-injury/" },
+  { "source": "^/(head-lice)", "destination": "/topics/$1/" },
+  { "source": "^/head_lice$", "destination": "/topics/head-lice/" },
+  { "source": "^/(headache-assessment)", "destination": "/topics/$1/" },
+  {
+    "source": "^/headache_assessment$",
+    "destination": "/topics/headache-assessment/"
+  },
+  { "source": "^/(headache-cluster)", "destination": "/topics/$1/" },
+  {
+    "source": "^/headache_cluster$",
+    "destination": "/topics/headache-cluster/"
+  },
+  { "source": "^/(headache-medication-overuse)", "destination": "/topics/$1/" },
+  {
+    "source": "^/headache_medication_overuse$",
+    "destination": "/topics/headache-medication-overuse/"
+  },
+  { "source": "^/(headache-tension-type)", "destination": "/topics/$1/" },
+  {
+    "source": "^/headache_tension_type$",
+    "destination": "/topics/headache-tension-type/"
+  },
+  {
+    "source": "^/(healthcare-associated-infections)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/healthcare_associated_infections$",
+    "destination": "/topics/healthcare-associated-infections/"
+  },
+  { "source": "^/(hearing-loss-in-adults)", "destination": "/topics/$1/" },
+  {
+    "source": "^/hearing_loss_in_adults$",
+    "destination": "/topics/hearing-loss-in-adults/"
+  },
+  { "source": "^/(heart-failure-chronic)", "destination": "/topics/$1/" },
+  {
+    "source": "^/heart_failure_chronic$",
+    "destination": "/topics/heart-failure-chronic/"
+  },
+  { "source": "^/(hepatitis-a)", "destination": "/topics/$1/" },
+  { "source": "^/hepatitis_a$", "destination": "/topics/hepatitis-a/" },
+  { "source": "^/(hepatitis-b)", "destination": "/topics/$1/" },
+  { "source": "^/hepatitis_b$", "destination": "/topics/hepatitis-b/" },
+  { "source": "^/(hepatitis-c)", "destination": "/topics/$1/" },
+  { "source": "^/hepatitis_c$", "destination": "/topics/hepatitis-c/" },
+  { "source": "^/(herpes-simplex-genital)", "destination": "/topics/$1/" },
+  {
+    "source": "^/herpes_simplex_genital$",
+    "destination": "/topics/herpes-simplex-genital/"
+  },
+  { "source": "^/(herpes-simplex-ocular)", "destination": "/topics/$1/" },
+  {
+    "source": "^/herpes_simplex_ocular$",
+    "destination": "/topics/herpes-simplex-ocular/"
+  },
+  { "source": "^/(herpes-simplex-oral)", "destination": "/topics/$1/" },
+  {
+    "source": "^/herpes_simplex_oral$",
+    "destination": "/topics/herpes-simplex-oral/"
+  },
+  { "source": "^/(hiccups)", "destination": "/topics/$1/" },
+  { "source": "^/hiccups$", "destination": "/topics/hiccups/" },
+  { "source": "^/(hirsutism)", "destination": "/topics/$1/" },
+  { "source": "^/hirsutism$", "destination": "/topics/hirsutism/" },
+  { "source": "^/(hiv-infection-aids)", "destination": "/topics/$1/" },
+  {
+    "source": "^/hiv_infection_aids$",
+    "destination": "/topics/hiv-infection-aids/"
+  },
+  { "source": "^/(hypercalcaemia)", "destination": "/topics/$1/" },
+  { "source": "^/hypercalcaemia$", "destination": "/topics/hypercalcaemia/" },
+  {
+    "source": "^/(hypercholesterolaemia-familial)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/hypercholesterolaemia_familial$",
+    "destination": "/topics/hypercholesterolaemia-familial/"
+  },
+  { "source": "^/(hyperhidrosis)", "destination": "/topics/$1/" },
+  { "source": "^/hyperhidrosis$", "destination": "/topics/hyperhidrosis/" },
+  { "source": "^/(hypertension-not-diabetic)", "destination": "/topics/$1/" },
+  {
+    "source": "^/hypertension_not_diabetic$",
+    "destination": "/topics/hypertension-not-diabetic/"
+  },
+  { "source": "^/(hypertension-in-pregnancy)", "destination": "/topics/$1/" },
+  {
+    "source": "^/hypertension_in_pregnancy$",
+    "destination": "/topics/hypertension-in-pregnancy/"
+  },
+  { "source": "^/(hyperthyroidism)", "destination": "/topics/$1/" },
+  { "source": "^/hyperthyroidism$", "destination": "/topics/hyperthyroidism/" },
+  { "source": "^/(hyponatraemia)", "destination": "/topics/$1/" },
+  { "source": "^/hyponatraemia$", "destination": "/topics/hyponatraemia/" },
+  { "source": "^/(hypothyroidism)", "destination": "/topics/$1/" },
+  { "source": "^/hypothyroidism$", "destination": "/topics/hypothyroidism/" },
+  { "source": "^/(immunizations-childhood)", "destination": "/topics/$1/" },
+  {
+    "source": "^/immunizations_childhood$",
+    "destination": "/topics/immunizations-childhood/"
+  },
+  { "source": "^/(immunizations-pneumococcal)", "destination": "/topics/$1/" },
+  {
+    "source": "^/immunizations_pneumococcal$",
+    "destination": "/topics/immunizations-pneumococcal/"
+  },
+  {
+    "source": "^/(immunizations-seasonal-influenza)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/immunizations_seasonal_influenza$",
+    "destination": "/topics/immunizations-seasonal-influenza/"
+  },
+  { "source": "^/(immunizations-travel)", "destination": "/topics/$1/" },
+  {
+    "source": "^/immunizations_travel$",
+    "destination": "/topics/immunizations-travel/"
+  },
+  { "source": "^/(impetigo)", "destination": "/topics/$1/" },
+  { "source": "^/impetigo$", "destination": "/topics/impetigo/" },
+  {
+    "source": "^/(incontinence-urinary-in-women)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/incontinence_urinary_in_women$",
+    "destination": "/topics/incontinence-urinary-in-women/"
+  },
+  { "source": "^/(infertility)", "destination": "/topics/$1/" },
+  { "source": "^/infertility$", "destination": "/topics/infertility/" },
+  { "source": "^/(influenza-seasonal)", "destination": "/topics/$1/" },
+  {
+    "source": "^/influenza_seasonal$",
+    "destination": "/topics/influenza-seasonal/"
+  },
+  { "source": "^/(insect-bites-stings)", "destination": "/topics/$1/" },
+  {
+    "source": "^/insect_bites_stings$",
+    "destination": "/topics/insect-bites-stings/"
+  },
+  { "source": "^/(insomnia)", "destination": "/topics/$1/" },
+  { "source": "^/insomnia$", "destination": "/topics/insomnia/" },
+  {
+    "source": "^/(insulin-therapy-in-type-1-diabetes)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/insulin_therapy_in_type_1_diabetes$",
+    "destination": "/topics/insulin-therapy-in-type-1-diabetes/"
+  },
+  {
+    "source": "^/(insulin-therapy-in-type-2-diabetes)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/insulin_therapy_in_type_2_diabetes$",
+    "destination": "/topics/insulin-therapy-in-type-2-diabetes/"
+  },
+  { "source": "^/(irritable-bowel-syndrome)", "destination": "/topics/$1/" },
+  {
+    "source": "^/irritable_bowel_syndrome$",
+    "destination": "/topics/irritable-bowel-syndrome/"
+  },
+  { "source": "^/(itch-widespread)", "destination": "/topics/$1/" },
+  { "source": "^/itch_widespread$", "destination": "/topics/itch-widespread/" },
+  { "source": "^/(itch-in-pregnancy)", "destination": "/topics/$1/" },
+  {
+    "source": "^/itch_in_pregnancy$",
+    "destination": "/topics/itch-in-pregnancy/"
+  },
+  { "source": "^/(jaundice-in-adults)", "destination": "/topics/$1/" },
+  {
+    "source": "^/jaundice_in_adults$",
+    "destination": "/topics/jaundice-in-adults/"
+  },
+  { "source": "^/(jaundice-in-the-newborn)", "destination": "/topics/$1/" },
+  {
+    "source": "^/jaundice_in_the_newborn$",
+    "destination": "/topics/jaundice-in-the-newborn/"
+  },
+  { "source": "^/(knee-pain-assessment)", "destination": "/topics/$1/" },
+  {
+    "source": "^/knee_pain_assessment$",
+    "destination": "/topics/knee-pain-assessment/"
+  },
+  { "source": "^/(lacerations)", "destination": "/topics/$1/" },
+  { "source": "^/lacerations$", "destination": "/topics/lacerations/" },
+  { "source": "^/(learning-disabilities)", "destination": "/topics/$1/" },
+  {
+    "source": "^/learning_disabilities$",
+    "destination": "/topics/learning-disabilities/"
+  },
+  { "source": "^/(leg-cramps)", "destination": "/topics/$1/" },
+  { "source": "^/leg_cramps$", "destination": "/topics/leg-cramps/" },
+  { "source": "^/(leg-ulcer-venous)", "destination": "/topics/$1/" },
+  {
+    "source": "^/leg_ulcer_venous$",
+    "destination": "/topics/leg-ulcer-venous/"
+  },
+  {
+    "source": "^/(lipid-modification-cvd-prevention)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/lipid_modification_cvd_prevention$",
+    "destination": "/topics/lipid-modification-cvd-prevention/"
+  },
+  {
+    "source": "^/(lung-pleural-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/lung_pleural_cancers_recognition_referral$",
+    "destination": "/topics/lung-pleural-cancers-recognition-referral/"
+  },
+  { "source": "^/(luts-in-men)", "destination": "/topics/$1/" },
+  { "source": "^/luts_in_men$", "destination": "/topics/luts-in-men/" },
+  { "source": "^/(lyme-disease)", "destination": "/topics/$1/" },
+  { "source": "^/lyme_disease$", "destination": "/topics/lyme-disease/" },
+  {
+    "source": "^/(macular-degeneration-age-related)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/macular_degeneration_age_related$",
+    "destination": "/topics/macular-degeneration-age-related/"
+  },
+  { "source": "^/(malaria)", "destination": "/topics/$1/" },
+  { "source": "^/malaria$", "destination": "/topics/malaria/" },
+  { "source": "^/(malaria-prophylaxis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/malaria_prophylaxis$",
+    "destination": "/topics/malaria-prophylaxis/"
+  },
+  { "source": "^/(mastitis-breast-abscess)", "destination": "/topics/$1/" },
+  {
+    "source": "^/mastitis_breast_abscess$",
+    "destination": "/topics/mastitis-breast-abscess/"
+  },
+  { "source": "^/(measles)", "destination": "/topics/$1/" },
+  { "source": "^/measles$", "destination": "/topics/measles/" },
+  { "source": "^/(meibomian-cyst-chalazion)", "destination": "/topics/$1/" },
+  {
+    "source": "^/meibomian_cyst_chalazion$",
+    "destination": "/topics/meibomian-cyst-chalazion/"
+  },
+  { "source": "^/(melanoma-pigmented-lesions)", "destination": "/topics/$1/" },
+  {
+    "source": "^/melanoma_pigmented_lesions$",
+    "destination": "/topics/melanoma-pigmented-lesions/"
+  },
+  { "source": "^/(menieres-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/menieres_disease$",
+    "destination": "/topics/menieres-disease/"
+  },
+  {
+    "source": "^/(meningitis-bacterial-meningitis-meningococcal-disease)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/meningitis_bacterial_meningitis_meningococcal_disease$",
+    "destination": "/topics/meningitis-bacterial-meningitis-meningococcal-disease/"
+  },
+  { "source": "^/(menopause)", "destination": "/topics/$1/" },
+  { "source": "^/menopause$", "destination": "/topics/menopause/" },
+  { "source": "^/(menorrhagia)", "destination": "/topics/$1/" },
+  { "source": "^/menorrhagia$", "destination": "/topics/menorrhagia/" },
+  { "source": "^/(mental-health-in-students)", "destination": "/topics/$1/" },
+  {
+    "source": "^/mental_health_in_students$",
+    "destination": "/topics/mental-health-in-students/"
+  },
+  { "source": "^/(mi-secondary-prevention)", "destination": "/topics/$1/" },
+  {
+    "source": "^/mi_secondary_prevention$",
+    "destination": "/topics/mi-secondary-prevention/"
+  },
+  { "source": "^/(migraine)", "destination": "/topics/$1/" },
+  { "source": "^/migraine$", "destination": "/topics/migraine/" },
+  { "source": "^/(miscarriage)", "destination": "/topics/$1/" },
+  { "source": "^/miscarriage$", "destination": "/topics/miscarriage/" },
+  { "source": "^/(molluscum-contagiosum)", "destination": "/topics/$1/" },
+  {
+    "source": "^/molluscum_contagiosum$",
+    "destination": "/topics/molluscum-contagiosum/"
+  },
+  { "source": "^/(mortons-neuroma)", "destination": "/topics/$1/" },
+  { "source": "^/mortons_neuroma$", "destination": "/topics/mortons-neuroma/" },
+  { "source": "^/(mrsa-in-primary-care)", "destination": "/topics/$1/" },
+  {
+    "source": "^/mrsa_in_primary_care$",
+    "destination": "/topics/mrsa-in-primary-care/"
+  },
+  { "source": "^/(multimorbidity)", "destination": "/topics/$1/" },
+  { "source": "^/multimorbidity$", "destination": "/topics/multimorbidity/" },
+  { "source": "^/(multiple-myeloma)", "destination": "/topics/$1/" },
+  {
+    "source": "^/multiple_myeloma$",
+    "destination": "/topics/multiple-myeloma/"
+  },
+  { "source": "^/(multiple-sclerosis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/multiple_sclerosis$",
+    "destination": "/topics/multiple-sclerosis/"
+  },
+  { "source": "^/(mumps)", "destination": "/topics/$1/" },
+  { "source": "^/mumps$", "destination": "/topics/mumps/" },
+  { "source": "^/(nappy-rash)", "destination": "/topics/$1/" },
+  { "source": "^/nappy_rash$", "destination": "/topics/nappy-rash/" },
+  {
+    "source": "^/(nausea-vomiting-in-pregnancy)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/nausea_vomiting_in_pregnancy$",
+    "destination": "/topics/nausea-vomiting-in-pregnancy/"
+  },
+  { "source": "^/(neck-lump)", "destination": "/topics/$1/" },
+  { "source": "^/neck_lump$", "destination": "/topics/neck-lump/" },
+  { "source": "^/(neck-pain-acute-torticollis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/neck_pain_acute_torticollis$",
+    "destination": "/topics/neck-pain-acute-torticollis/"
+  },
+  {
+    "source": "^/(neck-pain-cervical-radiculopathy)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/neck_pain_cervical_radiculopathy$",
+    "destination": "/topics/neck-pain-cervical-radiculopathy/"
+  },
+  { "source": "^/(neck-pain-non-specific)", "destination": "/topics/$1/" },
+  {
+    "source": "^/neck_pain_non_specific$",
+    "destination": "/topics/neck-pain-non-specific/"
+  },
+  { "source": "^/(neck-pain-whiplash-injury)", "destination": "/topics/$1/" },
+  {
+    "source": "^/neck_pain_whiplash_injury$",
+    "destination": "/topics/neck-pain-whiplash-injury/"
+  },
+  {
+    "source": "^/(neuropathic-pain-drug-treatment)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/neuropathic_pain_drug_treatment$",
+    "destination": "/topics/neuropathic-pain-drug-treatment/"
+  },
+  { "source": "^/(neutropenic-sepsis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/neutropenic_sepsis$",
+    "destination": "/topics/neutropenic-sepsis/"
+  },
+  {
+    "source": "^/(non-alcoholic-fatty-liver-disease-nafld)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/non_alcoholic_fatty_liver_disease_nafld$",
+    "destination": "/topics/non-alcoholic-fatty-liver-disease-nafld/"
+  },
+  { "source": "^/(nsaids-prescribing-issues)", "destination": "/topics/$1/" },
+  {
+    "source": "^/nsaids_prescribing_issues$",
+    "destination": "/topics/nsaids-prescribing-issues/"
+  },
+  { "source": "^/(obesity)", "destination": "/topics/$1/" },
+  { "source": "^/obesity$", "destination": "/topics/obesity/" },
+  {
+    "source": "^/(obsessive-compulsive-disorder)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/obsessive_compulsive_disorder$",
+    "destination": "/topics/obsessive-compulsive-disorder/"
+  },
+  {
+    "source": "^/(obstructive-sleep-apnoea-syndrome)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/obstructive_sleep_apnoea_syndrome$",
+    "destination": "/topics/obstructive-sleep-apnoea-syndrome/"
+  },
+  { "source": "^/(olecranon-bursitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/olecranon_bursitis$",
+    "destination": "/topics/olecranon-bursitis/"
+  },
+  { "source": "^/(opioid-dependence)", "destination": "/topics/$1/" },
+  {
+    "source": "^/opioid_dependence$",
+    "destination": "/topics/opioid-dependence/"
+  },
+  { "source": "^/(osgood-schlatter-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/osgood_schlatter_disease$",
+    "destination": "/topics/osgood-schlatter-disease/"
+  },
+  { "source": "^/(osteoarthritis)", "destination": "/topics/$1/" },
+  { "source": "^/osteoarthritis$", "destination": "/topics/osteoarthritis/" },
+  {
+    "source": "^/(osteoporosis-prevention-of-fragility-fractures)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/osteoporosis_prevention_of_fragility_fractures$",
+    "destination": "/topics/osteoporosis-prevention-of-fragility-fractures/"
+  },
+  { "source": "^/(otitis-externa)", "destination": "/topics/$1/" },
+  { "source": "^/otitis_externa$", "destination": "/topics/otitis-externa/" },
+  { "source": "^/(otitis-media-acute)", "destination": "/topics/$1/" },
+  {
+    "source": "^/otitis_media_acute$",
+    "destination": "/topics/otitis-media-acute/"
+  },
+  {
+    "source": "^/(otitis-media-chronic-suppurative)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/otitis_media_chronic_suppurative$",
+    "destination": "/topics/otitis-media-chronic-suppurative/"
+  },
+  { "source": "^/(otitis-media-with-effusion)", "destination": "/topics/$1/" },
+  {
+    "source": "^/otitis_media_with_effusion$",
+    "destination": "/topics/otitis-media-with-effusion/"
+  },
+  { "source": "^/(ovarian-cancer)", "destination": "/topics/$1/" },
+  { "source": "^/ovarian_cancer$", "destination": "/topics/ovarian-cancer/" },
+  { "source": "^/(palliative-cancer-care-pain)", "destination": "/topics/$1/" },
+  {
+    "source": "^/palliative_cancer_care_pain$",
+    "destination": "/topics/palliative-cancer-care-pain/"
+  },
+  {
+    "source": "^/(palliative-care-constipation)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/palliative_care_constipation$",
+    "destination": "/topics/palliative-care-constipation/"
+  },
+  { "source": "^/(palliative-care-cough)", "destination": "/topics/$1/" },
+  {
+    "source": "^/palliative_care_cough$",
+    "destination": "/topics/palliative-care-cough/"
+  },
+  { "source": "^/(palliative-care-dyspnoea)", "destination": "/topics/$1/" },
+  {
+    "source": "^/palliative_care_dyspnoea$",
+    "destination": "/topics/palliative-care-dyspnoea/"
+  },
+  {
+    "source": "^/(palliative-care-general-issues)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/palliative_care_general_issues$",
+    "destination": "/topics/palliative-care-general-issues/"
+  },
+  {
+    "source": "^/(palliative-care-malignant-skin-ulcer)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/palliative_care_malignant_skin_ulcer$",
+    "destination": "/topics/palliative-care-malignant-skin-ulcer/"
+  },
+  {
+    "source": "^/(palliative-care-nausea-vomiting)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/palliative_care_nausea_vomiting$",
+    "destination": "/topics/palliative-care-nausea-vomiting/"
+  },
+  { "source": "^/(palliative-care-oral)", "destination": "/topics/$1/" },
+  {
+    "source": "^/palliative_care_oral$",
+    "destination": "/topics/palliative-care-oral/"
+  },
+  { "source": "^/(palliative-care-secretions)", "destination": "/topics/$1/" },
+  {
+    "source": "^/palliative_care_secretions$",
+    "destination": "/topics/palliative-care-secretions/"
+  },
+  { "source": "^/(palpitations)", "destination": "/topics/$1/" },
+  { "source": "^/palpitations$", "destination": "/topics/palpitations/" },
+  { "source": "^/(pancreatitis-acute)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pancreatitis_acute$",
+    "destination": "/topics/pancreatitis-acute/"
+  },
+  { "source": "^/(pancreatitis-chronic)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pancreatitis_chronic$",
+    "destination": "/topics/pancreatitis-chronic/"
+  },
+  { "source": "^/(parkinsons-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/parkinsons_disease$",
+    "destination": "/topics/parkinsons-disease/"
+  },
+  { "source": "^/(paronychia-acute)", "destination": "/topics/$1/" },
+  {
+    "source": "^/paronychia_acute$",
+    "destination": "/topics/paronychia-acute/"
+  },
+  { "source": "^/(parvovirus-b19-infection)", "destination": "/topics/$1/" },
+  {
+    "source": "^/parvovirus_b19_infection$",
+    "destination": "/topics/parvovirus-b19-infection/"
+  },
+  { "source": "^/(pelvic-inflammatory-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pelvic_inflammatory_disease$",
+    "destination": "/topics/pelvic-inflammatory-disease/"
+  },
+  { "source": "^/(peripheral-arterial-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/peripheral_arterial_disease$",
+    "destination": "/topics/peripheral-arterial-disease/"
+  },
+  { "source": "^/(pilonidal-sinus-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pilonidal_sinus_disease$",
+    "destination": "/topics/pilonidal-sinus-disease/"
+  },
+  { "source": "^/(pityriasis-rosea)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pityriasis_rosea$",
+    "destination": "/topics/pityriasis-rosea/"
+  },
+  { "source": "^/(pityriasis-versicolor)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pityriasis_versicolor$",
+    "destination": "/topics/pityriasis-versicolor/"
+  },
+  { "source": "^/(plantar-fasciitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/plantar_fasciitis$",
+    "destination": "/topics/plantar-fasciitis/"
+  },
+  { "source": "^/(poisoning-or-overdose)", "destination": "/topics/$1/" },
+  {
+    "source": "^/poisoning_or_overdose$",
+    "destination": "/topics/poisoning-or-overdose/"
+  },
+  { "source": "^/(polycystic-ovary-syndrome)", "destination": "/topics/$1/" },
+  {
+    "source": "^/polycystic_ovary_syndrome$",
+    "destination": "/topics/polycystic-ovary-syndrome/"
+  },
+  {
+    "source": "^/(polycythaemia-erythrocytosis)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/polycythaemia_erythrocytosis$",
+    "destination": "/topics/polycythaemia-erythrocytosis/"
+  },
+  { "source": "^/(polymyalgia-rheumatica)", "destination": "/topics/$1/" },
+  {
+    "source": "^/polymyalgia_rheumatica$",
+    "destination": "/topics/polymyalgia-rheumatica/"
+  },
+  { "source": "^/(post-herpetic-neuralgia)", "destination": "/topics/$1/" },
+  {
+    "source": "^/post_herpetic_neuralgia$",
+    "destination": "/topics/post-herpetic-neuralgia/"
+  },
+  {
+    "source": "^/(post-traumatic-stress-disorder)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/post_traumatic_stress_disorder$",
+    "destination": "/topics/post-traumatic-stress-disorder/"
+  },
+  {
+    "source": "^/(pre-conception-advice-management)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/pre_conception_advice_management$",
+    "destination": "/topics/pre-conception-advice-management/"
+  },
+  { "source": "^/(premenstrual-syndrome)", "destination": "/topics/$1/" },
+  {
+    "source": "^/premenstrual_syndrome$",
+    "destination": "/topics/premenstrual-syndrome/"
+  },
+  { "source": "^/(pre-patellar-bursitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pre_patellar_bursitis$",
+    "destination": "/topics/pre-patellar-bursitis/"
+  },
+  { "source": "^/(prostate-cancer)", "destination": "/topics/$1/" },
+  { "source": "^/prostate_cancer$", "destination": "/topics/prostate-cancer/" },
+  { "source": "^/(prostatitis-acute)", "destination": "/topics/$1/" },
+  {
+    "source": "^/prostatitis_acute$",
+    "destination": "/topics/prostatitis-acute/"
+  },
+  { "source": "^/(prostatitis-chronic)", "destination": "/topics/$1/" },
+  {
+    "source": "^/prostatitis_chronic$",
+    "destination": "/topics/prostatitis-chronic/"
+  },
+  { "source": "^/(pruritus-ani)", "destination": "/topics/$1/" },
+  { "source": "^/pruritus_ani$", "destination": "/topics/pruritus-ani/" },
+  { "source": "^/(pruritus-vulvae)", "destination": "/topics/$1/" },
+  { "source": "^/pruritus_vulvae$", "destination": "/topics/pruritus-vulvae/" },
+  { "source": "^/(psoriasis)", "destination": "/topics/$1/" },
+  { "source": "^/psoriasis$", "destination": "/topics/psoriasis/" },
+  { "source": "^/(psychosis-schizophrenia)", "destination": "/topics/$1/" },
+  {
+    "source": "^/psychosis_schizophrenia$",
+    "destination": "/topics/psychosis-schizophrenia/"
+  },
+  { "source": "^/(pubic-lice)", "destination": "/topics/$1/" },
+  { "source": "^/pubic_lice$", "destination": "/topics/pubic-lice/" },
+  { "source": "^/(pulmonary-embolism)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pulmonary_embolism$",
+    "destination": "/topics/pulmonary-embolism/"
+  },
+  { "source": "^/(pyelonephritis-acute)", "destination": "/topics/$1/" },
+  {
+    "source": "^/pyelonephritis_acute$",
+    "destination": "/topics/pyelonephritis-acute/"
+  },
+  { "source": "^/(raynauds-phenomenon)", "destination": "/topics/$1/" },
+  {
+    "source": "^/raynauds_phenomenon$",
+    "destination": "/topics/raynauds-phenomenon/"
+  },
+  { "source": "^/(red-eye)", "destination": "/topics/$1/" },
+  { "source": "^/red_eye$", "destination": "/topics/red-eye/" },
+  {
+    "source": "^/(renal-or-ureteric-colic-acute)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/renal_or_ureteric_colic_acute$",
+    "destination": "/topics/renal-or-ureteric-colic-acute/"
+  },
+  { "source": "^/(restless-legs-syndrome)", "destination": "/topics/$1/" },
+  {
+    "source": "^/restless_legs_syndrome$",
+    "destination": "/topics/restless-legs-syndrome/"
+  },
+  { "source": "^/(retinal-detachment)", "destination": "/topics/$1/" },
+  {
+    "source": "^/retinal_detachment$",
+    "destination": "/topics/retinal-detachment/"
+  },
+  { "source": "^/(rheumatoid-arthritis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/rheumatoid_arthritis$",
+    "destination": "/topics/rheumatoid-arthritis/"
+  },
+  { "source": "^/(rosacea)", "destination": "/topics/$1/" },
+  { "source": "^/rosacea$", "destination": "/topics/rosacea/" },
+  { "source": "^/(roundworm)", "destination": "/topics/$1/" },
+  { "source": "^/roundworm$", "destination": "/topics/roundworm/" },
+  { "source": "^/(rubella)", "destination": "/topics/$1/" },
+  { "source": "^/rubella$", "destination": "/topics/rubella/" },
+  { "source": "^/(scabies)", "destination": "/topics/$1/" },
+  { "source": "^/scabies$", "destination": "/topics/scabies/" },
+  { "source": "^/(scarlet-fever)", "destination": "/topics/$1/" },
+  { "source": "^/scarlet_fever$", "destination": "/topics/scarlet-fever/" },
+  {
+    "source": "^/(sciatica-lumbar-radiculopathy)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/sciatica_lumbar_radiculopathy$",
+    "destination": "/topics/sciatica-lumbar-radiculopathy/"
+  },
+  { "source": "^/(scrotal-pain-swelling)", "destination": "/topics/$1/" },
+  {
+    "source": "^/scrotal_pain_swelling$",
+    "destination": "/topics/scrotal-pain-swelling/"
+  },
+  { "source": "^/(seborrhoeic-dermatitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/seborrhoeic_dermatitis$",
+    "destination": "/topics/seborrhoeic-dermatitis/"
+  },
+  { "source": "^/(self-harm)", "destination": "/topics/$1/" },
+  { "source": "^/self_harm$", "destination": "/topics/self-harm/" },
+  { "source": "^/(sepsis)", "destination": "/topics/$1/" },
+  { "source": "^/sepsis$", "destination": "/topics/sepsis/" },
+  { "source": "^/(shingles)", "destination": "/topics/$1/" },
+  { "source": "^/shingles$", "destination": "/topics/shingles/" },
+  { "source": "^/(shoulder-pain)", "destination": "/topics/$1/" },
+  { "source": "^/shoulder_pain$", "destination": "/topics/shoulder-pain/" },
+  { "source": "^/(sickle-cell-disease)", "destination": "/topics/$1/" },
+  {
+    "source": "^/sickle_cell_disease$",
+    "destination": "/topics/sickle-cell-disease/"
+  },
+  { "source": "^/(sinusitis)", "destination": "/topics/$1/" },
+  { "source": "^/sinusitis$", "destination": "/topics/sinusitis/" },
+  {
+    "source": "^/(skin-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/skin_cancers_recognition_referral$",
+    "destination": "/topics/skin-cancers-recognition-referral/"
+  },
+  {
+    "source": "^/(sleep-disorders-shift-work-jet-lag)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/sleep_disorders_shift_work_jet_lag$",
+    "destination": "/topics/sleep-disorders-shift-work-jet-lag/"
+  },
+  { "source": "^/(smoking-cessation)", "destination": "/topics/$1/" },
+  {
+    "source": "^/smoking_cessation$",
+    "destination": "/topics/smoking-cessation/"
+  },
+  { "source": "^/(sore-throat-acute)", "destination": "/topics/$1/" },
+  {
+    "source": "^/sore_throat_acute$",
+    "destination": "/topics/sore-throat-acute/"
+  },
+  { "source": "^/(sprains-strains)", "destination": "/topics/$1/" },
+  { "source": "^/sprains_strains$", "destination": "/topics/sprains-strains/" },
+  { "source": "^/(squint-in-children)", "destination": "/topics/$1/" },
+  {
+    "source": "^/squint_in_children$",
+    "destination": "/topics/squint-in-children/"
+  },
+  { "source": "^/(stroke-tia)", "destination": "/topics/$1/" },
+  { "source": "^/stroke_tia$", "destination": "/topics/stroke-tia/" },
+  { "source": "^/(styes-hordeola)", "destination": "/topics/$1/" },
+  { "source": "^/styes_hordeola$", "destination": "/topics/styes-hordeola/" },
+  {
+    "source": "^/(superficial-vein-thrombosis-superficial-thrombophlebitis)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/superficial_vein_thrombosis_superficial_thrombophlebitis$",
+    "destination": "/topics/superficial-vein-thrombosis-superficial-thrombophlebitis/"
+  },
+  { "source": "^/(support-for-adult-carers)", "destination": "/topics/$1/" },
+  {
+    "source": "^/support_for_adult_carers$",
+    "destination": "/topics/support-for-adult-carers/"
+  },
+  { "source": "^/(syphilis)", "destination": "/topics/$1/" },
+  { "source": "^/syphilis$", "destination": "/topics/syphilis/" },
+  {
+    "source": "^/(tamoxifen-managing-adverse-effects)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/tamoxifen_managing_adverse_effects$",
+    "destination": "/topics/tamoxifen-managing-adverse-effects/"
+  },
+  { "source": "^/(teething)", "destination": "/topics/$1/" },
+  { "source": "^/teething$", "destination": "/topics/teething/" },
+  {
+    "source": "^/(temporomandibular-disorders-tmds)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/temporomandibular_disorders_tmds$",
+    "destination": "/topics/temporomandibular-disorders-tmds/"
+  },
+  { "source": "^/(tennis-elbow)", "destination": "/topics/$1/" },
+  { "source": "^/tennis_elbow$", "destination": "/topics/tennis-elbow/" },
+  { "source": "^/(threadworm)", "destination": "/topics/$1/" },
+  { "source": "^/threadworm$", "destination": "/topics/threadworm/" },
+  { "source": "^/(tinnitus)", "destination": "/topics/$1/" },
+  { "source": "^/tinnitus$", "destination": "/topics/tinnitus/" },
+  { "source": "^/(tiredness-fatigue-in-adults)", "destination": "/topics/$1/" },
+  {
+    "source": "^/tiredness_fatigue_in_adults$",
+    "destination": "/topics/tiredness-fatigue-in-adults/"
+  },
+  { "source": "^/(trichomoniasis)", "destination": "/topics/$1/" },
+  { "source": "^/trichomoniasis$", "destination": "/topics/trichomoniasis/" },
+  { "source": "^/(trigeminal-neuralgia)", "destination": "/topics/$1/" },
+  {
+    "source": "^/trigeminal_neuralgia$",
+    "destination": "/topics/trigeminal-neuralgia/"
+  },
+  { "source": "^/(tuberculosis)", "destination": "/topics/$1/" },
+  { "source": "^/tuberculosis$", "destination": "/topics/tuberculosis/" },
+  { "source": "^/(ulcerative-colitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/ulcerative_colitis$",
+    "destination": "/topics/ulcerative-colitis/"
+  },
+  { "source": "^/(undescended-testes)", "destination": "/topics/$1/" },
+  {
+    "source": "^/undescended_testes$",
+    "destination": "/topics/undescended-testes/"
+  },
+  { "source": "^/(urethritis-male)", "destination": "/topics/$1/" },
+  { "source": "^/urethritis_male$", "destination": "/topics/urethritis-male/" },
+  {
+    "source": "^/(urinary-tract-infection-children)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/urinary_tract_infection_children$",
+    "destination": "/topics/urinary-tract-infection-children/"
+  },
+  {
+    "source": "^/(urinary-tract-infection-lower-men)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/urinary_tract_infection_lower_men$",
+    "destination": "/topics/urinary-tract-infection-lower-men/"
+  },
+  {
+    "source": "^/(urinary-tract-infection-lower-women)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/urinary_tract_infection_lower_women$",
+    "destination": "/topics/urinary-tract-infection-lower-women/"
+  },
+  {
+    "source": "^/(urological-cancers-recognition-referral)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/urological_cancers_recognition_referral$",
+    "destination": "/topics/urological-cancers-recognition-referral/"
+  },
+  { "source": "^/(urticaria)", "destination": "/topics/$1/" },
+  { "source": "^/urticaria$", "destination": "/topics/urticaria/" },
+  { "source": "^/(uveitis)", "destination": "/topics/$1/" },
+  { "source": "^/uveitis$", "destination": "/topics/uveitis/" },
+  { "source": "^/(vaginal-discharge)", "destination": "/topics/$1/" },
+  {
+    "source": "^/vaginal_discharge$",
+    "destination": "/topics/vaginal-discharge/"
+  },
+  { "source": "^/(varicocele)", "destination": "/topics/$1/" },
+  { "source": "^/varicocele$", "destination": "/topics/varicocele/" },
+  { "source": "^/(varicose-veins)", "destination": "/topics/$1/" },
+  { "source": "^/varicose_veins$", "destination": "/topics/varicose-veins/" },
+  {
+    "source": "^/(venous-eczema-lipodermatosclerosis)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/venous_eczema_lipodermatosclerosis$",
+    "destination": "/topics/venous-eczema-lipodermatosclerosis/"
+  },
+  { "source": "^/(vertigo)", "destination": "/topics/$1/" },
+  { "source": "^/vertigo$", "destination": "/topics/vertigo/" },
+  { "source": "^/(vestibular-neuronitis)", "destination": "/topics/$1/" },
+  {
+    "source": "^/vestibular_neuronitis$",
+    "destination": "/topics/vestibular-neuronitis/"
+  },
+  {
+    "source": "^/(vitamin-d-deficiency-in-adults-treatment-prevention)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/vitamin_d_deficiency_in_adults_treatment_prevention$",
+    "destination": "/topics/vitamin-d-deficiency-in-adults-treatment-prevention/"
+  },
+  {
+    "source": "^/(vitamin-d-deficiency-in-children)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/vitamin_d_deficiency_in_children$",
+    "destination": "/topics/vitamin-d-deficiency-in-children/"
+  },
+  { "source": "^/(vitiligo)", "destination": "/topics/$1/" },
+  { "source": "^/vitiligo$", "destination": "/topics/vitiligo/" },
+  { "source": "^/(warts-anogenital)", "destination": "/topics/$1/" },
+  {
+    "source": "^/warts_anogenital$",
+    "destination": "/topics/warts-anogenital/"
+  },
+  { "source": "^/(warts-verrucae)", "destination": "/topics/$1/" },
+  { "source": "^/warts_verrucae$", "destination": "/topics/warts-verrucae/" },
+  {
+    "source": "^/(whitlow-staphylococcal-herpetic)",
+    "destination": "/topics/$1/"
+  },
+  {
+    "source": "^/whitlow_staphylococcal_herpetic$",
+    "destination": "/topics/whitlow-staphylococcal-herpetic/"
+  },
+  { "source": "^/(whooping-cough)", "destination": "/topics/$1/" },
+  { "source": "^/whooping_cough$", "destination": "/topics/whooping-cough/" }
+]
