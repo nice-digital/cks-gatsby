@@ -17,10 +17,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	# default_root_object = "index.html" - set the default object using s3 website hosting as this covers more than just /
 
 	comment             = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}"
-
 	price_class = "PriceClass_100" # speed up changes/dev by only deploying to eu/us
 
-#   aliases = ["mysite.example.com", "yoursite.example.com"]
+	# aliases = ["mysite.example.com", "yoursite.example.com"]
 
 	# This applies geo restriction lambdas only to *.html, *.json and folders only (which translates to index.html)
 	default_cache_behavior {
