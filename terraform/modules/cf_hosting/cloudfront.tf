@@ -17,11 +17,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 	# default_root_object = "index.html" - set the default object using s3 website hosting as this covers more than just /
 
 	comment             = "${var.tags.org_name}-${var.tags.application_name}-${var.tags.environment_name}"
-
 	price_class = "PriceClass_100" # speed up changes/dev by only deploying to eu/us
 
-#   aliases = ["mysite.example.com", "yoursite.example.com"]
+	# aliases = ["mysite.example.com", "yoursite.example.com"]
 
+	# This applies geo restriction lambdas only to *.html, *.json and folders only (which translates to index.html)
 	default_cache_behavior {
 		allowed_methods  = ["GET", "HEAD", "OPTIONS"]
 		cached_methods   = ["GET", "HEAD"]
@@ -52,6 +52,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 		viewer_protocol_policy = "redirect-to-https"
 	}
 
+	# These have higher precdence than the default cache behavior which rules out the below files/paths of the geo restriction
 	ordered_cache_behavior {
 		path_pattern = "*.js"
 
@@ -61,21 +62,10 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		forwarded_values {
 			query_string = false
-			headers      = ["CloudFront-Viewer-Country"]
-
 			cookies {
 				forward = "none"
 			}
 		}
-		lambda_function_association {
-			event_type = "origin-request"
-			lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		}
-		lambda_function_association {
-			event_type = "origin-response"
-			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
-		}
-
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
 	}
@@ -89,19 +79,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		forwarded_values {
 			query_string = false
-			headers      = ["CloudFront-Viewer-Country"]
-
 			cookies {
 				forward = "none"
 			}
-		}
-		lambda_function_association {
-			event_type = "origin-request"
-			lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		}
-		lambda_function_association {
-			event_type = "origin-response"
-			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
@@ -116,19 +96,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		forwarded_values {
 			query_string = false
-			headers      = ["CloudFront-Viewer-Country"]
-
 			cookies {
 				forward = "none"
 			}
-		}
-		lambda_function_association {
-			event_type = "origin-request"
-			lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		}
-		lambda_function_association {
-			event_type = "origin-response"
-			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
@@ -143,19 +113,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		forwarded_values {
 			query_string = false
-			headers      = ["CloudFront-Viewer-Country"]
-
 			cookies {
 				forward = "none"
 			}
-		}
-		lambda_function_association {
-			event_type = "origin-request"
-			lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		}
-		lambda_function_association {
-			event_type = "origin-response"
-			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
@@ -170,19 +130,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		forwarded_values {
 			query_string = false
-			headers      = ["CloudFront-Viewer-Country"]
-
 			cookies {
 				forward = "none"
 			}
-		}
-		lambda_function_association {
-			event_type = "origin-request"
-			lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		}
-		lambda_function_association {
-			event_type = "origin-response"
-			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
@@ -197,19 +147,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		forwarded_values {
 			query_string = false
-			headers      = ["CloudFront-Viewer-Country"]
-
 			cookies {
 				forward = "none"
 			}
-		}
-		lambda_function_association {
-			event_type = "origin-request"
-			lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		}
-		lambda_function_association {
-			event_type = "origin-response"
-			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"
@@ -224,19 +164,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 		forwarded_values {
 			query_string = false
-			headers      = ["CloudFront-Viewer-Country"]
-
 			cookies {
 				forward = "none"
 			}
-		}
-		lambda_function_association {
-			event_type = "origin-request"
-			lambda_arn = var.origin_request_edge_lambda_qualified_arn
-		}
-		lambda_function_association {
-			event_type = "origin-response"
-			lambda_arn = var.origin_repsonse_edge_lambda_qualified_arn
 		}
 		compress               = true
 		viewer_protocol_policy = "redirect-to-https"

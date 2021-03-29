@@ -80,20 +80,6 @@ aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
   --exclude "/static/*" \
   --recursive --no-progress
 
-aws s3 cp $pathToStaticFiles s3://$s3BucketName/$releaseNumber \
-  --include "*" \
-  --exclude "*.html" \
-  --exclude "*.json" \
-  --exclude "sw.js" \
-  --exclude "*.js" \
-  --exclude "*.css" \
-  --exclude "*.jpg" \
-  --exclude "*.png" \
-  --exclude "*.woff" \
-  --exclude "*.woff2" \
-  --exclude "/static/*" \
-  --recursive --no-progress
-
 # copy error pages to non geo restricted folder
 aws s3 cp $pathToStaticFiles/403/index.html s3://$s3BucketName/$releaseNumber/errors/403.html
 aws s3 cp $pathToStaticFiles/404/index.html s3://$s3BucketName/$releaseNumber/errors/404.html
