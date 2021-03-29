@@ -31,12 +31,20 @@ searchLambdaLocation="../lambdas/search-lambda.zip"
 
 echo "setting release to $releaseNumber and deploying to environment $releaseEnvironment"
 
+originRequestEdgeLambdaLocation="../lambdas/origin-request-edge-lambda.zip"
+originResponseEdgeLambdaLocation="../lambdas/origin-response-edge-lambda.zip"
+viewerRequestEdgeLambdaLocation="../lambdas/viewer-request-edge-lambda.zip"
+
 if [ "$runningInOctoDeploy" = "octo" ]
   then
     echo "seting aws cli access keys...."
     export AWS_ACCESS_KEY_ID=$awsAccessKeyId
     export AWS_SECRET_ACCESS_KEY=$awsSecretAccessKey
     export AWS_DEFAULT_REGION=eu-west-1
+
+    echo "updating ipAllowList.json"
+    chmod +x ./update-ip-allowList-viewer-request.sh
+    ./update-ip-allowList-viewer-request.sh
   else
     dotnet lambda package ./lambdas/search-lambda.zip --project-location ../search-lambda/CKS.SearchLambda
 
@@ -45,9 +53,7 @@ if [ "$runningInOctoDeploy" = "octo" ]
     ./package-lambda.sh viewer-request-edge-lambda
 fi
 
-originRequestEdgeLambdaLocation="../lambdas/origin-request-edge-lambda.zip"
-originResponseEdgeLambdaLocation="../lambdas/origin-response-edge-lambda.zip"
-viewerRequestEdgeLambdaLocation="../lambdas/viewer-request-edge-lambda.zip"
+
 
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 
