@@ -5,7 +5,7 @@ const redirects = require("./redirects.json").map(
 	})
 );
 
-const allowedCounties = require("./allowedCounties.json").map(
+const allowedCounties = require("./countryAllowList.json").map(
 	(country) => country
 );
 
@@ -14,7 +14,9 @@ exports.handler = (event, context, callback) => {
 	const countryHeader = request.headers["cloudfront-viewer-country"];
 	const countryCode = countryHeader[0].value;
 
-	if (!isInCountryAllowList(countryCode)) {
+	console.log("Input request " + JSON.stringify(request));
+
+	if (!isInCountryAllowList(countryCode) && !isInIpAllowList(request)) {
 		//if request is from non UK country and not in ip allow list
 		const redirectResponse = {
 			status: "403",
@@ -44,4 +46,10 @@ exports.handler = (event, context, callback) => {
 
 function isInCountryAllowList(countryCode) {
 	return allowedCounties.includes(countryCode);
+}
+
+function isInIpAllowList(request) {
+	if (typeof request.headers["x-nice-allowed-ip"] != "undefined") {
+		return true;
+	}
 }
