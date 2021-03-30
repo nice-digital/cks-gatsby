@@ -62,6 +62,11 @@ const SearchPage: React.FC = () => {
 	const [error, setError] = useState<boolean>(false);
 	const [a11yMessage, setA11yMessage] = useState<string>("");
 
+	const teamCityEnvironment = process.env.TEAMCITY_VERSION;
+	const searchEndpoint = teamCityEnvironment
+		? "#{Octopus.Environment.Name}-search-endpoint/api/search"
+		: "/api/search";
+
 	function announce(message: string): void {
 		setA11yMessage("");
 		setTimeout(() => {
@@ -74,7 +79,7 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		setData(null);
 		announce("Loading search results");
-		fetch("/api/search" + location.search)
+		fetch(searchEndpoint + location.search)
 			.then((data) => data.json())
 			.then((results) => {
 				setError(false);
