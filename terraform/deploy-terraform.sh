@@ -47,13 +47,12 @@ if [ "$runningInOctoDeploy" = "octo" ]
     ./update-ip-allowList-viewer-request.sh
   else
     dotnet lambda package ./lambdas/search-lambda.zip --project-location ../search-lambda/CKS.SearchLambda
+    ./stripzip ./lambdas/search-lambda.zip
 
     ./package-lambda.sh origin-request-edge-lambda
     ./package-lambda.sh origin-response-edge-lambda
     ./package-lambda.sh viewer-request-edge-lambda
 fi
-
-
 
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 
