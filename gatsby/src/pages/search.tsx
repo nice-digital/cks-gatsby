@@ -64,7 +64,7 @@ const SearchPage: React.FC = () => {
 
 	const teamCityEnvironment = process.env.TEAMCITY_VERSION;
 	const searchEndpoint = teamCityEnvironment
-		? "#{Octopus.Environment.Name}-search-endpoint/api/search"
+		? "#{Octopus.Action[Run Terraform].Output.SearchLambdaApiEndpoint}/api/search"
 		: "/api/search";
 
 	function announce(message: string): void {
