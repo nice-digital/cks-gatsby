@@ -62,10 +62,7 @@ const SearchPage: React.FC = () => {
 	const [error, setError] = useState<boolean>(false);
 	const [a11yMessage, setA11yMessage] = useState<string>("");
 
-	const teamCityEnvironment = process.env.TEAMCITY_VERSION;
-	const searchEndpoint = teamCityEnvironment
-		? "#{Octopus.Action[Run Terraform].Output.SearchLambdaApiEndpoint}/api/search"
-		: "/api/search";
+	const searchEndpoint = process.env.SEARCH_API_URL;
 
 	function announce(message: string): void {
 		setA11yMessage("");
