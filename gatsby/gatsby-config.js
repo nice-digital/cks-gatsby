@@ -38,12 +38,17 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-sass`,
 			options: {
-				implementation: require("sass"),
+				cssLoaderOptions: {
+					esModule: false,
+					modules: {
+						namedExport: false,
+					},
+				},
 			},
 		},
 		// Gatsby loads a single CSS bundle by default (see https://github.com/gatsbyjs/gatsby/issues/11072#issue-399193885).
 		// But we want per-page chunks to minimize size, so use this plugin to split into separate chunks:
-		"gatsby-plugin-split-css",
+		//"gatsby-plugin-split-css",
 		{
 			resolve: `gatsby-source-cks`,
 			options: {

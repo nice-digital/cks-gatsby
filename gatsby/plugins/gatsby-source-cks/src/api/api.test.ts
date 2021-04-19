@@ -72,6 +72,8 @@ describe("api", () => {
 			cache = {
 				get: cacheGet,
 				set: cacheSet,
+				name: "",
+				directory: "",
 			} as GatsbyCache;
 
 		beforeEach(() => {
