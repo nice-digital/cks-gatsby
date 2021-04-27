@@ -1,5 +1,6 @@
+/* eslint-disable testing-library/no-node-access */
 import React from "react";
-import { render, waitFor, RenderResult } from "@testing-library/react";
+import { render, waitFor, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { Speciality } from "../../types";
@@ -32,11 +33,10 @@ const getDefaultSpecialityTestData = (): Speciality => ({
 });
 
 describe("SpecialityPage", () => {
-	let speciality: Speciality = getDefaultSpecialityTestData(),
-		renderResult: RenderResult;
+	let speciality: Speciality = getDefaultSpecialityTestData();
 
 	beforeEach(() => {
-		renderResult = render(
+		render(
 			<SpecialityPage {...({ data: { speciality } } as SpecialityPageProps)} />
 		);
 	});
@@ -87,17 +87,15 @@ describe("SpecialityPage", () => {
 			["Specialities", "/specialities/"],
 		])("Breadcrumbs (%s)", (breadcrumbText, expectedHref) => {
 			expect(
-				renderResult.queryByText(textContentMatcher(breadcrumbText), {
+				screen.queryByText(textContentMatcher(breadcrumbText), {
 					selector: ".breadcrumbs a",
 				})
 			).toHaveAttribute("href", expectedHref);
 		});
 
 		it("should render speciality as current page breadcrumb without link", () => {
-			const { queryByText } = renderResult;
-
 			expect(
-				queryByText(textContentMatcher("Allergies"), {
+				screen.queryByText(textContentMatcher("Allergies"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();
@@ -107,7 +105,7 @@ describe("SpecialityPage", () => {
 	describe("Page header", () => {
 		it("should render heading 1 with speciality name", () => {
 			expect(
-				renderResult.queryByText("Allergies", {
+				screen.queryByText("Allergies", {
 					selector: "h1",
 				})
 			).toBeInTheDocument();
@@ -117,12 +115,12 @@ describe("SpecialityPage", () => {
 	describe("Topic list", () => {
 		it("should render labelled ordered list", () => {
 			expect(
-				renderResult.getByLabelText("A to Z of topics within Allergies").tagName
+				screen.getByLabelText("A to Z of topics within Allergies").tagName
 			).toBe("OL");
 		});
 
 		it("should render topics alphabetically as list items", () => {
-			const listItems = renderResult.getByLabelText(
+			const listItems = screen.getByLabelText(
 				"A to Z of topics within Allergies"
 			).children;
 			expect(listItems).toHaveLength(2);
@@ -131,7 +129,7 @@ describe("SpecialityPage", () => {
 		});
 
 		it("should render link to topic page for each topic", () => {
-			const topicAnchor = renderResult.getByText("Allergic rhinitis", {
+			const topicAnchor = screen.getByText("Allergic rhinitis", {
 				selector: "ol a",
 			});
 
@@ -139,12 +137,9 @@ describe("SpecialityPage", () => {
 		});
 
 		it("should user Gatsby's client side navigation for topic links", () => {
-			const allergicRhinitisAnchor = renderResult.getByText(
-				"Allergic rhinitis",
-				{
-					selector: "ol a",
-				}
-			);
+			const allergicRhinitisAnchor = screen.getByText("Allergic rhinitis", {
+				selector: "ol a",
+			});
 
 			userEvent.click(allergicRhinitisAnchor);
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { waitFor } from "@testing-library/react";
+import { waitFor, screen } from "@testing-library/react";
 import { renderWithRouter } from "test-utils";
 import NotFoundPage from "../404";
 
@@ -12,15 +12,16 @@ describe("404", () => {
 	});
 
 	it("should render h1 with correct text", () => {
-		const { queryByText } = renderWithRouter(<NotFoundPage />);
+		renderWithRouter(<NotFoundPage />);
 
-		expect(queryByText("We can't find this page")?.tagName).toBe("H1");
+		expect(screen.queryByText("We can't find this page")?.tagName).toBe("H1");
 	});
 
 	it("should render a noindex robots meta tag", async () => {
 		renderWithRouter(<NotFoundPage />);
 
 		await waitFor(() => {
+			// eslint-disable-next-line testing-library/no-node-access
 			expect(document.querySelector("meta[name='robots']")).toHaveAttribute(
 				"content",
 				"noindex"

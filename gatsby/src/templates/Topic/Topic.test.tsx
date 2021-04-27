@@ -1,5 +1,6 @@
+/* eslint-disable testing-library/no-node-access */
 import React from "react";
-import { render, waitFor, RenderResult } from "@testing-library/react";
+import { render, waitFor, screen, RenderResult } from "@testing-library/react";
 import { textContentMatcher } from "test-utils";
 
 import { ChapterLevel1, Topic, PartialChapter } from "../../types";
@@ -29,6 +30,7 @@ const topic: Topic = {
 		},
 	] as PartialChapter[],
 } as Topic;
+
 const firstChapter: ChapterLevel1 = {
 	id: "chptr123",
 	fullItemName: "Summary",
@@ -73,17 +75,15 @@ describe("TopicPage", () => {
 			["Health topics A to Z", "/topics/"],
 		])("Breadcrumbs (%s)", (breadcrumbText, expectedHref) => {
 			expect(
-				renderResult.queryByText(textContentMatcher(breadcrumbText), {
+				screen.queryByText(textContentMatcher(breadcrumbText), {
 					selector: ".breadcrumbs a",
 				})
 			).toHaveAttribute("href", expectedHref);
 		});
 
 		it("should render topic name as current page breadcrumb without link", () => {
-			const { queryByText } = renderResult;
-
 			expect(
-				queryByText(textContentMatcher("Asthma"), {
+				screen.queryByText(textContentMatcher("Asthma"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();
@@ -93,19 +93,19 @@ describe("TopicPage", () => {
 	describe("Page header", () => {
 		it("should render heading 1 with topic name", () => {
 			expect(
-				renderResult.getByText("Asthma", {
+				screen.getByText("Asthma", {
 					selector: "h1",
 				})
 			).toBeInTheDocument();
 		});
 
 		it("should render last revised text as lead paragraph", () => {
-			const lead = renderResult.getByText("Last revised in April 2020");
+			const lead = screen.getByText("Last revised in April 2020");
 			expect(lead.parentElement).toHaveClass("page-header__lead");
 		});
 
 		it("should render print button", () => {
-			const print = renderResult.queryByText("Print this page");
+			const print = screen.queryByText("Print this page");
 			expect(print).toBeInTheDocument();
 		});
 	});
@@ -113,21 +113,22 @@ describe("TopicPage", () => {
 	describe("chapter menu", () => {
 		let summaryAnchor: HTMLElement;
 		beforeEach(() => {
-			summaryAnchor = renderResult.getByText(textContentMatcher("Summary"), {
+			summaryAnchor = screen.getByText(textContentMatcher("Summary"), {
 				selector: "nav a",
 			});
 		});
 
 		it("should render list of top level chapters in topic menu", () => {
+			const { container } = renderResult;
 			expect(
-				renderResult.container.querySelectorAll(".stacked-nav__list-item")
+				// eslint-disable-next-line testing-library/no-container
+				container.querySelectorAll(".stacked-nav__list-item")
 			).toHaveLength(2);
 			expect(summaryAnchor).toHaveProperty("tagName", "A");
 			expect(
-				renderResult.getByText(
-					textContentMatcher("Have I got the right topic?"),
-					{ selector: "nav a" }
-				)
+				screen.getByText(textContentMatcher("Have I got the right topic?"), {
+					selector: "nav a",
+				})
 			).toHaveProperty("tagName", "A");
 		});
 
@@ -143,14 +144,14 @@ describe("TopicPage", () => {
 	describe("body", () => {
 		it("should render first chapter content in topic body", () => {
 			expect(
-				renderResult.getByText(
+				screen.getByText(
 					"Asthma is a chronic inflammatory condition of the airways."
 				)
 			).toBeInTheDocument();
 		});
 
 		it("should render heading 2 for summary body", () => {
-			const heading = renderResult.getByText("Asthma: Summary");
+			const heading = screen.getByText("Asthma: Summary");
 			expect(heading).toHaveProperty("tagName", "H2");
 			expect(heading).toHaveAttribute("id", "summary");
 		});

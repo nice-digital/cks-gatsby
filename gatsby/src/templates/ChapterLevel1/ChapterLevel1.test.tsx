@@ -1,5 +1,6 @@
+/* eslint-disable testing-library/no-node-access */
 import React from "react";
-import { render, RenderResult, cleanup, waitFor } from "@testing-library/react";
+import { render, screen, cleanup, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import ChapterLevel1Page, { ChapterLevel1PageProps } from "./ChapterLevel1";
@@ -45,10 +46,8 @@ const getDefaultTestProps = (): ChapterLevel1PageProps =>
 
 describe("ChapterLevel1", () => {
 	let props = getDefaultTestProps();
-	let renderResult: RenderResult;
-
 	beforeEach(() => {
-		renderResult = render(<ChapterLevel1Page {...props} />);
+		render(<ChapterLevel1Page {...props} />);
 	});
 
 	afterEach(() => {
@@ -58,18 +57,13 @@ describe("ChapterLevel1", () => {
 
 	describe("Breadcrumbs", () => {
 		it("should have homepage breadcrumb", () => {
-			const { getByText } = renderResult;
-
-			expect(getByText("CKS", { selector: ".breadcrumbs a" })).toHaveAttribute(
-				"href",
-				"/"
-			);
+			expect(
+				screen.getByText("CKS", { selector: ".breadcrumbs a" })
+			).toHaveAttribute("href", "/");
 		});
 		it("should have parent topic breadcrumb", () => {
-			const { getByText } = renderResult;
-
 			expect(
-				getByText("Asthma", { selector: ".breadcrumbs a" })
+				screen.getByText("Asthma", { selector: ".breadcrumbs a" })
 			).toHaveAttribute("href", "/topics/asthma/");
 		});
 	});
@@ -86,7 +80,7 @@ describe("ChapterLevel1", () => {
 		it("should use summary field for meta description", async () => {
 			cleanup();
 			props.pageContext.chapter.summary = "this is some summary text";
-			renderResult = render(<ChapterLevel1Page {...props} />);
+			render(<ChapterLevel1Page {...props} />);
 			await waitFor(() => {
 				expect(
 					document.querySelector("meta[name='description']")
@@ -97,9 +91,7 @@ describe("ChapterLevel1", () => {
 
 	describe("page header", () => {
 		it("should render parent topic name with chapter name as heading 1", () => {
-			const { getAllByRole } = renderResult;
-
-			const heading = getAllByRole("heading")[0];
+			const heading = screen.getAllByRole("heading")[0];
 			expect(heading).toHaveProperty("tagName", "H1");
 			expect(heading).toHaveProperty(
 				"textContent",
@@ -108,22 +100,21 @@ describe("ChapterLevel1", () => {
 		});
 
 		it("should render last revised text as lead paragraph", () => {
-			const { getByText } = renderResult;
-			const lead = getByText("Last revised in April 2020");
+			const lead = screen.getByText("Last revised in April 2020");
 			expect(lead.parentElement).toHaveClass("page-header__lead");
 		});
 	});
 
 	describe("print", () => {
 		it("should render print button", () => {
-			expect(renderResult.getByText("Print this page")).toBeInTheDocument();
+			expect(screen.getByText("Print this page")).toBeInTheDocument();
 		});
 
 		it("should print window on print button click", () => {
 			const oldPrint = global.print;
 			const printSpy = jest.fn();
 			global.print = printSpy;
-			const printBtn = renderResult.getByText("Print this page");
+			const printBtn = screen.getByText("Print this page");
 			userEvent.click(printBtn);
 			expect(printSpy).toHaveBeenCalled();
 			global.print = oldPrint;
@@ -142,9 +133,8 @@ describe("ChapterLevel1", () => {
 
 	describe("html string content", () => {
 		it("should render html string content as chapter body", () => {
-			const { getByLabelText } = renderResult;
 			expect(
-				getByLabelText("Background information", {
+				screen.getByLabelText("Background information", {
 					selector: "section",
 				}).innerHTML
 			).toContain("<p>Some content</p>");
@@ -155,36 +145,32 @@ describe("ChapterLevel1", () => {
 		beforeEach(() => {
 			cleanup();
 			props.pageContext.chapter.htmlStringContent = "<!-- No content -->";
-			renderResult = render(<ChapterLevel1Page {...props} />);
+			render(<ChapterLevel1Page {...props} />);
 		});
 
 		it("should render visually hidden heading 2 with html header content", () => {
-			const { getByText } = renderResult;
-
-			const heading = getByText("Background information", { selector: "h2" });
+			const heading = screen.getByText("Background information", {
+				selector: "h2",
+			});
 
 			expect(heading).toHaveClass("visually-hidden");
 			expect(heading).toHaveAttribute("id", "background-information");
 		});
 
 		it("should render custom nav labelled with the chapter name", () => {
-			const { getByLabelText } = renderResult;
 			expect(
-				getByLabelText("Background information", { selector: "nav" })
+				screen.getByLabelText("Background information", { selector: "nav" })
 			).toBeInTheDocument();
 		});
 
 		it("should render custom nav list with aria label", () => {
-			const { getByLabelText } = renderResult;
 			expect(
-				getByLabelText("Pages within Background information")
+				screen.getByLabelText("Pages within Background information")
 			).toHaveProperty("tagName", "UL");
 		});
 
 		it("should render anchors for each sub chapter", () => {
-			const { getByText } = renderResult;
-
-			const definitionLink = getByText("Definition");
+			const definitionLink = screen.getByText("Definition");
 
 			expect(definitionLink.tagName).toBe("A");
 			expect(definitionLink).toHaveAttribute(
@@ -192,7 +178,7 @@ describe("ChapterLevel1", () => {
 				"/topics/asthma/background-information/definition/"
 			);
 
-			const prevalenceLink = getByText("Prevalence");
+			const prevalenceLink = screen.getByText("Prevalence");
 
 			expect(prevalenceLink.tagName).toBe("A");
 			expect(prevalenceLink).toHaveAttribute(
