@@ -1,6 +1,7 @@
 import React from "react";
+import { screen } from "@testing-library/react";
 
-import { renderWithRouter, RenderWithRouterResult } from "test-utils";
+import { renderWithRouter } from "test-utils";
 import IndexPage from "../index";
 
 const specialities = [
@@ -28,9 +29,8 @@ const topics = [
 ];
 
 describe("Home page", () => {
-	let renderResult: RenderWithRouterResult;
 	beforeEach(() => {
-		renderResult = renderWithRouter(
+		renderWithRouter(
 			<IndexPage
 				data={{
 					allSpecialities: { nodes: specialities },
@@ -41,31 +41,29 @@ describe("Home page", () => {
 	});
 
 	it("should render the titles with the expected text", () => {
-		const { queryByText } = renderResult;
-		expect(queryByText("Clinical Knowledge Summaries")?.tagName).toBe("H1");
-		expect(queryByText("Health topics A to Z")?.tagName).toBe("H2");
-		expect(queryByText("Specialities")?.tagName).toBe("H2");
+		expect(screen.queryByText("Clinical Knowledge Summaries")?.tagName).toBe(
+			"H1"
+		);
+		expect(screen.queryByText("Health topics A to Z")?.tagName).toBe("H2");
+		expect(screen.queryByText("Specialities")?.tagName).toBe("H2");
 	});
 
 	describe("Topic list", () => {
 		it("should render an A-Z link for any topics that begin with that letter", () => {
-			const { queryByText } = renderResult;
-			expect(queryByText("A")?.tagName).toBe("A");
-			expect(queryByText("B")?.tagName).toBe("A");
-			expect(queryByText("D")?.tagName).toBe("A");
+			expect(screen.queryByText("A")?.tagName).toBe("A");
+			expect(screen.queryByText("B")?.tagName).toBe("A");
+			expect(screen.queryByText("D")?.tagName).toBe("A");
 		});
 
 		it("should not provide an A-Z link if there are no topics beginning with that letter", () => {
-			const { queryByText } = renderResult;
-			expect(queryByText("C")?.tagName).toBe("SPAN");
+			expect(screen.queryByText("C")?.tagName).toBe("SPAN");
 		});
 	});
 
 	describe("Specialty list", () => {
 		it("should show any supplied specialities", () => {
-			const { queryByText } = renderResult;
 			specialities.map(({ name }) => {
-				expect(queryByText(name)).toBeInTheDocument();
+				expect(screen.queryByText(name)).toBeInTheDocument();
 			});
 		});
 	});

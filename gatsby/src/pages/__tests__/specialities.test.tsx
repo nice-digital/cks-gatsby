@@ -1,5 +1,5 @@
 import React from "react";
-import { waitFor, RenderResult, render } from "@testing-library/react";
+import { waitFor, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { textContentMatcher } from "test-utils";
 
@@ -21,9 +21,8 @@ describe("SpecialitiesPage", () => {
 		},
 	];
 
-	let renderResult: RenderResult;
 	beforeEach(() => {
-		renderResult = render(
+		render(
 			<SpecialitiesPage
 				{...({
 					data: {
@@ -48,17 +47,15 @@ describe("SpecialitiesPage", () => {
 			["CKS", "/"],
 		])("Breadcrumbs (%s)", (breadcrumbText, expectedHref) => {
 			expect(
-				renderResult.queryByText(textContentMatcher(breadcrumbText), {
+				screen.queryByText(textContentMatcher(breadcrumbText), {
 					selector: ".breadcrumbs a",
 				})
 			).toHaveAttribute("href", expectedHref);
 		});
 
 		it("should render specialities as current page breadcrumb without link", () => {
-			const { queryByText } = renderResult;
-
 			expect(
-				queryByText(textContentMatcher("Specialities"), {
+				screen.queryByText(textContentMatcher("Specialities"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();
@@ -68,14 +65,14 @@ describe("SpecialitiesPage", () => {
 	describe("Page header", () => {
 		it("should render heading 1 with speciality name", () => {
 			expect(
-				renderResult.queryByText("Specialities", {
+				screen.queryByText("Specialities", {
 					selector: "h1",
 				})
 			).toBeInTheDocument();
 		});
 		it("should render lead paragraph", () => {
 			expect(
-				renderResult.queryByText(
+				screen.queryByText(
 					"There are over 370 topics, with focus on the most common and significant presentations in primary care."
 				)
 			).toBeInTheDocument();
@@ -84,21 +81,22 @@ describe("SpecialitiesPage", () => {
 
 	describe("Speciality list", () => {
 		it("should render labelled ordered list", () => {
-			expect(
-				renderResult.getByLabelText("A to Z of specialities").tagName
-			).toBe("OL");
+			expect(screen.getByLabelText("A to Z of specialities").tagName).toBe(
+				"OL"
+			);
 		});
 
 		it("should render specialities as list items", () => {
-			const listItems = renderResult.getByLabelText("A to Z of specialities")
-				.children;
+			const listItems =
+				// eslint-disable-next-line testing-library/no-node-access
+				screen.getByLabelText("A to Z of specialities").children;
 			expect(listItems).toHaveLength(2);
 			expect(listItems[0].textContent).toBe("Allergies");
 			expect(listItems[1].textContent).toBe("Cancer");
 		});
 
 		it("should render link to speciality page for each speciality", () => {
-			const specialityAnchor = renderResult.getByText("Allergies", {
+			const specialityAnchor = screen.getByText("Allergies", {
 				selector: "ol a",
 			});
 
@@ -109,7 +107,7 @@ describe("SpecialitiesPage", () => {
 		});
 
 		it("should user Gatsby's client side navigation for speciality links", () => {
-			const allergiesAnchor = renderResult.getByText("Allergies", {
+			const allergiesAnchor = screen.getByText("Allergies", {
 				selector: "ol a",
 			});
 

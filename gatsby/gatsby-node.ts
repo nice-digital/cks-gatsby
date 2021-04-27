@@ -1,6 +1,6 @@
 import path, { resolve } from "path";
 import { promises as fs } from "fs";
-import { CreatePagesArgs, BuildArgs } from "gatsby";
+import { CreatePagesArgs, BuildArgs, CreateWebpackConfigArgs } from "gatsby";
 import {
 	PartialTopic,
 	PartialSpeciality,
@@ -216,7 +216,7 @@ export const createPages = async (
 };
 
 // Gatsby hook for 'last extension point called after all other parts of the build process are complete'
-// Seehttps://www.gatsbyjs.org/docs/node-apis/#onPostBuild
+// See https://www.gatsbyjs.org/docs/node-apis/#onPostBuild
 // Generates .htaccess file based on topics
 export const onPostBuild = async ({
 	graphql,
@@ -261,4 +261,35 @@ export const onPostBuild = async ({
 
 	timer.setStatus("Written .htaccess");
 	timer.end();
+};
+
+/**
+ * Gatsby hook for overriding webpack config
+ * See https://www.gatsbyjs.com/docs/how-to/custom-configuration/add-custom-webpack-config/
+ */
+export const onCreateWebpackConfig = ({
+	stage,
+	actions,
+	getConfig,
+	plugins,
+}: CreateWebpackConfigArgs): void => {
+	// Disable order warnings from mini CSS plugin
+	// See https://github.com/gatsbyjs/gatsby/discussions/30169#discussioncomment-621285
+	if (stage === "build-javascript" || stage === "develop") {
+		const config = getConfig();
+
+		const miniCss = config.plugins.find(
+			(plugin: () => void) => plugin.constructor.name === "MiniCssExtractPlugin"
+		);
+
+		if (miniCss) {
+			miniCss.options.ignoreOrder = true;
+		}
+
+		actions.replaceWebpackConfig(config);
+
+		actions.setWebpackConfig({
+			plugins: [plugins.provide({ process: "process/browser" })],
+		});
+	}
 };

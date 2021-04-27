@@ -1,5 +1,6 @@
 import React from "react";
 import ChevronUp from "@nice-digital/icons/lib/ChevronUp";
+import { Container } from "@nice-digital/nds-container";
 
 import styles from "./BackToTop.module.scss";
 
@@ -18,9 +19,9 @@ export const BackToTop: React.FC<BackToTopProps> = ({
 					id="back-to-top-link"
 					href={`#${scrollTo}`}
 				>
-					<div className="container">
+					<Container>
 						<ChevronUp /> Back to top
-					</div>
+					</Container>
 				</a>
 			</nav>
 		</div>

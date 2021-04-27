@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Container } from "@nice-digital/nds-container";
 
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
@@ -16,7 +17,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 		<>
 			<Header />
 			<main className={styles.main} id="content-start">
-				<div className="container">{children}</div>
+				<Container>{children}</Container>
 				<BackToTop />
 			</main>
 			<Footer />
