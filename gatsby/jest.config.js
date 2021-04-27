@@ -3,6 +3,8 @@ module.exports = {
 		"\\.(css|scss)$": "identity-obj-proxy",
 		"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
 			"<rootDir>/__mocks__/fileMock.js",
+		// See https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#reach-router
+		"^@reach/router(.*)": "<rootDir>/node_modules/@gatsbyjs/reach-router$1",
 	},
 	preset: "ts-jest",
 	collectCoverage: process.env.TEAMCITY_VERSION ? true : false,

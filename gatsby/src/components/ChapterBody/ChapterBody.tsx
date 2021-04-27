@@ -9,6 +9,7 @@ import React, {
 
 import ChevronDownIcon from "@nice-digital/icons/lib/ChevronDown";
 import ChevronUpIcon from "@nice-digital/icons/lib/ChevronUp";
+import "@nice-digital/nds-table/scss/table.scss";
 
 import { stripHtmlTags, stripHtmlComments } from "../../utils/html-utils";
 import { BasisChapterTitle } from "../../utils/constants";

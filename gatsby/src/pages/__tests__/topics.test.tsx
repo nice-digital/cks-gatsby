@@ -1,6 +1,7 @@
 import React from "react";
+import { render, waitFor, screen } from "@testing-library/react";
+
 import TopicsPage, { TopicsPageProps } from "../topics";
-import { render, RenderResult, waitFor } from "@testing-library/react";
 import { Topic } from "src/types";
 import { textContentMatcher } from "test-utils";
 
@@ -26,9 +27,8 @@ describe("TopicsPage", () => {
 		} as Topic,
 	];
 
-	let renderResult: RenderResult;
 	beforeEach(() => {
-		renderResult = render(
+		render(
 			<TopicsPage
 				{...({
 					data: {
@@ -53,17 +53,15 @@ describe("TopicsPage", () => {
 			["CKS", "/"],
 		])("Breadcrumbs (%s)", (breadcrumbText, expectedHref) => {
 			expect(
-				renderResult.queryByText(textContentMatcher(breadcrumbText), {
+				screen.queryByText(textContentMatcher(breadcrumbText), {
 					selector: ".breadcrumbs a",
 				})
 			).toHaveAttribute("href", expectedHref);
 		});
 
 		it("should render health topics A to Z as current page breadcrumb without link", () => {
-			const { queryByText } = renderResult;
-
 			expect(
-				queryByText(textContentMatcher("Health topics A to Z"), {
+				screen.queryByText(textContentMatcher("Health topics A to Z"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();
@@ -73,14 +71,14 @@ describe("TopicsPage", () => {
 	describe("Page header", () => {
 		it("should render heading 1 with speciality name", () => {
 			expect(
-				renderResult.queryByText("Health topics A to Z", {
+				screen.queryByText("Health topics A to Z", {
 					selector: "h1",
 				})
 			).toBeInTheDocument();
 		});
 		it("should render lead paragraph", () => {
 			expect(
-				renderResult.queryByText(
+				screen.queryByText(
 					"There are over 370 topics, with focus on the most common and significant presentations in primary care."
 				)
 			).toBeInTheDocument();
@@ -90,8 +88,7 @@ describe("TopicsPage", () => {
 	describe("Alphabet", () => {
 		let alphabetList: HTMLElement;
 		beforeEach(() => {
-			const { getByLabelText } = renderResult;
-			alphabetList = getByLabelText("Letters A to Z");
+			alphabetList = screen.getByLabelText("Letters A to Z");
 		});
 
 		it("should render an ordered list labelled Letters A to Z", () => {
@@ -103,26 +100,24 @@ describe("TopicsPage", () => {
 		});
 
 		it("should render a list item for each letter", () => {
+			// eslint-disable-next-line testing-library/no-node-access
 			expect(alphabetList.children).toHaveLength(26);
 		});
 
 		it("should render internal anchor for letter with topics", () => {
-			const { getByLabelText } = renderResult;
-
-			const letterAAnchor = getByLabelText("Letter 'A'");
+			const letterAAnchor = screen.getByLabelText("Letter 'A'");
 			expect(letterAAnchor).toHaveProperty("tagName", "A");
 			expect(letterAAnchor).toHaveAttribute("href", "#a");
 			expect(letterAAnchor).toHaveTextContent("A");
 
-			const letterCAnchor = getByLabelText("Letter 'C'");
+			const letterCAnchor = screen.getByLabelText("Letter 'C'");
 			expect(letterCAnchor).toHaveProperty("tagName", "A");
 			expect(letterCAnchor).toHaveAttribute("href", "#c");
 			expect(letterCAnchor).toHaveTextContent("C");
 		});
 
 		it("should not render anchor for letter with no topics", () => {
-			const { getByLabelText } = renderResult;
-			const letterQAnchor = getByLabelText("Letter 'Q' (no topics)");
+			const letterQAnchor = screen.getByLabelText("Letter 'Q' (no topics)");
 			expect(letterQAnchor).not.toHaveProperty("tagName", "A");
 			expect(letterQAnchor).toHaveTextContent("Q");
 		});
@@ -130,51 +125,46 @@ describe("TopicsPage", () => {
 
 	describe("A to Z", () => {
 		it("should render A to Z navigation element", () => {
-			const { getByLabelText } = renderResult;
-			expect(getByLabelText("Health topics A to Z")).toHaveProperty(
+			expect(screen.getByLabelText("Health topics A to Z")).toHaveProperty(
 				"tagName",
 				"NAV"
 			);
 		});
 
 		it("should render ordered list of letters that have at least 1 topic", () => {
-			const { getByLabelText } = renderResult;
-			const list = getByLabelText("Letters A to Z with matching topics");
+			const list = screen.getByLabelText("Letters A to Z with matching topics");
 			expect(list).toHaveProperty("tagName", "OL");
+			// eslint-disable-next-line testing-library/no-node-access
 			expect(list.children).toHaveLength(3); // See test data above - 2 topics and 1 alias
 		});
 
 		it("should render heading 2 with id and label for each letter", () => {
-			const { getByLabelText } = renderResult;
-			const letterHeadingA = getByLabelText("Topics starting with 'A'");
+			const letterHeadingA = screen.getByLabelText("Topics starting with 'A'");
 			expect(letterHeadingA).toHaveProperty("tagName", "H2");
 			expect(letterHeadingA).toHaveAttribute("id", "a");
 
-			const letterHeadingT = getByLabelText("Topics starting with 'T'");
+			const letterHeadingT = screen.getByLabelText("Topics starting with 'T'");
 			expect(letterHeadingT).toHaveProperty("tagName", "H2");
 			expect(letterHeadingT).toHaveAttribute("id", "t");
 		});
 
 		it("should render list of topics labelled by the letter heading for each letter", () => {
-			const { getByLabelText } = renderResult;
-			expect(getByLabelText("C")).toHaveProperty("tagName", "OL");
+			expect(screen.getByLabelText("C")).toHaveProperty("tagName", "OL");
 		});
 
 		it("should render topic link for each topic", () => {
-			const { getByText } = renderResult;
-			expect(getByText("Achilles tendinopathy")).toHaveAttribute(
+			expect(screen.getByText("Achilles tendinopathy")).toHaveAttribute(
 				"href",
 				"/topics/achilles-tendinopathy/"
 			);
-			expect(getByText("Acne vulgaris")).toHaveAttribute(
+			expect(screen.getByText("Acne vulgaris")).toHaveAttribute(
 				"href",
 				"/topics/acne-vulgaris/"
 			);
 		});
 
 		it("should render topic link for aliases", () => {
-			const { getByText } = renderResult;
-			expect(getByText("Tendinopathy (achilles)")).toHaveAttribute(
+			expect(screen.getByText("Tendinopathy (achilles)")).toHaveAttribute(
 				"href",
 				"/topics/achilles-tendinopathy/"
 			);

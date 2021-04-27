@@ -38,7 +38,12 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-sass`,
 			options: {
-				implementation: require("sass"),
+				cssLoaderOptions: {
+					esModule: false,
+					modules: {
+						namedExport: false,
+					},
+				},
 			},
 		},
 		// Gatsby loads a single CSS bundle by default (see https://github.com/gatsbyjs/gatsby/issues/11072#issue-399193885).

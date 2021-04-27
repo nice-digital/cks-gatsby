@@ -6,9 +6,6 @@ $nds-output-visibility-classes: false;
 
 @import '~@nice-digital/design-system/scss/base.scss';
 
-// Markup components
-@import './tables';
-
 html {
   overflow-x: visible; // Override the overflow from NDS, otherwise position sticky doesn't work
   scroll-behavior: smooth;

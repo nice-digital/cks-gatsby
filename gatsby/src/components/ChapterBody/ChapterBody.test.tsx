@@ -1,5 +1,5 @@
 import React from "react";
-import { render, RenderResult } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { textContentMatcher } from "test-utils";
@@ -55,47 +55,47 @@ describe("ChapterBody", () => {
 	});
 
 	it("should convert an h1 htmlHeader into an h2", () => {
-		const { getByText } = render(<ChapterBody chapter={chapter} />);
-		expect(getByText("Background information").tagName).toBe("H2");
+		render(<ChapterBody chapter={chapter} />);
+		expect(screen.getByText("Background information").tagName).toBe("H2");
 	});
 
 	it("should convert an htmlHeader to the given heading level", () => {
-		const { getByText } = render(
-			<ChapterBody chapter={chapter} headingLevel={3} />
-		);
-		expect(getByText("Background information").tagName).toBe("H3");
+		render(<ChapterBody chapter={chapter} headingLevel={3} />);
+		expect(screen.getByText("Background information").tagName).toBe("H3");
 	});
 
 	it("should render the slug as an id on the chapter heading", () => {
-		const { getByText } = render(<ChapterBody chapter={chapter} />);
-		expect(getByText("Background information")).toHaveAttribute(
+		render(<ChapterBody chapter={chapter} />);
+		expect(screen.getByText("Background information")).toHaveAttribute(
 			"id",
 			"background-information"
 		);
 	});
 
 	it("should render a section labelled by the chapter name", () => {
-		const { getByLabelText } = render(<ChapterBody chapter={chapter} />);
-		expect(getByLabelText("Background information").tagName).toBe("SECTION");
+		render(<ChapterBody chapter={chapter} />);
+		expect(screen.getByLabelText("Background information").tagName).toBe(
+			"SECTION"
+		);
 	});
 
 	it("should render the HTML string content", () => {
-		const { getByText } = render(<ChapterBody chapter={chapter} />);
-		expect(getByText("Some content")).toBeTruthy();
-		expect(getByText("Some content").tagName).toBe("P");
+		render(<ChapterBody chapter={chapter} />);
+		expect(screen.getByText("Some content")).toBeTruthy();
+		expect(screen.getByText("Some content").tagName).toBe("P");
 	});
 
 	describe("level 1 chapter", () => {
 		it("should not render sub chapters for top level content", () => {
-			const { queryByText } = render(<ChapterBody chapter={chapter} />);
-			expect(queryByText("When should I suspect asthma?")).toBeFalsy();
+			render(<ChapterBody chapter={chapter} />);
+			expect(screen.queryByText("When should I suspect asthma?")).toBeFalsy();
 		});
 	});
 
 	it("should render sub chapters resursively below top level", () => {
 		chapter.depth = 2;
 
-		const { getByText, getByLabelText } = render(
+		render(
 			<ChapterBody
 				chapter={{ ...chapter, parentChapter: {} as PartialChapter }}
 			/>
@@ -106,9 +106,9 @@ describe("ChapterBody", () => {
 			id: string,
 			content: string
 		): void => {
-			expect(getByText(headingText)).toHaveAttribute("id", id);
-			expect(getByLabelText(headingText).tagName).toBe("SECTION");
-			expect(getByText(content).tagName).toBe("P");
+			expect(screen.getByText(headingText)).toHaveAttribute("id", id);
+			expect(screen.getByLabelText(headingText).tagName).toBe("SECTION");
+			expect(screen.getByText(content).tagName).toBe("P");
 		};
 
 		expectNestedTopic(
@@ -125,11 +125,10 @@ describe("ChapterBody", () => {
 	});
 
 	describe("basis for recommendation", () => {
-		let renderResult: RenderResult;
 		beforeEach(() => {
 			chapter.depth = 2;
 
-			renderResult = render(
+			render(
 				<ChapterBody
 					chapter={{ ...chapter, parentChapter: {} as PartialChapter }}
 				/>
@@ -138,32 +137,32 @@ describe("ChapterBody", () => {
 
 		it("should render toggle button for basis for recommendations", () => {
 			expect(
-				renderResult.getByText(
-					textContentMatcher("Show Basis for recommendation")
-				)
+				screen.getByText(textContentMatcher("Show Basis for recommendation"))
 			).toBeInTheDocument();
 		});
 
 		it("should hide basis for recommendation by default", () => {
-			const toggleButton = renderResult.getByText(
+			const toggleButton = screen.getByText(
 				textContentMatcher("Show Basis for recommendation")
 			);
-			const bodyText = renderResult.getByText(
+			const bodyText = screen.getByText(
 				"These recommendations are based on nothing"
 			);
 			expect(toggleButton).toHaveAttribute("aria-expanded", "false");
+			// eslint-disable-next-line testing-library/no-node-access
 			expect(bodyText.parentElement).toHaveAttribute("aria-hidden", "true");
 		});
 
 		it("should expand basis for recommendation on button click", () => {
-			const toggleButton = renderResult.getByText(
+			const toggleButton = screen.getByText(
 				textContentMatcher("Show Basis for recommendation")
 			);
 			userEvent.click(toggleButton);
-			const bodyText = renderResult.getByText(
+			const bodyText = screen.getByText(
 				"These recommendations are based on nothing"
 			);
 			expect(toggleButton).toHaveAttribute("aria-expanded", "true");
+			// eslint-disable-next-line testing-library/no-node-access
 			expect(bodyText.parentElement).toHaveAttribute("aria-hidden", "false");
 		});
 	});
