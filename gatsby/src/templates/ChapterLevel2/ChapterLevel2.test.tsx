@@ -1,5 +1,6 @@
+/* eslint-disable testing-library/no-node-access */
 import React from "react";
-import { render, waitFor, cleanup } from "@testing-library/react";
+import { render, waitFor, cleanup, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ChapterLevel2Page, { ChapterLevel2PageProps } from "./ChapterLevel2";
 import { ChapterLevel2, PartialChapter } from "../../types";
@@ -50,39 +51,40 @@ describe("ChapterLevel2", () => {
 
 	describe("Breadcrumbs", () => {
 		it("should have homepage breadcrumb", () => {
-			const { getByText } = render(
-				<ChapterLevel2Page
-					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
-				/>
-			);
-
-			expect(getByText("CKS", { selector: ".breadcrumbs a" })).toHaveAttribute(
-				"href",
-				"/"
-			);
-		});
-
-		it("should have parent topic breadcrumb", () => {
-			const { getByText } = render(
+			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
 				/>
 			);
 
 			expect(
-				getByText("Asthma", { selector: ".breadcrumbs a" })
+				screen.getByText("CKS", { selector: ".breadcrumbs a" })
+			).toHaveAttribute("href", "/");
+		});
+
+		it("should have parent topic breadcrumb", () => {
+			render(
+				<ChapterLevel2Page
+					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
+				/>
+			);
+
+			expect(
+				screen.getByText("Asthma", { selector: ".breadcrumbs a" })
 			).toHaveAttribute("href", "/topics/asthma/");
 		});
 
 		it("should have parent chapter breadcrumb", () => {
-			const { getByText } = render(
+			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
 				/>
 			);
 
 			expect(
-				getByText("Background information", { selector: ".breadcrumbs a" })
+				screen.getByText("Background information", {
+					selector: ".breadcrumbs a",
+				})
 			).toHaveAttribute("href", "/topics/asthma/background-information/");
 		});
 	});
@@ -122,40 +124,40 @@ describe("ChapterLevel2", () => {
 
 	describe("page header", () => {
 		it("should render parent topic name with chapter name as heading 1", () => {
-			const { getAllByRole } = render(
+			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
 				/>
 			);
-			const heading = getAllByRole("heading")[0];
+			const heading = screen.getAllByRole("heading")[0];
 			expect(heading).toHaveProperty("tagName", "H1");
 			expect(heading).toHaveProperty("textContent", "Asthma: What is it?");
 		});
 
 		it("should render last revised text as lead paragraph", () => {
-			const { getByText } = render(
+			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
 				/>
 			);
-			const lead = getByText("Last revised in April 2020");
+			const lead = screen.getByText("Last revised in April 2020");
 			expect(lead.parentElement).toHaveClass("page-header__lead");
 		});
 	});
 
 	describe("print", () => {
 		it("should render print button", () => {
-			const { getByText } = render(
+			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
 				/>
 			);
 
-			expect(getByText("Print this page")).toBeInTheDocument();
+			expect(screen.getByText("Print this page")).toBeInTheDocument();
 		});
 
 		it("should print window on print button click", () => {
-			const { getByText } = render(
+			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
 				/>
@@ -164,7 +166,7 @@ describe("ChapterLevel2", () => {
 			const oldPrint = global.print;
 			const printSpy = jest.fn();
 			global.print = printSpy;
-			const printBtn = getByText("Print this page");
+			const printBtn = screen.getByText("Print this page");
 			userEvent.click(printBtn);
 			expect(printSpy).toHaveBeenCalled();
 			global.print = oldPrint;
@@ -189,13 +191,13 @@ describe("ChapterLevel2", () => {
 
 	describe("html string content", () => {
 		it("should render html string content as chapter body", () => {
-			const { getByLabelText } = render(
+			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
 				/>
 			);
 			expect(
-				getByLabelText("What is it?", {
+				screen.getByLabelText("What is it?", {
 					selector: "section",
 				}).innerHTML
 			).toContain(
