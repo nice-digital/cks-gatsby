@@ -116,9 +116,7 @@ const IndexPage: React.FC<IndexProps> = ({
 						data-tracking="frequently-visited-topics"
 					>
 						<li>
-							<Link to="/topics/hypertension-not-diabetic/">
-								Hypertension - not diabetic
-							</Link>
+							<Link to="/topics/hypertension/">Hypertension</Link>
 						</li>
 						<li>
 							<Link to="/topics/diabetes-type-2/">Diabetes - type 2</Link>

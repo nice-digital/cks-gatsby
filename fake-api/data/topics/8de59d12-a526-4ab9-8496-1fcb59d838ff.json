@@ -1,5 +1,5 @@
 {
-  "topicName": "Hypertension - not diabetic",
+  "topicName": "Hypertension",
   "topicId": "8de59d12-a526-4ab9-8496-1fcb59d838ff",
   "exportId": "fcca4c4f-552e-46a2-a0bb-aa16000365dd",
   "dataId": "e77cfdcd-3730-4b19-8fc2-aa1700821bf8",
@@ -22,7 +22,7 @@
       "parentId": null,
       "rootId": "89dd036b-a574-478f-8a4f-e68dea10c683",
       "fullItemName": "Summary",
-      "htmlHeader": "<!-- begin field 5b70e76e-edc0-4702-972e-56f623371749 --><h1>Hypertension - not diabetic: Summary</h1><!-- end field 5b70e76e-edc0-4702-972e-56f623371749 -->",
+      "htmlHeader": "<!-- begin field 5b70e76e-edc0-4702-972e-56f623371749 --><h1>Hypertension: Summary</h1><!-- end field 5b70e76e-edc0-4702-972e-56f623371749 -->",
       "htmlStringContent": "REPLACE_ON_SERVE",
       "containerElement": "topicSummary",
       "children": [],
