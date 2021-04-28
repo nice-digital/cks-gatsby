@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
 
 	const [queryTerm, setQueryTermState] = useState(getQueryTerm(queryString));
 
-	const autoCompleteApi = process.env.AUTOCOMPLETE_API;
+	const autoCompleteApi = process.env.AUTOCOMPLETE_API_URL;
 
 	// Parse the q value from the querystring
 	useEffect(() => {
@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
 				auth={false}
 				search={{
 					placeholder: "Search CKS…",
-					autocomplete: autoCompleteApi + "/api/autocomplete",
+					autocomplete: autoCompleteApi,
 					onSearching: (e): void => {
 						navigate("/search/?q=" + encodeURIComponent(e.query));
 					},
