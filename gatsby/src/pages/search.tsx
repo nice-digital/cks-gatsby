@@ -62,7 +62,7 @@ const SearchPage: React.FC = () => {
 	const [error, setError] = useState<boolean>(false);
 	const [a11yMessage, setA11yMessage] = useState<string>("");
 
-	const searchEndpoint = process.env.GATSBY_SEARCH_API_URL;
+	const searchEndpoint = process.env.SEARCH_API_URL;
 
 	function announce(message: string): void {
 		setA11yMessage("");
@@ -76,7 +76,6 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		setData(null);
 		announce("Loading search results");
-		// debugger;
 		fetch(searchEndpoint + location.search)
 			.then((data) => data.json())
 			.then((results) => {
