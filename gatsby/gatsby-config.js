@@ -143,16 +143,15 @@ module.exports = {
 	// Proxy the relative search endpoint to the .NET app for local dev
 	developMiddleware: (app) => {
 		// Proxy the relative search endpoint to the .NET app for local dev
-		app.use(
-			"/api",
-			createProxyMiddleware({
-				target: "http://localhost:5000/",
-				changeOrigin: true,
-			})
-		);
-
+		// This needs to be disabled if you want to use AWS endpoints
+		// app.use(
+		// 	"/api",
+		// 	createProxyMiddleware({
+		// 		target: "http://localhost:5000/",
+		// 		changeOrigin: true,
+		// 	})
+		// );
 		// ******* or *******
-
 		// Use these settings to proxy to live search via this node app - https://github.com/wa-rren-dev/proxyToSearch
 		// 		app.use(
 		// 			"/api/search",

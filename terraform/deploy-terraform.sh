@@ -47,13 +47,12 @@ if [ "$runningInOctoDeploy" = "octo" ]
     ./update-ip-allowList-viewer-request.sh
   else
     dotnet lambda package ./lambdas/search-lambda.zip --project-location ../search-lambda/CKS.SearchLambda
+    ./stripzip ./lambdas/search-lambda.zip
 
     ./package-lambda.sh origin-request-edge-lambda
     ./package-lambda.sh origin-response-edge-lambda
     ./package-lambda.sh viewer-request-edge-lambda
 fi
-
-
 
 echo "Deploying Release Number: $releaseNumber to $releaseEnvironment"
 
@@ -79,7 +78,11 @@ terraform output
 
 if [ "$runningInOctoDeploy" = "octo" ]
   then
-    s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)
+    s3BucketName=$(terraform output s3_hosting_bucket_id | jq -r .)  # Output the name of the s3 bucket so octo can copy files in the next step
     echo "Static S3 hosting bucket name is.....$s3BucketName"
     set_octopusvariable "StaticSiteS3BucketName" $s3BucketName
+
+    searchLambdaApiEndpoint=$(terraform output search_lambda_api_endpoint | jq -r .)  # Output the name of the search api so octo cam reaplce the url in the next step
+    echo "Search lambda api root url is.....$searchLambdaApiEndpoint"
+    set_octopusvariable "SearchLambdaApiEndpoint" $searchLambdaApiEndpoint
 fi
