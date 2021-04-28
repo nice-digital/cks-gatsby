@@ -225,13 +225,11 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 				<PageHeader
 					heading="No results found"
 					lead={
-						<span
-							dangerouslySetInnerHTML={{
-								__html: `We couldn&apos;t find any results for <b>${searchTerm}</b>
-								<br />
-								Check for spelling mistakes or try another search term.`,
-							}}
-						/>
+						<>
+							We couldn&apos;t find any results for <b>{searchTerm}</b>
+							<br />
+							Check for spelling mistakes or try another search term.
+						</>
 					}
 				/>
 				<NoResults searchText={searchTerm} />
