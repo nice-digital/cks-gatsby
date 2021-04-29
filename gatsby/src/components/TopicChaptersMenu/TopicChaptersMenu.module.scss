@@ -1,5 +1,9 @@
 @import '~@nice-digital/nds-core/scss/core.scss';
 
+.wrapper {
+  margin: rem(0 0 $nds-spacing-large);
+}
+
 .toggleButton {
   appearance: none;
   background: $nds-colour-nice-grey-3;
@@ -7,18 +11,33 @@
   color: $nds-colour-link;
   cursor: pointer;
   display: block;
-  margin: rem(0 0 $nds-spacing-large);
+  line-height: 1;
+  margin: 0;
   padding: rem(
     $nds-spacing-medium $nds-spacing-large $nds-spacing-medium
       $nds-spacing-small
   );
   position: relative;
   text-align: left;
+  text-decoration: none;
   width: 100%;
+
+  &:visited {
+    color: $nds-colour-link;
+  }
 
   &:focus {
     @include nds-default-focus-style;
     z-index: 1;
+  }
+
+  + :global(.stacked-nav) {
+    display: none;
+
+    // Non-JS fallback
+    &:target {
+      display: block;
+    }
   }
 
   &[aria-expanded='false'] + :global(.stacked-nav) {
@@ -27,7 +46,10 @@
 
   &[aria-expanded='true'] {
     border-bottom: 0;
-    margin: 0;
+
+    .icon {
+      transform: translateY(-50%) rotate(180deg);
+    }
 
     + :global(.stacked-nav) {
       display: block;
@@ -36,10 +58,12 @@
 
   @include mq($from: sm) {
     display: none;
+  }
+}
 
-    &[aria-expanded] + :global(.stacked-nav) {
-      display: block;
-    }
+@include mq($from: sm) {
+  :global(.stacked-nav) {
+    display: block !important;
   }
 }
 
@@ -49,4 +73,5 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transition: all 0.25s ease;
 }
