@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 
 import { StackedNav, StackedNavLink } from "@nice-digital/nds-stacked-nav";
 import ChevronDownIcon from "@nice-digital/icons/lib/ChevronDown";
-import ChevronUpIcon from "@nice-digital/icons/lib/ChevronUp";
 
 import {
 	ChapterLevel1,
@@ -41,8 +40,8 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 	}, []);
 
 	return (
-		<>
-			{isClient && (
+		<div className={styles.wrapper}>
+			{isClient ? (
 				<button
 					type="button"
 					className={styles.toggleButton}
@@ -53,14 +52,19 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 					}`}
 				>
 					{currentChapter.fullItemName}{" "}
-					{isExpanded ? (
-						<ChevronUpIcon className={styles.icon} />
-					) : (
-						<ChevronDownIcon className={styles.icon} />
-					)}
+					<ChevronDownIcon className={styles.icon} />
 				</button>
+			) : (
+				<a className={styles.toggleButton} href="#topic-menu">
+					{currentChapter.fullItemName}{" "}
+					<ChevronDownIcon className={styles.icon} />
+				</a>
 			)}
-			<StackedNav aria-label={`${topic.topicName} chapters`}>
+			<StackedNav
+				aria-label={`${topic.topicName} chapters`}
+				className="mb--0"
+				id="topic-menu"
+			>
 				{topic.chapters.map(({ id, slug, fullItemName, subChapters }, i) => {
 					const shouldShowSubChapters =
 						id === currentChapter.id ||
@@ -96,6 +100,6 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 					);
 				})}
 			</StackedNav>
-		</>
+		</div>
 	);
 };

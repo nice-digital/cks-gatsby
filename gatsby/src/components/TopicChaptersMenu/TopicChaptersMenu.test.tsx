@@ -55,6 +55,11 @@ describe("TopicChaptersMenu", () => {
 		expect(screen.getByLabelText("Asthma chapters")).toBeInTheDocument();
 	});
 
+	it("should render id on navigation", () => {
+		render(<TopicChaptersMenu topic={topic} currentChapter={chapter1} />);
+		expect(screen.getByRole("navigation")).toHaveAttribute("id", "topic-menu");
+	});
+
 	it("should render nav item for each root chapter", () => {
 		render(<TopicChaptersMenu topic={topic} currentChapter={chapter1} />);
 		expect(screen.getByLabelText("Asthma chapters")).toBeInTheDocument();
@@ -128,6 +133,24 @@ describe("TopicChaptersMenu", () => {
 			expect(
 				screen.queryByText(chapter1.fullItemName, { selector: "button" })
 			).toBeNull();
+
+			spy.mockRestore();
+		});
+
+		it("should render mobile anchor to topic menu in static build", () => {
+			const spy = jest
+				.spyOn(React, "useLayoutEffect")
+				.mockImplementation(() => {
+					/*noop*/
+				});
+
+			render(<TopicChaptersMenu topic={topic} currentChapter={chapter1} />);
+
+			expect(
+				screen.queryByText(chapter1.fullItemName, {
+					selector: "a.toggleButton",
+				})
+			).toHaveAttribute("href", "#topic-menu");
 
 			spy.mockRestore();
 		});
