@@ -108,3 +108,6 @@ RewriteRule ^/Gilberts-syndrome /topics/gilberts-syndrome/ [L,R=301]
 RewriteRule ^/Menieres-disease /topics/menieres-disease/ [L,R=301]
 RewriteRule ^/Parkinsons-disease /topics/parkinsons-disease/ [L,R=301]
 RewriteRule ^/Raynauds-phenomenon /topics/raynauds-phenomenon/ [L,R=301]
+
+# CKS-556 'Hypertension - not diabetic' renamed to just 'Hypertension'
+RewriteRule ^/topics/hypertension-not-diabetic(.*)$ /topics/hypertension$1 [L,R=301]
