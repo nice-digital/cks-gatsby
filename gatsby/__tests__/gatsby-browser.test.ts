@@ -2,16 +2,15 @@ import { onClientEntry } from "../gatsby-browser";
 import { ReportHandler, Metric } from "web-vitals";
 
 jest.mock("web-vitals", () => {
-	const mockReportHandler = (
-		name: "CLS" | "FCP" | "FID" | "LCP" | "TTFB",
-		delta: number
-	) => (onReport: ReportHandler): void => {
-		onReport({
-			name,
-			delta,
-			id: "abc",
-		} as Metric);
-	};
+	const mockReportHandler =
+		(name: "CLS" | "FCP" | "FID" | "LCP" | "TTFB", delta: number) =>
+		(onReport: ReportHandler): void => {
+			onReport({
+				name,
+				delta,
+				id: "abc",
+			} as Metric);
+		};
 
 	return {
 		getCLS: mockReportHandler("CLS", 99),

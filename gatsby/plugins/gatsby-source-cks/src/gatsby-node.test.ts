@@ -55,7 +55,7 @@ describe("gatsby-node", () => {
 	});
 
 	describe("sourceNodes", () => {
-		const sourceNodesArgs = ({
+		const sourceNodesArgs = {
 			reporter: {
 				activityTimer: (): unknown => ({
 					start: (): void => void 0,
@@ -64,7 +64,7 @@ describe("gatsby-node", () => {
 				}),
 				info: (): void => void 0,
 			},
-		} as unknown) as SourceNodesArgs;
+		} as unknown as SourceNodesArgs;
 
 		const config = {
 			apiBaseUrl: "t",
@@ -137,7 +137,7 @@ describe("gatsby-node", () => {
 
 			createResolvers({
 				createResolvers: createResolversFn as unknown,
-				reporter: (reporter as unknown) as Reporter,
+				reporter: reporter as unknown as Reporter,
 			} as CreateResolversArgs);
 
 			const chapter = { slug: "test" };

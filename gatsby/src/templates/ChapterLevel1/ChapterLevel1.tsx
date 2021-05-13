@@ -22,14 +22,8 @@ export type ChapterLevel1PageProps = PageProps<null, ChapterPageContext>;
 const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 	pageContext: { chapter },
 }: ChapterLevel1PageProps) => {
-	const {
-		slug,
-		fullItemName,
-		htmlHeader,
-		summary,
-		topic,
-		subChapters,
-	} = chapter;
+	const { slug, fullItemName, htmlHeader, summary, topic, subChapters } =
+		chapter;
 
 	const topicPath = `/topics/${topic.slug}/`;
 

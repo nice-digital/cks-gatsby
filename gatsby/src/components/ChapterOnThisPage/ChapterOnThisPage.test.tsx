@@ -9,16 +9,15 @@ import {
 import { ChapterOnThisPage } from "./ChapterOnThisPage";
 import subChapers from "./subChapters.json";
 
-const querySelectorMockImpl = (slug: string, yPos: number) => (
-	selector: string
-) =>
-	({
-		getBoundingClientRect: () => ({
-			// Use a negative value for the dose heading to mock that we've scrolled to that heading
-			top: selector === `#${slug}` ? yPos : 101,
-		}),
-		getAttribute: (attrName: string) => (attrName === "id" ? slug : null),
-	} as Element);
+const querySelectorMockImpl =
+	(slug: string, yPos: number) => (selector: string) =>
+		({
+			getBoundingClientRect: () => ({
+				// Use a negative value for the dose heading to mock that we've scrolled to that heading
+				top: selector === `#${slug}` ? yPos : 101,
+			}),
+			getAttribute: (attrName: string) => (attrName === "id" ? slug : null),
+		} as Element);
 
 describe("ChapterOnThisPage", () => {
 	let renderResult: RenderResult;
