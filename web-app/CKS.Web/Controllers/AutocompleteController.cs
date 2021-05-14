@@ -14,7 +14,7 @@ namespace CKS.Web.Controllers
 	[Route("api/[controller]")]
 	public class AutocompleteController : ControllerBase
 	{
-		private const string TitleTypeAheadType = "title";
+		private const string KeywordTypeAheadType = "keyword";
 
 		private readonly ILogger<AutocompleteController> _logger;
 		private readonly ISearchProvider _provider;
@@ -47,10 +47,9 @@ namespace CKS.Web.Controllers
 			}
 
 			var autoCompleteResponses = from result in search.Results
-										let TitlePostfix = result.TypeAheadType == TitleTypeAheadType ? " (Topic)" : ""
 										select new AutocompleteItemResponse
 										{
-											Title = result.Title + TitlePostfix,
+											Title = result.Title,
 											TypeAheadType = result.TypeAheadType,
 											Link = GetLink(result)
 										};
@@ -98,14 +97,11 @@ namespace CKS.Web.Controllers
 
 		private string GetLink(TypeAhead typeAheadResult)
 		{
-			// Assume that 'title' results have a link directly to the result, rather than to the SERP
-			return typeAheadResult.TypeAheadType == TitleTypeAheadType && !string.IsNullOrEmpty(typeAheadResult.TypeAheadLink)
-				? typeAheadResult.TypeAheadLink
-				: new SearchUrl
-				{
-					Route = "/search/",
-					q = typeAheadResult.Title
-				}.ToString();
+			// Assume that 'keyword' results go direct to the SERP (ie /search/?q=TERM) and other types (e.g. topic or scenario) go direct to a path
+			return typeAheadResult.TypeAheadType == KeywordTypeAheadType
+				|| string.IsNullOrEmpty(typeAheadResult.TypeAheadLink)
+				? new SearchUrl { Route = "/search/", q = typeAheadResult.Title }.ToString()
+				: typeAheadResult.TypeAheadLink;
 		}
 
 	}

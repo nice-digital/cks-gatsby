@@ -152,6 +152,8 @@ module.exports = {
 			"/api",
 			createProxyMiddleware({
 				target: "http://localhost:5000/",
+				//target: "https://cks.nice.org.uk",
+				//target: "https://dev.cks.nice.org.uk",
 				changeOrigin: true,
 			})
 		);

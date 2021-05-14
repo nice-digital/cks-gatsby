@@ -1,11 +1,33 @@
 import React from "react";
 import { fireEvent, waitFor, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { navigate } from "gatsby";
 import { renderWithRouter } from "test-utils";
 import { useLocation } from "@reach/router";
 
 // Header is mocked globally in setup
 const { Header } = jest.requireActual("./Header");
+
+// Mix of topic, keyword and scenario results
+const mockAutocompleteEndPointSuggestions = [
+	{
+		Title: "Diabetes - type 1",
+		TypeAheadType: "topic",
+		Link: "/search/?q=Diabetes+-+type+1",
+	},
+	{
+		Title: "Diazepam",
+		TypeAheadType: "keyword",
+		Link: "/search/?q=Diazepam",
+	},
+	{
+		Title:
+			"How should I manage cardiovascular risk in an adult with type 2 diabetes?",
+		TypeAheadType: "topicScenario",
+		Link:
+			"/search/?q=How+should+I+manage+cardiovascular+risk+in+an+adult+with+type+2+diabetes%3f",
+	},
+];
 
 describe("Header", () => {
 	beforeEach(() => {
@@ -18,7 +40,9 @@ describe("Header", () => {
 		);
 
 		// Global nav uses a fetch to load autocomplete suggestions, and changing the input value triggers this fetch
-		fetchMock.mockResponseOnce(JSON.stringify([]));
+		fetchMock.mockResponseOnce(
+			JSON.stringify(mockAutocompleteEndPointSuggestions)
+		);
 
 		const contentStart = document.createElement("div");
 		contentStart.id = "content-start";
@@ -67,6 +91,46 @@ describe("Header", () => {
 			},
 			{ timeout: 2500 }
 		);
+	});
+
+	it("should append a label for keyword, topic and scenario suggestions", async () => {
+		renderWithRouter(<Header />);
+
+		userEvent.type(await screen.findByRole("combobox"), "dia");
+
+		await waitFor(() => {
+			const suggestedElements = screen.queryAllByRole("option");
+			expect(suggestedElements[0].textContent).toEqual(
+				"Diabetes - type 1 (CKS topic)"
+			);
+			expect(suggestedElements[1].textContent).toEqual("Diazepam (CKS search)");
+			expect(suggestedElements[2].textContent).toEqual(
+				"How should I manage cardiovascular risk in an adult with type 2 diabetes? (CKS topic - scenario)"
+			);
+		});
+	});
+
+	it("should use global autocomplete suggestion template when provided instead of default", async () => {
+		const autocompleteSuggestionTemplate = jest.fn(
+			(suggestion) => `<p>${suggestion.Title}</p>`
+		);
+		window.autocompleteSuggestionTemplate = autocompleteSuggestionTemplate;
+
+		renderWithRouter(<Header />);
+
+		userEvent.type(await screen.findByRole("combobox"), "dia");
+
+		await waitFor(() => {
+			expect(autocompleteSuggestionTemplate).toHaveBeenCalledTimes(
+				mockAutocompleteEndPointSuggestions.length
+			);
+			expect(autocompleteSuggestionTemplate.mock.calls[0][0]).toStrictEqual(
+				mockAutocompleteEndPointSuggestions[0]
+			);
+
+			const suggestedElements = screen.queryAllByRole("option");
+			expect(suggestedElements[0].innerHTML).toEqual("<>Diabetes - type 1</>");
+		});
 	});
 
 	it("should set search box default value from q querystring value", async () => {
