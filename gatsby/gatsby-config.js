@@ -23,11 +23,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-sitemap`,
 			options: {
-				exclude: [`/search/`],
-				serialize: ({ site, allSitePage }) =>
-					allSitePage.edges.map(({ node }) => ({
-						url: `${site.siteMetadata.siteUrl}${node.path}`,
-					})),
+				excludes: [`/search/`],
 			},
 		},
 		"gatsby-plugin-remove-generator",
