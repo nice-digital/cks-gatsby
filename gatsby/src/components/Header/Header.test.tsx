@@ -24,8 +24,7 @@ const mockAutocompleteEndPointSuggestions = [
 		Title:
 			"How should I manage cardiovascular risk in an adult with type 2 diabetes?",
 		TypeAheadType: "topicScenario",
-		Link:
-			"/search/?q=How+should+I+manage+cardiovascular+risk+in+an+adult+with+type+2+diabetes%3f",
+		Link: "/search/?q=How+should+I+manage+cardiovascular+risk+in+an+adult+with+type+2+diabetes%3f",
 	},
 ];
 
@@ -129,7 +128,9 @@ describe("Header", () => {
 			);
 
 			const suggestedElements = screen.queryAllByRole("option");
-			expect(suggestedElements[0].innerHTML).toEqual("<>Diabetes - type 1</>");
+			expect(suggestedElements[0].innerHTML).toEqual(
+				"<p>Diabetes - type 1</p>"
+			);
 		});
 	});
 
