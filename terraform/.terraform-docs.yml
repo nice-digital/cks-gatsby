@@ -1,6 +1,6 @@
 version: ""
 
-formatter: markdown table
+formatter: markdown
 
 header-from: main.tf
 footer-from: ""
