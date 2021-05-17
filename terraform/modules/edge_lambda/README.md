@@ -63,9 +63,9 @@ No modules.
 ## Outputs
 
 | Name                      | Description                                                                                                |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------- | --- |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | this_lambda_arn           | The ARN of the lambda. Will be of format arn:aws:lambda:us-east-1::functionname.                           |
-| this_lambda_qualified_arn | The qualified ARN of the lambda. Will be of format arn:aws:lambda:us-east-1::functionname:{#versionnumber} |     |
+| this_lambda_qualified_arn | The qualified ARN of the lambda. Will be of format arn:aws:lambda:us-east-1::functionname:{#versionnumber} |
 
 ## License
 
