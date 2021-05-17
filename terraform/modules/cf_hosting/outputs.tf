@@ -8,7 +8,7 @@ output this_s3_bucket_id {
 }
 
 output this_s3_bucket_website_domain {
-	description = "The name of the bucket."
+	description = "The name of the bucket webstie domain - used to upload files using aws cli tools."
 	value = aws_s3_bucket.s3_website_bucket.website_endpoint
 }
 
