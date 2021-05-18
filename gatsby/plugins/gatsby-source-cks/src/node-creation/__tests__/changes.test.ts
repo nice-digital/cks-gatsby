@@ -8,13 +8,13 @@ describe("createChangeNodes", () => {
 		createContentDigest = jest.fn(),
 		createNode = jest.fn();
 
-	const sourceNodesArgs: SourceNodesArgs = ({
+	const sourceNodesArgs: SourceNodesArgs = {
 		createNodeId,
 		createContentDigest,
 		actions: {
 			createNode,
 		},
-	} as unknown) as SourceNodesArgs;
+	} as unknown as SourceNodesArgs;
 
 	const changes = [
 		{

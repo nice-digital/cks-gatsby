@@ -11,33 +11,33 @@ import {
 	PartialTopicWithChapters,
 } from "src/types";
 
-const chapter_2_1 = ({
+const chapter_2_1 = {
 	fullItemName: "Changes",
 	id: "c2.1",
 	slug: "changes",
 	subChapters: [],
-} as unknown) as ChapterLevel2;
+} as unknown as ChapterLevel2;
 
-const chapter_2_2 = ({
+const chapter_2_2 = {
 	fullItemName: "Updates",
 	id: "c2.2",
 	slug: "updates",
 	subChapters: [],
-} as unknown) as ChapterLevel2;
+} as unknown as ChapterLevel2;
 
-const chapter2 = ({
+const chapter2 = {
 	fullItemName: "How up-to-date is this topic?",
 	id: "c2",
 	slug: "how-up-to-date-is-this-topic",
 	subChapters: [chapter_2_1, chapter_2_2],
-} as unknown) as ChapterLevel1;
+} as unknown as ChapterLevel1;
 
-const chapter1 = ({
+const chapter1 = {
 	fullItemName: "Summary",
 	id: "c1",
 	slug: "summary",
 	subChapters: [],
-} as unknown) as ChapterLevel1;
+} as unknown as ChapterLevel1;
 
 const topic: PartialTopicWithChapters = {
 	topicName: "Asthma",

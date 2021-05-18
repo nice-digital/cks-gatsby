@@ -7,13 +7,13 @@ describe("createTopicNodes", () => {
 		createContentDigest = jest.fn(),
 		createNode = jest.fn();
 
-	const sourceNodesArgs: SourceNodesArgs = ({
+	const sourceNodesArgs: SourceNodesArgs = {
 		createNodeId,
 		createContentDigest,
 		actions: {
 			createNode,
 		},
-	} as unknown) as SourceNodesArgs;
+	} as unknown as SourceNodesArgs;
 
 	const topics = [
 		{
@@ -68,11 +68,8 @@ describe("createTopicNodes", () => {
 
 	it("should store all fields on node except clinicalSpecialties and topicHtmlObjects", () => {
 		createTopicNodes(topics, sourceNodesArgs);
-		const {
-			topicId,
-			clinicalSpecialties,
-			topicHtmlObjects,
-		} = createNode.mock.calls[0][0];
+		const { topicId, clinicalSpecialties, topicHtmlObjects } =
+			createNode.mock.calls[0][0];
 		expect(topicId).toBe("topic1");
 		expect(clinicalSpecialties).toBeUndefined();
 		expect(topicHtmlObjects).toBeUndefined();

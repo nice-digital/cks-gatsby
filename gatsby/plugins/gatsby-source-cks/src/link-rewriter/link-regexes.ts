@@ -4,7 +4,8 @@
  * @example
  * <a class="topic-reference external-reference" href="/Topic/ViewTopic/a549c958-335f-4dcd-b76d-e9f87325d888">Chest pain</a>
  */
-export const topicAnchorRegex = /<a(?:(?!<a).)*href="(\/Topic\/ViewTopic\/(.{36}))".*?<\/a>/gi;
+export const topicAnchorRegex =
+	/<a(?:(?!<a).)*href="(\/Topic\/ViewTopic\/(.{36}))".*?<\/a>/gi;
 
 /**
  * Anchors to a chapter within the same topic.
@@ -24,4 +25,5 @@ export const chapterAnchorRegex = /<a(?:(?!<a).)*href="(#(.{36}))".*?<\/a>/gi;
  * 		chest pain
  * </a>
  */
-export const topicChapterAnchorRegex = /<a(?:(?!<a).)*href="(\/Topic\/ViewTopic\/(.{36})#(.{36}))".*?<\/a>/gi;
+export const topicChapterAnchorRegex =
+	/<a(?:(?!<a).)*href="(\/Topic\/ViewTopic\/(.{36})#(.{36}))".*?<\/a>/gi;

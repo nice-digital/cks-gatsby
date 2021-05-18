@@ -74,9 +74,10 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 	// See https://stackoverflow.com/a/59685929/486434 for as keyof JSX.IntrinsicElements explanation
 	const HeadingElementType = `h${headingLevel}` as keyof JSX.IntrinsicElements;
 
-	const headerText = useMemo(() => stripHtmlTags(chapter.htmlHeader), [
-		chapter.htmlHeader,
-	]);
+	const headerText = useMemo(
+		() => stripHtmlTags(chapter.htmlHeader),
+		[chapter.htmlHeader]
+	);
 
 	const htmlStringContentNoComments = useMemo(
 		() => stripHtmlComments(chapter.htmlStringContent),

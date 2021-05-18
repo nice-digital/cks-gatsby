@@ -57,7 +57,7 @@ const change4New = {
 };
 
 const getDefaultTestProps = (): WhatsNewPageProps =>
-	(({
+	({
 		data: {
 			site: {
 				siteMetadata: {
@@ -69,7 +69,7 @@ const getDefaultTestProps = (): WhatsNewPageProps =>
 				nodes: [change1Updated, change2New, change3Updated],
 			},
 		},
-	} as unknown) as WhatsNewPageProps);
+	} as unknown as WhatsNewPageProps);
 
 describe("What's new page", () => {
 	let props = getDefaultTestProps();

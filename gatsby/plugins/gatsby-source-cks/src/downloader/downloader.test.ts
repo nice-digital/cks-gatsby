@@ -31,15 +31,15 @@ const apiMocks = {
 	getAllPartialTopics: getAllPartialTopics as jest.Mock<
 		Promise<ApiTopicsResponse>
 	>,
-	getChangesSince: (getChangesSince as jest.Mock<
-		Promise<ApiTopicChangeResponse>
-	>).mockResolvedValue([]),
+	getChangesSince: (
+		getChangesSince as jest.Mock<Promise<ApiTopicChangeResponse>>
+	).mockResolvedValue([]),
 	getFullTopicCached: getFullTopicCached as jest.Mock<Promise<ApiFullTopic>>,
 };
 
 const cache = { set: jest.fn(), get: jest.fn() };
 
-const sourceNodesArgs: SourceNodesArgs = ({
+const sourceNodesArgs: SourceNodesArgs = {
 	cache,
 	reporter: {
 		createProgress: (): ProgressActivityTracker =>
@@ -56,7 +56,7 @@ const sourceNodesArgs: SourceNodesArgs = ({
 			} as ActivityTracker),
 		info: jest.fn(),
 	},
-} as unknown) as SourceNodesArgs;
+} as unknown as SourceNodesArgs;
 
 const testPartialTopic = {
 	id: "123",
