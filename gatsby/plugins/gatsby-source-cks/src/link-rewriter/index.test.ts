@@ -14,10 +14,10 @@ describe("link rewriter", () => {
 
 	const warn = jest.fn(),
 		error = jest.fn(console.error),
-		reporter = ({
+		reporter = {
 			warn,
 			error,
-		} as unknown) as Reporter;
+		} as unknown as Reporter;
 
 	afterEach(() => {
 		jest.restoreAllMocks();

@@ -7,7 +7,7 @@ import ChapterLevel1Page, { ChapterLevel1PageProps } from "./ChapterLevel1";
 import { ChapterLevel1, PartialChapter } from "../../types";
 
 const getDefaultTestProps = (): ChapterLevel1PageProps =>
-	(({
+	({
 		pageContext: {
 			chapter: {
 				id: "abc123",
@@ -42,7 +42,7 @@ const getDefaultTestProps = (): ChapterLevel1PageProps =>
 				},
 			} as ChapterLevel1,
 		},
-	} as unknown) as ChapterLevel1PageProps);
+	} as unknown as ChapterLevel1PageProps);
 
 describe("ChapterLevel1", () => {
 	let props = getDefaultTestProps();

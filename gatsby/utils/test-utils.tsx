@@ -22,7 +22,7 @@ export const renderWithRouter = (
 	history,
 });
 
-export const textContentMatcher = (text: string): MatcherFunction => (
-	_,
-	element
-): boolean => element?.textContent?.trim() == text;
+export const textContentMatcher =
+	(text: string): MatcherFunction =>
+	(_, element): boolean =>
+		element?.textContent?.trim() == text;
