@@ -25,6 +25,10 @@
   &[open] {
     summary {
       margin-bottom: rem($nds-spacing-medium);
+
+      &:after {
+        content: 'Hide';
+      }
     }
 
     svg {
