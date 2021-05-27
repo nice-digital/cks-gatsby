@@ -43,10 +43,6 @@
     flex-wrap: wrap;
     list-style: none;
 
-    &:focus {
-      @include nds-default-focus-style;
-    }
-
     &::marker,
     &::-webkit-details-marker {
       display: none;
@@ -59,18 +55,38 @@
     }
 
     svg {
+      display: none;
       margin-right: rem($nds-spacing-small);
     }
 
-    &:after {
-      color: $nds-colour-link;
-      content: 'Show';
-      text-decoration: underline;
-    }
+    // Hack for IE11 whilst we still support it: https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/
+    @supports not (-ms-ime-align: auto) {
+      svg {
+        display: block;
+      }
 
-    &:hover,
-    &:hover:after {
-      color: $nds-colour-link-hover;
+      &:focus {
+        @include nds-default-focus-style;
+      }
+
+      &:focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      &:focus-visible {
+        @include nds-default-focus-style;
+      }
+
+      &:after {
+        color: $nds-colour-link;
+        content: 'Show';
+        text-decoration: underline;
+      }
+
+      &:hover,
+      &:hover:after {
+        color: $nds-colour-link-hover;
+      }
     }
   }
 }
