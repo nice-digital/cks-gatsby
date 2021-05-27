@@ -135,35 +135,12 @@ describe("ChapterBody", () => {
 			);
 		});
 
-		it("should render toggle button for basis for recommendations", () => {
-			expect(
-				screen.getByText(textContentMatcher("Show Basis for recommendation"))
-			).toBeInTheDocument();
-		});
-
-		it("should hide basis for recommendation by default", () => {
-			const toggleButton = screen.getByText(
-				textContentMatcher("Show Basis for recommendation")
+		it("should render details and summary for basis for recommendations", () => {
+			const summary = screen.getByText(
+				textContentMatcher("Basis for recommendation"),
+				{ selector: "summary" }
 			);
-			const bodyText = screen.getByText(
-				"These recommendations are based on nothing"
-			);
-			expect(toggleButton).toHaveAttribute("aria-expanded", "false");
-			// eslint-disable-next-line testing-library/no-node-access
-			expect(bodyText.parentElement).toHaveAttribute("aria-hidden", "true");
-		});
-
-		it("should expand basis for recommendation on button click", () => {
-			const toggleButton = screen.getByText(
-				textContentMatcher("Show Basis for recommendation")
-			);
-			userEvent.click(toggleButton);
-			const bodyText = screen.getByText(
-				"These recommendations are based on nothing"
-			);
-			expect(toggleButton).toHaveAttribute("aria-expanded", "true");
-			// eslint-disable-next-line testing-library/no-node-access
-			expect(bodyText.parentElement).toHaveAttribute("aria-hidden", "false");
+			expect(summary).toBeInTheDocument();
 		});
 	});
 });

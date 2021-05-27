@@ -1,14 +1,6 @@
-import React, {
-	useState,
-	useEffect,
-	useCallback,
-	useMemo,
-	MouseEvent,
-	KeyboardEvent,
-} from "react";
+import React, { useMemo } from "react";
 
 import ChevronDownIcon from "@nice-digital/icons/lib/ChevronDown";
-import ChevronUpIcon from "@nice-digital/icons/lib/ChevronUp";
 import "@nice-digital/nds-table/scss/table.scss";
 
 import { stripHtmlTags, stripHtmlComments } from "../../utils/html-utils";
@@ -17,9 +9,6 @@ import { BasisChapterTitle } from "../../utils/constants";
 import { ChapterLevel1, ChapterLevel2 } from "../../types";
 
 import styles from "./ChapterBody.module.scss";
-
-const EnterKeyCode = 13;
-const SpaceKeyCode = 32;
 
 interface ChapterBodyProps {
 	/** The chapter, either level 1 or 2, for which to render the body */
@@ -48,28 +37,6 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 }: ChapterBodyProps) => {
 	const isBasis = chapter.fullItemName == BasisChapterTitle;
 
-	const [isBasisExpanded, setIsBasisExpanded] = useState(true);
-
-	const [isClient, setIsClient] = useState(false);
-	useEffect(() => {
-		setIsClient(true);
-		setIsBasisExpanded(false);
-	}, []);
-
-	const basisClickHandler = useCallback(
-		(e: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLButtonElement>) => {
-			if (e.type === "keydown") {
-				const { which } = e as KeyboardEvent<HTMLButtonElement>;
-				if (which !== EnterKeyCode && which !== SpaceKeyCode) return;
-				// Stop 'click' event from firing too
-				e.preventDefault();
-			} else if (e.type === "click") e.currentTarget.blur();
-
-			setIsBasisExpanded((isExpanded) => !isExpanded);
-		},
-		[]
-	);
-
 	// Make sure heading levels are always correct for the depth of chapter
 	// See https://stackoverflow.com/a/59685929/486434 for as keyof JSX.IntrinsicElements explanation
 	const HeadingElementType = `h${headingLevel}` as keyof JSX.IntrinsicElements;
@@ -84,58 +51,41 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 		[chapter.htmlStringContent]
 	);
 
+	const body = htmlStringContentNoComments ? (
+		<div
+			className={styles.body}
+			dangerouslySetInnerHTML={{
+				__html: chapter.htmlStringContent,
+			}}
+		/>
+	) : null;
+
 	return (
-		<section
-			aria-labelledby={chapter.slug}
-			className={`${styles.wrapper} ${
-				isClient && isBasis ? styles.basisWrapper : ""
-			}`}
-		>
-			{isClient && isBasis ? (
-				<div className={styles.headerWrapper}>
+		<section aria-labelledby={chapter.slug} className={styles.wrapper}>
+			{isBasis ? (
+				<details className={styles.details}>
+					<summary>
+						<HeadingElementType
+							className="h4"
+							id={chapter.slug}
+							dangerouslySetInnerHTML={{ __html: headerText }}
+						/>
+						<ChevronDownIcon />
+					</summary>
+					{body}
+				</details>
+			) : (
+				<>
 					<HeadingElementType
-						className="h4"
 						id={chapter.slug}
 						dangerouslySetInnerHTML={{ __html: headerText }}
+						className={
+							headingLevel == 2 && !showHeading ? "visually-hidden" : undefined
+						}
 					/>
-					<button
-						type="button"
-						className={styles.toggleBtn}
-						onClick={basisClickHandler}
-						onKeyDown={basisClickHandler}
-						aria-expanded={isBasisExpanded}
-						data-tracking="basis"
-					>
-						{isBasisExpanded ? (
-							<>
-								<ChevronUpIcon /> Hide
-							</>
-						) : (
-							<>
-								<ChevronDownIcon /> Show
-							</>
-						)}{" "}
-						<span className="visually-hidden">{headerText}</span>
-					</button>
-				</div>
-			) : (
-				<HeadingElementType
-					id={chapter.slug}
-					dangerouslySetInnerHTML={{ __html: headerText }}
-					className={
-						headingLevel == 2 && !showHeading ? "visually-hidden" : undefined
-					}
-				/>
+					{body}
+				</>
 			)}
-			{htmlStringContentNoComments ? (
-				<div
-					className={styles.body}
-					aria-hidden={isBasis && !isBasisExpanded}
-					dangerouslySetInnerHTML={{
-						__html: chapter.htmlStringContent,
-					}}
-				/>
-			) : null}
 			{isLevel2(chapter) &&
 				chapter.subChapters.map((subChapter) => (
 					<ChapterBody

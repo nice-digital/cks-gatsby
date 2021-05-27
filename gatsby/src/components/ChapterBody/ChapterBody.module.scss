@@ -16,80 +16,63 @@
   }
 }
 
-.basisWrapper {
+.details {
   border: 1px solid $nds-colour-border;
   margin-top: rem($nds-spacing-medium);
   max-width: 66ch;
+  padding: rem($nds-spacing-medium);
 
-  .headerWrapper > :first-child {
-    margin-top: 0;
-  }
+  &[open] {
+    summary {
+      margin-bottom: rem($nds-spacing-medium);
+    }
 
-  .body {
-    padding: rem(0 $nds-spacing-medium $nds-spacing-medium $nds-spacing-medium);
-
-    > :last-child {
-      margin-bottom: 0;
+    svg {
+      transform: scaleY(-1);
     }
   }
-}
 
-.headerWrapper {
-  padding: rem($nds-spacing-medium);
-  position: relative;
-}
+  summary {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 
-.toggleBtn {
-  @include nds-link-default;
-  appearance: none;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  display: block;
-  margin-top: rem(-$nds-spacing-small);
-  padding: 0;
+    &:focus {
+      @include nds-default-focus-style;
+    }
 
-  &:after {
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
 
-  svg {
-    @include nds-font-size(1);
-    color: $nds-colour-nice-rich-black;
-    margin-right: rem($nds-spacing-small);
-    vertical-align: text-bottom;
-  }
+    :global(.h4) {
+      flex: 1 1 100%;
+      margin-bottom: rem($nds-spacing-small);
+      margin-top: 0;
+    }
 
-  &:hover svg {
-    color: $nds-colour-link-hover;
+    svg {
+      margin-right: rem($nds-spacing-small);
+    }
+
+    &:after {
+      color: $nds-colour-link;
+      content: 'Show';
+      text-decoration: underline;
+    }
+
+    &:hover,
+    &:hover:after {
+      color: $nds-colour-link-hover;
+    }
   }
 }
 
 .body {
-  &[aria-hidden='true'] {
-    display: none;
-  }
-}
-
-@media print {
-  .basisWrapper {
-    .headerWrapper > :first-child {
-      margin-bottom: 0;
-    }
-
-    .body {
-      &[aria-hidden='true'] {
-        display: block;
-      }
-    }
-
-    .toggleBtn {
-      display: none;
-    }
+  > :last-child {
+    margin-bottom: 0;
   }
 }
