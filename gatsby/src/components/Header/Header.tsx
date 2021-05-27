@@ -75,6 +75,8 @@ export const Header: React.FC = () => {
 					autocomplete: {
 						suggestions: "/api/autocomplete",
 						suggestionTemplate: (suggestion) => {
+							if (!suggestion || !suggestion.Link) return "";
+
 							// Allow passing in a custom suggestion template externally so we can a/b test them
 							if (window.autocompleteSuggestionTemplate)
 								return window.autocompleteSuggestionTemplate(suggestion);
