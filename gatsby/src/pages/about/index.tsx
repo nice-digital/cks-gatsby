@@ -47,6 +47,11 @@ const AboutPage: React.FC = () => {
 						and funded by NICE.
 					</p>
 					<p>
+						For clarification, CKS are not equivalent to NICE guidance as they
+						have not been produced using a NICE process, nor are they signed off
+						by NICE guidance executive.
+					</p>
+					<p>
 						Topics are written by an expert multidisciplinary team with
 						experience of primary care, supported by a network of over 6000
 						specialist external reviewers.
