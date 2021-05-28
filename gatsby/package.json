@@ -54,7 +54,7 @@
   "devDependencies": {
     "@nice-digital/browserslist-config": "^2.0.1",
     "@nice-digital/design-system": "^1.2.10",
-    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#501d78ee50a15350ad6384b10c841e320ab045de",
+    "@nice-digital/global-nav": "git://github.com/nice-digital/global-nav.git#d9692aa594cfbc91ff6c6d6c8ab07f46d20c09e1",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^13.1.9",
