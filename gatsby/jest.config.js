@@ -19,4 +19,5 @@ module.exports = {
 	testPathIgnorePatterns: ["/node_modules/", ".cache"],
 	setupFilesAfterEnv: ["./jest.setup.ts"],
 	testURL: "https://cks-gatsby-tests.nice.org.uk/",
+	testEnvironment: "jsdom",
 };

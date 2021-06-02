@@ -95,16 +95,11 @@ describe("Search Page", () => {
 	it("should fall back to error message if the response doesn't come back", async () => {
 		fetch.mockReject(new Error("Something's gone wrong!"));
 		renderWithRouter(<SearchPage />);
-		await waitFor(() => {
-			expect(
-				screen.queryByText(
-					textContentMatcher("Sorry, there is a problem with search"),
-					{
-						selector: "h1",
-					}
-				)
-			).toBeInTheDocument();
-		});
+		expect(
+			await screen.findByRole("heading", {
+				name: "Sorry, there is a problem with search",
+			})
+		).toBeInTheDocument();
 	});
 
 	describe("Screen reader announcements", () => {

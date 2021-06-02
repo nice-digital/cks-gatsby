@@ -21,7 +21,7 @@ namespace CKS.Web.Test.UnitTests.Controllers
 
 		// Use 1 'title' (topic) result and one keyword result to test different scenarios
 		private static readonly List<TypeAhead> ResultsList = new List<TypeAhead>() {
-			new TypeAhead { Title = "Diabetes - type 1", TypeAheadType = "title", TypeAheadLink = "/topics/diabetes-type-1/" },
+			new TypeAhead { Title = "Diabetes - type 1", TypeAheadType = "topic", TypeAheadLink = "/topics/diabetes-type-1/" },
 			new TypeAhead { Title = "diabetes", TypeAheadType = "keyword", TypeAheadLink = "/search?q=diabetes" },
 		};
 
@@ -87,14 +87,7 @@ namespace CKS.Web.Test.UnitTests.Controllers
 		}
 
 		[Fact]
-		public void AutocompleteAppendsTopicForTitleResults()
-		{
-			var responseData = (autocompleteController.Get(new SearchUrl()).Value as IEnumerable<AutocompleteItemResponse>).ToList();
-			responseData[0].Title.ShouldBe("Diabetes - type 1 (Topic)");
-		}
-
-		[Fact]
-		public void AutocompleteUsesTypeAheadLinkForTitleResults()
+		public void AutocompleteUsesTypeAheadLinkForNonKeywordResults()
 		{
 			var responseData = (autocompleteController.Get(new SearchUrl()).Value as IEnumerable<AutocompleteItemResponse>).ToList();
 			responseData[0].Link.ShouldBe("/topics/diabetes-type-1/");

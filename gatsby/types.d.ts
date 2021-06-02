@@ -1,3 +1,4 @@
+import { AutoCompleteOptions } from "@nice-digital/global-nav";
 export {};
 
 // Mock window.dataLayer, part of GTM. Global nav header relies on this
@@ -13,5 +14,6 @@ export type DataLayerEntry = {
 declare global {
 	interface Window {
 		dataLayer: Array<DataLayerEntry>;
+		autocompleteSuggestionTemplate?: AutoCompleteOptions["suggestionTemplate"];
 	}
 }

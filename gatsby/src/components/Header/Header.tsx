@@ -72,7 +72,22 @@ export const Header: React.FC = () => {
 				auth={false}
 				search={{
 					placeholder: "Search CKS…",
-					autocomplete: "/api/autocomplete",
+					autocomplete: {
+						suggestions: "/api/autocomplete",
+						suggestionTemplate: (suggestion) => {
+							if (!suggestion || !suggestion.Link) return "";
+
+							// Allow passing in a custom suggestion template externally so we can a/b test them
+							if (window.autocompleteSuggestionTemplate)
+								return window.autocompleteSuggestionTemplate(suggestion);
+
+							let typeLabel = "CKS search";
+							if (suggestion.TypeAheadType === "topic") typeLabel = "CKS topic";
+							else if (suggestion.TypeAheadType === "topicScenario")
+								typeLabel = "CKS topic - scenario";
+							return `<a href="${suggestion.Link}">${suggestion.Title} (${typeLabel})</a>`;
+						},
+					},
 					onSearching: (e): void => {
 						navigate("/search/?q=" + encodeURIComponent(e.query));
 					},
