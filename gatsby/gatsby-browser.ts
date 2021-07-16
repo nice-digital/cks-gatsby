@@ -26,7 +26,10 @@ export const onRouteUpdate = ({
 		// AND because it doesn't use requestAnimationFrame to delay until the page title has been updated
 
 		const sendPageView = () => {
-			window.dataLayer.push({ location: location.href, 'referrer': prevLocation.href });
+			window.dataLayer.push({
+				location: location.href,
+				referrer: prevLocation.href,
+			});
 			// Don't consider hash changes to be a page view - pageviews only happy when the path changes
 			if (prevPath != path) window.dataLayer.push({ event: "pageview" });
 		};
@@ -42,7 +45,10 @@ export const onRouteUpdate = ({
 			setTimeout(sendPageView, 32);
 		}
 	} else {
-		window.dataLayer.push({ location: location.href, 'referrer': document.referrer });
+		window.dataLayer.push({
+			location: location.href,
+			referrer: document.referrer,
+		});
 	}
 };
 
