@@ -7,7 +7,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="NICE.Logging" Version="6.0.24" />
-		<PackageReference Include="NICE.Search" Version="2.1.1101" />
+		<PackageReference Include="NICE.Search.HttpClient" Version="2.1.1330-SRCH-611-Sprint-1" />
 	</ItemGroup>
 
 </Project>

@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using NICE.Search.Common.Enums;
 using NICE.Search.Common.Interfaces;
-using NICE.Search.Providers;
+using NICE.Search.HttpClient;
 using System;
 using System.IO;
 
@@ -27,15 +27,24 @@ namespace CKS.Web
 		{
 			services.AddRouting(options => options.LowercaseUrls = true);
 
+			/*TODO:Uncomment this to rollback to legacy NICE.Search Client
 			var environmentString = Configuration.GetValue<string>("ElasticSearchEnvironment");
 			ApplicationEnvironment environmentAsEnum;
 			if (Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum))
 			{
-				services.AddSingleton<ISearchProvider, SearchProvider>(ISearchProvider => new SearchProvider(environmentAsEnum));
+				services.AddSingleton<ISearchProvider, SearchApiProvider>(ISearchProvider => new SearchApiProvider(environmentAsEnum));
+			}*/
+			var environmentString = Configuration.GetValue<string>("SearchApiUrl");
+			ApplicationEnvironment environmentAsEnum;
+			if (Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum))
+			{
+				var indexToQuery = "cks";
+				var httpClientWrapper = new HttpClientWrapper();
+				services.AddSingleton<ISearchProvider, SearchHttpClient>(ISearchProvider => new SearchHttpClient(environmentString, indexToQuery, httpClientWrapper));
 			}
 			else
 			{
-				throw new Exception("ElasticSearchEnvironment app setting could not be parsed");
+				throw new Exception("SearchApiUrl app setting could not be parsed");
 			}
 
 			services.AddControllers();
