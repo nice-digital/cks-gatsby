@@ -33,19 +33,16 @@ namespace CKS.Web
 			if (Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum))
 			{
 				services.AddSingleton<ISearchProvider, SearchApiProvider>(ISearchProvider => new SearchApiProvider(environmentAsEnum));
-			}*/
-			var environmentString = Configuration.GetValue<string>("SearchApiUrl");
-			ApplicationEnvironment environmentAsEnum;
-			if (Enum.TryParse<ApplicationEnvironment>(environmentString, out environmentAsEnum))
-			{
-				var indexToQuery = "cks";
-				var httpClientWrapper = new HttpClientWrapper();
-				services.AddSingleton<ISearchProvider, SearchHttpClient>(ISearchProvider => new SearchHttpClient(environmentString, indexToQuery, httpClientWrapper));
 			}
 			else
 			{
-				throw new Exception("SearchApiUrl app setting could not be parsed");
+				throw new Exception("ElasticSearchEnvironment app setting could not be parsed");
 			}
+			 */
+			var environmentString = Configuration.GetValue<string>("SearchApiUrl");
+			var indexToQuery = "cks";
+			var httpClientWrapper = new HttpClientWrapper();
+			services.AddSingleton<ISearchProvider, SearchHttpClient>(ISearchProvider => new SearchHttpClient(environmentString, indexToQuery, httpClientWrapper));
 
 			services.AddControllers();
 		}
