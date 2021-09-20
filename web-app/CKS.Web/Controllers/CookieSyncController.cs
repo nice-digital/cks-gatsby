@@ -18,6 +18,7 @@ namespace CKS.Web.Controllers
 			// where cookies get restricted to 7 days
 			SetCookie("_ga", 365 * 2);
 			SetCookie("_gaexp", 90);
+			SetCookie("_ga_31KBXFZW1W", 90);
 
 			return new JsonResult(true);
 		}
