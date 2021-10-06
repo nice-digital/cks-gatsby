@@ -8,7 +8,7 @@ output s3_hosting_bucket_id {
 }
 
 output s3_hosting_website_domain {
-	description = "The name of the bucket."
+	description = "The website hosting domain of the s3 bucket"
 	value = "http://${module.cf_hosting.this_s3_bucket_website_domain}"
 }
 
