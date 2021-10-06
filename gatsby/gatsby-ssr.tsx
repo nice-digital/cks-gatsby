@@ -9,7 +9,7 @@ export const onPreRenderHTML = ({
 
 	components.push(
 		<script
-			src="https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
+			src="https://alpha-cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
 			type="text/javascript"
 			key="cookie-banner"
 			async
