@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { graphql, Link } from "gatsby";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { Hero } from "@nice-digital/nds-hero";
@@ -17,57 +17,33 @@ type IndexProps = {
 		allSpecialities: {
 			nodes: PartialSpeciality[];
 		};
-		allCksTopic: {
+		allTopicNames: {
+			distinct: string[];
+		};
+		allTopicNameAliases: {
 			distinct: string[];
 		};
 	};
 };
 
-const alphabet = [
-	"a",
-	"b",
-	"c",
-	"d",
-	"e",
-	"f",
-	"g",
-	"h",
-	"i",
-	"j",
-	"k",
-	"l",
-	"m",
-	"n",
-	"o",
-	"p",
-	"q",
-	"r",
-	"s",
-	"t",
-	"u",
-	"v",
-	"w",
-	"x",
-	"y",
-	"z",
-];
+const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 const IndexPage: React.FC<IndexProps> = ({
 	data: {
 		allSpecialities: { nodes: specialitiesNodes },
-		allCksTopic: { distinct: topicNames },
+		allTopicNames: { distinct: topicNames },
+		allTopicNameAliases: { distinct: topicNameAliases },
 	},
 }: IndexProps) => {
-	const linkableLetters = Array.from(
-		new Set(topicNames.map((topicName) => topicName.charAt(0).toLowerCase()))
+	const linkableLetters = useMemo(
+		() =>
+			new Set(
+				[...topicNames, ...topicNameAliases].map((name) =>
+					name[0].toLowerCase()
+				)
+			),
+		[topicNames, topicNameAliases]
 	);
-
-	const allTopicButtons = alphabet.map((letter) => {
-		return {
-			letter,
-			linkable: linkableLetters.includes(letter),
-		};
-	});
 
 	return (
 		<Layout>
@@ -97,10 +73,10 @@ const IndexPage: React.FC<IndexProps> = ({
 						aria-describedby="topics-a-to-z-desc"
 						data-tracking="topics-a-to-z"
 					>
-						{allTopicButtons.map(({ letter, linkable }) => (
+						{alphabet.map((letter) => (
 							<Letter
 								key={`alphabet_${letter}`}
-								to={linkable && `/topics/#${letter}`}
+								to={linkableLetters.has(letter) && `/topics/#${letter}`}
 							>
 								{letter.toUpperCase()}
 							</Letter>
@@ -167,8 +143,12 @@ export const query = graphql`
 				...PartialSpeciality
 			}
 		}
-		allCksTopic {
+		allTopicNames: allCksTopic {
 			distinct(field: topicName)
+		}
+		allTopicNameAliases: allCksTopic {
+			# GraphQL flattens this array of arrays for us
+			distinct(field: aliases)
 		}
 	}
 `;

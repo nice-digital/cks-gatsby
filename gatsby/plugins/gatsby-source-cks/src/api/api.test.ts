@@ -72,6 +72,7 @@ describe("api", () => {
 			cache = {
 				get: cacheGet,
 				set: cacheSet,
+				del: jest.fn(),
 				name: "",
 				directory: "",
 			} as GatsbyCache;

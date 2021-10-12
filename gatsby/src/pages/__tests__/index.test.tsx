@@ -28,13 +28,19 @@ const topics = [
 	"DMARDs",
 ];
 
+const topicAliases = [
+	"Kidney injury - acute",
+	"Z-drug and benzodiazepine withdrawal",
+];
+
 describe("Home page", () => {
 	beforeEach(() => {
 		renderWithRouter(
 			<IndexPage
 				data={{
 					allSpecialities: { nodes: specialities },
-					allCksTopic: { distinct: topics },
+					allTopicNames: { distinct: topics },
+					allTopicNameAliases: { distinct: topicAliases },
 				}}
 			/>
 		);
@@ -49,10 +55,12 @@ describe("Home page", () => {
 	});
 
 	describe("Topic list", () => {
-		it("should render an A-Z link for any topics that begin with that letter", () => {
+		it("should render an A-Z link for any topics and aliases that begin with that letter", () => {
 			expect(screen.queryByText("A")?.tagName).toBe("A");
 			expect(screen.queryByText("B")?.tagName).toBe("A");
 			expect(screen.queryByText("D")?.tagName).toBe("A");
+			expect(screen.queryByText("K")?.tagName).toBe("A");
+			expect(screen.queryByText("Z")?.tagName).toBe("A");
 		});
 
 		it("should not provide an A-Z link if there are no topics beginning with that letter", () => {
