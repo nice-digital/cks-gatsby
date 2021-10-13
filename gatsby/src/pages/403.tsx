@@ -2,7 +2,6 @@ import React from "react";
 import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 import { PageHeader } from "@nice-digital/nds-page-header";
-import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 const ForbiddenPage: React.FC = () => {
