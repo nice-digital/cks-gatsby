@@ -64,7 +64,7 @@ export const ChapterBody: React.FC<ChapterBodyProps> = ({
 		<section aria-labelledby={chapter.slug} className={styles.wrapper}>
 			{isBasis ? (
 				<details className={styles.details}>
-					<summary>
+					<summary data-tracking="basis">
 						<HeadingElementType
 							className="h4"
 							id={chapter.slug}
