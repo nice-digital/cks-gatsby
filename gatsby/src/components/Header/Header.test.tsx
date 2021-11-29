@@ -52,11 +52,8 @@ describe("Header", () => {
 		renderWithRouter(<Header />);
 
 		const cksAnchor = await screen.findByText(
-			(_content, element) =>
-				element?.textContent ===
-				// Odd spacing because of the nested spans inside global nav
-				"CKS Clinical Knowledge SummariesClinical Knowledge Summaries",
-			{ selector: "a" }
+			(_content, element) => element?.textContent === "CKS",
+			{ selector: "button" }
 		);
 
 		expect(cksAnchor.getAttribute("aria-current")).toBe("true");
@@ -82,7 +79,12 @@ describe("Header", () => {
 	it("should use gatsby navigate when clicking a global nav link with a relative url", async () => {
 		renderWithRouter(<Header />);
 
-		fireEvent.click(await screen.findByText("About CKS"), { button: 0 });
+		fireEvent.click(
+			await screen.findByText("About CKS", {
+				selector: "a[href='/about/']",
+			}),
+			{ button: 0 }
+		);
 
 		await waitFor(
 			() => {
