@@ -71,11 +71,13 @@ When(/^I click the ([^"]*) breadcrumb$/, async (breadcrumbText: string) => {
 When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 	const pageTitle = await browser.getTitle(),
 		urlStr = await browser.getUrl(),
-		selector = `a=${linkText}`;
+		selector = `a=${linkText}`,
+		// Look for anchors within main to avoid conflicting with A-Z/topic links in the Global Nav
+		contextSelector = "main";
 
-	await scrollInToView(selector);
+	await scrollInToView(selector, contextSelector);
 
-	const element = await $(selector);
+	const element = await (await $(contextSelector)).$(selector);
 	await element.click();
 
 	await waitForUrlToChange(urlStr);
