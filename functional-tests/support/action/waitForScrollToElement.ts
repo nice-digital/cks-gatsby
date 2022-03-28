@@ -10,11 +10,13 @@ import { windowIsScrolledToBottom } from "./windowIsScrolledToBottom";
  */
 export async function waitForScrollToElement(
 	selector: string,
-	timeout = 5000
+	timeout = 5000,
+	contextSelector?: string
 ): Promise<void> {
 	await browser.waitUntil(
 		async () =>
-			(await isAtTopOfScreen(selector)) || (await windowIsScrolledToBottom()),
+			(await isAtTopOfScreen(selector, contextSelector)) ||
+			(await windowIsScrolledToBottom()),
 		{
 			timeout,
 			timeoutMsg: `Element ${selector} is not visible after scrolling after ${timeout}ms`,

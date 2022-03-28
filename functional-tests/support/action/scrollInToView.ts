@@ -2,10 +2,15 @@ import { checkIfElementExists } from "@nice-digital/wdio-cucumber-steps/lib/supp
 
 import { waitForScrollToElement } from "./waitForScrollToElement";
 
-export async function scrollInToView(selector: string) {
+export async function scrollInToView(
+	selector: string,
+	contextSelector?: string
+) {
 	await checkIfElementExists(selector);
 
-	const element = await $(selector);
+	const element = contextSelector
+		? await (await $(contextSelector)).$(selector)
+		: await $(selector);
 	await element.scrollIntoView();
-	await waitForScrollToElement(selector);
+	await waitForScrollToElement(selector, 5000, contextSelector);
 }
