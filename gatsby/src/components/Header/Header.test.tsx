@@ -52,7 +52,8 @@ describe("Header", () => {
 		renderWithRouter(<Header />);
 
 		const cksAnchor = await screen.findByText(
-			(_content, element) => element?.textContent === "CKS",
+			(_content, element) =>
+				element?.textContent === "Clinical Knowledge Summaries (CKS)",
 			{ selector: "button" }
 		);
 
