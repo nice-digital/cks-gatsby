@@ -325,15 +325,6 @@ const NoResults: React.FC<NoResultsProps> = ({
 					<a
 						rel="noreferrer"
 						target="_blank"
-						href={`https://www.evidence.nhs.uk/search?q=${searchText}`}
-					>
-						Evidence search
-					</a>
-				</li>
-				<li>
-					<a
-						rel="noreferrer"
-						target="_blank"
 						href={`https://www.nice.org.uk/search?om=[{%22ndt%22:[%22Guidance%22]}]&ps=15&q=${searchText}&sp=on`}
 					>
 						NICE guidance
@@ -348,13 +339,6 @@ const NoResults: React.FC<NoResultsProps> = ({
 				Drug and prescribing information for healthcare professionals. A
 				reference for correct dosage, indication, interaction and side effects
 				of drugs.
-			</p>
-			<h5>Evidence search</h5>
-			<p>
-				A search engine for selected, authoritative evidence in health, social
-				care and public health. Brings together high-quality evidence from
-				hundreds of trusted sources. Includes guidance, systematic reviews,
-				evidence summaries, and patient information.
 			</p>
 			<h5>NICE guidance</h5>
 			<p>
