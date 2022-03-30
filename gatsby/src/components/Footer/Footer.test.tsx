@@ -8,6 +8,6 @@ describe("Footer", () => {
 	it("should render global nav", async () => {
 		render(<Footer />);
 
-		expect(await screen.findByText("NICE Pathways")).toBeInTheDocument();
+		expect(await screen.findByText("Life sciences")).toBeInTheDocument();
 	});
 });
