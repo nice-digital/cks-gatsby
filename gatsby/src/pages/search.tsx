@@ -289,7 +289,7 @@ const NoResults: React.FC<NoResultsProps> = ({
 			<p>Try browsing for topics with our:</p>
 			<ul>
 				<li>
-					<Link to={"/topics/"}>A-Z list</Link>
+					<Link to={"/topics/"}>A to Z list</Link>
 				</li>
 				<li>
 					<Link to={"/specialities/"}>Clinical specialities</Link>
@@ -307,7 +307,7 @@ const NoResults: React.FC<NoResultsProps> = ({
 					<a
 						rel="noreferrer"
 						target="_blank"
-						href={`https://bnf.nice.org.uk/#Search?q=${searchText}`}
+						href={`https://bnf.nice.org.uk/search/?q=${searchText}`}
 					>
 						BNF
 					</a>
@@ -316,7 +316,7 @@ const NoResults: React.FC<NoResultsProps> = ({
 					<a
 						rel="noreferrer"
 						target="_blank"
-						href={`https://bnfc.nice.org.uk/#Search?q=${searchText}`}
+						href={`https://bnfc.nice.org.uk/search/?q=${searchText}`}
 					>
 						BNFc
 					</a>
