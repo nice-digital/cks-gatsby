@@ -6,7 +6,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 		<PackageReference Include="NICE.Logging" Version="6.0.24" />
 		<PackageReference Include="NICE.Search.HttpClient" Version="2.1.1395" />
 	</ItemGroup>
