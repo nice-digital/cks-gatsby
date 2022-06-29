@@ -58,7 +58,7 @@ describe("SpecialityPage", () => {
 					document.querySelector("meta[name='description']")
 				).toHaveAttribute(
 					"content",
-					"Speciality allergies, containing practical guidance on best practice for 2 primary care topics"
+					"Speciality allergies, containing practical advice on best practice for 2 primary care topics"
 				);
 			});
 		});
@@ -73,7 +73,7 @@ describe("SpecialityPage", () => {
 						document.querySelector("meta[name='description']")
 					).toHaveAttribute(
 						"content",
-						"Speciality allergies, containing practical guidance on best practice for 1 primary care topic"
+						"Speciality allergies, containing practical advice on best practice for 1 primary care topic"
 					);
 				});
 			});

@@ -31,7 +31,7 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 			[
 				"Speciality ",
 				name.charAt(0).toLowerCase() + name.slice(1),
-				", containing practical guidance on best practice for ",
+				", containing practical advice on best practice for ",
 				topics.length,
 				" primary care topic",
 				topics.length > 1 ? "s" : "",
