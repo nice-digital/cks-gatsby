@@ -4,7 +4,7 @@ import { useLocation } from "@reach/router";
 import { useSiteMetadata } from "../../hooks/useSiteMetadata";
 
 const defaultDescription =
-	"Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice";
+	"Providing primary care practitioners with a readily accessible summary of the current evidence base and practical advice on best practice";
 
 interface MetaDatum {
 	name: string;

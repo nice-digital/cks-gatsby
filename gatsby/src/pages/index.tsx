@@ -50,7 +50,7 @@ const IndexPage: React.FC<IndexProps> = ({
 			<SEO />
 			<Hero
 				title="Clinical Knowledge Summaries"
-				intro="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best&nbsp;practice"
+				intro="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical advice on best&nbsp;practice"
 				header={
 					<Breadcrumbs>
 						<Breadcrumb to="https://www.nice.org.uk/">NICE</Breadcrumb>
