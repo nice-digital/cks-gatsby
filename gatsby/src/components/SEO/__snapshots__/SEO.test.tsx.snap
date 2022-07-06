@@ -23,12 +23,12 @@ exports[`SEO should set default title and description when none provided 1`] = `
     rel="canonical"
   />
   <meta
-    content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice"
+    content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical advice on best practice"
     data-react-helmet="true"
     name="description"
   />
   <meta
-    content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice"
+    content="Providing primary care practitioners with a readily accessible summary of the current evidence base and practical advice on best practice"
     data-react-helmet="true"
     property="og:description"
   />

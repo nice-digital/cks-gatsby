@@ -72,7 +72,7 @@ module.exports = {
 			options: {
 				name: `CKS (Clinical Knowledge Summaries)`,
 				short_name: `CKS | NICE`,
-				description: `Providing primary care practitioners with a readily accessible summary of the current evidence base and practical guidance on best practice`,
+				description: `Providing primary care practitioners with a readily accessible summary of the current evidence base and practical advice on best practice`,
 				start_url: `/?utm_source=a2hs&utm_medium=a2hs`,
 				background_color: `#fff`,
 				theme_color: `#004650`,
