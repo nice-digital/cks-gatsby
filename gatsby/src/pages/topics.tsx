@@ -5,7 +5,6 @@ import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Topic } from "../types";
-import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 import { ColumnList } from "../components/ColumnList/ColumnList";
 import { Alphabet, Letter } from "../components/Alphabet/Alphabet";
@@ -69,7 +68,7 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 	);
 
 	return (
-		<Layout>
+		<>
 			<SEO title={"Health topics A to Z"} />
 
 			<Breadcrumbs>
@@ -81,6 +80,7 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 			</Breadcrumbs>
 
 			<PageHeader
+				id="content-start"
 				heading="Health topics A to Z"
 				lead="There are over 370 topics, with focus on the most common and significant presentations in primary care."
 			/>
@@ -127,7 +127,7 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 					))}
 				</ol>
 			</nav>
-		</Layout>
+		</>
 	);
 };
 

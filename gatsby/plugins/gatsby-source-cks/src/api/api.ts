@@ -26,7 +26,7 @@ export const configure = ({ apiBaseUrl, apiKey }: ApiConfig): void => {
 	apiConfig.apiKey = apiKey;
 };
 
-const verifyConfig = (): true => {
+const verifyConfig = (): true | never => {
 	if (
 		!apiConfig.apiBaseUrl ||
 		apiConfig.apiBaseUrl === "" ||
@@ -45,15 +45,15 @@ const verifyConfig = (): true => {
  * authentication and JSON accept content type
  */
 const fetchJson = async <TResponse>(path: string): Promise<TResponse> =>
-	verifyConfig() &&
-	(
-		await fetch(apiConfig.apiBaseUrl + path, {
-			headers: {
-				"ocp-apim-subscription-key": apiConfig.apiKey,
-				Accept: "application/json",
-			},
-		})
-	).json();
+	(verifyConfig() &&
+		(
+			await fetch(apiConfig.apiBaseUrl + path, {
+				headers: {
+					"ocp-apim-subscription-key": apiConfig.apiKey,
+					Accept: "application/json",
+				},
+			})
+		).json()) as Promise<TResponse>;
 
 /**
  * Retrieves a list of all of the partial topics from the /topics API endpoint.

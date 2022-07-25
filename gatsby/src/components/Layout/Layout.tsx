@@ -1,12 +1,10 @@
 import React, { ReactNode } from "react";
 import { Container } from "@nice-digital/nds-container";
 
-import { Header } from "../Header/Header";
-import { Footer } from "../Footer/Footer";
-import { BackToTop } from "../BackToTop/BackToTop";
+import { SiteHeader } from "../SiteHeader/SiteHeader";
+import { Footer, Main } from "@nice-digital/global-nav";
 
 import "./../../styles/global.scss";
-import styles from "./Layout.module.scss";
 
 type LayoutProps = {
 	children: ReactNode;
@@ -15,12 +13,11 @@ type LayoutProps = {
 export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 	return (
 		<>
-			<Header />
-			<main className={styles.main} id="content-start">
+			<SiteHeader />
+			<Main>
 				<Container>{children}</Container>
-				<BackToTop />
-			</main>
-			<Footer />
+			</Main>
+			<Footer service="cks" />
 		</>
 	);
 };

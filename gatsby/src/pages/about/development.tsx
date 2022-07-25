@@ -7,7 +7,6 @@ import { Grid, GridItem } from "@nice-digital/nds-grid";
 import { Panel } from "@nice-digital/nds-panel";
 import { Button } from "@nice-digital/nds-button";
 
-import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 import { HelpPanel } from "../../components/HelpPanel/HelpPanel";
 
@@ -15,7 +14,7 @@ import styles from "./about.module.scss";
 
 const DevelopmentPage: React.FC = () => {
 	return (
-		<Layout>
+		<>
 			<SEO
 				title={`Development process | About CKS`}
 				description={`The CKS development process, including new topics, topic updates and the CKS process guide`}
@@ -31,7 +30,7 @@ const DevelopmentPage: React.FC = () => {
 				<Breadcrumb>Development process</Breadcrumb>
 			</Breadcrumbs>
 
-			<PageHeader heading="Development process" />
+			<PageHeader id="content-start" heading="Development process" />
 
 			<Grid gutter="loose">
 				<GridItem cols={12} md={7} lg={8} className={styles.body}>
@@ -157,7 +156,7 @@ const DevelopmentPage: React.FC = () => {
 					<HelpPanel />
 				</GridItem>
 			</Grid>
-		</Layout>
+		</>
 	);
 };
 

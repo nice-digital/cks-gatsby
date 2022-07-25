@@ -22,6 +22,7 @@ describe("SpecialitiesPage", () => {
 	];
 
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(
 			<SpecialitiesPage
 				{...({
@@ -55,7 +56,7 @@ describe("SpecialitiesPage", () => {
 
 		it("should render specialities as current page breadcrumb without link", () => {
 			expect(
-				screen.queryByText(textContentMatcher("Specialities"), {
+				screen.getByText(textContentMatcher("Specialities"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();
@@ -65,14 +66,14 @@ describe("SpecialitiesPage", () => {
 	describe("Page header", () => {
 		it("should render heading 1 with speciality name", () => {
 			expect(
-				screen.queryByText("Specialities", {
+				screen.getByText("Specialities", {
 					selector: "h1",
 				})
 			).toBeInTheDocument();
 		});
 		it("should render lead paragraph", () => {
 			expect(
-				screen.queryByText(
+				screen.getByText(
 					"There are over 370 topics, with focus on the most common and significant presentations in primary care."
 				)
 			).toBeInTheDocument();

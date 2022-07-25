@@ -7,6 +7,7 @@ import AboutPage from "../";
 
 describe("About page", () => {
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(<AboutPage />);
 	});
 
@@ -29,7 +30,7 @@ describe("About page", () => {
 
 		it("should render current page breadcrumb without link", () => {
 			expect(
-				screen.queryByText(textContentMatcher("About CKS"), {
+				screen.getByText(textContentMatcher("About CKS"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();

@@ -1,17 +1,21 @@
-@import '~@nice-digital/nds-core/scss/core.scss';
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/media-queries';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
 
 .landingSection {
-  border-bottom: 1px solid $nds-colour-border;
-  margin-bottom: rem($nds-spacing-medium);
-  padding-bottom: rem($nds-spacing-medium);
+  border-bottom: 1px solid colours.$border;
+  margin-bottom: utils.rem(spacing.$medium);
+  padding-bottom: utils.rem(spacing.$medium);
 }
 
 .lastLandingSection {
-  margin-bottom: rem($nds-spacing-large);
+  margin-bottom: utils.rem(spacing.$large);
 }
 
 .landingHeading {
-  @include nds-font-size(h3);
+  @include typography.font-size(h3);
   margin-top: 0;
 }
 
@@ -24,16 +28,16 @@
 
   li {
     display: block;
-    padding: rem($nds-spacing-small) 0;
+    padding: utils.rem(spacing.$small) 0;
   }
 
   a {
     display: block;
   }
 
-  @include mq($from: sm) {
+  @include media-queries.mq($from: sm) {
     a {
-      padding-right: rem($nds-spacing-medium);
+      padding-right: utils.rem(spacing.$medium);
     }
 
     li {
@@ -46,7 +50,7 @@
     }
   }
 
-  @include mq($from: md) {
+  @include media-queries.mq($from: md) {
     li {
       width: 33.33%;
 
@@ -64,12 +68,12 @@
   // it's shorter/more elegant and doesn't need the overflow hidden to clear the floats
   // But IE11 doesn't do grids so we need the floats fallback
   @supports (display: grid) {
-    @include mq($from: sm) {
+    @include media-queries.mq($from: sm) {
       display: grid;
-      column-gap: rem($nds-spacing-medium);
+      column-gap: utils.rem(spacing.$medium);
       grid-template-columns: repeat(2, 1fr);
       overflow: visible;
-      row-gap: rem($nds-spacing-medium);
+      row-gap: utils.rem(spacing.$medium);
 
       a {
         padding: 0;
@@ -81,7 +85,7 @@
       }
     }
 
-    @include mq($from: md) {
+    @include media-queries.mq($from: md) {
       grid-template-columns: repeat(3, 1fr);
     }
   }

@@ -22,6 +22,7 @@ const querySelectorMockImpl =
 describe("ChapterOnThisPage", () => {
 	let renderResult: RenderResult;
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		renderResult = render(<ChapterOnThisPage subChapters={subChapers} />);
 	});
 

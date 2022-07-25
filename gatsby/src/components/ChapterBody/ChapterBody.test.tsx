@@ -126,15 +126,15 @@ describe("ChapterBody", () => {
 	describe("basis for recommendation", () => {
 		beforeEach(() => {
 			chapter.depth = 2;
+		});
 
+		it("should render details and summary for basis for recommendations", () => {
 			render(
 				<ChapterBody
 					chapter={{ ...chapter, parentChapter: {} as PartialChapter }}
 				/>
 			);
-		});
 
-		it("should render details and summary for basis for recommendations", () => {
 			const summary = screen.getByText(
 				textContentMatcher("Basis for recommendation"),
 				{ selector: "summary" }

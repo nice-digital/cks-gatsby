@@ -5,7 +5,6 @@ import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { PartialSpeciality } from "../types";
-import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 import { ColumnList } from "../components/ColumnList/ColumnList";
 
@@ -20,7 +19,7 @@ const SpecialitiesPage: React.FC<SpecialitiesPageProps> = ({
 		allSpecialities: { nodes },
 	},
 }: SpecialitiesPageProps) => (
-	<Layout>
+	<>
 		<SEO title="Specialities" />
 
 		<Breadcrumbs>
@@ -32,6 +31,7 @@ const SpecialitiesPage: React.FC<SpecialitiesPageProps> = ({
 		</Breadcrumbs>
 
 		<PageHeader
+			id="content-start"
 			heading="Specialities"
 			lead="There are over 370 topics, with focus on the most common and significant presentations in primary care."
 		/>
@@ -43,7 +43,7 @@ const SpecialitiesPage: React.FC<SpecialitiesPageProps> = ({
 				</li>
 			))}
 		</ColumnList>
-	</Layout>
+	</>
 );
 
 export const query = graphql`

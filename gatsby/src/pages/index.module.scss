@@ -1,4 +1,7 @@
-@import '~@nice-digital/nds-core/scss/core.scss';
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/media-queries';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/utils';
 
 .topicsColumn h2,
 .specialitiesColumn h2 {
@@ -6,20 +9,20 @@
 }
 
 .topicsColumn {
-  margin-bottom: rem($nds-spacing-large);
+  margin-bottom: utils.rem(spacing.$large);
 
-  @include mq($from: md) {
-    padding-right: rem($nds-spacing-x-large) !important;
+  @include media-queries.mq($from: md) {
+    padding-right: utils.rem(spacing.$x-large) !important;
   }
 }
 
 .specialitiesColumn {
-  @include mq($from: md) {
-    padding-left: rem($nds-spacing-x-large) !important;
-    border-left: rem($nds-spacing-xx-small) solid $nds-colour-border;
+  @include media-queries.mq($from: md) {
+    padding-left: utils.rem(spacing.$x-large) !important;
+    border-left: utils.rem(spacing.$xx-small) solid colours.$border;
 
     ol {
-      margin-top: rem($nds-spacing-large); // To align with the left column
+      margin-top: utils.rem(spacing.$large); // To align with the left column
     }
   }
 }
@@ -27,7 +30,7 @@
 .showAtMD {
   display: none !important;
 
-  @include mq($from: md) {
+  @include media-queries.mq($from: md) {
     display: block !important;
   }
 }

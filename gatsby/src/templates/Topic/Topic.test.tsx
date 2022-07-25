@@ -47,6 +47,7 @@ describe("TopicPage", () => {
 	let renderResult: RenderResult;
 
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		renderResult = render(
 			<TopicPage {...({ data: { topic, firstChapter } } as TopicPageProps)} />
 		);
@@ -83,7 +84,7 @@ describe("TopicPage", () => {
 
 		it("should render topic name as current page breadcrumb without link", () => {
 			expect(
-				screen.queryByText(textContentMatcher("Asthma"), {
+				screen.getByText(textContentMatcher("Asthma"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();

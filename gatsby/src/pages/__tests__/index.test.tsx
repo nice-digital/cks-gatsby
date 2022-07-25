@@ -35,6 +35,7 @@ const topicAliases = [
 
 describe("Home page", () => {
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		renderWithRouter(
 			<IndexPage
 				data={{
@@ -56,22 +57,22 @@ describe("Home page", () => {
 
 	describe("Topic list", () => {
 		it("should render an A-Z link for any topics and aliases that begin with that letter", () => {
-			expect(screen.queryByText("A")?.tagName).toBe("A");
-			expect(screen.queryByText("B")?.tagName).toBe("A");
-			expect(screen.queryByText("D")?.tagName).toBe("A");
-			expect(screen.queryByText("K")?.tagName).toBe("A");
-			expect(screen.queryByText("Z")?.tagName).toBe("A");
+			expect(screen.getByText("A")).toHaveProperty("tagName", "A");
+			expect(screen.getByText("B")).toHaveProperty("tagName", "A");
+			expect(screen.getByText("D")).toHaveProperty("tagName", "A");
+			expect(screen.getByText("K")).toHaveProperty("tagName", "A");
+			expect(screen.getByText("Z")).toHaveProperty("tagName", "A");
 		});
 
 		it("should not provide an A-Z link if there are no topics beginning with that letter", () => {
-			expect(screen.queryByText("C")?.tagName).toBe("SPAN");
+			expect(screen.getByText("C")).toHaveProperty("tagName", "SPAN");
 		});
 	});
 
 	describe("Specialty list", () => {
 		it("should show any supplied specialities", () => {
 			specialities.map(({ name }) => {
-				expect(screen.queryByText(name)).toBeInTheDocument();
+				expect(screen.getByText(name)).toBeInTheDocument();
 			});
 		});
 	});

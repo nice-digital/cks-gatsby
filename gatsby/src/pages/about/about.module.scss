@@ -1,13 +1,15 @@
-@import '~@nice-digital/nds-core/scss/core.scss';
+@use '@nice-digital/nds-core/scss/media-queries';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/utils';
 
 .body {
-  margin-bottom: rem($nds-spacing-large);
+  margin-bottom: utils.rem(spacing.$large);
 
   > :first-child {
     margin-top: 0;
   }
 
-  @include mq($from: md) {
+  @include media-queries.mq($from: md) {
     margin-bottom: 0;
   }
 }

@@ -1,4 +1,7 @@
-@import '~@nice-digital/nds-core/scss/core.scss';
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/media-queries';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/utils';
 
 .base {
   list-style: none;
@@ -8,30 +11,30 @@
   li {
     break-inside: avoid;
     display: block;
-    padding: rem($nds-spacing-small) 0; // Make room for the anchor focus outline
+    padding: utils.rem(spacing.$small) 0; // Make room for the anchor focus outline
   }
 
   a {
     display: block;
   }
 
-  column-gap: rem($nds-spacing-medium);
+  column-gap: utils.rem(spacing.$medium);
 }
 
 .boxed {
   composes: base;
-  background: $nds-colour-true-white;
-  border: 1px solid $nds-colour-border;
+  background: colours.$alphabet-letter-background;
+  border: 1px solid colours.$border;
 
   a {
-    padding: rem($nds-spacing-x-small $nds-spacing-medium);
+    padding: utils.rem(spacing.$x-small spacing.$medium);
   }
 
-  @include mq($from: md) {
+  @include media-queries.mq($from: md) {
     column-count: 2;
   }
 
-  @include mq($from: lg) {
+  @include media-queries.mq($from: lg) {
     column-count: 3;
 
     &.cols2 {
@@ -43,11 +46,11 @@
 .plain {
   composes: base;
 
-  @include mq($from: sm) {
+  @include media-queries.mq($from: sm) {
     column-count: 2;
   }
 
-  @include mq($from: lg) {
+  @include media-queries.mq($from: lg) {
     &.cols3 {
       column-count: 3;
     }

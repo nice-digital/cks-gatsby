@@ -21,18 +21,13 @@
       "name": "Gatsby - develop",
       "type": "node",
       "request": "launch",
-      "protocol": "inspector",
       "program": "${workspaceFolder}/gatsby/node_modules/gatsby/dist/bin/gatsby",
       "args": ["develop"],
-      "env": {
-        "GATSBY_HOT_LOADER": "fast-refresh"
-      },
       "cwd": "${workspaceFolder}/gatsby",
       "localRoot": "${workspaceFolder}/gatsby",
       "remoteRoot": "${workspaceFolder}/gatsby",
       "stopOnEntry": false,
       "runtimeExecutable": "node",
-      "runtimeArgs": ["--nolazy"],
       // Use internalConsole as this is a lot faster than integrated terminal
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",

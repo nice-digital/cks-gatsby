@@ -56,8 +56,13 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-eslint",
 			options: {
-				test: /\.(?:j|t)sx?$/,
-				exclude: /(global-nav|node_modules|.cache|public)/,
+				exclude: [
+					"global-nav",
+					"node_modules",
+					"bower_components",
+					".cache",
+					"public",
+				],
 			},
 		},
 		{
@@ -171,6 +176,6 @@ module.exports = {
 	},
 	flags: {
 		FAST_DEV: true,
-		FAST_REFRESH: true,
+		DEV_SSR: true,
 	},
 };

@@ -1,5 +1,9 @@
 import React, { ReactElement } from "react";
-import { PreRenderHTMLArgs } from "gatsby";
+import {
+	type PreRenderHTMLArgs,
+	type WrapPageElementBrowserArgs,
+} from "gatsby";
+import { Layout } from "./src/components/Layout/Layout";
 
 export const onPreRenderHTML = ({
 	getHeadComponents,
@@ -14,6 +18,21 @@ export const onPreRenderHTML = ({
 			key="cookie-banner"
 			async
 		></script>
+	);
+
+	components.push(
+		<>
+			<link rel="preconnect" href="https://fonts.googleapis.com" />
+			<link
+				rel="preconnect"
+				href="https://fonts.gstatic.com"
+				crossOrigin="crossOrigin"
+			/>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:ital,wght@0,600;1,600&display=swap"
+				rel="stylesheet"
+			/>
+		</>
 	);
 
 	// Rewrite inline CSS into external link tags as per https://github.com/gatsbyjs/gatsby/issues/1526
@@ -39,3 +58,10 @@ export const onPreRenderHTML = ({
 
 	replaceHeadComponents(components);
 };
+
+export const wrapPageElement = ({
+	element,
+	props,
+}: WrapPageElementBrowserArgs): ReactElement => (
+	<Layout {...props}>{element}</Layout>
+);

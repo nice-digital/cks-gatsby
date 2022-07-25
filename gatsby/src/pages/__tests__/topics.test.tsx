@@ -28,6 +28,7 @@ describe("TopicsPage", () => {
 	];
 
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(
 			<TopicsPage
 				{...({
@@ -61,7 +62,7 @@ describe("TopicsPage", () => {
 
 		it("should render health topics A to Z as current page breadcrumb without link", () => {
 			expect(
-				screen.queryByText(textContentMatcher("Health topics A to Z"), {
+				screen.getByText(textContentMatcher("Health topics A to Z"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();
@@ -71,14 +72,14 @@ describe("TopicsPage", () => {
 	describe("Page header", () => {
 		it("should render heading 1 with speciality name", () => {
 			expect(
-				screen.queryByText("Health topics A to Z", {
+				screen.getByText("Health topics A to Z", {
 					selector: "h1",
 				})
 			).toBeInTheDocument();
 		});
 		it("should render lead paragraph", () => {
 			expect(
-				screen.queryByText(
+				screen.getByText(
 					"There are over 370 topics, with focus on the most common and significant presentations in primary care."
 				)
 			).toBeInTheDocument();

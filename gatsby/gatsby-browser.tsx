@@ -1,4 +1,9 @@
-import { ShouldUpdateScrollArgs, RouteUpdateArgs } from "gatsby";
+import {
+	ShouldUpdateScrollArgs,
+	type RouteUpdateArgs,
+	type WrapPageElementBrowserArgs,
+} from "gatsby";
+import React, { type ReactElement } from "react";
 import {
 	getCLS,
 	getFID,
@@ -8,6 +13,8 @@ import {
 	Metric,
 	ReportHandler,
 } from "web-vitals";
+
+import { Layout } from "./src/components/Layout/Layout";
 
 // Gatsby hook for when the route has changed on the client side
 // See https://www.gatsbyjs.org/docs/browser-apis/#onRouteUpdate
@@ -105,3 +112,10 @@ const sendWebVitalToGTM: ReportHandler = ({
 		eventValue: Math.round(name === "CLS" ? delta * 1000 : delta),
 	});
 };
+
+export const wrapPageElement = ({
+	element,
+	props,
+}: WrapPageElementBrowserArgs): ReactElement => (
+	<Layout {...props}>{element}</Layout>
+);

@@ -5,7 +5,6 @@ import { PageHeader } from "@nice-digital/nds-page-header";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 
 import { ChapterLevel1 } from "../../types";
-import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
 import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
@@ -30,7 +29,7 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 	const headerNoHtml = useMemo(() => stripHtmlTags(htmlHeader), [htmlHeader]);
 
 	return (
-		<Layout>
+		<>
 			<SEO
 				title={`${fullItemName} | ${topic.topicName}`}
 				description={summary || `${fullItemName}, ${topic.topicName}, CKS`}
@@ -51,6 +50,7 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 			</Breadcrumbs>
 
 			<PageHeader
+				id="content-start"
 				heading={<span dangerouslySetInnerHTML={{ __html: headerNoHtml }} />}
 				preheading={`${topic.topicName}: `}
 				lead={<span dangerouslySetInnerHTML={{ __html: topic.lastRevised }} />}
@@ -79,7 +79,7 @@ const ChapterLevel1Page: React.FC<ChapterLevel1PageProps> = ({
 					</nav>
 				)}
 			</ChapterContents>
-		</Layout>
+		</>
 	);
 };
 

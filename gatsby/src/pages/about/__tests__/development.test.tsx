@@ -7,6 +7,7 @@ import DevelopmentPage from "../development";
 
 describe("Development page", () => {
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(<DevelopmentPage />);
 	});
 
@@ -44,7 +45,7 @@ describe("Development page", () => {
 
 		it("should render current page breadcrumb without link", () => {
 			expect(
-				screen.queryByText(textContentMatcher("Development process"), {
+				screen.getByText(textContentMatcher("Development process"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();

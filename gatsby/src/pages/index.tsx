@@ -4,7 +4,6 @@ import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { Hero } from "@nice-digital/nds-hero";
 import { Grid, GridItem } from "@nice-digital/nds-grid";
 
-import { Layout } from "../components/Layout/Layout";
 import { PartialSpeciality } from "../types";
 import { SEO } from "../components/SEO/SEO";
 import { ColumnList } from "../components/ColumnList/ColumnList";
@@ -46,7 +45,7 @@ const IndexPage: React.FC<IndexProps> = ({
 	);
 
 	return (
-		<Layout>
+		<>
 			<SEO />
 			<Hero
 				title="Clinical Knowledge Summaries"
@@ -130,7 +129,7 @@ const IndexPage: React.FC<IndexProps> = ({
 					</ColumnList>
 				</GridItem>
 			</Grid>
-		</Layout>
+		</>
 	);
 };
 

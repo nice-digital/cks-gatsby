@@ -1,5 +1,5 @@
-@import '~@nice-digital/nds-core/scss/core.scss';
+@use '@nice-digital/nds-core/scss/utils';
 
 .resultList {
-  max-width: rem(768);
+  max-width: utils.rem(768);
 }
