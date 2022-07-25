@@ -2,11 +2,11 @@ import React, { useMemo } from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { ColumnList } from "@nice-digital/nds-column-list";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Speciality } from "../../types";
 import { SEO } from "../../components/SEO/SEO";
-import { ColumnList } from "../../components/ColumnList/ColumnList";
 
 export type SpecialityPageProps = PageProps<
 	{

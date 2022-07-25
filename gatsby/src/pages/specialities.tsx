@@ -2,11 +2,11 @@ import React from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { ColumnList } from "@nice-digital/nds-column-list";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { PartialSpeciality } from "../types";
 import { SEO } from "../components/SEO/SEO";
-import { ColumnList } from "../components/ColumnList/ColumnList";
 
 export type SpecialitiesPageProps = PageProps<{
 	allSpecialities: {

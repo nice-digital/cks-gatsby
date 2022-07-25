@@ -1,15 +1,14 @@
 import React, { useMemo } from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
+import { AZList, AZListItem } from "@nice-digital/nds-a-z-list";
+import { Alphabet, Letter } from "@nice-digital/nds-alphabet";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { ColumnList } from "@nice-digital/nds-column-list";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Topic } from "../types";
 import { SEO } from "../components/SEO/SEO";
-import { ColumnList } from "../components/ColumnList/ColumnList";
-import { Alphabet, Letter } from "../components/Alphabet/Alphabet";
-
-import styles from "./topics.module.scss";
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
@@ -67,6 +66,16 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 		[groupedTopics]
 	);
 
+	const alphabetComponent = () => (
+		<Alphabet>
+			{groupedTopics.map(({ letter, topics }) => (
+				<Letter key={letter} to={topics.length === 0 ? "" : `#${letter}`}>
+					{letter.trim().toUpperCase()}
+				</Letter>
+			))}
+		</Alphabet>
+	);
+
 	return (
 		<>
 			<SEO title={"Health topics A to Z"} />
@@ -85,7 +94,26 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 				lead="There are over 370 topics, with focus on the most common and significant presentations in primary care."
 			/>
 
-			<Alphabet id="a-to-z" aria-label="Letters A to Z" tabIndex={-1}>
+			<AZList alphabet={alphabetComponent}>
+				{lettersWithTopics.map(({ letter, topics }) => (
+					<AZListItem key={letter} title={letter.toUpperCase()}>
+						<ColumnList
+							aria-labelledby={letter}
+							data-tracking="a-to-z-column-list"
+						>
+							{topics.map(({ slug, name, isAlias }) => (
+								<li key={name}>
+									<Link to={`/topics/${slug}/`} data-alias={isAlias}>
+										{name}
+									</Link>
+								</li>
+							))}
+						</ColumnList>
+					</AZListItem>
+				))}
+			</AZList>
+
+			{/* <Alphabet id="a-to-z" aria-label="Letters A to Z" tabIndex={-1}>
 				{groupedTopics.map(({ letter, topics }) => (
 					<Letter
 						key={`alphabet_${letter}`}
@@ -126,7 +154,7 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 						</li>
 					))}
 				</ol>
-			</nav>
+			</nav> */}
 		</>
 	);
 };
