@@ -106,21 +106,25 @@ describe("TopicsPage", () => {
 		});
 
 		it("should render internal anchor for letter with topics", () => {
-			const letterAAnchor = screen.getByLabelText("Letter 'A'");
-			expect(letterAAnchor).toHaveProperty("tagName", "A");
+			const letterAAnchor = screen.queryByRole("link", { name: "Letter A" });
 			expect(letterAAnchor).toHaveAttribute("href", "#a");
 			expect(letterAAnchor).toHaveTextContent("A");
 
-			const letterCAnchor = screen.getByLabelText("Letter 'C'");
-			expect(letterCAnchor).toHaveProperty("tagName", "A");
+			const letterCAnchor = screen.queryByRole("link", { name: "Letter C" });
 			expect(letterCAnchor).toHaveAttribute("href", "#c");
 			expect(letterCAnchor).toHaveTextContent("C");
 		});
 
 		it("should not render anchor for letter with no topics", () => {
-			const letterQAnchor = screen.getByLabelText("Letter 'Q' (no topics)");
-			expect(letterQAnchor).not.toHaveProperty("tagName", "A");
-			expect(letterQAnchor).toHaveTextContent("Q");
+			expect(
+				screen.getByText(
+					(_content, node) => node?.textContent === "Letter Q (no topics)",
+					{ selector: "#a-to-z li" }
+				)
+			).toBeInTheDocument();
+			expect(
+				screen.queryByRole("link", { name: "Letter Q (no topics)" })
+			).toBeNull();
 		});
 	});
 
@@ -140,11 +144,17 @@ describe("TopicsPage", () => {
 		});
 
 		it("should render heading 2 with id and label for each letter", () => {
-			const letterHeadingA = screen.getByLabelText("Topics starting with 'A'");
+			const letterHeadingA = screen.getByRole("heading", {
+				level: 2,
+				name: "A",
+			});
 			expect(letterHeadingA).toHaveProperty("tagName", "H2");
 			expect(letterHeadingA).toHaveAttribute("id", "a");
 
-			const letterHeadingT = screen.getByLabelText("Topics starting with 'T'");
+			const letterHeadingT = screen.getByRole("heading", {
+				level: 2,
+				name: "T",
+			});
 			expect(letterHeadingT).toHaveProperty("tagName", "H2");
 			expect(letterHeadingT).toHaveAttribute("id", "t");
 		});

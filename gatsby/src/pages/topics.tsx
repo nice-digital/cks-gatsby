@@ -67,10 +67,14 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 	);
 
 	const alphabetComponent = () => (
-		<Alphabet>
+		<Alphabet aria-label="Letters A to Z">
 			{groupedTopics.map(({ letter, topics }) => (
 				<Letter key={letter} to={topics.length === 0 ? "" : `#${letter}`}>
+					<span className="visually-hidden">Letter </span>
 					{letter.trim().toUpperCase()}
+					{topics.length === 0 ? (
+						<span className="visually-hidden"> (no topics)</span>
+					) : null}
 				</Letter>
 			))}
 		</Alphabet>
@@ -94,24 +98,29 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 				lead="There are over 370 topics, with focus on the most common and significant presentations in primary care."
 			/>
 
-			<AZList alphabet={alphabetComponent}>
-				{lettersWithTopics.map(({ letter, topics }) => (
-					<AZListItem key={letter} title={letter.toUpperCase()}>
-						<ColumnList
-							aria-labelledby={letter}
-							data-tracking="a-to-z-column-list"
-						>
-							{topics.map(({ slug, name, isAlias }) => (
-								<li key={name}>
-									<Link to={`/topics/${slug}/`} data-alias={isAlias}>
-										{name}
-									</Link>
-								</li>
-							))}
-						</ColumnList>
-					</AZListItem>
-				))}
-			</AZList>
+			<nav aria-label="Health topics A to Z">
+				<AZList
+					alphabet={alphabetComponent}
+					aria-label="Letters A to Z with matching topics"
+				>
+					{lettersWithTopics.map(({ letter, topics }) => (
+						<AZListItem key={letter} title={letter.toUpperCase()}>
+							<ColumnList
+								aria-labelledby={letter}
+								data-tracking="a-to-z-column-list"
+							>
+								{topics.map(({ slug, name, isAlias }) => (
+									<li key={name}>
+										<Link to={`/topics/${slug}/`} data-alias={isAlias}>
+											{name}
+										</Link>
+									</li>
+								))}
+							</ColumnList>
+						</AZListItem>
+					))}
+				</AZList>
+			</nav>
 
 			{/* <Alphabet id="a-to-z" aria-label="Letters A to Z" tabIndex={-1}>
 				{groupedTopics.map(({ letter, topics }) => (
