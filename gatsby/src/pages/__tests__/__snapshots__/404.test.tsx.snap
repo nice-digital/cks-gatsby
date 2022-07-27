@@ -74,7 +74,7 @@ exports[`404 should match snapshot 1`] = `
     id="content-start"
   >
     <h1
-      class="page-header__heading"
+      class="page-header__heading "
     >
       We can't find this page
     </h1>
