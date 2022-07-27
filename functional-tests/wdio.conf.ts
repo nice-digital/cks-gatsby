@@ -56,7 +56,7 @@ export const config: Config = {
 			"./node_modules/@nice-digital/wdio-cucumber-steps/lib",
 		],
 		tagExpression: "not @pending", // See https://docs.cucumber.io/tag-expressions/
-		timeout: 30000,
+		timeout: 60000,
 	},
 
 	afterScenario: async function (_uri, _feature, _scenario, { exception }) {
