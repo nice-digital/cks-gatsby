@@ -75,6 +75,7 @@ const IndexPage: React.FC<IndexProps> = ({
 						{alphabet.map((letter) => (
 							<Letter
 								key={`alphabet_${letter}`}
+								elementType={Link}
 								to={linkableLetters.has(letter) && `/topics/#${letter}`}
 							>
 								{letter.toUpperCase()}
