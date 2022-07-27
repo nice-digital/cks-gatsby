@@ -1,6 +1,7 @@
 @use '@nice-digital/nds-core/scss/colours';
 @use '@nice-digital/nds-core/scss/focus';
 @use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
 @use '@nice-digital/nds-core/scss/utils';
 
 .wrapper {
@@ -43,6 +44,7 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    font-family: typography.get-font-family(sans);
     list-style: none;
 
     &::marker,
@@ -52,6 +54,7 @@
 
     :global(.h4) {
       flex: 1 1 100%;
+      font-family: typography.get-font-family(sans);
       margin-bottom: utils.rem(spacing.$small);
       margin-top: 0;
     }
