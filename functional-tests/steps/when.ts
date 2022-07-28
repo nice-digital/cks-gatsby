@@ -1,4 +1,4 @@
-import { When } from "cucumber";
+import { When } from "@cucumber/cucumber";
 
 import { openWebsite } from "@nice-digital/wdio-cucumber-steps/lib/support/action/openWebsite";
 import { clickElement } from "@nice-digital/wdio-cucumber-steps/lib/support/action/clickElement";

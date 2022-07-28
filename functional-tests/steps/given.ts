@@ -1,4 +1,4 @@
-import { Given } from "cucumber";
+import { Given } from "@cucumber/cucumber";
 
 import { openWebsite } from "@nice-digital/wdio-cucumber-steps/lib/support/action/openWebsite";
 
