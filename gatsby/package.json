@@ -27,7 +27,7 @@
     "// TYPECHECKING": "",
     "typecheck": "tsc --noEmit",
     "//Teamcity": "",
-    "audit:teamcity": "npm audit --audit-level=none"
+    "audit:teamcity": "npm audit --audit-level=critical"
   },
   "repository": {
     "type": "git",
