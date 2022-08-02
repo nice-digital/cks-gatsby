@@ -25,6 +25,6 @@ Feature: Search Page
 
   Scenario: Total number of results
     When I view the search results page for cancer
-    Then I expect to see 499 total search results for cancer
+    Then I expect to see 498 total search results for cancer
 
 # TODO: Current page number, page titles, pagination, spelling corrections, no results, empty search
