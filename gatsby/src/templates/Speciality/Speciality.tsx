@@ -2,12 +2,11 @@ import React, { useMemo } from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { ColumnList } from "@nice-digital/nds-column-list";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
-import { Layout } from "../../components/Layout/Layout";
 import { Speciality } from "../../types";
 import { SEO } from "../../components/SEO/SEO";
-import { ColumnList } from "../../components/ColumnList/ColumnList";
 
 export type SpecialityPageProps = PageProps<
 	{
@@ -40,7 +39,7 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 	);
 
 	return (
-		<Layout>
+		<>
 			<SEO title={name + " | Specialities"} description={metaDescription} />
 
 			<Breadcrumbs>
@@ -54,7 +53,7 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 				<Breadcrumb>{name}</Breadcrumb>
 			</Breadcrumbs>
 
-			<PageHeader heading={name} />
+			<PageHeader id="content-start" heading={name} />
 
 			<ColumnList aria-label={`A to Z of topics within ${name}`}>
 				{orderedTopics.map(({ id, topicName, slug }) => (
@@ -63,7 +62,7 @@ const SpecialityPage: React.FC<SpecialityPageProps> = ({
 					</li>
 				))}
 			</ColumnList>
-		</Layout>
+		</>
 	);
 };
 

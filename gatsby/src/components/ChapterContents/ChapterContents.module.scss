@@ -1,11 +1,17 @@
-@import '~@nice-digital/nds-core/scss/core.scss';
+@use 'sass:math';
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/layout';
+@use '@nice-digital/nds-core/scss/media-queries';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
 
 .wrapper {
   position: relative; // The sticky 'on this page' nav is relative to this
 }
 
 .printBtn {
-  @include nds-link-default;
+  @include typography.link-default;
   appearance: none;
   background: none;
   border: 0;
@@ -15,71 +21,79 @@
   padding: 0;
 
   svg {
-    @include nds-font-size(2);
-    color: $nds-colour-nice-rich-black;
-    margin-right: rem($nds-spacing-small);
+    @include typography.font-size(2);
+    color: colours.$text;
+    margin-right: utils.rem(spacing.$small);
     vertical-align: text-bottom;
   }
 
   &:hover svg {
-    color: $nds-colour-link-hover;
+    color: colours.$link-hover;
   }
 }
 
-@include mq($from: sm) {
+@include media-queries.mq($from: sm) {
   .wrapper {
-    @include nds-clearfix;
+    @include layout.clearfix;
   }
 
   .menu {
     float: left;
-    margin-right: rem($nds-spacing-medium);
-    width: calc(25% - #{rem($nds-spacing-small)});
+    margin-right: utils.rem(spacing.$medium);
+    width: calc(25% - #{utils.rem(spacing.$small)});
   }
 
   .landing {
     float: right;
-    width: calc(75% - #{rem($nds-spacing-small)});
+    width: calc(75% - #{utils.rem(spacing.$small)});
   }
 
   .onThisPage {
     float: right;
-    width: calc(75% - #{rem($nds-spacing-small)});
+    width: calc(75% - #{utils.rem(spacing.$small)});
   }
 
   .body {
-    margin-left: calc(25% + #{rem($nds-spacing-small)});
+    margin-left: calc(25% + #{utils.rem(spacing.$small)});
     overflow: hidden; // Because headings are cleared by default
-    width: calc(75% - #{rem($nds-spacing-small)});
+    width: calc(75% - #{utils.rem(spacing.$small)});
   }
 }
 
-@include mq($from: md) {
+@include media-queries.mq($from: md) {
   .printBtn {
     display: block;
-    margin-bottom: rem($nds-spacing-x-large);
+    margin-bottom: utils.rem(spacing.$x-large);
     position: absolute;
     right: 0;
   }
 
   .menu {
-    margin-right: rem($nds-spacing-large);
-    width: calc(#{percentage(3 / 12)} - #{rem($nds-spacing-medium)});
+    margin-right: utils.rem(spacing.$large);
+    width: calc(
+      #{math.percentage(math.div(3, 12))} - #{utils.rem(spacing.$medium)}
+    );
   }
 
   .landing {
-    width: calc(#{percentage(9 / 12)} - #{rem($nds-spacing-medium)});
+    width: calc(
+      #{math.percentage(math.div(9, 12))} - #{utils.rem(spacing.$medium)}
+    );
   }
 
   .onThisPage {
     position: sticky;
     top: 0;
-    width: calc(#{percentage(2 / 12)} - #{rem($nds-spacing-medium)});
+    width: calc(
+      #{math.percentage(math.div(2, 12))} - #{utils.rem(spacing.$medium)}
+    );
   }
 
   .body {
-    margin-left: calc(25% + #{rem($nds-spacing-medium)});
-    width: calc(#{percentage(7 / 12)} - #{rem($nds-spacing-large)});
+    margin-left: calc(25% + #{utils.rem(spacing.$medium)});
+    width: calc(
+      #{math.percentage(math.div(7, 12))} - #{utils.rem(spacing.$large)}
+    );
   }
 }
 

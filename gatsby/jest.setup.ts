@@ -6,15 +6,9 @@ import { DataLayerEntry } from "types";
 enableFetchMocks();
 
 // Header uses useStaticQuery in it, so easier to mock it globally as a no-op
-jest.mock("./src/components/Header/Header", () => {
+jest.mock("./src/components/SiteHeader/SiteHeader", () => {
 	return {
-		Header: (): null => null,
-	};
-});
-// No need to have the footer rendered for each component
-jest.mock("./src/components/Footer/Footer", () => {
-	return {
-		Footer: (): null => null,
+		SiteHeader: (): null => null,
 	};
 });
 

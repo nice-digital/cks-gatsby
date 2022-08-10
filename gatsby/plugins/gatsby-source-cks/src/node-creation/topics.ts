@@ -30,16 +30,20 @@ export const createTopicNodes = (
 	const { createNode } = actions;
 
 	topics.forEach(
-		({ topicHtmlObjects, clinicalSpecialties, ...topic }: ApiFullTopic) => {
+		({
+			topicHtmlObjects,
+			clinicalSpecialties,
+			aliases,
+			...topic
+		}: ApiFullTopic) => {
 			const { topicId, topicName } = topic;
 
 			const nodeContent = {
 				...topic,
-				...{
-					slug: slugify(topicName),
-					specialities: clinicalSpecialties,
-					chapters: topicHtmlObjects.map((t) => t.itemId),
-				},
+				aliases: aliases || [],
+				slug: slugify(topicName),
+				specialities: clinicalSpecialties,
+				chapters: topicHtmlObjects.map((t) => t.itemId),
 			};
 
 			const topicNode: TopicNode = {

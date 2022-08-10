@@ -47,6 +47,7 @@ const getDefaultTestProps = (): ChapterLevel1PageProps =>
 describe("ChapterLevel1", () => {
 	let props = getDefaultTestProps();
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(<ChapterLevel1Page {...props} />);
 	});
 
@@ -145,6 +146,7 @@ describe("ChapterLevel1", () => {
 		beforeEach(() => {
 			cleanup();
 			props.pageContext.chapter.htmlStringContent = "<!-- No content -->";
+			// eslint-disable-next-line testing-library/no-render-in-setup
 			render(<ChapterLevel1Page {...props} />);
 		});
 

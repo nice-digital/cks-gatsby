@@ -6,7 +6,7 @@ import { renderWithRouter } from "test-utils";
 import { useLocation } from "@reach/router";
 
 // Header is mocked globally in setup
-const { Header } = jest.requireActual("./Header");
+const { SiteHeader } = jest.requireActual("./SiteHeader");
 
 // Mix of topic, keyword and scenario results
 const mockAutocompleteEndPointSuggestions = [
@@ -49,7 +49,7 @@ describe("Header", () => {
 	});
 
 	it("should render global nav with CKS highlighted in the nav", async () => {
-		renderWithRouter(<Header />);
+		renderWithRouter(<SiteHeader />);
 
 		const cksAnchor = await screen.findByText(
 			(_content, element) =>
@@ -61,7 +61,7 @@ describe("Header", () => {
 	});
 
 	it("should hide authentication", async () => {
-		renderWithRouter(<Header />);
+		renderWithRouter(<SiteHeader />);
 
 		await waitFor(() => {
 			expect(screen.queryByText("Sign in")).toBeFalsy();
@@ -69,7 +69,7 @@ describe("Header", () => {
 	});
 
 	it("should set placeholder attribute on search input", async () => {
-		renderWithRouter(<Header />);
+		renderWithRouter(<SiteHeader />);
 
 		expect(await screen.findByRole("combobox")).toHaveAttribute(
 			"placeholder",
@@ -78,7 +78,7 @@ describe("Header", () => {
 	});
 
 	it("should use gatsby navigate when clicking a global nav link with a relative url", async () => {
-		renderWithRouter(<Header />);
+		renderWithRouter(<SiteHeader />);
 
 		fireEvent.click(
 			await screen.findByText("About CKS", {
@@ -96,19 +96,18 @@ describe("Header", () => {
 	});
 
 	it("should append a label for keyword, topic and scenario suggestions", async () => {
-		renderWithRouter(<Header />);
+		renderWithRouter(<SiteHeader />);
 
 		userEvent.type(await screen.findByRole("combobox"), "dia");
 
 		await waitFor(() => {
-			const suggestedElements = screen.queryAllByRole("option");
-			expect(suggestedElements[0].textContent).toEqual(
-				"Diabetes - type 1 (CKS topic)"
-			);
-			expect(suggestedElements[1].textContent).toEqual("Diazepam (CKS search)");
-			expect(suggestedElements[2].textContent).toEqual(
-				"How should I manage cardiovascular risk in an adult with type 2 diabetes? (CKS topic - scenario)"
-			);
+			expect(
+				screen.getAllByRole("option").map((n) => n.textContent)
+			).toStrictEqual([
+				"Diabetes - type 1 (CKS topic)",
+				"Diazepam (CKS search)",
+				"How should I manage cardiovascular risk in an adult with type 2 diabetes? (CKS topic - scenario)",
+			]);
 		});
 	});
 
@@ -118,7 +117,7 @@ describe("Header", () => {
 		);
 		window.autocompleteSuggestionTemplate = autocompleteSuggestionTemplate;
 
-		renderWithRouter(<Header />);
+		renderWithRouter(<SiteHeader />);
 
 		userEvent.type(await screen.findByRole("combobox"), "dia");
 
@@ -126,19 +125,17 @@ describe("Header", () => {
 			expect(autocompleteSuggestionTemplate).toHaveBeenCalledTimes(
 				mockAutocompleteEndPointSuggestions.length
 			);
-			expect(autocompleteSuggestionTemplate.mock.calls[0][0]).toStrictEqual(
-				mockAutocompleteEndPointSuggestions[0]
-			);
-
-			const suggestedElements = screen.queryAllByRole("option");
-			expect(suggestedElements[0].innerHTML).toEqual(
-				"<p>Diabetes - type 1</p>"
-			);
 		});
+		expect(autocompleteSuggestionTemplate.mock.calls[0][0]).toStrictEqual(
+			mockAutocompleteEndPointSuggestions[0]
+		);
+
+		const suggestedElements = screen.queryAllByRole("option");
+		expect(suggestedElements[0].innerHTML).toEqual("<p>Diabetes - type 1</p>");
 	});
 
 	it("should set search box default value from q querystring value", async () => {
-		renderWithRouter(<Header />, {
+		renderWithRouter(<SiteHeader />, {
 			route: "/search/?q=diabetes",
 		});
 
@@ -149,7 +146,7 @@ describe("Header", () => {
 	});
 
 	it("should update search box value from q querystring value when URL changes", async () => {
-		const { history } = renderWithRouter(<Header />, {
+		const { history } = renderWithRouter(<SiteHeader />, {
 			route: "/search/?q=diabetes",
 		});
 
@@ -160,7 +157,7 @@ describe("Header", () => {
 	});
 
 	it("should use gatsby navigate with encoded query when submitting search form", async () => {
-		renderWithRouter(<Header />);
+		renderWithRouter(<SiteHeader />);
 
 		const searchBox = (await screen.findByRole("combobox")) as HTMLInputElement;
 		searchBox.value = "diabetes 20%";

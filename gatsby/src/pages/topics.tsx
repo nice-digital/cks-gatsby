@@ -1,16 +1,14 @@
 import React, { useMemo } from "react";
 import { graphql, PageProps, Link } from "gatsby";
 
+import { AZList, AZListItem } from "@nice-digital/nds-a-z-list";
+import { Alphabet, Letter } from "@nice-digital/nds-alphabet";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { ColumnList } from "@nice-digital/nds-column-list";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
 import { Topic } from "../types";
-import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
-import { ColumnList } from "../components/ColumnList/ColumnList";
-import { Alphabet, Letter } from "../components/Alphabet/Alphabet";
-
-import styles from "./topics.module.scss";
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
@@ -68,8 +66,22 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 		[groupedTopics]
 	);
 
+	const alphabetComponent = () => (
+		<Alphabet aria-label="Letters A to Z">
+			{groupedTopics.map(({ letter, topics }) => (
+				<Letter key={letter} to={topics.length === 0 ? "" : `#${letter}`}>
+					<span className="visually-hidden">Letter </span>
+					{letter.trim().toUpperCase()}
+					{topics.length === 0 ? (
+						<span className="visually-hidden"> (no topics)</span>
+					) : null}
+				</Letter>
+			))}
+		</Alphabet>
+	);
+
 	return (
-		<Layout>
+		<>
 			<SEO title={"Health topics A to Z"} />
 
 			<Breadcrumbs>
@@ -81,11 +93,36 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 			</Breadcrumbs>
 
 			<PageHeader
+				id="content-start"
 				heading="Health topics A to Z"
 				lead="There are over 370 topics, with focus on the most common and significant presentations in primary care."
 			/>
 
-			<Alphabet id="a-to-z" aria-label="Letters A to Z" tabIndex={-1}>
+			<nav aria-label="Health topics A to Z">
+				<AZList
+					alphabet={alphabetComponent}
+					aria-label="Letters A to Z with matching topics"
+				>
+					{lettersWithTopics.map(({ letter, topics }) => (
+						<AZListItem key={letter} title={letter.toUpperCase()}>
+							<ColumnList
+								aria-labelledby={letter}
+								data-tracking="a-to-z-column-list"
+							>
+								{topics.map(({ slug, name, isAlias }) => (
+									<li key={name}>
+										<Link to={`/topics/${slug}/`} data-alias={isAlias}>
+											{name}
+										</Link>
+									</li>
+								))}
+							</ColumnList>
+						</AZListItem>
+					))}
+				</AZList>
+			</nav>
+
+			{/* <Alphabet id="a-to-z" aria-label="Letters A to Z" tabIndex={-1}>
 				{groupedTopics.map(({ letter, topics }) => (
 					<Letter
 						key={`alphabet_${letter}`}
@@ -126,8 +163,8 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 						</li>
 					))}
 				</ol>
-			</nav>
-		</Layout>
+			</nav> */}
+		</>
 	);
 };
 

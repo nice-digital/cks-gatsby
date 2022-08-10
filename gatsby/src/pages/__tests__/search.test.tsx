@@ -22,7 +22,7 @@ describe("Search Page", () => {
 
 	it("should render a loading message before the request comes in", async () => {
 		renderWithRouter(<SearchPage />);
-		expect(screen.queryByText("Loading")).toBeInTheDocument();
+		expect(screen.getByText("Loading")).toBeInTheDocument();
 		await waitFor(() => {
 			expect(screen.queryByText("Loading")).not.toBeInTheDocument();
 		});
@@ -33,7 +33,7 @@ describe("Search Page", () => {
 		renderWithRouter(<SearchPage />);
 		await waitFor(() => {
 			expect(
-				screen.queryByText(
+				screen.getByText(
 					textContentMatcher(
 						`${searchResponseLong.resultCount.toString()} results for ${
 							searchResponseLong.finalSearchText
@@ -62,7 +62,7 @@ describe("Search Page", () => {
 			renderWithRouter(<SearchPage />);
 			await waitFor(() => {
 				expect(
-					screen.queryByText(textContentMatcher("Search results for test"), {
+					screen.getByText(textContentMatcher("Search results for test"), {
 						selector: ".breadcrumbs a",
 					})
 				).toBeTruthy();

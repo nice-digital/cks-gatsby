@@ -1,16 +1,15 @@
 import React, { useMemo } from "react";
 import { graphql, Link } from "gatsby";
+import { Alphabet, Letter } from "@nice-digital/nds-alphabet";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { ColumnList } from "@nice-digital/nds-column-list";
 import { Hero } from "@nice-digital/nds-hero";
 import { Grid, GridItem } from "@nice-digital/nds-grid";
 
-import { Layout } from "../components/Layout/Layout";
 import { PartialSpeciality } from "../types";
 import { SEO } from "../components/SEO/SEO";
-import { ColumnList } from "../components/ColumnList/ColumnList";
 
 import styles from "./index.module.scss";
-import { Alphabet, Letter } from "../components/Alphabet/Alphabet";
 
 type IndexProps = {
 	data: {
@@ -46,7 +45,7 @@ const IndexPage: React.FC<IndexProps> = ({
 	);
 
 	return (
-		<Layout>
+		<>
 			<SEO />
 			<Hero
 				title="Clinical Knowledge Summaries"
@@ -76,6 +75,7 @@ const IndexPage: React.FC<IndexProps> = ({
 						{alphabet.map((letter) => (
 							<Letter
 								key={`alphabet_${letter}`}
+								elementType={Link}
 								to={linkableLetters.has(letter) && `/topics/#${letter}`}
 							>
 								{letter.toUpperCase()}
@@ -88,6 +88,7 @@ const IndexPage: React.FC<IndexProps> = ({
 					</h3>
 					<ColumnList
 						plain
+						columns={2}
 						aria-labelledby="frequently-visited-topics"
 						data-tracking="frequently-visited-topics"
 					>
@@ -119,6 +120,7 @@ const IndexPage: React.FC<IndexProps> = ({
 
 					<ColumnList
 						plain
+						columns={2}
 						aria-labelledby="specialities"
 						data-tracking="specialities"
 					>
@@ -130,7 +132,7 @@ const IndexPage: React.FC<IndexProps> = ({
 					</ColumnList>
 				</GridItem>
 			</Grid>
-		</Layout>
+		</>
 	);
 };
 

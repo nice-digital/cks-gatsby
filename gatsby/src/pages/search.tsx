@@ -6,7 +6,6 @@ import { SimplePagination } from "@nice-digital/nds-simple-pagination";
 import { PageHeader } from "@nice-digital/nds-page-header";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 
-import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 
 import styles from "./search.module.scss";
@@ -106,20 +105,27 @@ const SearchPage: React.FC = () => {
 	}, [data]);
 
 	return (
-		<Layout>
+		<>
 			<div className="visually-hidden" aria-live="polite">
 				{a11yMessage}
 			</div>
 			{!error && !data && (
 				<>
 					<SEO title="Search results loading" noIndex={true} />
-					<PageHeader heading="CKS search results" lead="Loading" />
+					<PageHeader
+						id="content-start"
+						heading="CKS search results"
+						lead="Loading"
+					/>
 				</>
 			)}
 			{(error || (data && data.failed)) && (
 				<>
 					<SEO title="There is a problem with search" noIndex={true} />
-					<PageHeader heading="Sorry, there is a problem with search" />
+					<PageHeader
+						id="content-start"
+						heading="Sorry, there is a problem with search"
+					/>
 					<p>We are working on it, please try again later.</p>
 					<p>
 						You can also try browsing for topics from the{" "}
@@ -135,7 +141,7 @@ const SearchPage: React.FC = () => {
 				</>
 			)}
 			{data && !data.failed && <Results {...data} />}
-		</Layout>
+		</>
 	);
 };
 
@@ -223,6 +229,7 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 		return (
 			<>
 				<PageHeader
+					id="content-start"
 					heading="No results found"
 					lead={
 						<>
@@ -255,7 +262,13 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 		</>
 	);
 
-	return <PageHeader heading="CKS search results" lead={LeadText} />;
+	return (
+		<PageHeader
+			id="content-start"
+			heading="CKS search results"
+			lead={LeadText}
+		/>
+	);
 };
 
 interface ResultsList {

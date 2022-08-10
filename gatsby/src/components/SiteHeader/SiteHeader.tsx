@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { navigate } from "gatsby";
 import { useLocation } from "@reach/router";
-import { Header as GlobalNavHeader } from "@nice-digital/global-nav";
+import { Header } from "@nice-digital/global-nav";
 
 const searchInputSelector = "header form[role='search'] [name='q']";
 
@@ -17,7 +17,7 @@ const getQueryTerm = (queryString: string): string => {
 		: "";
 };
 
-export const Header: React.FC = () => {
+export const SiteHeader: React.FC = () => {
 	const { search: queryString } = useLocation();
 
 	const [queryTerm, setQueryTermState] = useState(getQueryTerm(queryString));
@@ -62,7 +62,7 @@ export const Header: React.FC = () => {
 
 	return (
 		<div ref={globalNavWrapperRef}>
-			<GlobalNavHeader
+			<Header
 				service="cks"
 				skipLinkId="content-start"
 				onNavigating={(e): void => {

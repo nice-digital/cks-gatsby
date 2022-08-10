@@ -1,20 +1,13 @@
-import { Config } from "webdriverio";
-
 const isInDocker = !!process.env.IN_DOCKER,
 	isTeamCity = !!process.env.TEAMCITY_VERSION;
 
-export const config: Config = {
+export const config: WebdriverIO.Config = {
+	// Use devtools to control Chrome when we're running tests locally
+	// Avoids issues with having the wrong ChromeDriver installed via selenium-standalone when Chrome updates every 6 weeks.
+	// We need to use webdriver protocol in Docker because we use the selenium grid.
+	automationProtocol: isInDocker ? "webdriver" : "devtools",
+
 	maxInstances: isInDocker ? 10 : 2,
-	services: isInDocker
-		? []
-		: [
-				[
-					"selenium-standalone",
-					{
-						logPath: "./logs",
-					},
-				],
-		  ],
 	path: "/wd/hub",
 
 	specs: ["./features/**/*.feature"],
@@ -50,17 +43,34 @@ export const config: Config = {
 	framework: "cucumber",
 
 	cucumberOpts: {
-		requireModule: ["ts-node/register/transpile-only"],
 		require: [
 			"./steps/**/*.ts",
 			"./node_modules/@nice-digital/wdio-cucumber-steps/lib",
 		],
 		tagExpression: "not @pending", // See https://docs.cucumber.io/tag-expressions/
-		timeout: 30000,
+		// Need quite a long timeout here because some of the Axe a11y tests take a while for longer pages (like A to Z)
+		timeout: 60000,
 	},
 
-	afterScenario: async function (_uri, _feature, _scenario, { exception }) {
+	afterStep: async function (_test, _scenario, { error }) {
 		// Take screenshots on error, these end up in the Allure reports
-		if (exception) await browser.takeScreenshot();
+		if (error) await browser.takeScreenshot();
+	},
+
+	afterScenario: async function (_world, _result, _context) {
+		// Clear session storage after each test because Gatsby stores scroll
+		// positions of each page, which causes issues running multiple tests
+		// on the same page in the same browser instance when scrolling to links
+		await browser.execute("sessionStorage.clear()");
+	},
+
+	autoCompileOpts: {
+		autoCompile: true,
+		// see https://github.com/TypeStrong/ts-node#cli-and-programmatic-options
+		// for all available options
+		tsNodeOpts: {
+			transpileOnly: true,
+			project: "tsconfig.json",
+		},
 	},
 };

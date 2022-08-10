@@ -36,6 +36,7 @@ describe("SpecialityPage", () => {
 	let speciality: Speciality = getDefaultSpecialityTestData();
 
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(
 			<SpecialityPage {...({ data: { speciality } } as SpecialityPageProps)} />
 		);
@@ -95,7 +96,7 @@ describe("SpecialityPage", () => {
 
 		it("should render speciality as current page breadcrumb without link", () => {
 			expect(
-				screen.queryByText(textContentMatcher("Allergies"), {
+				screen.getByText(textContentMatcher("Allergies"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();
@@ -105,7 +106,7 @@ describe("SpecialityPage", () => {
 	describe("Page header", () => {
 		it("should render heading 1 with speciality name", () => {
 			expect(
-				screen.queryByText("Allergies", {
+				screen.getByText("Allergies", {
 					selector: "h1",
 				})
 			).toBeInTheDocument();

@@ -9,7 +9,6 @@ import { Card } from "@nice-digital/nds-card";
 import { Tag } from "@nice-digital/nds-tag";
 import { Button } from "@nice-digital/nds-button";
 
-import { Layout } from "../components/Layout/Layout";
 import { SEO } from "../components/SEO/SEO";
 import { WhatsNewChange } from "src/types";
 
@@ -41,7 +40,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 	const numUpdatedTopics = allCksChange.nodes.length - numNewTopics;
 
 	return (
-		<Layout>
+		<>
 			<SEO
 				title={`${changesSinceDateFormatted} | What's new`}
 				description={`Topic updates for CKS for ${changesSinceDateFormatted}`}
@@ -54,6 +53,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 				<Breadcrumb>What&apos;s new</Breadcrumb>
 			</Breadcrumbs>
 			<PageHeader
+				id="content-start"
 				heading={
 					<>
 						What&apos;s new for{" "}
@@ -146,7 +146,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 					</Panel>
 				</GridItem>
 			</Grid>
-		</Layout>
+		</>
 	);
 };
 

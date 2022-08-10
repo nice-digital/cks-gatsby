@@ -75,6 +75,7 @@ describe("What's new page", () => {
 	let props = getDefaultTestProps();
 
 	beforeEach(() => {
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		renderWithRouter(<WhatsNewPage {...props} />);
 	});
 
@@ -110,7 +111,7 @@ describe("What's new page", () => {
 
 		it("should render current page breadcrumb without link", () => {
 			expect(
-				screen.queryByText(textContentMatcher("What's new"), {
+				screen.getByText(textContentMatcher("What's new"), {
 					selector: ".breadcrumbs span",
 				})
 			).toBeTruthy();

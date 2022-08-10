@@ -1,10 +1,15 @@
-@import '~@nice-digital/nds-core/scss/core.scss';
+@use '@nice-digital/nds-core/scss/media-queries';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
+@use '@nice-digital/nds-core/scss/visibility';
 
 .wrapper {
-  margin-bottom: rem($nds-spacing-large);
+  margin-bottom: utils.rem(spacing.$large);
 }
 
 .heading {
+  font-family: typography.get-font-family(sans);
   margin-top: 0;
 }
 
@@ -22,9 +27,9 @@
   display: none;
 }
 
-@include mq($from: md) {
+@include media-queries.mq($from: md) {
   .heading {
-    @include nds-font(h4);
+    @include typography.font(h4);
     margin-top: 0;
   }
 
@@ -36,21 +41,21 @@
         }
 
         &:focus + .subList {
-          @include nds-invisible-off;
+          @include visibility.invisible-off;
         }
       }
     }
 
     .subList {
-      @include nds-invisible;
+      @include visibility.invisible;
 
       &:focus-within {
-        @include nds-invisible-off;
+        @include visibility.invisible-off;
       }
     }
 
     .expandedSubList {
-      @include nds-invisible-off;
+      @include visibility.invisible-off;
     }
 
     .basisForRecs {

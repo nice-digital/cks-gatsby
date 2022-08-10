@@ -1,20 +1,20 @@
-import { Then } from "cucumber";
+import { Then } from "@cucumber/cucumber";
 
 import { checkContainsText } from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkContainsText";
 import { checkEqualsText } from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkEqualsText";
 import { getSelector, SelectorName } from "../support/selectors";
 
 Then("I expect that the CKS GTM container is available", async () => {
-	const containerId = (await browser.executeAsync((function (
+	const containerId = (await browser.executeAsync(function (
 		done: (containerId: string) => void
 	) {
-		((window as unknown) as { dataLayer: unknown[] }).dataLayer.push({
+		(window as unknown as { dataLayer: unknown[] }).dataLayer.push({
 			event: "integration-test",
 			eventCallback: function (containerId: string) {
 				done(containerId);
 			},
 		});
-	} as unknown) as () => void)) as string;
+	} as unknown as () => void)) as string;
 
 	expect(containerId).toEqual("GTM-54QC4NL");
 });

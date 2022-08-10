@@ -4,7 +4,6 @@ import { graphql, PageProps, Link } from "gatsby";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { PageHeader } from "@nice-digital/nds-page-header";
 
-import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 import { ChapterContents } from "../../components/ChapterContents/ChapterContents";
 import { ChapterBody } from "../../components/ChapterBody/ChapterBody";
@@ -48,7 +47,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 	);
 
 	return (
-		<Layout>
+		<>
 			<SEO
 				title={topicName + " | Health topics A to Z"}
 				description={topicSummary}
@@ -65,6 +64,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 			</Breadcrumbs>
 
 			<PageHeader
+				id="content-start"
 				heading={topicName}
 				lead={<span dangerouslySetInnerHTML={{ __html: lastRevised }} />}
 			/>
@@ -103,7 +103,7 @@ const TopicPage: React.FC<TopicPageProps> = ({
 				))}
 				<ChapterBody chapter={firstChapter} showHeading={true} />
 			</ChapterContents>
-		</Layout>
+		</>
 	);
 };
 

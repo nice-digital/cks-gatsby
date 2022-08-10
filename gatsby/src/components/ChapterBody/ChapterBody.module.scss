@@ -1,4 +1,8 @@
-@import '~@nice-digital/nds-core/scss/core.scss';
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/focus';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
 
 .wrapper {
   // Bit of a horrible rule, but it allows us to have the correct spacing
@@ -17,14 +21,14 @@
 }
 
 .details {
-  border: 1px solid $nds-colour-border;
-  margin-top: rem($nds-spacing-medium);
+  border: 1px solid colours.$border;
+  margin-top: utils.rem(spacing.$medium);
   max-width: 66ch;
-  padding: rem($nds-spacing-medium);
+  padding: utils.rem(spacing.$medium);
 
   &[open] {
     summary {
-      margin-bottom: rem($nds-spacing-medium);
+      margin-bottom: utils.rem(spacing.$medium);
 
       &:after {
         content: 'Hide';
@@ -40,6 +44,7 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    font-family: typography.get-font-family(sans);
     list-style: none;
 
     &::marker,
@@ -49,13 +54,14 @@
 
     :global(.h4) {
       flex: 1 1 100%;
-      margin-bottom: rem($nds-spacing-small);
+      font-family: typography.get-font-family(sans);
+      margin-bottom: utils.rem(spacing.$small);
       margin-top: 0;
     }
 
     svg {
       display: none;
-      margin-right: rem($nds-spacing-small);
+      margin-right: utils.rem(spacing.$small);
     }
 
     // Hack for IE11 whilst we still support it: https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/
@@ -67,7 +73,7 @@
       }
 
       &:focus {
-        @include nds-default-focus-style;
+        @include focus.default-focus-style;
       }
 
       &:focus:not(:focus-visible) {
@@ -75,18 +81,18 @@
       }
 
       &:focus-visible {
-        @include nds-default-focus-style;
+        @include focus.default-focus-style;
       }
 
       &:after {
-        color: $nds-colour-link;
+        color: colours.$link;
         content: 'Show';
         text-decoration: underline;
       }
 
       &:hover,
       &:hover:after {
-        color: $nds-colour-link-hover;
+        color: colours.$link-hover;
       }
     }
   }

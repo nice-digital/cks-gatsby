@@ -6,14 +6,13 @@ import { PageHeader } from "@nice-digital/nds-page-header";
 import { Grid, GridItem } from "@nice-digital/nds-grid";
 
 import { HelpPanel } from "../../components/HelpPanel/HelpPanel";
-import { Layout } from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 
 import styles from "./about.module.scss";
 
 const AboutPage: React.FC = () => {
 	return (
-		<Layout>
+		<>
 			<SEO
 				title={`About CKS`}
 				description={`Clinical Knowledge Summaries are concise, accessible summaries of current evidence for primary care professionals. There are over 370 topics to choose from.`}
@@ -26,7 +25,7 @@ const AboutPage: React.FC = () => {
 				<Breadcrumb>About CKS</Breadcrumb>
 			</Breadcrumbs>
 
-			<PageHeader heading="About CKS" />
+			<PageHeader id="content-start" heading="About CKS" />
 
 			<Grid gutter="loose">
 				<GridItem cols={12} md={7} lg={8} className={styles.body}>
@@ -104,7 +103,7 @@ const AboutPage: React.FC = () => {
 					<HelpPanel />
 				</GridItem>
 			</Grid>
-		</Layout>
+		</>
 	);
 };
 
