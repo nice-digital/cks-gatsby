@@ -52,7 +52,7 @@ exports[`About page Body should match snapshot for main body content 1`] = `
     Developed on behalf of NICE
   </h2>
   <p>
-    CKS topics are developed by Clarity Informatics Ltd but commissioned and funded by NICE.
+    CKS topics are developed by Clarity Informatics Ltd (trading as Agilio Software | Primary Care) but commissioned and funded by NICE.
   </p>
   <p>
     For clarification, CKS are not equivalent to NICE guidance as they have not been produced using a NICE process, nor are they signed off by NICE guidance executive.

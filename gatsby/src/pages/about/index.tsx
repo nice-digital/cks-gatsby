@@ -42,8 +42,8 @@ const AboutPage: React.FC = () => {
 					</p>
 					<h2>Developed on behalf of NICE</h2>
 					<p>
-						CKS topics are developed by Clarity Informatics Ltd but commissioned
-						and funded by NICE.
+						CKS topics are developed by Clarity Informatics Ltd (trading as
+						Agilio Software | Primary Care) but commissioned and funded by NICE.
 					</p>
 					<p>
 						For clarification, CKS are not equivalent to NICE guidance as they
