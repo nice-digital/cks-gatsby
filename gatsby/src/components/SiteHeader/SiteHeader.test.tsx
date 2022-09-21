@@ -82,7 +82,7 @@ describe("Header", () => {
 
 		fireEvent.click(
 			await screen.findByText("About CKS", {
-				selector: "a[href='/about/']",
+				selector: "a.link[href='/about/']",
 			}),
 			{ button: 0 }
 		);
