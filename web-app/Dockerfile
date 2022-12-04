@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 
 ENV ASPNETCORE_URLS http://+:8080
 
@@ -6,6 +6,8 @@ ENV ASPNETCORE_URLS http://+:8080
 WORKDIR /app
 
 EXPOSE 8080
+
+RUN apt-get update && apt-get install curl -y
 
 # Download wait-for-it as binary waitforit, see  https://github.com/vishnubob/wait-for-it
 ENV WAITFORIT_VERSION db04971
