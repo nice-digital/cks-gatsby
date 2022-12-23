@@ -37,6 +37,7 @@ services:
       - "8080:8080"
     volumes:
       - ./../web-app/publish:/app
+      - ./../gatsby/public:/app/wwwroot
     networks:
       default:
         aliases:
