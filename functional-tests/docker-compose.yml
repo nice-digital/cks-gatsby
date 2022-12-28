@@ -54,6 +54,16 @@ services:
           # Pretend to be the dev instance of elastic search: the web app uses CKSTest index which resolves to dev-es
           - dev-es.nice.org.uk
 
+  mocks-apis:
+    build: https://github.com/nice-digital/mocks-apis.git#main:search-apis
+    container_name: mocks-apis
+    ports:
+      - "80:3000"
+    networks:
+      default:
+        aliases:
+          # Pretend to be the dev instance of elastic search: the web app uses CKSTest index which resolves to dev-es
+          - test-search-api.nice.org.uk
 networks:
   default:
     name: cks-functional-tests
