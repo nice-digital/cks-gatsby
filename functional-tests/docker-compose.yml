@@ -44,7 +44,7 @@ services:
           - cks-functional-tests.nice.org.uk
 
   mock-api:
-    build: https://raw.githubusercontent.com/nice-digital/mocks-apis/main/search-apis/Dockerfile
+    build: https://github.com/nice-digital/mocks-apis.git#main:search-apis
     container_name: mock-api
     ports:
       - "80:3000"
