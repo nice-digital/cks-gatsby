@@ -8,7 +8,7 @@
     "pretest": "npm run ts",
     "test": "wdio run wdio.conf.ts",
     "test:docker": "npm test -- --hostname selenium-hub --baseUrl http://cks-functional-tests.nice.org.uk:8080",
-    "wait:docker": "wait-on http-get://cks-functional-tests.nice.org.uk:8080/api/autocomplete?q=cancer --timeout 30000",
+    "wait:docker": "wait-on http://cks-functional-tests.nice.org.uk:8080 --timeout 30000",
     "wait-then-test": "npm run wait:docker && npm run test:docker"
   },
   "repository": {
