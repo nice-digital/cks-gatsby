@@ -41,7 +41,7 @@ namespace CKS.Web
 			 */
 			var environmentString = Configuration.GetValue<string>("SearchApiUrl");
 			var indexToQuery = "cks";
-			var httpClientWrapper = new HttpClientWrapper();
+			var httpClientWrapper = new System.Net.Http.HttpClient();
 			services.AddSingleton<ISearchProvider, SearchHttpClient>(ISearchProvider => new SearchHttpClient(environmentString, indexToQuery, httpClientWrapper));
 
 			services.AddControllers();
