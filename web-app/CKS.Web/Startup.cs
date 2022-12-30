@@ -5,10 +5,7 @@ using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
-using NICE.Search.Common.Enums;
 using NICE.Search.Common.Interfaces;
-using NICE.Search.HttpClient;
-using System;
 using System.IO;
 
 namespace CKS.Web
