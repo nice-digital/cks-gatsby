@@ -62,7 +62,7 @@ namespace CKS.Web
 			if (response.IsSuccessStatusCode)
 			{
 				var jSonResponse = response.Content.ReadAsStringAsync().Result;
-				searchResults.Documents = JsonConvert.DeserializeObject<List<Document>>(jSonResponse);
+				searchResults = JsonConvert.DeserializeObject<SearchResults>(jSonResponse);
 			}
 
 			return searchResults;
