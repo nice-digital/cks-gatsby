@@ -79,6 +79,7 @@ namespace CKS.Web
 			if (response.IsSuccessStatusCode)
 			{
 				var jsonResponse = response.Content.ReadAsStringAsync().Result;
+				Console.WriteLine(searchUri);
 				Console.WriteLine(jsonResponse);
 				typeaheadResults = JsonConvert.DeserializeObject<TypeAheadResults>(jsonResponse);
 			}
