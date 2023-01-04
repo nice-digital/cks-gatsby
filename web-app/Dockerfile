@@ -23,4 +23,4 @@ RUN curl -SL "$WAITFORIT_DOWNLOAD_URL" --output waitforit.tar.gz \
 	&& rm -rf /usr/local/waitforit
 
 # Wait for ElasticSearch to be running before we run the web app
-ENTRYPOINT ["waitforit", "-t", "60", "--strict", "test-search-api.nice.org.uk", "--", "dotnet", "CKS.Web.dll"]
+ENTRYPOINT ["waitforit", "-t", "60", "--strict", "test-search-api.nice.org.uk:80", "--", "dotnet", "CKS.Web.dll"]
