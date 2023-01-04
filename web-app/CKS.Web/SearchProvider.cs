@@ -1,6 +1,7 @@
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Common.Models;
 using Newtonsoft.Json;
+using System;
 
 namespace CKS.Web
 {
@@ -51,7 +52,7 @@ namespace CKS.Web
 			if (response.IsSuccessStatusCode)
 			{
 				var jsonResponse = response.Content.ReadAsStringAsync().Result;
-				searchResults = JsonConvert.DeserializeObject<SearchResults>(jsonResponse);
+				searchResults = JsonConvert.DeserializeObject<SearchResults>(jsonResponse.ToString());
 			}
 
 			return searchResults;
