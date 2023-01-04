@@ -1,14 +1,6 @@
 using NICE.Search.Common.Interfaces;
 using NICE.Search.Common.Models;
-using System;
 using Newtonsoft.Json;
-using NICE.Search.Common.Enums;
-using NICE.Search.Common.Urls;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using System.Linq;
-using CKS.Web.Models;
 
 namespace CKS.Web
 {
@@ -18,7 +10,6 @@ namespace CKS.Web
 		private readonly string _searchApiEnvironmentUri;
 		private readonly string _indexToQuery;
 		private readonly System.Net.Http.HttpClient _client;
-
 		public SearchHttpClient(string searchApiEnvironmentUri, string indexToQuery, System.Net.Http.HttpClient client)
 		{
 			_searchApiEnvironmentUri = searchApiEnvironmentUri.EndsWith("/") ?
@@ -27,7 +18,6 @@ namespace CKS.Web
 			_indexToQuery = indexToQuery;
 			_client = client;
 		}
-
 		public Document GetDocument(IDocumentUrl url)
 		{
 			Document document = null;
@@ -45,7 +35,6 @@ namespace CKS.Web
 		}
 
 		public SearchResults Search(ISearchUrl url)
-
 		{
 			var searchResults = new SearchResults();
 
@@ -62,15 +51,11 @@ namespace CKS.Web
 			if (response.IsSuccessStatusCode)
 			{
 				var jsonResponse = response.Content.ReadAsStringAsync().Result;
-				Console.WriteLine(searchUri);
-				Console.WriteLine(jsonResponse);
-				Console.WriteLine("============");
 				searchResults = JsonConvert.DeserializeObject<SearchResults>(jsonResponse);
 			}
 
 			return searchResults;
 		}
-
 		public TypeAheadResults TypeAhead(ISearchUrl url)
 		{
 			var typeaheadResults = new TypeAheadResults();
@@ -86,32 +71,10 @@ namespace CKS.Web
 			}
 			return typeaheadResults;
 		}
-		private string GetLink(TypeAhead typeAheadResult)
-		{
-			// Assume that 'keyword' results go direct to the SERP (ie /search/?q=TERM) and other types (e.g. topic or scenario) go direct to a path
-			return typeAheadResult.TypeAheadType == KeywordTypeAheadType
-				|| string.IsNullOrEmpty(typeAheadResult.TypeAheadLink)
-				? new SearchUrl { Route = "/search/", q = typeAheadResult.Title }.ToString()
-				: typeAheadResult.TypeAheadLink;
-		}
-
-		//Note this method is not longer actually required but still needs implementing in order to
-		//ensure backward compatability with the legacy client
-		public SearchHttpClient WithDefaultFieldCollapsing(FieldCollapsing defaultCollapse)
-		{
-			throw new NotImplementedException();
-		}
-
+		
 		protected string ReplaceRoute(string newRoute, ISearchUrl url)
 		{
 			return url.fullUrlWithIndex().Replace("search", newRoute);
-			/*
-			if (!string.IsNullOrWhiteSpace(newRoute))
-				if (url.fullUrlWithIndex().StartsWith(((PropertyPushingUrl)url).Route))
-					return url.fullUrlWithIndex().Replace(((PropertyPushingUrl)url).Route, newRoute);
-
-			return url.fullUrlWithIndex();
-			*/
 		}
 	}
 }
