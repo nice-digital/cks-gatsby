@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 
 ENV ASPNETCORE_URLS http://+:8080
 
@@ -6,6 +6,8 @@ ENV ASPNETCORE_URLS http://+:8080
 WORKDIR /app
 
 EXPOSE 8080
+
+RUN apt-get update && apt-get install curl -y
 
 # Download wait-for-it as binary waitforit, see  https://github.com/vishnubob/wait-for-it
 ENV WAITFORIT_VERSION db04971
@@ -21,4 +23,4 @@ RUN curl -SL "$WAITFORIT_DOWNLOAD_URL" --output waitforit.tar.gz \
 	&& rm -rf /usr/local/waitforit
 
 # Wait for ElasticSearch to be running before we run the web app
-ENTRYPOINT ["waitforit", "-t", "60", "--strict", "dev-es.nice.org.uk:9200", "--", "dotnet", "CKS.Web.dll"]
+ENTRYPOINT ["waitforit", "-t", "60", "--strict", "test-search-api.nice.org.uk:80", "--", "dotnet", "CKS.Web.dll"]

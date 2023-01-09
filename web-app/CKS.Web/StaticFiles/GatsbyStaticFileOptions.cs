@@ -9,7 +9,6 @@ namespace CKS.Web.StaticFiles
 	{
 		public GatsbyStaticFileOptions()
 		{
-			ContentTypeProvider = new PWAFileExtensionContentTypeProvider();
 			OnPrepareResponse = PrepareResponse;
 		}
 
