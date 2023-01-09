@@ -1,5 +1,5 @@
 import {
-	ShouldUpdateScrollArgs,
+	type ShouldUpdateScrollArgs,
 	type RouteUpdateArgs,
 	type WrapPageElementBrowserArgs,
 } from "gatsby";
@@ -10,8 +10,8 @@ import {
 	getLCP,
 	getTTFB,
 	getFCP,
-	Metric,
-	ReportHandler,
+	type Metric,
+	type ReportHandler,
 } from "web-vitals";
 
 import { Layout } from "./src/components/Layout/Layout";
@@ -65,16 +65,46 @@ export const onRouteUpdate = ({
  */
 export const shouldUpdateScroll = ({
 	routerProps: { location },
+	prevRouterProps,
 	getSavedScrollPosition,
 }: ShouldUpdateScrollArgs): boolean | string | [number, number] => {
-	const savedScrollY = getSavedScrollPosition(location)[1] as
-		| number
-		| undefined;
+	// If there's no previous route props we're coming from an external site, which means
+	// we want to scroll to the hash (if there is one), and _not_ a saved scroll position
+	if (!prevRouterProps) {
+		const targetElement = document.querySelector(location.hash);
 
-	// Returning true here uses Gatsby's default behaviour.
-	// I.e. if there's a saved position or a hash then just let Gatsby deal with it
-	if ((savedScrollY && savedScrollY != 0) || location.hash) return true;
+		// Provide our own scroll to hash to avoid Gatsby using a stored scroll position
+		if (targetElement) {
+			targetElement.setAttribute("tabIndex", "-1");
+			(targetElement as HTMLElement).focus();
+			targetElement.scrollIntoView();
+			return false;
+		}
+		// Fallback to Gatsby's default behaviour if we can't find the element
+		// This happens sometimes when the service worker kicks in too late
+		else return true;
+	}
 
+	const savedScrollY = (getSavedScrollPosition(location)?.[1] || 0) as number;
+	if (savedScrollY > 0) {
+		window.scrollTo(0, savedScrollY);
+		return false;
+	}
+
+	if (location.hash) {
+		const targetElement = document.querySelector(location.hash);
+
+		// Default to Gatsby's default behaviour if the element doesn't exist
+		if (!targetElement) return true;
+
+		// Provide our own scroll to hash to avoid Gatsby using a stored scroll position
+		targetElement.setAttribute("tabIndex", "-1");
+		(targetElement as HTMLElement).focus();
+		targetElement.scrollIntoView();
+		return false;
+	}
+
+	// Default to scrolling to the content start element as the standard navigation behaviour
 	const contentStartElement = document.getElementById("content-start");
 
 	if (!contentStartElement) return true;
