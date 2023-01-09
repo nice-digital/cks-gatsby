@@ -71,7 +71,9 @@ export const shouldUpdateScroll = ({
 	// If there's no previous route props we're coming from an external site, which means
 	// we want to scroll to the hash (if there is one), and _not_ a saved scroll position
 	if (!prevRouterProps) {
-		const targetElement = document.querySelector(location.hash);
+		const targetElement = location.hash
+			? document.querySelector(location.hash)
+			: null;
 
 		// Provide our own scroll to hash to avoid Gatsby using a stored scroll position
 		if (targetElement) {
