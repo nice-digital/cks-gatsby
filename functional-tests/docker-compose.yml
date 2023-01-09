@@ -49,7 +49,7 @@ services:
     networks:
       default:
         aliases:
-          # Pretend to be the dev instance of elastic search: the web app uses CKSTest index which resolves to dev-es
+          # Pretend to be the test search api endpoint 
           - test-search-api.nice.org.uk
 
 networks:
