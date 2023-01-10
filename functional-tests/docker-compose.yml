@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   selenium-hub:
-    image: selenium/hub:4.7.2-20222119
+    image: selenium/hub:4.1.2-20220217
     container_name: selenium-hub
     ports:
       - "4442:4442"
@@ -9,7 +9,7 @@ services:
       - "4444:4444"
 
   selenium-chrome:
-    image: selenium/node-chrome:4.7.2-20221219
+    image: selenium/node-chrome:4.1.2-20220217
     shm_size: "2gb"
     depends_on:
       - selenium-hub
