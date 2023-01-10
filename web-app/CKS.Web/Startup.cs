@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using NICE.Search.Common.Interfaces;
+using NICE.Search.HttpClient;
 using System.IO;
 
 namespace CKS.Web
@@ -38,7 +39,7 @@ namespace CKS.Web
 			 */
 			var environmentString = Configuration.GetValue<string>("SearchApiUrl");
 			var indexToQuery = "cks";
-			var httpClientWrapper = new System.Net.Http.HttpClient();
+			var httpClientWrapper = new HttpClientWrapper();
 			services.AddSingleton<ISearchProvider, SearchHttpClient>(ISearchProvider => new SearchHttpClient(environmentString, indexToQuery, httpClientWrapper));
 
 			services.AddControllers();

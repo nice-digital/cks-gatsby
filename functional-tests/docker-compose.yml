@@ -1,19 +1,22 @@
 version: "3.7"
 services:
   selenium-hub:
-    image: selenium/hub:3.141.59-20200525
+    image: selenium/hub:4.1.2-20220217
     container_name: selenium-hub
     ports:
+      - "4442:4442"
+      - "4443:4443"
       - "4444:4444"
 
   selenium-chrome:
-    image: selenium/node-chrome:3.141.59-20200525
-    shm_size: "1gb"
+    image: selenium/node-chrome:4.1.2-20220217
+    shm_size: "2gb"
     depends_on:
       - selenium-hub
     environment:
-      - HUB_HOST=selenium-hub
-      - HUB_PORT=4444
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
 
   test-runner:
     build: .
@@ -49,7 +52,7 @@ services:
     networks:
       default:
         aliases:
-          # Pretend to be the dev instance of elastic search: the web app uses CKSTest index which resolves to dev-es
+          # Pretend to be the test search api endpoint 
           - test-search-api.nice.org.uk
 
 networks:
