@@ -68,9 +68,13 @@ export const shouldUpdateScroll = ({
 	prevRouterProps,
 	getSavedScrollPosition,
 }: ShouldUpdateScrollArgs): boolean | string | [number, number] => {
-	// If there's no previous route props we're coming from an external site, which means
-	// we want to scroll to the hash (if there is one), and _not_ a saved scroll position
-	if (!prevRouterProps) {
+	if (
+		// If there's no previous route props we're coming from an external site, which means
+		// we want to scroll to the hash (if there is one), and _not_ a saved scroll position
+		!prevRouterProps ||
+		// Or we're linking to as hash within the same page
+		(prevRouterProps.location.pathname === location.pathname && location.hash)
+	) {
 		const targetElement = location.hash
 			? document.querySelector(location.hash)
 			: null;
