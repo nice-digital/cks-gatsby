@@ -1,3 +1,4 @@
+import { scrollIntoView } from "@nice-digital/wdio-cucumber-steps/lib/support/action/scrollIntoView";
 import { checkIfElementExists } from "@nice-digital/wdio-cucumber-steps/lib/support/lib/checkIfElementExists";
 
 import { waitForScrollToElement } from "./waitForScrollToElement";
@@ -16,6 +17,6 @@ export async function scrollInToView(
 	// it _might_ be conflicting with scroll restoration in Gatsby https://www.gatsbyjs.com/docs/how-to/routing/scroll-restoration/
 	await browser.pause(250);
 
-	await element.scrollIntoView();
+	await scrollIntoView(selector, contextSelector);
 	await waitForScrollToElement(selector, 5000, contextSelector);
 }

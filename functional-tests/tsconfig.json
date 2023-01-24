@@ -12,7 +12,7 @@
     "noEmit": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "types": ["node", "webdriverio/async", "@wdio/cucumber-framework"],
+    "types": ["node", "@wdio/globals/types", "@wdio/cucumber-framework"],
     "esModuleInterop": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
