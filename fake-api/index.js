@@ -3,7 +3,7 @@ const express = require("express"),
 	fsPromises = require("fs").promises;
 
 const replacementToken = "REPLACE_ON_SERVE",
-	port = 8001,
+	port = process.env.PORT || 8001,
 	fakeAuthHeaderValue = "abc123";
 
 const allTopicsResponse = require("./data/topics.json");
