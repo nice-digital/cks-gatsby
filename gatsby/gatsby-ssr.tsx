@@ -5,11 +5,35 @@ import {
 } from "gatsby";
 import { Layout } from "./src/components/Layout/Layout";
 
-export const onPreRenderHTML = ({
-	getHeadComponents,
-	replaceHeadComponents,
-}: PreRenderHTMLArgs): void => {
+const isGeneratorTag = (
+	type: string | React.JSXElementConstructor<unknown>,
+	name: string
+) => type === "meta" && name === "generator";
+
+export const onPreRenderHTML = (
+	{ getHeadComponents, replaceHeadComponents }: PreRenderHTMLArgs,
+	{ removeVersionOnly = false, content }
+): void => {
 	const components = getHeadComponents();
+	const keepTag = removeVersionOnly || content != undefined;
+
+	const headComponents = getHeadComponents()
+		.map((c) =>
+			React.isValidElement(c) &&
+			isGeneratorTag(c.type, c.props ? c.props.name : "")
+				? Object.assign({}, c, {
+						props: Object.assign({}, c.props, { content: content || "Gatsby" }),
+				  })
+				: c
+		)
+		.filter((c) =>
+			keepTag
+				? true
+				: React.isValidElement(c) &&
+				  !isGeneratorTag(c.type, c.props?.name || "")
+		);
+
+	replaceHeadComponents(headComponents);
 
 	components.push(
 		<script
@@ -23,11 +47,7 @@ export const onPreRenderHTML = ({
 	components.push(
 		<>
 			<link rel="preconnect" href="https://fonts.googleapis.com" />
-			<link
-				rel="preconnect"
-				href="https://fonts.gstatic.com"
-				crossOrigin="crossOrigin"
-			/>
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
 			<link
 				href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:ital,wght@0,600;1,600&display=swap"
 				rel="stylesheet"
