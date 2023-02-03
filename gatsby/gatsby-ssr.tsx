@@ -5,33 +5,18 @@ import {
 } from "gatsby";
 import { Layout } from "./src/components/Layout/Layout";
 
-const isGeneratorTag = (
-	type: string | React.JSXElementConstructor<unknown>,
-	name: string
-) => type === "meta" && name === "generator";
-
-export const onPreRenderHTML = (
-	{ getHeadComponents, replaceHeadComponents }: PreRenderHTMLArgs,
-	{ removeVersionOnly = false, content }
-): void => {
+export const onPreRenderHTML = ({
+	getHeadComponents,
+	replaceHeadComponents,
+}: PreRenderHTMLArgs): void => {
 	const components = getHeadComponents();
-	const keepTag = removeVersionOnly || content != undefined;
 
-	const headComponents = getHeadComponents()
-		.map((c) =>
+	const headComponents = getHeadComponents().filter(
+		(c) =>
 			React.isValidElement(c) &&
-			isGeneratorTag(c.type, c.props ? c.props.name : "")
-				? Object.assign({}, c, {
-						props: Object.assign({}, c.props, { content: content || "Gatsby" }),
-				  })
-				: c
-		)
-		.filter((c) =>
-			keepTag
-				? true
-				: React.isValidElement(c) &&
-				  !isGeneratorTag(c.type, c.props?.name || "")
-		);
+			c.type !== "meta" &&
+			c.props.name !== "generator"
+	);
 
 	replaceHeadComponents(headComponents);
 
