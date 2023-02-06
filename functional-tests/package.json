@@ -20,7 +20,7 @@
     "webdriverio"
   ],
   "engines": {
-    "node": ">=12.16.1",
+    "node": ">=18.14.0",
     "npm": ">=6"
   },
   "author": "NICE Digital (https://www.nice.org.uk/digital)",
@@ -48,6 +48,6 @@
     "@cucumber/cucumber": "^8.10.0"
   },
   "volta": {
-    "node": "18.13.0"
+    "node": "18.14.0"
   }
 }
