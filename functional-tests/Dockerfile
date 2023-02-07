@@ -9,9 +9,9 @@ RUN apk add openjdk8
 RUN apk add curl
 
 # Install Allure for generating a report
-RUN curl -o allure-2.13.7.tgz -Ls https://repo1.maven.org/maven2/io/qameta/allure/allure-commandline/2.13.7/allure-commandline-2.13.7.tgz \
-	&& tar -zxf allure-2.13.7.tgz -C /usr/local --strip-components=1 \
-  && rm allure-2.13.7.tgz
+RUN curl -o allure-2.20.0.tgz -Ls https://repo1.maven.org/maven2/io/qameta/allure/allure-commandline/2.20.1/allure-commandline-2.20.1.tgz \
+	&& tar -zxf allure-2.20.1.tgz -C /usr/local --strip-components=1 \
+  && rm allure-2.20.1.tgz
 
 RUN mkdir -p /tests
 
