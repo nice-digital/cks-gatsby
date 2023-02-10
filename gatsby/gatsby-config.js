@@ -26,7 +26,6 @@ module.exports = {
 				excludes: [`/search/`],
 			},
 		},
-		"gatsby-plugin-remove-generator",
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-typescript",
 		"gatsby-plugin-preact",
