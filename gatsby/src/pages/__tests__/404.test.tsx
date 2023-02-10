@@ -7,7 +7,7 @@ import NotFoundPage from "../404";
 describe("404", () => {
 	it("should match snapshot", () => {
 		const { container } = renderWithRouter(<NotFoundPage />);
-
+		console.log(container.innerHTML);
 		expect(container).toMatchSnapshot();
 	});
 
