@@ -47,7 +47,7 @@ services:
           - cks-functional-tests.nice.org.uk
 
   mock-api:
-    build: https://github.com/nice-digital/mocks-apis.git#SRCH-804:search-apis
+    build: https://github.com/nice-digital/mocks-apis.git#main:search-apis
     container_name: mock-api
     networks:
       default:
