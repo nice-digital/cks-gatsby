@@ -19,9 +19,9 @@ Feature: Search Page
     And I open the search page
     Then the page should have no accessibility issues
 
-  Scenario: 15 search results per page
+  Scenario: 10 search results per page
     When I view the search results page for cancer
-    Then I expect to see a list of 15 search results
+    Then I expect to see a list of 10 search results
 
   Scenario: Total number of results
     When I view the search results page for cancer
