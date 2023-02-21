@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   selenium-hub:
-    image: selenium/hub:4.1.2-20220217
+    image: selenium/hub:4.8.0
     container_name: selenium-hub
     ports:
       - "4442:4442"
@@ -9,7 +9,7 @@ services:
       - "4444:4444"
 
   selenium-chrome:
-    image: selenium/node-chrome:4.1.2-20220217
+    image: selenium/node-chrome:110.0.5481.77-20230210
     shm_size: "2gb"
     depends_on:
       - selenium-hub
@@ -52,7 +52,7 @@ services:
     networks:
       default:
         aliases:
-          # Pretend to be the test search api endpoint 
+          # Pretend to be the test search api endpoint
           - test-search-api.nice.org.uk
 
 networks:
