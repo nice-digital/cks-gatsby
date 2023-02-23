@@ -56,7 +56,7 @@
     "@nice-digital/design-system": "5.0.4-alpha.0",
     "@nice-digital/global-nav": "^5.0.923",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^12.1.5",
+    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/async": "^3.2.15",
     "@types/jest": "^28.1.6",
