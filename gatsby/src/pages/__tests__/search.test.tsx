@@ -70,7 +70,7 @@ describe("Search Page", () => {
 		});
 	});
 
-	it.only("should not show any pagination if there are fewer results than the supplied page limit", async () => {
+	it("should not show any pagination if there are fewer results than the supplied page limit", async () => {
 		fetch.mockResponse(JSON.stringify(searchResponseShort));
 		renderWithRouter(<SearchPage />);
 		await waitFor(() => {
