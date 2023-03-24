@@ -77,12 +77,14 @@ export const shouldUpdateScroll = ({
 
 	const contentStartElement = document.getElementById("content-start");
 
-	if (!contentStartElement) return true;
+	if (!contentStartElement) return "content-start";
 
 	contentStartElement.setAttribute("tabIndex", "-1");
 	contentStartElement.focus();
-	contentStartElement.scrollIntoView();
 
+	// HACK - this behaviour was introduced in Gatsby v5 just having the scrollIntoView here doesn't trigger the scroll at all.
+	// Needed to wrap it with a slight delay in order for the scroll to happen.
+	window.setTimeout(() => contentStartElement.scrollIntoView(), 100);
 	return false;
 };
 
