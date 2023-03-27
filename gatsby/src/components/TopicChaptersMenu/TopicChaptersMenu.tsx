@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useLayoutEffect } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { Link } from "gatsby";
 
 import { StackedNav, StackedNavLink } from "@nice-digital/nds-stacked-nav";
@@ -30,9 +30,9 @@ export const TopicChaptersMenu: React.FC<TopicChaptersMenuProps> = ({
 	const [isExpanded, setIsExpanded] = useState(true);
 	const [isClient, setIsClient] = useState(false);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		setIsExpanded(false);
-		setIsClient(true);
+		setIsClient(false);
 	}, []);
 
 	const clickHandler = useCallback(() => {

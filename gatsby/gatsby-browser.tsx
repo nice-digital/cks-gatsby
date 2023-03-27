@@ -58,33 +58,66 @@ export const onRouteUpdate = ({
 		});
 	}
 };
-
 /**
  * Gatsby hook for overriding scroll position
  * See https://www.gatsbyjs.org/docs/browser-apis/#shouldUpdateScroll
  */
 export const shouldUpdateScroll = ({
 	routerProps: { location },
+	prevRouterProps,
 	getSavedScrollPosition,
 }: ShouldUpdateScrollArgs): boolean | string | [number, number] => {
-	const savedScrollY = getSavedScrollPosition(location)[1] as
-		| number
-		| undefined;
+	if (
+		// If there's no previous route props we're coming from an external site, which means
+		// we want to scroll to the hash (if there is one), and _not_ a saved scroll position
+		!prevRouterProps ||
+		// Or we're linking to as hash within the same page
+		(prevRouterProps.location.pathname === location.pathname && location.hash)
+	) {
+		const targetElement = location.hash
+			? document.querySelector(location.hash)
+			: null;
 
-	// Returning true here uses Gatsby's default behaviour.
-	// I.e. if there's a saved position or a hash then just let Gatsby deal with it
-	if ((savedScrollY && savedScrollY != 0) || location.hash) return true;
+		// Provide our own scroll to hash to avoid Gatsby using a stored scroll position
+		if (targetElement) {
+			targetElement.setAttribute("tabIndex", "-1");
+			(targetElement as HTMLElement).focus();
+			window.setTimeout(() => targetElement.scrollIntoView(), 0);
+			return false;
+		}
+		// Fallback to Gatsby's default behaviour if we can't find the element
+		// This happens sometimes when the service worker kicks in too late
+		else return true;
+	}
 
+	const savedScrollY = (getSavedScrollPosition(location)?.[1] || 0) as number;
+	if (savedScrollY > 0) {
+		window.scrollTo(0, savedScrollY);
+		return false;
+	}
+
+	if (location.hash) {
+		const targetElement = document.querySelector(location.hash);
+
+		// Default to Gatsby's default behaviour if the element doesn't exist
+		if (!targetElement) return true;
+
+		// Provide our own scroll to hash to avoid Gatsby using a stored scroll position
+		targetElement.setAttribute("tabIndex", "-1");
+		(targetElement as HTMLElement).focus();
+		window.setTimeout(() => targetElement.scrollIntoView(), 0);
+		return false;
+	}
+
+	// Default to scrolling to the content start element as the standard navigation behaviour
 	const contentStartElement = document.getElementById("content-start");
 
 	if (!contentStartElement) return true;
 
 	contentStartElement.setAttribute("tabIndex", "-1");
 	contentStartElement.focus();
-
-	// HACK - this behaviour was introduced in Gatsby v5 just having the scrollIntoView here doesn't trigger the scroll at all.
-	// Needed to wrap it with a slight delay in order for the scroll to happen.
 	window.setTimeout(() => contentStartElement.scrollIntoView(), 0);
+
 	return false;
 };
 
