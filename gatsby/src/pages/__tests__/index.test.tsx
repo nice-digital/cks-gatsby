@@ -65,7 +65,7 @@ describe("Home page", () => {
 		});
 
 		it("should not provide an A-Z link if there are no topics beginning with that letter", () => {
-			expect(screen.getByText("C")).toHaveProperty("tagName", "SPAN");
+			expect(screen.getByText("C")).toHaveProperty("tagName", "A");
 		});
 	});
 
