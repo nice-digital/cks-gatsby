@@ -74,20 +74,21 @@ export const shouldUpdateScroll = ({
 		// Or we're linking to as hash within the same page
 		(prevRouterProps.location.pathname === location.pathname && location.hash)
 	) {
-		const targetElement = location.hash
-			? document.querySelector(location.hash)
-			: null;
-
 		// Provide our own scroll to hash to avoid Gatsby using a stored scroll position
-		if (targetElement) {
-			targetElement.setAttribute("tabIndex", "-1");
-			(targetElement as HTMLElement).focus();
-			window.setTimeout(() => targetElement.scrollIntoView(), 0);
-			return false;
-		}
-		// Fallback to Gatsby's default behaviour if we can't find the element
-		// This happens sometimes when the service worker kicks in too late
-		else return true;
+		requestAnimationFrame(() => {
+			requestAnimationFrame(() => {
+				const targetElement = location.hash
+					? document.querySelector(location.hash)
+					: null;
+
+				if (targetElement) {
+					targetElement.setAttribute("tabIndex", "-1");
+					(targetElement as HTMLElement).focus();
+					targetElement.scrollIntoView();
+				}
+			});
+		});
+		return false;
 	}
 
 	const savedScrollY = (getSavedScrollPosition(location)?.[1] || 0) as number;
@@ -97,26 +98,34 @@ export const shouldUpdateScroll = ({
 	}
 
 	if (location.hash) {
-		const targetElement = document.querySelector(location.hash);
+		requestAnimationFrame(() => {
+			requestAnimationFrame(() => {
+				const targetElement = document.querySelector(location.hash);
 
-		// Default to Gatsby's default behaviour if the element doesn't exist
-		if (!targetElement) return true;
+				// Default to Gatsby's default behaviour if the element doesn't exist
+				if (!targetElement) return true;
 
-		// Provide our own scroll to hash to avoid Gatsby using a stored scroll position
-		targetElement.setAttribute("tabIndex", "-1");
-		(targetElement as HTMLElement).focus();
-		window.setTimeout(() => targetElement.scrollIntoView(), 0);
+				// Provide our own scroll to hash to avoid Gatsby using a stored scroll position
+				targetElement.setAttribute("tabIndex", "-1");
+				(targetElement as HTMLElement).focus();
+				targetElement.scrollIntoView();
+			});
+		});
 		return false;
 	}
 
+	requestAnimationFrame(() => {
+		requestAnimationFrame(() => {
+			const contentStartElement = document.getElementById("content-start");
+
+			if (!contentStartElement) return true;
+
+			contentStartElement.setAttribute("tabIndex", "-1");
+			contentStartElement.focus();
+			contentStartElement.scrollIntoView();
+		});
+	});
 	// Default to scrolling to the content start element as the standard navigation behaviour
-	const contentStartElement = document.getElementById("content-start");
-
-	if (!contentStartElement) return true;
-
-	contentStartElement.setAttribute("tabIndex", "-1");
-	contentStartElement.focus();
-	window.setTimeout(() => contentStartElement.scrollIntoView(), 0);
 
 	return false;
 };
