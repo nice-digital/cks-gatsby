@@ -164,21 +164,21 @@ describe("TopicsPage", () => {
 		});
 
 		it("should render topic link for each topic", () => {
-			// expect(screen.getByText("Achilles tendinopathy")).toHaveAttribute(
-			// 	"href",
-			// 	"/topics/achilles-tendinopathy/"
-			// );
+			expect(screen.getByText("Achilles tendinopathy")).toHaveAttribute(
+				"href",
+				"/topics/achilles-tendinopathy/"
+			);
 			expect(screen.getByText("Acne vulgaris")).toHaveAttribute(
 				"href",
 				"/topics/acne-vulgaris/"
 			);
 		});
 
-		// it("should render topic link for aliases", () => {
-		// 	expect(screen.getByText("Tendinopathy (achilles)")).toHaveAttribute(
-		// 		"href",
-		// 		"/topics/achilles-tendinopathy/"
-		// 	);
-		// });
+		it("should render topic link for aliases", () => {
+			expect(screen.getByText("Tendinopathy (achilles)")).toHaveAttribute(
+				"href",
+				"/topics/achilles-tendinopathy/"
+			);
+		});
 	});
 });
