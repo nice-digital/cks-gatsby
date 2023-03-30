@@ -28,6 +28,7 @@ module.exports = {
 		},
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-typescript",
+		"gatsby-plugin-catch-links",
 		{
 			resolve: `gatsby-plugin-sass`,
 			options: {

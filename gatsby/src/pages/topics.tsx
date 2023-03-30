@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { graphql, PageProps, Link, navigate } from "gatsby";
+import { graphql, PageProps, Link } from "gatsby";
 
 import { AZList, AZListItem } from "@nice-digital/nds-a-z-list";
 import { Alphabet, Letter } from "@nice-digital/nds-alphabet";
@@ -111,13 +111,9 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 							>
 								{topics.map(({ slug, name, isAlias }) => (
 									<li key={name}>
-										<a
-											key={`alphabet_${slug}-2`}
-											data-alias={isAlias}
-											onClick={() => navigate(`/topics/${slug}`)}
-										>
+										<Link to={`/topics/${slug}/`} data-alias={isAlias}>
 											{name}
-										</a>
+										</Link>
 									</li>
 								))}
 							</ColumnList>

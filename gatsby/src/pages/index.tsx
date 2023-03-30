@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { graphql, Link, navigate } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Alphabet, Letter } from "@nice-digital/nds-alphabet";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
 import { ColumnList } from "@nice-digital/nds-column-list";
@@ -75,11 +75,10 @@ const IndexPage: React.FC<IndexProps> = ({
 						{alphabet.map((letter) => (
 							<Letter
 								key={`alphabet_${letter}`}
-								onClick={() =>
-									linkableLetters.has(letter) && navigate(`/topics/#${letter}`)
-								}
+								elementType={Link}
+								to={linkableLetters.has(letter) && `/topics/#${letter}`}
 							>
-								<a>{letter.toUpperCase()}</a>
+								{letter.toUpperCase()}
 							</Letter>
 						))}
 					</Alphabet>
