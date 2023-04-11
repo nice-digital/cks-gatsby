@@ -22,7 +22,6 @@ interface RunQuery {
 }
 
 export interface RunQueryArgsFirst extends BaseQueryArgs {
-	firstOnly: true;
 	query: RunQuery;
 }
 
@@ -33,7 +32,6 @@ export interface RunQueryArgsAll extends BaseQueryArgs {
 			order: ("DESC" | "ASC")[];
 		};
 	};
-	firstOnly?: false;
 }
 
 export interface NodeModel {
@@ -48,8 +46,8 @@ export interface NodeModel {
 	getNodeById<T extends NodeInput>(args: GetNodeByIdArgs): T | null;
 
 	// https://www.gatsbyjs.org/docs/node-model/#runQuery
-	runQuery<T extends NodeInput>(args: RunQueryArgsFirst): Promise<T | null>;
-	runQuery<T extends NodeInput>(args: RunQueryArgsAll): Promise<T[] | null>;
+	findOne<T extends NodeInput>(args: RunQueryArgsFirst): Promise<T | null>;
+	findAll<T extends NodeInput>(args: RunQueryArgsAll): Promise<T[] | null>;
 }
 
 export interface ResolveContext {

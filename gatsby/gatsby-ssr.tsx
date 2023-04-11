@@ -11,6 +11,15 @@ export const onPreRenderHTML = ({
 }: PreRenderHTMLArgs): void => {
 	const components = getHeadComponents();
 
+	const headComponents = getHeadComponents().filter(
+		(c) =>
+			React.isValidElement(c) &&
+			c.type !== "meta" &&
+			c.props.name !== "generator"
+	);
+
+	replaceHeadComponents(headComponents);
+
 	components.push(
 		<script
 			src="https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
@@ -23,11 +32,7 @@ export const onPreRenderHTML = ({
 	components.push(
 		<>
 			<link rel="preconnect" href="https://fonts.googleapis.com" />
-			<link
-				rel="preconnect"
-				href="https://fonts.gstatic.com"
-				crossOrigin="crossOrigin"
-			/>
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
 			<link
 				href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:ital,wght@0,600;1,600&display=swap"
 				rel="stylesheet"

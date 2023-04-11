@@ -20,13 +20,12 @@ const getNodeById = <T extends NodeInput>({
 	nodeTypeName,
 	nodeModel,
 }: GetNodeByIdArgs): Promise<T | null> =>
-	nodeModel.runQuery({
+	nodeModel.findOne({
 		query: {
 			filter: {
 				[idField]: { eq: id },
 			},
 		},
-		firstOnly: true,
 		type: nodeTypeName,
 	});
 

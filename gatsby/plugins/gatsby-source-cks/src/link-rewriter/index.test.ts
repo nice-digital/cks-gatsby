@@ -4,12 +4,13 @@ import { NodeModel, RunQueryArgsFirst } from "./types";
 import { ChapterNode } from "../node-creation/chapters";
 
 describe("link rewriter", () => {
-	const runQuery = jest.fn(),
+	const findOne = jest.fn(),
 		nodeModel: NodeModel = {
 			getAllNodes: jest.fn(),
 			getNodeById: jest.fn(),
 			getNodesByIds: jest.fn(),
-			runQuery,
+			findOne,
+			findAll: jest.fn(),
 		};
 
 	const warn = jest.fn(),
@@ -25,7 +26,7 @@ describe("link rewriter", () => {
 
 	describe("topic links", () => {
 		it("should rewrite topic links", async () => {
-			runQuery.mockImplementation((args: RunQueryArgsFirst) => {
+			findOne.mockImplementation((args: RunQueryArgsFirst) => {
 				const topicId = (args.query.filter.topicId as { eq: string }).eq;
 				switch (topicId) {
 					case "e42fc175-7ae7-44c7-b7ef-b58a14733e7e":
@@ -56,11 +57,11 @@ describe("link rewriter", () => {
 		});
 
 		it("should warn when topic guid not found", async () => {
-			runQuery.mockImplementationOnce(() => ({
+			findOne.mockImplementationOnce(() => ({
 				topicId: "abc",
 				topicName: "Atrial fibrillation",
 			}));
-			runQuery.mockImplementationOnce(() => null);
+			findOne.mockImplementationOnce(() => null);
 			expect.assertions(1);
 			const htmlStringContent = `<a href="/Topic/ViewTopic/544c0dd8-12b4-472f-8325-25f15b3092e3">Achilles tendinopathy</a>`;
 			await replaceLinksInHtml(
@@ -80,7 +81,7 @@ describe("link rewriter", () => {
 
 	describe("chapter links", () => {
 		it("should rewrite root chapter links", async () => {
-			runQuery.mockImplementation((query) => {
+			findOne.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter")
@@ -101,7 +102,7 @@ describe("link rewriter", () => {
 		});
 
 		it("should rewrite second level chapter links", async () => {
-			runQuery.mockImplementation((query) => {
+			findOne.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter") {
@@ -132,7 +133,7 @@ describe("link rewriter", () => {
 		});
 
 		it("should rewrite third level chapter links", async () => {
-			runQuery.mockImplementation((query) => {
+			findOne.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter") {
@@ -171,7 +172,7 @@ describe("link rewriter", () => {
 		});
 
 		it("should rewrite fourth level chapter links", async () => {
-			runQuery.mockImplementation((query) => {
+			findOne.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({ slug: "achilles-tendinopathy" });
 				if (query.type === "CksChapter") {
@@ -218,7 +219,7 @@ describe("link rewriter", () => {
 
 	describe("topic chapter links", () => {
 		it("should rewrite topic root chapter links", async () => {
-			runQuery.mockImplementation((query) => {
+			findOne.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({
 						slug: "achilles-tendinopathy",
@@ -247,7 +248,7 @@ describe("link rewriter", () => {
 		});
 
 		it("should rewrite topic summary chapter links", async () => {
-			runQuery.mockImplementation((query) => {
+			findOne.mockImplementation((query) => {
 				if (query.type === "CksTopic")
 					return Promise.resolve({
 						slug: "achilles-tendinopathy",

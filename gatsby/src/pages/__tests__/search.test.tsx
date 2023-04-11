@@ -1,7 +1,7 @@
 import React from "react";
 import fetch from "jest-fetch-mock";
 import { renderWithRouter, textContentMatcher } from "test-utils";
-import { waitFor, fireEvent, screen } from "@testing-library/react";
+import { waitFor, fireEvent, screen, act } from "@testing-library/react";
 import * as searchResponseLong from "./sample-data/search-response-long.json";
 import * as searchResponseLongPage2 from "./sample-data/search-response-long-page-2.json";
 import * as searchResponseShort from "./sample-data/search-response-short.json";
@@ -74,7 +74,9 @@ describe("Search Page", () => {
 		fetch.mockResponse(JSON.stringify(searchResponseShort));
 		renderWithRouter(<SearchPage />);
 		await waitFor(() => {
-			expect(screen.queryByLabelText("Pagination")).toBeFalsy();
+			act(() => {
+				expect(screen.queryByLabelText("Pagination")).toBeFalsy();
+			});
 		});
 	});
 

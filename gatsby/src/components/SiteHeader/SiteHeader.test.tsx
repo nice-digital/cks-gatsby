@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, waitFor, screen } from "@testing-library/react";
+import { fireEvent, waitFor, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { navigate } from "gatsby";
 import { renderWithRouter } from "test-utils";
@@ -98,11 +98,11 @@ describe("Header", () => {
 	it("should append a label for keyword, topic and scenario suggestions", async () => {
 		renderWithRouter(<SiteHeader />);
 
-		userEvent.type(await screen.findByRole("combobox"), "dia");
+		userEvent.type(await waitFor(() => screen.findByRole("combobox")), "dia");
 
 		await waitFor(() => {
 			expect(
-				screen.getAllByRole("option").map((n) => n.textContent)
+				screen.queryAllByRole("option").map((n) => n.textContent)
 			).toStrictEqual([
 				"Diabetes - type 1 (CKS topic)",
 				"Diazepam (CKS search)",
@@ -119,7 +119,7 @@ describe("Header", () => {
 
 		renderWithRouter(<SiteHeader />);
 
-		userEvent.type(await screen.findByRole("combobox"), "dia");
+		userEvent.type(await waitFor(() => screen.findByRole("combobox")), "dia");
 
 		await waitFor(() => {
 			expect(autocompleteSuggestionTemplate).toHaveBeenCalledTimes(
@@ -151,7 +151,9 @@ describe("Header", () => {
 		});
 
 		const searchBox = await screen.findByRole("combobox");
-		await history.navigate("/search/?q=cancer");
+		act(() => {
+			history.navigate("/search/?q=cancer");
+		});
 
 		await waitFor(() => expect(searchBox).toHaveAttribute("value", "cancer"));
 	});
