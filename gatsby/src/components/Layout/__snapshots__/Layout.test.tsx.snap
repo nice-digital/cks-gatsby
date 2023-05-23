@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should match snapshot for EULA 1`] = `
+<div
+  class="panel eula"
+  data-testid="eula"
+>
+  <p>
+    The content on the NICE Clinical Knowledge Summaries site (CKS) is the copyright of
+     
+    <a
+      href="https://agiliosoftware.com/primary-care/"
+      rel="noopener noreferrer"
+    >
+      Clarity Informatics Limited (trading as Agilio Software Primary Care)
+    </a>
+    . By using CKS, you agree to the licence set out in the
+     
+    <a
+      href="https://www.nice.org.uk/terms-and-conditions/cks-end-user-licence-agreement"
+    >
+      CKS End User Licence Agreement
+    </a>
+    .
+  </p>
+</div>
+`;

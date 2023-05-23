@@ -1,0 +1,10 @@
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/utils';
+
+.eula {
+  margin-top: utils.rem(spacing.$large);
+
+  p {
+    max-width: none;
+  }
+}
