@@ -3,6 +3,7 @@
 exports[`About page Body should match snapshot for 'Help develop CKS' panel 1`] = `
 <div
   class="panel"
+  data-component="panel"
 >
   <h2
     class="h3"
@@ -36,6 +37,7 @@ exports[`About page Body should match snapshot for 'Help develop CKS' panel 1`] 
 exports[`About page Body should match snapshot for main body content 1`] = `
 <div
   class="body"
+  data-component="grid-item"
   data-g="12 md:7 lg:8"
 >
   <h2>
