@@ -4,6 +4,7 @@ exports[`HelpPanel should match snapshot 1`] = `
 <div>
   <div
     class="panel"
+    data-component="panel"
   >
     <h2
       class="h3"

@@ -3,6 +3,7 @@
 exports[`Development page Body should match snapshot for 'CKS process guide' panel 1`] = `
 <div
   class="panel"
+  data-component="panel"
 >
   <h2
     class="h3"
@@ -15,6 +16,7 @@ exports[`Development page Body should match snapshot for 'CKS process guide' pan
   <p>
     <a
       class="btn btn--secondary"
+      data-component="button--secondary"
       download=""
       href="https://www.nice.org.uk/media/default/About/what-we-do/Evidence%20Services/CKS/CKS-guide.pdf"
     >
@@ -27,6 +29,7 @@ exports[`Development page Body should match snapshot for 'CKS process guide' pan
 exports[`Development page Body should match snapshot for 'Help develop CKS' panel 1`] = `
 <div
   class="panel"
+  data-component="panel"
 >
   <h2
     class="h3"
@@ -60,6 +63,7 @@ exports[`Development page Body should match snapshot for 'Help develop CKS' pane
 exports[`Development page Body should match snapshot for main body content 1`] = `
 <div
   class="body"
+  data-component="grid-item"
   data-g="12 md:7 lg:8"
 >
   <h2>
@@ -222,6 +226,7 @@ exports[`Development page Body should match snapshot for main body content 1`] =
   <p>
     <a
       class="btn btn--secondary"
+      data-component="button--secondary"
       download=""
       href="https://cks.clarity.co.uk/get-involved/"
     >

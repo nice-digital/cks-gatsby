@@ -3,6 +3,7 @@
 exports[`Layout should match snapshot for EULA 1`] = `
 <div
   class="panel eula"
+  data-component="panel"
   data-testid="eula"
 >
   <p>

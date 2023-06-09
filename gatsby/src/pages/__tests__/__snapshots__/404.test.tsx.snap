@@ -72,6 +72,7 @@ exports[`404 should match snapshot 1`] = `
   </script>
   <div
     class="page-header"
+    data-component="page-header"
     id="content-start"
   >
     <h1
