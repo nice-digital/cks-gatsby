@@ -156,7 +156,8 @@ describe("ChapterLevel2", () => {
 			expect(screen.getByText("Print this page")).toBeInTheDocument();
 		});
 
-		it("should print window on print button click", () => {
+		it("should print window on print button click", async () => {
+			const user = userEvent.setup();
 			render(
 				<ChapterLevel2Page
 					{...({ pageContext: { chapter } } as ChapterLevel2PageProps)}
@@ -167,8 +168,9 @@ describe("ChapterLevel2", () => {
 			const printSpy = jest.fn();
 			global.print = printSpy;
 			const printBtn = screen.getByText("Print this page");
-			userEvent.click(printBtn);
-			expect(printSpy).toHaveBeenCalled();
+			user.click(printBtn);
+
+			await waitFor(() => expect(printSpy).toHaveBeenCalled());
 			global.print = oldPrint;
 		});
 	});

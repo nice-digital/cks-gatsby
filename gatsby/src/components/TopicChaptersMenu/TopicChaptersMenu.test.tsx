@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { textContentMatcher } from "test-utils";
 
@@ -175,16 +175,19 @@ describe("TopicChaptersMenu", () => {
 			expect(toggleBtn).toHaveAttribute("aria-label", "Expand menu for Asthma");
 		});
 
-		it("should collapse toggle button on click", () => {
+		it("should collapse toggle button on click", async () => {
+			const user = userEvent.setup();
 			render(<TopicChaptersMenu topic={topic} currentChapter={chapter1} />);
 
 			const toggleBtn = screen.getByText(chapter1.fullItemName, {
 				selector: "button",
 			});
 
-			userEvent.click(toggleBtn);
+			user.click(toggleBtn);
 
-			expect(toggleBtn).toHaveAttribute("aria-expanded", "true");
+			await waitFor(() =>
+				expect(toggleBtn).toHaveAttribute("aria-expanded", "true")
+			);
 			expect(toggleBtn).toHaveAttribute(
 				"aria-label",
 				"Collapse menu for Asthma"

@@ -30,9 +30,9 @@ describe("useSiteMetadata", () => {
 							siteMetadata {
 								title
 								siteUrl
-								changesSinceDateISO: changesSinceDate(formatString: \\"YYYY-MM\\")
+								changesSinceDateISO: changesSinceDate(formatString: "YYYY-MM")
 								changesSinceDateFormatted: changesSinceDate(
-									formatString: \\"MMMM YYYY\\"
+									formatString: "MMMM YYYY"
 								)
 							}
 						}
