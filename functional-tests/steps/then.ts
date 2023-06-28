@@ -22,7 +22,9 @@ Then("I expect that the CKS GTM container is available", async () => {
 Then(
 	/^I expect to see "([^"]*)" in the autocomplete suggestions$/,
 	async (text: string) => {
-		const optionElement = await $(await getSelector("autocomplete option"));
+		const optionElement = await $(
+			(await getSelector("autocomplete option")) + ":not(.visually-hidden)"
+		);
 		await optionElement.waitForExist({ timeout: 20000 });
 
 		const menuSelector = await getSelector("autocomplete menu");
