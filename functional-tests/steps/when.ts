@@ -23,7 +23,9 @@ When(
 	async (text: string) => {
 		const pageTitle = await browser.getTitle();
 
-		const optionElement = await $(await getSelector("autocomplete option"));
+		const optionElement = await $(
+			(await getSelector("autocomplete option")) + ":not(.visually-hidden)"
+		);
 		await optionElement.waitForExist({ timeout: 20000 });
 
 		const anchorSelector = await getSelector("autocomplete anchor");
