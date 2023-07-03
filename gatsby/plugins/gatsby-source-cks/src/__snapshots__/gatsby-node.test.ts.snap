@@ -2,186 +2,186 @@
 
 exports[`gatsby-node createSchemaCustomization should call createTypes with custom schema 1`] = `
 "
-	\\"\\"\\"
+	"""
 	A update or change to a topic, taken from the \`latestChanges\` field in the API reponse for a full topic.
 
 	> Note: this is not a node in its own right so can't be queried directly.
 
 	Don't confuse this with the \`CksChange\` node type.
-	\\"\\"\\"
+	"""
 	type CksTopicLatestChange @dontInfer {
-		\\"The first day of the month in which this change occurred e.g. \`2016-01-01T00:00:00+00:00\`\\"
+		"The first day of the month in which this change occurred e.g. \`2016-01-01T00:00:00+00:00\`"
 		dateFrom: Date! @dateformat
 
-		\\"The last day of the month in which this change occurred e.g. \`2016-01-31T23:59:59+00:00\`\\"
+		"The last day of the month in which this change occurred e.g. \`2016-01-31T23:59:59+00:00\`"
 		dateTo: Date! @dateformat
 
-		\\"The type of the change for example *Reviewed*, *Minor update*, *Revised* etc\\"
+		"The type of the change for example *Reviewed*, *Minor update*, *Revised* etc"
 		title: String!
 
-		\\"A description of the change\\"
+		"A description of the change"
 		body: String!
 	}
 
-	\\"\\"\\"
+	"""
 	A term for a topic, from the \`terms\` field in the API reponse for a full topic.
 
 	> Note: this is not a node in its own right so can't be queried directly.
 
-	For example the topic \\"Achilles tendinopathy\\" might have terms of:
+	For example the topic "Achilles tendinopathy" might have terms of:
 	- Achilles Tendon
 	- Tendinopathy
-	\\"\\"\\"
+	"""
 	type CksTopicTerm @dontInfer {
-		\\"The id of the term e.g. *D001249*\\"
+		"The id of the term e.g. *D001249*"
 		code: String!
 
-		\\"The term text e.g. *Asthma* or *Tendinopathy*\\"
+		"The term text e.g. *Asthma* or *Tendinopathy*"
 		term: String!
 	}
 
-	\\"\\"\\"
+	"""
 	A full topic object, taken from the */topic/guid* endpoint in the API.
-	\\"\\"\\"
+	"""
 	type CksTopic implements Node @dontInfer {
-		\\"The lowercase slugified title, used as the path within a URL e.g. *achilles-tendinopathy*\\"
+		"The lowercase slugified title, used as the path within a URL e.g. *achilles-tendinopathy*"
 		slug: String!
 
-		\\"The guid id of the topic taken from the feed\\"
+		"The guid id of the topic taken from the feed"
 		topicId: String!
 
-		\\"The name of the topic e.g. *Achilles tendinopathy*\\"
+		"The name of the topic e.g. *Achilles tendinopathy*"
 		topicName: String!
 
-		\\"A summary of the topic in 1 or 2 sentences\\"
+		"A summary of the topic in 1 or 2 sentences"
 		topicSummary: String!
 
-		\\"The latest version number\\"
+		"The latest version number"
 		number: Int!
 
-		\\"The date of the last revision as text e.g. *Last revised in January 2016*\\"
+		"The date of the last revision as text e.g. *Last revised in January 2016*"
 		lastRevised: String!
 
-		\\"The date by which this topic will be reviewed. Optional as this is null for some topics.\\"
+		"The date by which this topic will be reviewed. Optional as this is null for some topics."
 		nextPlannedReviewBy: Date @dateformat
 
-		\\"A list of terms related to this topic. Not every topic has other terms.\\"
+		"A list of terms related to this topic. Not every topic has other terms."
 		terms: [CksTopicTerm!]!
 
-		\\"A list of alternative names or synonyms\\"
+		"A list of alternative names or synonyms"
 		aliases: [String!]!
 
-		\\"\\"\\"
+		"""
 		A list of specialities to which this topic belongs.
 
 		For example, *Achilles tendinopathy* is in both *Injuries* and *Musculoskeletal*.
 
 		Note: not all topics have specialities defined.
-		\\"\\"\\"
-		specialities: [CksSpeciality!]! @link(by: \\"name\\")
+		"""
+		specialities: [CksSpeciality!]! @link(by: "name")
 
-		\\"The content chapters within the topic, taken from the \`topicHtmlObjects\` field in the API.\\"
-		chapters: [CksChapter!]! @link(by: \\"itemId\\")
+		"The content chapters within the topic, taken from the \`topicHtmlObjects\` field in the API."
+		chapters: [CksChapter!]! @link(by: "itemId")
 
-		\\"The last changes or reviews that the topic has had. Not to be confused with the other node type of \`CksChange\`.\\"
+		"The last changes or reviews that the topic has had. Not to be confused with the other node type of \`CksChange\`."
 		latestChanges: [CksTopicLatestChange!]!
 	}
 
 
-	\\"\\"\\"
+	"""
 	A clinical speciality that groups topics together
 
 	For example *Injuries* or *Musculoskeletal*.
-	\\"\\"\\"
+	"""
 	type CksSpeciality implements Node @dontInfer {
-		\\"The name of the speciality e.g. *Injuries*\\"
+		"The name of the speciality e.g. *Injuries*"
 		name: String!
 
-		\\"The lowercased, slugified title of the speciality used as the path within a URL e.g. *kidney-disease-and-urology*\\"
+		"The lowercased, slugified title of the speciality used as the path within a URL e.g. *kidney-disease-and-urology*"
 		slug: String!
 
-		\\"The list of topics that belong to this clinical speciality\\"
-		topics: [CksTopic!]! @link(by: \\"topicId\\")
+		"The list of topics that belong to this clinical speciality"
+		topics: [CksTopic!]! @link(by: "topicId")
 	}
 
 
-	\\"\\"\\"
+	"""
 	A chapter of content within a topic, taken from the \`topicHtmlObjects\` field in the API.
 
 	Chapters can nest recursively.
-	\\"\\"\\"
+	"""
 	type CksChapter implements Node @dontInfer {
-		\\"A lowercased slugified chapter title for use in URL paths e.g. *have-i-got-the-right-topic*\\"
+		"A lowercased slugified chapter title for use in URL paths e.g. *have-i-got-the-right-topic*"
 		slug: String!
 
-		\\"The guid id of the chapter\\"
+		"The guid id of the chapter"
 		itemId: String!
 
-		\\"The name of the chapter e.g. *Have I got the right topic?*\\"
+		"The name of the chapter e.g. *Have I got the right topic?*"
 		fullItemName: String!
 
-		\\"\\"\\"
+		"""
 		The HTML heading for the chapter e.g. \`<h1>Achilles tendinopathy: Summary</h1>\` or \`<h2>Changes</h2>\` or \`<h3>Previous changes</h3>\`.
 
 		Notice two things:
 		- the heading tag used corresponds to the \`depth\` of the chapter
 		- the text isn't necessarily the same as \`fullItemName\` (although often it is)
-		\\"\\"\\"
+		"""
 		htmlHeader: String!
 
-		\\"\\"\\"
+		"""
 		Summary for chapter e.g. 'Covers the management of children and adults with newly diagnosed or suspected asthma.'
-		\\"\\"\\"
+		"""
 		summary: String
 
-		\\"The HTML body of the chapter\\"
+		"The HTML body of the chapter"
 		htmlStringContent: String!
 
-		\\"\\"\\"
+		"""
 		An identifier for the chapter, used as a CSS class for the containing element in Clarity's Prodigy. e.g. *annualKnowNewEvidence*.
 
 		Note: it's often camel case but sometimes lowercase e.g. *uptodate*.
-		\\"\\"\\"
+		"""
 		containerElement: String!
 
-		\\"The 1-based index representing how deeply nested this chapter is. E.g. Summary has a depth of 1.\\"
+		"The 1-based index representing how deeply nested this chapter is. E.g. Summary has a depth of 1."
 		depth: Int!
 
-		\\"The 0-based index of the chapter at the current depth\\"
+		"The 0-based index of the chapter at the current depth"
 		pos: Int!
 
-		\\"A reference to the topic to which this chapter belongs\\"
-		topic: CksTopic! @link(by: \\"topicId\\")
+		"A reference to the topic to which this chapter belongs"
+		topic: CksTopic! @link(by: "topicId")
 
-		\\"The direct parent chapter in the nesting. The root chapter has no parent so this field is nullable.\\"
-		parentChapter: CksChapter @link(by: \\"itemId\\")
+		"The direct parent chapter in the nesting. The root chapter has no parent so this field is nullable."
+		parentChapter: CksChapter @link(by: "itemId")
 
-		\\"The chapter at the top of the hierarchy. This property is non-null and references itself for the root chapter.\\"
-		rootChapter: CksChapter! @link(by: \\"itemId\\")
+		"The chapter at the top of the hierarchy. This property is non-null and references itself for the root chapter."
+		rootChapter: CksChapter! @link(by: "itemId")
 
-		\\"\\"\\"
+		"""
 		Child chapters nested within this one.
 
 		Note: sub chapters are from the the \`children\` field in the API, however,
 		we rename them because children is a 'reserved' field in Gatsby
 		and is mainly used for transformation relations between nodes
-		\\"\\"\\"
-		subChapters: [CksChapter!] @link(by: \\"itemId\\")
+		"""
+		subChapters: [CksChapter!] @link(by: "itemId")
 	}
 
 
-	\\"\\"\\"
+	"""
 	A monthly change or update to a topic. Taken from the *changes-since* API endpoint.
-	\\"\\"\\"
+	"""
 	type CksChange implements Node @dontInfer {
-		\\"The type of the change. e.g. *Reviewed* or *New topic* etc. Most changes are *reviewed*.\\"
+		"The type of the change. e.g. *Reviewed* or *New topic* etc. Most changes are *reviewed*."
 		title: String!
 
-		\\"A description of the change. Usually 1 or 2 sentences but can be longer\\"
+		"A description of the change. Usually 1 or 2 sentences but can be longer"
 		text: String!
 
-		\\"The topic that was affected by this change\\"
-		topic: CksTopic! @link(by: \\"topicId\\")
+		"The topic that was affected by this change"
+		topic: CksTopic! @link(by: "topicId")
 	}
 "
 `;

@@ -137,14 +137,17 @@ describe("SpecialityPage", () => {
 			expect(topicAnchor).toHaveAttribute("href", "/topics/allergic-rhinitis/");
 		});
 
-		it("should user Gatsby's client side navigation for topic links", () => {
+		it("should user Gatsby's client side navigation for topic links", async () => {
+			const user = userEvent.setup();
 			const allergicRhinitisAnchor = screen.getByText("Allergic rhinitis", {
 				selector: "ol a",
 			});
 
-			userEvent.click(allergicRhinitisAnchor);
+			user.click(allergicRhinitisAnchor);
 
-			expect(navigate).toHaveBeenCalledWith("/topics/allergic-rhinitis/");
+			await waitFor(() =>
+				expect(navigate).toHaveBeenCalledWith("/topics/allergic-rhinitis/")
+			);
 		});
 	});
 });

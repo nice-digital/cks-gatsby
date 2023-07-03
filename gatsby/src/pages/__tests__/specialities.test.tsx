@@ -107,14 +107,17 @@ describe("SpecialitiesPage", () => {
 			);
 		});
 
-		it("should user Gatsby's client side navigation for speciality links", () => {
+		it("should user Gatsby's client side navigation for speciality links", async () => {
+			const user = userEvent.setup();
 			const allergiesAnchor = screen.getByText("Allergies", {
 				selector: "ol a",
 			});
 
-			userEvent.click(allergiesAnchor);
+			user.click(allergiesAnchor);
 
-			expect(navigate).toHaveBeenCalledWith("/specialities/allergies/");
+			await waitFor(() =>
+				expect(navigate).toHaveBeenCalledWith("/specialities/allergies/")
+			);
 		});
 	});
 });
