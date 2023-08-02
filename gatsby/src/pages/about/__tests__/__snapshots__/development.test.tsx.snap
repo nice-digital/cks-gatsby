@@ -44,7 +44,7 @@ exports[`Development page Body should match snapshot for 'Help develop CKS' pane
   >
     <li>
       <a
-        href="https://cks.clarity.co.uk/get-involved/"
+        href="https://agiliosoftware.com/primary-care/prodigy/"
       >
         Help develop CKS topics
       </a>
@@ -228,7 +228,7 @@ exports[`Development page Body should match snapshot for main body content 1`] =
       class="btn btn--secondary"
       data-component="button--secondary"
       download=""
-      href="https://cks.clarity.co.uk/get-involved/"
+      href="https://agiliosoftware.com/primary-care/prodigy/"
     >
       Help develop CKS topics
     </a>
