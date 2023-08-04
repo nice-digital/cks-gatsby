@@ -11,7 +11,7 @@ export const HelpPanel: React.FC = () => (
 		</p>
 		<ul aria-label="How to help develop CKS">
 			<li>
-				<a href="https://cks.clarity.co.uk/get-involved/">
+				<a href="https://agiliosoftware.com/primary-care/prodigy/">
 					Help develop CKS topics
 				</a>
 			</li>

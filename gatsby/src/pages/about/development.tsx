@@ -132,7 +132,7 @@ const DevelopmentPage: React.FC = () => {
 					<p>
 						<Button
 							variant="secondary"
-							to="https://cks.clarity.co.uk/get-involved/"
+							to="https://agiliosoftware.com/primary-care/prodigy/"
 							download
 						>
 							Help develop CKS topics
