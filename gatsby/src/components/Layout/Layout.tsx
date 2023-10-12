@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import { Container } from "@nice-digital/nds-container";
 
 import { SiteHeader } from "../SiteHeader/SiteHeader";
+import { EULABanner } from "../EULABanner/EULABanner";
 import { Footer, Main } from "@nice-digital/global-nav";
 import { Panel } from "@nice-digital/nds-panel";
 
@@ -16,6 +17,7 @@ type LayoutProps = {
 export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 	return (
 		<>
+			<EULABanner />
 			<SiteHeader />
 			<Main>
 				<Container>
