@@ -1,34 +1,47 @@
 import React, { useState, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import Cookies from "js-cookie";
 
 import styles from "./EULABanner.module.scss";
+
+const COOKIE_EXPIRY = 365; // In days, i.e. cookie expires a year from when it's set
+const COOKIE_NAME = "CKS-EULA-Accepted";
 
 export const EULABanner: React.FC = () => {
 	const [open, setOpen] = useState(false);
 
-	// Check for the cookie banner - if it exists, then hide the EULA for now.
-	// We can then watch for the banner's dismissal and show the EULA as soon
-	// as the banner has been dismissed
 	useEffect(() => {
-		console.log("Running first time!");
-		const cookieBanner = document.querySelector("#ccc-module");
-		if (cookieBanner) {
-			// Watch for dismissal - reinstate the EULA at that point
-			const callback = () => {
-				setOpen(true);
-			};
+		// Check for EULA cookie
+		const allCookies = Cookies.get();
+		console.log("All cookies:", allCookies);
+		const EULACookieVal = Cookies.get(COOKIE_NAME);
 
-			const observer = new MutationObserver(callback);
-			observer.observe(cookieBanner.parentElement as HTMLElement, {
-				childList: true,
-			});
-		} else {
-			setOpen(true);
+		if (!EULACookieVal) {
+			// Check for the cookie banner - if it's open, then hide the EULA for now.
+			// We can then watch for the banner's dismissal and show the EULA as soon
+			// as the banner has been dismissed
+			const cookieBanner = document.querySelector("#ccc-module");
+			if (cookieBanner) {
+				// Watch for dismissal - reinstate the EULA at that point
+				const callback = () => {
+					setOpen(true);
+				};
+
+				const observer = new MutationObserver(callback);
+				observer.observe(cookieBanner.parentElement as HTMLElement, {
+					childList: true,
+				});
+			} else {
+				setOpen(true);
+			}
 		}
 	}, []);
 
 	const handleClick = () => {
 		setOpen(false);
+		Cookies.set(COOKIE_NAME, "true", {
+			expires: COOKIE_EXPIRY,
+		});
 	};
 
 	return (
