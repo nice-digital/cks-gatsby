@@ -12,8 +12,6 @@ export const EULABanner: React.FC = () => {
 
 	useEffect(() => {
 		// Check for EULA cookie
-		const allCookies = Cookies.get();
-		console.log("All cookies:", allCookies);
 		const EULACookieVal = Cookies.get(COOKIE_NAME);
 
 		if (!EULACookieVal) {
@@ -37,7 +35,8 @@ export const EULABanner: React.FC = () => {
 		}
 	}, []);
 
-	const handleClick = () => {
+	// Terms are accepted - dismiss modal and store cookie
+	const handleAccept = () => {
 		setOpen(false);
 		Cookies.set(COOKIE_NAME, "true", {
 			expires: COOKIE_EXPIRY,
@@ -50,7 +49,7 @@ export const EULABanner: React.FC = () => {
 				<Dialog.Overlay className={styles.overlay} />
 				<Dialog.Content className={styles.portal}>
 					<EULABannerContent />
-					<button className="btn btn--cta" onClick={handleClick}>
+					<button className="btn btn--cta" onClick={handleAccept}>
 						I accept these terms
 					</button>
 				</Dialog.Content>
