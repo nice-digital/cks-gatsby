@@ -49,7 +49,11 @@ export const EULABanner: React.FC = () => {
 				<Dialog.Overlay className={styles.overlay} />
 				<Dialog.Content className={styles.portal}>
 					<EULABannerContent />
-					<button className="btn btn--cta" onClick={handleAccept}>
+					<button
+						className="btn btn--cta"
+						onClick={handleAccept}
+						id="btn-accept-cks-eula"
+					>
 						I accept these terms
 					</button>
 				</Dialog.Content>
