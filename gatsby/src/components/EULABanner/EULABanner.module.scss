@@ -1,3 +1,7 @@
+@use '@nice-digital/nds-core/scss/colours/tokens/global';
+
+// These styles have basically been robbed directly from the cookie-control
+// third party script, so that the notice appears in exactly the same place
 .portal {
   background: white;
   bottom: 0;
@@ -12,7 +16,7 @@
 }
 
 .overlay {
-  background: #333;
+  background: global.$black-tint-1;
   inset: 0;
   position: fixed;
   z-index: 99998;
