@@ -214,6 +214,7 @@ exports[`EULABanner should match snapshot 1`] = `
     </section>
     <button
       class="btn btn--cta"
+      id="btn-accept-cks-eula"
     >
       I accept these terms
     </button>
