@@ -32,16 +32,21 @@ exports[`EULABanner should match snapshot 1`] = `
     style="pointer-events: auto;"
     tabindex="-1"
   >
+    <h2>
+      CKS End User Licence Agreement
+    </h2>
+    <p>
+      You must agree to the following terms before using this site.
+    </p>
+    <button
+      class="btn btn--cta"
+      data-component="button--cta"
+      id="btn-accept-cks-eula-top"
+      type="button"
+    >
+      I accept these terms
+    </button>
     <section>
-      <h2>
-        CKS End User Licence Agreement
-      </h2>
-      <p>
-        You must agree to the following terms before using this site.
-      </p>
-      <p>
-        You will need to scroll to the end of the terms in order to accept.
-      </p>
       <h3>
         1. This contract
       </h3>
@@ -215,7 +220,7 @@ exports[`EULABanner should match snapshot 1`] = `
     <button
       class="btn btn--cta"
       data-component="button--cta"
-      id="btn-accept-cks-eula"
+      id="btn-accept-cks-eula-bottom"
       type="button"
     >
       I accept these terms
