@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import { Button } from "@nice-digital/nds-button";
 import Cookies from "js-cookie";
 
 import styles from "./EULABanner.module.scss";
@@ -49,13 +50,9 @@ export const EULABanner: React.FC = () => {
 				<Dialog.Overlay className={styles.overlay} />
 				<Dialog.Content className={styles.portal}>
 					<EULABannerContent />
-					<button
-						className="btn btn--cta"
-						onClick={handleAccept}
-						id="btn-accept-cks-eula"
-					>
+					<Button variant="cta" onClick={handleAccept} id="btn-accept-cks-eula">
 						I accept these terms
-					</button>
+					</Button>
 				</Dialog.Content>
 			</Dialog.Portal>
 		</Dialog.Root>
