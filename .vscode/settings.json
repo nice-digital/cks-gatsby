@@ -53,11 +53,6 @@
     "functional-tests/steps/then.ts"
   ],
   "omnisharp.loggingLevel": "warning",
-  "csharp.unitTestDebuggingOptions": {
-    "logging": {
-      "moduleLoad": false
-    }
-  },
   "[csharp]": {
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
@@ -71,5 +66,10 @@
   },
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "dotnet.unitTestDebuggingOptions": {
+    "logging": {
+      "moduleLoad": false
+    }
   }
 }

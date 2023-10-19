@@ -22,7 +22,7 @@ export const onPreRenderHTML = ({
 
 	components.push(
 		<script
-			src="https://cdn.nice.org.uk/cookie-banner/cookie-banner.min.js"
+			src={process.env.GATSBY_COOKIE_BANNER_URL}
 			type="text/javascript"
 			key="cookie-banner"
 			async
