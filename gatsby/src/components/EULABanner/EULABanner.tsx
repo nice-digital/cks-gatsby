@@ -49,8 +49,21 @@ export const EULABanner: React.FC = () => {
 			<Dialog.Portal>
 				<Dialog.Overlay className={styles.overlay} />
 				<Dialog.Content className={styles.portal}>
+					<h2>CKS End User Licence Agreement</h2>
+					<p>You must agree to the following terms before using this site.</p>
+					<Button
+						variant="cta"
+						onClick={handleAccept}
+						id="btn-accept-cks-eula-top"
+					>
+						I accept these terms
+					</Button>
 					<EULABannerContent />
-					<Button variant="cta" onClick={handleAccept} id="btn-accept-cks-eula">
+					<Button
+						variant="cta"
+						onClick={handleAccept}
+						id="btn-accept-cks-eula-bottom"
+					>
 						I accept these terms
 					</Button>
 				</Dialog.Content>
@@ -61,9 +74,6 @@ export const EULABanner: React.FC = () => {
 
 export const EULABannerContent: React.FC = () => (
 	<section>
-		<h2>CKS End User Licence Agreement</h2>
-		<p>You must agree to the following terms before using this site.</p>
-		<p>You will need to scroll to the end of the terms in order to accept.</p>
 		<h3>1. This contract</h3>
 		<ul className="list list--unstyled">
 			<li>
