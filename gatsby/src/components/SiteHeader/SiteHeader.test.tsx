@@ -59,7 +59,7 @@ describe("Header", () => {
 		const cksAnchor = await screen.findByText(
 			(_content, element) =>
 				element?.textContent === "Clinical Knowledge Summaries (CKS)",
-			{ selector: "button" }
+			{ selector: "a" }
 		);
 
 		expect(cksAnchor.getAttribute("aria-current")).toBe("true");
