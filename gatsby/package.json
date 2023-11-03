@@ -49,7 +49,9 @@
   "license": "MIT",
   "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
   "browserslist": [
-    "extends @nice-digital/browserslist-config"
+    "defaults",
+    "> 0.1%",
+    "not dead"
   ],
   "devDependencies": {
     "@nice-digital/browserslist-config": "^2.0.1",
