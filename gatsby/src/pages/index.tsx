@@ -140,17 +140,17 @@ export default IndexPage;
 
 export const query = graphql`
 	{
-		allSpecialities: allCksSpeciality(sort: { fields: name }) {
+		allSpecialities: allCksSpeciality(sort: { name: ASC }) {
 			nodes {
 				...PartialSpeciality
 			}
 		}
 		allTopicNames: allCksTopic {
-			distinct(field: topicName)
+			distinct(field: { topicName: SELECT })
 		}
 		allTopicNameAliases: allCksTopic {
 			# GraphQL flattens this array of arrays for us
-			distinct(field: aliases)
+			distinct(field: { aliases: SELECT })
 		}
 	}
 `;

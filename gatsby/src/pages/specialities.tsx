@@ -48,7 +48,7 @@ const SpecialitiesPage: React.FC<SpecialitiesPageProps> = ({
 
 export const query = graphql`
 	{
-		allSpecialities: allCksSpeciality(sort: { fields: name }) {
+		allSpecialities: allCksSpeciality(sort: { name: ASC }) {
 			nodes {
 				...PartialSpeciality
 			}

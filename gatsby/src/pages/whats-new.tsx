@@ -152,7 +152,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 
 export const query = graphql`
 	{
-		allCksChange(sort: { fields: topic___topicName }) {
+		allCksChange(sort: { topic: { topicName: ASC } }) {
 			nodes {
 				...WhatsNewChange
 			}

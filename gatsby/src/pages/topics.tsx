@@ -170,7 +170,7 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 
 export const query = graphql`
 	{
-		allTopics: allCksTopic(sort: { fields: slug, order: ASC }) {
+		allTopics: allCksTopic(sort: { slug: ASC }) {
 			nodes {
 				...PartialTopic
 			}
