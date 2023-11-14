@@ -106,13 +106,8 @@ describe("Search Page", () => {
 
 	describe("Screen reader announcements", () => {
 		it("should make a screen reader announcement when the search results have loaded", async () => {
-			let container: any;
-			await act(async () => {
-				fetch.mockResponse(JSON.stringify(searchResponseShort));
-				const result = renderWithRouter(<SearchPage />);
-				container = result.container;
-			});
-
+			fetch.mockResponse(JSON.stringify(searchResponseShort));
+			const { container } = renderWithRouter(<SearchPage />);
 			// eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
 			const ariaLiveDiv = container.querySelector("[aria-live]");
 			expect(ariaLiveDiv?.textContent).toEqual("");
@@ -123,11 +118,7 @@ describe("Search Page", () => {
 
 		it("should make a screen reader announcement when the search result response has errored", async () => {
 			fetch.mockReject(new Error("Something's gone wrong!"));
-			let container: any;
-			await act(async () => {
-				const result = renderWithRouter(<SearchPage />);
-				container = result.container;
-			});
+			const { container } = renderWithRouter(<SearchPage />);
 			// eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
 			const ariaLiveDiv = container.querySelector("[aria-live]");
 			expect(ariaLiveDiv?.textContent).toEqual("");
