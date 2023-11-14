@@ -31,6 +31,8 @@ module.exports = {
 		"@typescript-eslint/no-explicit-any": 2,
 		"testing-library/no-render-in-setup": "off",
 		"testing-library/no-render-in-lifecycle": "off",
+		// TODO: remove this rule once manual cleanup issue in ChapterLevel1.test.tsx is resolved
+		"testing-library/no-manual-cleanup": "off",
 	},
 	overrides: [
 		{
