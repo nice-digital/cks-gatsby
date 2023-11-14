@@ -30,7 +30,7 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 	const topicsAndAliases = useMemo(() => {
 		const directTopicLinks = topics.map(
 			({ slug, topicName }) =>
-				({ slug, name: topicName, isAlias: false } as TopicLink)
+				({ slug, name: topicName, isAlias: false }) as TopicLink
 		);
 
 		const topicAliases = topics.reduce(

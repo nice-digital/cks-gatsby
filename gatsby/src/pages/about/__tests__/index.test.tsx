@@ -7,7 +7,6 @@ import AboutPage from "../";
 
 describe("About page", () => {
 	beforeEach(() => {
-		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(<AboutPage />);
 	});
 

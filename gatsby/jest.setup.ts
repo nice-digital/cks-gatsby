@@ -1,6 +1,6 @@
-import "@testing-library/jest-dom/extend-expect";
 import { enableFetchMocks } from "jest-fetch-mock";
 import { DataLayerEntry } from "types";
+import "@testing-library/jest-dom";
 
 // Enable mock fetch, mostly for the autocomplete requests from the header
 enableFetchMocks();

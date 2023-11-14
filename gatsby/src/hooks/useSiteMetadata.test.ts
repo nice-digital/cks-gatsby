@@ -25,19 +25,17 @@ describe("useSiteMetadata", () => {
 		expect(graphqlMock).toHaveBeenCalledTimes(1);
 		expect(graphqlMock.mock.calls[0][0][0]).toMatchInlineSnapshot(`
 		"
-					query SiteMetaData {
-						site {
-							siteMetadata {
-								title
-								siteUrl
-								changesSinceDateISO: changesSinceDate(formatString: "YYYY-MM")
-								changesSinceDateFormatted: changesSinceDate(
-									formatString: "MMMM YYYY"
-								)
-							}
+				query SiteMetaData {
+					site {
+						siteMetadata {
+							title
+							siteUrl
+							changesSinceDateISO: changesSinceDate(formatString: "YYYY-MM")
+							changesSinceDateFormatted: changesSinceDate(formatString: "MMMM YYYY")
 						}
 					}
-				"
+				}
+			"
 	`);
 	});
 

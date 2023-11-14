@@ -36,7 +36,6 @@ describe("SpecialityPage", () => {
 	let speciality: Speciality = getDefaultSpecialityTestData();
 
 	beforeEach(() => {
-		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(
 			<SpecialityPage {...({ data: { speciality } } as SpecialityPageProps)} />
 		);

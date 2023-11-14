@@ -47,13 +47,13 @@ const sourceNodesArgs: SourceNodesArgs = {
 				tick: jest.fn() as ProgressActivityTracker["tick"],
 				done: jest.fn() as ProgressActivityTracker["done"],
 				start: jest.fn() as ProgressActivityTracker["start"],
-			} as ProgressActivityTracker),
+			}) as ProgressActivityTracker,
 		activityTimer: (): ActivityTracker =>
 			({
 				start: jest.fn() as ActivityTracker["start"],
 				setStatus: jest.fn() as ActivityTracker["setStatus"],
 				end: jest.fn() as ActivityTracker["end"],
-			} as ActivityTracker),
+			}) as ActivityTracker,
 		info: jest.fn(),
 	},
 } as unknown as SourceNodesArgs;

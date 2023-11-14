@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import React from "react";
-import { render, waitFor, cleanup, screen } from "@testing-library/react";
+import { render, waitFor, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ChapterLevel2Page, { ChapterLevel2PageProps } from "./ChapterLevel2";
 import { ChapterLevel2, PartialChapter } from "../../types";
@@ -107,7 +107,6 @@ describe("ChapterLevel2", () => {
 		});
 
 		it("should use summary field for meta description", async () => {
-			cleanup();
 			chapter.summary = "this is some summary text";
 			render(
 				<ChapterLevel2Page

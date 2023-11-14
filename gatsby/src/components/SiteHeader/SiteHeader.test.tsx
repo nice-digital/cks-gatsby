@@ -115,7 +115,10 @@ describe("Header", () => {
 		it("should append a label for keyword, topic and scenario suggestions", async () => {
 			renderWithRouter(<SiteHeader />);
 
-			userEvent.type(await waitFor(() => screen.findByRole("combobox")), "dia");
+			await userEvent.type(
+				await waitFor(() => screen.findByRole("combobox")),
+				"dia"
+			);
 
 			await waitFor(() => {
 				expect(

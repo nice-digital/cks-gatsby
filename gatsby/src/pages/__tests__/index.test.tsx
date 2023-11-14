@@ -35,7 +35,6 @@ const topicAliases = [
 
 describe("Home page", () => {
 	beforeEach(() => {
-		// eslint-disable-next-line testing-library/no-render-in-setup
 		renderWithRouter(
 			<IndexPage
 				data={{

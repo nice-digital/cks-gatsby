@@ -47,7 +47,6 @@ describe("TopicPage", () => {
 	let renderResult: RenderResult;
 
 	beforeEach(() => {
-		// eslint-disable-next-line testing-library/no-render-in-setup
 		renderResult = render(
 			<TopicPage {...({ data: { topic, firstChapter } } as TopicPageProps)} />
 		);

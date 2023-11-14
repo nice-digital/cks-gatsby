@@ -7,7 +7,6 @@ import DevelopmentPage from "../development";
 
 describe("Development page", () => {
 	beforeEach(() => {
-		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(<DevelopmentPage />);
 	});
 

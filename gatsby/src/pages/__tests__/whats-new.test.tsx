@@ -69,13 +69,12 @@ const getDefaultTestProps = (): WhatsNewPageProps =>
 				nodes: [change1Updated, change2New, change3Updated],
 			},
 		},
-	} as unknown as WhatsNewPageProps);
+	}) as unknown as WhatsNewPageProps;
 
 describe("What's new page", () => {
 	let props = getDefaultTestProps();
 
 	beforeEach(() => {
-		// eslint-disable-next-line testing-library/no-render-in-setup
 		renderWithRouter(<WhatsNewPage {...props} />);
 	});
 

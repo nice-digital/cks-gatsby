@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import React from "react";
-import { render, screen, cleanup, waitFor } from "@testing-library/react";
+import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import ChapterLevel1Page, { ChapterLevel1PageProps } from "./ChapterLevel1";
@@ -42,12 +42,11 @@ const getDefaultTestProps = (): ChapterLevel1PageProps =>
 				},
 			} as ChapterLevel1,
 		},
-	} as unknown as ChapterLevel1PageProps);
+	}) as unknown as ChapterLevel1PageProps;
 
 describe("ChapterLevel1", () => {
 	let props = getDefaultTestProps();
 	beforeEach(() => {
-		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(<ChapterLevel1Page {...props} />);
 	});
 
@@ -79,7 +78,6 @@ describe("ChapterLevel1", () => {
 		});
 
 		it("should use summary field for meta description", async () => {
-			cleanup();
 			props.pageContext.chapter.summary = "this is some summary text";
 			render(<ChapterLevel1Page {...props} />);
 			await waitFor(() => {
@@ -146,18 +144,20 @@ describe("ChapterLevel1", () => {
 
 	describe("no html string content/custom nav", () => {
 		beforeEach(() => {
+			// TODO the below tests fail without cleanup in beforeEach (multiple elements are matched in DOM), but cleanup should really be in afterEach.
 			cleanup();
 			props.pageContext.chapter.htmlStringContent = "<!-- No content -->";
-			// eslint-disable-next-line testing-library/no-render-in-setup
 			render(<ChapterLevel1Page {...props} />);
 		});
 
-		it("should render visually hidden heading 2 with html header content", () => {
+		it("should render visually hidden heading 2 with html header content", async () => {
 			const heading = screen.getByText("Background information", {
 				selector: "h2",
 			});
 
-			expect(heading).toHaveClass("visually-hidden");
+			await waitFor(() => {
+				expect(heading).toHaveClass("visually-hidden");
+			});
 			expect(heading).toHaveAttribute("id", "background-information");
 		});
 
@@ -175,7 +175,6 @@ describe("ChapterLevel1", () => {
 
 		it("should render anchors for each sub chapter", () => {
 			const definitionLink = screen.getByText("Definition");
-
 			expect(definitionLink.tagName).toBe("A");
 			expect(definitionLink).toHaveAttribute(
 				"href",

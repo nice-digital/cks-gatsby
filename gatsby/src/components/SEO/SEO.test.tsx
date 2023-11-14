@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import React from "react";
-import { render, waitFor, cleanup } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 
 import { SEO } from "./SEO";
 
@@ -8,10 +8,6 @@ import { SEO } from "./SEO";
 const timeout = 4000;
 
 describe("SEO", () => {
-	afterEach(() => {
-		cleanup();
-	});
-
 	it("should set HTML language to UK English", async () => {
 		render(<SEO title="Custom title" description="Custom description" />);
 		await waitFor(() => {

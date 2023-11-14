@@ -22,7 +22,6 @@ describe("SpecialitiesPage", () => {
 	];
 
 	beforeEach(() => {
-		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(
 			<SpecialitiesPage
 				{...({
