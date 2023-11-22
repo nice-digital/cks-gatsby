@@ -35,17 +35,12 @@ exports[`EULABanner should match snapshot 1`] = `
     <h2>
       CKS End User Licence Agreement
     </h2>
-    <p>
-      You must agree to the following terms before using this site.
-    </p>
-    <button
-      class="btn btn--cta"
-      data-component="button--cta"
-      id="btn-accept-cks-eula-top"
-      type="button"
+    <div
+      class="alert alert--info"
+      data-component="alert--info"
     >
-      I accept these terms
-    </button>
+      Please read all the terms on this page. Then indicate that you have read and agree to the terms by clicking the button at the bottom of the page.
+    </div>
     <section>
       <h3>
         1. This contract
@@ -206,7 +201,14 @@ exports[`EULABanner should match snapshot 1`] = `
             .
           </li>
           <li>
-            (ii) “Us” (including “We” or “Our”) means Clarity Informatics Limited (trading as “Agilio”) a company incorporated under the laws of England with company number 04133376 of Deltic House, Kingfisher Way, Wallsend, NE28 9NX.
+            (ii) “Us” (including “We” or “Our”) means Clarity Informatics Limited (trading as “Agilio”) a company incorporated under the laws of England with company number 04133376 of Deltic House, Kingfisher Way, Wallsend, NE28 9NX. Clarity Informatics Limited (trading as “Agilio”) can be contacted by email at
+             
+            <a
+              href="mailto:primarycare@agiliosoftware.com"
+            >
+              primarycare@agiliosoftware.com
+            </a>
+            .
           </li>
           <li>
             (iii) “Use” (or “Using”) means use and/or access.
