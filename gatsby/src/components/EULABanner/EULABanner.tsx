@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Button } from "@nice-digital/nds-button";
+import { Alert } from "@nice-digital/nds-alert";
 import Cookies from "js-cookie";
 
 import styles from "./EULABanner.module.scss";
@@ -50,14 +51,11 @@ export const EULABanner: React.FC = () => {
 				<Dialog.Overlay className={styles.overlay} />
 				<Dialog.Content className={styles.portal}>
 					<h2>CKS End User Licence Agreement</h2>
-					<p>You must agree to the following terms before using this site.</p>
-					<Button
-						variant="cta"
-						onClick={handleAccept}
-						id="btn-accept-cks-eula-top"
-					>
-						I accept these terms
-					</Button>
+					<Alert>
+						Please read all the terms on this page. Then indicate that you have
+						read and agree to the terms by clicking the button at the bottom of
+						the page.
+					</Alert>
 					<EULABannerContent />
 					<Button
 						variant="cta"
@@ -231,7 +229,12 @@ export const EULABannerContent: React.FC = () => (
 					(ii) “Us” (including “We” or “Our”) means Clarity Informatics Limited
 					(trading as “Agilio”) a company incorporated under the laws of England
 					with company number 04133376 of Deltic House, Kingfisher Way,
-					Wallsend, NE28 9NX.
+					Wallsend, NE28 9NX. Clarity Informatics Limited (trading as “Agilio”)
+					can be contacted by email at{" "}
+					<a href="mailto:primarycare@agiliosoftware.com">
+						primarycare@agiliosoftware.com
+					</a>
+					.
 				</li>
 				<li>(iii) “Use” (or “Using”) means use and/or access.</li>
 				<li>
