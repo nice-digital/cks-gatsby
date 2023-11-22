@@ -57,11 +57,7 @@ export const EULABanner: React.FC = () => {
 						the page.
 					</Alert>
 					<EULABannerContent />
-					<Button
-						variant="cta"
-						onClick={handleAccept}
-						id="btn-accept-cks-eula-bottom"
-					>
+					<Button variant="cta" onClick={handleAccept} id="btn-accept-cks-eula">
 						I accept these terms
 					</Button>
 				</Dialog.Content>
