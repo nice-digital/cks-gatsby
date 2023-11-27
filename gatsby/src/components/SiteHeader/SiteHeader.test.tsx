@@ -133,10 +133,11 @@ describe("Header", () => {
 					"Diazepam (CKS search)",
 					"How should I manage cardiovascular risk in an adult with type 2 diabetes? (CKS topic - scenario)",
 				];
-
+				// eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
 				expect(suggestedOptions).toHaveLength(expectedOptions.length);
 
 				suggestedOptions.forEach((option, index) => {
+					// eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
 					expect(option.textContent).toBe(expectedOptions[index]);
 				});
 			});
