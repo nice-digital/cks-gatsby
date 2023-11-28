@@ -226,9 +226,9 @@ export const EULABannerContent: React.FC = () => (
 					(trading as “Agilio”) a company incorporated under the laws of England
 					with company number 04133376 of Deltic House, Kingfisher Way,
 					Wallsend, NE28 9NX. Clarity Informatics Limited (trading as “Agilio”)
-					can be contacted by email at{" "}
-					<a href="mailto:primarycare@agiliosoftware.com">
-						primarycare@agiliosoftware.com
+					can be contacted using the contact details on the webpage:{" "}
+					<a href="https://agiliosoftware.com/prodigy">
+						https://agiliosoftware.com/prodigy
 					</a>
 					.
 				</li>
