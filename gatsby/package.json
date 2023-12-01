@@ -49,17 +49,21 @@
   "license": "MIT",
   "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
   "browserslist": [
-    "extends @nice-digital/browserslist-config"
+    "defaults",
+    "> 0.1%",
+    "not dead"
   ],
   "devDependencies": {
     "@nice-digital/browserslist-config": "^2.0.1",
     "@nice-digital/design-system": "5.0.11",
     "@nice-digital/global-nav": "^7.1.1048",
+    "@parcel/watcher-linux-x64-glibc": "^2.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/async": "^3.2.15",
     "@types/jest": "^28.1.6",
+    "@types/js-cookie": "^3.0.4",
     "@types/lodash.throttle": "^4.1.7",
     "@types/node": "^14.18.23",
     "@types/node-fetch": "^2.6.2",
@@ -114,6 +118,9 @@
     "node": "18.13.0"
   },
   "dependencies": {
-    "process": "^0.11.10"
+    "@radix-ui/react-dialog": "^1.0.5",
+    "js-cookie": "^3.0.5",
+    "process": "^0.11.10",
+    "react-cookie": "^6.1.1"
   }
 }

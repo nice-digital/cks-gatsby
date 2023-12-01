@@ -23,8 +23,9 @@ Feature: Search Page
     When I view the search results page for cancer
     Then I expect to see a list of 10 search results
 
-  Scenario: Total number of results
-    When I view the search results page for cancer
-    Then I expect to see 492 total search results for cancer
+# Editing this out for now - the test is meaningless as we just update it to reflect the changing number each time
+# Scenario: Total number of results
+#   When I view the search results page for cancer
+#   Then I expect to see 492 total search results for cancer
 
 # TODO: Current page number, page titles, pagination, spelling corrections, no results, empty search

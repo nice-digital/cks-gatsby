@@ -6,7 +6,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "Web app - build",
-      "program": "${workspaceFolder}/web-app/CKS.Web/bin/Debug/netcoreapp3.1/CKS.Web.dll",
+      "program": "${workspaceFolder}/web-app/CKS.Web/bin/Debug/net6.0/CKS.Web.dll",
       "args": [],
       "cwd": "${workspaceFolder}/web-app/CKS.Web",
       "stopAtEntry": false,
