@@ -112,20 +112,34 @@ describe("Header", () => {
 	});
 
 	describe("Search box", () => {
-		it("should append a label for keyword, topic and scenario suggestions", async () => {
+		it("should append a label for keyword, topic, and scenario suggestions", async () => {
 			renderWithRouter(<SiteHeader />);
 
-			userEvent.type(await waitFor(() => screen.findByRole("combobox")), "dia");
+			const searchInput = await waitFor(() => screen.findByRole("combobox"));
+			userEvent.type(searchInput, "dia");
 
 			await waitFor(() => {
-				expect(
-					screen.queryAllByRole("option").map((n) => n.textContent)
-				).toStrictEqual([
+				const suggestedOptions = screen.queryAllByRole("option");
+				// Wait for first option to exist, as assertion fails intermittently on CI
+				const searchForDiaOption = suggestedOptions.find(
+					(option) => option.textContent === "Search for dia"
+				);
+
+				expect(searchForDiaOption).toBeTruthy();
+
+				const expectedOptions = [
 					"Search for dia",
 					"Diabetes - type 1 (CKS topic)",
 					"Diazepam (CKS search)",
 					"How should I manage cardiovascular risk in an adult with type 2 diabetes? (CKS topic - scenario)",
-				]);
+				];
+				// eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
+				expect(suggestedOptions).toHaveLength(expectedOptions.length);
+
+				suggestedOptions.forEach((option, index) => {
+					// eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
+					expect(option.textContent).toBe(expectedOptions[index]);
+				});
 			});
 		});
 
