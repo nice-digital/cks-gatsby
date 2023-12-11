@@ -20,9 +20,12 @@ export const onPreRenderHTML = ({
 
 	replaceHeadComponents(headComponents);
 
+	// We're cache-busting the cookie banner URL so that the EULA acceptance cookie gets accepted for all users
+	const cookieBannerUrl = `${process.env.GATSBY_COOKIE_BANNER_URL}?v=11122023`;
+
 	components.push(
 		<script
-			src={process.env.GATSBY_COOKIE_BANNER_URL}
+			src={cookieBannerUrl}
 			type="text/javascript"
 			key="cookie-banner"
 			async
