@@ -7,19 +7,19 @@
 ## Table of contents
 
 - [Functional tests for CKS](#functional-tests-for-cks)
-	- [Table of contents](#table-of-contents)
-	- [Stack](#stack)
-		- [Software](#software)
-	- [:rocket: Set up](#rocket-set-up)
-		- [Using VSCode](#using-vscode)
-		- [Using npm](#using-npm)
-			- [Different URLs](#different-urls)
-		- [Docker](#docker)
-			- [Development mode](#development-mode)
-	- [Excluding tests](#excluding-tests)
-	- [Running single features](#running-single-features)
-	- [Troubleshooting](#troubleshooting)
-		- [session not created: This version of ChromeDriver only supports Chrome version xx](#session-not-created-this-version-of-chromedriver-only-supports-chrome-version-xx)
+  - [Table of contents](#table-of-contents)
+  - [Stack](#stack)
+    - [Software](#software)
+  - [:rocket: Set up](#rocket-set-up)
+    - [Using VSCode](#using-vscode)
+    - [Using npm](#using-npm)
+      - [Different URLs](#different-urls)
+    - [Docker](#docker)
+      - [Development mode](#development-mode)
+  - [Excluding tests](#excluding-tests)
+  - [Running single features](#running-single-features)
+  - [Troubleshooting](#troubleshooting)
+    - [session not created: This version of ChromeDriver only supports Chrome version xx](#session-not-created-this-version-of-chromedriver-only-supports-chrome-version-xx)
 
 ## Stack
 
@@ -113,7 +113,7 @@ Using _docker-run.sh_ is great for running the tests one off inside Docker, but 
 Instead, we can run the following command:
 
 ```sh
-docker-compose up -d && docker-compose run test-runner bash
+docker-compose up -d && docker-compose run cks-test-runner bash
 ```
 
 This runs the docker network in 'detached' mode, which leaves the containers running. It then runs bash against the test runner container. This allows us to then run the tests from within the Docker network, but the CKS web app runs on http://cks-functional-tests.nice.org.uk:8080 inside Docker so we have a simple npm alias command to run the tests within Docker:
@@ -124,9 +124,9 @@ npm run test:docker
 
 Examine the scripts within [package.json](package.json) to see how the URL is being overriden within this command.
 
-The whole functional-tests folder is mounted as a volume in the test-runner container. This means any screenshots generated in the case of an error are saved into the screenshots folder, and these are available on the host machine.
+The whole functional-tests folder is mounted as a volume in the cks-test-runner container. This means any screenshots generated in the case of an error are saved into the screenshots folder, and these are available on the host machine.
 
-> Note: run `exit` to escape from bash inside the test-runner container, and run `docker-compose down` to stop the Docker network.
+> Note: run `exit` to escape from bash inside the cks-test-runner container, and run `docker-compose down` to stop the Docker network.
 
 ## Excluding tests
 

@@ -20,19 +20,19 @@ function cleanupBeforeStart()
 function runTests()
 {
   # Wait for the web app to be up before running the tests
-  docker-compose run -T test-runner npm run wait-then-test
+  docker-compose run -T cks-test-runner npm run wait-then-test
   # Or for dev mode, uncomment:
-  #winpty docker-compose exec test-runner bash
+  #winpty docker-compose exec cks-test-runner bash
 }
 
 function processTestOutput()
 {
   # Generate an Allure test report
-  docker-compose run -T test-runner allure generate --clean
+  docker-compose run -T cks-test-runner allure generate --clean
 
   # Copy logs to use as a TeamCity artifact for debugging purposes
   mkdir -p docker-output
-  docker cp test-runner:/tests/allure-report ./docker-output
+  docker cp cks-test-runner:/tests/allure-report ./docker-output
 
   #docker cp cks-web-app:/app/logs ./docker-output/cks-web-app
   docker-compose logs --no-color > ./docker-output/logs.txt
