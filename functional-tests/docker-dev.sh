@@ -10,4 +10,5 @@ docker-compose build && docker-compose up -d --force-recreate
 # Leave the user in the tests container once all containers are up and running
 
 # docker-compose exec tests waitforit -t 120 --strict comments:8080 -- bash
-winpty docker-compose exec cks-test-runner sh
+# winpty docker-compose exec cks-test-runner sh
+docker-compose exec cks-test-runner sh
