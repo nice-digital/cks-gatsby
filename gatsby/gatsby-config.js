@@ -26,6 +26,8 @@ module.exports = {
 				host: siteUrl,
 				sitemap: `${siteUrl}/sitemap/sitemap-index.xml`,
 				policy: [
+					{ userAgent: "*", allow: "/" },
+					{ userAgent: "bingbot", crawlDelay: 1 },
 					{ userAgent: "GPTBot", disallow: "/" },
 					{ userAgent: "ChatGPT-User", disallow: "/" },
 					{ userAgent: "Google-Extended", disallow: "/" },
