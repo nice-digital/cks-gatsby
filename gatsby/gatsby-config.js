@@ -24,7 +24,7 @@ module.exports = {
 			resolve: "gatsby-plugin-robots-txt",
 			options: {
 				host: "https://cks.nice.org.uk",
-				sitemap: "https://cks.nice.org.uk/sitemap/sitemap-index.xml",
+				sitemap: "https://cks.nice.org.uk/sitemap-index.xml",
 				policy: [
 					{ userAgent: "*", allow: "/" },
 					{ userAgent: "bingbot", crawlDelay: 1 },
