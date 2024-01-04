@@ -1,14 +1,14 @@
 import {
 	path as whatsNewPath,
 	selectors as whatsNewSelectors,
-} from "./pages/whats-new";
+} from "./pages/whats-new.js";
 
 import {
 	path as searchPath,
 	selectors as searchSelectors,
-} from "./pages/search";
+} from "./pages/search.js";
 
-import commonSelectors from "./common";
+import commonSelectors from "./common.js";
 
 export type SelectorName =
 	| keyof typeof commonSelectors

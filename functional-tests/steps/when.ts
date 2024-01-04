@@ -1,20 +1,20 @@
-import { When } from "@cucumber/cucumber";
+import { When } from "@wdio/cucumber-framework";
 
-import { openWebsite } from "@nice-digital/wdio-cucumber-steps/lib/support/action/openWebsite";
-import { clickElement } from "@nice-digital/wdio-cucumber-steps/lib/support/action/clickElement";
-import { waitFor } from "@nice-digital/wdio-cucumber-steps/lib/support/action/waitFor";
-import { checkIfElementExists } from "@nice-digital/wdio-cucumber-steps/lib/support/lib/checkIfElementExists";
+import { openWebsite } from "../support/action/openWebsite.js";
+import { clickElement } from "../support/action/clickElement.js";
 
-import { typeInSearchBox } from "../support/action/typeInSearchBox";
-import { scrollInToView } from "../support/action/scrollInToView";
-import { waitForTitleToChange } from "../support/action/waitForTitleToChange";
-import { waitForUrlToChange } from "../support/action/waitForUrlToChange";
-import { waitForScrollToElement } from "../support/action/waitForScrollToElement";
-import { acceptCookieBanner } from "../support/action/acceptCookieBanner";
-import { waitForReact } from "../support/action/waitForReact";
-import { waitForSearchLoad } from "../support/action/waitForSearchLoad";
-import { getSelector } from "../support/selectors";
-import { getPath } from "../support/pagePaths";
+import { checkIfElementExists } from "../support/check/checkIfElementExists.js";
+
+import { typeInSearchBox } from "../support/action/typeInSearchBox.js";
+import { scrollInToView } from "../support/action/scrollInToView.js";
+import { waitForTitleToChange } from "../support/action/waitForTitleToChange.js";
+import { waitForUrlToChange } from "../support/action/waitForUrlToChange.js";
+import { waitForScrollToElement } from "../support/action/waitForScrollToElement.js";
+import { acceptCookieBanner } from "../support/action/acceptCookieBanner.js";
+import { waitForReact } from "../support/action/waitForReact.js";
+import { waitForSearchLoad } from "../support/action/waitForSearchLoad.js";
+import { getSelector } from "../support/selectors/index.js";
+import { getPath } from "../support/pagePaths.js";
 
 When(/^I type "([^"]*)" in the header search box$/, typeInSearchBox);
 

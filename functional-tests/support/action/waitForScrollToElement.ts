@@ -1,5 +1,5 @@
-import { isAtTopOfScreen } from "./isAtTopOfScreen";
-import { windowIsScrolledToBottom } from "./windowIsScrolledToBottom";
+import { isAtTopOfScreen } from "./isAtTopOfScreen.js";
+import { windowIsScrolledToBottom } from "./windowIsScrolledToBottom.js";
 
 /**
  * Waits for the given element to be scrolled to.

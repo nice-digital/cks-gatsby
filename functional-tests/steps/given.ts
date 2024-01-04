@@ -1,12 +1,12 @@
-import { Given } from "@cucumber/cucumber";
+import { Given } from "@wdio/cucumber-framework";
 
-import { openWebsite } from "@nice-digital/wdio-cucumber-steps/lib/support/action/openWebsite";
+import { openWebsite } from "../support/action/openWebsite.js";
 
-import { acceptCookieBanner } from "../support/action/acceptCookieBanner";
-import { acceptEULA } from "../support/action/acceptEULA";
-import { waitForReact } from "../support/action/waitForReact";
+import { acceptCookieBanner } from "../support/action/acceptCookieBanner.js";
+import { acceptEULA } from "../support/action/acceptEULA.js";
+import { waitForReact } from "../support/action/waitForReact.js";
 
-import { getPath, PageName } from "../support/pagePaths";
+import { getPath, PageName } from "../support/pagePaths.js";
 
 Given(/^I open the (.*) page$/, async (pageName: PageName) => {
 	await openWebsite("url", getPath(pageName));

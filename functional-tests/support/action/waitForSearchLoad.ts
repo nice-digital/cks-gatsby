@@ -1,4 +1,4 @@
-import { getSelector } from "../selectors";
+import { getSelector } from "../selectors/index.js";
 
 /**
  * Waits for the search results page to have loaded, and the results to have been rendered.
