@@ -16,26 +16,7 @@ export const config: WebdriverIO.Config = {
 		{
 			browserName: "chrome",
 			"goog:chromeOptions": {
-				args: ["--window-size=1366,768"].concat(
-					isInDocker
-						? [
-								"--headless",
-								// "--window-size=1366,768",
-								// "--disable-web-security", // Disable web security
-								// "--disable-site-isolation-trials", // Disable site isolation
-								// "--disable-features=IsolateOrigins,site-per-process", // Disable features
-								// "--disable-browser-side-navigation", // Disable browser side navigation
-								// "--disable-extensions", // Disable extensions
-								// "--disable-popup-blocking", // Disable popup blocking
-								// "--disable-default-apps", // Disable default apps
-								// "--disable-sync", // Disable syncing to Google account
-								// "--no-sandbox", // Disable sandboxing for Linux
-								// "--disable-gpu", // Disable GPU
-								// "--disable-software-rasterizer", // Disable software rasterizer
-								// "--disable-dev-shm-usage", // Disable /dev/shm usage
-						  ]
-						: []
-				),
+				args: ["--window-size=1366,768"].concat(isInDocker ? "--headless" : []),
 			},
 		},
 	],
