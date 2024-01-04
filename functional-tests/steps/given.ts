@@ -1,6 +1,6 @@
 import { Given } from "@wdio/cucumber-framework";
 
-import { openWebsite } from "../support/action/openWebsite.js";
+import { openWebsite } from "@nice-digital/wdio-cucumber-steps/lib/support/action/openWebsite.js";
 
 import { acceptCookieBanner } from "../support/action/acceptCookieBanner.js";
 import { acceptEULA } from "../support/action/acceptEULA.js";

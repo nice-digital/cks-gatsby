@@ -1,9 +1,8 @@
 import { When } from "@wdio/cucumber-framework";
 
-import { openWebsite } from "../support/action/openWebsite.js";
-import { clickElement } from "../support/action/clickElement.js";
-
-import { checkIfElementExists } from "../support/check/checkIfElementExists.js";
+import { openWebsite } from "@nice-digital/wdio-cucumber-steps/lib/support/action/openWebsite.js";
+import { clickElement } from "@nice-digital/wdio-cucumber-steps/lib/support/action/clickElement.js";
+import { checkIfElementExists } from "@nice-digital/wdio-cucumber-steps/lib/support/lib/checkIfElementExists.js";
 
 import { typeInSearchBox } from "../support/action/typeInSearchBox.js";
 import { scrollInToView } from "../support/action/scrollInToView.js";

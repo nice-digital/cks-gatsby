@@ -1,7 +1,7 @@
 import { Then } from "@wdio/cucumber-framework";
 
-import { checkContainsText } from "../support/check/checkContainsText.js";
-import { checkEqualsText } from "../support/check/checkEqualsText.js";
+import { checkContainsText } from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkContainsText.js";
+import { checkEqualsText } from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkEqualsText.js";
 import { getSelector, SelectorName } from "../support/selectors/index.js";
 
 Then("I expect that the CKS GTM container is available", async () => {

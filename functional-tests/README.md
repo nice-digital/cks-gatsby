@@ -29,6 +29,7 @@
   - With recommended extensions (VS Code will prompt you to install these automatically)
 - [WebdriverIO 6](<[http://.webdriver.io/](https://webdriver.io/)>)
   - [Cucumber.js](https://github.com/cucumber/cucumber-js) for running BDD gherkin-syntax feature files
+  - [wdio-cucumber-steps](https://github.com/nice-digital/wdio-cucumber-steps) for shared step definitions for Cucumber JS BDD tests in WebdriverIO
   - [Axe core](https://github.com/dequelabs/axe-core) for automatic accessibility testing
   - [Allure](https://docs.qameta.io/allure/) to generate a test report
 - [Docker](https://www.docker.com/) for running the tests in TeamCity against Chrome and Firefox
