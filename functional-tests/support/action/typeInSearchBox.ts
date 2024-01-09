@@ -1,4 +1,4 @@
-import { getSelector } from "../selectors/";
+import { getSelector } from "../selectors/index.js";
 
 /**
  * Type the given characters into the header search input box

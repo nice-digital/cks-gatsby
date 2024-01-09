@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Functional, browser-based tests for CKS",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "ts": "tsc --noEmit",
     "pretest": "npm run ts",
