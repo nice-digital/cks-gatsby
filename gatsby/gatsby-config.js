@@ -21,6 +21,21 @@ module.exports = {
 	},
 	plugins: [
 		{
+			resolve: "gatsby-plugin-robots-txt",
+			options: {
+				host: "https://cks.nice.org.uk",
+				sitemap: "https://cks.nice.org.uk/sitemap-index.xml",
+				policy: [
+					{ userAgent: "*", allow: "/" },
+					{ userAgent: "bingbot", crawlDelay: 1 },
+					{ userAgent: "GPTBot", disallow: "/" },
+					{ userAgent: "ChatGPT-User", disallow: "/" },
+					{ userAgent: "Google-Extended", disallow: "/" },
+					{ userAgent: "CCBot", disallow: "/" },
+				],
+			},
+		},
+		{
 			resolve: `gatsby-plugin-sitemap`,
 			options: {
 				excludes: [`/search/`],

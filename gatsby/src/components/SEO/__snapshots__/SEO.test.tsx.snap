@@ -97,5 +97,10 @@ exports[`SEO should set default title and description when none provided 1`] = `
     data-react-helmet="true"
     name="theme-color"
   />
+  <meta
+    content="nocache"
+    data-react-helmet="true"
+    name="bingbot"
+  />
 </head>
 `;

@@ -63,6 +63,7 @@ export const SEO: React.FC<SEOProps> = ({
 					<meta key={i} name={x.name} content={x.content} />
 				))}
 				{noIndex && <meta name="robots" content="noindex" />}
+				<meta name="bingbot" content="nocache" />
 				<link
 					rel="search"
 					type="application/opensearchdescription+xml"
