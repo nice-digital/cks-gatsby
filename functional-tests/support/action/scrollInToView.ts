@@ -1,7 +1,7 @@
-import { scrollIntoView } from "@nice-digital/wdio-cucumber-steps/lib/support/action/scrollIntoView";
-import { checkIfElementExists } from "@nice-digital/wdio-cucumber-steps/lib/support/lib/checkIfElementExists";
+import { scrollIntoView } from "@nice-digital/wdio-cucumber-steps/lib/support/action/scrollIntoView.js";
+import { checkIfElementExists } from "@nice-digital/wdio-cucumber-steps/lib/support/lib/checkIfElementExists.js";
 
-import { waitForScrollToElement } from "./waitForScrollToElement";
+import { waitForScrollToElement } from "./waitForScrollToElement.js";
 
 export async function scrollInToView(
 	selector: string,
