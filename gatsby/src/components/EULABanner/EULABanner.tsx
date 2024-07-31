@@ -6,47 +6,60 @@ import Cookies from "js-cookie";
 
 import styles from "./EULABanner.module.scss";
 
-const COOKIE_EXPIRY = 365; // In days, i.e. cookie expires a year from when it's set
-const COOKIE_NAME = "CKS-EULA-Accepted";
+export const COOKIE_EXPIRY = 365; // In days, i.e. cookie expires a year from when it's set
+export const EULA_COOKIE_NAME = "CKS-EULA-Accepted";
+export const COOKIE_CONTROL_NAME = "CookieControl";
 
 export const EULABanner: React.FC = () => {
-	const [open, setOpen] = useState(false);
+	const [showEULABanner, setShowEULABanner] = useState<boolean>(false);
+
+	const isCookieControlSetAndDialogHidden = (): boolean => {
+		const cookieControl = Cookies.get(COOKIE_CONTROL_NAME);
+		const cookieControlExists = !!cookieControl;
+		const cookieDialog = document.querySelector(
+			"[role='region'] .ccc-module--slideout"
+		);
+		const cookieDialogExists = !!cookieDialog;
+		return cookieControlExists && !cookieDialogExists;
+	};
+
+	const toggleBannerBasedOnEULACookie = (): void => {
+		Cookies.get(EULA_COOKIE_NAME)
+			? setShowEULABanner(false)
+			: setShowEULABanner(true);
+	};
 
 	useEffect(() => {
-		// Check for EULA cookie
-		const EULACookieVal = Cookies.get(COOKIE_NAME);
-
-		if (!EULACookieVal) {
-			// Check for the cookie banner - if it's open, then hide the EULA for now.
-			// We can then watch for the banner's dismissal and show the EULA as soon
-			// as the banner has been dismissed
-			const cookieBanner = document.querySelector("#ccc-module");
-			if (cookieBanner) {
-				// Watch for dismissal - reinstate the EULA at that point
-				const callback = () => {
-					setOpen(true);
-				};
-
-				const observer = new MutationObserver(callback);
-				observer.observe(cookieBanner.parentElement as HTMLElement, {
-					childList: true,
-				});
-			} else {
-				setOpen(true);
+		const checkBanner = () => {
+			if (isCookieControlSetAndDialogHidden()) {
+				toggleBannerBasedOnEULACookie();
+				observer.disconnect();
 			}
-		}
+		};
+
+		const observer = new MutationObserver(() => {
+			checkBanner();
+		});
+
+		observer.observe(document.body, { childList: true, subtree: true });
+
+		checkBanner();
+
+		return () => {
+			observer.disconnect();
+		};
 	}, []);
 
 	// Terms are accepted - dismiss modal and store cookie
 	const handleAccept = () => {
-		setOpen(false);
-		Cookies.set(COOKIE_NAME, "true", {
+		setShowEULABanner(false);
+		Cookies.set(EULA_COOKIE_NAME, "true", {
 			expires: COOKIE_EXPIRY,
 		});
 	};
 
 	return (
-		<Dialog.Root open={open}>
+		<Dialog.Root open={showEULABanner}>
 			<Dialog.Portal>
 				<Dialog.Overlay className={styles.overlay} />
 				<Dialog.Content className={styles.portal}>
