@@ -91,21 +91,29 @@ We run the tests in Docker on TeamCity because it allows us to spin up a self-co
 It can be harder to debug tests running inside Docker as you can't watch the tests run in the browser, but we do save error screenshots and logs into the docker-output folder for debugging.
 
 1. Install Node 12
-2. Build the [Gatsby site](../gatsby/):
+2. Create a _env.production_ file in this gatsby folder and add the required environment variables as defined in configuration.
+   ```
+   	# .env.production
+   	API_KEY
+   	API_BASE_URL
+   	GATSBY_COOKIE_BANNER_URL
+   	ASPNETCORE_ENVIRONMENT
+   ```
+3. Build the [Gatsby site](../gatsby/):
    1. `cd gatsby && npm run build`
-3. Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
-4. Publish the [CKS.Web web-app](../web-app/) into the _web-app/publish_ folder:
+4. Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
+5. Publish the [CKS.Web web-app](../web-app/) into the _web-app/publish_ folder:
    1. Navigate to cks-gatsby folder
    2. `cd web-app && dotnet publish CKS.Web/CKS.Web.csproj -o publish`
-5. Copy 'gatsby/public' folder to 'web-app/publish/wwwroot' folder
+6. Copy 'gatsby/public' folder to 'web-app/publish/wwwroot' folder
    1. check teamcity step 'Web app - Copy Gatsby files' for the script to run
-6. Install Docker
-7. Open bash and `cd` into the _functional-tests_ folder
-8. Run `docker-compose build`
+7. Install Docker
+8. Open bash and `cd` into the _functional-tests_ folder
+9. Run `docker-compose build`
    1. This downloads all the required images from Docker
    2. So it takes a while but it will cache everything so will be quicker next time
-9. Run `./docker-run.sh`
-   1. This builds the docker network, runs the tests and copies outputs in the _docker-output_ folder.
+10. Run `./docker-run.sh`
+    1. This builds the docker network, runs the tests and copies outputs in the _docker-output_ folder.
 
 > View the [docker-compose.yml](docker-compose.yml) file to understand the structure of the Docker network and the links between containers.
 
