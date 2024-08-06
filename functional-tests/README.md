@@ -7,19 +7,19 @@
 ## Table of contents
 
 - [Functional tests for CKS](#functional-tests-for-cks)
-	- [Table of contents](#table-of-contents)
-	- [Stack](#stack)
-		- [Software](#software)
-	- [:rocket: Set up](#rocket-set-up)
-		- [Using VSCode](#using-vscode)
-		- [Using npm](#using-npm)
-			- [Different URLs](#different-urls)
-		- [Docker](#docker)
-			- [Development mode](#development-mode)
-	- [Excluding tests](#excluding-tests)
-	- [Running single features](#running-single-features)
-	- [Troubleshooting](#troubleshooting)
-		- [session not created: This version of ChromeDriver only supports Chrome version xx](#session-not-created-this-version-of-chromedriver-only-supports-chrome-version-xx)
+  - [Table of contents](#table-of-contents)
+  - [Stack](#stack)
+    - [Software](#software)
+  - [:rocket: Set up](#rocket-set-up)
+    - [Using VSCode](#using-vscode)
+    - [Using npm](#using-npm)
+      - [Different URLs](#different-urls)
+    - [Docker](#docker)
+      - [Development mode](#development-mode)
+  - [Excluding tests](#excluding-tests)
+  - [Running single features](#running-single-features)
+  - [Troubleshooting](#troubleshooting)
+    - [session not created: This version of ChromeDriver only supports Chrome version xx](#session-not-created-this-version-of-chromedriver-only-supports-chrome-version-xx)
 
 ## Stack
 
@@ -95,13 +95,16 @@ It can be harder to debug tests running inside Docker as you can't watch the tes
    1. `cd gatsby && npm run build`
 3. Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
 4. Publish the [CKS.Web web-app](../web-app/) into the _web-app/publish_ folder:
-   1. `cd web-app && dotnet publish CKS.Web/CKS.Web.csproj -o publish`
-5. Install Docker
-6. Open bash and `cd` into the _functional-tests_ folder
-7. Run `docker-compose build`
+   1. Navigate to cks-gatsby folder
+   2. `cd web-app && dotnet publish CKS.Web/CKS.Web.csproj -o publish`
+5. Copy 'gatsby/public' folder to 'web-app/publish/wwwroot' folder
+   1. check teamcity step 'Web app - Copy Gatsby files' for the script to run
+6. Install Docker
+7. Open bash and `cd` into the _functional-tests_ folder
+8. Run `docker-compose build`
    1. This downloads all the required images from Docker
    2. So it takes a while but it will cache everything so will be quicker next time
-8. Run `./docker-run.sh`
+9. Run `./docker-run.sh`
    1. This builds the docker network, runs the tests and copies outputs in the _docker-output_ folder.
 
 > View the [docker-compose.yml](docker-compose.yml) file to understand the structure of the Docker network and the links between containers.
