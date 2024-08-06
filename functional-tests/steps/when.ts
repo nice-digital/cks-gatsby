@@ -14,6 +14,12 @@ import { waitForReact } from "../support/action/waitForReact.js";
 import { waitForSearchLoad } from "../support/action/waitForSearchLoad.js";
 import { getSelector } from "../support/selectors/index.js";
 import { getPath } from "../support/pagePaths.js";
+import {
+	cookiesToggle,
+	WebsiteUsagecookiesToggle,
+	marketingCookiesToggle,
+} from "../support/action/cookiesToggle.js";
+import { pause } from "@nice-digital/wdio-cucumber-steps/lib/support/action/pause.js";
 
 When(/^I type "([^"]*)" in the header search box$/, typeInSearchBox);
 
@@ -132,3 +138,24 @@ When(
 		await waitForSearchLoad();
 	}
 );
+When(/^I click preference cookies and toggle it (on|off)$/, cookiesToggle);
+When(
+	/^I click website usage cookies and toggle it (on|off)$/,
+	WebsiteUsagecookiesToggle
+);
+When(
+	/^I click marketing advertising cookies and toggle it (on|off)$/,
+	marketingCookiesToggle
+);
+When(/^I reject cookies$/, async () => {
+	const cookieBannerElement = await $("body #ccc");
+	await cookieBannerElement.waitForExist({ timeout: 2000 });
+
+	const rejectCookies = await cookieBannerElement.$("button.ccc-reject-button");
+
+	// If cookies have already been chosen then the accept button doesn't show
+	if (await rejectCookies.isDisplayed()) {
+		await rejectCookies.click();
+		await pause("2000");
+	}
+});

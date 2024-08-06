@@ -3,6 +3,8 @@ import { Then } from "@wdio/cucumber-framework";
 import { checkContainsText } from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkContainsText.js";
 import { checkEqualsText } from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkEqualsText.js";
 import { getSelector, SelectorName } from "../support/selectors/index.js";
+import { acceptEULA } from "../support/action/acceptEULA.js";
+import { pause } from "@nice-digital/wdio-cucumber-steps/lib/support/action/pause.js";
 
 Then("I expect that the CKS GTM container is available", async () => {
 	const containerId = (await browser.executeAsync(function (
@@ -75,3 +77,11 @@ Then(
 		);
 	}
 );
+Then(/^I accept EULA banner terms$/, acceptEULA);
+Then(/^I close cookies banner$/, async () => {
+	const cookiesBannerClose = await $("#ccc-close");
+	await cookiesBannerClose.scrollIntoView();
+	await cookiesBannerClose.isDisplayed();
+	await cookiesBannerClose.click();
+	await pause("2000");
+});
