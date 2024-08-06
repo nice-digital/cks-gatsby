@@ -106,7 +106,8 @@ It can be harder to debug tests running inside Docker as you can't watch the tes
    1. Navigate to cks-gatsby folder
    2. `cd web-app && dotnet publish CKS.Web/CKS.Web.csproj -o publish`
 6. Copy 'gatsby/public' folder to 'web-app/publish/wwwroot' folder
-   1. check teamcity step 'Web app - Copy Gatsby files' for the script to run
+   1. Navigate to cks-gatsby folder
+   2. `cp -rT ./gatsby/public ./web-app/publish/wwwroot`
 7. Install Docker
 8. Open bash and `cd` into the _functional-tests_ folder
 9. Run `docker-compose build`
