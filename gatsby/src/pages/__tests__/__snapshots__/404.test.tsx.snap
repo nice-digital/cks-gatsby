@@ -71,20 +71,29 @@ exports[`404 should match snapshot 1`] = `
 }
   </script>
   <div
-    class="page-header"
+    class="page-header "
     data-component="page-header"
     id="content-start"
   >
-    <h1
-      class="page-header__heading "
+    <div
+      class="grid"
     >
-      We can't find this page
-    </h1>
-    <p
-      class="page-header__lead"
-    >
-      Check that the web address has been typed correctly.
-    </p>
+      <div
+        data-component="grid-item"
+        data-g="12 md:12"
+      >
+        <h1
+          class="page-header__heading "
+        >
+          We can't find this page
+        </h1>
+        <p
+          class="page-header__lead"
+        >
+          Check that the web address has been typed correctly.
+        </p>
+      </div>
+    </div>
   </div>
   <p>
     You can also try:
