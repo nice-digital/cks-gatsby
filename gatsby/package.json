@@ -55,9 +55,8 @@
   ],
   "devDependencies": {
     "@nice-digital/browserslist-config": "^2.0.1",
-    "@nice-digital/design-system": "5.0.11",
-    "@nice-digital/global-nav": "^7.1.1048",
-    "@parcel/watcher-linux-x64-glibc": "^2.3.0",
+    "@nice-digital/design-system": "^5.0.28",
+    "@nice-digital/global-nav": "^7.1.1068",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
