@@ -8,7 +8,6 @@
 <summary><strong>Table of contents</strong></summary>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-	- [What is it?](#what-is-it)
 
 - [What is it?](#what-is-it)
 - [Project structure](#project-structure)
