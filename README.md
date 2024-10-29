@@ -6,15 +6,24 @@
 
 <details>
 <summary><strong>Table of contents</strong></summary>
-<!-- START doctoc -->
-- [NICE Clinical Knowledge Summaries (CKS)](#nice-clinical-knowledge-summaries-cks)
-	- [What is it?](#what-is-it)
-	- [Project structure](#project-structure)
-	- [Stack](#stack)
-		- [Software](#software)
-	- [Architecture](#architecture)
-	- [:rocket: Set up](#rocket-set-up)
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [What is it?](#what-is-it)
+- [Project structure](#project-structure)
+- [Stack](#stack)
+  - [Software](#software)
+- [Architecture](#architecture)
+- [Search](#search)
+  - [ElasticSearch](#elasticsearch)
+- [:rocket: Set up](#rocket-set-up)
+- [Good to know](#good-to-know)
+  - [Further info](#further-info)
+  - [Environments](#environments)
+  - [Top 5 common issues affecting users](#top-5-common-issues-affecting-users)
+  - [Regenerate the Table of Contents](#regenerate-the-table-of-contents)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 </details>
   
 ## What is it?
@@ -46,7 +55,7 @@ This is the high level stack. Each of the sub-projects (gatsby, web-app and func
   - With recommended extensions (VS Code will prompt you to install these automatically)
 - [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) for the search endpoint web app
 - [.NET Core 3](https://dotnet.microsoft.com/) for the search endpoint web app
-- [Gatsby v2](https://www.gatsbyjs.org/) and [React](https://reactjs.org/) for static site generation
+- [Gatsby v2](https://www.gatsbyjs.com/docs) and [React](https://reactjs.org/) for static site generation
 - [WebdriverIO v4](http://v4.webdriver.io/) for browser-based functional tests
 
 ## Architecture
@@ -60,11 +69,12 @@ The resulting HTML built by the static site generator is packaged and deployed w
 There are tests for the static site, the search .NET project, and browser-based, [functional tests](functional-tests#readme) that run via WebDriverIO.
 
 ## Search
+
 The cks-gatsby webapp uses the NICE.Search Nuget package to query the CKS ElasticSearch index.
 
 The NICE.Search Nuget packages uses .Net Standard and is configured in the appsettings.json.
 
-Search results come from ElasticSearch (ES), provided by the [SearchClient NuGet package](https://github.com/nice-digital/search/tree/master/Client). They are served to the front-end as a JSON response at the *api/search* endpoint via an MVC controller in the web-app project. SearchController references and calls the SearchClient NuGet package internally. The search results page is then rendered client-side, hence the results being at */search?q=...*.
+Search results come from ElasticSearch (ES), provided by the [SearchClient NuGet package](https://github.com/nice-digital/search/tree/master/Client). They are served to the front-end as a JSON response at the _api/search_ endpoint via an MVC controller in the web-app project. SearchController references and calls the SearchClient NuGet package internally. The search results page is then rendered client-side, hence the results being at _/search?q=..._.
 
 > You can see the JSON response that's used for client-side rendering by visiting https://localhost:5000/api/search?q=test in your browser.
 
@@ -74,14 +84,12 @@ There are two ES instances available, one on the NHSEVIRT domain and one in AWS.
 
 - You will only be able to verify search functionality if you are connected to either the pink cable, the IM&T wi-fi or have a local elastic search instance set up.
 - You may need to add dev.es.nice.org.uk to your hosts file if you are unable to resolve the ES server using DNS
-- Make the following changes in *\cks-gatsby\web-app\CKS.Web\appsettings.json* **(don't check in!)**:
+- Make the following changes in _\cks-gatsby\web-app\CKS.Web\appsettings.json_ **(don't check in!)**:
+
   - set `https://test-search-api.nice.org.uk` for `SearchApiUrl` whilst developing
   - set `https://search-api.nice.org.uk` for `SearchApiUrl` for deploying to live servers at AWS.
-  
-  If you are not on the pink cable or NICE network see [this](https://nicedigital.atlassian.net/wiki/spaces/SRCH/pages/1268875288/Set+up+local+search+index+for+searchclient+nuget) document for setting up local elasticsearch indexes for the searchclient nuget to use.
-  
-  
 
+  If you are not on the pink cable or NICE network see [this](https://niceuk.sharepoint.com/sites/Search_-_DIT_Service/SitePages/Elasticsearch-7-upgrade.aspx) document for setting up local elasticsearch indexes for the searchclient nuget to use. Also there are [snapshots](https://niceuk.sharepoint.com/sites/Digital_Information_and_Technology/_layouts/15/Doc.aspx?sourcedoc={de4304ac-d35d-49d5-b83b-11c74f5373c7}&action=edit&wd=target%28Elasticsearch.one%7Cec3ed309-4205-4b91-85c2-5a8c99359783%2FSnapshots%7Cce9480d5-70ba-4455-a7c3-05274d6f036d%2F%29&wdorigin=NavigationUrl) available to use.
 
 ## :rocket: Set up
 
@@ -108,3 +116,24 @@ Launching the app via `Launch CKS` does the following:
 It also attached debuggers so you can add break points in VS Code for the Gatsby Node processes, the Gatsby React components, the fake API and the .NET web app classes.
 
 > Note: there are more granular ways to run each part of the project, either via an IDE or via the command line. See each sub-folders's readme for more details.
+
+## Good to know
+
+### Further info
+
+See the [CKS Sharepoint site](https://niceuk.sharepoint.com/sites/CKS)
+
+### Environments
+
+| Environment | URL                           |
+| ----------- | ----------------------------- |
+| Local       | https://local-cks.nice.org.uk |
+| Live        | https://cks.nice.org.uk/      |
+
+### Top 5 common issues affecting users
+
+> An explanation of the top 5 common issues (if applicable) that we as a development team might encounter with this project
+
+### Regenerate the Table of Contents
+
+For further information about the recommended ReadMe structure plus a 'how to' for regenerating the table of contents, follow the instructions in [DIT Engineering - ReadMes](https://niceuk.sharepoint.com/sites/DIT_Engineering/SitePages/Readmes.aspx)
