@@ -55,7 +55,7 @@
   ],
   "devDependencies": {
     "@nice-digital/browserslist-config": "^2.0.1",
-    "@nice-digital/design-system": "^5.5.3",
+    "@nice-digital/design-system": "^5.5.4",
     "@nice-digital/global-nav": "^7.1.1073",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
