@@ -121,14 +121,14 @@ describe("Header", () => {
 			await waitFor(() => {
 				const suggestedOptions = screen.queryAllByRole("option");
 				// Wait for first option to exist, as assertion fails intermittently on CI
-				const searchForDiaOption = suggestedOptions.find(
-					(option) => option.textContent === "Search for dia"
+				// The "Search for dia..." option is now hidden, so we check for the first visible option
+				const firstVisibleOption = suggestedOptions.find(
+					(option) => option.textContent === "Diabetes - type 1 (CKS topic)"
 				);
 
-				expect(searchForDiaOption).toBeTruthy();
+				expect(firstVisibleOption).toBeTruthy();
 
 				const expectedOptions = [
-					"Search for dia",
 					"Diabetes - type 1 (CKS topic)",
 					"Diazepam (CKS search)",
 					"How should I manage cardiovascular risk in an adult with type 2 diabetes? (CKS topic - scenario)",
@@ -136,7 +136,14 @@ describe("Header", () => {
 				// eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
 				expect(suggestedOptions).toHaveLength(expectedOptions.length);
 
-				suggestedOptions.forEach((option, index) => {
+				// Check that visible options match expectations (excluding hidden "Search for..." option)
+				const visibleOptions = suggestedOptions.filter(
+					(option) =>
+						!option.classList.contains("visually-hidden") &&
+						option.getAttribute("aria-hidden") !== "true"
+				);
+
+				visibleOptions.forEach((option, index) => {
 					// eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
 					expect(option.textContent).toBe(expectedOptions[index]);
 				});
@@ -167,9 +174,13 @@ describe("Header", () => {
 			);
 
 			const suggestedElements = screen.queryAllByRole("option");
-			expect(suggestedElements[1].innerHTML).toEqual(
-				"<p>Diabetes - type 1</p>"
+			// Find the first visible option (excluding the hidden "Search for dia..." option)
+			const visibleElements = suggestedElements.filter(
+				(element) =>
+					!element.classList.contains("visually-hidden") &&
+					element.getAttribute("aria-hidden") !== "true"
 			);
+			expect(visibleElements[0].innerHTML).toEqual("<p>Diabetes - type 1</p>");
 		});
 
 		it("should set search box default value from q querystring value", async () => {
