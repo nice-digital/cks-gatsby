@@ -73,7 +73,7 @@ export const EULABanner: React.FC = () => {
 			<Dialog.Portal>
 				<Dialog.Overlay className={styles.overlay} />
 				<Dialog.Content className={styles.portal}>
-					<h2 ref={titleRef} tabIndex={-1} style={{ outline: "none" }}>
+					<h2 ref={titleRef} tabIndex={-1}>
 						CKS End User Licence Agreement
 					</h2>
 					<Alert>

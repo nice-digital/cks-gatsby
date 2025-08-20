@@ -33,7 +33,6 @@ exports[`EULABanner should match snapshot 1`] = `
     tabindex="-1"
   >
     <h2
-      style="outline: none;"
       tabindex="-1"
     >
       CKS End User Licence Agreement
