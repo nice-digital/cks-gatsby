@@ -106,24 +106,31 @@ describe("TopicsPage", () => {
 		});
 
 		it("should render internal anchor for letter with topics", () => {
-			const letterAAnchor = screen.queryByRole("link", { name: "Letter A" });
+			const letterAAnchor = screen.queryByRole("link", {
+				name: "Browse topics by the letter A",
+			});
 			expect(letterAAnchor).toHaveAttribute("href", "#a");
-			expect(letterAAnchor).toHaveTextContent("A");
+			expect(letterAAnchor).toHaveTextContent("Browse topics by the letter A");
 
-			const letterCAnchor = screen.queryByRole("link", { name: "Letter C" });
+			const letterCAnchor = screen.queryByRole("link", {
+				name: "Browse topics by the letter C",
+			});
 			expect(letterCAnchor).toHaveAttribute("href", "#c");
-			expect(letterCAnchor).toHaveTextContent("C");
+			expect(letterCAnchor).toHaveTextContent("Browse topics by the letter C");
 		});
 
 		it("should not render anchor for letter with no topics", () => {
 			expect(
 				screen.getByText(
-					(_content, node) => node?.textContent === "Letter Q (no topics)",
+					(_content, node) =>
+						node?.textContent === "Browse topics by the letter Q (no topics)",
 					{ selector: "#a-to-z li" }
 				)
 			).toBeInTheDocument();
 			expect(
-				screen.queryByRole("link", { name: "Letter Q (no topics)" })
+				screen.queryByRole("link", {
+					name: "Browse topics by the letter Q (no topics)",
+				})
 			).toBeNull();
 		});
 	});
