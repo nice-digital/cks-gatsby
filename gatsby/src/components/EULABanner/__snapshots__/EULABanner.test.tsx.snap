@@ -33,16 +33,20 @@ exports[`EULABanner should match snapshot 1`] = `
     tabindex="-1"
   >
     <h2
-      tabindex="-1"
+      id="radix-:r1:"
     >
       CKS End User Licence Agreement
     </h2>
-    <div
-      class="alert alert--info"
-      data-component="alert--info"
+    <p
+      id="radix-:r2:"
     >
-      Please read all the terms on this page. Then indicate that you have read and agree to the terms by clicking the button at the bottom of the page.
-    </div>
+      <div
+        class="alert alert--info"
+        data-component="alert--info"
+      >
+        Please read all the terms on this page. Then indicate that you have read and agree to the terms by clicking the button at the bottom of the page.
+      </div>
+    </p>
     <section>
       <h3>
         1. This contract

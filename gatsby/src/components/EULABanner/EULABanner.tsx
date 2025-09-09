@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Button } from "@nice-digital/nds-button";
 import { Alert } from "@nice-digital/nds-alert";
@@ -12,7 +12,6 @@ export const COOKIE_CONTROL_NAME = "CookieControl";
 
 export const EULABanner: React.FC = () => {
 	const [showEULABanner, setShowEULABanner] = useState<boolean>(false);
-	const titleRef = useRef<HTMLHeadingElement>(null);
 
 	const isCookieControlSetAndDialogHidden = (): boolean => {
 		const cookieControl = Cookies.get(COOKIE_CONTROL_NAME);
@@ -27,16 +26,6 @@ export const EULABanner: React.FC = () => {
 	const toggleBannerBasedOnEULACookie = (): void => {
 		const shouldOpen = !Cookies.get(EULA_COOKIE_NAME);
 		setShowEULABanner(shouldOpen);
-
-		// Focus the title when the banner opens
-		if (shouldOpen) {
-			// Use setTimeout to ensure the dialog is rendered before focusing
-			setTimeout(() => {
-				if (titleRef.current) {
-					titleRef.current.focus();
-				}
-			}, 100);
-		}
 	};
 
 	useEffect(() => {
@@ -72,15 +61,26 @@ export const EULABanner: React.FC = () => {
 		<Dialog.Root open={showEULABanner}>
 			<Dialog.Portal>
 				<Dialog.Overlay className={styles.overlay} />
-				<Dialog.Content className={styles.portal}>
-					<h2 ref={titleRef} tabIndex={-1}>
-						CKS End User Licence Agreement
-					</h2>
-					<Alert>
-						Please read all the terms on this page. Then indicate that you have
-						read and agree to the terms by clicking the button at the bottom of
-						the page.
-					</Alert>
+				<Dialog.Content
+					className={styles.portal}
+					onOpenAutoFocus={(e) => {
+						// Prevent Radix from focusing the first tabbable (e.g., the button)
+						// and instead focus the dialog container so SRs announce title.
+						e.preventDefault();
+						const target = e.currentTarget as HTMLElement | null;
+						if (target) target.focus();
+					}}
+				>
+					<Dialog.Title asChild>
+						<h2>CKS End User Licence Agreement</h2>
+					</Dialog.Title>
+					<Dialog.Description>
+						<Alert>
+							Please read all the terms on this page. Then indicate that you
+							have read and agree to the terms by clicking the button at the
+							bottom of the page.
+						</Alert>
+					</Dialog.Description>
 					<EULABannerContent />
 					<Button variant="cta" onClick={handleAccept} id="btn-accept-cks-eula">
 						I accept these terms
