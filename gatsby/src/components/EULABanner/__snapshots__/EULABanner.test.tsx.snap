@@ -32,7 +32,9 @@ exports[`EULABanner should match snapshot 1`] = `
     style="pointer-events: auto;"
     tabindex="-1"
   >
-    <h2>
+    <h2
+      id="radix-:r1:"
+    >
       CKS End User Licence Agreement
     </h2>
     <div

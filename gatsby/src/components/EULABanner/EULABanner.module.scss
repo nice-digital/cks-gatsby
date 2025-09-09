@@ -21,3 +21,11 @@
   position: fixed;
   z-index: 99998;
 }
+
+.portal:focus {
+  outline: none;
+}
+
+.portal:focus-visible {
+  outline: auto;
+}
