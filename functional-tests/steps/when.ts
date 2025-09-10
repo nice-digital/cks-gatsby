@@ -117,7 +117,20 @@ When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 		throw new Error(`Could not find link with text: ${linkText}`);
 	}
 
-	await element.click();
+	// Try normal click first, fall back to JavaScript click if intercepted
+	try {
+		await element.click();
+	} catch (error) {
+		const errorMessage = error instanceof Error ? error.message : String(error);
+		if (errorMessage.includes("click intercepted")) {
+			// Use JavaScript click to bypass click interception (e.g., from back-to-top buttons)
+			await browser.execute((el) => {
+				(el as unknown as HTMLElement).click();
+			}, element);
+		} else {
+			throw error;
+		}
+	}
 
 	await waitForUrlToChange(urlStr);
 
