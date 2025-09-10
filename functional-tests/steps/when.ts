@@ -75,16 +75,48 @@ When(/^I click the ([^"]*) breadcrumb$/, async (breadcrumbText: string) => {
 // 	- the scroll to finish
 //	- the element to be in viewport
 //	- the scrolling to have stopped so the element is not moving
+// Override the default link clicking behavior from @nice-digital/wdio-cucumber-steps
+// to handle visually-hidden spans properly
 When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 	const pageTitle = await browser.getTitle(),
-		urlStr = await browser.getUrl(),
-		selector = `a=${linkText}`,
-		// Look for anchors within main to avoid conflicting with A-Z/topic links in the Global Nav
-		contextSelector = "main";
+		urlStr = await browser.getUrl();
 
-	await scrollInToView(selector, contextSelector);
+	// Look for anchors within main to avoid conflicting with A-Z/topic links in the Global Nav
+	const contextSelector = "main";
+	const contextElement = await $(contextSelector);
 
-	const element = await (await $(contextSelector)).$(selector);
+	// Try multiple selector strategies to handle visually-hidden content
+	let element;
+	const selectors = [
+		// First try: Match links where the visible text equals our target
+		// This excludes text inside elements with 'visually-hidden' class
+		`//a[normalize-space(text()[not(ancestor::*[contains(@class, 'visually-hidden')])]) = '${linkText}']`,
+		// Second try: Match links that contain our text directly as a text node
+		`//a[text()[normalize-space() = '${linkText}']]`,
+		// Third try: fallback to original selector for simple cases
+		`a=${linkText}`,
+	];
+
+	for (const selector of selectors) {
+		try {
+			element = await contextElement.$(selector);
+			if (await element.isExisting()) {
+				// Scroll the found element into view
+				await element.scrollIntoView();
+				// Wait for smooth scrolling to complete
+				await browser.pause(250);
+				break;
+			}
+		} catch (error) {
+			// Continue to next selector
+			continue;
+		}
+	}
+
+	if (!element || !(await element.isExisting())) {
+		throw new Error(`Could not find link with text: ${linkText}`);
+	}
+
 	await element.click();
 
 	await waitForUrlToChange(urlStr);
