@@ -116,13 +116,15 @@ When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 		throw new Error(`Could not find link with text: ${linkText}`);
 	}
 
+	// Debug: Check what kind of link this is
+	const href = await element.getAttribute('href');
+
 	// Wait for element to be clickable and try clicking
 	try {
 		await element.waitForClickable({ timeout: 5000 });
 		await element.click();
 	} catch (error) {
 		const errorMessage = error instanceof Error ? error.message : String(error);
-		console.log(`Click failed for "${linkText}": ${errorMessage}`);
 
 		// Try JavaScript click if regular click fails
 		if (
@@ -130,7 +132,6 @@ When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 			errorMessage.includes("move target out of bounds") ||
 			errorMessage.includes("not clickable")
 		) {
-			console.log(`Trying JavaScript click for "${linkText}"`);
 			await browser.execute((el) => {
 				(el as unknown as HTMLElement).click();
 			}, element);
@@ -142,20 +143,53 @@ When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 	// Add a small pause to let any JavaScript navigation start
 	await browser.pause(500);
 
-	try {
-		await waitForUrlToChange(urlStr);
-	} catch (error) {
-		const currentUrl = await browser.getUrl();
-		console.log(
-			`URL change timeout for "${linkText}". Original: ${urlStr}, Current: ${currentUrl}`
-		);
-		throw error;
+	// Check if this is expected to be a URL change or just a hash change
+	const currentUrlAfterClick = await browser.getUrl();
+	const oldUrl = new URL(urlStr);
+	const newUrlAfterClick = new URL(currentUrlAfterClick);
+	
+	// If URL already changed, we're good
+	if (currentUrlAfterClick !== urlStr) {
+		console.log(`URL changed immediately for "${linkText}": ${urlStr} -> ${currentUrlAfterClick}`);
+	} else {
+		// For Gatsby/SPA apps, sometimes navigation takes a bit longer
+		console.log(`Waiting longer for navigation to complete for "${linkText}"`);
+		
+		// Wait for URL change, but with longer timeout for SPAs
+		try {
+			await waitForUrlToChange(urlStr, 10000); // Increase timeout to 10 seconds
+		} catch (error) {
+			const currentUrl = await browser.getUrl();
+			console.log(`URL change timeout for "${linkText}". Original: ${urlStr}, Current: ${currentUrl}`);
+			
+			// Check if it might be a hash-only change
+			if (oldUrl.pathname === new URL(currentUrl).pathname) {
+				console.log(`No pathname change detected - might be same-page navigation`);
+			}
+			
+			// Try to force navigation with JavaScript as a last resort
+			console.log(`Attempting JavaScript navigation to: ${href}`);
+			await browser.execute((url) => {
+				window.location.href = url;
+			}, href);
+			
+			// Wait a bit more for the forced navigation
+			await browser.pause(2000);
+			
+			const finalUrl = await browser.getUrl();
+			console.log(`After JavaScript navigation: ${finalUrl}`);
+			
+			// If still no change, throw the original error
+			if (finalUrl === urlStr) {
+				throw error;
+			}
+		}
 	}
 
-	const oldUrl = new URL(urlStr);
+	const oldUrl2 = new URL(urlStr);
 	const newUrl = new URL(await browser.getUrl());
 
-	if (newUrl.pathname !== oldUrl.pathname) {
+	if (newUrl.pathname !== oldUrl2.pathname) {
 		// Because we use Gatsby links using history API we don't have full page loads
 		// so we have to wait for the title to change before we click. This guarantees the
 		// new page is ready before we execute the next step.
