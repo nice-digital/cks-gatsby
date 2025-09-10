@@ -3,7 +3,7 @@ Feature: Search Page
   I want to be able to use the CKS Search Page
 
   Background:
-    Given I have a screen that is 1366 by 768 pixels
+    Given I have a screen that is 1920 by 1080 pixels
 
   Scenario: Search for cancer from the homepage
     Given I open the home page

@@ -4,7 +4,7 @@ Feature: Chapter Page
 
   Background:
     Given I open the asthma have I got the right topic? page
-    And I have a screen that is 1366 by 768 pixels
+    And I have a screen that is 1920 by 1080 pixels
 
   Scenario: Detect accessibility issues
     Then the page should have no accessibility issues

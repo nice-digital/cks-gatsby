@@ -6,7 +6,7 @@ Feature: Cookies and EULA banner
   I want to reject cookies
 
   Background:
-    Given I have a screen that is 1366 by 768 pixels
+    Given I have a screen that is 1920 by 1080 pixels
 
   Scenario: User toggle the preference cookies on and close banner
     Given I open the url "/"
