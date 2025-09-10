@@ -88,23 +88,22 @@ When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 	// Try multiple selector strategies to handle visually-hidden content
 	let element;
 	const selectors = [
-		// First try: Match links where the visible text equals our target
-		// This excludes text inside elements with 'visually-hidden' class
-		`//a[normalize-space(text()[not(ancestor::*[contains(@class, 'visually-hidden')])]) = '${linkText}']`,
-		// Second try: Match links that contain our text directly as a text node
-		`//a[text()[normalize-space() = '${linkText}']]`,
-		// Third try: fallback to original selector for simple cases
+		// First try: Match links that contain the full text (including visually-hidden parts)
+		`//a[contains(normalize-space(.), '${linkText}')]`,
+		// Second try: Use WDIO's built-in link text matching
 		`a=${linkText}`,
+		// Third try: More flexible text matching
+		`//a[normalize-space(.) = '${linkText}']`,
 	];
 
 	for (const selector of selectors) {
 		try {
 			element = await contextElement.$(selector);
 			if (await element.isExisting()) {
-				// Scroll the found element into view
-				await element.scrollIntoView();
+				// Scroll the found element into view with some buffer
+				await element.scrollIntoView({ behavior: "auto", block: "center" });
 				// Wait for smooth scrolling to complete
-				await browser.pause(250);
+				await browser.pause(500);
 				break;
 			}
 		} catch (error) {
@@ -117,13 +116,21 @@ When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 		throw new Error(`Could not find link with text: ${linkText}`);
 	}
 
-	// Try normal click first, fall back to JavaScript click if intercepted
+	// Wait for element to be clickable and try clicking
 	try {
+		await element.waitForClickable({ timeout: 5000 });
 		await element.click();
 	} catch (error) {
 		const errorMessage = error instanceof Error ? error.message : String(error);
-		if (errorMessage.includes("click intercepted")) {
-			// Use JavaScript click to bypass click interception (e.g., from back-to-top buttons)
+		console.log(`Click failed for "${linkText}": ${errorMessage}`);
+
+		// Try JavaScript click if regular click fails
+		if (
+			errorMessage.includes("click intercepted") ||
+			errorMessage.includes("move target out of bounds") ||
+			errorMessage.includes("not clickable")
+		) {
+			console.log(`Trying JavaScript click for "${linkText}"`);
 			await browser.execute((el) => {
 				(el as unknown as HTMLElement).click();
 			}, element);
@@ -132,7 +139,18 @@ When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 		}
 	}
 
-	await waitForUrlToChange(urlStr);
+	// Add a small pause to let any JavaScript navigation start
+	await browser.pause(500);
+
+	try {
+		await waitForUrlToChange(urlStr);
+	} catch (error) {
+		const currentUrl = await browser.getUrl();
+		console.log(
+			`URL change timeout for "${linkText}". Original: ${urlStr}, Current: ${currentUrl}`
+		);
+		throw error;
+	}
 
 	const oldUrl = new URL(urlStr);
 	const newUrl = new URL(await browser.getUrl());
