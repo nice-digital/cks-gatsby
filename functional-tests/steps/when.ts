@@ -75,7 +75,7 @@ When(/^I click the ([^"]*) breadcrumb$/, async (breadcrumbText: string) => {
 // 	- the scroll to finish
 //	- the element to be in viewport
 //	- the scrolling to have stopped so the element is not moving
-// Override the default link clicking behavior from @nice-digital/wdio-cucumber-steps
+// Supplement the default link clicking behavior from @nice-digital/wdio-cucumber-steps
 // to handle visually-hidden spans properly
 When(/^I click the "([^"]*)" link$/, async (linkText: string) => {
 	const pageTitle = await browser.getTitle(),
