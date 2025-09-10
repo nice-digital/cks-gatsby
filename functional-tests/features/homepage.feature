@@ -3,7 +3,7 @@ Feature: Homepage
 
   Background:
     Given I open the home page
-    And I have a screen that is 1366 by 768 pixels
+    And I have a screen that is 1920 by 1080 pixels
 
   Scenario: User can see the site title
     When I wait on element "h1" to exist

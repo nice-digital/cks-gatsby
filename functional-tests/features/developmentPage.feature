@@ -4,7 +4,7 @@ Feature: Development process page
 
   Background:
     Given I open the development page
-    And I have a screen that is 1366 by 768 pixels
+    And I have a screen that is 1920 by 1080 pixels
 
   Scenario: Old URL redirect
     Given I open the url "/development"
