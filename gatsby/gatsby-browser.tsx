@@ -51,12 +51,25 @@ export const onRouteUpdate = ({
 			// simulate 2 rAF calls
 			setTimeout(sendPageView, 32);
 		}
+
+		// Update Gatsby announcer with page title for better accessibility
+		// Only do this for actual page changes, not hash changes
+		if (prevPath !== path) {
+			setTimeout(() => {
+				const announcer = document.getElementById("gatsby-announcer");
+				if (announcer && document.title) {
+					announcer.textContent = document.title;
+				}
+			}, 100); // Wait for page title to be updated
+		}
 	} else {
 		window.dataLayer.push({
 			location: location.href,
 			referrer: document.referrer,
 		});
 	}
+	// Default return statement when prevLocation is falsy
+	return;
 };
 /**
  * Gatsby hook for overriding scroll position
@@ -109,6 +122,7 @@ export const shouldUpdateScroll = ({
 				targetElement.setAttribute("tabIndex", "-1");
 				(targetElement as HTMLElement).focus();
 				targetElement.scrollIntoView();
+				return false;
 			});
 		});
 		return false;
@@ -116,16 +130,25 @@ export const shouldUpdateScroll = ({
 
 	requestAnimationFrame(() => {
 		requestAnimationFrame(() => {
+			// Default behavior: scroll to top for standard navigation (like global nav menu)
+			window.scrollTo(0, 0);
+
+			// Focus the main content for screen readers while preserving visual scroll to top
 			const contentStartElement = document.getElementById("content-start");
-
-			if (!contentStartElement) return true;
-
-			contentStartElement.setAttribute("tabIndex", "-1");
-			contentStartElement.focus();
-			contentStartElement.scrollIntoView();
+			if (contentStartElement) {
+				contentStartElement.setAttribute("tabIndex", "-1");
+				contentStartElement.focus();
+				// Remove tabindex after focus to avoid interfering with normal navigation
+				setTimeout(() => contentStartElement.removeAttribute("tabIndex"), 100);
+			} else {
+				// Fallback to body focus if content-start doesn't exist
+				document.body.setAttribute("tabIndex", "-1");
+				document.body.focus();
+				setTimeout(() => document.body.removeAttribute("tabIndex"), 100);
+			}
 		});
 	});
-	// Default to scrolling to the content start element as the standard navigation behaviour
+	// Default navigation behavior: scroll to top instead of content-start to match BNF
 
 	return false;
 };
