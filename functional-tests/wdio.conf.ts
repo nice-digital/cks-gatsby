@@ -7,7 +7,7 @@ export const config: WebdriverIO.Config = {
 	// We need to use webdriver protocol in Docker because we use the selenium grid.
 	automationProtocol: isInDocker ? "webdriver" : "devtools",
 
-	maxInstances: isInDocker ? 10 : 2,
+	maxInstances: isInDocker ? 20 : 10,
 	path: "/wd/hub",
 
 	specs: ["./features/**/*.feature"],
@@ -16,7 +16,9 @@ export const config: WebdriverIO.Config = {
 		{
 			browserName: "chrome",
 			"goog:chromeOptions": {
-				args: ["--window-size=1366,768"].concat(isInDocker ? "--headless" : []),
+				args: ["--window-size=1920,1080"].concat(
+					isInDocker ? "--headless" : []
+				),
 			},
 		},
 	],

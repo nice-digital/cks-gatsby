@@ -13,6 +13,15 @@ function cleanupBeforeStart()
 
   # Clean up before starting containers
   docker-compose down --remove-orphans --volumes && docker-compose rm -vf
+
+  # Remove specific named containers if they exist
+  docker rm -f mock-api || true
+  docker rm -f cks-web-app || true
+  docker rm -f test-runner || true
+  docker rm -f selenium-hub || true
+
+  # Remove any selenium-chrome containers (there might be multiple scaled instances)
+  docker ps -aq --filter "name=selenium-chrome" | xargs -r docker rm -f || true
 }
 
 
@@ -43,6 +52,15 @@ function processTestOutput()
 function cleanup()
 {
   docker-compose down --remove-orphans --volumes
+
+  # Remove specific named containers if they exist
+  docker rm -f mock-api || true
+  docker rm -f cks-web-app || true
+  docker rm -f test-runner || true
+  docker rm -f selenium-hub || true
+
+  # Remove any selenium-chrome containers (there might be multiple scaled instances)
+  docker ps -aq --filter "name=selenium-chrome" | xargs -r docker rm -f || true
 }
 
 function exitWithCode()
