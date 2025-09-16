@@ -24,9 +24,8 @@ export const EULABanner: React.FC = () => {
 	};
 
 	const toggleBannerBasedOnEULACookie = (): void => {
-		Cookies.get(EULA_COOKIE_NAME)
-			? setShowEULABanner(false)
-			: setShowEULABanner(true);
+		const shouldOpen = !Cookies.get(EULA_COOKIE_NAME);
+		setShowEULABanner(shouldOpen);
 	};
 
 	useEffect(() => {
@@ -62,8 +61,19 @@ export const EULABanner: React.FC = () => {
 		<Dialog.Root open={showEULABanner}>
 			<Dialog.Portal>
 				<Dialog.Overlay className={styles.overlay} />
-				<Dialog.Content className={styles.portal}>
-					<h2>CKS End User Licence Agreement</h2>
+				<Dialog.Content
+					className={styles.portal}
+					onOpenAutoFocus={(e) => {
+						// Prevent Radix from focusing the first tabbable (e.g., the button)
+						// and instead focus the dialog container so SRs announce title.
+						e.preventDefault();
+						const target = e.currentTarget as HTMLElement | null;
+						if (target) target.focus();
+					}}
+				>
+					<Dialog.Title asChild>
+						<h2>CKS End User Licence Agreement</h2>
+					</Dialog.Title>
 					<Alert>
 						Please read all the terms on this page. Then indicate that you have
 						read and agree to the terms by clicking the button at the bottom of
