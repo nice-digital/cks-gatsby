@@ -25,7 +25,7 @@ Feature: Topics List Page
     Then I expect that element "h1" matches the text "Health topics A to Z"
 
   Scenario: Click alphabet letter
-    When I click the "Letter C" link
+    When I click the "Browse topics by the letter C" link
     Then I expect that the path is "/topics/#c"
 
   Scenario: Scroll to and click topic (Obesity)
