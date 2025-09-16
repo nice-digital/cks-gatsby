@@ -79,7 +79,7 @@ const IndexPage: React.FC<IndexProps> = ({
 								to={linkableLetters.has(letter) && `/topics/#${letter}`}
 							>
 								<span className="visually-hidden">
-									Browse topics by the letter
+									Browse topics by the letter{" "}
 								</span>
 								{letter.toUpperCase()}
 							</Letter>
