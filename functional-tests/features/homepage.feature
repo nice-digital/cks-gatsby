@@ -10,8 +10,9 @@ Feature: Homepage
     Then I expect that element "h1" contains the text "Clinical Knowledge Summaries"
 
   Scenario: Clicking on a topic initial takes you to the topics page at that letter
-    When I click on the element "[href^='/topics/#']"
-    Then I expect the url to contain "/topics/#"
+    Then I wait on element "[href='/topics/#b']" to exist
+    When I click on the element "[href='/topics/#b']"
+    Then I expect the url to contain "/topics/#b"
 
   Scenario: Detect Home page accessibility issues
     When I wait on element "h1" to exist
