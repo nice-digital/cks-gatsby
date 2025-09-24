@@ -11,7 +11,7 @@ This readme contains background and useful information for the source plugin. Th
 Follow these steps to start querying the data:
 
 - Run the Gatsby site following the instructions in the root
-- Open http://localhost:8000/___graphql in a browser to view the GraphiQL explorer.
+- Open <http://localhost:8000/___graphql> in a browser to view the GraphiQL explorer.
 
 GraphiQL is an browser-based IDE for GraphQL queries that's built in to Gatsby. Read the [_Introducing GraphiQL_](https://www.gatsbyjs.org/docs/running-queries-with-graphiql/) page on the Gatsby documentation for more information.
 
@@ -34,9 +34,9 @@ Add the plugin to _gatsby-config.js_ in the parent Gatsby project:
 
 ```diff
 module.exports = {
-	plugins: [
-+		"gatsby-source-cks",
-	],
+ plugins: [
++  "gatsby-source-cks",
+ ],
 };
 ```
 
@@ -44,30 +44,30 @@ module.exports = {
 
 There's no need to install anything else. Gatsby loads local plugins automatically, see [Loading Plugins from Your Local Plugins Folder](https://www.gatsbyjs.org/docs/loading-plugins-from-your-local-plugins-folder/) in the Gatsby docs.
 
-The plugin gets its dependencies from the parent gatsby folder. This because it makes installing dependencies easier - you don't have to run `npm i` in both folders, just the parent folder. This works because of the way that Node resolves modules (see [Loading from node_modules Folders](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders) in the Node docs).
+The plugin gets its dependencies from the parent gatsby folder. This because it makes installing dependencies easier - you don't have to run `npm i` or `npm ci` in both folders, just the parent folder. This works because of the way that Node resolves modules (see [Loading from node_modules Folders](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders) in the Node docs).
 
 ### Configuration
 
 The plugin has the following configuration options. These should be passed in via gatsby-config.js.
 
 - `apiKey` {String} e.g. "abc123"
-- `apiBaseUrl` {String} e.g. "http://localhost:7000/api"
+- `apiBaseUrl` {String} e.g. "<http://localhost:7000/api>"
 - `changesSinceDate` {Date} e.g. "2020-04-30"
 
 An example configuration might look like this:
 
 ```diff
 module.exports = {
-	plugins: [
-+		{
-+			resolve: `gatsby-source-cks`,
-+			options: {
-+				apiKey: process.env.API_KEY || "abc123",
-+				apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000/api",
-+				changesSinceDate: new Date(2020, 0, 12),
-+			},
-+		},
-	],
+ plugins: [
++  {
++   resolve: `gatsby-source-cks`,
++   options: {
++    apiKey: process.env.API_KEY || "abc123",
++    apiBaseUrl: process.env.API_BASE_URL || "http://localhost:7000/api",
++    changesSinceDate: new Date(2020, 0, 12),
++   },
++  },
+ ],
 };
 ```
 
@@ -77,7 +77,7 @@ module.exports = {
 
 In the case of CKS, the source data comes from the API provided by Clarity. This is fetched from the API using [`node-fetch`](https://github.com/node-fetch/node-fetch), a 'light-weight module that brings `window.fetch` to Node.js'.
 
-The live API has all 380+ topics, with all their HTML content. Loading all this data, and transforming it into nodes can take a while which makes local development cycles slower. Use the fake CKS API on http://localhost:7000 instead for faster local development: see the _fake-api_ folder in the root of this repository. This serves a subset of content from local files so is a _lot_ quicker to both load content and to generate pages.
+The live API has all 380+ topics, with all their HTML content. Loading all this data, and transforming it into nodes can take a while which makes local development cycles slower. Use the fake CKS API on <http://localhost:7000> instead for faster local development: see the _fake-api_ folder in the root of this repository. This serves a subset of content from local files so is a _lot_ quicker to both load content and to generate pages.
 
 > Note: this is a public repository so **be careful** not to commit or expose the API key for the live CKS API.
 
