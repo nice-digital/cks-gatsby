@@ -44,15 +44,14 @@ The easiest way is via VSCode:
 
 Using VSCode to run the tests will launch browsers on your local machine to run the tests. This is useful for watching and debugging the test runs to diagnose any failing tests.
 
-This runs the tests against the [web-app](../web-app/) running on http://localhost:5000.
+This runs the tests against the [web-app](../web-app/) running on <http://localhost:5000>.
 
 1. Install Node 12+ LTS
 2. Install Chrome
 3. Clone this repository
 4. Open the root of the repository in VS Code
 5. Install dependencies from npm:
-   1. Run 'npm: Install Dependencies' from the VS Code command palette (_Ctrl+Shift+P_) and choose the functional-tests folder from the next dropdown (or just install all)
-   2. Or run `cd functional-tests && npm ci` on the command line
+   1. Run `cd functional-tests && npm ci` on the command line
 6. Build the [gatsby site](../gatsby/) site:
    1. Either run `npm run build` from the _gatsby_ folder, or
    2. Use _Ctrl+Shift+B_ to run 'Gatsby - build'
@@ -92,13 +91,15 @@ It can be harder to debug tests running inside Docker as you can't watch the tes
 
 1. Install Node 12
 2. Create a _env.production_ file in this gatsby folder and add the required environment variables as defined in configuration.
+
    ```
-   	# .env.production
-   	API_KEY
-   	API_BASE_URL
-   	GATSBY_COOKIE_BANNER_URL
-   	ASPNETCORE_ENVIRONMENT
+    # .env.production
+    API_KEY
+    API_BASE_URL
+    GATSBY_COOKIE_BANNER_URL
+    ASPNETCORE_ENVIRONMENT
    ```
+
 3. Build the [Gatsby site](../gatsby/):
    1. `cd gatsby && npm run build`
 4. Install [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
@@ -128,7 +129,7 @@ Instead, we can run the following command:
 docker-compose up -d && docker-compose run test-runner bash
 ```
 
-This runs the docker network in 'detached' mode, which leaves the containers running. It then runs bash against the test runner container. This allows us to then run the tests from within the Docker network, but the CKS web app runs on http://cks-functional-tests.nice.org.uk:8080 inside Docker so we have a simple npm alias command to run the tests within Docker:
+This runs the docker network in 'detached' mode, which leaves the containers running. It then runs bash against the test runner container. This allows us to then run the tests from within the Docker network, but the CKS web app runs on <http://cks-functional-tests.nice.org.uk:8080> inside Docker so we have a simple npm alias command to run the tests within Docker:
 
 ```sh
 npm run test:docker
@@ -178,4 +179,4 @@ See [organizing test suites](http://v4.webdriver.io/guide/testrunner/organizesui
 
 ### session not created: This version of ChromeDriver only supports Chrome version xx
 
-This usually occurrs after updating Chrome on your PC. When you run `npm i` (or `npm ci`), there's a package called _selenium-standalone_ that downloads the _latest_ ChromeDriver binaries at the point of install. This binary is tied to a specific Chrome version, so if you update Chrome there's then a mismatch. So run `npm i selenium-standalone` to reinstall the package and update the Chromedriver binary to the latest.
+This usually occurrs after updating Chrome on your PC. When you run `npm ci`, there's a package called _selenium-standalone_ that downloads the _latest_ ChromeDriver binaries at the point of install. This binary is tied to a specific Chrome version, so if you update Chrome there's then a mismatch. So run `npm i selenium-standalone` to reinstall the package and update the Chromedriver binary to the latest.

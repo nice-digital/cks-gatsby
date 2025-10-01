@@ -76,7 +76,7 @@ The NICE.Search Nuget packages uses .Net Standard and is configured in the appse
 
 Search results come from ElasticSearch (ES), provided by the [SearchClient NuGet package](https://github.com/nice-digital/search/tree/master/Client). They are served to the front-end as a JSON response at the _api/search_ endpoint via an MVC controller in the web-app project. SearchController references and calls the SearchClient NuGet package internally. The search results page is then rendered client-side, hence the results being at _/search?q=..._.
 
-> You can see the JSON response that's used for client-side rendering by visiting https://localhost:5000/api/search?q=test in your browser.
+> You can see the JSON response that's used for client-side rendering by visiting <https://localhost:5000/api/search?q=test> in your browser.
 
 ### ElasticSearch
 
@@ -100,18 +100,17 @@ The easiest way to get the project running is:
 3. Open the root of the repository in VS Code
    1. Install recommended extensions when prompted
 4. Install dependencies:
-   1. Open the command palette (_Ctrl+Shift+P_) in VS Code, then:
-   2. Run 'npm: Install Dependencies' (and choose 'Run all commands listed below')
-   3. Run '.NET: Restore Project' for CKS.Web
+   1. Run `npm ci` in each folder with a package.json manually.
+   2. Run '.NET: Restore Project' for CKS.Web
 5. Go to the 'Run and Debug' panel (_Ctrl+Shift+D_) in VS Code
 6. Run `Launch CKS`
 
 Launching the app via `Launch CKS` does the following:
 
-1. http://localhost:5000/ - Builds and runs the .NET core web app in the background
-2. http://localhost:8001/ - Creates a local, fake CKS api
-3. http://localhost:8000/ - Builds the Gatsby static site then launches it in Chrome once it's built
-4. Proxies http://localhost:8000/api/search (in the Gatsby site) to http://localhost:5000/api/search (in the .NET core app)
+1. <http://localhost:5000/> - Builds and runs the .NET core web app in the background
+2. <http://localhost:8001/> - Creates a local, fake CKS api
+3. <http://localhost:8000/> - Builds the Gatsby static site then launches it in Chrome once it's built
+4. Proxies <http://localhost:8000/api/search> (in the Gatsby site) to <http://localhost:5000/api/search> (in the .NET core app)
 
 It also attached debuggers so you can add break points in VS Code for the Gatsby Node processes, the Gatsby React components, the fake API and the .NET web app classes.
 
@@ -125,10 +124,10 @@ See the [CKS Sharepoint site](https://niceuk.sharepoint.com/sites/CKS)
 
 ### Environments
 
-| Environment | URL                           |
-| ----------- | ----------------------------- |
-| Local       | https://local-cks.nice.org.uk |
-| Live        | https://cks.nice.org.uk/      |
+| Environment | URL                             |
+| ----------- | ------------------------------- |
+| Local       | <https://local-cks.nice.org.uk> |
+| Live        | <https://cks.nice.org.uk/>      |
 
 ### Top 5 common issues affecting users
 

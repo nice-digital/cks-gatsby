@@ -81,13 +81,12 @@ However, to run the the Gatsby site on its own from the command line:
 2. Clone this repository
 3. Open the root of the repository in VS Code
 4. Install dependencies from npm:
-   1. Run 'npm: Install Dependencies' from the VS Code command palette (_Ctrl+Shift+P_)
-   2. Or run `cd gatsby && npm ci` on the command line
+   1. Run `cd gatsby && npm ci` on the command line
 5. Press _F5_ to build the gatsby site and debug in Chrome
    1. This uses the debugging built into VS Code
    2. Alternatively:
       1. run `npm start` from the _gatsby_ folder
-      2. open http://localhost:8000 in a browser
+      2. open <http://localhost:8000> in a browser
 
 ### Other commands
 
@@ -97,7 +96,7 @@ There are various other commands you can run in a terminal from the _gatsby_ fol
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `npm start`             | Runs the Gatsby site in development mode                                                                                                               |
 | `npm run build`         | Builds the production build of the Gatsby site into the _public_ folder. Note: the [fake-api](fake-api#readme) needs to be running else it won't build |
-| `npm run serve`         | Serves the built Gatsby files from `npm run build` on http://localhost:9000/                                                                           |
+| `npm run serve`         | Serves the built Gatsby files from `npm run build` on <http://localhost:9000/>                                                                         |
 | `npm run cb`            | Copies useful Gatsby info to the clipboard, useful for reporting defects on GitHub                                                                     |
 | `npm test`              | Runs Jest tests                                                                                                                                        |
 | `npm run test:watch`    | Runs Jest tests and watches for file changes to re-run tests                                                                                           |
@@ -125,7 +124,7 @@ Configure these options via environment variables. The Gatsby build looks for th
 
 | Config option    | Environment variable | Notes                                                                                                                |
 | ---------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| apiBaseUrl       | API_BASE_URL         | Leave blank to default to the local fake API at http://localhost:7000/api                                            |
+| apiBaseUrl       | API_BASE_URL         | Leave blank to default to the local fake API at <http://localhost:7000/api>                                          |
 | apiKey           | API_KEY              | Leave blank to default to _abc123_ for the local fake API                                                            |
 | changesSinceDate | CHANGES_SINCE        | Date from which to load changes for the _what's new_ page. Leave blank to default to the start of the previous month |
 
