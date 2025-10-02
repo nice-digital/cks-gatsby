@@ -123,13 +123,13 @@ describe("TopicsPage", () => {
 			expect(
 				screen.getByText(
 					(_content, node) =>
-						node?.textContent === "Browse topics by the letter Q (no topics)",
+						node?.textContent === "There are no topics for the letter Q",
 					{ selector: "#a-to-z li" }
 				)
 			).toBeInTheDocument();
 			expect(
 				screen.queryByRole("link", {
-					name: "Browse topics by the letter Q (no topics)",
+					name: "There are no topics for the letter Q",
 				})
 			).toBeNull();
 		});
