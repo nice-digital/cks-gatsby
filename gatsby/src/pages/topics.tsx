@@ -70,11 +70,13 @@ const TopicsPage: React.FC<TopicsPageProps> = ({ data }: TopicsPageProps) => {
 		<Alphabet aria-label="Letters A to Z">
 			{groupedTopics.map(({ letter, topics }) => (
 				<Letter key={letter} to={topics.length === 0 ? "" : `#${letter}`}>
-					<span className="visually-hidden">Browse topics by the letter </span>
+					<span className="visually-hidden">
+						{topics.length === 0
+							? "There are no topics for"
+							: "Browse topics by"}{" "}
+						the letter{" "}
+					</span>
 					{letter.trim().toUpperCase()}
-					{topics.length === 0 ? (
-						<span className="visually-hidden"> (no topics)</span>
-					) : null}
 				</Letter>
 			))}
 		</Alphabet>
