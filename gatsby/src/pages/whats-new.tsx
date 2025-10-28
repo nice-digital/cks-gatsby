@@ -82,7 +82,7 @@ const WhatsNewPage: React.FC<WhatsNewPageProps> = ({
 					</>
 				}
 			/>
-			<Grid gutter="loose" data-no-snippet>
+			<Grid gutter="loose" data-nosnippet>
 				<GridItem cols={12} md={7} lg={8}>
 					<h2 className="visually-hidden" id="topic-updates">
 						Topic updates
