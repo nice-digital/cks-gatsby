@@ -85,7 +85,9 @@ export const SiteHeader: React.FC = () => {
 							if (suggestion.TypeAheadType === "topic") typeLabel = "CKS topic";
 							else if (suggestion.TypeAheadType === "topicScenario")
 								typeLabel = "CKS topic - scenario";
-							return `<a href="${suggestion.Link}">${suggestion.Title} (${typeLabel})</a>`;
+							return `<a href="${suggestion.Link}"> ${
+								suggestion.TitleHtml || suggestion.Title
+							} (${typeLabel})</a>`;
 						},
 					},
 					onSearching: (e): void => {

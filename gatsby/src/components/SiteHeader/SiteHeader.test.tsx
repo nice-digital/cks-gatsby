@@ -13,17 +13,21 @@ const { SiteHeader } = jest.requireActual("./SiteHeader");
 const mockAutocompleteEndPointSuggestions = [
 	{
 		Title: "Diabetes - type 1",
+		TitleHtml: "<mark>Dia</mark>betes - type 1",
 		TypeAheadType: "topic",
 		Link: "/search/?q=Diabetes+-+type+1",
 	},
 	{
 		Title: "Diazepam",
+		TitleHtml: "<mark>Dia</mark>zepam",
 		TypeAheadType: "keyword",
 		Link: "/search/?q=Diazepam",
 	},
 	{
 		Title:
 			"How should I manage cardiovascular risk in an adult with type 2 diabetes?",
+		TitleHtml:
+			"How should I manage cardiovascular risk in an adult with type 2 <mark>dia</mark>betes?",
 		TypeAheadType: "topicScenario",
 		Link: "/search/?q=How+should+I+manage+cardiovascular+risk+in+an+adult+with+type+2+diabetes%3f",
 	},
@@ -123,11 +127,13 @@ describe("Header", () => {
 				// Wait for first option to exist, as assertion fails intermittently on CI
 				// The "Search for dia..." option is now hidden, so we check for the first visible option
 				const firstVisibleOption = suggestedOptions.find(
-					(option) => option.textContent === "Diabetes - type 1 (CKS topic)"
+					(option) =>
+						option.textContent?.includes("Diabetes") &&
+						option.textContent?.includes("CKS topic")
 				);
 
 				expect(firstVisibleOption).toBeTruthy();
-
+				expect(firstVisibleOption?.querySelector("mark")).toBeTruthy();
 				const expectedOptions = [
 					"Diabetes - type 1 (CKS topic)",
 					"Diazepam (CKS search)",
@@ -144,8 +150,7 @@ describe("Header", () => {
 				);
 
 				visibleOptions.forEach((option, index) => {
-					// eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
-					expect(option.textContent).toBe(expectedOptions[index]);
+					expect(option).toHaveTextContent(expectedOptions[index]);
 				});
 			});
 		});
