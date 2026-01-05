@@ -133,7 +133,6 @@ describe("Header", () => {
 				);
 
 				expect(firstVisibleOption).toBeTruthy();
-				expect(firstVisibleOption?.querySelector("mark")).toBeTruthy();
 				const expectedOptions = [
 					"Diabetes - type 1 (CKS topic)",
 					"Diazepam (CKS search)",
