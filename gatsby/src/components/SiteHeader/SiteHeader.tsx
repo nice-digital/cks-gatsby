@@ -73,14 +73,17 @@ export const SiteHeader: React.FC = () => {
 				search={{
 					placeholder: "Search CKS…",
 					autocomplete: {
-						suggestions: "/api/autocomplete",
+						suggestions: "/api/typehead",
 						suggestionTemplate: (suggestion) => {
 							if (!suggestion || !suggestion.Link) return "";
 
 							// Allow passing in a custom suggestion template externally so we can a/b test them
 							if (window.autocompleteSuggestionTemplate)
 								return window.autocompleteSuggestionTemplate(suggestion);
-
+							console.log("suggestion", suggestion);
+							console.log("suggestion.TypeAheadType", suggestion.TypeAheadType);
+							console.log("suggestion.TitleHtml", suggestion.TitleHtml);
+							console.log("suggestion.Title", suggestion.Title);
 							let typeLabel = "CKS search";
 							if (suggestion.TypeAheadType === "topic") typeLabel = "CKS topic";
 							else if (suggestion.TypeAheadType === "topicScenario")
