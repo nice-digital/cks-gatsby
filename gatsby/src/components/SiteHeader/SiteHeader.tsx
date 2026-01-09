@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { navigate } from "gatsby";
 import { useLocation } from "@reach/router";
 import { Header } from "@nice-digital/global-nav";
+import { useSiteMetadata } from "src/hooks/useSiteMetadata";
 
 const searchInputSelector = "header form[role='search'] [name='q']";
 
@@ -19,7 +20,7 @@ const getQueryTerm = (queryString: string): string => {
 
 export const SiteHeader: React.FC = () => {
 	const { search: queryString } = useLocation();
-
+	const { searchUrl } = useSiteMetadata();
 	const [queryTerm, setQueryTermState] = useState(getQueryTerm(queryString));
 
 	// Parse the q value from the querystring
@@ -73,7 +74,7 @@ export const SiteHeader: React.FC = () => {
 				search={{
 					placeholder: "Search CKS…",
 					autocomplete: {
-						suggestions: "/api/typeahead?index=cks",
+						suggestions: `${searchUrl}/typeahead?typeahead?index=cks`,
 						suggestionTemplate: (suggestion) => {
 							if (!suggestion || !suggestion.Link) return "";
 
