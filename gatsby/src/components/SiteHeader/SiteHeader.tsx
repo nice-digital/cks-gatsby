@@ -74,7 +74,7 @@ export const SiteHeader: React.FC = () => {
 				search={{
 					placeholder: "Search CKS…",
 					autocomplete: {
-						suggestions: `${searchUrl}/typeahead?typeahead?index=cks`,
+						suggestions: `${searchUrl}/typeahead?index=cks`,
 						suggestionTemplate: (suggestion) => {
 							if (!suggestion || !suggestion.Link) return "";
 
