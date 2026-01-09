@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { navigate } from "gatsby";
 import { useLocation } from "@reach/router";
 import { Header } from "@nice-digital/global-nav";
-import { useSiteMetadata } from "src/hooks/useSiteMetadata";
+import { useSiteMetadata } from "../../hooks/useSiteMetadata";
 
 const searchInputSelector = "header form[role='search'] [name='q']";
 
