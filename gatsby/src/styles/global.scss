@@ -3,12 +3,14 @@
   $output-text-classes: false,
   $output-visibility-classes: false
 );
+@use '@nice-digital/nds-core/scss/spacing';
 
 @use '@nice-digital/nds-core/scss/visibility';
 
 html {
   overflow-x: visible; // Override the overflow from NDS, otherwise position sticky doesn't work
   scroll-behavior: smooth;
+  scroll-padding-bottom: utils.rem(spacing.$xx-large);
 
   @media (prefers-reduced-motion) {
     scroll-behavior: auto;
