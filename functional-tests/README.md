@@ -40,7 +40,7 @@ Run the tests directly on your machine [using VSCode](#using-vscode), [using npm
 
 The easiest way is via VSCode:
 
-### Using VSCode
+### Using VSCode -
 
 Using VSCode to run the tests will launch browsers on your local machine to run the tests. This is useful for watching and debugging the test runs to diagnose any failing tests.
 
