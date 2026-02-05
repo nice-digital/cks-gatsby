@@ -4,7 +4,7 @@
   $output-visibility-classes: false
 );
 @use '@nice-digital/nds-core/scss/spacing';
-
+@use '@nice-digital/nds-core/scss/utils';
 @use '@nice-digital/nds-core/scss/visibility';
 
 html {
