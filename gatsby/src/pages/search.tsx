@@ -224,7 +224,7 @@ const Results: React.FC<ResultsProps> = ({
 					id="search-results"
 					ref={resultsRef}
 					tabIndex={-1}
-					className="searchResultsContainer"
+					className={styles.searchResultsContainer}
 					aria-label="Search results"
 				>
 					{" "}
