@@ -110,6 +110,12 @@ const SearchPage: React.FC = () => {
 		return;
 	}, [data]);
 
+	useEffect(() => {
+		if (!data?.documents?.length || error) return;
+
+		resultsRef.current?.focus();
+	}, [data?.documents?.length, error]);
+
 	return (
 		<>
 			<div className="visually-hidden" aria-live="polite">
