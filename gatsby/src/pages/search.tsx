@@ -113,7 +113,7 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		if (!data?.documents?.length || error) return;
 
-		resultsRef.current?.focus();
+		resultsRef.current?.focus({ preventScroll: true });
 	}, [data?.documents?.length, error]);
 
 	return (
