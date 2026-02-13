@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "gatsby";
 import { useLocation } from "@reach/router";
 import { Card } from "@nice-digital/nds-card";
@@ -39,6 +39,10 @@ interface SearchResults {
 	documents: Document[];
 }
 
+interface ResultsProps extends SearchResults {
+	resultsRef: React.RefObject<HTMLDivElement>;
+}
+
 type Document = {
 	id: string;
 	metaDescription: string;
@@ -60,6 +64,7 @@ const SearchPage: React.FC = () => {
 	const [data, setData] = useState<SearchResults | null>(null);
 	const [error, setError] = useState<boolean>(false);
 	const [a11yMessage, setA11yMessage] = useState<string>("");
+	const resultsRef = useRef<HTMLDivElement | null>(null);
 
 	function announce(message: string): void {
 		setA11yMessage("");
@@ -78,6 +83,7 @@ const SearchPage: React.FC = () => {
 			.then((results) => {
 				setError(false);
 				setData(results as SearchResults);
+				resultsRef.current?.focus({ preventScroll: true });
 				announce("Search results loaded");
 			})
 			.catch(() => {
@@ -103,6 +109,12 @@ const SearchPage: React.FC = () => {
 		}
 		return;
 	}, [data]);
+
+	useEffect(() => {
+		if (!data?.documents?.length || error) return;
+
+		resultsRef.current?.focus({ preventScroll: true });
+	}, [data?.documents?.length, error]);
 
 	return (
 		<>
@@ -140,12 +152,12 @@ const SearchPage: React.FC = () => {
 					</p>
 				</>
 			)}
-			{data && !data.failed && <Results {...data} />}
+			{data && !data.failed && <Results {...data} resultsRef={resultsRef} />}
 		</>
 	);
 };
 
-const Results: React.FC<SearchResults> = ({
+const Results: React.FC<ResultsProps> = ({
 	firstResult,
 	resultCount,
 	finalSearchText,
@@ -153,6 +165,7 @@ const Results: React.FC<SearchResults> = ({
 	documents,
 	pageSize,
 	pagerLinks: { next, previous },
+	resultsRef,
 }) => {
 	const currentPage = Math.ceil(firstResult / pageSize);
 	const totalPages = Math.ceil(resultCount / pageSize);
@@ -206,7 +219,18 @@ const Results: React.FC<SearchResults> = ({
 					originalSearchText={originalSearch?.searchText}
 				/>
 			</div>
-			{documents.length > 0 && <ResultsList documents={documents} />}
+			{documents.length > 0 && (
+				<div
+					id="search-results"
+					ref={resultsRef}
+					tabIndex={-1}
+					className={styles.searchResultsContainer}
+					aria-label="Search results"
+				>
+					{" "}
+					<ResultsList documents={documents} />
+				</div>
+			)}
 			{resultCount > pageSize && <SimplePagination {...paginationProps} />}
 		</>
 	);
@@ -256,7 +280,7 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 			{finalSearchText && (
 				<>
 					{" "}
-					for <b>{finalSearchText}</b>
+					for <strong>{finalSearchText}</strong>
 				</>
 			)}
 		</>
