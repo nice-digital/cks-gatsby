@@ -280,7 +280,7 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 			{finalSearchText && (
 				<>
 					{" "}
-					for <b>{finalSearchText}</b>
+					for <strong>{finalSearchText}</strong>
 				</>
 			)}
 		</>
