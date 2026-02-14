@@ -13,6 +13,7 @@ export const config: WebdriverIO.Config = {
 
 	maxInstances: isInDocker ? 2 : 1,
 	path: "/wd/hub",
+	port: isInDocker ? 4444 : 5000,
 
 	specs: ["./features/**/*.feature"],
 
@@ -40,7 +41,7 @@ export const config: WebdriverIO.Config = {
 						disableWebdriverScreenshotsReporting: false,
 					},
 				],
-		  ]
+			]
 		: ["spec"],
 
 	// Use BDD with Cucumber
@@ -62,6 +63,12 @@ export const config: WebdriverIO.Config = {
 				isTeamCity ? " (TeamCity)" : ""
 			} → CPUs: ${cpuCount} | Memory: ${totalMemGB.toFixed(1)} GB`
 		);
+	},
+
+	//TODO: remove after test build against CI
+	afterFeature: async function () {
+		const url = await browser.getUrl();
+		console.log({ url });
 	},
 
 	afterStep: async function (_test, _scenario, { error }) {
