@@ -83,7 +83,6 @@ const SearchPage: React.FC = () => {
 			.then((results) => {
 				setError(false);
 				setData(results as SearchResults);
-				resultsRef.current?.focus({ preventScroll: true });
 				announce(
 					`${results.resultCount} ${
 						results.resultCount === 1 ? "result" : "results"
