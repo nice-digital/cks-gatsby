@@ -42,7 +42,7 @@ exports[`EULABanner should match snapshot 1`] = `
       aria-live="polite"
       class="alert alert--info"
       data-component="alert--info"
-      role="status"
+      role="alert"
     >
       Please read all the terms on this page. Then indicate that you have read and agree to the terms by clicking the button at the bottom of the page.
     </div>
@@ -197,7 +197,7 @@ exports[`EULABanner should match snapshot 1`] = `
         >
           <li>
             (i) “Topics” means the CKS topics and content made available by NICE
-             
+
             <a
               href="https://cks.nice.org.uk/"
             >
@@ -207,7 +207,7 @@ exports[`EULABanner should match snapshot 1`] = `
           </li>
           <li>
             (ii) “Us” (including “We” or “Our”) means Clarity Informatics Limited (trading as “Agilio”) a company incorporated under the laws of England with company number 04133376 of Deltic House, Kingfisher Way, Wallsend, NE28 9NX. Clarity Informatics Limited (trading as “Agilio”) can be contacted using the contact details on the webpage:
-             
+
             <a
               href="https://agiliosoftware.com/prodigy"
             >
