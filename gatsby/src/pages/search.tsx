@@ -83,11 +83,6 @@ const SearchPage: React.FC = () => {
 			.then((results) => {
 				setError(false);
 				setData(results as SearchResults);
-				announce(
-					`${results.resultCount} ${
-						results.resultCount === 1 ? "result" : "results"
-					}${results.finalSearchText ? ` for ${results.finalSearchText}` : ""}`
-				);
 			})
 			.catch(() => {
 				setError(true);
@@ -117,6 +112,13 @@ const SearchPage: React.FC = () => {
 		if (!data?.documents?.length || error) return;
 
 		resultsRef.current?.focus({ preventScroll: true });
+		window.setTimeout(() => {
+			announce(
+				`${data.resultCount} ${data.resultCount === 1 ? "result" : "results"}${
+					data.finalSearchText ? ` for ${data.finalSearchText}` : ""
+				}`
+			);
+		}, 100);
 	}, [data?.documents?.length, error]);
 
 	return (
