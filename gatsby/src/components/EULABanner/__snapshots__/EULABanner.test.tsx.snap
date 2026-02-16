@@ -42,7 +42,6 @@ exports[`EULABanner should match snapshot 1`] = `
       aria-live="polite"
       class="alert alert--info"
       data-component="alert--info"
-      role="status"
     >
       Please read all the terms on this page. Then indicate that you have read and agree to the terms by clicking the button at the bottom of the page.
     </div>
