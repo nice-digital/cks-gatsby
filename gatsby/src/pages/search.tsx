@@ -84,7 +84,11 @@ const SearchPage: React.FC = () => {
 				setError(false);
 				setData(results as SearchResults);
 				resultsRef.current?.focus({ preventScroll: true });
-				announce("Search results loaded");
+				announce(
+					`${results.resultCount} ${
+						results.resultCount === 1 ? "result" : "results"
+					}${results.finalSearchText ? ` for ${results.finalSearchText}` : ""}`
+				);
 			})
 			.catch(() => {
 				setError(true);
@@ -269,13 +273,7 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 	}
 
 	const LeadText = (
-		<div
-			id="search-results-summary"
-			role="status"
-			aria-live="polite"
-			aria-atomic="true"
-			className="visually-hidden"
-		>
+		<>
 			{originalSearchText && (
 				<>
 					Your search for <b>{originalSearchText}</b> returned no results
@@ -289,7 +287,7 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 					for <strong>{finalSearchText}</strong>
 				</>
 			)}
-		</div>
+		</>
 	);
 
 	return (
