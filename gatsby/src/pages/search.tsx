@@ -269,7 +269,13 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 	}
 
 	const LeadText = (
-		<>
+		<div
+			id="search-results-summary"
+			role="status"
+			aria-live="polite"
+			aria-atomic="true"
+			className="visually-hidden"
+		>
 			{originalSearchText && (
 				<>
 					Your search for <b>{originalSearchText}</b> returned no results
@@ -283,7 +289,7 @@ const ResultSummary: React.FC<ResultsSummary> = ({
 					for <strong>{finalSearchText}</strong>
 				</>
 			)}
-		</>
+		</div>
 	);
 
 	return (
