@@ -9,7 +9,6 @@ import styles from "./EULABanner.module.scss";
 export const COOKIE_EXPIRY = 365; // In days, i.e. cookie expires a year from when it's set
 export const EULA_COOKIE_NAME = "CKS-EULA-Accepted";
 export const COOKIE_CONTROL_NAME = "CookieControl";
-
 export const EULABanner: React.FC = () => {
 	const [showEULABanner, setShowEULABanner] = useState<boolean>(false);
 
@@ -74,7 +73,7 @@ export const EULABanner: React.FC = () => {
 					<Dialog.Title asChild>
 						<h2>CKS End User Licence Agreement</h2>
 					</Dialog.Title>
-					<Alert>
+					<Alert role="status" nonIntrusive>
 						Please read all the terms on this page. Then indicate that you have
 						read and agree to the terms by clicking the button at the bottom of
 						the page.
