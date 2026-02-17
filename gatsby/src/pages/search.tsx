@@ -83,7 +83,6 @@ const SearchPage: React.FC = () => {
 			.then((results) => {
 				setError(false);
 				setData(results as SearchResults);
-				console.log("Search results", results);
 			})
 			.catch(() => {
 				setError(true);
@@ -105,11 +104,9 @@ const SearchPage: React.FC = () => {
 					});
 				}
 			}
-			console.log("Search results loaded", data);
 			const summary = `${data.resultCount} ${
 				data.resultCount === 1 ? "result" : "results"
 			}${data.finalSearchText ? ` for ${data.finalSearchText}` : ""}`;
-			console.log(summary);
 			announce(summary);
 		}
 		return;
@@ -119,13 +116,6 @@ const SearchPage: React.FC = () => {
 		if (!data?.documents?.length || error) return;
 
 		resultsRef.current?.focus({ preventScroll: true });
-		// window.setTimeout(() => {
-		// 	announce(
-		// 		`${data.resultCount} ${data.resultCount === 1 ? "result" : "results"}${
-		// 			data.finalSearchText ? ` for ${data.finalSearchText}` : ""
-		// 		}`
-		// 	);
-		// }, 100);
 	}, [data?.documents?.length, error]);
 
 	return (
