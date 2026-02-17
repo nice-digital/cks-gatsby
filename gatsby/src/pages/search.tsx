@@ -126,7 +126,7 @@ const SearchPage: React.FC = () => {
 			<div
 				className="visually-hidden"
 				role="status"
-				aria-live="polite"
+				aria-live="assertive"
 				aria-atomic="true"
 			>
 				{a11yMessage}
