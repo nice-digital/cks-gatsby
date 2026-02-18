@@ -120,12 +120,7 @@ const SearchPage: React.FC = () => {
 
 	return (
 		<>
-			<div
-				className="visually-hidden"
-				role="status"
-				aria-live="assertive"
-				aria-atomic="true"
-			>
+			<div className="visually-hidden" aria-live="assertive" aria-atomic="true">
 				{a11yMessage}
 			</div>
 			{!error && !data && (
