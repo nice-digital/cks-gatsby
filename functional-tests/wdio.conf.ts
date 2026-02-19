@@ -65,12 +65,6 @@ export const config: WebdriverIO.Config = {
 		);
 	},
 
-	//TODO: remove after test build against CI
-	afterFeature: async function () {
-		const url = await browser.getUrl();
-		console.log({ url });
-	},
-
 	afterStep: async function (_test, _scenario, { error }) {
 		// Take screenshots on error, these end up in the Allure reports
 		if (error) await browser.takeScreenshot();
