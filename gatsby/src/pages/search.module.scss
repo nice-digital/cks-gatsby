@@ -3,7 +3,7 @@
 .resultList {
   max-width: utils.rem(768);
 }
-div:focus:not(:focus-visible),
-form:focus:not(:focus-visible) {
+
+.searchResultsContainer:focus {
   outline: none;
 }
