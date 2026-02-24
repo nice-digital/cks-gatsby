@@ -112,7 +112,7 @@ describe("Search Page", () => {
 			const ariaLiveDiv = container.querySelector("[aria-live]");
 			expect(ariaLiveDiv?.textContent).toEqual("");
 			await waitFor(() => {
-				expect(ariaLiveDiv?.textContent).toEqual("Search results loaded");
+				expect(ariaLiveDiv?.textContent).toEqual("8 results for mooney");
 			});
 		});
 
