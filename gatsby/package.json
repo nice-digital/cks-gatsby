@@ -115,7 +115,7 @@
     "web-vitals": "^2.1.4"
   },
   "volta": {
-    "node": "18.13.0"
+    "node": "22.11.0"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",

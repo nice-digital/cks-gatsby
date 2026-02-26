@@ -13,6 +13,7 @@ export const config: WebdriverIO.Config = {
 
 	maxInstances: isInDocker ? 2 : 1,
 	path: "/wd/hub",
+	port: isInDocker ? 4444 : 5000,
 
 	specs: ["./features/**/*.feature"],
 
@@ -40,7 +41,7 @@ export const config: WebdriverIO.Config = {
 						disableWebdriverScreenshotsReporting: false,
 					},
 				],
-		  ]
+			]
 		: ["spec"],
 
 	// Use BDD with Cucumber
