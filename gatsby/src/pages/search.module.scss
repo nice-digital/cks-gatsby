@@ -3,3 +3,7 @@
 .resultList {
   max-width: utils.rem(768);
 }
+
+.searchResultsContainer:focus {
+  outline: none;
+}
