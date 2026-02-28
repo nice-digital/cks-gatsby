@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 interface SiteMetaData {
 	siteUrl: string;
 	title: string;
+	searchUrl: string;
 	changesSinceDateISO: string;
 	changesSinceDateFormatted: string;
 }
@@ -21,6 +22,7 @@ export const useSiteMetadata = (): SiteMetaData => {
 					siteMetadata {
 						title
 						siteUrl
+						searchUrl
 						changesSinceDateISO: changesSinceDate(formatString: "YYYY-MM")
 						changesSinceDateFormatted: changesSinceDate(
 							formatString: "MMMM YYYY"

@@ -30,6 +30,7 @@ describe("useSiteMetadata", () => {
 							siteMetadata {
 								title
 								siteUrl
+								searchUrl
 								changesSinceDateISO: changesSinceDate(formatString: "YYYY-MM")
 								changesSinceDateFormatted: changesSinceDate(
 									formatString: "MMMM YYYY"
