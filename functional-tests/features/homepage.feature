@@ -9,11 +9,6 @@ Feature: Homepage
     When I wait on element "h1" to exist
     Then I expect that element "h1" contains the text "Clinical Knowledge Summaries"
 
-  Scenario: Clicking on a topic initial takes you to the topics page at that letter
-    Then I wait on element "[href='/topics/#b']" to exist
-    When I click on the element "[href='/topics/#b']"
-    Then I expect the url to contain "/topics/#b"
-
   Scenario: Detect Home page accessibility issues
     When I wait on element "h1" to exist
     Then the page should have no accessibility issues
@@ -22,3 +17,8 @@ Feature: Homepage
     Given I have a screen that is 320 by 568 pixels
     When I wait on element "h1" to exist
     Then the page should have no accessibility issues
+
+  Scenario: Clicking on a topic initial takes you to the topics page at that letter
+    When I click the "Browse topics by the letter B" link
+    Then I expect the url to contain "/topics/#b"
+
