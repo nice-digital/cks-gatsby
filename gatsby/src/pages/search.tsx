@@ -5,7 +5,7 @@ import { Card } from "@nice-digital/nds-card";
 import { SimplePagination } from "@nice-digital/nds-simple-pagination";
 import { PageHeader } from "@nice-digital/nds-page-header";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
-import { useSiteMetadata } from "src/hooks/useSiteMetadata";
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 import { SEO } from "../components/SEO/SEO";
 
