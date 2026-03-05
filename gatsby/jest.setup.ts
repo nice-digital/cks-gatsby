@@ -17,6 +17,7 @@ jest.mock("./src/hooks/useSiteMetadata", () => {
 	return {
 		useSiteMetadata: (): unknown => ({
 			siteUrl: "https://cks.nice.org.uk",
+			searchUrl: "https://beta-search-api.nice.org.uk/api",
 		}),
 	};
 });
