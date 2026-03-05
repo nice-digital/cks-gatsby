@@ -78,10 +78,6 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		setData(null);
 		announce("Loading search results");
-		// fetch("/api/search" + location.search)
-		// fetch(
-		// 	`/api/search?index=cks&{location.search ? "&" + location.search.slice(1) : ""}`
-		// )
 		const params = new URLSearchParams(location.search);
 		params.set("index", "cks");
 		fetch(`/api/search?${params.toString()}`)
