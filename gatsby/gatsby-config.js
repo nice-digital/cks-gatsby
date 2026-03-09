@@ -8,6 +8,11 @@ require("dotenv").config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
+const searchUrl = process.env.GATSBY_SEARCH_URL;
+if (process.env.NODE_ENV && !process.env.GATSBY_SEARCH_URL)
+	throw new Error(
+		"Env var GATSBY_SEARCH_URL isn't set. Did you forget to add it?"
+	);
 /** The date from which to get updates */
 const changesSinceDate = process.env.CHANGES_SINCE
 	? moment.utc(process.env.CHANGES_SINCE).toDate()
@@ -16,6 +21,7 @@ const changesSinceDate = process.env.CHANGES_SINCE
 module.exports = {
 	siteMetadata: {
 		siteUrl: "https://cks.nice.org.uk",
+		searchUrl,
 		title: "CKS",
 		changesSinceDate,
 	},

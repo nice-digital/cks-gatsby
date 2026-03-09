@@ -5,6 +5,7 @@ import { Card } from "@nice-digital/nds-card";
 import { SimplePagination } from "@nice-digital/nds-simple-pagination";
 import { PageHeader } from "@nice-digital/nds-page-header";
 import { Breadcrumbs, Breadcrumb } from "@nice-digital/nds-breadcrumbs";
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 import { SEO } from "../components/SEO/SEO";
 
@@ -65,6 +66,7 @@ const SearchPage: React.FC = () => {
 	const [error, setError] = useState<boolean>(false);
 	const [a11yMessage, setA11yMessage] = useState<string>("");
 	const resultsRef = useRef<HTMLDivElement | null>(null);
+	const { searchUrl } = useSiteMetadata();
 
 	function announce(message: string): void {
 		setA11yMessage("");
@@ -78,7 +80,9 @@ const SearchPage: React.FC = () => {
 	useEffect(() => {
 		setData(null);
 		announce("Loading search results");
-		fetch("/api/search" + location.search)
+		const params = new URLSearchParams(location.search);
+		params.set("index", "cks");
+		fetch(`${searchUrl}/search?${params.toString()}`)
 			.then((data) => data.json())
 			.then((results) => {
 				setError(false);
