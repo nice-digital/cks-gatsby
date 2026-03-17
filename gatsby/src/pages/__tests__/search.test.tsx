@@ -28,6 +28,14 @@ describe("Search Page", () => {
 		});
 	});
 
+	it("should include index=cks in the search request URL", async () => {
+		fetch.mockResponse(JSON.stringify(searchResponseShort));
+		renderWithRouter(<SearchPage />, { route: "/q=test " });
+		await waitFor(() => {
+			expect(fetch).toHaveBeenCalledWith(expect.stringContaining("index=cks"));
+		});
+	});
+
 	it("should display the total number of search results", async () => {
 		fetch.mockResponse(JSON.stringify(searchResponseLong));
 		renderWithRouter(<SearchPage />);
