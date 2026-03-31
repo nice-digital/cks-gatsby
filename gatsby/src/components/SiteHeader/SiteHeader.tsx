@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { navigate } from "gatsby";
 import { useLocation } from "@reach/router";
 import { Header } from "@nice-digital/global-nav";
+import { useSiteMetadata } from "../../hooks/useSiteMetadata";
 
 const searchInputSelector = "header form[role='search'] [name='q']";
 
@@ -19,7 +20,7 @@ const getQueryTerm = (queryString: string): string => {
 
 export const SiteHeader: React.FC = () => {
 	const { search: queryString } = useLocation();
-
+	const { searchUrl } = useSiteMetadata();
 	const [queryTerm, setQueryTermState] = useState(getQueryTerm(queryString));
 
 	// Parse the q value from the querystring
@@ -73,19 +74,20 @@ export const SiteHeader: React.FC = () => {
 				search={{
 					placeholder: "Search CKS…",
 					autocomplete: {
-						suggestions: "/api/autocomplete",
+						suggestions: `${searchUrl}/typeahead?index=cks`,
 						suggestionTemplate: (suggestion) => {
 							if (!suggestion || !suggestion.Link) return "";
 
 							// Allow passing in a custom suggestion template externally so we can a/b test them
 							if (window.autocompleteSuggestionTemplate)
 								return window.autocompleteSuggestionTemplate(suggestion);
-
 							let typeLabel = "CKS search";
 							if (suggestion.TypeAheadType === "topic") typeLabel = "CKS topic";
 							else if (suggestion.TypeAheadType === "topicScenario")
 								typeLabel = "CKS topic - scenario";
-							return `<a href="${suggestion.Link}">${suggestion.Title} (${typeLabel})</a>`;
+							return `<a href="${suggestion.Link}"> ${
+								suggestion.TitleHtml || suggestion.Title
+							} (${typeLabel})</a>`;
 						},
 					},
 					onSearching: (e): void => {
