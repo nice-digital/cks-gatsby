@@ -125,5 +125,9 @@
   },
   "optionalDependencies": {
     "@parcel/watcher-linux-x64-glibc": "^2.4.1"
+  },
+  "overrides": {
+    "gatsby": { "axios": "1.14.0"},
+    "wait-on": { "axios": "0.30.3"}
   }
 }
