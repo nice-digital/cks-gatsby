@@ -85,7 +85,6 @@ There are two ES instances available, one on the NHSEVIRT domain and one in AWS.
 - You will only be able to verify search functionality if you are connected to either the pink cable, the IM&T wi-fi or have a local elastic search instance set up.
 - You may need to add dev.es.nice.org.uk to your hosts file if you are unable to resolve the ES server using DNS
 - Make the following changes in _\cks-gatsby\web-app\CKS.Web\appsettings.json_ **(don't check in!)**:
-
   - set `https://test-search-api.nice.org.uk` for `SearchApiUrl` whilst developing
   - set `https://search-api.nice.org.uk` for `SearchApiUrl` for deploying to live servers at AWS.
 
@@ -136,3 +135,18 @@ See the [CKS Sharepoint site](https://niceuk.sharepoint.com/sites/CKS)
 ### Regenerate the Table of Contents
 
 For further information about the recommended ReadMe structure plus a 'how to' for regenerating the table of contents, follow the instructions in [DIT Engineering - ReadMes](https://niceuk.sharepoint.com/sites/DIT_Engineering/SitePages/Readmes.aspx)
+
+## Developer note on pinned and overridden axios versions
+
+As of 31/03/2026 we've had to pin or override the versions of axios due to [a known vulnerability with axios](https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan) versions `0.30.4` and `1.14.1`.
+
+axios changes in `/gatsby`:
+
+- overridden and pinned transient `axios` dependencies in `gatsby@5.16.1` to `axios@1.14.0`
+- overridden and pinned transient `axios` dependencies in `wait-on@6.0.1` to `axios@0.30.3`
+
+axios changes in `/functional-tests`:
+
+- overridden and pinned transient `axios` dependency in `wait-on@6.0.1` to version `0.30.3`
+
+**TODO: We will need to review once we have a clear path to upgrade to non vulnerable versions.**
