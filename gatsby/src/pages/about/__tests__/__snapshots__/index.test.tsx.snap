@@ -25,7 +25,7 @@ exports[`About page Body should match snapshot for 'Help develop CKS' panel 1`] 
     </li>
     <li>
       <a
-        href="https://www.nice.org.uk/cks-feedback"
+        href="https://www.nice.org.uk/website-feedback"
       >
         Send feedback on CKS topics
       </a>
@@ -48,7 +48,7 @@ exports[`About page Body should match snapshot for main body content 1`] = `
   </p>
   <p>
     The topics focus on the most common and significant presentations in primary care. They give trusted information to support safe decision-making and improve standards of patient care.
-     
+
   </p>
   <h2>
     Developed on behalf of NICE
@@ -64,13 +64,13 @@ exports[`About page Body should match snapshot for main body content 1`] = `
   </p>
   <p>
     The development process is
-     
+
     <a
       href="https://www.nice.org.uk/about/what-we-do/accreditation"
     >
       accredited by NICE
     </a>
-     
+
     to ensure the highest quality.
   </p>
   <p>

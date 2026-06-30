@@ -16,7 +16,7 @@ export const HelpPanel: React.FC = () => (
 				</a>
 			</li>
 			<li>
-				<a href="https://www.nice.org.uk/cks-feedback">
+				<a href="https://www.nice.org.uk/website-feedback">
 					Send feedback on CKS topics
 				</a>
 			</li>
