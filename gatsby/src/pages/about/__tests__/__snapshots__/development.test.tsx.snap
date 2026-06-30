@@ -121,7 +121,7 @@ exports[`Development page Body should match snapshot for main body content 1`] =
   </h2>
   <p>
     CKS topics are developed for NICE by Clarity Informatics Ltd using
-
+     
     <a
       href="https://www.nice.org.uk/about/what-we-do/accreditation"
     >
@@ -215,7 +215,7 @@ exports[`Development page Body should match snapshot for main body content 1`] =
   </ul>
   <p>
     More detailed information on the way CKS topics are developed can be found in the
-
+     
     <a
       href="https://www.nice.org.uk/media/default/About/what-we-do/Evidence%20Services/CKS/CKS-guide.pdf"
     >
