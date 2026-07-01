@@ -25,7 +25,7 @@ exports[`About page Body should match snapshot for 'Help develop CKS' panel 1`] 
     </li>
     <li>
       <a
-        href="https://www.nice.org.uk/cks-feedback"
+        href="https://www.nice.org.uk/website-feedback"
       >
         Send feedback on CKS topics
       </a>
