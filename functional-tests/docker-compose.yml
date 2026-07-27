@@ -22,7 +22,7 @@ services:
     build:
       context: .
       args:
-        - NPM_TOKEN
+        - NPM_TOKEN_TEMP
     container_name: test-runner
     depends_on:
       - selenium-hub
