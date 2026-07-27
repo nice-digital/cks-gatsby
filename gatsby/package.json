@@ -137,7 +137,8 @@
     },
     "eslint-config-react-app": {
       "@typescript-eslint/eslint-plugin": "$@typescript-eslint/eslint-plugin",
-      "@typescript-eslint/parser": "$@typescript-eslint/parser"
+      "@typescript-eslint/parser": "$@typescript-eslint/parser",
+      "eslint-plugin-testing-library": "$eslint-plugin-testing-library"
     },
     "react-server-dom-webpack": {
       "react": "$react"
