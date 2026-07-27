@@ -7,7 +7,7 @@
     "start": "npm run develop",
     "// GATSBY": "",
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "node ./scripts/ensure-parcel-watcher.js && gatsby build",
     "serve": "gatsby serve",
     "cb": "gatsby info --clipboard",
     "clean": "gatsby clean",
