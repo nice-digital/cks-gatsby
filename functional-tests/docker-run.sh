@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# On TeamCity the fresh CodeArtifact token arrives as NPM_TOKEN_CODEARTIFACT
+# fall back to an already set NPM_TOKEN for local runs
+export NPM_TOKEN="${NPM_TOKEN:-$NPM_TOKEN_CODEARTIFACT}"
+
 # Runs functional tests via Docker
 
 function cleanupBeforeStart()
