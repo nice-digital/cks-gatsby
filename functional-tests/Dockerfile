@@ -22,9 +22,9 @@ COPY package-lock.json /tests
 
 # Token for the CodeArtifact registry, passed in from the host (see docker-compose.yml).
 # .npmrc is written and removed within a single RUN so the token never persists in a layer.
-ARG NPM_TOKEN_TEMP
+ARG NPM_TOKEN
 RUN echo "registry=https://nice-digital-037931721306.d.codeartifact.eu-west-2.amazonaws.com/npm/npm-internal/" > .npmrc \
-	&& echo "//nice-digital-037931721306.d.codeartifact.eu-west-2.amazonaws.com/npm/npm-internal/:_authToken=${NPM_TOKEN_TEMP}" >> .npmrc \
+	&& echo "//nice-digital-037931721306.d.codeartifact.eu-west-2.amazonaws.com/npm/npm-internal/:_authToken=${NPM_TOKEN}" >> .npmrc \
 	&& npm ci \
 	&& rm -f .npmrc
 
