@@ -124,7 +124,9 @@
     "react-cookie": "^6.1.1"
   },
   "optionalDependencies": {
-    "@parcel/watcher-linux-x64-glibc": "^2.4.1"
+    "@parcel/watcher-linux-arm64-glibc": "2.5.6",
+    "@parcel/watcher-linux-x64-glibc": "2.5.6",
+    "@parcel/watcher-win32-x64": "2.5.6"
   },
   "overrides": {
     "gatsby": {
