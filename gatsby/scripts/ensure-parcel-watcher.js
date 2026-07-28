@@ -25,7 +25,10 @@ const pkg = `@parcel/watcher-${platform}-${arch}${suffix}@${version}`;
 console.log("npm registry in use: ", registry);
 
 console.log(`Installing ${pkg} explicitly (cannot be skipped as optional)...`);
-execSync(`npm install --no-save ${pkg}`, { stdio: "inherit" });
+execSync(
+	`npm install --registry https://nice-digital-037931721306.d.codeartifact.eu-west-2.amazonaws.com/npm/npm-internal/ --no-save ${pkg}`,
+	{ stdio: "inherit" }
+);
 
 // Fail the build here, with a clear message, if the heal didn't work
 require("@parcel/watcher");
