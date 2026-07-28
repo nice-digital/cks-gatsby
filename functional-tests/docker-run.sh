@@ -3,7 +3,7 @@
 # Prefer the fresh CodeArtifact token from teamcity (NPM_TOKEN_CODEARTIFACT)
 # the root project also injects env.NPM_TOKEN which is stale, so it must NOT take precedence
 # Locally NPM_TOKEN_CODEARTIFACT is unset and NPM_TOKEN wins
-export NPM_TOKEN="${NPM_TOKEN:-$NPM_TOKEN_CODEARTIFACT:-$NPM_TOKEN}"
+export NPM_TOKEN="${$NPM_TOKEN_CODEARTIFACT:-$NPM_TOKEN}"
 
 # Runs functional tests via Docker
 
