@@ -9,6 +9,7 @@ const { execSync } = require("child_process");
 const registry = execSync("npm config get registry").toString().trim();
 
 try {
+	console.log("npm registry in use: ", registry);
 	require("@parcel/watcher");
 	console.log("@parcel/watcher OK");
 	return;
@@ -21,8 +22,6 @@ const { platform, arch } = process;
 const suffix = platform === "linux" ? "-glibc" : "";
 const { version } = require("@parcel/watcher/package.json");
 const pkg = `@parcel/watcher-${platform}-${arch}${suffix}@${version}`;
-
-console.log("npm registry in use: ", registry);
 
 console.log(`Installing ${pkg} explicitly (cannot be skipped as optional)...`);
 execSync(`npm install --no-save ${pkg}`, { stdio: "inherit" });
