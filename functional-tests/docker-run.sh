@@ -68,7 +68,7 @@ catch() {
 }
 
 cleanupBeforeStart
-docker-compose up -d --build --scale selenium-chrome=2
+docker-compose up -d --build --scale selenium-chrome=3
 runTests
 processTestOutput
 cleanup
