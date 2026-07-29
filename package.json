@@ -24,6 +24,6 @@
   "license": "MIT",
   "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
   "volta": {
-    "node": "22.11.0"
+    "node": "24.18.1"
   }
 }
