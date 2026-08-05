@@ -35,12 +35,21 @@ function snapshotCommands(): string {
 	}`;
 }
 
-// Diagnostics for step timeouts: dump what the browser was doing
-// when a step failed. A client side Gatsby transition leaves the
-// original page's navigation entry in place, so an entry whose URL matches the
-// CURRENT location means the browser did a full page load where a history API
-// transition was expected - i.e. Gatsby's hard reload fallback after a failed
-// page-data/chunk fetch. A failed fetch also shows up as a SEVERE browser console entry.
+// Dump what the browser was doing when a step failed.
+//
+// Read the browser console output first. The only confirmed cause of the
+// step timeouts so far was Civic's cookie banner: its licence check
+// to apikeys.civiccomputing.com blocked the page's JS main thread, so whatever
+// webdriver command wdio ran next sat there until the step timed out. Nothing
+// in the wdio log pointed at it - console dump identified it, which
+// is why "goog:loggingPrefs" is set on the capability.
+//
+// Navigation entries are the other thing to check. A client side Gatsby transition
+// leaves the original page's navigation entry in place, so an entry whose URL
+// matches the CURRENT location means the browser did a full page load where a
+// history API transition was expected - i.e. Gatsby's hard reload fallback
+// after a failed page-data/chunk fetch. A failed fetch also shows up as a
+// SEVERE browser console entry.
 async function logStallDiagnostics(
 	errorStack: string,
 	commands: string
