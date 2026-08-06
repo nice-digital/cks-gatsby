@@ -27,7 +27,7 @@
     "// TYPECHECKING": "",
     "typecheck": "tsc --noEmit",
     "//Teamcity": "",
-    "audit:teamcity": "npm audit --audit-level=critical"
+    "audit:teamcity": "npm audit --package-lock-only --audit-level=critical --registry=https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
