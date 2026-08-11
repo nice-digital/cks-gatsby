@@ -3,6 +3,7 @@ import { Then } from "@wdio/cucumber-framework";
 import { checkContainsText } from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkContainsText.js";
 import { checkEqualsText } from "@nice-digital/wdio-cucumber-steps/lib/support/check/checkEqualsText.js";
 import { getSelector, SelectorName } from "../support/selectors/index.js";
+import { acceptEULA } from "../support/action/acceptEULA.js";
 import { pause } from "@nice-digital/wdio-cucumber-steps/lib/support/action/pause.js";
 
 Then("I expect that the CKS GTM container is available", async () => {
@@ -76,14 +77,7 @@ Then(
 		);
 	}
 );
-// This step asserts the banner is there, so unlike the best effort dismissal in
-// the page open step it waits for it rather than returning quietly when absent
-Then(/^I accept EULA banner terms$/, async () => {
-	const EULAAcceptButton = await $("#btn-accept-cks-eula");
-
-	await EULAAcceptButton.waitForDisplayed({ timeout: 15000 });
-	await EULAAcceptButton.click();
-});
+Then(/^I accept EULA banner terms$/, acceptEULA);
 Then(/^I close cookies banner$/, async () => {
 	const cookiesBannerClose = await $("#ccc-close");
 	await cookiesBannerClose.scrollIntoView();
