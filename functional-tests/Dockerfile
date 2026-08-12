@@ -1,6 +1,10 @@
-FROM node:22.11.0-alpine
+FROM node:24.18.1-alpine
 
 ENV IN_DOCKER=true
+
+# Node >= 22.12 enables require(esm), which breaks cucumber 9 loading wdio's
+# top-level-await formatter. Disable it.
+ENV NODE_OPTIONS="--no-experimental-require-module"
 
 # Install Java (for Allure) see https://stackoverflow.com/a/44154721/486434
 RUN apk add openjdk8
@@ -20,7 +24,13 @@ WORKDIR /tests
 COPY package.json /tests
 COPY package-lock.json /tests
 
-RUN npm ci
+# Token for the CodeArtifact registry, passed in from the host (see docker-compose.yml).
+# .npmrc is written and removed within a single RUN so the token never persists in a layer.
+ARG NPM_TOKEN
+RUN echo "registry=https://nice-digital-037931721306.d.codeartifact.eu-west-2.amazonaws.com/npm/npm-internal/" > .npmrc \
+	&& echo "//nice-digital-037931721306.d.codeartifact.eu-west-2.amazonaws.com/npm/npm-internal/:_authToken=${NPM_TOKEN}" >> .npmrc \
+	&& npm ci \
+	&& rm -f .npmrc
 
 COPY . /tests
 

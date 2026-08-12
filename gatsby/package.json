@@ -7,7 +7,7 @@
     "start": "npm run develop",
     "// GATSBY": "",
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "node ./scripts/ensure-parcel-watcher.js && gatsby build",
     "serve": "gatsby serve",
     "cb": "gatsby info --clipboard",
     "clean": "gatsby clean",
@@ -27,7 +27,7 @@
     "// TYPECHECKING": "",
     "typecheck": "tsc --noEmit",
     "//Teamcity": "",
-    "audit:teamcity": "npm audit --audit-level=critical"
+    "audit:teamcity": "npm audit --package-lock-only --audit-level=critical --registry=https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
@@ -115,7 +115,7 @@
     "web-vitals": "^2.1.4"
   },
   "volta": {
-    "node": "22.11.0"
+    "node": "24.18.1"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
@@ -123,15 +123,20 @@
     "process": "^0.11.10",
     "react-cookie": "^6.1.1"
   },
-  "optionalDependencies": {
-    "@parcel/watcher-linux-x64-glibc": "^2.4.1"
-  },
   "overrides": {
     "gatsby": {
       "axios": "1.14.0"
     },
     "wait-on": {
       "axios": "0.30.3"
+    },
+    "eslint-config-react-app": {
+      "@typescript-eslint/eslint-plugin": "$@typescript-eslint/eslint-plugin",
+      "@typescript-eslint/parser": "$@typescript-eslint/parser",
+      "eslint-plugin-testing-library": "$eslint-plugin-testing-library"
+    },
+    "react-server-dom-webpack": {
+      "react": "$react"
     }
   }
 }

@@ -49,7 +49,7 @@
     "webdriverio": "^8.1.3"
   },
   "volta": {
-    "node": "22.11.0"
+    "node": "24.18.1"
   },
   "overrides": {
     "TODO": "CHECK REMOVAL OF OVERRIDES WHEN WE UPDATE WDIO TO V9",

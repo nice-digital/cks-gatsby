@@ -5,6 +5,13 @@
   "description": "Website for CKS",
   "scripts": {
     "test": "echo \"Error: runs tests for each sub folder independently\" && exit 1",
+    "// AUDIT": "",
+    "// audit: no --omit=dev in this repo - gatsby and the whole build toolchain are devDependencies here, so --omit=dev leaves 4 packages to audit and always passes. --registry is needed as CodeArtifact has no audit endpoint. The root has no dependencies of its own, so there is nothing to audit here": "",
+    "audit": "npm run audit:gatsby && npm run audit:functional-tests && npm run audit:fake-api",
+    "audit:gatsby": "npm --prefix gatsby audit --package-lock-only --audit-level=critical --registry=https://registry.npmjs.org",
+    "audit:functional-tests": "npm --prefix functional-tests audit --package-lock-only --audit-level=critical --registry=https://registry.npmjs.org",
+    "audit:fake-api": "npm --prefix fake-api audit --package-lock-only --audit-level=critical --registry=https://registry.npmjs.org",
+    "audit:teamcity": "npm run audit",
     "//": "Convenient way to install dependencies for all 3 node sub folders",
     "postinstall": "(cd functional-tests && npm ci); (cd gatsby && npm ci); (cd fake-api && npm ci)"
   },
@@ -24,6 +31,6 @@
   "license": "MIT",
   "homepage": "https://github.com/nice-digital/cks-gatsby#readme",
   "volta": {
-    "node": "22.11.0"
+    "node": "24.18.1"
   }
 }
