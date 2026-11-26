@@ -42,14 +42,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 							<a href="https://www.nice.org.uk/cks-end-user-licence-agreement">
 								CKS End User Licence Agreement (EULA)
 							</a>
-							. Content © Clarity Informatics Limited (trading as{" "}
-							<a
-								href="https://agiliosoftware.com/primary-care/"
-								rel="noopener noreferrer"
-							>
-								Agilio Software
-							</a>
-							).
+							. Content © Clarity Informatics Limited (trading as Agilio
+							Software).
 						</p>
 					</Panel>
 				</Container>
