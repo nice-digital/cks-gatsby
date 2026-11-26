@@ -32,15 +32,7 @@ exports[`Layout should match snapshot for EULA 1`] = `
     >
       CKS End User Licence Agreement (EULA)
     </a>
-    . Content © Clarity Informatics Limited (trading as
-     
-    <a
-      href="https://agiliosoftware.com/primary-care/"
-      rel="noopener noreferrer"
-    >
-      Agilio Software
-    </a>
-    ).
+    . Content © Clarity Informatics Limited (trading as Agilio Software).
   </p>
 </div>
 `;
