@@ -25,20 +25,25 @@ export const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
 
 					<Panel className={styles.eula} data-testid="eula">
 						<p>
-							The content on the NICE Clinical Knowledge Summaries site (CKS) is
-							the copyright of{" "}
+							Clinical Knowledge Summaries (CKS) support evidence-based decision
+							making in primary care through concise summaries that draw on NICE
+							guidance and other high-quality evidence sources.{" "}
+							<a href="https://cks.nice.org.uk/about/">Learn more about CKS</a>.
+						</p>
+						<p>
+							CKS is commissioned by NICE and developed by{" "}
 							<a
 								href="https://agiliosoftware.com/primary-care/"
 								rel="noopener noreferrer"
 							>
-								Clarity Informatics Limited (trading as Agilio Software Primary
-								Care)
+								Agilio Software
 							</a>
-							. By using CKS, you agree to the licence set out in the{" "}
-							<a href="https://www.nice.org.uk/terms-and-conditions/cks-end-user-licence-agreement">
-								CKS End User Licence Agreement
+							. By using CKS, you agree to the{" "}
+							<a href="https://www.nice.org.uk/cks-end-user-licence-agreement">
+								CKS End User Licence Agreement (EULA)
 							</a>
-							.
+							. Content © Clarity Informatics Limited (trading as Agilio
+							Software).
 						</p>
 					</Panel>
 				</Container>
